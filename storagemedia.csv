@@ -1,0 +1,5 @@
+name,energy_density
+chemical_bonds,50
+thermal_800K,1
+virial_steel,0.1
+ionic_solution,0.1
