@@ -1,6 +1,0 @@
-name,storage_medium,trans_device
-rfc,chemical_bonds,GDL_o2_diff
-conv_power,chemical_bonds,GT
-ptes,thermal_800K,GT
-caes,virial_steel,GT
-vrfb,ionic_solution,vanadium_diff
