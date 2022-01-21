@@ -1,0 +1,14 @@
+,0,1,2,3,4,5,6,7
+0,Battery systems,Li-air,K-air,Na-air,Mg-air,Zn-air,Fe-air,Al-air
+1,Cost of metal ($/kg)a,68,20,1.7,2.75,1.85,0.4,1.75
+2,Theoretical voltage (V),2.96,2.48,2.27,3.09,1.65,1.28,2.71
+3,Practical voltage (V),2.6,2.4,2.2,1.2-1.4,1.0-1.2,1.0,1.1-1.4
+4,Theoretical energy,3458,935,1106,2840,1086,763,2796
+5,density (Wh/kg)b,,,,,,,
+6,Practical energy density,Not,Not,Not,400-,350-,60-80,300-
+7,(Wh/kg),knownc,knownc,knownc,700,500,,500
+8,Electrolyte,Aprotic,Aprotic,Aprotic,Saline,Alkaline,Alkaline,"Alkaline,"
+9,,,,,,,,or saline
+10,"Primary(P), or",R,R,R,P,R,R,P
+11,rechargeable (R),,,,,,,
+12,Year invented,1996,2013,2012,1966,1878,1968,1962

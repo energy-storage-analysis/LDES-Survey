@@ -1,0 +1,34 @@
+,0,1,2,3,4,5,6
+0,Location,Energy source,,TES system,,,Remarks
+1,,Primary,Secondary,Type,Storage,Annual,
+2,,,,,medium,capacity,
+3,,,,,,(MWh),
+4,"Friedrichshafen, Germany",Solar,Natural gas,"Underground, Seasonal",Water,4106,"District heating network [8,13]"
+5,"Marstal, Denmark",Solar,Biomass,"Underground, Seasonal","Water, Pit","19,000",District heating network [13]
+6,,,,,storage,,
+7,"Kungalv, Sweden",Industry,Waste,"Underground, Seasonal",Water,"90,000",District heating network [13]
+8,,waste heat,incineration,,,,
+9,"Chemnitz, Germany",Solar,"Natural gas,","Underground, Seasonal",Gravel/water,573,District heating network [13]
+10,,,fuel oil,,,,
+11,"Neckarsulm, Germany",Solar,,"Underground, Seasonal",Borehole/duct,3960,District heating network [13]
+12,"Rostock, Germany",Solar,,"Underground, Seasonal",Aquifer,497,District heating network [13]
+13,"Kutch,
+India",Solar,,Diurnal,Solar pond,1357,Industrial process heat supply
+14,,,,,,,[14]
+15,"Solar two, Nevada, USA",Solar,,Diurnal two tank system,Solar salt,105,Electrical power generation.
+16,,,,,,,"Hot tank (565 degC, 875 m3) [15]"
+17,"THEMIS, Pyrenees, France",Solar,,Diurnal two tank system,Hitect salt,40,Electrical power generation.
+18,,,,,,,"Hot tank (450 degC, 310 m3) [15]"
+19,"Andasol Andalusia, Spain",Solar parabolic,,"Diurnal, Twoetank,",Molten salt,1010,Electrical power generation
+20,,trough,,Indirect,,,Hot tank (384 degC) [16]
+21,Extresol Torre de Miguel,Solar parabolic,,"Diurnal, Twoetank,",Molten salt,1010,Electrical power generation
+22,"Sesmero, Spain",trough,,Indirect,,,Hot tank (384 degC) [16]
+23,Arcosol 50 San Jos-e,Solar parabolic,,"Diurnal, Twoetank,",Molten salt,1010,Electrical power generation
+24,"del Valle, Spain",trough,,Indirect,,,Hot tank (384 degC) [16]
+25,"La Florida Badajoz, Spain",Solar parabolic,,"Diurnal, Twoetank,",Molten salt,1010,Electrical power generation
+26,,trough,,Indirect,,,Hot tank (384 degC) [16]
+27,"La Dehesa La Garrovilla,",Solar parabolic,,"Diurnal, Twoetank,",Molten salt,1010,Electrical power generation
+28,Spain,trough,,Indirect,,,Hot tank (384 degC) [16]
+29,Gemasolar (Solar Tres),Solar power tower,,"Diurnal, Twoetank,",Molten salt,600,Electrical power generation
+30,"Fuentes de Andalucía,",,,Direct,,,Hot tank (565 degC) [16]
+31,Spain,,,,,,

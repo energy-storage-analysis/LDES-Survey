@@ -1,0 +1,10 @@
+,0,1,2,3,4,5
+0,Material,Density,Tensile,,Max. Energy,Cost
+1,,,Strength,,Density,
+2,,(kg/m3),(Mpa),(MJ/kg),(kWh/kg),($/kg)
+3,4340 Stainless Steel,7700,1520,0.19,0.05,1
+4,Composites:,,,,,
+5,E-glass,2000,100,0.05,0.014,11.0
+6,S2-glass,1920,1470,0.76,0.21,24.6
+7,Carbon T1000,1520,1950,1.28,0.35,101.8
+8,Carbon AS4C,1510,1650,1.1,0.30,31.3

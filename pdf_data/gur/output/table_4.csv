@@ -1,0 +1,13 @@
+,0,1,2,3
+0,Battery system and,Cell,Theoretical,Theoretical
+1,net cell reaction,voltage,specific energy,energy density
+2,,(V),(Wh/kg),(Wh/L)
+3,Li-O2 battery (nonaqueous),3.0,3505,3436a
+4,2Li + O2 = Li2O2,,,
+5,Li-O2 battery (aqueous),3.2,3582,2234b
+6,2Li + ½ O2 + H2O = 2LiOH,,,
+7,Li-ion battery,3.8,387,1015
+8,½ C6Li + Li0.5CoO2 = 3C +,,,
+9,LiCoO2,,,
+10,Li-S battery,2.2,2567,2199c
+11,2Li + S = Li2S,,,

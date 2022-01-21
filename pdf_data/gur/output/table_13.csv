@@ -1,0 +1,11 @@
+,0,1,2,3
+0,System,Calculated energy,Real energy,Utilization
+1,,density (Wh/kg),density (Wh/kg),(%)
+2,Pb-acid,171,25-55,15-32
+3,Na-S,792,80-150,10-19
+4,Ni-MH,240,50-70,20-29
+5,Li-ion,360,150-210,42-58
+6,Li-S,2654,250-350,9-13
+7,Li-O2,5217,-,-
+8,Zn-O2,1094,150-200,14-18
+9,H2-O2,3525,120-800,3-23

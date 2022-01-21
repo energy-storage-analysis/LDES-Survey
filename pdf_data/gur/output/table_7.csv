@@ -1,0 +1,25 @@
+,0,1,2,3,4
+0,,Alkaline,Acid,PEM,SOEC
+1,Electrolyte,NaOH,H2SO4,Polymer,Ceramic
+2,,KOH,H3PO3,(NafionTM),"(YSZ, BYZ)"
+3,Carrier ion,OH-,H+,H+,O2-  (YSZ)
+4,,,,,H+ (BYZ)
+5,Electrodes,Ni,"Pt/C, IrO2","Pt/C, IrO2","Ni, ceramic"
+6,Operating,80oC,150oC,80oC,600-900oC
+7,temperature,,,,
+8,Strengths,Cheap,High activity,High activity,Cheap
+9,,materials,electrodes,electrodes,materials
+10,,Commercial,,Commercial,Lower barrier
+11,,technology,,technology,to split H2O
+12,,,,,Higher
+13,,,,,efficiency
+14,Short-,High barrier,High barrier,High barrier,High
+15,,to split  H2O,to split H2O,to split H2O,operating
+16,comings,,,,
+17,,Lower,Expensive,Expensive,temperature
+18,,efficiency,electrodes,electrodes,Materials
+19,,,Cell durability,Hydrogen,stability
+20,,,Developing,crossover,Fabrication
+21,,,technology,Cell durability,costs
+22,,,,,Developing
+23,,,,,technology

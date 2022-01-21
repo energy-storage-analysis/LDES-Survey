@@ -1,0 +1,11 @@
+,0,1,2,3,4,5,6,7,8,9,10,11
+0,Metal/Alloy,Melting,Boiling,Speciﬁc heat,Density,Thermal,,,,Sensible heat,,"Cost ($$kg
+-1)"
+1,,,,,"-1
+-3",,,,,,,
+2,,point (degC),point (degC),"kJ$kg
+-1 degC",kg$m,,conductivity,,,storage capacity,,
+3,,,,,,(W$m,-1 K,-1),(MJ$m,-3 degC,-1),
+4,Sodium (Na),98,883,1.3,1042,64.9,,,1.354,,,2
+5,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),-12.6,785,0.89,780,26.3,,,0.694,,,2
+6,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),125,1533,0.14,10300,14.9,,,1.44,,,13

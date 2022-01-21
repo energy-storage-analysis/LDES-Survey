@@ -1,0 +1,18 @@
+,0,1,2
+0,,Gravimetric,Volumetric
+1,"F
+uel",Energy Density,Energy Density
+2,,(Wh/kg),(Wh/L)
+3,Gasoline,"12,330",9.060
+4,Diesel,"12,700","10,700"
+5,Propane,"12,870","7,490"
+6,Butane,"12,700","7,190"
+7,Ethanol,"7,490","5,890"
+8,Methanol,"5,620","4,470"
+9,Liq. Hydrogen,"33,570","2,200"
+10,Liq. Ammonia,"5,170","3,750"
+11,Batteries:,,
+12,Li-ion battery*,150-210,450
+13,Ni-metal hydride*,70,220
+14,Zn-air battery*,300,240
+15,* Practical values,,
