@@ -28,4 +28,10 @@ df = df.dropna(subset= ['density'])
 bins = np.logspace(np.log10(1e-1), np.log10(1e2), num=30)
 df['Cp'].hist(bins=bins)
 plt.xscale('log')
+#%%
+
+bins = np.logspace(np.log10(1e2), np.log10(1e4), num=30)
+df['energy_density'].astype(float).hist(bins=bins)
+plt.xscale('log')
+
 # %%

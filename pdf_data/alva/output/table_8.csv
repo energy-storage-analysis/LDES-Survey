@@ -1,85 +1,110 @@
-,0,1,2,3,4,5,6,7,8,9
-0,Table 8,,,,,,,,,
-1,Phase change materials [17].,,,,,,,,,
-2,Type,Class,Thermal storage material,Phase change,Latent heat,"-3)
-Density (kg$m",Thermal,Latent heat storage,Technical grade,Remarks
-3,,,,temperature (degC),"(kJ$kg
--1)",,conductivity,"capacity (MJ$m
--3)","cost ($$kg
--1)",
-4,,,,,,,"(W$m
+,Type  ,Class  ,Thermal storage material  ,Phase change temperature (degC) ,"Latent heat (kJ$kg
+-1) ","-3)
+Density (kg$m  ","Thermal conductivity (W$m
 -1 K
--1)",,,
-5,Organic,Parafﬁn,n-Dodecane (Carbon atoms-12),-10,216,,,,10,
-6,,,n-Tridecane (Carbon atoms-13),-5,160,,,,200 (RG),
-7,,,n-Tetradecane (Carbon atoms-14),6,229,760 (L),0.21(S),,10,[48]
-8,,,n-Pentadecane (Carbon atoms-15),10,206,770(L),,,330 (RG),
-9,,,n-Hexadecane (Carbon atoms-16),20,236,773(L),0.21(S),182.4,414 (RG),[48]
-10,,,n-Heptadecane (Carbon atoms-17),22.6,214,778(L),,166.5,770 (RG),
-11,,,n-Octadecane (Carbon atoms-18),28.4,244,776(L) 814(S),0.148(L),189.3,380 (RG),[48]
-12,,,,,,,0.358(S),,,
-13,,,n-Nonadecane (Carbon atoms-19),32,222,785 (L),,174.3,1150 (RG),
-14,,,n-Eicozane (Carbon atoms-20),36.6,247,788 (L),,194.6,,
-15,,,n-Heneicozane (Carbon atoms-21),40.2,213,791 (L),,168.5,,
-16,,,n-Docozane (Carbon atoms-22),44,249,794 (L),,197.7,,
-17,,,n-Trikozane (Carbon atoms-23),47.5,234,796 (L),,186.3,,
-18,,,n-Tetracozane (Carbon atoms-24),50.6,255,799 (L),,203.7,,
-19,,,n-Pentacozane (Carbon atoms-25),53.5,238,801 (L),,190.6,,
-20,,,Rubitherm RT-5,5,180,"880 (S, -15 degC)",,158.4,7,
-21,,,,,,"770 (L, 15 degC)",,,,
-22,,,Rubitherm RT-25,25,148,,,,6.24,
-23,,,Rubitherm RT-50,50,168,,,,7,
-24,,,Rubitherm RT-82,82,178,,,,7,
-25,,,®,,,,,,,
-26,,,"PRS
+-1)","Latent heat storage capacity (MJ$m
+-3) ","Technical grade cost ($$kg
+-1) ",Remarks  
+2,Organic,Parafﬁn,n-Dodecane (Carbon atoms-12),-10,216,,,,10,
+3,,,n-Tridecane (Carbon atoms-13),-5,160,,,,200 (RG),
+4,,,n-Tetradecane (Carbon atoms-14),6,229,760 (L),0.21(S),,10,[48]
+5,,,n-Pentadecane (Carbon atoms-15),10,206,770(L),,,330 (RG),
+6,,,n-Hexadecane (Carbon atoms-16),20,236,773(L),0.21(S),182.4,414 (RG),[48]
+7,,,n-Heptadecane (Carbon atoms-17),22.6,214,778(L),,166.5,770 (RG),
+8,,,n-Octadecane (Carbon atoms-18),28.4,244,776(L) 814(S),0.148(L),189.3,380 (RG),[48]
+9,,,,,,,0.358(S),,,
+10,,,n-Nonadecane (Carbon atoms-19),32,222,785 (L),,174.3,1150 (RG),
+11,,,n-Eicozane (Carbon atoms-20),36.6,247,788 (L),,194.6,,
+12,,,n-Heneicozane (Carbon atoms-21),40.2,213,791 (L),,168.5,,
+13,,,n-Docozane (Carbon atoms-22),44,249,794 (L),,197.7,,
+14,,,n-Trikozane (Carbon atoms-23),47.5,234,796 (L),,186.3,,
+15,,,n-Tetracozane (Carbon atoms-24),50.6,255,799 (L),,203.7,,
+16,,,n-Pentacozane (Carbon atoms-25),53.5,238,801 (L),,190.6,,
+17,,,Rubitherm RT-5,5,180,"880 (S, -15 degC)",,158.4,7,
+18,,,,,,"770 (L, 15 degC)",,,,
+19,,,Rubitherm RT-25,25,148,,,,6.24,
+20,,,Rubitherm RT-50,50,168,,,,7,
+21,,,Rubitherm RT-82,82,178,,,,7,
+22,,,®,,,,,,,
+23,,,"PRS
 parafﬁn wax",40-45,202,,,,1.8,
-27,,Fatty acids,Caprylic acid (Carbon atoms-8),16,148.6,"981 (S, 13 degC)","0.149(L, 38.6 degC)",145.8,,
-28,,,,,,"901 (L, 30 degC)",,,,
-29,,,Capric acid (Carbon atoms-10),32,152.7,"1004 (S, 24 degC)","0.153(L, 38.5 degC)",153.3,,
-30,,,,,,"878 (L, 45 degC)",,,,
-31,,,Lauric acid (Carbon atoms-12),42,171,870 (L),0.149,148.8,75 (RG),
-0,Table 8 (continued ),,,,,,,,,
-1,Type,Class,Thermal storage material,Phase change,Latent heat,"-3)
-Density (kg$m",Thermal,Latent heat storage,Technical grade,Remarks
-2,,,,temperature (degC),"(kJ$kg
--1)",,conductivity,"capacity (MJ$m
--3)","cost ($$kg
--1)",
-3,,,,,,,"(W$m
--1 K
--1)",,,
-4,,Glycols,PEG400,4.2,117.6,1128,,132.7,12,
-5,,,PEG600,12.5,129.1,,,,12,
-6,,,PEG1000,40,168.6,,,,15,
-7,,,PEG3400,63.4,166.8,,,,15,
-8,,,PEG10000,65.9,171.6,,,,20,
-9,,,PEG20000,67.7,160.2,,,,20,
-10,,,PEG35000,68.7,166.9,,,,20,
-11,,,PEG100000,67,175.8,,,,20,
-12,,,PEG1000000,70,174,,,,20,
-13,,Organic,Lauric acid-capric acid (45/55),21,143,,,,,
-14,,eutectics,Capric acid-palmitic acid (76.5/23.5),21.8,171.2,,,,,
-15,,,Lauric acid-myristic acid (66.0/34.0),34.2,166.8,,,,,
-16,,,Lauric acid-palmitic acid (69.0/31.0),35.2,166.3,,,,,
-17,,,Lauric acid-stearic acid (75.5/24.5),37,182.7,,,,,
-18,,,Myristic acid-palmitic acid (58.0/42.0),42.6,169.7,,,,,
-19,,,Myristic acid-stearic acid (64.0/36.0),44.1,182.4,,,,,
-20,,,Myristic acid-stearic acid (65.7/34.3),52,162,,,,,
-21,,,Palmitic acid-stearic acid (64.2/35.8),52.3,181.7,,,,,
-22,,Inorganic Salt hydrates,CaCl2$6H2O,29.6,190.8,1562,,298,21,Semi-congruent
+24,,Fatty acids,Caprylic acid (Carbon atoms-8),16,148.6,"981 (S, 13 degC)","0.149(L, 38.6 degC)",145.8,,
+25,,,,,,"901 (L, 30 degC)",,,,
+26,,,Capric acid (Carbon atoms-10),32,152.7,"1004 (S, 24 degC)","0.153(L, 38.5 degC)",153.3,,
+27,,,,,,"878 (L, 45 degC)",,,,
+28,,,Lauric acid (Carbon atoms-12),42,171,870 (L),0.149,148.8,75 (RG),
+29,,,Myristic acid (Carbon atoms-14),54,190,860 (L),,163.4,,
+30,,,Palmitic acid (Carbon atoms-16),64,185.4,"989 (S, 24 degC),","0.162(L,68.4 degC)",183.4,28,
+31,,,,,,"850 (L, 65 degC)",,,,
+32,,,Stearic acid (Carbon atoms-18),69,209,940 (L),,196.5,41,
+33,,Esters,Methyl palmitate,27,163.2,,,,220(RG),
+34,,,Allyl palmitate,23,173,,,,,
+35,,,Propyl palmitate,20,190,,,,,
+36,,,Methyl stearate,39,160.7,,,,63(RG),
+37,,,Isopropyl palmitate,11,100,,,,16,
+38,,,Isopropyl stearate,14,142,,,,,
+39,,,Butyl stearate,23,200,,,,116,
+40,,,Ethylene glycol distearate,63.2,215.8,,,,453(RG),
+41,,,Dimethyl sebacate,21,135,,,,63(RG),
+42,,,Methyl-12hydroxystearate,43,126,,,,,
+43,,,Vinyl stearate,27,122,,,,1170(RG),
+44,,Alcohols,Xylitol,93,280,1520,,425.6,133(RG),
+45,,,D-Sorbitol,97,110,1490,,163.9,179(RG),
+46,,,meso-Erythritol,117,344,1450,,498.8,430(RG),
+47,,,D-Mannitol,165,341,,,,90(RG),
+48,,,1-Dodecanol,23.3,184,,,,190(RG),[49]
+49,,,1-Tetradecanol,39.3,221,,,,180(RG),[49]
+2,,Glycols,PEG400,4.2,117.6,1128,,132.7,12,
+3,,,PEG600,12.5,129.1,,,,12,
+4,,,PEG1000,40,168.6,,,,15,
+5,,,PEG3400,63.4,166.8,,,,15,
+6,,,PEG10000,65.9,171.6,,,,20,
+7,,,PEG20000,67.7,160.2,,,,20,
+8,,,PEG35000,68.7,166.9,,,,20,
+9,,,PEG100000,67,175.8,,,,20,
+10,,,PEG1000000,70,174,,,,20,
+11,,Organic,Lauric acid-capric acid (45/55),21,143,,,,,
+12,,eutectics,Capric acid-palmitic acid (76.5/23.5),21.8,171.2,,,,,
+13,,,Lauric acid-myristic acid (66.0/34.0),34.2,166.8,,,,,
+14,,,Lauric acid-palmitic acid (69.0/31.0),35.2,166.3,,,,,
+15,,,Lauric acid-stearic acid (75.5/24.5),37,182.7,,,,,
+16,,,Myristic acid-palmitic acid (58.0/42.0),42.6,169.7,,,,,
+17,,,Myristic acid-stearic acid (64.0/36.0),44.1,182.4,,,,,
+18,,,Myristic acid-stearic acid (65.7/34.3),52,162,,,,,
+19,,,Palmitic acid-stearic acid (64.2/35.8),52.3,181.7,,,,,
+20,Inorganic Salt hydrates,,CaCl2$6H2O,29.6,190.8,1562,,298,21,Semi-congruent
+21,,,,,,,,,,melting [45]
+22,,,CaBr2$6H2O,34,115.5,1956,,225.9,,Congruent
 23,,,,,,,,,,melting [45]
-24,,,CaBr2$6H2O,34,115.5,1956,,225.9,,Congruent
-25,,,,,,,,,,melting [45]
-26,,,NaCH3COO$3H2O,58,240,,,,5,Phase
-27,,,,,,,,,,segregation
-28,,,,,,,,,,problem [46]
-29,,,MgCl2$6H2O,117,168.6,"1569 (S, 20 degC)","0.694 (S, 90 degC)",264.5,6,
-30,,,,,,"1450 (L, 120 degC)","0.570 (L, 120 degC)",,,
-31,,,Mg(NO3)2$6H2O,89,162.8,"1636 (S, 25 degC)","0.611 (S, 37 degC)",266.3,11,
-32,,,,,,"1550 (L, 94 degC)","0.490 (L, 95 degC)",,,
-33,,,Ba(OH)2$8H2O,78,265.7,"2070 (S, 24 degC)","0.653 (L, 85.7 degC)",550,6,
-34,,,,,,"1937 (L, 84 degC)","1.225 (S, 23 degC)",,,
-35,,,Na2S2O3$5H2O,48,200,1750(S),,350,5,
+24,,,NaCH3COO$3H2O,58,240,,,,5,Phase
+25,,,,,,,,,,segregation
+26,,,,,,,,,,problem [46]
+27,,,MgCl2$6H2O,117,168.6,"1569 (S, 20 degC)","0.694 (S, 90 degC)",264.5,6,
+28,,,,,,"1450 (L, 120 degC)","0.570 (L, 120 degC)",,,
+29,,,Mg(NO3)2$6H2O,89,162.8,"1636 (S, 25 degC)","0.611 (S, 37 degC)",266.3,11,
+30,,,,,,"1550 (L, 94 degC)","0.490 (L, 95 degC)",,,
+31,,,Ba(OH)2$8H2O,78,265.7,"2070 (S, 24 degC)","0.653 (L, 85.7 degC)",550,6,
+32,,,,,,"1937 (L, 84 degC)","1.225 (S, 23 degC)",,,
+33,,,Na2S2O3$5H2O,48,200,1750(S),,350,5,
+34,,,Na2HPO4$12H2O,36,280,1520(S),"0.514(S), 0.476(L)",425.6,5,
+35,,,Na2CO3$10H2O,36,247,,,,15,
+36,,,Na2SO4$10H2O,32,251,,,,6,
+37,,,CaCl2$6H2O,29,190.8,"1802 (S, 24 degC)","0.540 (L, 38.7 degC)",343.8,6,
+38,,,,,,"1562 (L, 32 degC)","1.088 (S, 23 degC)",,,
+39,,Nitrate salts,NaNO3,306,172,2261 (S),,388.9,6,
+40,,,KNO3,335,266,2109(S),0.5,561,7,
+41,,,Ca(NO3)2,560,145,2113(S),,306.4,,
+42,,,Mg (NO3)2,426,,,,,226(RG),
+43,,Carbonate salts,Na2CO3,854,276,2533(S),,699.1,3,
+44,,,,,,1972(L),,,,
+45,,,K2CO3,897,236,2290(S),,540.4,7,
+46,,,CaCO3,1330,142,2930(S),,416.1,8,
+47,,,Li2CO3,732,509,2110(S),,1074,111,
+48,,Chloride salts,ZnCl2,280,75,2907(S),0.5,218,14,
+49,,,AlC13,192,280,,,,,
+50,,,NaCl,802,420,2160(S),,907.2,2.8,
+51,,,KCl,771,353,1980(S),,698.9,7.6,
+52,,,,,,1527(L),,,,
 0,,,MgCl2,714,452,2320(S),,1048.6,55,
 1,,,,,,1680(L),,,,
 2,,,LiCl,610,441,2070(S),,912.9,55,
@@ -114,28 +139,18 @@ Density (kg$m",Thermal,Latent heat storage,Technical grade,Remarks
 31,,,Al/Mg/Zn (59/33/6),443,310,2380(S),,737.8,,
 32,,,Al/Mg/Zn (60/34/6),450.3,329.1,,,,,
 33,,,Mg/Cu/Zn (60/25/15),452,254,2800(S),,711.2,,
-0,Table 8 (continued ),,,,,,,,,
-1,Type,Class,Thermal storage material,Phase change,Latent heat,"-3)
-Density (kg$m",Thermal,Latent heat storage,Technical grade,Remarks
-2,,,,temperature (degC),"(kJ$kg
--1)",,conductivity,"capacity (MJ$m
--3)","cost ($$kg
--1)",
-3,,,,,,,"(W$m
--1 K
--1)",,,
-4,,,Mg/Ca (84/16),790,272,1380(S),,375.4,,
-5,,,Mg/Si/Zn (47/38/15),800,314,,,,,
-6,,,Cu/Si (80/20),803,197,6600(S),,1300.2,,
-7,,,Cu/P/Si (83/10/7),840,92,6880(S),,633,,
-8,,,Si/Mg/Ca (49/30/21),865,305,6880(S),,2098.4,,
-9,,,Si/Mg (56/44),946,757,1900(S),,1438.3,,
-10,,Salt eutectics,Na2SO4/H2O/NaCl/NH4Cl,13,146,,,,,
-11,,,(32.5/41.4/6.66/6.16),,,,,,,
-12,,,CaCl2$6H2O/CaBr2$6H2O (45/55),14.7,140,,,,,
-13,,,Na2SO4$10H2O/NaCl (50/50),18,,,,,,
-14,,,CaCl2$6H2O/MgCl2$6H2O (66.6/33.3),25,127,,,,,
-15,,,CaCl2/MgCl2$6H2O (50/50),25,95,,,,,
-16,,,CaCl2/NaCl/KCl/H2O (48/4.3/0.4/47.3),27,188,,,,,
-17,,,Ca (NO3)2$4H2O/Mg (NO3)2$6H2O (47/,30,136,,,,,
-18,,,53),,,,,,,
+3,,,Mg/Ca (84/16),790,272,1380(S),,375.4,,
+4,,,Mg/Si/Zn (47/38/15),800,314,,,,,
+5,,,Cu/Si (80/20),803,197,6600(S),,1300.2,,
+6,,,Cu/P/Si (83/10/7),840,92,6880(S),,633,,
+7,,,Si/Mg/Ca (49/30/21),865,305,6880(S),,2098.4,,
+8,,,Si/Mg (56/44),946,757,1900(S),,1438.3,,
+9,,Salt eutectics,Na2SO4/H2O/NaCl/NH4Cl,13,146,,,,,
+10,,,(32.5/41.4/6.66/6.16),,,,,,,
+11,,,CaCl2$6H2O/CaBr2$6H2O (45/55),14.7,140,,,,,
+12,,,Na2SO4$10H2O/NaCl (50/50),18,,,,,,
+13,,,CaCl2$6H2O/MgCl2$6H2O (66.6/33.3),25,127,,,,,
+14,,,CaCl2/MgCl2$6H2O (50/50),25,95,,,,,
+15,,,CaCl2/NaCl/KCl/H2O (48/4.3/0.4/47.3),27,188,,,,,
+16,,,Ca (NO3)2$4H2O/Mg (NO3)2$6H2O (47/,30,136,,,,,
+17,,,53),,,,,,,

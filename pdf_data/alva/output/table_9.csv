@@ -1,17 +1,15 @@
-,0,1,2,3,4,5,6
-0,Material,Compound formula,Solid reactants,Working ﬂuid,Onset temperature,Energy storage,Reference
-1,,,,,@1 bar (degC),"density (GJ.m
--3)",
-2,Magnesium sulfate,MgSO4$7H2O,MgSO4,H2O,122,3.3,[54]
-3,Magnesium hydroxide,Mg(OH)2,MgO,H2O,332,2.8,[55]
-4,Iron carbonate,FeCO3,FeO,CO2,180,2.6,[56]
-5,Iron hydroxide,Fe(OH)2,FeO,H2O,150,2.2,[56]
-6,Calcium hydroxide,Ca(OH)2,CaO,H2O,512,2.9,[55]
-7,Calcium chloride,CaCl2$2H2O,CaCl2,H2O,95,1.1,[54]
-8,Aluminium sulfate,Al2(SO4)3$6H2O,Al2(SO4)3,H2O,150,1.9,[54]
-9,Calcium sulfate,CaSO4$2H2O,CaSO4,H2O,89,1.4,[54]
-10,Magnesium chloride,MgCl2$6H2O,MgCl2,H2O,150,2.5,[54]
-11,Sodium sulﬁde,Na2S$5H2O,Na2S,H2O,80,3.56,[54]
-12,Strontium bromide,SrBr2$6H2O,SrBr2,H2O,,2.3,[54]
-13,Lithium sulfate,Li2SO4$H2O,Li2SO4.,H2O,103,0.92,[54]
-14,Copper sulfate,CuSO4$5H2O,CuSO4,H2O,92,2.07,[54]
+,Material ,Compound formula ,Solid reactants ,Working ﬂuid ,Onset temperature @1 bar (degC),"Energy storage density (GJ.m
+-3)",Reference 
+1,Magnesium sulfate,MgSO4$7H2O,MgSO4,H2O,122,3.3,[54]
+2,Magnesium hydroxide,Mg(OH)2,MgO,H2O,332,2.8,[55]
+3,Iron carbonate,FeCO3,FeO,CO2,180,2.6,[56]
+4,Iron hydroxide,Fe(OH)2,FeO,H2O,150,2.2,[56]
+5,Calcium hydroxide,Ca(OH)2,CaO,H2O,512,2.9,[55]
+6,Calcium chloride,CaCl2$2H2O,CaCl2,H2O,95,1.1,[54]
+7,Aluminium sulfate,Al2(SO4)3$6H2O,Al2(SO4)3,H2O,150,1.9,[54]
+8,Calcium sulfate,CaSO4$2H2O,CaSO4,H2O,89,1.4,[54]
+9,Magnesium chloride,MgCl2$6H2O,MgCl2,H2O,150,2.5,[54]
+10,Sodium sulﬁde,Na2S$5H2O,Na2S,H2O,80,3.56,[54]
+11,Strontium bromide,SrBr2$6H2O,SrBr2,H2O,,2.3,[54]
+12,Lithium sulfate,Li2SO4$H2O,Li2SO4.,H2O,103,0.92,[54]
+13,Copper sulfate,CuSO4$5H2O,CuSO4,H2O,92,2.07,[54]

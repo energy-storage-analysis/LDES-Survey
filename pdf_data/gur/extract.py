@@ -9,7 +9,9 @@ import sys
 sys.path.append('..')
 import pdf_utils
 
-pdf_path = r"C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage\Gur_2018_Review of electrical energy storage technologies, materials and systems.pdf"
+pdf_folder = r'/media/lee/Shared Storage/table_extract_text'
+pdf_path = os.path.join(pdf_folder,r"Gur_2018_Review of electrical energy storage technologies, materials and systems.pdf")
+
 template_path = 'tabula_template.json'
 with open(template_path, 'r') as f:
     templates= json.load(f)
@@ -26,11 +28,12 @@ dfs = []
 for setting in table_settings:
     print("table on page {}".format(setting['template']['page']))
     template = setting['template']
-    page, table_area = pdf_utils.extract_tabula_template(template, pdf_height)
+    page = template['page']
+    table_area = pdf_utils.extract_table_area(template, pdf_height)
 
     columns = setting['columns'] if 'columns' in setting else None
     try:
-        tables = camelot.read_pdf(pdf_path, pages=page, table_areas= table_area, flavor='stream')
+        tables = camelot.read_pdf(pdf_path, pages=str(page), table_areas= table_area, flavor='stream')
 
         df = tables[0].df
 
@@ -42,7 +45,7 @@ for setting in table_settings:
         if 'column_rows' in setting:
             column_rows = setting['column_rows']
 
-            pdf_utils.concat_row_to_columns(df, column_rows)
+            df = pdf_utils.concat_row_to_columns(df, column_rows)
 
     except:
         print("Error, skipping and returning blank dataframe")

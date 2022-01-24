@@ -2,7 +2,7 @@
 #%%
 from bokeh.plotting import figure, show, output_notebook
 from bokeh.models import HoverTool, LabelSet
-output_notebook()
+#output_notebook()
 
 from es import devices
 

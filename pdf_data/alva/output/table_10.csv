@@ -1,21 +1,19 @@
-,0,1,2,3,4,5
-0,,,Hot water,Gravelewater,Duct,Aquifer
-1,Storage medium,,Water,Gravelewater,Ground materials (Soil/rock),Ground materials (Sand/gravel/water)
-2,Heat capacity (kWh.m,-3),60-80,30-50,15-30,30-40
-3,Relative storage volume,,1,1.3-2,3-5,2-3
-4,(m3 water equivalent),,,,,
-5,Geological requirements,,(cid:4) Can be built at all,(cid:4) Can be built at all,(cid:4) Drillable ground.,(cid:4) Requires natural aquifer layer
-6,,,locations.,locations.,(cid:4) Ground water favorable.,of at least 20-50 m thickness at any
-7,,,(cid:4) High speciﬁc cost of,"(cid:4)
+, Storage medium, ,Hot water Water,Gravelewater Gravelewater,Duct Ground materials (Soil/rock),Aquifer Ground materials (Sand/gravel/water)
+1,Heat capacity (kWh.m,-3),60-80,30-50,15-30,30-40
+2,Relative storage volume,,1,1.3-2,3-5,2-3
+3,(m3 water equivalent),,,,,
+4,Geological requirements,,(cid:4) Can be built at all,(cid:4) Can be built at all,(cid:4) Drillable ground.,(cid:4) Requires natural aquifer layer
+5,,,locations.,locations.,(cid:4) Ground water favorable.,of at least 20-50 m thickness at any
+6,,,(cid:4) High speciﬁc cost of,"(cid:4)
 Low speciﬁc cost of",(cid:4) Natural ground water ﬂow,depth with high hydraulic conductivity
-8,,,construction.,construction.,slower than 1 m/s.,(kf > 1.10 m/s).
-9,,,(cid:4) Needs stable ground,(cid:4) Needs stable ground,"(cid:4)
+7,,,construction.,construction.,slower than 1 m/s.,(kf > 1.10 m/s).
+8,,,(cid:4) Needs stable ground,(cid:4) Needs stable ground,"(cid:4)
 Suitable for places with low",(cid:4) Requires conﬁning rock layers on
-10,,,conditions.,conditions.,hydraulic conductivity,top and below the aquifer layer.
-11,,,(cid:4) Preferably no ground,(cid:4) Preferably no ground,(kf < 1.10 m/s).,(cid:4) No or low natural ground ﬂow.
-12,,,water.,water.,(cid:4) High heat capacity.,"(cid:4)
+9,,,conditions.,conditions.,hydraulic conductivity,top and below the aquifer layer.
+10,,,(cid:4) Preferably no ground,(cid:4) Preferably no ground,(kf < 1.10 m/s).,(cid:4) No or low natural ground ﬂow.
+11,,,water.,water.,(cid:4) High heat capacity.,"(cid:4)
 Suitable water chemistry at high"
-13,,,(cid:4) 5-15 m deep.,(cid:4) 5-15 m deep.,(cid:4) High thermal conductivity.,temperatures.
-14,,,,,(cid:4) 30-100 m deep.,"(cid:4)
+12,,,(cid:4) 5-15 m deep.,(cid:4) 5-15 m deep.,(cid:4) High thermal conductivity.,temperatures.
+13,,,,,(cid:4) 30-100 m deep.,"(cid:4)
 Low speciﬁc cost of construction."
-15,,,,,(cid:4) High speciﬁc cost of construction.,
+14,,,,,(cid:4) High speciﬁc cost of construction.,

@@ -1,9 +1,7 @@
-,0,1,2,3,4
-0,CSP plant type,Solar concentration,Operating temperature,TES feasibility,Remarks
-1,,ratio,range (degC),,
-2,Parabolic trough collectors (PTC),15-45,20-400,Possible,Most used type of plant
-3,Solar power towers (SPT),150-1500,300-1000,Possible with,Most used type of plant with higher
-4,,,,lowest cost,Rankine cycle efﬁciency
-5,Linear fresnel reﬂectors (LFR),10-40,5-300,Possible,Very few in operation
-6,Parabolic dish collectors (PDC),100-1000,120-1500,Difﬁcult,Very few in operation with
-7,,,,,higher Rankine cycle efﬁciency
+,CSP plant type ,Solar concentration ratio,Operating temperature range (degC),TES feasibility ,Remarks 
+1,Parabolic trough collectors (PTC),15-45,20-400,Possible,Most used type of plant
+2,Solar power towers (SPT),150-1500,300-1000,Possible with,Most used type of plant with higher
+3,,,,lowest cost,Rankine cycle efﬁciency
+4,Linear fresnel reﬂectors (LFR),10-40,5-300,Possible,Very few in operation
+5,Parabolic dish collectors (PDC),100-1000,120-1500,Difﬁcult,Very few in operation with
+6,,,,,higher Rankine cycle efﬁciency

@@ -1,31 +1,30 @@
-,0,1,2,3,4,5
-0,,®,,,®,
-1,Property,"Therminol
+,,®,,,®,
+0,Property,"Therminol
 VP-1",Xceltherm 600,Syltherm XLT,"Dowtherm
 A",Vegetable oil
-2,Manufacturer,Eastman chemical,Radco industries,Dow chemical,Dow chemical,[19]
-3,,company,,company,company,
-4,Composition,Diphenyl,Parafﬁnic mineral oil,Dimethyl,Diphenyl,Triglycerides/free
-5,,oxide/biphenyl,,polysiloxane,oxide/biphenyl,fatty acids
-6,Max bulk temperature (degC),400,316,260,400,e
-7,Melting point (degC),12,e,-111,12,e
-8,Atmospheric boiling point (degC),257,301,200,257,295
-9,"Kinematic viscosity at 40 degC (mm2 s
+1,Manufacturer,Eastman chemical,Radco industries,Dow chemical,Dow chemical,[19]
+2,,company,,company,company,
+3,Composition,Diphenyl,Parafﬁnic mineral oil,Dimethyl,Diphenyl,Triglycerides/free
+4,,oxide/biphenyl,,polysiloxane,oxide/biphenyl,fatty acids
+5,Max bulk temperature (degC),400,316,260,400,e
+6,Melting point (degC),12,e,-111,12,e
+7,Atmospheric boiling point (degC),257,301,200,257,295
+8,"Kinematic viscosity at 40 degC (mm2 s
 -1)",2.48,15.5,1.1,2.56,30
-10,"Density at 40 degC (kg m
+9,"Density at 40 degC (kg m
 -3)",1068,841,834,1043,926
-11,"Density at 210 degC (kg m
+10,"Density at 210 degC (kg m
 -3)",904,736,660,897,802
-12,"Thermal conductivity at 210 degC (W m
+11,"Thermal conductivity at 210 degC (W m
 -1 K
 -1)",0.11,0.12,0.06,0.1083,0.11
-13,"-1 degC
+12,"-1 degC
 -1)
 Speciﬁc heat capacity at 210 degC (kJ kg",2.075,2.643,2.171,1.63,2.509
-14,"Thermal storage capacity at 210 degC (kJ m
+13,"Thermal storage capacity at 210 degC (kJ m
 -3 degC
 -1)",1876,1945,1433,1462,2012
-15,"Cost (V$t
+14,"Cost (V$t
 -1)","25,000",e,"29,400",e,835
-16,"Energy storage cost for DT ¼ 100 degC (V$kWh
+15,"Energy storage cost for DT ¼ 100 degC (V$kWh
 -1)",464,e,573,e,12

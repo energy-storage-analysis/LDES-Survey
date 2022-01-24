@@ -26,13 +26,16 @@ def get_pdf_size(pdf_path, page):
     media_box = input1.getPage(page).mediaBox
     pdf_width = float(media_box[2])-float(media_box[0])
     pdf_height = float(media_box[3])-float(media_box[1])
+
+    rotate = input1.getPage(page).get("/Rotate")
+    if rotate == 90:
+        pdf_width, pdf_height = pdf_height, pdf_width
+        
     return pdf_width, pdf_height
 
-def extract_tabula_template(t, pdf_height):
+def extract_table_area(t, pdf_height):
     """extracts tabula template dict to data suitable for camelot"""
     
-    page = str(t['page'])
-
     table_area = [
         float(t['x1']),
         pdf_height - float(t['y1']),
@@ -41,5 +44,5 @@ def extract_tabula_template(t, pdf_height):
         ]
     # table_area = [str(int(s)) for s in table_area]
     table_area = ['{},{},{},{}'.format(*table_area)]
-    return page, table_area
+    return table_area
 
