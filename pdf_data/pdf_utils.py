@@ -1,4 +1,5 @@
 import pandas as pd
+import camelot
 
 def concat_row_to_columns(df: pd.DataFrame, column_rows: int):
     """set the top column_rows rows to the column headers """
@@ -46,3 +47,36 @@ def extract_table_area(t, pdf_height):
     table_area = ['{},{},{},{}'.format(*table_area)]
     return table_area
 
+def extract_dfs(pdf_path, table_settings):
+    dfs = []
+    for setting in table_settings:
+        print("table on page {}".format(setting['template']['page']))
+        template = setting['template']
+        page = template['page']
+        pdf_width, pdf_height = get_pdf_size(pdf_path, page + 1) #assumes all heights are same as page 1
+
+        table_area = extract_table_area(template, pdf_height)
+
+        columns = setting['columns'] if 'columns' in setting else None
+        try:
+            tables = camelot.read_pdf(pdf_path, pages=str(page), table_areas= table_area, flavor='stream', columns=columns)
+
+            df = tables[0].df
+
+            df = df.replace(to_replace='e(\d)', value=r'-\1', regex=True)
+            df = df.replace('\(cid:3\)', 'deg', regex=True)
+            df = df.replace('\(cid:1\)', '-', regex=True)
+
+        #Set first row as column for all, then concat for others. This keeps compatibility with tabula
+            if 'column_rows' in setting:
+                column_rows = setting['column_rows']
+
+                df = concat_row_to_columns(df, column_rows)
+
+        except:
+            print("Error, skipping and returning blank dataframe")
+            df = pd.DataFrame()
+
+        dfs.append(df)
+
+    return dfs
