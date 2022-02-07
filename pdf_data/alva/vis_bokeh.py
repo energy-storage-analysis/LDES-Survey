@@ -9,6 +9,8 @@ sys.path.append('..')
 
 df_latent = pd.read_csv('output/table_8.csv')
 
+df_latent.columns = df_latent.columns.str.replace(r'\r\n',r'\n', regex=True)
+
 df_latent = df_latent.rename(
     {'Type  ': 'type',
        'Class  ': 'class', 
@@ -47,6 +49,7 @@ df_4 = df_4.dropna(subset=['Property'])
 df_4 = df_4.T
 df_4.columns = df_4.iloc[1]
 df_4 = df_4.iloc[2:]
+df_4.columns = df_4.columns.str.replace(r'\r\n',r'\n', regex=True)
 
 df_4['class'] = 'Thermal Oils'
 df_4 = df_4.rename({  
@@ -64,6 +67,7 @@ df_4
 df_5 = pd.read_csv('output/table_5.csv')
 df_5.columns = [c.strip() for c in df_5.columns]
 df_5 = df_5.drop('Unnamed: 0', axis=1)
+df_5.columns = df_5.columns.str.replace(r'\r\n',r'\n', regex=True)
 
 df_5 = df_5.dropna(subset=['Highest operating temperature (degC)'])
 df_5['class'] = 'Molten Salt'
@@ -87,6 +91,8 @@ df_5
 df_6 = pd.read_csv('output/table_6.csv')
 df_6.columns = [c.strip() for c in df_6.columns]
 df_6 = df_6.drop('Unnamed: 0', axis=1)
+df_6.columns = df_6.columns.str.replace(r'\r\n',r'\n', regex=True)
+
 df_6['class'] = 'Metal Alloy'
 df_6 = df_6.rename({
     'Metal/Alloy': 'name',
@@ -106,6 +112,7 @@ df_7 = df_7.drop('Unnamed: 0', axis=1)
 df_7 = df_7.dropna(subset=['Type'])
 df_7['class'] = 'Rocks'
 df_7['cost'] = 0.1
+df_7.columns = df_7.columns.str.replace(r'\r\n',r'\n', regex=True)
 
 df_7 = df_7.rename({
     'Rock': 'name',
