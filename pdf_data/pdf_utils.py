@@ -59,7 +59,7 @@ def extract_dfs(pdf_path, table_settings):
 
         columns = setting['columns'] if 'columns' in setting else None
         try:
-            tables = camelot.read_pdf(pdf_path, pages=str(page), table_areas= table_area, flavor='stream', columns=columns)
+            tables = camelot.read_pdf(pdf_path, pages=str(page), table_areas= table_area, flavor='stream', columns=columns, row_tol=5)
 
             df = tables[0].df
 

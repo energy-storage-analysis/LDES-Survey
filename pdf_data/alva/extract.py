@@ -24,9 +24,9 @@ table_settings = [
     {'template': templates[1], 'column_rows':3},
     {'template': templates[2], 'column_rows':4},
     {'template': templates[3], 'column_rows':1, 'columns': ['195,270,350,415,485']},
-    {'template': templates[4], 'column_rows':4},
-    {'template': templates[5], 'column_rows':4},
-    {'template': templates[6], 'column_rows':4},
+    {'template': templates[4], 'column_rows':4, 'columns': ['155,195,245,310,375,435,510']},
+    {'template': templates[5], 'column_rows':3, 'columns': ['210,250,300,350,390,450,510']},
+    {'template': templates[6], 'column_rows':4, 'columns': ['70,125,170,220,270,317,370,425,475']},
     {'template': templates[7], 'column_rows':3, 'columns': ['85,135,260,325,375,450,520,595,660']},
     {'template': templates[8], 'column_rows':3, 'columns': ['85,135,260,325,375,450,520,595,660']},
     {'template': templates[9], 'columns': ['85,135,260,325,375,450,520,595,660']},
@@ -35,6 +35,10 @@ table_settings = [
     {'template': templates[12], 'column_rows':2},
     {'template': templates[13], 'column_rows':1},
 ]
+
+# for setting in table_settings:
+#     if 'column_rows' in setting:
+#         del setting['column_rows']
 
 dfs = pdf_utils.extract_dfs(pdf_path, table_settings)
 
