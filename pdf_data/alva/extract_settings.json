@@ -1,0 +1,87 @@
+[
+    {
+        "column_rows": 2,
+        "camelot_kwargs": {}
+    },
+    {
+        "column_rows": 3,
+        "camelot_kwargs": {}
+    },
+    {
+        "column_rows": 4,
+        "camelot_kwargs": {}
+    },
+    {
+        "column_rows": 1,
+        "camelot_kwargs": {
+            "columns": [
+                "195,270,350,415,485"
+            ]
+        }
+    },
+    {
+        "column_rows": 4,
+        "camelot_kwargs": {
+            "columns": [
+                "155,195,245,310,375,435,510"
+            ]
+        }
+    },
+    {
+        "column_rows": 3,
+        "camelot_kwargs": {
+            "columns": [
+                "210,250,300,350,390,450,510"
+            ]
+        }
+    },
+    {
+        "column_rows": 4,
+        "camelot_kwargs": {
+            "columns": [
+                "70,125,170,220,270,317,370,425,475"
+            ]
+        }
+    },
+    {
+        "column_rows": 3,
+        "camelot_kwargs": {
+            "columns": [
+                "85,135,260,325,375,450,520,595,660"
+            ]
+        }
+    },
+    {
+        "column_rows": 3,
+        "camelot_kwargs": {
+            "columns": [
+                "85,135,260,325,375,450,520,595,660"
+            ]
+        }
+    },
+    {
+
+        "camelot_kwargs": {
+            "columns": [
+                "85,135,260,325,375,450,520,595,660"
+            ]
+        }
+    },
+    {
+        "column_rows": 4,
+        "camelot_kwargs": {
+            "columns": [
+                "85,135,260,325,375,450,520,595,660"
+            ]
+        }
+    },
+    {
+        "column_rows": 2
+    },
+    {
+        "column_rows": 2
+    },
+    {
+        "column_rows": 1
+    }
+]

@@ -56,10 +56,11 @@ def extract_dfs(pdf_path, table_settings):
         pdf_width, pdf_height = get_pdf_size(pdf_path, page + 1) #assumes all heights are same as page 1
 
         table_area = extract_table_area(template, pdf_height)
+        camelot_kwargs = setting['camelot_kwargs']
+        # columns = camelot_kwargs['columns'] if 'columns' in camelot_kwargs else None
 
-        columns = setting['columns'] if 'columns' in setting else None
         try:
-            tables = camelot.read_pdf(pdf_path, pages=str(page), table_areas= table_area, flavor='stream', columns=columns, row_tol=5)
+            tables = camelot.read_pdf(pdf_path, pages=str(page), table_areas= table_area, **camelot_kwargs)
 
             df = tables[0].df
 
