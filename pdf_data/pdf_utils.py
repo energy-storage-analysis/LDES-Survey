@@ -74,7 +74,8 @@ def extract_dfs(pdf_path, table_settings):
 
                 df = concat_row_to_columns(df, column_rows)
 
-        except:
+        except Exception as e:
+            print(e)
             print("Error, skipping and returning blank dataframe")
             df = pd.DataFrame()
 
