@@ -82,3 +82,18 @@ def extract_dfs(pdf_path, table_settings):
         dfs.append(df)
 
     return dfs
+
+import re
+def average_range(s):
+    """
+    searces for a string of the form "num1-num2" and averages the two numbers 
+    """
+    m = re.search("(\S+)-(\S+)", s)
+    
+    if m is None:
+        return s
+    else:
+        f1 = float(m.groups()[0])
+        f2 = float(m.groups()[1])
+
+        return (f1 + f2)/2

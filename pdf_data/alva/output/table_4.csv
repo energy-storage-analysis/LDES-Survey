@@ -1,31 +1,12 @@
-,Property,"®
-Therminol
-VP-1",Xceltherm 600,Syltherm XLT,"®
-Dowtherm
-A",Vegetable oil
-0,Manufacturer,Eastman chemical,Radco industries,Dow chemical,Dow chemical,[19]
-1,,company,,company,company,
-2,Composition,Diphenyl,Parafﬁnic mineral oil,Dimethyl,Diphenyl,Triglycerides/free
-3,,oxide/biphenyl,,polysiloxane,oxide/biphenyl,fatty acids
-4,Max bulk temperature (degC),400,316,260,400,e
-5,Melting point (degC),12,e,-111,12,e
-6,Atmospheric boiling point (degC),257,301,200,257,295
-7,"Kinematic viscosity at 40 degC (mm2 s
--1)",2.48,15.5,1.1,2.56,30
-8,"Density at 40 degC (kg m
--3)",1068,841,834,1043,926
-9,"Density at 210 degC (kg m
--3)",904,736,660,897,802
-10,"Thermal conductivity at 210 degC (W m
--1 K
--1)",0.11,0.12,0.06,0.1083,0.11
-11,"-1 degC
--1)
-Speciﬁc heat capacity at 210 degC (kJ kg",2.075,2.643,2.171,1.63,2.509
-12,"Thermal storage capacity at 210 degC (kJ m
+name,Manufacturer,Composition,Max bulk temperature (degC),Melting point (degC),Atmospheric boiling point (degC),"Kinematic viscosity at 40 degC (mm2 s
+-1)","Density at 40 degC (kg m
+-3)","Density at 210 degC (kg m
+-3)",kth,Cp,"Thermal storage capacity at 210 degC (kJ m
 -3 degC
--1)",1876,1945,1433,1462,2012
-13,"Cost (V$t
--1)","25,000",e,"29,400",e,835
-14,"Energy storage cost for DT ¼ 100 degC (V$kWh
--1)",464,e,573,e,12
+-1)",cost,"Energy storage cost for DT ¼ 100 degC (V$kWh
+-1)",class
+Syltherm XLT,Dow chemical,Dimethyl,260,-111,200,1.1,834,660,0.06,2.171,1433,29.400,573,Thermal Oils
+"®
+Dowtherm
+A",Dow chemical,Diphenyl,400,12,257,2.56,1043,897,0.1083,1.63,1462,e,e,Thermal Oils
+Vegetable oil,[19],Triglycerides/free,e,e,295,30,926,802,0.11,2.509,2012,835,12,Thermal Oils
