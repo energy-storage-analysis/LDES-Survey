@@ -1,0 +1,4 @@
+,max stress,density,mat_cost
+Stainless Steel,4.00E+08,8000,0.5
+Aluminum,1.00E+08,3000,3
+CFRP,4.00E+08,1400,10
