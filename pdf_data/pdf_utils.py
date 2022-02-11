@@ -88,7 +88,13 @@ def average_range(s):
     """
     searces for a string of the form "num1-num2" and averages the two numbers 
     """
-    m = re.search("(\S+)-(\S+)", s)
+
+    #https://stackoverflow.com/questions/4703390/how-to-extract-a-floating-number-from-a-string
+    # num_regex = r"[-+]?(?:\d*\.\d+|\d+)"
+    num_regex = "(\S+)"
+    full_regex = r"{}[–-]{}".format(num_regex, num_regex)
+    # re.compile(full_regex)
+    m = re.search(full_regex, s)
     
     if m is None:
         return s
