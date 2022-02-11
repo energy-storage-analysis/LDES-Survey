@@ -45,7 +45,7 @@ df_table2 = df_table2.reset_index(drop=True)
 df_table2 = df_table2.rename(
     {' Year': 'year', 
     ' Label': 'label', 
-    ' CCS \n(US$/kWh)': 'cost',
+    ' CCS \n(US$/kWh)': 'C_kwh',
     ' Anode/Cathode': 'ancat', 
     ' Battery Type': 'type', 
     ' Ref.': 'ref'

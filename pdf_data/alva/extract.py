@@ -94,7 +94,11 @@ df_table4 = df_table4.rename({
     }, axis=1)
 df_table4.index.name = 'name'
 
-df_table4['cost'] = df_table4['cost'].str.replace(',','.')
+df_table4['cost'] = df_table4['cost'].str.replace(',','')
+df_table4['cost'] = df_table4['cost'].replace('e','nan')
+df_table4['cost'] = df_table4['cost'].astype(float)
+df_table4['cost'] = df_table4['cost']*(1/1000) #euro/ton to dollar/kg (roughly)
+
 
 tables['table_4'] = df_table4
 
@@ -116,6 +120,7 @@ df_table5 = df_table5.rename({
 
 
 df_table5 = df_table5.set_index('name')
+df_table5['cost'] = df_table5['cost'].replace('e','nan')
 
 df_table5 = df_table5.drop('LiNO3')
 tables['table_5'] = df_table5

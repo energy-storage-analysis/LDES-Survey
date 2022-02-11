@@ -1,4 +1,4 @@
-,year,label,cost,ancat,type,ref
+,year,label,C_kwh,ancat,type,ref
 0,1859,Pb acid,12.4,Pb/PbO2,Pb acid,1
 1,1899,NiCd,66.0,Cd(OH)2/Ni(OH)2,NiCd,2
 2,1978,NiMH,82.8,LaNi5/Ni(OH)2,NiMH,3
