@@ -1,0 +1,3 @@
+[submodule "pdf_data/usgs/USGS_HHI"]
+	path = pdf_data/usgs/USGS_HHI
+	url = https://github.com/sp8rks/USGS_HHI
