@@ -10,8 +10,9 @@ sys.path.append('..')
 df_latent = pd.read_csv('alva/output/table_8.csv', index_col=0)
 
 df_latent['C_kwh'] = df_latent['cost']/(df_latent['sp_latent_heat'])
-df_latent['energy_type'] = 'Latent Thermal'
+df_latent['energy_type'] = 'Latent Thermal'# (T > 200 C)'
 df_latent['source'] = 'Alva et al. 2018'
+df_latent = df_latent.where(df_latent['phase_change_T'] > 200).dropna(subset=['phase_change_T'])
 
 df_latent = df_latent.rename({'material':'name'}, axis=1)
 
@@ -76,23 +77,24 @@ kale_tables['a2'][cols].dropna()
 df_all
 #%%
 from matplotlib import ticker as mticker
+plt.rcParams.update({'font.size': 20})
 
 df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
 df_all['cat_label'] = df_all['energy_type'] + '\n(' + df_all['source'] + ')'
 
-fig = plt.figure(figsize = (15,6))
+fig = plt.figure(figsize = (13,6))
 # plt.violinplot(dataset=df_all['C_kwh'].values)
-sns.violinplot(data=df_all, x='cat_label', y='C_kwh_log')
-# sns.stripplot(data=df_all_plot, x='energy_type', y='C_kwh')
+# sns.violinplot(data=df_all, x='cat_label', y='C_kwh_log')
+sns.stripplot(data=df_all, x='cat_label', y='C_kwh_log', size=10)
 
-# plt.axhline(1, linestyle='--', color='gray')
+plt.axhline(np.log10(10), linestyle='--', color='gray')
 
 fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-fig.axes[0].yaxis.set_ticks([np.log10(x) for p in range(-2,5) for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
+fig.axes[0].yaxis.set_ticks([np.log10(x) for p in range(-1,4) for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
 # plt.gca().set_xticks(np.arange(0, len(labels)), labels=labels)
 
 # plt.yscale('log')
-# plt.xticks(rotation=90)
+plt.xticks(rotation=45)
 plt.ylabel('Material Energy Cost ($/kWh)')
 # %%
 import iqplot
