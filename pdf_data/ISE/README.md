@@ -1,0 +1,1 @@
+https://en.institut-seltene-erden.de/aktuelle-preise-von-strategischen-metallen/
