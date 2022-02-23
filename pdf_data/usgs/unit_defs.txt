@@ -1,0 +1,5 @@
+USD = [currency]
+
+cents = 0.01 * USD
+
+flask = 34.47 * kg

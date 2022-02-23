@@ -1,0 +1,16 @@
+USD = [currency]
+EUR = nan USD
+JPY = nan USD
+GBP = nan USD
+RUB = nan USD
+
+@context FX
+    EUR = 1.11254 USD
+    GBP = 1.35 USD
+    RUB = 0.012 USD
+    INR = 0.013 USD
+@end
+
+
+dmtu = mt
+mtu = 10*kg
