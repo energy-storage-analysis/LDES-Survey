@@ -1,0 +1,8 @@
+reactant,temperature,enthalpy,specific_energy,product,type
+CaCO3,885,165.832,1656.8,CaO,carbonates
+SrCO3,1220,202.349,1370.65,SrO,carbonates
+MgCO3,300,98.984,1174,MgO,carbonates
+BaCO3,1555,165.096,836.6,BaO,carbonates
+CdCO3,290,96.573,560.1,CdO,carbonates
+ZnCO3,120,68.326,544.9,ZnO,carbonates
+PbCO3,310,83.906,314,PbO,carbonates

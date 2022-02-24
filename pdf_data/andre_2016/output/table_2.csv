@@ -1,0 +1,9 @@
+reactant,temperature,enthalpy,specific_energy,product,type
+MgSO4,1140,348.766,2897.5,MgO,sulfates
+MnSO4,1065,357.827,2369.7,MnO,sulfates
+FeSO4,1030,346.318,2279.78,FeO,sulfates
+CoSO4,1005,329.564,2126.3,CoO,sulfates
+CuSO4,875,300.373,1881.9,CuO,sulfates
+ZnSO4,1080,285.514,1768.2,ZnO,sulfates
+CdSO4,1095,354.504,1700.5,CdO,sulfates
+NiSO4,995,222.755,1439.4,NiO,sulfates

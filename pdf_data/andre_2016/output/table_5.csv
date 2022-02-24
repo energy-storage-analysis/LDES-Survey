@@ -1,0 +1,16 @@
+reactant,temperature,enthalpy,specific_energy,product,type
+Rh2O3,970,249.276,982.1,Rh2O,oxides
+V2O5,1710,176.594,970.9,V2O4,oxides
+Co3O4,935,196.532,816.1,CoO,oxides
+Mn3O4,1700,194.63,850.6,MnO,oxides
+CuO,1115,64.446,810.2,Cu2O,oxides
+Li2O2,145,34.225,745.9,Li2O,oxides
+Fe2O3,1360,232.613,485.6,Fe3O4,oxides
+BaO2,880,73.258,432.6,BaO,oxides
+MgO2,205,21.432,380.6,MgO,oxides
+Cr5O12,105,126.17,279.1,Cr2O3,oxides
+PtO2,420,62.802,276.5,PtO,oxides
+PbO2,295,55.234,230.9,PbO,oxides
+Sb2O5,325,68.064,210.4,SbO2,oxides
+Mn2O3,915,90.038,190.1,Mn3O4,oxides
+UO3,670,35.232,123,U3O8,oxides

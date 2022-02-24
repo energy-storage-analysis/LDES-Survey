@@ -1,0 +1,10 @@
+reactant,temperature,enthalpy,specific_energy,product,type
+Ca(OH)2,515,100.177,1352,CaO,hydroxides
+Mg(OH)2,265,77.745,1333,MgO,hydroxides
+Be(OH)2,70,51.276,1191,BeO,hydroxides
+Mn(OH)2,190,67.072,754,MnO,hydroxides
+Sr(OH)2,755,88.581,728.3,SrO,hydroxides
+Ba(OH)2,1005,93.462,545.47,BaO,hydroxides
+Ni(OH)2,70,47.846,516,NiO,hydroxides
+Zn(OH)2,55,49.609,498.96,ZnO,hydroxides
+Cd(OH)2,125,59.952,409.4,CdO,hydroxides
