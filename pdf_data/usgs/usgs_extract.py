@@ -133,7 +133,7 @@ df_prices = df_prices.rename({
     'price_name': 'price_info'
 }, axis=1)
 
-df_prices.to_csv('data/prices.csv')
+df_prices.to_csv('output/prices.csv')
 # %%
 
 # %%

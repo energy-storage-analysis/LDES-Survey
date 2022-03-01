@@ -1,0 +1,207 @@
+,Commodity,Commodity_info,Specification,price_per_kg
+0,Antimony,Ingot,99.65% min EXW China,5.5165
+1,Antimony,Ingot,99.85% min EXW China,5.5895
+2,Antimony,Ingot,99.65% min FOB China,6.1000000000000005
+4,Antimony,Ingot,99.65% min in the warehouse Rotterdam,6.15
+5,Antimony,Ingot,99.65% min in the Baltimore warehouse,6.459544282016912
+6,Antimony,Trioxide,99.5% min delivered in China,5.0815
+7,Antimony,Trioxide,99.8% min delivered in China,5.2265
+8,Antimony,Trioxide,99.5% min FOB China,5.3
+10,Antimony,Trioxide,99.5% min in the Baltimore warehouse,5.908388626554718
+11,Antimony,ethelyene_glycol,57% min delivered in China,5.299
+12,Arsenic,metal,99% min EXW China,1.125
+13,Arsenic,metal,99% min FOB China,1.165
+14,Arsenic,trioxide,99% min EXW China,0.45
+15,Arsenic,trioxide,99% min FOB China,0.41000000000000003
+16,Bismuth,ingot,99.99% min EXW China,5.9885
+17,Bismuth,ingot,99.99% min FOB China,6.228058906722792
+19,Bismuth,ingot,99.99% min delivered in Europe,6.448521168907669
+20,Bismuth,ingot,99.99% min delivered in US,6.668983431092547
+21,Bismuth,oxides,99.9% min EXW China,6.497
+22,Cadmium,Ingot,99.99% min EXW China,2.7655
+24,Cadmium,Ingot,99.99% min in the warehouse Rotterdam,2.7888476166387015
+25,Cadmium,Ingot,99.99% min in the Baltimore warehouse,2.799870729747945
+26,Calcium,Ingot,Reductive 98% min EXW China,2.0685000000000002
+27,Calcium,Granule,Reductive 98% min EXW China,2.5260000000000002
+28,Calcium,Granule,Reductive 98% min FOB China,2.66
+29,Calcium,Granule,Electrolytic 98.5% min EXW China,5.4735000000000005
+30,Calcium,Granule,Electrolytic 98.5% min FOB China,6.140000000000001
+31,Chrome,Concrete,SA 42% min CIF China,0.165
+32,Chrome,lump,Turkish 40% min in the port of China,0.005735
+33,Chrome,lump,Turkish 40% min CIF China,0.1975
+34,Chrome,Concrete,SA 40% min in the port of China,0.00399
+35,Chrome,Concrete,SA 40% min CIF China,0.145
+36,Chrome,Concrete,46% min FOB Turkey,0.1925
+37,Chrome,lump,40% min FOB Turkey,0.1775
+38,Chrome,Concrete,42% min FOB SA,0.1295
+39,Chrome,Concrete,40% min FOB SA,0.1125
+40,Chrome,Concrete,Turkish 46% min CIF China,0.2175
+41,Chrome,Concrete,Turkish 46% min in the port of China,0.006025000000000001
+42,Chromium,metal,99% min EXW China,8.348
+43,Chromium,metal,99% min FOB China,8.14
+44,Cobalt,Concrete,6-8% CIF China,18.408598892437276
+45,Cobalt,Intermediate,20-30% CIF China,18.629061154622153
+46,Cobalt,metal,99.3% min in the warehouse Rotterdam,30.75448557479042
+48,Cobalt,metal,99.8% min in the warehouse Rotterdam,32.18749027899212
+49,Cobalt,metal,99.8% min in the Baltimore warehouse,31.526103492437493
+50,Cobalt,metal,99.8% min delivered in China,30.5
+51,Cobalt,Carbonates,46% min delivered in China,14.445
+52,Cobalt,Chloride,24% min delivered in China,6.388
+53,Cobalt,Monoxide,78% min delivered in China,31.6
+54,Cobalt,oxides,72% min delivered in China,22.15
+56,Cobalt,Powder,99.5% min delivered in China,33.3
+57,Cobalt,sulphates,20.5% min delivered in China,5.3715
+58,Cobalt,Tetroxide,73.5% min delivered in China,22.25
+59,Gallium,metal,99.99% min EXW China,146.0
+60,Gallium,metal,99.99% min FOB China,146.5
+61,Gallium,metal,99.99% min delivered in Europe,157.0
+62,Gallium,metal,99.99% min delivered in US,157.0
+63,Germanium,metal,99.99% min EXW China,1096.0
+64,Germanium,metal,99.99% min FOB China,1145.0
+65,Germanium,metal,99.99% min delivered in Europe,1185.0
+66,Germanium,metal,99.99% min delivered in US,1185.0
+67,Germanium,dioxides,99.99% min FOB China,720.0
+68,Germanium,dioxides,99.99% min EXW China,711.5
+69,Germanium,dioxides,99.99% min delivered in US,730.0
+70,Indium,ingot,99.99% min EXW China,162.0
+71,Indium,ingot,99.99% min FOB China,163.0
+72,Indium,ingot,99.99% min delivered in Europe,175.0
+73,Indium,ingot,99.99% min delivered in US,175.0
+74,Lithium,metal,99% min delivered in China,97.269
+75,Lithium,metal,99.9% min delivered in China,103.0765
+76,Lithium,Carbonates,99% min delivered in China,9.219
+77,Lithium,Carbonates,99.5% min delivered in China,10.453
+78,Lithium,Carbonates,99.5% min delivered in EU,14.25
+79,Lithium,Carbonates,99.5% min FOB South America,11.05
+80,Lithium,Cobaltate,Co 60% min delivered in China,28.950000000000003
+81,Lithium,manganates,Mn 58% delivered in China,6.968500000000001
+82,Lithium,hydroxides_monohydrates,LiOH 56.5% min delivered in China,10.6705
+83,Lithium,hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in China",11.9045
+84,Lithium,hydroxides_monohydrates,"LiOH 56.5% min, Magnets 0.0001% max FOB China",14.45
+85,Lithium,hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in South Korea",15.7
+86,Lithium,chlorides,99.3% min delivered in China,9.7995
+87,Magnesium,Ingot,99.9% min EXW China,2.25
+88,Magnesium,Ingot,99.9% min Ex-VAT FOB China,2.325
+89,Magnesium,Ingot,99.9% min FOB China,2.355
+90,Magnesium,Ingot,99.9% min in the warehouse Rotterdam,2.355
+93,Magnesium,Powder,99.9% min EXW China,2.41
+94,Magnesium,Powder,99.9% min FOB China,2.455
+95,Magnesium,Alloy,AZ91D EXW China,2.5260000000000002
+96,Magnesium,Alloy,AZ91D FOB China,2.625
+97,Manganese,flakes,99.7% min EXW China,1.9015
+98,Manganese,flakes,99.7% min FOB China,1.945
+99,Manganese,flakes,99.7% min Ex-VAT FOB China,1.865
+100,Manganese,flakes,99.7% min in the warehouse Rotterdam,1.95
+101,Manganese,flakes,99.7% min CIF India,1.975
+103,Manganese,Lump,96.5% min FOB China,2.015
+104,Manganese,Briquette,97% min FOB China,1.995
+105,Manganese,dioxides,Alkaline 91% min EXW China,1.713
+106,Manganese,dioxides,Carbon 91% min EXW China,1.4955
+107,Manganese,sulphates,Mn 32% min EXW China,0.9875
+108,Mercury,metal,99.999% min EXW China,61.7
+109,Molybdenum,Concrete,45% min EXW China,26.35
+110,Molybdenum,oxides,50% min EXW China,27.1
+111,Molybdenum,oxides,57% min in the warehouse Rotterdam,26.12477806890799
+112,Molybdenum,oxides,57% min in the port of South Korea,26.014546937815556
+113,Molybdenum,oxides,57% min in the port of India,26.014546937815556
+114,Molybdenum,oxides,99.9% min EXW China,23.083000000000002
+115,Ammonium,Tetrathiomolybdate,56% min EXW China,18.728
+116,Ammonium,heptamolybdate,54% min EXW China,19.018
+117,Sodium,Molybdate,99% min EXW China,12.485
+118,Molybdenum,Powder,99.95% min EXW China,37.7
+119,Molybdenum,bar,99.9% min EXW China,40.45
+120,Molybdenum,Rod,?0.40mm EXW China,52.75
+121,Niobium,Concrete,"Nb2O5 50% min, Ta2O5 5% min, CIF China",20.613221514286053
+122,Niobium,pentoxides,99.5% min EXW China,33.45
+123,Niobium,pentoxides,99.5% min FOB China,33.5
+124,Niobium,pentoxides,99.99% min EXW China,45.0
+125,Niobium,pentoxides,99.99% min FOB China,44.8
+126,Rhenium,APR,99.99% min EXW China,1502.5
+127,Selenium,Powder,99.5% min in the warehouse Rotterdam,18.629061154622153
+128,Selenium,Powder,99.9% min delivered in China,20.700000000000003
+129,Selenium,Powder,99.9% min CIF China,19.400679072269227
+131,Selenium,Powder,99.9% min FOB Russia,24.0
+132,Selenium,Powder,99.9% min delivered in US,18.629061154622153
+133,Selenium,dioxides,98% min delivered in China,12.7
+134,Silicon,metal,5-5-3 delivered in China,1.4955
+135,Silicon,metal,5-5-3 FOB China,1.54
+136,Silicon,metal,5-5-3 Ex-VAT FOB China,1.42
+139,Silicon,metal,4-4-1 delivered in China,1.6405
+140,Silicon,metal,4-4-1 FOB China,1.72
+141,Silicon,metal,4-4-1 Ex-VAT FOB China,1.565
+144,Silicon,metal,4-2-1 delivered in China,1.7855
+145,Silicon,metal,4-1-1 delivered in China,1.8145
+146,Silicon,metal,3-3-03 delivered in China,1.7275
+147,Silicon,metal,3-3-03 FOB China,1.7550000000000001
+148,Silicon,metal,3-3-03 P 50ppm max delivered in China,1.7565
+149,Silicon,metal,3-3-03 P 50ppm max FOB China,1.8
+150,Silicon,metal,2-2-02 delivered in China,1.9015
+151,Silicon,metal,2-2-02 FOB China,1.94
+152,Silicon,metal,98.5% min delivered in US,2.6235009200000428
+153,Silicon,polysilicon,6N delivered in China,10.55
+154,Strontium,metal,99% min EXW China,6.6055
+155,Strontium,metal,99% min FOB China,7.0
+156,Tantalum,Concrete,Ta2O5 30% min CIF China,120.15193289075827
+157,Tantalum,metal,99.95% min EXW China,305.0
+158,Tantalum,metal,99.95% min FOB China,260.0
+159,Tantalum,metal,99.95% min delivered in US,280.0
+160,Tantalum,pentoxide,99.5% min EXW China,185.0
+161,Tantalum,pentoxide,99.5% min FOB China,185.0
+162,Tantalum,pentoxide,99.99% min EXW China,252.0
+163,Tantalum,pentoxide,99.99% min FOB China,247.5
+164,Tellurium,metal,99.9% min in the warehouse Rotterdam,51.0
+165,Tellurium,metal,99.99% min EXW China,55.900000000000006
+166,Tellurium,metal,99.99% min in the warehouse Rotterdam,61.0
+167,Ilmenite,Conc,TiO2 46% min; Fe2O3 8% max; Ex-VAT EXW China,0.1645
+168,Ilmenite,Conc,TiO2 50% min; Fe2O3 14% max; in the port of China,0.234
+169,Ilmenite,Conc,TiO2 50% min; Fe 30% min; in the port of China,0.188
+170,Ilmenite,Conc,"Mozambican TiO2 52% min, Fe2O3 25% max CIF China",0.1975
+171,Ilmenite,Conc,"Australian TiO2 55-58% min, Fe 27% min CIF China",0.178
+172,Ilmenite,Conc,"Kenyan TiO2 48% min, Fe2O3 20% max CIF China",0.1855
+173,Ilmenite,Conc,"TiO2 52% min, Fe2O3 25% max FOB Vietnam",0.1645
+174,Ilmenite,Conc,"TiO2 49% min, Fe2O3 11% max FOB India",0.216
+175,Ilmenite,Reduced,TiO2 56% min EXW China,0.542
+176,Rutile,Conc,TiO2 95% min in the port of China,1.314
+177,Titanium,Slag,TiO2 74% min EXW China,0.5225
+178,Titanium,Slag,TiO2 90% min EXW China,0.8855000000000001
+179,Titanium,tetrachloride,99.99% min EXW China,1.1685
+180,Titan,Sponge,99.7% min EXW China,10.743
+181,Titanium,plate,TA2 2mm EXW China,16.35
+182,Titanium,pipe,TA2 25.4x1mm EXW China,20.1
+183,Titanium,Dioxide,R TiO2 93% min EXW China,2.069
+184,Titanium,Dioxide,R TiO2 93% min FOB China,2.14
+185,Titanium,Dioxide,A TiO2 98% min EXW China,1.735
+186,Wolfram,Ore,WO3 65% min EXW China,10.743
+187,Wolfram,Ore,WO3 50% min FOB Africa,20.75
+188,Tungsten,APT,88.5% min EXW China,15.897
+189,Tungsten,APT,88.5% min FOB China,22.0
+190,Tungsten,APT,88.5% min in the warehouse Rotterdam,22.5
+191,Sodium,Tungstate,WO3 68% min EXW China,14.9535
+192,Tungsten,oxides,WO3 99.95% min EXW China,20.978
+193,Tungsten,oxides,WO3 99.95% min FOB China,22.8
+194,Tungsten,powder,99.95% min 2.5-7.0?m EXW China,26.9
+195,Wolfram,Bar,W-4 99.9% min EXW China,31.0
+196,Wolfram,Bar,W-4 99.9% min FOB China,32.0
+197,Tungsten,carbide,99.8% min 2.5-7.0?m EXW China,26.65
+198,Tungsten,carbide,99.8% min 2.5-7.0?m FOB China,30.3
+199,Tungsten,scrap,"Grinding Swarf W 70% min, Co 5% min Ex-VAT delivered in China",18.25
+200,Tungsten,scrap,CNC Cutting Blades 70% min Ex-VAT delivered in China,19.4
+201,Tungsten,scrap,Anvil 90% min Ex-VAT delivered in China,22.3
+202,Tungsten,scrap,Drills 70% min ex-VAT delivered in China,20.55
+203,Ammonium,metavanadate,98% min EXW China,16.913
+204,Vanadium,nitrides,N 14% min EXW China,27.0755
+205,Vanadium,pentoxides,Flakes 98% min EXW China,17.639
+206,Vanadium,pentoxides,Flakes 98% min FOB China,17.857443236975083
+207,Vanadium,pentoxides,98% min in the warehouse Rotterdam,16.424438532773376
+208,Zircon,sand,Zr (Hf) O2 65% min Ex-VAT EXW China,1.4955
+209,Zircon,sand,Australian Zr (Hf) O2 66% min in China port,1.8800000000000001
+210,Zircon,sand,Australian Zr (Hf) O2 66% min in China port,1.605
+211,Zircon,sand,SA Zr (Hf) O2 65% min in the port of China,1.6765
+212,Zircon,sand,SA Zr (Hf) O2 65% min in the port of China,1.465
+213,Zircon,sand,SA Zr (Hf) O2 66% min in the port of China,1.555
+214,Zircon,sand,Indonesian Zr (Hf) O2 66% min CIF China,1.485
+215,Zirconium,fused_cubic,Zr (Hf) O2 98.5% min EXW China,4.3555
+216,Zirconium,Sponge,Zr + Hf 99.4% min EXW China,35.85
+217,Zirconium,silicate,Zr (Hf) O2 64.5% min EXW China,1.938
+218,Zirconium,Oxychloride,Zr (Hf) O2 36% min EXW China,2.2720000000000002
+219,Zirconium,Carbonates,Zr (Hf) O2 40% min EXW China,3.3825000000000003

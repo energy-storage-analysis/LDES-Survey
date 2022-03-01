@@ -12,5 +12,5 @@ RUB = nan USD
 @end
 
 
-dmtu = mt
+dmtu = metric_ton
 mtu = 10*kg

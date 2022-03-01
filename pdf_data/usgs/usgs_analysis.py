@@ -94,6 +94,6 @@ df_commodity.sort_values('ratio', ascending=False)
 
 
 df_commodity['formula'] = ''
-df_commodity.to_csv('data/commodity.csv')
+df_commodity.to_csv('output/commodity.csv')
 
 # %%

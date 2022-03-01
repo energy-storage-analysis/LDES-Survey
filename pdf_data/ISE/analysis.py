@@ -34,7 +34,9 @@ df
 df['mass_unit'] = df['mass_unit'].replace({
     'lb Co': 'lb',
     'lb VO5': 'lb',
-    'lb Ta2O5': 'lb'
+    'lb Ta2O5': 'lb',
+    'mt': 'metric_ton',
+    't':'metric_ton'
     })
 
 df['mass_unit'].value_counts()
@@ -52,6 +54,7 @@ for index, row in df.iterrows():
     val = ureg.Quantity(val, 'USD/{}'.format(unit))
     val = val.to('USD/kg').magnitude
     price_per_kg.append(val)
+    # break
 
 df['price_per_kg'] = price_per_kg
 # %%
@@ -70,8 +73,21 @@ df['Commodity'] = df['Commodity'].replace({
     'Reduced Ilmenite': 'Ilmenite Reduced'
 })
 
-df[['material', 'type']] = df['Commodity'].str.split(' ', expand=True)
+df[['Commodity', 'Commodity_info']] = df['Commodity'].str.split(' ', expand=True)
 #%%
 
-df['material'].value_counts()
+df['Commodity'].value_counts()
+# %%
+
+df = df[['Commodity','Commodity_info','Specification','price_per_kg']]
+
+#%%
+
+df['Commodity_info'] = df['Commodity_info'].replace({'Conc.': 'Concrete'})
+
+
+
+#%%
+df.to_csv('ouput/ISE_process.csv')
+
 # %%

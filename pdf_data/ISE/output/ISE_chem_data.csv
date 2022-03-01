@@ -1,0 +1,63 @@
+,pubchem_formulas,chemspi_output
+Tantalum oxide,"{'O5Ta2': 7, 'O2Ta': 1}",{'OTa': 1}
+Cadmium,"{'Cd': 44, 'Cd+2': 2, 'Cd3': 2, 'Cd2': 2, 'C11H11NO': 1}",{'Cd': 2}
+Gallium,"{'Ga': 33, 'Ga+3': 1}",{'Ga': 1}
+Rhenium,{'Re': 50},{'Re': 1}
+ammonium paratungstate,"{'H8N2O4W': 7, 'H40N10O41W12': 4, 'W': 5, 'O4W-2': 1, 'H20NO7W6+': 1}","{'H_{8}N_{2}O_{4}W': 1, 'H_{40}N_{10}O_{41}W_{12}': 2, 'H_{42}N_{10}O_{42}W_{12}': 1}"
+Lithium Carbonate,"{'CLi2O3': 77, 'CH2LiO3+': 4, 'CLiO3-': 4, 'CH2Li2O3': 1, 'CHLi2O3': 1}",{'CLi_{2}O_{3}': 1}
+Arsenic,"{'As': 34, 'As+3': 1, 'AsH3': 1}",{'As': 1}
+Germanium dioxide,{'GeO2': 17},{'GeO_{2}': 2}
+Chromium,"{'Cr': 58, 'Cr+3': 1, 'C34H19CrN8Na6O26S6': 1, 'C44H30CrN12Na3O16S4': 1, 'C27H19ClCrLiN9NaO9S-': 1, 'C32H22CrN8Na3O15S3': 1, 'C32H16CrN8Na5O20S4': 1}",{'Cr': 1}
+Cobalt,"{'Co': 51, 'Co2': 2, 'C19H15NNa2O7': 2, 'C9H11Cl3NO3PS': 1, 'C45H61CoN6O12-': 1, 'C60H85CoN13O15P-': 1, 'C48H72CoN11O8-': 1, 'Co+2': 1, 'C32H22CoLiN6O8S2': 1, 'C7H7Cl2N': 1}",{'Co': 1}
+Cobalt Sulphate,{'CoO4S': 6},{'CoO_{4}S': 1}
+Germanium,"{'Ge': 40, 'Ge2': 2, 'Ge3': 2, 'Ge4': 2, 'Ge5': 2, 'C2H3NaO2S': 1, 'Ge+4': 1, 'GeH4': 1}",{'Ge': 1}
+antimony ethylene glycoxide,{},{}
+Arsenic Trioxide,"{'As2O3': 25, 'As4O6': 6, 'AsH3O3': 3, 'AsH2O3-': 1}","{'As_{2}O_{3}': 3, 'As_{4}O_{6}': 1}"
+Sodium Molybdate,"{'MoNa2O4': 33, 'MoNa2O4-6': 2, 'H4MoNa2O6-6': 1, 'H2MnNa2O5': 1, 'H8MoNa2O4': 1}",{'MoNa_{2}O_{4}': 1}
+Selenium dioxide,"{'O2Se': 42, 'H2O3Se': 3, 'H2O2Se': 1}",{'O_{2}Se': 1}
+Tungsten trioxide,"{'O3W': 28, 'O3W-6': 1}","{'O_{3}W': 2, 'H_{6}O_{3}W': 1}"
+Molybdenum oxide,"{'MoO3': 7, 'MoO': 5, 'MoO2': 2, 'H4MoO2': 1}","{'MoO_{2}': 1, 'MoO': 1}"
+Selenium,"{'Se': 44, 'Se2': 3, 'H2Se': 1, 'C24H32ClNO4': 1}",{'Se': 1}
+Strontium,"{'Sr': 29, 'Sr+2': 9, 'C6H10O4Sr': 1, 'H2Sr': 1, 'C8H16O2': 1}",{'Sr': 1}
+Cobalt Chloride,"{'Cl2Co': 25, 'Cl3Co': 2, 'Cl2CoH12O6': 2, 'ClCo-': 1}",{'Cl_{2}Co': 1}
+Sodium Tungstate,"{'Na2O4W': 23, 'H2NaOW': 3, 'Na2O4W-6': 2, 'H4Na2O6W': 2, 'H2Na2O5W': 2, 'O4W-2': 1, 'H8Na2O4W': 1, 'W': 2}",{'Na_{2}O_{4}W': 1}
+Niobium pentoxide,"{'Nb2O5': 8, 'NbO5-5': 1}",{'Nb_{2}O_{5}': 1}
+Wolfram,{'W': 6},{'W': 1}
+"molybdenite ",{'MoS2': 7},{'MoS_{2}': 1}
+Chromite,"{'CrFeO4': 1, 'Cr2FeO4': 1}",{'Cr_{2}FeO_{4}': 1}
+Molybdenum,"{'Mo': 50, 'Mo2': 1, 'C30H24MoO4P2': 1, 'Mo+2': 1}",{'Mo': 1}
+Zirconium oxide,"{'O2Zr': 21, 'OZr': 3, 'H2OZr': 2, 'H4O2Zr': 1}","{'OZr': 1, 'O_{2}Zr': 1}"
+Tantalum,"{'Ta': 41, 'Ta+5': 1, 'C20H60N10O2Ta2': 1, 'C10H30N5O2Ta': 1}",{'Ta': 1}
+Zirconium,"{'Zr': 34, 'N4O12Zr': 1, 'Zr+4': 1, 'C28H82N6O2Si8Zr2': 1, 'C20H60N10O2Zr3': 1, 'C28H82N6Si8Zr2': 1, 'C66H112O12S3Zr': 1, 'C60H127O24P6Zr': 1, 'C48H88O17P2Zr': 1}",{'Zr': 1}
+Antimony Trioxide,"{'O3Sb2': 20, 'O6Sb4': 1, 'H4O3Sb2': 1}",{'O_{3}Sb_{2}': 1}
+Zirconium oxychloride,"{'Cl2H2OZr': 19, 'Cl2OZr': 2, 'ClHOZr': 1, 'Cl2H16O9Zr': 1}",{'Cl_{2}OZr': 1}
+Lithium Hydroxide,"{'HLiO': 38, 'H3LiO2': 5, 'H2Li2O2': 2}",{'HLiO': 3}
+Zirconium carbonate,"{'C2O6Zr': 9, 'CO6Zr2': 1}",{'C_{2}O_{6}Zr': 1}
+Titanium,"{'Ti': 48, 'Ti+4': 3, 'F6H8N2Ti': 1, 'C57H113O7Ti': 1, 'AlTiV': 1, 'C12H36Cl2N2Si4Ti': 1, 'C10H12O2S': 1, 'O2Ti': 1}","{'Ti': 2, 'O_{2}Ti': 1}"
+Bismuth oxide,"{'Bi2O3': 12, 'BiO': 3, 'BiO3-6': 2, 'BiH2O': 2, 'Bi4O6': 1, 'Bi2O4-5': 1}","{'Bi_{2}O_{3}': 1, 'BiO': 1}"
+Cobalt tetraoxide,{'Co3O4': 4},{'Co_{3}O_{4}': 1}
+Ammonium metavanadate,"{'H4NO3V': 25, 'H6NO3V-3': 1}",{'H_{4}NO_{3}V': 2}
+Lithium manganate,"{'Li2MnO4': 2, 'LiMn2O4': 1, 'H7LiMn2O4': 1}","{'Li_{2}MnO_{4}': 1, 'LiMn_{2}O_{4}': 1}"
+Indium,"{'In': 44, 'In+3': 5, 'C33H57InO6': 1, 'H6In': 1, 'C19H16ClNO4': 1}",{'In': 2}
+Ammonium Tetrathiomolybdate,"{'H10MoN2S4': 14, 'H2MoS4-2': 1, 'H8MoN2S4-6': 1, 'C24H18N2O3': 1}",{'H_{8}MoN_{2}S_{4}': 1}
+Tellurium,"{'Te': 47, 'Te+4': 1, 'H2Te': 1}",{'Te': 1}
+Cobalt monoxide,{'CoO': 4},{'CoO': 2}
+Ammonium heptamolybdate,"{'H66Mo7N6O24': 4, 'H32Mo7N6O28-42': 2, 'H24Mo7N6O24': 2, 'H26Mo7N6O25': 1, 'H24Mo3N6O12': 1, 'H42Mo3N6O12': 1}","{'H_{66}Mo_{7}N_{6}O_{24}': 1, 'H_{32}Mo_{7}N_{6}O_{28}': 1, 'H_{26}Mo_{7}N_{6}O_{25}': 1}"
+Antimony,"{'Sb': 30, 'Sb2': 2, 'Sb4': 2, 'Sb+3': 1}",{'Sb': 1}
+Lithium Cobaltate,{},{}
+Lithium chloride,"{'ClLi': 80, 'Cl3Li3': 2, 'Cl2Li2': 1}",{'ClLi': 2}
+Tungsten,"{'W': 44, 'Na2O4W-6': 1, 'H42N10O42W12': 1}",{'W': 1}
+Tungsten carbide,"{'CW': 21, 'CW-': 4, 'CW2': 4, 'CHW': 1}",{}
+Vanadium pentoxide,"{'O5V2': 26, 'O5V2-10': 3, 'H4O5V2-6': 2, 'O5V-10': 1}",{}
+Calcium,"{'Ca': 49, 'Ca+2': 4, 'C19H28CaI3N3O9': 1, 'C40H74CaO8': 1, 'C4H5CaNO4': 1, 'C5H4CaO5': 1, 'C18H34CaO20': 1, 'C20H31CaN7O12': 1, 'C8H12CaN2O8': 1, 'CaH2': 1, 'C36H58CaO2': 1, 'C9H11NO3': 1}",{}
+Ilmenite,"{'FeH6O3Ti': 4, 'FeO3Ti': 1}",{}
+Magnesium,"{'Mg': 52, 'Mg+2': 5, 'C13H28MgO2': 1, 'C14H26Cl2N2O7': 1, 'C35H34MgN4O5': 1, 'C35H32MgN4O5': 1, 'C34H38MgN6O7S2': 1, 'C34H40MgN6O8S2': 1}",{}
+Silicon,"{'Si': 50, 'H6Si3': 2, 'Si3': 1, 'Si+4': 1, 'H4Si': 1, 'C8H8BrClO': 1}",{}
+Tungsten oxide,"{'O3W': 8, 'O3W-6': 4, 'OW': 3, 'O6W2': 2, 'O9W3': 2, 'O12W4': 1, 'O2W': 1}",{}
+Cobalt Tetroxide,{},{}
+Titanium tetrachloride,"{'Cl4Ti': 31, 'C15H31ClN2O4': 2, 'Cl4Ti2': 1}",{}
+Cobalt Carbonate,"{'CCoO3': 24, 'CH2CoO3': 2, 'CO3-2': 1}",{}
+Vanadium nitrides,{},{}
+Lithium,"{'Li': 31, 'Li+': 3, 'Li2': 1, 'CLi2O3': 1, 'BF4Li': 1, 'C6H6LiN': 1, 'C6H3Cl2Li': 1, 'C6H9Li': 1, 'C3H5LiO': 1, 'C8H7Li': 1, 'C6H11LiSi': 1, 'BH2LiN': 1, 'C7H15Li': 1, 'C9H18LiN': 1, 'LiMn2O4': 1, 'La': 1, 'C32H22CoLiN6O8S2': 1, 'C27H19ClCrLiN9NaO9S-': 1}",{}
+Zirconium silicate,"{'O4SiZr': 39, 'O6Si2Zr': 2, 'H3O4SiZr-': 1, 'O4Si-4': 1, 'H4O4SiZr': 1}",{}
+Bismuth,"{'Bi': 41, 'Bi4': 4, 'C7H6BiO4': 2, 'Bi3': 3, 'Bi+3': 1, 'C9H64Bi10O25': 1, 'BiH3': 1, 'C14H13NO4': 1}",{}
