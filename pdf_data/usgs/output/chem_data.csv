@@ -1,109 +1,109 @@
-,pubchem_formulas,chemspi_output
-Bromine,"{'Br2': 32, 'Br': 14, 'BrH': 4, 'Br-': 11}","{'Br_{2}': 1, 'Br': 1}"
-Scandium Chloride,"{'Cl3Sc': 17, 'ClSc-': 2}",{'Cl_{3}Sc': 1}
-Scandium,"{'Sc': 32, 'F3Sm': 1}",{'Sc': 2}
-Scandium Aluminum Alloy,{},{}
-Manganese,"{'Mn': 40, 'Mn+2': 2, 'C18H11ClMnN2O6S': 1}",{'Mn': 1}
-Tantalum pentoxide,{'O5Ta2': 14},{'O_{5}Ta_{2}': 1}
-Iron Oxide,"{'Fe2O3': 12, 'FeO': 10, 'Fe3O4': 2, 'Fe2H6O3': 1, 'FeO2': 1, 'FeH3O3': 1}","{'Fe_{2}O_{3}': 2, 'FeO': 2, 'H_{2}Fe_{2}O_{4}': 1, 'HFeO_{2}': 1, 'H_{2}FeO': 1, 'Fe_{3}O_{4}': 1}"
-Tin,"{'Sn': 38, 'C32H46N2O3S': 4, 'NTi': 2, 'H3NTi': 2, 'Sn+4': 1, 'H2Sn': 1}",{'Sn': 1}
-Iodine,"{'I2': 70, 'I': 10, 'HI': 8, 'C7H10N2': 1, 'IK': 1}","{'I_{2}': 1, 'I': 1}"
-Lime,"{'CaO': 11, 'CH3Li': 2, 'CaH2O': 2, 'CaH2O2': 1}",{'CH_{3}Li': 1}
-Fluorspar,{'CaF2': 5},{'CaF_{2}': 1}
-Kaolin Clay,{},{'H_{8}Al_{2}O_{11}Si_{2}': 1}
-CeO2,{'CeO2': 4},{'CeO_{2}': 1}
-Alumina,"{'Al2O3': 18, 'AlO+': 1, 'C24H25ClFN5O3': 1}",{'Al_{2}O_{3}': 2}
-Gypsum,"{'CaO4S': 11, 'CaH4O6S': 7}",{'H_{4}CaO_{6}S': 1}
-Nd2O3,{'Nd2O3': 2},{'Nd_{2}O_{3}': 1}
-Thallium,"{'Tl': 21, 'Tl+': 2, 'C11H19O2Tl': 1, 'ClTl': 1}",{'Tl': 2}
-Zirconium silicate,"{'O4SiZr': 39, 'O6Si2Zr': 2, 'H3O4SiZr-': 1, 'O4Si-4': 1, 'H4O4SiZr': 1}","{'O_{4}SiZr': 1, 'O_{3}SiZr': 1, 'O_{6}Si_{2}Zr': 1}"
-Zinc,"{'Zn': 58, 'Zn+2': 2, 'HgZn': 1, 'C6H16Cl2N4S2Zn': 1, 'C24H56N2O4P2S4Zn': 1, 'C15H25NO4': 1}",{'Zn': 2}
-Palladium,"{'Pd': 90, 'H2O2Pd': 1}",{'Pd': 1}
-Arsenic Trioxide,"{'As2O3': 25, 'As4O6': 6, 'AsH3O3': 3, 'AsH2O3-': 1}","{'As_{2}O_{3}': 3, 'As_{4}O_{6}': 1}"
-Stone,{},{}
-zeolite,"{'Al2O5Si': 2, 'AlKO6Si2': 1}",{'AlKO_{6}Si_{2}': 1}
-Titanium dioxide,"{'O2Ti': 50, 'O2Ti-2': 2, 'C72H83NO15S2Ti': 1, 'Al2O5Si': 1}","{'O_{2}Ti': 2, 'H_{4}O_{2}Ti': 1}"
-phosphorite,{},{'O_{3}P': 1}
-La2O3,{'La2O3': 2},{'La_{2}O_{3}': 1}
-Peat,{'K': 1},{}
-Diatomite,{'O2Si': 3},{}
-Cement,{},{}
-Beryllium,"{'Be': 30, 'Be+2': 4, 'BeH2': 1, 'C14H13N3O3': 1, 'C3H3BrN2S': 1}",{'Be': 2}
-Thorium,{'Th': 18},{'Th': 1}
-Feldspar,"{'AlKO8Si3': 2, 'AlNaO8Si3': 1}",{'AlNaO_{8}Si_{3}': 1}
-Rhodium,"{'Rh': 54, 'Rh+3': 3, 'K3N6O12Rh': 1, 'C5H11Cl': 1}",{'Rh': 1}
-Dy2O3,{'Dy2O3': 2},{}
-celestite,{},{'O_{4}SSr': 1}
-Eu2O3,{'Eu2O3': 2},{}
-Ferrrochromium,{},{}
-Hafnium,"{'Hf': 29, 'C28H82Hf2N6O2Si8': 1, 'C20H60Hf3N10O2': 1, 'C15H45HfN3Si4': 1, 'C16H48Hf2N8': 1}",{'Hf': 2}
-Cobalt,"{'Co': 51, 'Co2': 2, 'C19H15NNa2O7': 2, 'C9H11Cl3NO3PS': 1, 'C45H61CoN6O12-': 1, 'C60H85CoN13O15P-': 1, 'C48H72CoN11O8-': 1, 'Co+2': 1, 'C32H22CoLiN6O8S2': 1, 'C7H7Cl2N': 1}",{'Co': 1}
-Mercury,"{'Hg': 34, 'Hg2': 2, 'Hg+2': 2, 'Hg3': 2}",{'Hg': 3}
-Asbestos,{},{}
-Bentonite,"{'C6H12N4O9': 7, 'Al2H2O12Si4': 7, 'Al2H2O6Si': 3, 'AlH3MgNaOSi': 1}","{'C_{6}H_{18}N_{4}O_{17}P_{2}': 1, 'H_{2}Al_{2}O_{12}Si_{4}': 1, 'H_{34}Al_{2}O_{12}Si_{4}': 1}"
-Bismuth,"{'Bi': 41, 'Bi4': 4, 'C7H6BiO4': 2, 'Bi3': 3, 'Bi+3': 1, 'C9H64Bi10O25': 1, 'BiH3': 1, 'C14H13NO4': 1}",{'Bi': 1}
-Fire Clay,{},{}
-Gold,"{'Au': 44, 'C15H27N4O4+': 2, 'Au+': 1}",{'Au': 2}
-Scandium Iodide,{'I3Sc': 8},{'I_{3}Sc': 1}
-Tellurium,"{'Te': 47, 'Te+4': 1, 'H2Te': 1}",{'Te': 1}
-Yttrium,"{'Y': 43, 'Y+3': 2}",{'Y': 3}
-Iron Ore,{'Fe2O3': 4},{'Fe_{2}O_{3}': 1}
-Gallium,"{'Ga': 33, 'Ga+3': 1}",{'Ga': 1}
-Vermiculite,{'AlFeH3MgO6Si-3': 4},{}
-Bauxite,"{'Al2H2O4': 5, 'Al2O3': 2, 'AlO+': 1}","{'Al_{2}O_{3}': 1, 'H_{2}Al_{2}O_{4}': 1, 'H_{8}Al_{2}O_{4}': 1}"
-Ilmenite,"{'FeH6O3Ti': 4, 'FeO3Ti': 1}","{'H_{6}FeO_{3}Ti': 1, 'FeO_{3}Ti': 1}"
-Sulfur,"{'H2S': 30, 'S': 14, 'S8': 6, 'S6': 3, 'S3': 2, 'S2': 2, 'S5': 1, 'S4': 1, 'S7': 1, 'S-2': 1, 'HNaS': 1, 'C18H17N3O2S4': 1}","{'S_{8}': 1, 'S': 1}"
-Lithium Carbonate,"{'CLi2O3': 77, 'CH2LiO3+': 4, 'CLiO3-': 4, 'CH2Li2O3': 1, 'CHLi2O3': 1}",{'CLi_{2}O_{3}': 1}
-Germanium,"{'Ge': 40, 'Ge2': 2, 'Ge3': 2, 'Ge4': 2, 'Ge5': 2, 'C2H3NaO2S': 1, 'Ge+4': 1, 'GeH4': 1}",{'Ge': 1}
-Potassium chloride,"{'ClK': 101, 'Cl2K2': 1, 'C27H50CaCl6KMgN6Na5O27PS2': 1, 'C10H24CaCl6KMgNa2O14': 1, 'C8H19CaCl6KMgNa2O10': 1, 'C14H24CaCl6KMgNa5O17': 1, 'C11H24CaCl6KMgNa3O13': 1, 'C7H33CaCl4KMgNa4O26PS': 1, 'C8H19CaCl4KNa2O10': 1, 'C6H16CaCl4KNaO8': 1, 'C9H21CaCl4KNa2O11': 1, 'C2H7CaCl6KMgNa2O4': 1, 'C8H12CaCl6KMgNa5O11': 1, 'C5H12CaCl6KMgNa3O7': 1, 'CaCl6H4KMgNaO2': 1, 'C2H7CaCl4KNa2O4': 1, 'CaCl4H4KNaO2': 1, 'C3H9CaCl4KNa2O5': 1, 'C8H31Cl4K2MgNa5O24P2': 1, 'C8H14Cl4KMgNa3O9': 1, 'Cl2H2K2MgNa4O12P2S': 1, 'Cl2KNa': 1, 'C8H16Cl3K3MgNaO12P': 1, 'C9H20Cl4K3MgNa3O17P2': 1, 'C9H19Cl4K2MgNa2O13P': 1, 'C9H21Cl3K2MgNa2O17P2': 1, 'C8H15Cl4KMgNa2O8': 1, 'C14H26Cl4KMgNa3O15': 1, 'C6H12ClKO6': 1, 'C9H19Cl2K2Na2O13P': 1, 'C8H16Cl2K3Na2O12P': 1, 'C6H12Cl2KNaO6': 1, 'C4H11Cl2KNNaO3': 1, 'Cl-': 1, 'ClNa': 1, 'C14H10N4O2S2': 1}",{'ClK': 1}
-Chromite,"{'CrFeO4': 1, 'Cr2FeO4': 1}",{'Cr_{2}FeO_{4}': 1}
-Antimony,"{'Sb': 30, 'Sb2': 2, 'Sb4': 2, 'Sb+3': 1}",{'Sb': 1}
-Zirconium,"{'Zr': 34, 'N4O12Zr': 1, 'Zr+4': 1, 'C28H82N6O2Si8Zr2': 1, 'C20H60N10O2Zr3': 1, 'C28H82N6Si8Zr2': 1, 'C66H112O12S3Zr': 1, 'C60H127O24P6Zr': 1, 'C48H88O17P2Zr': 1}",{'Zr': 1}
-Arsenic,"{'As': 34, 'As+3': 1, 'AsH3': 1}",{'As': 1}
-Cadmium,"{'Cd': 44, 'Cd+2': 2, 'Cd3': 2, 'Cd2': 2, 'C11H11NO': 1}",{'Cd': 2}
-Granite,{'C16H14F5N5O5S': 3},{}
-Selenium,"{'Se': 44, 'Se2': 3, 'H2Se': 1, 'C24H32ClNO4': 1}",{'Se': 1}
-Niobium ,"{'Nb': 36, 'Nb+5': 1}",{'Nb': 1}
-Iridium,"{'Ir': 47, 'Ir4': 3, 'C25H36ClIrO3P2': 1, 'C18H24O6': 1}",{'Ir': 1}
-Sodium Chloride,"{'ClNa': 134, 'Cl2Na2': 3, 'C27H50CaCl6KMgN6Na5O27PS2': 1, 'C10H24CaCl6KMgNa2O14': 1, 'C8H19CaCl6KMgNa2O10': 1, 'C14H24CaCl6KMgNa5O17': 1, 'C11H24CaCl6KMgNa3O13': 1, 'C8H19CaCl5MgNa2O10': 1, 'C9H21CaCl5MgNa2O11': 1, 'C7H33CaCl4KMgNa4O26PS': 1, 'C8H19CaCl4KNa2O10': 1, 'C6H16CaCl4KNaO8': 1, 'C9H21CaCl4KNa2O11': 1, 'C9H21CaCl3Na2O11': 1, 'C2H7CaCl6KMgNa2O4': 1, 'C8H12CaCl6KMgNa5O11': 1, 'C5H12CaCl6KMgNa3O7': 1, 'CaCl6H4KMgNaO2': 1, 'C2H7CaCl4KNa2O4': 1, 'CaCl4H4KNaO2': 1, 'C3H9CaCl4KNa2O5': 1, 'C6H18ClMgNaO10': 1, 'C8H31Cl4K2MgNa5O24P2': 1, 'C8H14Cl4KMgNa3O9': 1, 'CH2Cl3MgNa2O3': 1, 'Cl2H2K2MgNa4O12P2S': 1, 'Cl2KNa': 1, 'C12H30ClMgNaO16': 1, 'C12H22ClMgNaO12': 1, 'C9H20Cl4K3MgNa3O17P2': 1, 'C9H19Cl4K2MgNa2O13P': 1, 'C8H15Cl4KMgNa2O8': 1, 'C14H26Cl4KMgNa3O15': 1, 'C9H19Cl2K2Na2O13P': 1, 'C8H16Cl2K3Na2O12P': 1, 'C6H12Cl2KNaO6': 1, 'C6H12ClNaO6': 1, 'C4H11Cl2KNNaO3': 1, 'Cl-': 1, 'C19H21N2+': 1}",{'ClNa': 1}
-Ball Clay,{},{}
-Talc,"{'H2Mg3O12Si4': 28, 'Mg3O11Si4': 3, 'Mg3O12Si4-2': 1, 'MgO3Si': 1}","{'H_{2}Mg_{3}O_{12}Si_{4}': 2, 'MgO_{3}Si': 1, 'Mg_{3}O_{12}Si_{4}': 1, 'Mg_{3}O_{11}Si_{4}': 1, 'H_{34}Mg_{3}O_{12}Si_{4}': 1, 'H_{8}Mg_{3}O_{12}Si_{4}': 1}"
-Yttrium oxide,"{'O3Y2': 34, 'C26H25NO': 2}",{'O_{3}Y_{2}': 1}
-Scandium Oxide,{'O3Sc2': 15},{'O_{3}Sc_{2}': 1}
-Silicon,"{'Si': 50, 'H6Si3': 2, 'Si3': 1, 'Si+4': 1, 'H4Si': 1, 'C8H8BrClO': 1}",{'Si': 1}
-TbO2,{},{}
-Syenite,{},{}
-Potassium oxide,"{'K2O': 7, 'HK2O+': 4}","{'K_{2}O_{2}': 1, 'K_{2}O': 1}"
-Chromium,"{'Cr': 58, 'Cr+3': 1, 'C34H19CrN8Na6O26S6': 1, 'C44H30CrN12Na3O16S4': 1, 'C27H19ClCrLiN9NaO9S-': 1, 'C32H22CrN8Na3O15S3': 1, 'C32H16CrN8Na5O20S4': 1}",{'Cr': 1}
-Perlite,{'Al2CaFe2K2MgNa2O12Si': 6},{}
-Lead,"{'Pb': 49, 'H2Pb': 2, 'Pb+2': 1}",{'Pb': 1}
-tungsten trioxide,"{'O3W': 28, 'O3W-6': 1}","{'O_{3}W': 2, 'H_{6}O_{3}W': 1}"
-Barite,{'BaO4S': 15},{'BaO_{4}S': 1}
-Indium,"{'In': 44, 'In+3': 5, 'C33H57InO6': 1, 'H6In': 1, 'C19H16ClNO4': 1}",{'In': 2}
-Magnesium,"{'Mg': 52, 'Mg+2': 5, 'C13H28MgO2': 1, 'C14H26Cl2N2O7': 1, 'C35H34MgN4O5': 1, 'C35H32MgN4O5': 1, 'C34H38MgN6O7S2': 1, 'C34H40MgN6O8S2': 1}",{'Mg': 2}
-Molybdenum,"{'Mo': 50, 'Mo2': 1, 'C30H24MoO4P2': 1, 'Mo+2': 1}",{'Mo': 1}
-Ferrosilicon,"{'FeSi2': 5, 'FeSi': 1}","{'FeSi_{2}': 1, 'FeSi': 1, 'H_{2}FeSi': 1}"
-Aluminum,"{'Al': 35, 'Al4': 2, 'C6AlO12-3': 1, 'AlTiV': 1, 'Al+3': 1, 'C17H8AlN2NaO9S2': 1}",{'Al': 1}
-Gravel,{'C15H21NO': 1},{}
-Boron,"{'B': 56, 'B2': 2, 'BH2LiN': 1, 'BH3': 1, 'C6H2Br2ClF': 1, 'C11H15O5P': 1}",{'B': 1}
-Ammonia,"{'H3N': 80, 'H4N+': 2, 'H2N-': 11, 'H5NO': 1, 'C2H5Br': 1}","{'H_{3}N': 1, 'H_{3}^{15}N': 1}"
-kyanite,{'Al2H6O5Si': 7},{'Al_{2}O_{5}Si': 1}
-Graphite,"{'CH4': 5, 'C': 4, 'C56H76': 1}",{'C': 1}
-Iron,"{'Fe': 64, 'C25H48FeN6O8': 2, 'C21H26N2O4': 1, 'C33H32FeN4O4-2': 1, 'C24H30Fe2O4': 1, 'C4H8FeN2O4': 1, 'C40H50FeN8O6+2': 1, 'Fe+3': 1, 'FeH2O4S': 1, 'C13H20F6FeSb-': 1, 'C10H15NO2S': 1}",{'Fe': 1}
-Mischmetal,{'C3H8CeLaNd': 1},{'C_{3}H_{8}CeLaNd': 1}
-Rhenium,{'Re': 50},{'Re': 1}
-Fullers Clay,{},{}
-Diamond,"{'CH4': 2, 'C': 1}",{'C': 1}
-Copper,"{'Cu': 82, 'Cu2': 3, 'Cu+2': 2, 'Cu3': 3, 'Cu4': 2, 'C32H20CuN12': 1, 'C20H42Cu2N4': 1, 'CuH4N2O6S2': 1, 'C30H26CuN6Na4O15S4': 1, 'C27H23ClCuN6Na4O18S5': 1}",{'Cu': 1}
-Scandium Fluoride,{'F3Sc': 23},{'F_{3}Sc': 1}
-Quartz,{'O2Si': 19},{}
-Common Clay,{},{}
-Nickel,"{'Ni': 55, 'Ni+2': 2, 'C48H48N8Ni': 1, 'Cl2H12NiO6': 1, 'C4NiO4': 1, 'NiO': 1}",{'Ni': 1}
-Pumice,{'C28H37FO7': 1},{'C_{28}H_{32}D_{5}FO_{7}': 1}
-Silver,"{'Ag': 49, 'Ag3': 7, 'Ag+': 2, 'Ag2': 3, 'Ag4': 3, 'Ag5': 2, 'CAgF3S': 1, 'C5H9AgO2': 1, 'C10H9AgN4O2S': 1}",{'Ag': 1}
-Germanium dioxide,{'GeO2': 17},{'GeO_{2}': 2}
-Ruthenium,"{'Ru': 51, 'C72H60P4Ru': 1}",{'Ru': 1}
-Scandium Acetate,"{'C6H12O6Sc': 7, 'C6H9O6Sc': 5, 'C2H3O2Sc+2': 1, 'C6H14O7Sc': 1}",{'C_{6}H_{9}O_{6}Sc': 1}
-Titanium,"{'Ti': 48, 'Ti+4': 3, 'F6H8N2Ti': 1, 'C57H113O7Ti': 1, 'AlTiV': 1, 'C12H36Cl2N2Si4Ti': 1, 'C10H12O2S': 1, 'O2Ti': 1}","{'Ti': 2, 'O_{2}Ti': 1}"
-Soda Ash,"{'CNa2O3': 16, 'CH2NaO3+': 1, 'CH2O3': 1, 'CHNaO3': 1}",{'CNa_{2}O_{3}': 1}
-Platinum,"{'Pt': 53, 'C22H38N4O8Pt': 1, 'Pt+2': 1, 'C6H15NO': 1}",{'Pt': 1}
+,Unnamed: 0,pubchem_formulas,chemspi_output,pubchem_top_formula,chemspi_top_formula
+0,Bromine,"{'Br2': 32, 'Br': 14, 'BrH': 4, 'Br-': 11}","{'Br_{2}': 1, 'Br': 1}",Br2,Br2
+1,Scandium Chloride,"{'Cl3Sc': 17, 'ClSc-': 2}",{'Cl_{3}Sc': 1},Cl3Sc,Cl3Sc
+2,Scandium,"{'Sc': 32, 'F3Sm': 1}",{'Sc': 2},Sc,Sc
+3,Scandium Aluminum Alloy,{},{},,
+4,Manganese,"{'Mn': 40, 'Mn+2': 2, 'C18H11ClMnN2O6S': 1}",{'Mn': 1},Mn,Mn
+5,Tantalum pentoxide,{'O5Ta2': 14},{'O_{5}Ta_{2}': 1},O5Ta2,O5Ta2
+6,Iron Oxide,"{'Fe2O3': 12, 'FeO': 10, 'Fe3O4': 2, 'Fe2H6O3': 1, 'FeO2': 1, 'FeH3O3': 1}","{'Fe_{2}O_{3}': 2, 'FeO': 2, 'H_{2}Fe_{2}O_{4}': 1, 'HFeO_{2}': 1, 'H_{2}FeO': 1, 'Fe_{3}O_{4}': 1}",Fe2O3,Fe2O3
+7,Tin,"{'Sn': 38, 'C32H46N2O3S': 4, 'NTi': 2, 'H3NTi': 2, 'Sn+4': 1, 'H2Sn': 1}",{'Sn': 1},Sn,Sn
+8,Iodine,"{'I2': 70, 'I': 10, 'HI': 8, 'C7H10N2': 1, 'IK': 1}","{'I_{2}': 1, 'I': 1}",I2,I2
+9,Lime,"{'CaO': 11, 'CH3Li': 2, 'CaH2O': 2, 'CaH2O2': 1}",{'CH_{3}Li': 1},CaO,CH3Li
+10,Fluorspar,{'CaF2': 5},{'CaF_{2}': 1},CaF2,CaF2
+11,Kaolin Clay,{},{'H_{8}Al_{2}O_{11}Si_{2}': 1},,H8Al2O11Si2
+12,CeO2,{'CeO2': 4},{'CeO_{2}': 1},CeO2,CeO2
+13,Alumina,"{'Al2O3': 18, 'AlO+': 1, 'C24H25ClFN5O3': 1}",{'Al_{2}O_{3}': 2},Al2O3,Al2O3
+14,Gypsum,"{'CaO4S': 11, 'CaH4O6S': 7}",{'H_{4}CaO_{6}S': 1},CaO4S,H4CaO6S
+15,Nd2O3,{'Nd2O3': 2},{'Nd_{2}O_{3}': 1},Nd2O3,Nd2O3
+16,Thallium,"{'Tl': 21, 'Tl+': 2, 'C11H19O2Tl': 1, 'ClTl': 1}",{'Tl': 2},Tl,Tl
+17,Zirconium silicate,"{'O4SiZr': 39, 'O6Si2Zr': 2, 'H3O4SiZr-': 1, 'O4Si-4': 1, 'H4O4SiZr': 1}","{'O_{4}SiZr': 1, 'O_{3}SiZr': 1, 'O_{6}Si_{2}Zr': 1}",O4SiZr,O4SiZr
+18,Zinc,"{'Zn': 58, 'Zn+2': 2, 'HgZn': 1, 'C6H16Cl2N4S2Zn': 1, 'C24H56N2O4P2S4Zn': 1, 'C15H25NO4': 1}",{'Zn': 2},Zn,Zn
+19,Palladium,"{'Pd': 90, 'H2O2Pd': 1}",{'Pd': 1},Pd,Pd
+20,Arsenic Trioxide,"{'As2O3': 25, 'As4O6': 6, 'AsH3O3': 3, 'AsH2O3-': 1}","{'As_{2}O_{3}': 3, 'As_{4}O_{6}': 1}",As2O3,As2O3
+21,Stone,{},{},,
+22,zeolite,"{'Al2O5Si': 2, 'AlKO6Si2': 1}",{'AlKO_{6}Si_{2}': 1},Al2O5Si,AlKO6Si2
+23,Titanium dioxide,"{'O2Ti': 50, 'O2Ti-2': 2, 'C72H83NO15S2Ti': 1, 'Al2O5Si': 1}","{'O_{2}Ti': 2, 'H_{4}O_{2}Ti': 1}",O2Ti,O2Ti
+24,phosphorite,{},{'O_{3}P': 1},,O3P
+25,La2O3,{'La2O3': 2},{'La_{2}O_{3}': 1},La2O3,La2O3
+26,Peat,{'K': 1},{},K,
+27,Diatomite,{'O2Si': 3},{},O2Si,
+28,Cement,{},{},,
+29,Beryllium,"{'Be': 30, 'Be+2': 4, 'BeH2': 1, 'C14H13N3O3': 1, 'C3H3BrN2S': 1}",{'Be': 2},Be,Be
+30,Thorium,{'Th': 18},{'Th': 1},Th,Th
+31,Feldspar,"{'AlKO8Si3': 2, 'AlNaO8Si3': 1}",{'AlNaO_{8}Si_{3}': 1},AlKO8Si3,AlNaO8Si3
+32,Rhodium,"{'Rh': 54, 'Rh+3': 3, 'K3N6O12Rh': 1, 'C5H11Cl': 1}",{'Rh': 1},Rh,Rh
+33,Dy2O3,{'Dy2O3': 2},{},Dy2O3,
+34,celestite,{},{'O_{4}SSr': 1},,O4SSr
+35,Eu2O3,{'Eu2O3': 2},{},Eu2O3,
+36,Ferrrochromium,{},{},,
+37,Hafnium,"{'Hf': 29, 'C28H82Hf2N6O2Si8': 1, 'C20H60Hf3N10O2': 1, 'C15H45HfN3Si4': 1, 'C16H48Hf2N8': 1}",{'Hf': 2},Hf,Hf
+38,Cobalt,"{'Co': 51, 'Co2': 2, 'C19H15NNa2O7': 2, 'C9H11Cl3NO3PS': 1, 'C45H61CoN6O12-': 1, 'C60H85CoN13O15P-': 1, 'C48H72CoN11O8-': 1, 'Co+2': 1, 'C32H22CoLiN6O8S2': 1, 'C7H7Cl2N': 1}",{'Co': 1},Co,Co
+39,Mercury,"{'Hg': 34, 'Hg2': 2, 'Hg+2': 2, 'Hg3': 2}",{'Hg': 3},Hg,Hg
+40,Asbestos,{},{},,
+41,Bentonite,"{'C6H12N4O9': 7, 'Al2H2O12Si4': 7, 'Al2H2O6Si': 3, 'AlH3MgNaOSi': 1}","{'C_{6}H_{18}N_{4}O_{17}P_{2}': 1, 'H_{2}Al_{2}O_{12}Si_{4}': 1, 'H_{34}Al_{2}O_{12}Si_{4}': 1}",C6H12N4O9,C6H18N4O17P2
+42,Bismuth,"{'Bi': 41, 'Bi4': 4, 'C7H6BiO4': 2, 'Bi3': 3, 'Bi+3': 1, 'C9H64Bi10O25': 1, 'BiH3': 1, 'C14H13NO4': 1}",{'Bi': 1},Bi,Bi
+43,Fire Clay,{},{},,
+44,Gold,"{'Au': 44, 'C15H27N4O4+': 2, 'Au+': 1}",{'Au': 2},Au,Au
+45,Scandium Iodide,{'I3Sc': 8},{'I_{3}Sc': 1},I3Sc,I3Sc
+46,Tellurium,"{'Te': 47, 'Te+4': 1, 'H2Te': 1}",{'Te': 1},Te,Te
+47,Yttrium,"{'Y': 43, 'Y+3': 2}",{'Y': 3},Y,Y
+48,Iron Ore,{'Fe2O3': 4},{'Fe_{2}O_{3}': 1},Fe2O3,Fe2O3
+49,Gallium,"{'Ga': 33, 'Ga+3': 1}",{'Ga': 1},Ga,Ga
+50,Vermiculite,{'AlFeH3MgO6Si-3': 4},{},AlFeH3MgO6Si-3,
+51,Bauxite,"{'Al2H2O4': 5, 'Al2O3': 2, 'AlO+': 1}","{'Al_{2}O_{3}': 1, 'H_{2}Al_{2}O_{4}': 1, 'H_{8}Al_{2}O_{4}': 1}",Al2H2O4,Al2O3
+52,Ilmenite,"{'FeH6O3Ti': 4, 'FeO3Ti': 1}","{'H_{6}FeO_{3}Ti': 1, 'FeO_{3}Ti': 1}",FeH6O3Ti,H6FeO3Ti
+53,Sulfur,"{'H2S': 30, 'S': 14, 'S8': 6, 'S6': 3, 'S3': 2, 'S2': 2, 'S5': 1, 'S4': 1, 'S7': 1, 'S-2': 1, 'HNaS': 1, 'C18H17N3O2S4': 1}","{'S_{8}': 1, 'S': 1}",H2S,S8
+54,Lithium Carbonate,"{'CLi2O3': 77, 'CH2LiO3+': 4, 'CLiO3-': 4, 'CH2Li2O3': 1, 'CHLi2O3': 1}",{'CLi_{2}O_{3}': 1},CLi2O3,CLi2O3
+55,Germanium,"{'Ge': 40, 'Ge2': 2, 'Ge3': 2, 'Ge4': 2, 'Ge5': 2, 'C2H3NaO2S': 1, 'Ge+4': 1, 'GeH4': 1}",{'Ge': 1},Ge,Ge
+56,Potassium chloride,"{'ClK': 101, 'Cl2K2': 1, 'C27H50CaCl6KMgN6Na5O27PS2': 1, 'C10H24CaCl6KMgNa2O14': 1, 'C8H19CaCl6KMgNa2O10': 1, 'C14H24CaCl6KMgNa5O17': 1, 'C11H24CaCl6KMgNa3O13': 1, 'C7H33CaCl4KMgNa4O26PS': 1, 'C8H19CaCl4KNa2O10': 1, 'C6H16CaCl4KNaO8': 1, 'C9H21CaCl4KNa2O11': 1, 'C2H7CaCl6KMgNa2O4': 1, 'C8H12CaCl6KMgNa5O11': 1, 'C5H12CaCl6KMgNa3O7': 1, 'CaCl6H4KMgNaO2': 1, 'C2H7CaCl4KNa2O4': 1, 'CaCl4H4KNaO2': 1, 'C3H9CaCl4KNa2O5': 1, 'C8H31Cl4K2MgNa5O24P2': 1, 'C8H14Cl4KMgNa3O9': 1, 'Cl2H2K2MgNa4O12P2S': 1, 'Cl2KNa': 1, 'C8H16Cl3K3MgNaO12P': 1, 'C9H20Cl4K3MgNa3O17P2': 1, 'C9H19Cl4K2MgNa2O13P': 1, 'C9H21Cl3K2MgNa2O17P2': 1, 'C8H15Cl4KMgNa2O8': 1, 'C14H26Cl4KMgNa3O15': 1, 'C6H12ClKO6': 1, 'C9H19Cl2K2Na2O13P': 1, 'C8H16Cl2K3Na2O12P': 1, 'C6H12Cl2KNaO6': 1, 'C4H11Cl2KNNaO3': 1, 'Cl-': 1, 'ClNa': 1, 'C14H10N4O2S2': 1}",{'ClK': 1},ClK,ClK
+57,Chromite,"{'CrFeO4': 1, 'Cr2FeO4': 1}",{'Cr_{2}FeO_{4}': 1},CrFeO4,Cr2FeO4
+58,Antimony,"{'Sb': 30, 'Sb2': 2, 'Sb4': 2, 'Sb+3': 1}",{'Sb': 1},Sb,Sb
+59,Zirconium,"{'Zr': 34, 'N4O12Zr': 1, 'Zr+4': 1, 'C28H82N6O2Si8Zr2': 1, 'C20H60N10O2Zr3': 1, 'C28H82N6Si8Zr2': 1, 'C66H112O12S3Zr': 1, 'C60H127O24P6Zr': 1, 'C48H88O17P2Zr': 1}",{'Zr': 1},Zr,Zr
+60,Arsenic,"{'As': 34, 'As+3': 1, 'AsH3': 1}",{'As': 1},As,As
+61,Cadmium,"{'Cd': 44, 'Cd+2': 2, 'Cd3': 2, 'Cd2': 2, 'C11H11NO': 1}",{'Cd': 2},Cd,Cd
+62,Granite,{'C16H14F5N5O5S': 3},{},C16H14F5N5O5S,
+63,Selenium,"{'Se': 44, 'Se2': 3, 'H2Se': 1, 'C24H32ClNO4': 1}",{'Se': 1},Se,Se
+64,Niobium ,"{'Nb': 36, 'Nb+5': 1}",{'Nb': 1},Nb,Nb
+65,Iridium,"{'Ir': 47, 'Ir4': 3, 'C25H36ClIrO3P2': 1, 'C18H24O6': 1}",{'Ir': 1},Ir,Ir
+66,Sodium Chloride,"{'ClNa': 134, 'Cl2Na2': 3, 'C27H50CaCl6KMgN6Na5O27PS2': 1, 'C10H24CaCl6KMgNa2O14': 1, 'C8H19CaCl6KMgNa2O10': 1, 'C14H24CaCl6KMgNa5O17': 1, 'C11H24CaCl6KMgNa3O13': 1, 'C8H19CaCl5MgNa2O10': 1, 'C9H21CaCl5MgNa2O11': 1, 'C7H33CaCl4KMgNa4O26PS': 1, 'C8H19CaCl4KNa2O10': 1, 'C6H16CaCl4KNaO8': 1, 'C9H21CaCl4KNa2O11': 1, 'C9H21CaCl3Na2O11': 1, 'C2H7CaCl6KMgNa2O4': 1, 'C8H12CaCl6KMgNa5O11': 1, 'C5H12CaCl6KMgNa3O7': 1, 'CaCl6H4KMgNaO2': 1, 'C2H7CaCl4KNa2O4': 1, 'CaCl4H4KNaO2': 1, 'C3H9CaCl4KNa2O5': 1, 'C6H18ClMgNaO10': 1, 'C8H31Cl4K2MgNa5O24P2': 1, 'C8H14Cl4KMgNa3O9': 1, 'CH2Cl3MgNa2O3': 1, 'Cl2H2K2MgNa4O12P2S': 1, 'Cl2KNa': 1, 'C12H30ClMgNaO16': 1, 'C12H22ClMgNaO12': 1, 'C9H20Cl4K3MgNa3O17P2': 1, 'C9H19Cl4K2MgNa2O13P': 1, 'C8H15Cl4KMgNa2O8': 1, 'C14H26Cl4KMgNa3O15': 1, 'C9H19Cl2K2Na2O13P': 1, 'C8H16Cl2K3Na2O12P': 1, 'C6H12Cl2KNaO6': 1, 'C6H12ClNaO6': 1, 'C4H11Cl2KNNaO3': 1, 'Cl-': 1, 'C19H21N2+': 1}",{'ClNa': 1},ClNa,ClNa
+67,Ball Clay,{},{},,
+68,Talc,"{'H2Mg3O12Si4': 28, 'Mg3O11Si4': 3, 'Mg3O12Si4-2': 1, 'MgO3Si': 1}","{'H_{2}Mg_{3}O_{12}Si_{4}': 2, 'MgO_{3}Si': 1, 'Mg_{3}O_{12}Si_{4}': 1, 'Mg_{3}O_{11}Si_{4}': 1, 'H_{34}Mg_{3}O_{12}Si_{4}': 1, 'H_{8}Mg_{3}O_{12}Si_{4}': 1}",H2Mg3O12Si4,H2Mg3O12Si4
+69,Yttrium oxide,"{'O3Y2': 34, 'C26H25NO': 2}",{'O_{3}Y_{2}': 1},O3Y2,O3Y2
+70,Scandium Oxide,{'O3Sc2': 15},{'O_{3}Sc_{2}': 1},O3Sc2,O3Sc2
+71,Silicon,"{'Si': 50, 'H6Si3': 2, 'Si3': 1, 'Si+4': 1, 'H4Si': 1, 'C8H8BrClO': 1}",{'Si': 1},Si,Si
+72,TbO2,{},{},,
+73,Syenite,{},{},,
+74,Potassium oxide,"{'K2O': 7, 'HK2O+': 4}","{'K_{2}O_{2}': 1, 'K_{2}O': 1}",K2O,K2O2
+75,Chromium,"{'Cr': 58, 'Cr+3': 1, 'C34H19CrN8Na6O26S6': 1, 'C44H30CrN12Na3O16S4': 1, 'C27H19ClCrLiN9NaO9S-': 1, 'C32H22CrN8Na3O15S3': 1, 'C32H16CrN8Na5O20S4': 1}",{'Cr': 1},Cr,Cr
+76,Perlite,{'Al2CaFe2K2MgNa2O12Si': 6},{},Al2CaFe2K2MgNa2O12Si,
+77,Lead,"{'Pb': 49, 'H2Pb': 2, 'Pb+2': 1}",{'Pb': 1},Pb,Pb
+78,tungsten trioxide,"{'O3W': 28, 'O3W-6': 1}","{'O_{3}W': 2, 'H_{6}O_{3}W': 1}",O3W,O3W
+79,Barite,{'BaO4S': 15},{'BaO_{4}S': 1},BaO4S,BaO4S
+80,Indium,"{'In': 44, 'In+3': 5, 'C33H57InO6': 1, 'H6In': 1, 'C19H16ClNO4': 1}",{'In': 2},In,In
+81,Magnesium,"{'Mg': 52, 'Mg+2': 5, 'C13H28MgO2': 1, 'C14H26Cl2N2O7': 1, 'C35H34MgN4O5': 1, 'C35H32MgN4O5': 1, 'C34H38MgN6O7S2': 1, 'C34H40MgN6O8S2': 1}",{'Mg': 2},Mg,Mg
+82,Molybdenum,"{'Mo': 50, 'Mo2': 1, 'C30H24MoO4P2': 1, 'Mo+2': 1}",{'Mo': 1},Mo,Mo
+83,Ferrosilicon,"{'FeSi2': 5, 'FeSi': 1}","{'FeSi_{2}': 1, 'FeSi': 1, 'H_{2}FeSi': 1}",FeSi2,FeSi2
+84,Aluminum,"{'Al': 35, 'Al4': 2, 'C6AlO12-3': 1, 'AlTiV': 1, 'Al+3': 1, 'C17H8AlN2NaO9S2': 1}",{'Al': 1},Al,Al
+85,Gravel,{'C15H21NO': 1},{},C15H21NO,
+86,Boron,"{'B': 56, 'B2': 2, 'BH2LiN': 1, 'BH3': 1, 'C6H2Br2ClF': 1, 'C11H15O5P': 1}",{'B': 1},B,B
+87,Ammonia,"{'H3N': 80, 'H4N+': 2, 'H2N-': 11, 'H5NO': 1, 'C2H5Br': 1}","{'H_{3}N': 1, 'H_{3}^{15}N': 1}",H3N,H3N
+88,kyanite,{'Al2H6O5Si': 7},{'Al_{2}O_{5}Si': 1},Al2H6O5Si,Al2O5Si
+89,Graphite,"{'CH4': 5, 'C': 4, 'C56H76': 1}",{'C': 1},CH4,C
+90,Iron,"{'Fe': 64, 'C25H48FeN6O8': 2, 'C21H26N2O4': 1, 'C33H32FeN4O4-2': 1, 'C24H30Fe2O4': 1, 'C4H8FeN2O4': 1, 'C40H50FeN8O6+2': 1, 'Fe+3': 1, 'FeH2O4S': 1, 'C13H20F6FeSb-': 1, 'C10H15NO2S': 1}",{'Fe': 1},Fe,Fe
+91,Mischmetal,{'C3H8CeLaNd': 1},{'C_{3}H_{8}CeLaNd': 1},C3H8CeLaNd,C3H8CeLaNd
+92,Rhenium,{'Re': 50},{'Re': 1},Re,Re
+93,Fullers Clay,{},{},,
+94,Diamond,"{'CH4': 2, 'C': 1}",{'C': 1},CH4,C
+95,Copper,"{'Cu': 82, 'Cu2': 3, 'Cu+2': 2, 'Cu3': 3, 'Cu4': 2, 'C32H20CuN12': 1, 'C20H42Cu2N4': 1, 'CuH4N2O6S2': 1, 'C30H26CuN6Na4O15S4': 1, 'C27H23ClCuN6Na4O18S5': 1}",{'Cu': 1},Cu,Cu
+96,Scandium Fluoride,{'F3Sc': 23},{'F_{3}Sc': 1},F3Sc,F3Sc
+97,Quartz,{'O2Si': 19},{},O2Si,
+98,Common Clay,{},{},,
+99,Nickel,"{'Ni': 55, 'Ni+2': 2, 'C48H48N8Ni': 1, 'Cl2H12NiO6': 1, 'C4NiO4': 1, 'NiO': 1}",{'Ni': 1},Ni,Ni
+100,Pumice,{'C28H37FO7': 1},{'C_{28}H_{32}D_{5}FO_{7}': 1},C28H37FO7,C28H32D5FO7
+101,Silver,"{'Ag': 49, 'Ag3': 7, 'Ag+': 2, 'Ag2': 3, 'Ag4': 3, 'Ag5': 2, 'CAgF3S': 1, 'C5H9AgO2': 1, 'C10H9AgN4O2S': 1}",{'Ag': 1},Ag,Ag
+102,Germanium dioxide,{'GeO2': 17},{'GeO_{2}': 2},GeO2,GeO2
+103,Ruthenium,"{'Ru': 51, 'C72H60P4Ru': 1}",{'Ru': 1},Ru,Ru
+104,Scandium Acetate,"{'C6H12O6Sc': 7, 'C6H9O6Sc': 5, 'C2H3O2Sc+2': 1, 'C6H14O7Sc': 1}",{'C_{6}H_{9}O_{6}Sc': 1},C6H12O6Sc,C6H9O6Sc
+105,Titanium,"{'Ti': 48, 'Ti+4': 3, 'F6H8N2Ti': 1, 'C57H113O7Ti': 1, 'AlTiV': 1, 'C12H36Cl2N2Si4Ti': 1, 'C10H12O2S': 1, 'O2Ti': 1}","{'Ti': 2, 'O_{2}Ti': 1}",Ti,Ti
+106,Soda Ash,"{'CNa2O3': 16, 'CH2NaO3+': 1, 'CH2O3': 1, 'CHNaO3': 1}",{'CNa_{2}O_{3}': 1},CNa2O3,CNa2O3
+107,Platinum,"{'Pt': 53, 'C22H38N4O8Pt': 1, 'Pt+2': 1, 'C6H15NO': 1}",{'Pt': 1},Pt,Pt

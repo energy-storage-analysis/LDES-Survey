@@ -9,7 +9,7 @@ import time
 import pubchempy as pcp
 from chemspipy import ChemSpider
 
-df = pd.read_csv('data/prices_edit.csv', index_col=0)
+df = pd.read_csv('output/prices_process.csv', index_col=0)
 df
 #%%
 
@@ -84,6 +84,24 @@ for chem in tqdm(chems):
 df_chem['chemspi_output'] = chemspi_output
 df_chem
 
+#%%
+
+import ast
+import sys
+sys.path.append('..')
+from pdf_utils import get_top_formula
+
+
+
+df_chem['pubchem_formulas'] = df_chem['pubchem_formulas'].apply(ast.literal_eval)
+df_chem['pubchem_top_formula'] = df_chem['pubchem_formulas'].apply(get_top_formula)
+
+df_chem['chemspi_output'] = df_chem['chemspi_output'].apply(ast.literal_eval)
+df_chem['chemspi_top_formula'] = df_chem['chemspi_output'].apply(get_top_formula)
+
+df_chem['chemspi_top_formula']  = df_chem['chemspi_top_formula'].str.replace('_','')
+df_chem['chemspi_top_formula']  = df_chem['chemspi_top_formula'].str.replace('{','', regex=True)
+df_chem['chemspi_top_formula']  = df_chem['chemspi_top_formula'].str.replace('}','', regex=True)
 #%%
 
 df_chem.to_csv('output/chem_data.csv')
