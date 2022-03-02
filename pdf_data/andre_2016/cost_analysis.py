@@ -24,33 +24,36 @@ def normalize_formula(s):
 usgs_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\pdf_data\usgs\output'
 ise_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\pdf_data\ISE\output'
 
-df_usgs_chem = pd.read_csv(os.path.join(usgs_folder, 'chem_data.csv'), index_col=0)
 df_ise_chem = pd.read_csv(os.path.join(ise_folder, 'ISE_chem_data.csv'), index_col=0)
 
 
 
 # %%
+df_usgs_chem = pd.read_csv(os.path.join(usgs_folder, 'chem_data.csv'), index_col=1)
+
 df_usgs = pd.read_csv(os.path.join(usgs_folder, 'prices_proc_edit.csv'), index_col=0)
 avg_price = df_usgs.groupby('chemical')['price_per_kg'].mean()
 
 df_usgs = pd.concat([
-    df_usgs_chem['norm_formula'],
+    df_usgs_chem['pubchem_top_formula'],
     avg_price,
-], axis=1).dropna(subset=['norm_formula'])
+], axis=1).dropna(subset=['pubchem_top_formula'])
+
+df_usgs
 
 #%%
+
+df_ise_chem = pd.read_csv(os.path.join(ise_folder, 'ISE_chem_data.csv'), index_col=1)
 
 df_ise = pd.read_csv(os.path.join(ise_folder, 'ISE_proc_edit.csv'), index_col=0)
 avg_price = df_ise.groupby('chemical')['price_per_kg'].mean()
 
 df_ise = pd.concat([
-    df_ise_chem['norm_formula'],
+    df_ise_chem['pubchem_top_formula'],
     avg_price,
-], axis=1).dropna(subset=['norm_formula'])
-
+], axis=1).dropna(subset=['pubchem_top_formula'])
 
 df_ise
-
 
 # %%
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('output',fn), index_col=0) for fn in os.listdir('output')}
@@ -74,19 +77,17 @@ df
 # df.apply(normalize_formula)
 # %%
 
-for f in df['reactant_norm']:
-    if f in df_usgs['norm_formula']:
-        print(f)
+price_data_chems = list(set([
+    *df_ise['pubchem_top_formula'],
+    *df_usgs['pubchem_top_formula']
+]))
 
-for f in df['product_norm']:
-    if f in df_usgs['norm_formula']:
-        print(f)
-# %%
+thermochemical_all = list(set([
+    *df['reactant_norm'],
+    *df['product_norm']
+]))
 
-for f in df['reactant_norm']:
-    if f in df_ise['norm_formula']:
-        print(f)
 
-for f in df['product_norm']:
-    if f in df_ise['norm_formula']:
-        print(f)
+for chem in price_data_chems:
+    if chem in thermochemical_all:
+        print(chem)
