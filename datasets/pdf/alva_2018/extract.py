@@ -167,12 +167,12 @@ tables['table_7'] = df_table7
 table
 #%%
 
-output_folder = 'output'
+output_folder = 'tables'
 if not os.path.exists(output_folder): os.mkdir(output_folder)
 
 for fn in os.listdir(output_folder):
     os.remove(os.path.join(output_folder, fn))
 
 for table in tables:
-    tables[table].to_csv('output/{}.csv'.format(table))
+    tables[table].to_csv('{}/{}.csv'.format(output_folder, table))
 # %%
