@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 import sys
-sys.path.append('..')
+sys.path.append('../pdf')
 from pdf_utils import average_range
 
 df = pd.read_csv('table_element_cost.csv', index_col=0)
@@ -45,4 +45,4 @@ df_low = df.where(df['cost'] <10).dropna()
 df_low[['Name','cost']].sort_values('cost')
 
 # %%
-df[['Symbol', 'Name', 'cost']].to_csv('table_out.csv')
+df[['Symbol', 'Name', 'cost']].to_csv('output/process.csv')
