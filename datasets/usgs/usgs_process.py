@@ -12,7 +12,7 @@ ureg.load_definitions('unit_defs.txt')
 
 
 # %%
-df = pd.read_csv('output/prices.csv', index_col=0)
+df = pd.read_csv('output/extracted.csv', index_col=0)
 df = df.dropna(subset=['price'])
 df
 
@@ -46,7 +46,20 @@ for index, row in df.iterrows():
 
 df['price_per_kg'] = price_per_kg
 
-
 #%%
 
-df.to_csv('output/prices_process.csv')
+chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
+chem_lookup
+#%%
+
+chemical_names = chem_lookup.loc[df['full_name'].values]
+df['chemical'] = chemical_names.values
+
+
+df = df.drop('full_name', axis=1)
+#%%
+
+df = df[['Commodity', 'price_info', 'chemical', 'price', 'price_units', 'Year', 'price_desc', 'price_per_kg']]
+
+df.to_csv('output/processed.csv')
+# %%

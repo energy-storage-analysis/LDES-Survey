@@ -5,7 +5,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 import sys
-sys.path.append('..')
+sys.path.append('../pdf')
 
 from pdf_utils import average_range
 
@@ -67,8 +67,8 @@ for fp in csv_fps[:]:
         for col in price_cols:
             df_temp = df[[col, 'Year','Commodity']]
             df_temp = df_temp.rename({col:'price'}, axis=1)
-            df_temp['price_name'] = col.replace('Price_','').replace('_Price', '')
-            # df_temp['price_name'] = df_temp['price_name'].str.removeprefix('_Price')
+            df_temp['price_info'] = col.replace('Price_','').replace('_Price', '')
+            # df_temp['price_info'] = df_temp['price_info'].str.removeprefix('_Price')
 
             df_temp['price_desc'] = s_attrs[col]
             dfs_prices.append(df_temp)
@@ -76,7 +76,7 @@ for fp in csv_fps[:]:
         df = pd.concat(dfs_prices) 
 
 
-        dfs_all.append(df[['price', 'price_name','Commodity', 'Year', 'price_desc']])
+        dfs_all.append(df[['price', 'price_info','Commodity', 'Year', 'price_desc']])
 
     else:
         print("No price columns for {}".format(fp))
@@ -103,14 +103,14 @@ pat_1 = '^({})$'.format(units_regex)
 pat_2 = '^({})_'.format(units_regex)
 pat_3 = '_({})$'.format(units_regex)
 
-price_units_1 = df_prices['price_name'].str.extract(pat_1).dropna()
-df_prices['price_name'] = df_prices['price_name'].str.replace(pat_1,'', regex=True)
+price_units_1 = df_prices['price_info'].str.extract(pat_1).dropna()
+df_prices['price_info'] = df_prices['price_info'].str.replace(pat_1,'', regex=True)
 
-price_units_2 = df_prices['price_name'].str.extract(pat_2).dropna()
-df_prices['price_name'] = df_prices['price_name'].str.replace(pat_2,'', regex=True)
+price_units_2 = df_prices['price_info'].str.extract(pat_2).dropna()
+df_prices['price_info'] = df_prices['price_info'].str.replace(pat_2,'', regex=True)
 
-price_units_3 = df_prices['price_name'].str.extract(pat_3).dropna()
-df_prices['price_name'] = df_prices['price_name'].str.replace(pat_3,'', regex=True)
+price_units_3 = df_prices['price_info'].str.extract(pat_3).dropna()
+df_prices['price_info'] = df_prices['price_info'].str.replace(pat_3,'', regex=True)
 # price_units_2
 #%%
 
@@ -126,14 +126,11 @@ df_prices.loc[710:719]['price_units'] = 'dkg'
 
 #%%
 
+df_prices['full_name'] = df_prices['Commodity'] + ' ' + df_prices['price_info']
 
-df_prices = df_prices[['Commodity','price','price_units','price_name','Year','price_desc']]
+df_prices = df_prices[['Commodity','price_info','full_name','price','price_units','Year','price_desc']]
 
-df_prices = df_prices.rename({
-    'price_name': 'price_info'
-}, axis=1)
-
-df_prices.to_csv('output/prices.csv')
+df_prices.to_csv('output/extracted.csv')
 # %%
 
 # %%

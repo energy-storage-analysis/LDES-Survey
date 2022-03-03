@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 
-sys.path.append('..')
+sys.path.append('../pdf')
 from pdf_utils import average_range
 
 
@@ -77,17 +77,24 @@ df[['Commodity', 'Commodity_info']] = df['Commodity'].str.split(' ', expand=True
 #%%
 
 df['Commodity'].value_counts()
+
+#%%
+
+# df['Commodity_info'] = df['Commodity_info'].replace({'Conc.': 'Concrete'})
+
+chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
+
+
+df['full_name'] = df['Commodity'] + ' ' + df['Commodity_info']
+
+chemical_names = chem_lookup.loc[df['full_name'].values]
+df['chemical'] = chemical_names.values
+
 # %%
 
-df = df[['Commodity','Commodity_info','Specification','price_per_kg']]
+df = df[['Commodity','Commodity_info','chemical','Specification','price_per_kg']]
 
 #%%
-
-df['Commodity_info'] = df['Commodity_info'].replace({'Conc.': 'Concrete'})
-
-
-
-#%%
-df.to_csv('ouput/ISE_process.csv')
+df.to_csv('output/processed.csv')
 
 # %%
