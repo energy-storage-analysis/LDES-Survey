@@ -56,17 +56,7 @@ df_ise = pd.concat([
 df_ise
 
 # %%
-tables = {fn.strip('.csv') : pd.read_csv(os.path.join('output',fn), index_col=0) for fn in os.listdir('output')}
 
-df = pd.concat(tables.values())
-
-
-df['specific_energy'] = df['specific_energy'].astype(float)
-df['enthalpy'] = df['enthalpy'].astype(float)
-df['temperature'] = df['temperature'].astype(float)
-
-df['enthalpy'] = df['enthalpy']/3600 #kJ to kWh
-df['specific_energy'] = df['specific_energy']/3600 #kJ to kWh
 
 df['reactant_norm'] = [normalize_formula(s) for s in df.index]
 df['product_norm'] = [normalize_formula(s) for s in df['product']]

@@ -57,19 +57,28 @@ df_table2 = df_table2.drop(' ',axis=1)
 
 tables['table_2'] = df_table2
 #%%
-df_table3 = pd.concat([dfs[2], dfs[3]], axis=0)
-df_table3 = df_table3.reset_index(drop=True)
-df_table3 
+import numpy as np
 
-df_table3
+df_table3 = pd.concat([dfs[2], dfs[3]], axis=0)
+
+
+df_table3 = df_table3.drop(' ', axis=1)
 
 df_table3 = df_table3.rename(
     {
-    ' Chemical': 'chemical', 
+    ' Chemical': 'full_name', 
     ' Price \n(US$/kg)': 'cost', 
     ' Source': 'ref'
     },
 axis=1)
+
+
+df_table3['full_name'] = df_table3['full_name'].replace('',np.nan)
+df_table3 = df_table3.dropna(subset=['full_name'])
+
+df_table3 = df_table3.reset_index(drop=True)
+
+
 
 tables['table_3'] = df_table3
 
@@ -82,5 +91,5 @@ for fn in os.listdir(output_folder):
     os.remove(os.path.join(output_folder, fn))
 
 for table in tables:
-    tables[table].to_csv('{}/{}.csv'.format(output_folder, table))
+    tables[table].to_csv('{}/{}.csv'.format(output_folder, table), index=False)
 # %%

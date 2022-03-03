@@ -146,7 +146,7 @@ df_table7 = dfs[6]
 df_table7.columns = [c.strip() for c in df_table7.columns]
 df_table7 = df_table7.dropna(subset=['Type'])
 df_table7['class'] = 'Rocks'
-df_table7['cost'] = 0.1
+# df_table7['cost'] = 0.1
 # df_table7.columns = df_table7.columns.str.replace(r'\r\n',r'\n', regex=True)
 
 df_table7 = df_table7.rename({
