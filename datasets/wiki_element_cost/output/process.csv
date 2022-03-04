@@ -1,6 +1,5 @@
 Z,Symbol,Name,cost
 1,H,Hydrogen,1.39
-1,2H (D),Deuterium,13400.0
 2,He,Helium,24.0
 3,Li,Lithium,83.5
 4,Be,Beryllium,857.0
@@ -43,7 +42,6 @@ Z,Symbol,Name,cost
 41,Nb,Niobium,73.5
 42,Mo,Molybdenum,40.1
 43,Tc,Technetium,100000.0
-43,99mTc,Technetium-99m,1900000000000.0
 44,Ru,Ruthenium,10500.0
 45,Rh,Rhodium,147000.0
 46,Pd,Palladium,49500.0
@@ -61,7 +59,6 @@ Z,Symbol,Name,cost
 58,Ce,Cerium,4.640000000000001
 59,Pr,Praseodymium,103.0
 60,Nd,Neodymium,57.5
-61,147Pm,Promethium-147,460000.0
 62,Sm,Samarium,13.9
 63,Eu,Europium,31.4
 64,Gd,Gadolinium,28.6

@@ -29,20 +29,14 @@ df['cost'] = df['cost'].astype(float)
 
 # df = df.where(df['cost'] < 1e12).dropna(subset=['cost'])
 
-# %%
 
-bins = np.logspace(np.log10(0.1), np.log10(1e13), 50)
-
-df['cost'].hist(bins=bins)
-plt.xscale('log')
-# %%
-
-
-df_high = df.where(df['cost'] >1e3).dropna()
-df_high[['Name','cost']].sort_values('cost')
 #%%
-df_low = df.where(df['cost'] <10).dropna()
-df_low[['Name','cost']].sort_values('cost')
+
+df = df[df['Symbol'].isin(['2H (D)', '99mTc', '147Pm']) == False]
+df
+
+# %%
+
 
 # %%
 df[['Symbol', 'Name', 'cost']].to_csv('output/process.csv')
