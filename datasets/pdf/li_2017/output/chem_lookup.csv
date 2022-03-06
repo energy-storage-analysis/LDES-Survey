@@ -1,26 +1,26 @@
-full_name,chemical
-Active carbon, C
-AQDS,AQDS
-CaCl2,AQDS
+table_name,molecular_formula
+Active carbon,C
+AQDS,C14H8O8S2
+CaCl2,CaCl2
 Carbonate Electrolyte,
 Cd(OH)2,Cd(OH)2
-CrCl3 6H2O,CrCl3
+CrCl3 6H2O,CrCl3(H2O)6
 CuCl,CuCl
 Cu-PBA,
 FeCl2,FeCl2
 DI H2O,H2O
-Graphite,Graphite
+Graphite,C6
 H2SO4,H2SO4
 HBr,HBr
 HCl,HCl
 KOH,KOH
 LaNi5,LaNi5
 LCO,LiCoO2
-LFP,LiFePO4 
+LFP,LiFePO4
 Li2S,Li2S
 Li2SO4,Li2SO4
-LiOH H2O,LiOH
-Lithium metal,Lithium
+LiOH H2O,LiOH(H2O)
+Lithium metal,Li
 LMO,LiMn2O4
 LMP,LiMnPO4
 LNMO,LiMn1.5Ni0.5O4
@@ -41,7 +41,7 @@ NCM111,LiNi0.33Co0.33Mn0.33O2
 NCM622,LiNi0.6Co0.2Mn0.2O2
 NH4Cl,NH4Cl
 Ni(OH)2,Ni(OH)2
-NiCl2 6H2O,NiCl2
+NiCl2 6H2O,NiCl2(H2O)6
 NMO,Na0.44MnO2
 NTP,NaTi2(PO4)3
 P2-Na2Mn2NiO6,
@@ -52,8 +52,8 @@ S,S
 Si,Si
 Ti2S4,Ti2S4
 TiS2,TiS2
-VOSO4 4H2O,VOSO4
+VOSO4 4H2O,VOSO4(H2O)4
 Zn,Zn
 Zn0.25V2O5,Zn0.25V2O5
 ZnBr2,ZnBr2
-ZnSO4 7H2O,ZnSO4
+ZnSO4 7H2O,ZnSO4(H2O)7
