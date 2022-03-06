@@ -33,6 +33,10 @@ df_latent['name'] = df_latent['name'].replace('Cu/P/Si (83/10/7)', 'Cu83P10Si7')
 df_latent['name'] = df_latent['name'].replace('Si/Mg/Ca (49/30/21)', 'Si49Mg30Ca21')
 df_latent['name'] = df_latent['name'].replace('Si/Mg (56/44)', 'Si56Mg44')
 
+df_latent['name'] = df_latent['name'].replace('Copper', 'Cu')
+df_latent['name'] = df_latent['name'].replace('Zinc', 'Zn')
+df_latent['name'] = df_latent['name'].replace('Aluminum', 'Al')
+
 df_latent
 
 #%%

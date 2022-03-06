@@ -1,10 +1,10 @@
 name,Type,Porosity (%),"Density (kg$m
 -3)",Uniaxial compressive strength (MPa),Cp,kth,"Sensible heat storage capacity (kJ$m
 -3 degC
--1)",Hardness,Major components,class
-Granite,Igneous,1.02-2.87,2530-2620,100-300,0.8999999999999999,2.8,1440-2880,High,SiO2(69%) Al2O3(14%),Rocks
-Quartzite,Metamorphic,0.22-22.1,2210-2770,100-350,0.8500000000000001,2,1750-2500,Very high,SiO2(94%),Rocks
-Marble,Metamorphic,0.40-0.65,2510-2860,150-300,0.85,7.7,3822,Lowemedium,CaO(54%),Rocks
-Basalt,Igneous,0.65-0.81,2610-2670,50-200,1.47,3.2,1680-2520,Mediumehigh,SiO2(47%) Al2O3(17%),Rocks
-,,,,,,,,,F-2O3(10%) CaO(13%),Rocks
-Hornfels,Metamorphic,0.8-2.3,2400-2800,100-200,0.8,1.5,2560-2880,Medium,SiO2(63%) Al2O3(21%),Rocks
+-1)",Hardness,Major components,class,cost
+Granite,Igneous,1.02-2.87,2530-2620,100-300,0.8999999999999999,2.8,1440-2880,High,SiO2(69%) Al2O3(14%),Rocks,
+Quartzite,Metamorphic,0.22-22.1,2210-2770,100-350,0.8500000000000001,2,1750-2500,Very high,SiO2(94%),Rocks,
+Marble,Metamorphic,0.40-0.65,2510-2860,150-300,0.85,7.7,3822,Lowemedium,CaO(54%),Rocks,
+Basalt,Igneous,0.65-0.81,2610-2670,50-200,1.47,3.2,1680-2520,Mediumehigh,SiO2(47%) Al2O3(17%),Rocks,
+,,,,,,,,,F-2O3(10%) CaO(13%),Rocks,
+Hornfels,Metamorphic,0.8-2.3,2400-2800,100-200,0.8,1.5,2560-2880,Medium,SiO2(63%) Al2O3(21%),Rocks,

@@ -37,6 +37,9 @@ df
 
 # %%
 
+from pyvalem.formula import Formula
+df['molar_mass'] = [Formula(s).rmm for s in df['Symbol']] 
 
 # %%
-df[['Symbol', 'Name', 'cost']].to_csv('output/process.csv')
+df[['Symbol', 'Name', 'cost','molar_mass']].to_csv('output/process.csv')
+# %%
