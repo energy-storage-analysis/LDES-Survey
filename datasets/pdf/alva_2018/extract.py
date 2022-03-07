@@ -49,7 +49,7 @@ df_table8 = df_table8.reset_index(drop=True)
 df_table8 = df_table8.rename(
     {'Type  ': 'type',
        'Class  ': 'class', 
-       'Thermal storage material  ': 'material',
+       'Thermal storage material  ': 'original_name',
        'Phase change temperature (degC) ': 'phase_change_T',
        'Latent heat (kJ$kg\n-1) ': 'sp_latent_heat',
        '-3)\nDensity (kg$m  ': 'density',
@@ -92,13 +92,17 @@ df_table4 = df_table4.rename({
     'Thermal conductivity at 210 degC (W m\n-1 K\n-1)': 'kth',
     'Cost (V$t\n-1)': 'cost'
     }, axis=1)
-df_table4.index.name = 'name'
+df_table4.index.name = 'original_name'
 
 df_table4['cost'] = df_table4['cost'].str.replace(',','')
 df_table4['cost'] = df_table4['cost'].replace('e','nan')
 df_table4['cost'] = df_table4['cost'].astype(float)
 df_table4['cost'] = df_table4['cost']*(1/1000) #euro/ton to dollar/kg (roughly)
 
+
+df_table4.index = df_table4.index.str.replace("®", '', regex=True)
+df_table4.index = df_table4.index.str.replace("\\n", ' ', regex=True)
+df_table4.index = df_table4.index.str.strip()
 
 tables['table_4'] = df_table4
 
@@ -112,17 +116,21 @@ df_table5 = df_table5.dropna(subset=['Highest operating temperature (degC)'])
 df_table5['class'] = 'Molten Salt'
 
 df_table5 = df_table5.rename({
-    'Salt/eutectic': 'name',
+    'Salt/eutectic': 'original_name',
     'Speciﬁc heat (kJ$kg\n-1 degC\n-1)': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)': 'kth',
     'Cost ($$kg\n-1)': 'cost'
     }, axis=1)
 
 
-df_table5 = df_table5.set_index('name')
+df_table5['original_name'] = df_table5['original_name'].replace('e','-')
+df_table5 = df_table5.set_index('original_name')
 df_table5['cost'] = df_table5['cost'].replace('e','nan')
 
-df_table5 = df_table5.drop('LiNO3')
+df_table5 = df_table5.iloc[[0,2,4]]
+
+
+# df_table5 = df_table5.drop('LiNO3')
 tables['table_5'] = df_table5
 
 
@@ -132,13 +140,13 @@ df_table6.columns = [c.strip() for c in df_table6.columns]
 
 df_table6['class'] = 'Metal Alloy'
 df_table6 = df_table6.rename({
-    'Metal/Alloy': 'name',
+    'Metal/Alloy': 'original_name',
     'Speciﬁc heat -1\nkJ$kg\n-1 degC': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)' : 'kth',
     'Cost ($$kg\n-1)': 'cost'
     }, axis=1)
 
-df_table6 = df_table6.set_index('name')
+df_table6 = df_table6.set_index('original_name')
 tables['table_6'] = df_table6
 
 df_table7 = dfs[6]
@@ -151,12 +159,12 @@ df_table7['cost'] = np.nan
 # df_table7.columns = df_table7.columns.str.replace(r'\r\n',r'\n', regex=True)
 
 df_table7 = df_table7.rename({
-    'Rock': 'name',
+    'Rock': 'original_name',
     'Speciﬁc heat (kJ$kg\n-1 degC\n-1) @20 degC': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)': 'kth',
     }, axis=1)
 
-df_table7 = df_table7.set_index('name')
+df_table7 = df_table7.set_index('original_name')
 
 from pdf_utils import average_range
 df_table7['Cp'] = df_table7['Cp'].apply(average_range)

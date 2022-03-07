@@ -1,4 +1,4 @@
-name,Manufacturer,Composition,Max bulk temperature (degC),Melting point (degC),Atmospheric boiling point (degC),"Kinematic viscosity at 40 degC (mm2 s
+original_name,Manufacturer,Composition,Max bulk temperature (degC),Melting point (degC),Atmospheric boiling point (degC),"Kinematic viscosity at 40 degC (mm2 s
 -1)","Density at 40 degC (kg m
 -3)","Density at 210 degC (kg m
 -3)",kth,Cp,"Thermal storage capacity at 210 degC (kJ m
@@ -6,7 +6,5 @@ name,Manufacturer,Composition,Max bulk temperature (degC),Melting point (degC),A
 -1)",cost,"Energy storage cost for DT ¼ 100 degC (V$kWh
 -1)",class
 Syltherm XLT,Dow chemical,Dimethyl,260,-111,200,1.1,834,660,0.06,2.171,1433,29.400000000000002,573,Thermal Oils
-"®
-Dowtherm
-A",Dow chemical,Diphenyl,400,12,257,2.56,1043,897,0.1083,1.63,1462,,e,Thermal Oils
+Dowtherm A,Dow chemical,Diphenyl,400,12,257,2.56,1043,897,0.1083,1.63,1462,,e,Thermal Oils
 Vegetable oil,[19],Triglycerides/free,e,e,295,30,926,802,0.11,2.509,2012,0.835,12,Thermal Oils

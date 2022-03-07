@@ -1,4 +1,4 @@
-,class,material,phase_change_T,sp_latent_heat,density,kth,vol_latent_heat,cost
+,class,original_name,phase_change_T,sp_latent_heat,density,kth,vol_latent_heat,cost
 0,Parafﬁn,n-Dodecane (Carbon atoms-12),-10.0,0.06,,,,10.0
 1,Parafﬁn,n-Tridecane (Carbon atoms-13),-5.0,0.044444444444444446,,,,200.0
 2,Parafﬁn,n-Tetradecane (Carbon atoms-14),6.0,0.0636111111111111,760 (L),0.21(S),,10.0

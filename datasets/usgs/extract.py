@@ -49,6 +49,11 @@ for fp in csv_fps[:]:
 
     df = pd.read_csv(fp)
 
+    df = df.rename({
+        'Commodity':'commodity',
+        'Year': 'year'
+    }, axis=1)
+
     if fp == 'data/salient\mcs2022-sulfu_salient.csv':
         df = df.rename(columns={'Price_Sulfur_dtdt': 'Price_Sulfur_dt'})
 
@@ -65,10 +70,10 @@ for fp in csv_fps[:]:
 
         dfs_prices = []
         for col in price_cols:
-            df_temp = df[[col, 'Year','Commodity']]
+            df_temp = df[[col, 'year','commodity']]
             df_temp = df_temp.rename({col:'price'}, axis=1)
-            df_temp['price_info'] = col.replace('Price_','').replace('_Price', '')
-            # df_temp['price_info'] = df_temp['price_info'].str.removeprefix('_Price')
+            df_temp['extra_info'] = col.replace('Price_','').replace('_Price', '')
+            # df_temp['extra_info'] = df_temp['price_info'].str.removeprefix('_Price')
 
             df_temp['price_desc'] = s_attrs[col]
             dfs_prices.append(df_temp)
@@ -76,15 +81,12 @@ for fp in csv_fps[:]:
         df = pd.concat(dfs_prices) 
 
 
-        dfs_all.append(df[['price', 'price_info','Commodity', 'Year', 'price_desc']])
+        dfs_all.append(df[['price', 'extra_info','commodity', 'year', 'price_desc']])
 
     else:
         print("No price columns for {}".format(fp))
 
 df_prices =  pd.concat(dfs_all).reset_index(drop=True)
-df_prices
-
-
 
 
 df_prices['price'] = df_prices['price'].astype(str).str.strip()
@@ -103,19 +105,18 @@ pat_1 = '^({})$'.format(units_regex)
 pat_2 = '^({})_'.format(units_regex)
 pat_3 = '_({})$'.format(units_regex)
 
-price_units_1 = df_prices['price_info'].str.extract(pat_1).dropna()
-df_prices['price_info'] = df_prices['price_info'].str.replace(pat_1,'', regex=True)
+price_units_1 = df_prices['extra_info'].str.extract(pat_1).dropna()
+df_prices['extra_info'] = df_prices['extra_info'].str.replace(pat_1,'', regex=True)
 
-price_units_2 = df_prices['price_info'].str.extract(pat_2).dropna()
-df_prices['price_info'] = df_prices['price_info'].str.replace(pat_2,'', regex=True)
+price_units_2 = df_prices['extra_info'].str.extract(pat_2).dropna()
+df_prices['extra_info'] = df_prices['extra_info'].str.replace(pat_2,'', regex=True)
 
-price_units_3 = df_prices['price_info'].str.extract(pat_3).dropna()
-df_prices['price_info'] = df_prices['price_info'].str.replace(pat_3,'', regex=True)
+price_units_3 = df_prices['extra_info'].str.extract(pat_3).dropna()
+df_prices['extra_info'] = df_prices['extra_info'].str.replace(pat_3,'', regex=True)
 # price_units_2
 #%%
 
 price_units = pd.concat([price_units_1, price_units_2, price_units_3])
-price_units
 
 df_prices['price_units'] = price_units
 
@@ -126,9 +127,10 @@ df_prices.loc[710:719]['price_units'] = 'dkg'
 
 #%%
 
-df_prices['full_name'] = df_prices['Commodity'] + ' ' + df_prices['price_info']
 
-df_prices = df_prices[['Commodity','price_info','full_name','price','price_units','Year','price_desc']]
+df_prices['original_name'] = df_prices['commodity'] + ' ' + df_prices['extra_info']
+
+df_prices = df_prices[['original_name','commodity','extra_info','price','price_units','year','price_desc']]
 
 df_prices.to_csv('output/extracted.csv')
 # %%

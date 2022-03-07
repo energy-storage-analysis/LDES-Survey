@@ -12,6 +12,12 @@ from pdf_utils import average_range
 # %%
 
 df = pd.read_csv('ISE.csv', encoding='ISO-8859-1', skiprows=[1,2])
+
+df = df.rename({
+    'Commodity': 'commodity',
+},axis=1)
+
+
 df.columns = [c.strip() for c in df.columns]
 
 df =df.drop([47,79,81,124]).reset_index(drop=True) # Seems to be a typo for cobalt entry
@@ -65,7 +71,7 @@ plt.xlabel('Cost ($/kg)')
 plt.ylabel('Count')
 # %%
 
-df['Commodity'] = df['Commodity'].replace({
+df['commodity'] = df['commodity'].replace({
     'Ethylene glycol antimony': 'Antimony ethelyene_glycol',
     'polysilicon': 'Silicon polysilicon',
     'Lithium hydroxides monohydrates': 'Lithium hydroxides_monohydrates',
@@ -73,26 +79,24 @@ df['Commodity'] = df['Commodity'].replace({
     'Reduced Ilmenite': 'Ilmenite Reduced'
 })
 
-df[['Commodity', 'Commodity_info']] = df['Commodity'].str.split(' ', expand=True)
+df[['commodity', 'commodity_info']] = df['commodity'].str.split(' ', expand=True)
 #%%
 
-df['Commodity'].value_counts()
+df['commodity'].value_counts()
 
 #%%
 
-# df['Commodity_info'] = df['Commodity_info'].replace({'Conc.': 'Concrete'})
+# df['commodity_info'] = df['commodity_info'].replace({'Conc.': 'Concrete'})
+df['original_name'] = df['commodity'] + ' ' + df['commodity_info']
 
 chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
 
-
-df['full_name'] = df['Commodity'] + ' ' + df['Commodity_info']
-
-chemical_names = chem_lookup.loc[df['full_name'].values]
-df['chemical'] = chemical_names.values
+df['material_name'] = chem_lookup.loc[df['original_name'].values]['material_name'].values
+# df['molecular_formula'] = chem_lookup.loc[df['original_name'].values]['molecular_formula'].values
 
 # %%
 
-df = df[['Commodity','Commodity_info','chemical','Specification','price_per_kg']]
+df = df[['material_name','commodity','commodity_info','Specification','price_per_kg']]
 
 #%%
 df.to_csv('output/processed.csv')

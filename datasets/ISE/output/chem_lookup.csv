@@ -1,4 +1,4 @@
-﻿full_name,chemical
+﻿original_name,material_name
 Antimony Ingot,Antimony
 Antimony Trioxide,Antimony Trioxide
 Antimony ethelyene_glycol,antimony ethylene glycoxide
@@ -41,7 +41,7 @@ Manganese Briquette,Magnesium
 Manganese dioxides,Magnesium
 Manganese sulphates,Magnesium
 Mercury metal,Magnesium
-Molybdenum Conc.,molybdenite 
+Molybdenum Conc.,"molybdenite "
 Molybdenum oxides,Molybdenum oxide
 Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate
 Ammonium heptamolybdate,Ammonium heptamolybdate

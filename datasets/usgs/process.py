@@ -48,18 +48,17 @@ df['price_per_kg'] = price_per_kg
 
 #%%
 
+
 chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
-chem_lookup
+
+df['material_name'] = chem_lookup.loc[df['original_name'].values]['material_name'].values
+df['molecular_formula'] = chem_lookup.loc[df['original_name'].values]['molecular_formula'].values
+
+# df = df.drop('original_name', axis=1)
 #%%
 
-chemical_names = chem_lookup.loc[df['full_name'].values]
-df['chemical'] = chemical_names.values
+df = df[['material_name','molecular_formula','commodity', 'extra_info', 'price', 'price_units', 'year', 'price_desc', 'price_per_kg']]
 
-
-df = df.drop('full_name', axis=1)
-#%%
-
-df = df[['Commodity', 'price_info', 'chemical', 'price', 'price_units', 'Year', 'price_desc', 'price_per_kg']]
 
 df.to_csv('output/processed.csv')
 # %%

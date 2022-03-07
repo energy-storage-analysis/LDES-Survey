@@ -13,7 +13,8 @@ table_3
 
 present_chemicals = [name for name in table_3.index if name in chem_lookup.index]
 
-table_3['molecular_formula'] = chem_lookup.loc[present_chemicals]
+table_3['molecular_formula'] = chem_lookup.loc[present_chemicals]['molecular_formula']
+table_3['material_name'] = chem_lookup.loc[present_chemicals]['material_name']
 
 # %%
 table_3.to_csv('output/process.csv')
