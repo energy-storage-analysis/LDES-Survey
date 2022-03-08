@@ -138,4 +138,4 @@ df_chem
 
 #%%
 
-df_chem.to_csv('pubchem_lookup.csv')
+df_chem.to_csv('data/pubchem_lookup.csv')

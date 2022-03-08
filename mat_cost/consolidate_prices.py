@@ -1,5 +1,6 @@
 #%%
 import os
+from os.path import join as pjoin
 import numpy as np
 import pandas as pd
 from mat2vec.processing import MaterialsTextProcessor
@@ -8,13 +9,14 @@ mtp = MaterialsTextProcessor()
 def mat2vec_process(f):
     return mtp.process(f)[0][0]
 
-dataset_index = pd.read_csv('dataset_index.csv', index_col=0)
+dataset_folder = '../datasets'
+dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
 col_select = ['material_name', 'molecular_formula', 'specific_price']
 datasets = []
 
 for source, row in dataset_index.iterrows():
-    fp = os.path.join('.', row['path'])
+    fp = os.path.join(dataset_folder, row['path'])
     df = pd.read_csv(fp)
     col_select_present = [col for col in col_select if col in df.columns]
     df = df[col_select_present]
@@ -48,7 +50,7 @@ df
 
 
 
-pubchem_lookup = pd.read_csv(r'../mat_cost\pubchem_lookup.csv', index_col=0)
+pubchem_lookup = pd.read_csv(r'data\pubchem_lookup.csv', index_col=0)
 
 #TODO: lowercase original pubchem lookup
 pubchem_lookup = pubchem_lookup.reset_index()
@@ -82,7 +84,7 @@ df_material['pubchem_formula'] = pubchem_forms.loc[s_mat_sources.index]
 # df_material['specific_energy'] = df.groupby('material_name')['specific_energy'].mean() #specific energy for different forms of energy should not be combined, unlike price. 
 df_material['specific_price'] = df.groupby('material_name')['specific_price'].mean()
 
-df_material.to_csv('material_sources.csv')
+df_material.to_csv('data/prices_material.csv')
 
 # s_mat_sources.to_csv('material_sources.csv')
 
@@ -130,14 +132,14 @@ df_molecular['material_name_UI'] = df_temp.loc[present_chemicals]['material_name
 df_molecular
 
 #%%
-df_molecular.to_csv('molecular_sources.csv')
+df_molecular.to_csv('data/prices_molecular.csv')
 
 # s_molecular_sources.to_csv('molecular_sources.csv')
 
 #%%
-for idx, row in df_material.iterrows():
-    f = row['pubchem_top_formula']
-    if f != 'nan':
-        if f in df['molecular_formula_norm'].dropna().values:
-            print("{} : {}".format(idx, f))
+# for idx, row in df_material.iterrows():
+#     f = row['pubchem_top_formula']
+#     if f != 'nan':
+#         if f in df['molecular_formula_norm'].dropna().values:
+#             print("{} : {}".format(idx, f))
 # %%
