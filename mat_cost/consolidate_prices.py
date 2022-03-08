@@ -130,6 +130,38 @@ present_chemicals = [c for c in df_molecular.index if c in df_temp.index]
 df_molecular['specific_price_UI'] = df_temp.loc[present_chemicals]['specific_price']
 df_molecular['material_name_UI'] = df_temp.loc[present_chemicals]['material_name']
 df_molecular
+#%%
+import chemparse
+
+element_prices = pd.read_csv(
+    os.path.join(dataset_folder, r'wiki_element_cost\output\process.csv')
+    , index_col=1)
+
+def calculate_formula_price(chemparse_dict):
+    total_price = 0
+    total_mass = 0
+    for atom, num in chemparse_dict.items():
+        if atom in element_prices.index:
+
+            row = element_prices.loc[atom]
+            
+            kg_per_mol = row['molar_mass']/1000
+
+            total_mass += kg_per_mol*num #kg/mol
+
+            cost_per_mol = row['cost']*kg_per_mol
+            total_price += cost_per_mol*num   #$/mol 
+        else:
+            return np.nan
+
+    price = total_price/total_mass #$/kg
+
+    return price
+
+f_dicts = [chemparse.parse_formula(f) for f in df_molecular.index]
+e_price = [calculate_formula_price(d) for d in f_dicts]
+df_molecular['specific_price_element'] = e_price
+df_molecular
 
 #%%
 df_molecular.to_csv('data/prices_molecular.csv')
