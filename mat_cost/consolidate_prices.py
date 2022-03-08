@@ -12,7 +12,7 @@ def mat2vec_process(f):
 dataset_folder = '../datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
-col_select = ['material_name', 'molecular_formula', 'specific_price']
+col_select = ['material_name', 'molecular_formula', 'specific_price','specific_energy']
 datasets = []
 
 for source, row in dataset_index.iterrows():
@@ -46,9 +46,8 @@ df['molecular_formula_norm'] = df['molecular_formula_norm'].replace('nan',np.nan
 df
 
 
+
 #%%
-
-
 
 pubchem_lookup = pd.read_csv(r'data\pubchem_lookup.csv', index_col=0)
 
@@ -174,4 +173,23 @@ df_molecular.to_csv('data/prices_molecular.csv')
 #     if f != 'nan':
 #         if f in df['molecular_formula_norm'].dropna().values:
 #             print("{} : {}".format(idx, f))
+# %%
+#%%
+
+df_sp_energy = df.dropna(subset=['specific_energy', 'molecular_formula'])
+df_sp_energy = df_sp_energy[['source','specific_energy', 'molecular_formula_norm']]
+df_sp_energy
+
+
+energy_type_lookup = {
+    'Alva 2018 (Latent)': 'Latent Thermal',
+    'Alva 2018 (Sensible)': 'Sensible Thermal',
+    'Andre 2016': 'Thermochemical'
+}
+
+energy_type = [energy_type_lookup[s] for s in df_sp_energy['source']]
+df_sp_energy['energy_type'] = energy_type
+
+df_sp_energy.to_csv('data/sp_energy_molecular.csv')
+# df_sp_energy = df_sp_energy[['molecular_formula_norm','specific_energy','source']]
 # %%
