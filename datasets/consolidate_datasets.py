@@ -88,6 +88,27 @@ df_material.to_csv('material_sources.csv')
 
 #%%
 
+
+df_usgs_ise = df.where(df['source'].isin(['USGS', 'ISE'])).dropna(subset=['source','material_name'])
+
+
+df_temp = df_usgs_ise.groupby('material_name')['specific_price'].mean().to_frame()
+df_temp['sources'] = df.groupby('material_name').apply(join_material_dups, column='source') 
+
+df_temp['pubchem_formula'] = pubchem_forms.loc[df_temp.index].values
+df_temp = df_temp.drop_duplicates(subset=['pubchem_formula'])
+df_temp = df_temp.reset_index().set_index('pubchem_formula')
+df_temp
+
+
+
+
+# df_matonly.set_index('material_name')
+# df_matonly
+
+# df_matonly.dropna(subset=['pubchem_formula'])
+#%%
+
 # form_process = [mat2vec_process(f) for f in df_molecular.index]
 # df_molecular['formula_processed'] = form_process
 
@@ -95,12 +116,20 @@ s_molecular_sources = df.groupby('molecular_formula_norm').apply(join_material_d
 s_molecular_sources.name = 'source'
 df_molecular = s_molecular_sources.to_frame()
 
-df_molecular['material_names']= df.groupby('molecular_formula_norm').apply(join_material_dups, column='material_name')
+df_molecular['material_names_refs']= df.groupby('molecular_formula_norm').apply(join_material_dups, column='material_name')
 
 # df_molecular['specific_energy'] = df.groupby('molecular_formula_norm')['specific_energy'].mean()
-df_molecular['specific_price'] = df.groupby('molecular_formula_norm')['specific_price'].mean()
+df_molecular['specific_price_refs'] = df.groupby('molecular_formula_norm')['specific_price'].mean()
 # df_molecular = df_molecular.drop('nan')
+#%%
 
+
+present_chemicals = [c for c in df_molecular.index if c in df_temp.index]
+df_molecular['specific_price_UI'] = df_temp.loc[present_chemicals]['specific_price']
+df_molecular['material_name_UI'] = df_temp.loc[present_chemicals]['material_name']
+df_molecular
+
+#%%
 df_molecular.to_csv('molecular_sources.csv')
 
 # s_molecular_sources.to_csv('molecular_sources.csv')
