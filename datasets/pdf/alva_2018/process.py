@@ -10,12 +10,14 @@ import seaborn as sns
 sys.path.append('..')
 
 # Alva Thermal
-df_latent = pd.read_csv('tables/table_8.csv')
+df_latent = pd.read_csv('tables/table_8.csv', index_col=0)
 
-df_latent['C_kwh'] = df_latent['cost']/(df_latent['sp_latent_heat'])
+df_latent['specific_energy'] = df_latent['sp_latent_heat']/3600 #TODO: units
+df_latent = df_latent.drop('sp_latent_heat',axis=1)
+
 
 #Only keep data relevant to high temperature storage (not buildings)
-df_latent = df_latent.where(df_latent['phase_change_T'] > 200).dropna(subset=['phase_change_T'])
+df_latent = df_latent.where(df_latent['phase_change_T'] > 200).dropna(subset=['phase_change_T']).reset_index(drop=True)
 
 #%%
 
@@ -50,7 +52,7 @@ df_5 = pd.read_csv('tables/table_5.csv')
 df_6 = pd.read_csv('tables/table_6.csv')
 df_7 = pd.read_csv('tables/table_7.csv')
 
-col_sel = ['original_name','Cp', 'kth', 'cost', 'class']
+col_sel = ['original_name','Cp', 'kth', 'specific_price', 'class']
 
 df_sens = pd.concat([df[col_sel] for df in [df_4, df_5, df_6, df_7]]).dropna(subset=['original_name'])
 
@@ -62,8 +64,12 @@ present_chemicals = df_sens['original_name'].values
 df_sens['material_name'] = chem_lookup.loc[present_chemicals]['material_name'].values
 df_sens['molecular_formula'] = chem_lookup.loc[present_chemicals]['molecular_formula'].values
 
+#TODO: Units
 df_sens['Cp'] = df_sens['Cp']/3600
-df_sens['C_kwh'] = df_sens['cost']/(df_sens['Cp']*500)
+
+#TODO: How to have consistent naming without introducing delta T?
+df_sens['specific_energy'] = df_sens['Cp']*500
+# df_sens['C_kwh'] = df_sens['specific_price']/(df_sens['Cp']*500)
 df_sens
 # %%
 df_sens.to_csv('output/sensible.csv')

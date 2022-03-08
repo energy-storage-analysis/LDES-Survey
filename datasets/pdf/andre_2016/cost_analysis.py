@@ -32,7 +32,7 @@ df_ise_chem = pd.read_csv(os.path.join(ise_folder, 'ISE_chem_data.csv'), index_c
 df_usgs_chem = pd.read_csv(os.path.join(usgs_folder, 'chem_data.csv'), index_col=1)
 
 df_usgs = pd.read_csv(os.path.join(usgs_folder, 'prices_proc_edit.csv'), index_col=0)
-avg_price = df_usgs.groupby('chemical')['price_per_kg'].mean()
+avg_price = df_usgs.groupby('chemical')['specific_price'].mean()
 
 df_usgs = pd.concat([
     df_usgs_chem['pubchem_top_formula'],
@@ -46,7 +46,7 @@ df_usgs
 df_ise_chem = pd.read_csv(os.path.join(ise_folder, 'ISE_chem_data.csv'), index_col=1)
 
 df_ise = pd.read_csv(os.path.join(ise_folder, 'ISE_proc_edit.csv'), index_col=0)
-avg_price = df_ise.groupby('chemical')['price_per_kg'].mean()
+avg_price = df_ise.groupby('chemical')['specific_price'].mean()
 
 df_ise = pd.concat([
     df_ise_chem['pubchem_top_formula'],

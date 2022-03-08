@@ -1,4 +1,4 @@
-,material_name,molecular_formula,commodity,extra_info,price,price_units,year,price_desc,price_per_kg
+,material_name,molecular_formula,commodity,extra_info,price,price_units,year,price_desc,specific_price
 0,Aluminum,,Aluminum,Ingot,98.3,cents/lb,2017.0,"Price: Ingot, average U.S. market (spot), cents per pound. Data are estimated for the most recent year.",2.1671440372773465
 1,Aluminum,,Aluminum,Ingot,114.7,cents/lb,2018.0,"Price: Ingot, average U.S. market (spot), cents per pound. Data are estimated for the most recent year.",2.528702147260546
 2,Aluminum,,Aluminum,Ingot,99.5,cents/lb,2019.0,"Price: Ingot, average U.S. market (spot), cents per pound. Data are estimated for the most recent year.",2.1935995087395317

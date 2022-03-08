@@ -53,19 +53,19 @@ import pint_pandas
 ureg = pint.UnitRegistry()
 ureg.load_definitions('unit_defs.txt')
 
-price_per_kg = []
+specific_price = []
 for index, row in df.iterrows():
     unit = row['mass_unit']
     val = row['Price in USD']
     val = ureg.Quantity(val, 'USD/{}'.format(unit))
     val = val.to('USD/kg').magnitude
-    price_per_kg.append(val)
+    specific_price.append(val)
     # break
 
-df['price_per_kg'] = price_per_kg
+df['specific_price'] = specific_price
 # %%
 bins = np.logspace(np.log10(0.1), np.log10(1e6), 50)
-df['price_per_kg'].hist(bins=bins)
+df['specific_price'].hist(bins=bins)
 plt.xscale('log')
 plt.xlabel('Cost ($/kg)')
 plt.ylabel('Count')
@@ -96,7 +96,7 @@ df['material_name'] = chem_lookup.loc[df['original_name'].values]['material_name
 
 # %%
 
-df = df[['material_name','commodity','commodity_info','Specification','price_per_kg']]
+df = df[['material_name','commodity','commodity_info','Specification','specific_price']]
 
 #%%
 df.to_csv('output/processed.csv')

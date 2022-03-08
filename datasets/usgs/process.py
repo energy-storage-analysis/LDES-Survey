@@ -36,15 +36,15 @@ df['price_units'] = df['price_units'].replace({
 df['price_units'].value_counts()
 
 
-price_per_kg = []
+specific_price = []
 for index, row in df.iterrows():
     unit = row['price_units']
     val = row['price']
     val = ureg.Quantity(val, unit)
     val = val.to('USD/kg').magnitude
-    price_per_kg.append(val)
+    specific_price.append(val)
 
-df['price_per_kg'] = price_per_kg
+df['specific_price'] = specific_price
 
 #%%
 
@@ -57,7 +57,7 @@ df['molecular_formula'] = chem_lookup.loc[df['original_name'].values]['molecular
 # df = df.drop('original_name', axis=1)
 #%%
 
-df = df[['material_name','molecular_formula','commodity', 'extra_info', 'price', 'price_units', 'year', 'price_desc', 'price_per_kg']]
+df = df[['material_name','molecular_formula','commodity', 'extra_info', 'price', 'price_units', 'year', 'price_desc', 'specific_price']]
 
 
 df.to_csv('output/processed.csv')

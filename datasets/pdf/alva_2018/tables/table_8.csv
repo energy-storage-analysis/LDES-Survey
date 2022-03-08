@@ -1,150 +1,150 @@
-,class,original_name,phase_change_T,sp_latent_heat,density,kth,vol_latent_heat,cost
-0,Parafﬁn,n-Dodecane (Carbon atoms-12),-10.0,0.06,,,,10.0
-1,Parafﬁn,n-Tridecane (Carbon atoms-13),-5.0,0.044444444444444446,,,,200.0
-2,Parafﬁn,n-Tetradecane (Carbon atoms-14),6.0,0.0636111111111111,760 (L),0.21(S),,10.0
-3,Parafﬁn,n-Pentadecane (Carbon atoms-15),10.0,0.05722222222222222,770(L),,,330.0
-4,Parafﬁn,n-Hexadecane (Carbon atoms-16),20.0,0.06555555555555556,773(L),0.21(S),182.4,414.0
-5,Parafﬁn,n-Heptadecane (Carbon atoms-17),22.6,0.059444444444444446,778(L),,166.5,770.0
-6,Parafﬁn,n-Octadecane (Carbon atoms-18),28.4,0.06777777777777778,776(L) 814(S),0.148(L),189.3,380.0
+,class,original_name,phase_change_T,sp_latent_heat,density,kth,vol_latent_heat,specific_price
+0,Parafﬁn,n-Dodecane (Carbon atoms-12),-10.0,216.0,,,,10.0
+1,Parafﬁn,n-Tridecane (Carbon atoms-13),-5.0,160.0,,,,200.0
+2,Parafﬁn,n-Tetradecane (Carbon atoms-14),6.0,229.0,760 (L),0.21(S),,10.0
+3,Parafﬁn,n-Pentadecane (Carbon atoms-15),10.0,206.0,770(L),,,330.0
+4,Parafﬁn,n-Hexadecane (Carbon atoms-16),20.0,236.0,773(L),0.21(S),182.4,414.0
+5,Parafﬁn,n-Heptadecane (Carbon atoms-17),22.6,214.0,778(L),,166.5,770.0
+6,Parafﬁn,n-Octadecane (Carbon atoms-18),28.4,244.0,776(L) 814(S),0.148(L),189.3,380.0
 7,Parafﬁn,,,,,0.358(S),,
-8,Parafﬁn,n-Nonadecane (Carbon atoms-19),32.0,0.06166666666666667,785 (L),,174.3,1150.0
-9,Parafﬁn,n-Eicozane (Carbon atoms-20),36.6,0.06861111111111111,788 (L),,194.6,
-10,Parafﬁn,n-Heneicozane (Carbon atoms-21),40.2,0.059166666666666666,791 (L),,168.5,
-11,Parafﬁn,n-Docozane (Carbon atoms-22),44.0,0.06916666666666667,794 (L),,197.7,
-12,Parafﬁn,n-Trikozane (Carbon atoms-23),47.5,0.065,796 (L),,186.3,
-13,Parafﬁn,n-Tetracozane (Carbon atoms-24),50.6,0.07083333333333333,799 (L),,203.7,
-14,Parafﬁn,n-Pentacozane (Carbon atoms-25),53.5,0.0661111111111111,801 (L),,190.6,
-15,Parafﬁn,Rubitherm RT-5,5.0,0.05,"880 (S, -15 degC)",,158.4,7.0
+8,Parafﬁn,n-Nonadecane (Carbon atoms-19),32.0,222.0,785 (L),,174.3,1150.0
+9,Parafﬁn,n-Eicozane (Carbon atoms-20),36.6,247.0,788 (L),,194.6,
+10,Parafﬁn,n-Heneicozane (Carbon atoms-21),40.2,213.0,791 (L),,168.5,
+11,Parafﬁn,n-Docozane (Carbon atoms-22),44.0,249.0,794 (L),,197.7,
+12,Parafﬁn,n-Trikozane (Carbon atoms-23),47.5,234.0,796 (L),,186.3,
+13,Parafﬁn,n-Tetracozane (Carbon atoms-24),50.6,255.0,799 (L),,203.7,
+14,Parafﬁn,n-Pentacozane (Carbon atoms-25),53.5,238.0,801 (L),,190.6,
+15,Parafﬁn,Rubitherm RT-5,5.0,180.0,"880 (S, -15 degC)",,158.4,7.0
 16,Parafﬁn,,,,"770 (L, 15 degC)",,,
-17,Parafﬁn,Rubitherm RT-25,25.0,0.04111111111111111,,,,6.24
-18,Parafﬁn,Rubitherm RT-50,50.0,0.04666666666666667,,,,7.0
-19,Parafﬁn,Rubitherm RT-82,82.0,0.049444444444444444,,,,7.0
+17,Parafﬁn,Rubitherm RT-25,25.0,148.0,,,,6.24
+18,Parafﬁn,Rubitherm RT-50,50.0,168.0,,,,7.0
+19,Parafﬁn,Rubitherm RT-82,82.0,178.0,,,,7.0
 20,Parafﬁn,"®
 PRS
-parafﬁn wax",42.5,0.05611111111111111,,,,1.8
-21,Fatty acids,Caprylic acid (Carbon atoms-8),16.0,0.041277777777777774,"981 (S, 13 degC)","0.149(L, 38.6 degC)",145.8,
+parafﬁn wax",42.5,202.0,,,,1.8
+21,Fatty acids,Caprylic acid (Carbon atoms-8),16.0,148.6,"981 (S, 13 degC)","0.149(L, 38.6 degC)",145.8,
 22,Fatty acids,,,,"901 (L, 30 degC)",,,
-23,Fatty acids,Capric acid (Carbon atoms-10),32.0,0.042416666666666665,"1004 (S, 24 degC)","0.153(L, 38.5 degC)",153.3,
+23,Fatty acids,Capric acid (Carbon atoms-10),32.0,152.7,"1004 (S, 24 degC)","0.153(L, 38.5 degC)",153.3,
 24,Fatty acids,,,,"878 (L, 45 degC)",,,
-25,Fatty acids,Lauric acid (Carbon atoms-12),42.0,0.0475,870 (L),0.149,148.8,75.0
-26,Fatty acids,Myristic acid (Carbon atoms-14),54.0,0.05277777777777778,860 (L),,163.4,
-27,Fatty acids,Palmitic acid (Carbon atoms-16),64.0,0.051500000000000004,"989 (S, 24 degC),","0.162(L,68.4 degC)",183.4,28.0
+25,Fatty acids,Lauric acid (Carbon atoms-12),42.0,171.0,870 (L),0.149,148.8,75.0
+26,Fatty acids,Myristic acid (Carbon atoms-14),54.0,190.0,860 (L),,163.4,
+27,Fatty acids,Palmitic acid (Carbon atoms-16),64.0,185.4,"989 (S, 24 degC),","0.162(L,68.4 degC)",183.4,28.0
 28,Fatty acids,,,,"850 (L, 65 degC)",,,
-29,Fatty acids,Stearic acid (Carbon atoms-18),69.0,0.058055555555555555,940 (L),,196.5,41.0
-30,Esters,Methyl palmitate,27.0,0.04533333333333333,,,,220.0
-31,Esters,Allyl palmitate,23.0,0.04805555555555555,,,,
-32,Esters,Propyl palmitate,20.0,0.05277777777777778,,,,
-33,Esters,Methyl stearate,39.0,0.04463888888888889,,,,63.0
-34,Esters,Isopropyl palmitate,11.0,0.027777777777777776,,,,16.0
-35,Esters,Isopropyl stearate,14.0,0.03944444444444444,,,,
-36,Esters,Butyl stearate,23.0,0.05555555555555555,,,,116.0
-37,Esters,Ethylene glycol distearate,63.2,0.059944444444444446,,,,453.0
-38,Esters,Dimethyl sebacate,21.0,0.0375,,,,63.0
-39,Esters,Methyl-12hydroxystearate,43.0,0.035,,,,
-40,Esters,Vinyl stearate,27.0,0.03388888888888889,,,,1170.0
-41,Alcohols,Xylitol,93.0,0.07777777777777778,1520,,425.6,133.0
-42,Alcohols,D-Sorbitol,97.0,0.030555555555555555,1490,,163.9,179.0
-43,Alcohols,meso-Erythritol,117.0,0.09555555555555556,1450,,498.8,430.0
-44,Alcohols,D-Mannitol,165.0,0.09472222222222222,,,,90.0
-45,Alcohols,1-Dodecanol,23.3,0.051111111111111114,,,,190.0
-46,Alcohols,1-Tetradecanol,39.3,0.06138888888888889,,,,180.0
-47,Glycols,PEG400,4.2,0.03266666666666666,1128,,132.7,12.0
-48,Glycols,PEG600,12.5,0.03586111111111111,,,,12.0
-49,Glycols,PEG1000,40.0,0.04683333333333333,,,,15.0
-50,Glycols,PEG3400,63.4,0.04633333333333334,,,,15.0
-51,Glycols,PEG10000,65.9,0.04766666666666666,,,,20.0
-52,Glycols,PEG20000,67.7,0.0445,,,,20.0
-53,Glycols,PEG35000,68.7,0.04636111111111111,,,,20.0
-54,Glycols,PEG100000,67.0,0.04883333333333334,,,,20.0
-55,Glycols,PEG1000000,70.0,0.04833333333333333,,,,20.0
-56,Organic Eutectic,Lauric acid-capric acid (45/55),21.0,0.03972222222222222,,,,
-57,Organic Eutectic,Capric acid-palmitic acid (76.5/23.5),21.8,0.04755555555555555,,,,
-58,Organic Eutectic,Lauric acid-myristic acid (66.0/34.0),34.2,0.04633333333333334,,,,
-59,Organic Eutectic,Lauric acid-palmitic acid (69.0/31.0),35.2,0.04619444444444445,,,,
-60,Organic Eutectic,Lauric acid-stearic acid (75.5/24.5),37.0,0.050749999999999997,,,,
-61,Organic Eutectic,Myristic acid-palmitic acid (58.0/42.0),42.6,0.04713888888888888,,,,
-62,Organic Eutectic,Myristic acid-stearic acid (64.0/36.0),44.1,0.050666666666666665,,,,
-63,Organic Eutectic,Myristic acid-stearic acid (65.7/34.3),52.0,0.045,,,,
-64,Organic Eutectic,Palmitic acid-stearic acid (64.2/35.8),52.3,0.05047222222222222,,,,
-65,Organic Eutectic,CaCl2$6H2O,29.6,0.053000000000000005,1562,,298,21.0
+29,Fatty acids,Stearic acid (Carbon atoms-18),69.0,209.0,940 (L),,196.5,41.0
+30,Esters,Methyl palmitate,27.0,163.2,,,,220.0
+31,Esters,Allyl palmitate,23.0,173.0,,,,
+32,Esters,Propyl palmitate,20.0,190.0,,,,
+33,Esters,Methyl stearate,39.0,160.7,,,,63.0
+34,Esters,Isopropyl palmitate,11.0,100.0,,,,16.0
+35,Esters,Isopropyl stearate,14.0,142.0,,,,
+36,Esters,Butyl stearate,23.0,200.0,,,,116.0
+37,Esters,Ethylene glycol distearate,63.2,215.8,,,,453.0
+38,Esters,Dimethyl sebacate,21.0,135.0,,,,63.0
+39,Esters,Methyl-12hydroxystearate,43.0,126.0,,,,
+40,Esters,Vinyl stearate,27.0,122.0,,,,1170.0
+41,Alcohols,Xylitol,93.0,280.0,1520,,425.6,133.0
+42,Alcohols,D-Sorbitol,97.0,110.0,1490,,163.9,179.0
+43,Alcohols,meso-Erythritol,117.0,344.0,1450,,498.8,430.0
+44,Alcohols,D-Mannitol,165.0,341.0,,,,90.0
+45,Alcohols,1-Dodecanol,23.3,184.0,,,,190.0
+46,Alcohols,1-Tetradecanol,39.3,221.0,,,,180.0
+47,Glycols,PEG400,4.2,117.6,1128,,132.7,12.0
+48,Glycols,PEG600,12.5,129.1,,,,12.0
+49,Glycols,PEG1000,40.0,168.6,,,,15.0
+50,Glycols,PEG3400,63.4,166.8,,,,15.0
+51,Glycols,PEG10000,65.9,171.6,,,,20.0
+52,Glycols,PEG20000,67.7,160.2,,,,20.0
+53,Glycols,PEG35000,68.7,166.9,,,,20.0
+54,Glycols,PEG100000,67.0,175.8,,,,20.0
+55,Glycols,PEG1000000,70.0,174.0,,,,20.0
+56,Organic Eutectic,Lauric acid-capric acid (45/55),21.0,143.0,,,,
+57,Organic Eutectic,Capric acid-palmitic acid (76.5/23.5),21.8,171.2,,,,
+58,Organic Eutectic,Lauric acid-myristic acid (66.0/34.0),34.2,166.8,,,,
+59,Organic Eutectic,Lauric acid-palmitic acid (69.0/31.0),35.2,166.3,,,,
+60,Organic Eutectic,Lauric acid-stearic acid (75.5/24.5),37.0,182.7,,,,
+61,Organic Eutectic,Myristic acid-palmitic acid (58.0/42.0),42.6,169.7,,,,
+62,Organic Eutectic,Myristic acid-stearic acid (64.0/36.0),44.1,182.4,,,,
+63,Organic Eutectic,Myristic acid-stearic acid (65.7/34.3),52.0,162.0,,,,
+64,Organic Eutectic,Palmitic acid-stearic acid (64.2/35.8),52.3,181.7,,,,
+65,Organic Eutectic,CaCl2$6H2O,29.6,190.8,1562,,298,21.0
 66,Organic Eutectic,,,,,,,
-67,Organic Eutectic,CaBr2$6H2O,34.0,0.03208333333333333,1956,,225.9,
+67,Organic Eutectic,CaBr2$6H2O,34.0,115.5,1956,,225.9,
 68,Organic Eutectic,,,,,,,
-69,Organic Eutectic,NaCH3COO$3H2O,58.0,0.06666666666666667,,,,5.0
+69,Organic Eutectic,NaCH3COO$3H2O,58.0,240.0,,,,5.0
 70,Organic Eutectic,,,,,,,
 71,Organic Eutectic,,,,,,,
-72,Organic Eutectic,MgCl2$6H2O,117.0,0.04683333333333333,"1569 (S, 20 degC)","0.694 (S, 90 degC)",264.5,6.0
+72,Organic Eutectic,MgCl2$6H2O,117.0,168.6,"1569 (S, 20 degC)","0.694 (S, 90 degC)",264.5,6.0
 73,Organic Eutectic,,,,"1450 (L, 120 degC)","0.570 (L, 120 degC)",,
-74,Organic Eutectic,Mg(NO3)2$6H2O,89.0,0.045222222222222226,"1636 (S, 25 degC)","0.611 (S, 37 degC)",266.3,11.0
+74,Organic Eutectic,Mg(NO3)2$6H2O,89.0,162.8,"1636 (S, 25 degC)","0.611 (S, 37 degC)",266.3,11.0
 75,Organic Eutectic,,,,"1550 (L, 94 degC)","0.490 (L, 95 degC)",,
-76,Organic Eutectic,Ba(OH)2$8H2O,78.0,0.07380555555555555,"2070 (S, 24 degC)","0.653 (L, 85.7 degC)",550,6.0
+76,Organic Eutectic,Ba(OH)2$8H2O,78.0,265.7,"2070 (S, 24 degC)","0.653 (L, 85.7 degC)",550,6.0
 77,Organic Eutectic,,,,"1937 (L, 84 degC)","1.225 (S, 23 degC)",,
-78,Organic Eutectic,Na2S2O3$5H2O,48.0,0.05555555555555555,1750(S),,350,5.0
-79,Organic Eutectic,Na2HPO4$12H2O,36.0,0.07777777777777778,1520(S),"0.514(S), 0.476(L)",425.6,5.0
-80,Organic Eutectic,Na2CO3$10H2O,36.0,0.06861111111111111,,,,15.0
-81,Organic Eutectic,Na2SO4$10H2O,32.0,0.06972222222222223,,,,6.0
-82,Organic Eutectic,CaCl2$6H2O,29.0,0.053000000000000005,"1802 (S, 24 degC)","0.540 (L, 38.7 degC)",343.8,6.0
+78,Organic Eutectic,Na2S2O3$5H2O,48.0,200.0,1750(S),,350,5.0
+79,Organic Eutectic,Na2HPO4$12H2O,36.0,280.0,1520(S),"0.514(S), 0.476(L)",425.6,5.0
+80,Organic Eutectic,Na2CO3$10H2O,36.0,247.0,,,,15.0
+81,Organic Eutectic,Na2SO4$10H2O,32.0,251.0,,,,6.0
+82,Organic Eutectic,CaCl2$6H2O,29.0,190.8,"1802 (S, 24 degC)","0.540 (L, 38.7 degC)",343.8,6.0
 83,Organic Eutectic,,,,"1562 (L, 32 degC)","1.088 (S, 23 degC)",,
-84,Nitrate salts,NaNO3,306.0,0.04777777777777778,2261 (S),,388.9,6.0
-85,Nitrate salts,KNO3,335.0,0.07388888888888889,2109(S),0.5,561,7.0
-86,Nitrate salts,Ca(NO3)2,560.0,0.04027777777777778,2113(S),,306.4,
+84,Nitrate salts,NaNO3,306.0,172.0,2261 (S),,388.9,6.0
+85,Nitrate salts,KNO3,335.0,266.0,2109(S),0.5,561,7.0
+86,Nitrate salts,Ca(NO3)2,560.0,145.0,2113(S),,306.4,
 87,Nitrate salts,Mg (NO3)2,426.0,,,,,226.0
-88,Carbonate salts,Na2CO3,854.0,0.07666666666666666,2533(S),,699.1,3.0
+88,Carbonate salts,Na2CO3,854.0,276.0,2533(S),,699.1,3.0
 89,Carbonate salts,,,,1972(L),,,
-90,Carbonate salts,K2CO3,897.0,0.06555555555555556,2290(S),,540.4,7.0
-91,Carbonate salts,CaCO3,1330.0,0.03944444444444444,2930(S),,416.1,8.0
-92,Carbonate salts,Li2CO3,732.0,0.1413888888888889,2110(S),,1074,111.0
-93,Chloride salts,ZnCl2,280.0,0.020833333333333332,2907(S),0.5,218,14.0
-94,Chloride salts,AlC13,192.0,0.07777777777777778,,,,
-95,Chloride salts,NaCl,802.0,0.11666666666666667,2160(S),,907.2,2.8
-96,Chloride salts,KCl,771.0,0.09805555555555556,1980(S),,698.9,7.6
+90,Carbonate salts,K2CO3,897.0,236.0,2290(S),,540.4,7.0
+91,Carbonate salts,CaCO3,1330.0,142.0,2930(S),,416.1,8.0
+92,Carbonate salts,Li2CO3,732.0,509.0,2110(S),,1074,111.0
+93,Chloride salts,ZnCl2,280.0,75.0,2907(S),0.5,218,14.0
+94,Chloride salts,AlC13,192.0,280.0,,,,
+95,Chloride salts,NaCl,802.0,420.0,2160(S),,907.2,2.8
+96,Chloride salts,KCl,771.0,353.0,1980(S),,698.9,7.6
 97,Chloride salts,,,,1527(L),,,
-98,Chloride salts,MgCl2,714.0,0.12555555555555556,2320(S),,1048.6,55.0
+98,Chloride salts,MgCl2,714.0,452.0,2320(S),,1048.6,55.0
 99,Chloride salts,,,,1680(L),,,
-100,Chloride salts,LiCl,610.0,0.1225,2070(S),,912.9,55.0
+100,Chloride salts,LiCl,610.0,441.0,2070(S),,912.9,55.0
 101,Chloride salts,,,,1502(L),,,
-102,Chloride salts,CaCl2,772.0,0.07027777777777777,2150(S),,544,5.3
+102,Chloride salts,CaCl2,772.0,253.0,2150(S),,544,5.3
 103,Chloride salts,,,,2085(L),,,
-104,Sulfate salts,Na2SO4,884.0,0.04583333333333333,2680(S),,442.2,3.4
-105,Sulfate salts,Li2SO4,858.0,0.023333333333333334,2220(S),,186.5,180.0
+104,Sulfate salts,Na2SO4,884.0,165.0,2680(S),,442.2,3.4
+105,Sulfate salts,Li2SO4,858.0,84.0,2220(S),,186.5,180.0
 106,Sulfate salts,,,,2003(L),,,
-107,Sulfate salts,K2SO4,1069.0,0.058888888888888886,2660(S),,563.9,8.25
-108,Sulfate salts,MgSO4,1130.0,0.03388888888888889,2660(S),,324.5,13.7
-109,Sulfate salts,CaSO4,1460.0,0.05638888888888889,2320(S),,471,27.0
-110,Fluoride salts,LiF,850.0,0.29,2640(S),,2756.2,220.0
+107,Sulfate salts,K2SO4,1069.0,212.0,2660(S),,563.9,8.25
+108,Sulfate salts,MgSO4,1130.0,122.0,2660(S),,324.5,13.7
+109,Sulfate salts,CaSO4,1460.0,203.0,2320(S),,471,27.0
+110,Fluoride salts,LiF,850.0,1044.0,2640(S),,2756.2,220.0
 111,Fluoride salts,,,,1810(L),,,
-112,Fluoride salts,NaF,996.0,0.22055555555555556,2558(S),,2031.1,7.6
+112,Fluoride salts,NaF,996.0,794.0,2558(S),,2031.1,7.6
 113,Fluoride salts,,,,1948(L),,,
-114,Fluoride salts,KF,858.0,0.13,2370(S),,1109.2,203.0
+114,Fluoride salts,KF,858.0,468.0,2370(S),,1109.2,203.0
 115,Fluoride salts,,,,1910(L),,,
-116,Fluoride salts,CaF2,1418.0,0.10861111111111112,3180(S),,1243.4,11.4
+116,Fluoride salts,CaF2,1418.0,391.0,3180(S),,1243.4,11.4
 117,Fluoride salts,,,,1910(L),,,
-118,Hydroxides,NaOH,318.0,0.04583333333333333,2100(S),,346.5,4.1
-119,Hydroxides,KOH,380.0,0.041666666666666664,2040(S),,306,5.0
-120,Hydroxides,LiOH,462.0,0.2425,1460(S),,1274.6,165.0
-121,Metals,Copper,1084.0,0.057777777777777775,8960(S),401,1863.7,84.0
+118,Hydroxides,NaOH,318.0,165.0,2100(S),,346.5,4.1
+119,Hydroxides,KOH,380.0,150.0,2040(S),,306,5.0
+120,Hydroxides,LiOH,462.0,873.0,1460(S),,1274.6,165.0
+121,Metals,Copper,1084.0,208.0,8960(S),401,1863.7,84.0
 122,Metals,,,,8020(L),,,
-123,Metals,Zinc,419.0,0.03138888888888889,7140(S),116,806.8,10.0
-124,Metals,Aluminum,660.0,0.11027777777777778,2707(S),204,1074.7,25.0
+123,Metals,Zinc,419.0,113.0,7140(S),116,806.8,10.0
+124,Metals,Aluminum,660.0,397.0,2707(S),204,1074.7,25.0
 125,Metals,,,,2375(L),,,
-126,Alloys,Zn/Mg (53.7/46.3),340.0,0.05138888888888889,4600(S),,851,
-127,Alloys,Zn/Mg (52/48),340.0,0.05,,,,
-128,Alloys,Zn/Al (96/4),381.0,0.03833333333333333,6630(S),,914.9,
-129,Alloys,Al/Mg/Zn (59/33/6),443.0,0.08611111111111111,2380(S),,737.8,
-130,Alloys,Al/Mg/Zn (60/34/6),450.3,0.09141666666666667,,,,
-131,Alloys,Mg/Cu/Zn (60/25/15),452.0,0.07055555555555555,2800(S),,711.2,
-132,Alloys,Mg/Ca (84/16),790.0,0.07555555555555556,1380(S),,375.4,
-133,Alloys,Mg/Si/Zn (47/38/15),800.0,0.08722222222222223,,,,
-134,Alloys,Cu/Si (80/20),803.0,0.05472222222222222,6600(S),,1300.2,
-135,Alloys,Cu/P/Si (83/10/7),840.0,0.025555555555555557,6880(S),,633,
-136,Alloys,Si/Mg/Ca (49/30/21),865.0,0.08472222222222223,6880(S),,2098.4,
-137,Alloys,Si/Mg (56/44),946.0,0.21027777777777779,1900(S),,1438.3,
-138,Salt Organic Eutectic,Na2SO4/H2O/NaCl/NH4Cl,13.0,0.04055555555555555,,,,
+126,Alloys,Zn/Mg (53.7/46.3),340.0,185.0,4600(S),,851,
+127,Alloys,Zn/Mg (52/48),340.0,180.0,,,,
+128,Alloys,Zn/Al (96/4),381.0,138.0,6630(S),,914.9,
+129,Alloys,Al/Mg/Zn (59/33/6),443.0,310.0,2380(S),,737.8,
+130,Alloys,Al/Mg/Zn (60/34/6),450.3,329.1,,,,
+131,Alloys,Mg/Cu/Zn (60/25/15),452.0,254.0,2800(S),,711.2,
+132,Alloys,Mg/Ca (84/16),790.0,272.0,1380(S),,375.4,
+133,Alloys,Mg/Si/Zn (47/38/15),800.0,314.0,,,,
+134,Alloys,Cu/Si (80/20),803.0,197.0,6600(S),,1300.2,
+135,Alloys,Cu/P/Si (83/10/7),840.0,92.0,6880(S),,633,
+136,Alloys,Si/Mg/Ca (49/30/21),865.0,305.0,6880(S),,2098.4,
+137,Alloys,Si/Mg (56/44),946.0,757.0,1900(S),,1438.3,
+138,Salt Organic Eutectic,Na2SO4/H2O/NaCl/NH4Cl,13.0,146.0,,,,
 139,Salt Organic Eutectic,(32.5/41.4/6.66/6.16),,,,,,
-140,Salt Organic Eutectic,CaCl2$6H2O/CaBr2$6H2O (45/55),14.7,0.03888888888888889,,,,
+140,Salt Organic Eutectic,CaCl2$6H2O/CaBr2$6H2O (45/55),14.7,140.0,,,,
 141,Salt Organic Eutectic,Na2SO4$10H2O/NaCl (50/50),18.0,,,,,
-142,Salt Organic Eutectic,CaCl2$6H2O/MgCl2$6H2O (66.6/33.3),25.0,0.035277777777777776,,,,
-143,Salt Organic Eutectic,CaCl2/MgCl2$6H2O (50/50),25.0,0.02638888888888889,,,,
-144,Salt Organic Eutectic,CaCl2/NaCl/KCl/H2O (48/4.3/0.4/47.3),27.0,0.052222222222222225,,,,
-145,Salt Organic Eutectic,Ca (NO3)2$4H2O/Mg (NO3)2$6H2O (47/,30.0,0.03777777777777778,,,,
+142,Salt Organic Eutectic,CaCl2$6H2O/MgCl2$6H2O (66.6/33.3),25.0,127.0,,,,
+143,Salt Organic Eutectic,CaCl2/MgCl2$6H2O (50/50),25.0,95.0,,,,
+144,Salt Organic Eutectic,CaCl2/NaCl/KCl/H2O (48/4.3/0.4/47.3),27.0,188.0,,,,
+145,Salt Organic Eutectic,Ca (NO3)2$4H2O/Mg (NO3)2$6H2O (47/,30.0,136.0,,,,
 146,Salt Organic Eutectic,53),,,,,,

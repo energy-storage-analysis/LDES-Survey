@@ -55,7 +55,7 @@ df_table8 = df_table8.rename(
        '-3)\nDensity (kg$m  ': 'density',
        'Thermal conductivity (W$m\n-1 K\n-1)': 'kth',
        'Latent heat storage capacity (MJ$m\n-3) ': 'vol_latent_heat',
-       'Technical grade cost ($$kg\n-1) ': 'cost',
+       'Technical grade cost ($$kg\n-1) ': 'specific_price',
        'Remarks  ':'remarks'},
 axis=1)
 
@@ -66,13 +66,12 @@ df_table8['phase_change_T'] = df_table8['phase_change_T'].replace('40-45', '42.5
 df_table8['phase_change_T'] = df_table8['phase_change_T'].replace('',np.nan).astype(float)
 
 df_table8['sp_latent_heat'] = df_table8['sp_latent_heat'].replace('',np.nan).astype(float)
-df_table8['sp_latent_heat'] = df_table8['sp_latent_heat']/3600
 
 df_table8['class'] = df_table8['class'].replace('',np.nan).fillna(method='ffill') 
 df_table8['class'] = df_table8['class'].replace('eutectics', 'Organic', regex=True)
 df_table8['class'] = df_table8['class'].replace('Organic', 'Organic Eutectic', regex=True)
 df_table8['class'] = df_table8['class'].replace('Inorganic ', '', regex=True)
-df_table8['cost'] = df_table8['cost'].replace('',np.nan).dropna().replace('\(RG\)','', regex=True).astype(float)
+df_table8['specific_price'] = df_table8['specific_price'].replace('',np.nan).dropna().replace('\(RG\)','', regex=True).astype(float)
 
 tables['table_8'] = df_table8
 
@@ -90,14 +89,15 @@ df_table4['class'] = 'Thermal Oils'
 df_table4 = df_table4.rename({  
     '-1 degC\n-1)\nSpeciﬁc heat capacity at 210 degC (kJ kg': 'Cp',
     'Thermal conductivity at 210 degC (W m\n-1 K\n-1)': 'kth',
-    'Cost (V$t\n-1)': 'cost'
+    'Cost (V$t\n-1)': 'specific_price'
     }, axis=1)
 df_table4.index.name = 'original_name'
 
-df_table4['cost'] = df_table4['cost'].str.replace(',','')
-df_table4['cost'] = df_table4['cost'].replace('e','nan')
-df_table4['cost'] = df_table4['cost'].astype(float)
-df_table4['cost'] = df_table4['cost']*(1/1000) #euro/ton to dollar/kg (roughly)
+#TODO: not actually price per kg until end, but all others are in those units so conversion here seems OK. At least use global USD to Euro conversion. 
+df_table4['specific_price'] = df_table4['specific_price'].str.replace(',','')
+df_table4['specific_price'] = df_table4['specific_price'].replace('e','nan')
+df_table4['specific_price'] = df_table4['specific_price'].astype(float)
+df_table4['specific_price'] = df_table4['specific_price']*(1/1000) #euro/ton to dollar/kg (roughly)
 
 
 df_table4.index = df_table4.index.str.replace("®", '', regex=True)
@@ -119,13 +119,13 @@ df_table5 = df_table5.rename({
     'Salt/eutectic': 'original_name',
     'Speciﬁc heat (kJ$kg\n-1 degC\n-1)': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)': 'kth',
-    'Cost ($$kg\n-1)': 'cost'
+    'Cost ($$kg\n-1)': 'specific_price'
     }, axis=1)
 
 
 df_table5['original_name'] = df_table5['original_name'].replace('e','-')
 df_table5 = df_table5.set_index('original_name')
-df_table5['cost'] = df_table5['cost'].replace('e','nan')
+df_table5['specific_price'] = df_table5['specific_price'].replace('e','nan')
 
 df_table5 = df_table5.iloc[[0,2,4]]
 
@@ -143,7 +143,7 @@ df_table6 = df_table6.rename({
     'Metal/Alloy': 'original_name',
     'Speciﬁc heat -1\nkJ$kg\n-1 degC': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)' : 'kth',
-    'Cost ($$kg\n-1)': 'cost'
+    'Cost ($$kg\n-1)': 'specific_price'
     }, axis=1)
 
 df_table6 = df_table6.set_index('original_name')
@@ -154,8 +154,8 @@ df_table7 = dfs[6]
 df_table7.columns = [c.strip() for c in df_table7.columns]
 df_table7 = df_table7.dropna(subset=['Type'])
 df_table7['class'] = 'Rocks'
-# df_table7['cost'] = 0.1
-df_table7['cost'] = np.nan
+# df_table7['specific_price'] = 0.1
+df_table7['specific_price'] = np.nan
 # df_table7.columns = df_table7.columns.str.replace(r'\r\n',r'\n', regex=True)
 
 df_table7 = df_table7.rename({

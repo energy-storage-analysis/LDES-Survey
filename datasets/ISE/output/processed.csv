@@ -1,4 +1,4 @@
-,material_name,commodity,commodity_info,Specification,price_per_kg
+,material_name,commodity,commodity_info,Specification,specific_price
 0,Antimony,Antimony,Ingot,99.65% min EXW China,5.5165
 1,Antimony,Antimony,Ingot,99.85% min EXW China,5.5895
 2,Antimony,Antimony,Ingot,99.65% min FOB China,6.1000000000000005
@@ -145,10 +145,10 @@
 157,Tantalum,Tantalum,metal,99.95% min EXW China,305.0
 158,Tantalum,Tantalum,metal,99.95% min FOB China,260.0
 159,Tantalum,Tantalum,metal,99.95% min delivered in US,280.0
-160,Tantalum oxide,Tantalum,pentoxide,99.5% min EXW China,185.0
-161,Tantalum oxide,Tantalum,pentoxide,99.5% min FOB China,185.0
-162,Tantalum oxide,Tantalum,pentoxide,99.99% min EXW China,252.0
-163,Tantalum oxide,Tantalum,pentoxide,99.99% min FOB China,247.5
+160,Tantalum pentoxide,Tantalum,pentoxide,99.5% min EXW China,185.0
+161,Tantalum pentoxide,Tantalum,pentoxide,99.5% min FOB China,185.0
+162,Tantalum pentoxide,Tantalum,pentoxide,99.99% min EXW China,252.0
+163,Tantalum pentoxide,Tantalum,pentoxide,99.99% min FOB China,247.5
 164,Tellurium,Tellurium,metal,99.9% min in the warehouse Rotterdam,51.0
 165,Tellurium,Tellurium,metal,99.99% min EXW China,55.900000000000006
 166,Tellurium,Tellurium,metal,99.99% min in the warehouse Rotterdam,61.0

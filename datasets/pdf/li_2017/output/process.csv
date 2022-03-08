@@ -1,4 +1,4 @@
-full_name,cost,ref,molecular_formula,material_name
+full_name,specific_price,ref,molecular_formula,material_name
 Active carbon,30.0,41,C,Carbon
 AQDS,4.8,25,C14H8O8S2,AQDS
 CaCl2,0.11,42,CaCl2,

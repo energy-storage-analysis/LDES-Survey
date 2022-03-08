@@ -67,7 +67,7 @@ df_table3 = df_table3.drop(' ', axis=1)
 df_table3 = df_table3.rename(
     {
     ' Chemical': 'full_name', 
-    ' Price \n(US$/kg)': 'cost', 
+    ' Price \n(US$/kg)': 'specific_price', 
     ' Source': 'ref'
     },
 axis=1)
