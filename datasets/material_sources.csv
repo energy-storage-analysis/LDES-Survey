@@ -1,0 +1,154 @@
+material_name,source,pubchem_top_formula
+alumina,USGS,Al2O3
+aluminum,USGS,Al
+ammonia,USGS,H3N
+ammonium heptamolybdate,ISE,H66Mo7N6O24
+ammonium metavanadate,ISE,H4NO3V
+ammonium paratungstate,ISE,H8N2O4W
+ammonium tetrathiomolybdate,ISE,H10MoN2S4
+antimony,"USGS, ISE",Sb
+antimony ethylene glycoxide,ISE,
+antimony trioxide,ISE,O3Sb2
+aqds,Li 2017,C7H4O4S
+arsenic,"USGS, ISE",As
+arsenic trioxide,"USGS, ISE",As2O3
+asbestos,USGS,
+ball clay,USGS,
+barite,USGS,BaO4S
+basalt,Alva 2018 (Sensible),CaMgO6Si2
+bauxite,USGS,AlHO2
+bentonite,USGS,C6H12N4O9
+beryllium,USGS,Be
+bismuth,"USGS, ISE",Bi
+bismuth oxide,ISE,Bi2O3
+boron,USGS,B
+bromine,USGS,br2
+cadmium,"USGS, ISE",Cd
+calcium,ISE,Ca
+carbon,Li 2017,CH4
+celestite,USGS,
+cement,USGS,
+chromite,"USGS, ISE",CrFeO4
+chromium,"USGS, ISE",Cr
+cobalt,"USGS, ISE",Co
+cobalt carbonate,ISE,CCoO3
+cobalt chloride,ISE,Cl2Co
+cobalt monoxide,ISE,CoO
+cobalt sulphate,ISE,CoO4S
+cobalt tetraoxide,ISE,Co3O4
+cobalt tetroxide,ISE,
+common clay,USGS,
+copper,USGS,Cu
+diamond,USGS,CH4
+diatomite,USGS,O2Si
+dowtherm,Alva 2018 (Sensible),C24H20O
+feldspar,USGS,AlKO8Si3
+ferrosilicon,USGS,FeSi2
+ferrrochromium,USGS,
+fire clay,USGS,
+fluorspar,USGS,CaF2
+fullers clay,USGS,
+gallium,"USGS, ISE",Ga
+germanium,"USGS, ISE",Ge
+germanium dioxide,"USGS, ISE",GeO2
+gold,USGS,Au
+granite,Alva 2018 (Sensible),C16F5H14N5O5S
+graphite,"USGS, Li 2017",CH4
+gravel,USGS,C15H21NO
+gypsum,USGS,CaO4S
+hafnium,USGS,Hf
+hitec,Alva 2018 (Sensible),KN3Na2O8
+hitec xl,Alva 2018 (Sensible),
+ilmenite,"USGS, ISE",FeH6O3Ti
+indium,"USGS, ISE",In
+iodine,USGS,I2
+iridium,USGS,Ir
+iron,USGS,Fe
+iron ore,USGS,Fe2O3
+iron oxide,USGS,Fe2O3
+kaolin clay,USGS,
+kyanite,USGS,Al2H6O5Si
+lead,USGS,Pb
+lime,USGS,CaO
+lithium,"ISE, Li 2017",Li
+lithium carbonate,"USGS, ISE",CLi2O3
+lithium chloride,ISE,ClLi
+lithium cobaltate,ISE,
+lithium hydroxide,ISE,HLiO
+lithium manganate,ISE,Li2MnO4
+magnesium,"USGS, ISE",Mg
+manganese,USGS,Mn
+marble,Alva 2018 (Sensible),CCaO3
+mercury,USGS,Hg
+mischmetal,USGS,C3CeH8LaNd
+molybdenite ,ISE,MoS2
+molybdenum,"USGS, ISE",Mo
+molybdenum oxide,ISE,MoO3
+nickel,USGS,Ni
+niobium ,USGS,Nb
+niobium pentoxide,ISE,Nb2O5
+palladium,USGS,Pd
+peat,USGS,K
+perlite,USGS,Al2CaFe2K2MgNa2O12Si
+phosphorite,USGS,
+platinum,USGS,Pt
+potassium chloride,USGS,ClK
+potassium oxide,USGS,K2O
+pumice,USGS,C28FH37O7
+quartz,USGS,O2Si
+quartzite,Alva 2018 (Sensible),
+rhenium,"USGS, ISE",Re
+rhodium,USGS,Rh
+ruthenium,USGS,Ru
+scandium,USGS,Sc
+scandium acetate,USGS,C6H12O6Sc
+scandium aluminum alloy,USGS,
+scandium chloride,USGS,Cl3Sc
+scandium fluoride,USGS,F3Sc
+scandium iodide,USGS,I3Sc
+scandium oxide,USGS,O3Sc2
+selenium,"USGS, ISE",Se
+selenium dioxide,ISE,O2Se
+silicon,"USGS, ISE",Si
+silver,USGS,Ag
+soda ash,USGS,CNa2O3
+sodium,Alva 2018 (Sensible),Na
+sodium bismuth,Alva 2018 (Sensible),
+sodium chloride,USGS,ClNa
+sodium molybdate,ISE,MoNa2O4
+sodium potassium alloy,Alva 2018 (Sensible),
+sodium tungstate,ISE,Na2O4W
+solar salt,Alva 2018 (Sensible),
+stone,USGS,
+strontium,ISE,Sr
+sulfur,USGS,H2S
+syenite,USGS,
+syltherm xlt,Alva 2018 (Sensible),
+talc,USGS,H2Mg3O12Si4
+tantalum,ISE,Ta
+tantalum oxide,ISE,O5Ta2
+tantalum pentoxide,USGS,O5Ta2
+tellurium,"USGS, ISE",Te
+thallium,USGS,Tl
+thorium,USGS,Th
+tin,USGS,Sn
+titanium,"USGS, ISE",Ti
+titanium dioxide,USGS,O2Ti
+titanium tetrachloride,ISE,Cl4Ti
+tungsten,ISE,W
+tungsten carbide,ISE,CW
+tungsten oxide,ISE,O3W
+tungsten trioxide,"USGS, ISE",O3W
+vanadium nitrides,ISE,
+vanadium pentoxide,ISE,O5V2
+vegetable oil,Alva 2018 (Sensible),C57H104O9
+water,Li 2017,H2O
+wolfram,ISE,W
+yttrium,USGS,Y
+yttrium oxide,USGS,O3Y2
+zinc,USGS,Zn
+zirconium,"USGS, ISE",Zr
+zirconium carbonate,ISE,C2O6Zr
+zirconium oxide,ISE,O2Zr
+zirconium oxychloride,ISE,Cl2H2OZr
+zirconium silicate,"USGS, ISE",O4SiZr

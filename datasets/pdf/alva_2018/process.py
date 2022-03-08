@@ -13,13 +13,14 @@ sys.path.append('..')
 df_latent = pd.read_csv('tables/table_8.csv')
 
 df_latent['C_kwh'] = df_latent['cost']/(df_latent['sp_latent_heat'])
-df_latent['energy_type'] = 'Latent Thermal'# (T > 200 C)'
-df_latent['source'] = 'Alva et al. 2018'
+
+#Only keep data relevant to high temperature storage (not buildings)
 df_latent = df_latent.where(df_latent['phase_change_T'] > 200).dropna(subset=['phase_change_T'])
 
 #%%
 
 df_latent['original_name'] = df_latent['original_name'].replace('Zn/Mg (53.7/46.3)', 'Zn54Mg46')
+df_latent['original_name'] = df_latent['original_name'].replace('Zn/Mg (52/48)', 'Zn52Mg48')
 df_latent['original_name'] = df_latent['original_name'].replace('Zn/Al (96/4)', 'Zn96Al4')
 df_latent['original_name'] = df_latent['original_name'].replace('Al/Mg/Zn (59/33/6)', 'Al59Mg33Zn6')
 df_latent['original_name'] = df_latent['original_name'].replace('Al/Mg/Zn (60/34/6)', 'Al60Mg34Zn6')
@@ -63,9 +64,6 @@ df_sens['molecular_formula'] = chem_lookup.loc[present_chemicals]['molecular_for
 
 df_sens['Cp'] = df_sens['Cp']/3600
 df_sens['C_kwh'] = df_sens['cost']/(df_sens['Cp']*500)
-
-df_sens['energy_type'] = 'Sensible Thermal'
-df_sens['source'] = 'Alva et al. 2018'
 df_sens
 # %%
 df_sens.to_csv('output/sensible.csv')
