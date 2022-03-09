@@ -1,6 +1,3 @@
-[submodule "pdf_data/usgs/USGS_HHI"]
-	path = pdf_data/usgs/USGS_HHI
-	url = https://github.com/sp8rks/USGS_HHI
 [submodule "mat2vec"]
 	path = mat2vec
 	url = https://github.com/aspitarl/mat2vec
