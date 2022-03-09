@@ -1,0 +1,20 @@
+original_name,material_type,specific_price,material_name,pubchem_cid,molecular_formula
+Sand,Quartz/Sand,0.72,Sand,,
+Na2CO3,Carbonate salts,0.23,Sodium carbonate,10340,CNa2O3
+K2CO3,Carbonate salts,1.1,Potassium carbonate,11430,CK2O3
+Li2CO3,Carbonate salts,7.0,Lithium carbonate,11125,CLi2O3
+Solar Salt,Molten salts,0.49,Solar Salt,,
+Hitec XL,Molten salts,1.43,Hitec XL,,
+Hitec,Molten salts,0.93,Hitec,,
+Halotechnics,Molten salts,1.4,,,
+Anhydrous,Ammonia,0.7,Ammonia,222,H3N
+Vermiculite,Matrices,0.33,Vermiculite,156593754,AlFeH3MgO6Si
+Silica Gel,Matrices,1.11,Silica,222,H3N
+Zeolite,Matrices,1.93,Aluminosilicate,9942228,Al2O5Si
+Activated Carbon,Matrices,2.75,Activated Carbon,5462310,C
+Expanded Natural,Matrices,2.15,Graphite,5462310,C
+Activated Alumina,Matrices,1.32,Alumina,14769,Al2O3
+KCl,Chloride salts,0.35,Potassium chloride,4873,ClK
+MgCl2,Chloride salts,0.2,Magnesium chloride,24584,Cl2Mg
+NaCl,Chloride salts,0.12,Sodium chloride,5234,ClNa
+LiCl,Chloride salts,7.8,Lithium chloride,433294,ClLi

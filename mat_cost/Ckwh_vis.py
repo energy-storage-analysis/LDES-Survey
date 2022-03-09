@@ -126,4 +126,6 @@ plt.xticks(rotation=45)
 plt.ylabel('Material Energy Cost ($/kWh)')
 # %%
 
+plt.savefig('output/fig_C_kwh.png')
+
 # %%

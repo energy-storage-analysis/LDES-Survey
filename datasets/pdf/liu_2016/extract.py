@@ -47,9 +47,7 @@ df_split = df_table4['Cost/kg ($US/kg)'].str.split('[', expand=True)
 df_table4['Cost/kg ($US/kg)'] = df_split[0]
 df_table4['name'] = df_split[1].str.strip('] ')
 
-df_table4 = df_table4.rename({
-    'Cost/kg ($US/kg)': 'cost'
-}, axis=1)
+
 
 df_table4
 

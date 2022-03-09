@@ -79,7 +79,9 @@ s_mat_sources = df.groupby('material_name').apply(join_material_dups, column='so
 s_mat_sources.name = 'source'
 df_material = s_mat_sources.to_frame()
 
-df_material['pubchem_formula'] = pubchem_forms.loc[s_mat_sources.index]
+existing_pubchem_form = [f for f in s_mat_sources.index if f in pubchem_forms.index] #TODO: must update pubchem_forms for new datasets...just need to redo indexing and pubchem
+
+df_material['pubchem_formula'] = pubchem_forms.loc[existing_pubchem_form]
 # df_material['specific_energy'] = df.groupby('material_name')['specific_energy'].mean() #specific energy for different forms of energy should not be combined, unlike price. 
 df_material['specific_price'] = df.groupby('material_name')['specific_price'].mean()
 

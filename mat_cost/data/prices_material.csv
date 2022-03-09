@@ -1,7 +1,9 @@
 material_name,source,pubchem_formula,specific_price
-alumina,USGS,Al2O3,0.5335186744874038
+activated carbon,Liu 2016,,2.75
+alumina,"USGS, Liu 2016",Al2O3,0.926759337243702
+aluminosilicate,Liu 2016,,1.93
 aluminum,USGS,Al,2.3906927711328128
-ammonia,USGS,H3N,0.32915015744202225
+ammonia,"USGS, Liu 2016",H3N,0.514575078721011
 ammonium heptamolybdate,ISE,H66Mo7N6O24,19.018
 ammonium metavanadate,ISE,H4NO3V,16.913
 ammonium paratungstate,ISE,H8N2O4W,20.13233333333333
@@ -53,12 +55,12 @@ germanium,"USGS, ISE",Ge,1187.075
 germanium dioxide,"USGS, ISE",GeO2,782.45
 gold,USGS,Au,48238.98015156943
 granite,Alva 2018 (Sensible),C16F5H14N5O5S,
-graphite,"USGS, Li 2017",CH4,6.800829167386568
+graphite,"USGS, Li 2017, Liu 2016",CH4,5.250552778257712
 gravel,USGS,C15H21NO,0.02918038502279035
 gypsum,USGS,CaO4S,0.01984160359663894
 hafnium,USGS,Hf,0.9038952749579983
-hitec,Alva 2018 (Sensible),KN3Na2O8,
-hitec xl,Alva 2018 (Sensible),,1.19
+hitec,"Alva 2018 (Sensible), Liu 2016",KN3Na2O8,0.93
+hitec xl,"Alva 2018 (Sensible), Liu 2016",,1.31
 ilmenite,"USGS, ISE",FeH6O3Ti,0.3898153678011236
 indium,"USGS, ISE",In,213.23214285714286
 iodine,USGS,I2,26.392000000000003
@@ -71,12 +73,13 @@ kyanite,USGS,Al2H6O5Si,0.39528883609748544
 lead,USGS,Pb,2.2182912821042384
 lime,USGS,CaO,0.15609830474000252
 lithium,"ISE, Li 2017",Li,75.11137500000001
-lithium carbonate,"USGS, ISE",CLi2O3,13.304609837142984
-lithium chloride,ISE,ClLi,9.7995
+lithium carbonate,"USGS, ISE, Liu 2016",CLi2O3,11.203073224761988
+lithium chloride,"ISE, Liu 2016",ClLi,8.79975
 lithium cobaltate,ISE,,28.950000000000003
 lithium hydroxide,ISE,HLiO,13.18125
 lithium manganate,ISE,Li2MnO4,6.968500000000001
 magnesium,"USGS, ISE",Mg,3.4362668091115305
+magnesium chloride,Liu 2016,,0.2
 manganese,USGS,Mn,0.0062941975853782195
 marble,Alva 2018 (Sensible),CCaO3,
 mercury,USGS,Hg,50.32201914708442
@@ -92,7 +95,8 @@ peat,USGS,K,0.0281662586167399
 perlite,USGS,Al2CaFe2K2MgNa2O12Si,0.07231162199663979
 phosphorite,USGS,,0.0800895306065223
 platinum,USGS,Pt,1.0553197797396812
-potassium chloride,USGS,ClK,0.5136770708907648
+potassium carbonate,Liu 2016,,1.1
+potassium chloride,"USGS, Liu 2016",ClK,0.43183853544538237
 potassium oxide,USGS,K2O,0.9193276333109395
 pumice,USGS,C28FH37O7,0.035714886473950144
 quartz,USGS,O2Si,328.0
@@ -100,6 +104,7 @@ quartzite,Alva 2018 (Sensible),,
 rhenium,"USGS, ISE",Re,1385.25
 rhodium,USGS,Rh,9.361209052083481
 ruthenium,USGS,Ru,0.30108310684326545
+sand,Liu 2016,,0.72
 scandium,USGS,Sc,182500.0
 scandium acetate,USGS,C6H12O6Sc,44200.0
 scandium aluminum alloy,USGS,,340.0
@@ -109,16 +114,18 @@ scandium iodide,USGS,I3Sc,165400.0
 scandium oxide,USGS,O3Sc2,3820.0
 selenium,"USGS, ISE",Se,22.517040782454078
 selenium dioxide,ISE,O2Se,12.7
+silica,Liu 2016,,1.11
 silicon,"USGS, ISE",Si,2.465236149161788
 silver,USGS,Ag,608.4850295578532
 soda ash,USGS,CNa2O3,0.15747619387865802
 sodium,Alva 2018 (Sensible),Na,2.0
 sodium bismuth,Alva 2018 (Sensible),,13.0
-sodium chloride,USGS,ClNa,0.11086936934146396
+sodium carbonate,Liu 2016,,0.23
+sodium chloride,"USGS, Liu 2016",ClNa,0.11543468467073198
 sodium molybdate,ISE,MoNa2O4,12.485
 sodium potassium alloy,Alva 2018 (Sensible),,2.0
 sodium tungstate,ISE,Na2O4W,14.9535
-solar salt,Alva 2018 (Sensible),,
+solar salt,"Alva 2018 (Sensible), Liu 2016",,0.49
 stone,USGS,,0.013267418938285879
 strontium,ISE,Sr,6.80275
 sulfur,USGS,H2S,0.0646174890463876
@@ -142,6 +149,7 @@ tungsten trioxide,"USGS, ISE",O3W,8.025479192038658
 vanadium nitrides,ISE,,27.0755
 vanadium pentoxide,ISE,O5V2,17.306960589916155
 vegetable oil,Alva 2018 (Sensible),C57H104O9,0.835
+vermiculite,Liu 2016,,0.33
 water,Li 2017,H2O,0.001
 wolfram,ISE,W,31.5
 yttrium,USGS,Y,35.4
