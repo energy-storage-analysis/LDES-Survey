@@ -2,7 +2,7 @@ material_name,source,pubchem_formula,specific_price
 activated carbon,Liu 2016,,2.75
 alumina,"USGS, Liu 2016",Al2O3,0.926759337243702
 aluminosilicate,Liu 2016,,1.93
-aluminum,USGS,Al,2.3906927711328128
+aluminum,"USGS, Kale 2018",Al,2.7303463855664063
 ammonia,"USGS, Liu 2016",H3N,0.514575078721011
 ammonium heptamolybdate,ISE,H66Mo7N6O24,19.018
 ammonium metavanadate,ISE,H4NO3V,16.913
@@ -30,6 +30,7 @@ calcium,ISE,Ca,4.1998750000000005
 carbon,Li 2017,CH4,30.0
 celestite,USGS,,0.0892872161848754
 cement,USGS,,0.1344819799327753
+cfrp,Kale 2018,,31.38
 chromite,"USGS, ISE",CrFeO4,0.1910102153972519
 chromium,"USGS, ISE",Cr,9.28555687376311
 cobalt,"USGS, ISE",Co,39.23302218402458
@@ -57,6 +58,7 @@ gold,USGS,Au,48238.98015156943
 granite,Alva 2018 (Sensible),C16F5H14N5O5S,
 graphite,"USGS, Li 2017, Liu 2016",CH4,5.250552778257712
 gravel,USGS,C15H21NO,0.02918038502279035
+gre,Kale 2018,,24.815
 gypsum,USGS,CaO4S,0.01984160359663894
 hafnium,USGS,Hf,0.9038952749579983
 hitec,"Alva 2018 (Sensible), Liu 2016",KN3Na2O8,0.93
@@ -69,6 +71,7 @@ iron,USGS,Fe,0.18011766820504496
 iron ore,USGS,Fe2O3,0.09915290241764864
 iron oxide,USGS,Fe2O3,1.03
 kaolin clay,USGS,,0.176369809747902
+kfrp,Kale 2018,,27.1
 kyanite,USGS,Al2H6O5Si,0.39528883609748544
 lead,USGS,Pb,2.2182912821042384
 lime,USGS,CaO,0.15609830474000252
@@ -126,6 +129,7 @@ sodium molybdate,ISE,MoNa2O4,12.485
 sodium potassium alloy,Alva 2018 (Sensible),,2.0
 sodium tungstate,ISE,Na2O4W,14.9535
 solar salt,"Alva 2018 (Sensible), Liu 2016",,0.49
+steel,Kale 2018,,1.7566666666666666
 stone,USGS,,0.013267418938285879
 strontium,ISE,Sr,6.80275
 sulfur,USGS,H2S,0.0646174890463876

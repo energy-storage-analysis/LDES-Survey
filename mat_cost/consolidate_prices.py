@@ -186,7 +186,8 @@ df_sp_energy
 energy_type_lookup = {
     'Alva 2018 (Latent)': 'Latent Thermal',
     'Alva 2018 (Sensible)': 'Sensible Thermal',
-    'Andre 2016': 'Thermochemical'
+    'Andre 2016': 'Thermochemical',
+    'Kale 2018': 'Virial'
 }
 
 energy_type = [energy_type_lookup[s] for s in df_sp_energy['source']]
