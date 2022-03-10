@@ -41,12 +41,16 @@ for source, row in dataset_index.iterrows():
 df = pd.concat(datasets).reset_index(drop=True)
 
 df['material_name'] = df['material_name'].str.lower()
-df['molecular_formula_norm'] = df['molecular_formula'].astype(str).apply(mat2vec_process)
-df['molecular_formula_norm'] = df['molecular_formula_norm'].replace('nan',np.nan) 
-df
+#%%
+energy_type_lookup = {
+    'Alva 2018 (Latent)': 'Latent Thermal',
+    'Alva 2018 (Sensible)': 'Sensible Thermal',
+    'Andre 2016': 'Thermochemical',
+    'Kale 2018': 'Virial'
+}
 
-
-
+energy_type = [energy_type_lookup[s] if s in energy_type_lookup else np.nan for s in df['source']]
+df['energy_type'] = energy_type
 #%%
 
 pubchem_lookup = pd.read_csv(r'data\pubchem_lookup.csv', index_col=0)
@@ -68,69 +72,61 @@ pubchem_forms
 #%%
 
 pubchem_forms.where(pubchem_forms.duplicated(False)).dropna()
+
+#%%
+#TODO: implement index_name upstream, so the name of materials can be set explicity by source. 
+
+#For data where formula is missing, we are going to use pubchem index
+
+df_temp = df.where(df['molecular_formula'].isna()).dropna(subset=['material_name'])
+
+formulas = [pubchem_forms[m] if m in pubchem_forms.index else np.nan for m in df_temp['material_name'] ]
+
+
+df_temp['molecular_formula'] = formulas
+
+df.loc[df_temp.index, 'molecular_formula'] = df_temp['molecular_formula']
+df
 #%%
 
+
+df['molecular_formula_norm'] = df['molecular_formula'].astype(str).apply(mat2vec_process)
+df['molecular_formula_norm'] = df['molecular_formula_norm'].replace('nan',np.nan) 
+df
+
+#%%
+
+# If the formula is missing, then use the material name for the index_name
+
+df['index_name'] = df['molecular_formula_norm'].where(~df['molecular_formula_norm'].isna(), df['material_name'])
+df = df.dropna(subset=['index_name'])
+
+df.to_csv('data/combined_all.csv')
+#%%
 def join_material_dups(df_dup, column):
     source_list = ", ".join(df_dup[column].dropna())
     return source_list
 
 
-s_mat_sources = df.groupby('material_name').apply(join_material_dups, column='source')
-s_mat_sources.name = 'source'
-df_material = s_mat_sources.to_frame()
+s_temp = df.groupby('index_name').apply(join_material_dups, column='source')
+s_temp.name = 'source'
+df_price = s_temp.to_frame()
 
-existing_pubchem_form = [f for f in s_mat_sources.index if f in pubchem_forms.index] #TODO: must update pubchem_forms for new datasets...just need to redo indexing and pubchem
+df_price['material_names']= df.groupby('index_name').apply(join_material_dups, column='material_name')
+df_price['energy_types']= df.groupby('index_name').apply(join_material_dups, column='energy_type')
+df_price['num_source'] = df_price['source'].str.split(',').apply(len)
+df_price['specific_price_refs'] = df.groupby('index_name')['specific_price'].mean()
 
-df_material['pubchem_formula'] = pubchem_forms.loc[existing_pubchem_form]
-# df_material['specific_energy'] = df.groupby('material_name')['specific_energy'].mean() #specific energy for different forms of energy should not be combined, unlike price. 
-df_material['specific_price'] = df.groupby('material_name')['specific_price'].mean()
+# df_price['specific_energy'] = df.groupby('index_name')['specific_energy'].mean()
 
-df_material.to_csv('data/prices_material.csv')
-
-# s_mat_sources.to_csv('material_sources.csv')
+df_price
 
 #%%
 
 
-df_usgs_ise = df.where(df['source'].isin(['USGS', 'ISE'])).dropna(subset=['source','material_name'])
+df_price
 
 
-df_temp = df_usgs_ise.groupby('material_name')['specific_price'].mean().to_frame()
-df_temp['sources'] = df.groupby('material_name').apply(join_material_dups, column='source') 
-
-df_temp['pubchem_formula'] = pubchem_forms.loc[df_temp.index].values
-df_temp = df_temp.drop_duplicates(subset=['pubchem_formula'])
-df_temp = df_temp.reset_index().set_index('pubchem_formula')
-df_temp
-
-
-
-
-# df_matonly.set_index('material_name')
-# df_matonly
-
-# df_matonly.dropna(subset=['pubchem_formula'])
-#%%
-
-# form_process = [mat2vec_process(f) for f in df_molecular.index]
-# df_molecular['formula_processed'] = form_process
-
-s_molecular_sources = df.groupby('molecular_formula_norm').apply(join_material_dups, column='source')
-s_molecular_sources.name = 'source'
-df_molecular = s_molecular_sources.to_frame()
-
-df_molecular['material_names_refs']= df.groupby('molecular_formula_norm').apply(join_material_dups, column='material_name')
-
-# df_molecular['specific_energy'] = df.groupby('molecular_formula_norm')['specific_energy'].mean()
-df_molecular['specific_price_refs'] = df.groupby('molecular_formula_norm')['specific_price'].mean()
-# df_molecular = df_molecular.drop('nan')
-#%%
-
-
-present_chemicals = [c for c in df_molecular.index if c in df_temp.index]
-df_molecular['specific_price_UI'] = df_temp.loc[present_chemicals]['specific_price']
-df_molecular['material_name_UI'] = df_temp.loc[present_chemicals]['material_name']
-df_molecular
 #%%
 import chemparse
 
@@ -159,40 +155,21 @@ def calculate_formula_price(chemparse_dict):
 
     return price
 
-f_dicts = [chemparse.parse_formula(f) for f in df_molecular.index]
+f_dicts = [chemparse.parse_formula(f) for f in df_price.index]
 e_price = [calculate_formula_price(d) for d in f_dicts]
-df_molecular['specific_price_element'] = e_price
-df_molecular
+df_price['specific_price_element'] = e_price
+df_price
 
 #%%
-df_molecular.to_csv('data/prices_molecular.csv')
 
-# s_molecular_sources.to_csv('molecular_sources.csv')
+#TODO: reexamine. Happening with Alva rock material (quartzite) that also doesn't happen to be on pubchem
+# Need to figure out how to tie to USGS prices anyway
+df_price = df_price.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
 
 #%%
-# for idx, row in df_material.iterrows():
-#     f = row['pubchem_top_formula']
-#     if f != 'nan':
-#         if f in df['molecular_formula_norm'].dropna().values:
-#             print("{} : {}".format(idx, f))
-# %%
+
+df_price.to_csv('data/df_prices.csv')
+
+
 #%%
 
-df_sp_energy = df.dropna(subset=['specific_energy', 'molecular_formula'])
-df_sp_energy = df_sp_energy[['source','specific_energy', 'molecular_formula_norm']]
-df_sp_energy
-
-
-energy_type_lookup = {
-    'Alva 2018 (Latent)': 'Latent Thermal',
-    'Alva 2018 (Sensible)': 'Sensible Thermal',
-    'Andre 2016': 'Thermochemical',
-    'Kale 2018': 'Virial'
-}
-
-energy_type = [energy_type_lookup[s] for s in df_sp_energy['source']]
-df_sp_energy['energy_type'] = energy_type
-
-df_sp_energy.to_csv('data/sp_energy_molecular.csv')
-# df_sp_energy = df_sp_energy[['molecular_formula_norm','specific_energy','source']]
-# %%
