@@ -81,15 +81,31 @@ plt.tight_layout()
 plt.savefig('output/fig_C_kwh_avgprice.png')
 # %%
 
+val_counts = df_prices['num_source'].value_counts()
+present_num_sources = val_counts.index
 
-df_prices_refs = df_prices['specific_price_refs'].dropna().rename('specific_price').to_frame()
-df_prices_refs['price_type']= 'reference'
+val_counts
+
+#%%
+
+dfs_price_refs = []
+
+for n in present_num_sources:
+    df_prices_refs = df_prices
+    df_sel = df_prices.where(df_prices['num_source'] == n)
+    df_sel = df_sel['specific_price_refs'].dropna().rename('specific_price').to_frame()
+    df_sel['price_type'] = '{} references'.format(n)
+    dfs_price_refs.append(df_sel)
+#%%
+
+# df_prices_refs = df_prices['specific_price_refs'].dropna().rename('specific_price').to_frame()
+# df_prices_refs['price_type']= 'reference'
 df_prices_element = df_prices['specific_price_element'].dropna().rename('specific_price').to_frame()
 df_prices_element['price_type']= 'elemental'
 
 
 df_prices_2 = pd.concat([
-    df_prices_refs,
+    *dfs_price_refs,
     df_prices_element
 ])
 
