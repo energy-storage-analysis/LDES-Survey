@@ -1,0 +1,17 @@
+,0,1,2
+0,,Mg solubility,polarizing powera
+1,electrolyte (50−50 mol %),(mol %),(Å−2)
+2,"MgCl2
+−MgCl2",0.87,3.28
+3,"MgCl2
+−CaCl2",0.42,1.76
+4,"−LiCl
+MgCl2",0.40,1.64
+5,"−SrCl
+MgCl2",0.37,1.34
+6,"MgCl2
+−BaCl2",0.34,0.98
+7,"−NaCl
+MgCl2",0.17,1.04
+8,"−KCl
+MgCl2",0.15,0.56

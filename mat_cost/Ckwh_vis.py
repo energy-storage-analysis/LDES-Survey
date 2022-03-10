@@ -71,6 +71,18 @@ df_li_ec_orig['energy_type'] = 'EC Couples (Li 2017 Orig)'
 df_vis = pd.concat([df_vis, df_li_ec_calc, df_li_ec_orig])
 
 #%%
+
+df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\kim_2013\output\couples.csv', index_col=0)
+
+df_ec_lmb = df_ec_lmb.dropna(subset=['C_kwh'])
+df_ec_lmb.index.name = 'index_name'
+
+df_ec_lmb = df_ec_lmb[['C_kwh']]
+
+df_ec_lmb['energy_type'] = "EC Couples (LMB)"
+df_vis = pd.concat([df_vis, df_ec_lmb])
+
+#%%
 cat_label = 'energy_type'
 
 from matplotlib import ticker as mticker

@@ -1,0 +1,16 @@
+,0,1,2,3,4,5
+0,,unit,Na−Sn22,K−Hg22,Na−Hg24−26,Na−Pb37
+1,electrolyte chemistry,,NaCl−NaI,KOH−KBr−KI,Na halides−ceramic ﬁller,NaF−NaCl−NaI
+2,operating temperature,°C,625−650,325,490,575
+3,regeneration temperature,°C,1000,,670−690,875
+4,electrode area,cm2,,1a,1a,45
+5,interelectrode distance,cm,,,,1.9
+6,charge−discharge current,A,0.1,,0.05−0.10,5
+7,theoretical capacity,Ah,,,,28
+8,discharge capacity,Ah,0.025,,,∼16
+9,power output,W,,0.05−0.10,35,
+10,open-circuit voltage,V,0.33−0.43,0.70−0.84,0.30−0.80,0.3−0.5
+11,average discharge voltage,V,0.3,,,0.17
+12,estimated eﬃciency,%,16,3b,7,<15
+13,test duration,h,0.3,430,1200,45
+14,organizationc,,GM,GM,AI,ANL
