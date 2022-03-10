@@ -101,7 +101,11 @@ df
 df['index_name'] = df['molecular_formula_norm'].where(~df['molecular_formula_norm'].isna(), df['material_name'])
 df = df.dropna(subset=['index_name'])
 
-df.to_csv('data/combined_all.csv')
+df.to_csv('data/df_singlemat.csv')
+
+
+## Collect prices 
+
 #%%
 def join_material_dups(df_dup, column):
     source_list = ", ".join(df_dup[column].dropna())
@@ -166,10 +170,36 @@ df_price
 # Need to figure out how to tie to USGS prices anyway
 df_price = df_price.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
 
+
+#%%
+
+df_price['specific_price_avg'] = sum([
+    df_price['specific_price_refs'].fillna(0),
+    df_price['specific_price_element'].fillna(0)
+])/2
+
+
 #%%
 
 df_price.to_csv('data/df_prices.csv')
 
 
 #%%
+
+
+df_ec_li = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\li_2017\output\couples.csv',index_col=0)
+df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\kim_2013\output\couples.csv', index_col=0)
+df_ec_lmb['type'] = 'Liquid Metal'
+
+col_select = ['type','A','B','mu_A', 'mu_B', 'deltaV', 'specific_energy']
+
+df_ec = pd.concat([
+    df_ec_li[col_select],
+    df_ec_lmb[col_select],
+])
+
+df_ec.to_csv('data/df_couples.csv')
+#%%
+
+
 
