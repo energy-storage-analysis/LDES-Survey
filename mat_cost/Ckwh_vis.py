@@ -54,6 +54,21 @@ df_vis['C_kwh'] = df_vis['specific_price_avg']/df_vis['specific_energy']
 
 df_vis
 
+#%%
+
+df_li_ec = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\li_2017\output\process_couples.csv')
+
+df_li_ec = df_li_ec[['label','C_kwh','C_kwh_orig','specific_price','specific_energy']]
+
+df_li_ec = df_li_ec.rename({'label':'index_name'}, axis=1)
+
+df_li_ec_calc = df_li_ec[['index_name', 'C_kwh']] 
+df_li_ec_calc['energy_type'] = 'EC Couples (Li 2017 Calc)'
+df_li_ec_orig = df_li_ec[['index_name', 'C_kwh_orig']].rename({'C_kwh_orig': 'C_kwh'},axis=1)
+df_li_ec_orig['energy_type'] = 'EC Couples (Li 2017 Orig)'
+
+
+df_vis = pd.concat([df_vis, df_li_ec_calc, df_li_ec_orig])
 
 #%%
 cat_label = 'energy_type'
