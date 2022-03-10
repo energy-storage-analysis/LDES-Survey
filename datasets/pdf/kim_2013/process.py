@@ -47,36 +47,23 @@ s_deltaV = pd.Series(dtype=str, name='deltaV')
 for metal_B, row in df_table3.iterrows():
     # row = row.dropna()
     for metal_A, deltaV in row.iteritems():
-        s_deltaV.loc['{}-{}'.format(metal_A,metal_B)] = deltaV
+        s_deltaV.loc['{}/{}'.format(metal_A,metal_B)] = deltaV
 
 df_couples = s_deltaV.to_frame()
 df_couples['index'] = df_couples.index
-df_couples[['metal_A','metal_B']] = df_couples['index'].str.split('-',expand=True)
+df_couples[['A','B']] = df_couples['index'].str.split('/',expand=True)
 df_couples = df_couples.drop('index', axis=1)
+df_couples.index.name = 'couple_name'
 df_couples
 # %%
-df_couples['mm_A'] = df_table4.loc[df_couples['metal_A']]['molar_mass'].values
-df_couples['mm_B'] = df_table4.loc[df_couples['metal_B']]['molar_mass'].values
+df_couples['mu_A'] = df_table4.loc[df_couples['A']]['molar_mass'].values
+df_couples['mu_B'] = df_table4.loc[df_couples['B']]['molar_mass'].values
 
-
-df_couples['SP_A'] = df_table4.loc[df_couples['metal_A']]['specific_price'].values
-df_couples['SP_B'] = df_table4.loc[df_couples['metal_B']]['specific_price'].values
-
-df_couples
-
-#%%
 
 F = 96485 # C/mol
+df_couples['specific_energy'] = (1/3600)*F*df_couples['deltaV']/(df_couples['mu_A'] + df_couples['mu_B'])
 
-#TODO: chech this equation
-df_couples['specific_price'] = (df_couples['SP_A']*df_couples['mm_A'] + df_couples['SP_B']*df_couples['mm_B'])/(df_couples['mm_A']+df_couples['mm_B'])
-
-
-
-df_couples['specific_energy'] = (1/3600)*F*df_couples['deltaV']/(df_couples['mm_A'] + df_couples['mm_B'])
-df_couples['C_kwh'] = df_couples['specific_price']/df_couples['specific_energy']
 df_couples
-
 #%%
 
 

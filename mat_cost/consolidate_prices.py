@@ -16,7 +16,7 @@ col_select = ['material_name', 'molecular_formula', 'specific_price','specific_e
 datasets = []
 
 for source, row in dataset_index.iterrows():
-    fp = os.path.join(dataset_folder, row['path'])
+    fp = os.path.join(dataset_folder, row['price_data_path'])
     df = pd.read_csv(fp)
     col_select_present = [col for col in col_select if col in df.columns]
     df = df[col_select_present]

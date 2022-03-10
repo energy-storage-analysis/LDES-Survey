@@ -1,9 +1,9 @@
-source,path
+source,price_data_path
 USGS,usgs/output/processed.csv
 ISE,ISE/output/processed.csv
 Alva 2018 (Sensible),pdf/alva_2018/output/sensible.csv
 Alva 2018 (Latent),pdf/alva_2018/output/latent.csv
-Li 2017,pdf/li_2017/output/process.csv
+Li 2017,pdf/li_2017/output/prices.csv
 Andre 2016,pdf/andre_2016/output/process.csv
 Liu 2016,pdf/liu_2016/output/processed.csv
 Kale 2018,pdf/kale_2018/output/processed.csv
