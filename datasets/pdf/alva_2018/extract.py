@@ -30,7 +30,7 @@ for i in range(len(extract_settings)):
 
 #%%
 
-dfs = es_utils.extract_dfs(pdf_path, extract_settings)
+dfs = es_utils.pdf.extract_dfs(pdf_path, extract_settings)
 
 dfs[0]
 
@@ -166,7 +166,7 @@ df_table7 = df_table7.rename({
 
 df_table7 = df_table7.set_index('original_name')
 
-from es_utils import average_range
+from es_utils.pdf import average_range
 df_table7['Cp'] = df_table7['Cp'].apply(average_range)
 
 tables['table_7'] = df_table7 

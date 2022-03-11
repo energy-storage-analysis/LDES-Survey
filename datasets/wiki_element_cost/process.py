@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 import sys
 
-from es_utils import average_range
+from es_utils.pdf import average_range
 
 df = pd.read_csv('table_element_cost.csv', index_col=0)
 

@@ -30,7 +30,7 @@ for i in range(len(extract_settings)):
 
 #%%
 
-dfs = es_utils.extract_dfs(pdf_path, extract_settings)
+dfs = es_utils.pdf.extract_dfs(pdf_path, extract_settings)
 
 dfs[0]
 

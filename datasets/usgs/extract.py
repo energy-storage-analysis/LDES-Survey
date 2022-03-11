@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 import sys
 
 
-from es_utils import average_range
+from es_utils.pdf import average_range
 
 salient_dir = 'data/salient'
 

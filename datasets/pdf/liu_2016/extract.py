@@ -28,7 +28,7 @@ for i in range(len(extract_settings)):
     extract_settings[i]['camelot_kwargs'].update({'flavor': 'stream'})
 #%%
 
-dfs = es_utils.extract_dfs(pdf_path, extract_settings)
+dfs = es_utils.pdf.extract_dfs(pdf_path, extract_settings)
 #%%
 tables = {}
 

@@ -23,7 +23,7 @@ df_table4
 
 import sys
 
-from es_utils import average_range
+from es_utils.pdf import average_range
 
 import numpy as np
 

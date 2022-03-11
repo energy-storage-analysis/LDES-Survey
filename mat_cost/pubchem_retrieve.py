@@ -85,7 +85,7 @@ df_chem
 
 
 
-from es_utils import get_top_formula
+from es_utils.chem import get_top_formula
 
 import ast 
 # df_chem['pubchem_formulas'] = df_chem['pubchem_formulas'].apply(ast.literal_eval)
