@@ -3,11 +3,7 @@ import os
 from os.path import join as pjoin
 import numpy as np
 import pandas as pd
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
-
-def mat2vec_process(f):
-    return mtp.process(f)[0][0]
+from es_utils.chem import mat2vec_process
 
 dataset_folder = '../datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)

@@ -116,11 +116,8 @@ df_out
 #I thnk this is not necessary anymore If I am only using pubchem? which returns normalized formulas
 
 
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
+from es_utils.chem import mat2vec_process
 
-def mat2vec_process(f):
-    return mtp.process(f)[0][0]
 
 #TODO: lowercase original pubchem lookup
 df_out = df_out.reset_index()

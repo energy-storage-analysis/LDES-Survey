@@ -10,3 +10,10 @@ def get_top_formula(formula_dict):
         return t
     else:
         return None
+
+
+from mat2vec.processing import MaterialsTextProcessor
+mtp = MaterialsTextProcessor()
+
+def mat2vec_process(f):
+    return mtp.process(f)[0][0]
