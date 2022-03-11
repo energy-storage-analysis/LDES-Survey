@@ -100,7 +100,7 @@ for n in present_num_sources:
     df_price_refs = df_prices
     df_sel = df_prices.where(df_prices['num_source'] == n)
     df_sel = df_sel['specific_price_refs'].dropna().rename('specific_price').to_frame()
-    df_sel['price_type'] = '{} references'.format(n)
+    df_sel['price_type'] = '{} ref.'.format(n)
     dfs_price_refs.append(df_sel)
 
 df_prices_element = df_prices['specific_price_element'].dropna().rename('specific_price').to_frame()
@@ -157,4 +157,40 @@ plt.tight_layout()
 
 plt.savefig('output/fig_C_kwh.png')
 
+# %%
+
+df_vis_2 = df_vis.reset_index()
+
+df_vis_2['specific_price'] = df_vis_2['specific_price'].map('{:,.2f}'.format)
+df_vis_2['specific_energy'] = df_vis_2['specific_energy'].map('{:,.2f}'.format)
+
+# %%
+
+
+
+import iqplot
+from bokeh.io import output_notebook, show
+from bokeh.models import ColumnDataSource, HoverTool, Range1d
+from bokeh.io import output_file
+
+
+tips = [('index','@index'), ('price_type','@price_type'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy')]
+
+figure = iqplot.strip(
+    data=df_vis_2, cats='energy_type', q='C_kwh', 
+    q_axis='y',y_axis_type='log' ,
+    jitter=True,
+    tooltips= tips,
+    plot_width = 1000,plot_height=700,
+    marker_kwargs={'size':10}
+    )
+
+figure.xaxis.major_label_orientation = np.pi/4
+figure.yaxis.axis_label = "Energy Capital Cost ($/kWh)"
+# show(figure)
+figure.yaxis.axis_label_text_font_size = "16pt"
+figure.xaxis.major_label_text_font_size = "16pt"
+
+output_file('output/mat_cost_compare.html')
+show(figure)
 # %%
