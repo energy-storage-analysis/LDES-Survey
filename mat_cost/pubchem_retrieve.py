@@ -4,29 +4,24 @@ import pandas as pd
 from os.path import join as pjoin
 import numpy as np
 
-dataset_folder = '../datasets'
+
+df_singlemat = pd.read_csv('data/df_singlemat.csv', index_col=0)
+
+#%%k
 
 
-datasets = [
-    pjoin(dataset_folder, 'ISE/output/processed.csv'),
-    pjoin(dataset_folder, 'usgs/output/processed.csv'),
-    pjoin(dataset_folder, 'pdf/li_2017/output/process.csv'),
-    pjoin(dataset_folder, 'pdf/alva_2018/output/sensible.csv'),
-]
 
-chemical_list = []
-
-for dataset in datasets:
-    chemical_list.extend(pd.read_csv(dataset)['material_name'].dropna().values)
-
-chemical_list = list(set(chemical_list))
+chemical_list = list(set(df_singlemat['material_name'].dropna()))
+chemical_list
 # %%
 
+df_pubchem_existing = pd.read_csv('data/pubchem_lookup.csv', index_col=0)
+df_pubchem_existing.index = df_pubchem_existing.index.str.lower()
+df_pubchem_existing
+
 # %%
-
-
-chems = chemical_list#[0:5]
-chems
+missing_chemicals = [c for c in chemical_list if not c in df_pubchem_existing.index]
+missing_chemicals 
 #%%
 
 
@@ -49,7 +44,7 @@ pubchem_output = []
 
 num_tries =10
 
-for chem in tqdm(chems):
+for chem in tqdm(missing_chemicals):
     tries = 0
     while True:
         if tries > num_tries:
@@ -77,41 +72,11 @@ for chem in tqdm(chems):
 
 pubchem_output
 
-# %%
-
-# import os
-
-# api_key = os.getenv('CHEMSPIDER_API')
-# cs = ChemSpider(api_key)
-
-
-# #%%
-# print("getting chemspider data")
-
-# chemspi_output = []
-
-# for chem in tqdm(chems):
-#     results = cs.search(chem)
-
-#     formulas = []
-
-#     for r in results:
-#         formulas.append(r.molecular_formula)
-        
-
-#     formula_counts = dict(Counter(formulas))
-
-#     chemspi_output.append(formula_counts)
-
-# chemspi_output
-
-
 #%%
 
 df_chem = pd.DataFrame(
     {'pubchem_formulas': pubchem_output},
-    # 'chemspi_output': chemspi_output},
-    index = chems,
+    index = missing_chemicals,
 )
 
 df_chem
@@ -134,8 +99,50 @@ df_chem['pubchem_top_formula'] = df_chem['pubchem_formulas'].apply(get_top_formu
 # df_chem['chemspi_top_formula']  = df_chem['chemspi_top_formula'].str.replace('}','', regex=True)
 
 df_chem
+#%%
+df_chem['pubchem_top_formula'] = [f if f != None else np.nan for f in df_chem['pubchem_top_formula']]
+df_chem
+# df_chem['pubchem_top_formula'].values
+#%%
+
+df_out = pd.concat([
+    df_pubchem_existing,
+    df_chem
+])
+df_out
+
+#%%
+
+#I thnk this is not necessary anymore If I am only using pubchem? which returns normalized formulas
+
+
+from mat2vec.processing import MaterialsTextProcessor
+mtp = MaterialsTextProcessor()
+
+def mat2vec_process(f):
+    return mtp.process(f)[0][0]
+
+#TODO: lowercase original pubchem lookup
+df_out = df_out.reset_index()
+df_out['index'] = df_out['index'].str.lower()
+df_out = df_out.drop_duplicates(subset=['index'])
+df_out = df_out.set_index('index')
+
+pubchem_forms = df_out['pubchem_top_formula'].astype(str).apply(mat2vec_process)
+pubchem_forms = pubchem_forms.replace('nan', np.nan)
+pubchem_forms
+
+#%%
+
+pubchem_forms.where(pubchem_forms.duplicated(False)).dropna().sort_values()
 
 
 #%%
 
-df_chem.to_csv('data/pubchem_lookup.csv')
+df_out['pubchem_top_formula'] = pubchem_forms
+df_out.index.name = 'material_name'
+
+#%%
+
+df_out.to_csv('data/pubchem_lookup.csv')
+# %%

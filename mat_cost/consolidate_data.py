@@ -54,24 +54,8 @@ df['energy_type'] = energy_type
 #%%
 
 pubchem_lookup = pd.read_csv(r'data\pubchem_lookup.csv', index_col=0)
+pubchem_forms = pubchem_lookup['pubchem_top_formula']
 
-#TODO: lowercase original pubchem lookup
-pubchem_lookup = pubchem_lookup.reset_index()
-pubchem_lookup['index'] = pubchem_lookup['index'].str.lower()
-pubchem_lookup = pubchem_lookup.drop_duplicates(subset=['index'])
-pubchem_lookup = pubchem_lookup.set_index('index')
-
-pubchem_lookup
-
-#%%
-
-pubchem_forms = pubchem_lookup['pubchem_top_formula'].astype(str).apply(mat2vec_process)
-pubchem_forms = pubchem_forms.replace('nan', np.nan)
-pubchem_forms
-
-#%%
-
-pubchem_forms.where(pubchem_forms.duplicated(False)).dropna()
 
 #%%
 #TODO: implement index_name upstream, so the name of materials can be set explicity by source. 
@@ -82,13 +66,10 @@ df_temp = df.where(df['molecular_formula'].isna()).dropna(subset=['material_name
 
 formulas = [pubchem_forms[m] if m in pubchem_forms.index else np.nan for m in df_temp['material_name'] ]
 
-
-df_temp['molecular_formula'] = formulas
-
-df.loc[df_temp.index, 'molecular_formula'] = df_temp['molecular_formula']
-df
+df.loc[df_temp.index, 'molecular_formula'] = formulas
 #%%
 
+# Mat2Vec
 
 df['molecular_formula_norm'] = df['molecular_formula'].astype(str).apply(mat2vec_process)
 df['molecular_formula_norm'] = df['molecular_formula_norm'].replace('nan',np.nan) 
