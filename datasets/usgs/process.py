@@ -15,7 +15,18 @@ ureg.load_definitions('unit_defs.txt')
 df = pd.read_csv('output/extracted.csv', index_col=0)
 df = df.dropna(subset=['price'])
 df
+#%%
 
+cols_not_price = [col for col in df.columns if col != 'price']
+
+df = pd.concat([
+df[cols_not_price].groupby('original_name').first().drop('year',axis=1),
+df[['original_name','price']].groupby('original_name').mean()
+], axis=1)
+df
+
+
+#%%
 df = df.where(df['price_units'] != 'Index').dropna(subset=['price_units']) #TODO: how to deal with consumer price index
 
 df['price_units'] = df['price_units'].replace({
@@ -51,14 +62,15 @@ df['specific_price'] = specific_price
 
 chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
 
-df['material_name'] = chem_lookup.loc[df['original_name'].values]['material_name'].values
-df['molecular_formula'] = chem_lookup.loc[df['original_name'].values]['molecular_formula'].values
+df['material_name'] = chem_lookup.loc[df.index.values]['material_name'].values
+df['molecular_formula'] = chem_lookup.loc[df.index.values]['molecular_formula'].values
 
 # df = df.drop('original_name', axis=1)
 #%%
 
-df = df[['material_name','molecular_formula','commodity', 'extra_info', 'price', 'price_units', 'year', 'price_desc', 'specific_price']]
+df = df[['material_name','molecular_formula','commodity', 'extra_info', 'price', 'price_units',  'price_desc', 'specific_price']]
 
+#%%
 
 df.to_csv('output/processed.csv')
 # %%
