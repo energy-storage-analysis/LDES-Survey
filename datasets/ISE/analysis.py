@@ -5,8 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 
-sys.path.append('../pdf')
-from pdf_utils import average_range
+
+from es_utils import average_range
 
 
 # %%

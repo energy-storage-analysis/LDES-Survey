@@ -9,16 +9,7 @@ import os
 
 import sys
 
-sys.path.append(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\mat2vec')
-from mat2vec.processing import MaterialsTextProcessor
 
-
-mat_processor = MaterialsTextProcessor()
-def normalize_formula(s):
-    if s != None:
-        return mat_processor.process(s)[0][0]
-    else: 
-        return None
 
 
 usgs_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\pdf_data\usgs\output'

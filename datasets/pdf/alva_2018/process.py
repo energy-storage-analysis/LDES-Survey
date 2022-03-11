@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 import seaborn as sns
-sys.path.append('..')
+
 
 # Alva Thermal
 df_latent = pd.read_csv('tables/table_8.csv', index_col=0)

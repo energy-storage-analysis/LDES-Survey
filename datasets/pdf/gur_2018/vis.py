@@ -4,12 +4,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 import sys
-sys.path.append('..')
-import pdf_utils
+
+import es_utils
 
 df = pd.read_csv('output/table_10.csv')
 
-df = pdf_utils.concat_row_to_columns(df, 3)
+df = es_utils.concat_row_to_columns(df, 3)
 df = df.drop('0 1 2', axis=1)
 
 df = df.rename(

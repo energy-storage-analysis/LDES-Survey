@@ -3,8 +3,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
-sys.path.append('..')
-import pdf_utils
+
+import es_utils
 # %%
 
 df = pd.read_csv('wiki_specific_strength.csv')
@@ -23,7 +23,7 @@ df['specific_strength'] = df['specific_strength'].str.replace('–N/A','')
 df['breaking_length'] = df['breaking_length'].str.replace('–N/A','')
 df = df.drop(41)
 
-from pdf_utils import average_range
+from es_utils import average_range
 
 
 # for column in df.columns:

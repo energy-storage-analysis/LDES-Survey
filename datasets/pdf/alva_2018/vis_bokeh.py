@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
-sys.path.append('..')
+
 
 df_latent = pd.read_csv('output/table_8.csv', index_col=0)
 df_4 = pd.read_csv('output/table_4.csv', index_col=0)

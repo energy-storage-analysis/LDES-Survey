@@ -5,8 +5,8 @@ import pandas as pd
 import json
 import sys
 
-sys.path.append('..')
-import pdf_utils
+
+import es_utils
 
 # pdf_folder = r'/media/lee/Shared Storage/table_extract_text'
 
@@ -32,7 +32,7 @@ for i in range(len(extract_settings)):
 
 table_settings = [{'template' : template} for template in templates]
 
-dfs = pdf_utils.extract_dfs(pdf_path, extract_settings)
+dfs = es_utils.extract_dfs(pdf_path, extract_settings)
 
 dfs[0]
 

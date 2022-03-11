@@ -6,8 +6,8 @@ import camelot
 import json
 import sys
 
-sys.path.append('..')
-import pdf_utils
+
+import es_utils
 
 # pdf_folder = r'/media/lee/Shared Storage/table_extract_text'
 pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
@@ -28,7 +28,7 @@ for i in range(len(extract_settings)):
     extract_settings[i]['camelot_kwargs'].update({'flavor': 'stream'})
 #%%
 
-dfs = pdf_utils.extract_dfs(pdf_path, extract_settings)
+dfs = es_utils.extract_dfs(pdf_path, extract_settings)
 
 
 #%%

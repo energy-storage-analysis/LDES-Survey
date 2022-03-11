@@ -22,8 +22,8 @@ df_table4
 #%%
 
 import sys
-sys.path.append('..')
-from pdf_utils import average_range
+
+from es_utils import average_range
 
 import numpy as np
 

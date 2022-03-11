@@ -5,9 +5,9 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 import sys
-sys.path.append('../pdf')
 
-from pdf_utils import average_range
+
+from es_utils import average_range
 
 salient_dir = 'data/salient'
 
