@@ -130,10 +130,12 @@ df_price.to_csv('data/df_prices.csv')
 
 
 df_ec_li = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\li_2017\output\couples.csv',index_col=0)
+df_ec_li['source'] = 'Li 2017'
 df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\kim_2013\output\couples.csv', index_col=0)
 df_ec_lmb['type'] = 'Liquid Metal'
+df_ec_lmb['source'] = 'Kim 2013'
 
-col_select = ['type','A','B','mu_A', 'mu_B', 'deltaV', 'specific_energy']
+col_select = ['type','A','B','mu_A', 'mu_B', 'deltaV', 'specific_energy', 'source']
 
 df_ec = pd.concat([
     df_ec_li[col_select],
