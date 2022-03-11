@@ -66,15 +66,15 @@ df_table3 = df_table3.drop(' ', axis=1)
 
 df_table3 = df_table3.rename(
     {
-    ' Chemical': 'full_name', 
+    ' Chemical': 'original_name', 
     ' Price \n(US$/kg)': 'specific_price', 
     ' Source': 'ref'
     },
 axis=1)
 
 
-df_table3['full_name'] = df_table3['full_name'].replace('',np.nan)
-df_table3 = df_table3.dropna(subset=['full_name'])
+df_table3['original_name'] = df_table3['original_name'].replace('',np.nan)
+df_table3 = df_table3.dropna(subset=['original_name'])
 
 df_table3 = df_table3.reset_index(drop=True)
 

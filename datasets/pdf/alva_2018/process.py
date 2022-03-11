@@ -1,5 +1,6 @@
 #%%
 
+from operator import index
 import pandas as pd
 
 import pandas as pd
@@ -7,7 +8,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 import seaborn as sns
+import es_utils
 
+chem_lookup = pd.read_csv('chem_lookup.csv')
+chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
 
 # Alva Thermal
 df_latent = pd.read_csv('tables/table_8.csv', index_col=0)
@@ -38,7 +42,17 @@ df_latent['original_name'] = df_latent['original_name'].replace('Copper', 'Cu')
 df_latent['original_name'] = df_latent['original_name'].replace('Zinc', 'Zn')
 df_latent['original_name'] = df_latent['original_name'].replace('Aluminum', 'Al')
 
-df_latent = df_latent.rename({'original_name': 'molecular_formula'}, axis=1)
+#If no lookup table is needed
+from es_utils.chem import mat2vec_process
+df_latent['molecular_formula'] = df_latent['original_name'].apply(mat2vec_process)
+
+index_use = 'molecular_formula'
+df_latent['index_use'] = index_use
+df_latent['index'] = df_latent[index_use]
+df_latent = df_latent.set_index('index')
+#%%
+
+
 
 #%%
 df_latent.to_csv('output/latent.csv')
@@ -56,14 +70,11 @@ col_sel = ['original_name','Cp', 'kth', 'specific_price', 'class']
 
 df_sens = pd.concat([df[col_sel] for df in [df_4, df_5, df_6, df_7]]).dropna(subset=['original_name'])
 
+#%%
 
-chem_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
 
-present_chemicals = df_sens['original_name'].values
-
-df_sens['material_name'] = chem_lookup.loc[present_chemicals]['material_name'].values
-df_sens['molecular_formula'] = chem_lookup.loc[present_chemicals]['molecular_formula'].values
-
+df_sens = pd.merge(df_sens, chem_lookup, on='original_name').set_index('index')
+#%%
 #TODO: Units
 df_sens['Cp'] = df_sens['Cp']/3600
 
@@ -73,3 +84,6 @@ df_sens['specific_energy'] = df_sens['Cp']*500
 df_sens
 # %%
 df_sens.to_csv('output/sensible.csv')
+# %%
+
+# %%

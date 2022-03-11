@@ -16,9 +16,18 @@ from pyvalem.formula import Formula
 df_table4['molar_mass'] = [Formula(f).rmm for f in df_table4.index]
 df_table4['specific_price'] = 1000*(df_table4['molar_price']/df_table4['molar_mass'])
 
-df_table4.reset_index().rename({'metal':'molecular_formula'},axis=1).to_csv('output/prices.csv', index=False)
+df_table4 = df_table4.reset_index().rename({'metal':'molecular_formula'},axis=1)
+
+index_use = 'molecular_formula'
+df_table4['index_use'] = index_use
+df_table4['index'] = df_table4[index_use]
+df_table4 = df_table4.set_index('index')
 
 df_table4
+
+df_table4.to_csv('output/prices.csv')
+
+
 #%%
 
 import sys

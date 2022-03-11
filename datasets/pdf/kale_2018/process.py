@@ -46,15 +46,24 @@ df = pd.concat([
     df_a2[col_select],
 ])
 
-df = df.set_index('original_name', drop=True)
+# df = df.set_index('original_name', drop=True)
 
 df = df.rename({'specific_strength': 'specific_energy'}, axis=1) #Assuming Q=1
 df['specific_energy'] = df['specific_energy']/3600  
 
+#%%
 mat_lookup = pd.read_csv('mat_lookup.csv', index_col=0)
 
-df = pd.merge(df, mat_lookup, on='original_name')
+from es_utils.chem import process_chem_lookup
+mat_lookup = process_chem_lookup(mat_lookup)
 
-df = df.groupby('material_name')[['specific_energy', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
+df = pd.merge(df, mat_lookup, on='original_name').set_index('index')
+
+# df = pd.merge(df, mat_lookup, on='original_name')
+
+df = df.groupby('index')[['specific_energy', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
+
+
+
 
 df.to_csv('output/processed.csv')

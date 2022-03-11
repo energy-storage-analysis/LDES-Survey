@@ -60,11 +60,12 @@ df['specific_price'] = specific_price
 #%%
 
 
-chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
 
-df['material_name'] = chem_lookup.loc[df.index.values]['material_name'].values
-df['molecular_formula'] = chem_lookup.loc[df.index.values]['molecular_formula'].values
+from es_utils.chem import process_chem_lookup
 
+chem_lookup = pd.read_csv('chem_lookup.csv')
+chem_lookup = process_chem_lookup(chem_lookup)
+df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 # df = df.drop('original_name', axis=1)
 #%%
 

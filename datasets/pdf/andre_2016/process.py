@@ -18,4 +18,14 @@ df = df.rename({
     'reactant':'molecular_formula'
 }, axis=1)
 
+#If no lookup table is needed
+from es_utils.chem import mat2vec_process
+df['molecular_formula'] = df['molecular_formula'].apply(mat2vec_process)
+
+index_use = 'molecular_formula'
+df['index_use'] = index_use
+df['index'] = df[index_use]
+df = df.set_index('index')
+
+
 df.to_csv('output/process.csv')

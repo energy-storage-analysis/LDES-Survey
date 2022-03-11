@@ -23,32 +23,24 @@ df['material_type'] = df['material_type'].ffill()
 
 df
 #%%
-chem_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
+from es_utils.chem import process_chem_lookup
 
-chem_lookup['pubchem_cid'] = chem_lookup['pubchem_cid'].astype(pd.Int64Dtype())
-# present_chemicals = df['original_name'].values
-
-
-df_out = pd.merge(df,chem_lookup,on='original_name')
+chem_lookup = pd.read_csv('chem_lookup.csv')
+chem_lookup = process_chem_lookup(chem_lookup)
+df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+#%%
+df
 
 
 #%%
 
-import pubchempy as pcp
+# import pubchempy as pcp
 
-df_out['molecular_formula'] = df_out['pubchem_cid'].dropna().apply(lambda x: pcp.Compound.from_cid(x).molecular_formula)
-
-
-#%%
-
-
-
-df_out.loc['Vermiculite','molecular_formula'] = df_out.loc['Vermiculite','molecular_formula'].replace('-3','')
-
+# df_out['molecular_formula'] = df_out['pubchem_cid'].dropna().apply(lambda x: pcp.Compound.from_cid(x).molecular_formula)
 
 #%%
 
 if not os.path.exists('output'): os.mkdir('output')
 
-df_out.to_csv('output/processed.csv')
+df.to_csv('output/processed.csv')
 # %%

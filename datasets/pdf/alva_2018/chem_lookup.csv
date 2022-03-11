@@ -1,15 +1,15 @@
-original_name,material_name,molecular_formula
-"HITEC, NaNO3eKNO3e NaNO2",HITEC,(NaNO3)7(KNO3)53(NaNO2)40
-"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48
-"Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,NaNO3KNO3
-Syltherm XLT,Syltherm XLT,
-Dowtherm A,Dowtherm,C24H20O
-Vegetable oil,Vegetable oil,C57H104O9
-Sodium (Na),Sodium,Na
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium Potassium Alloy,NaK
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Sodium Bismuth,BiNa3
-Granite,Granite,
-Quartzite,Quartzite,
-Marble,Marble,
-Basalt,Basalt,
-Hornfels,,
+original_name,material_name,molecular_formula,index_use
+"HITEC, NaNO3eKNO3e NaNO2",HITEC,(NaNO3)7(KNO3)53(NaNO2)40,material_name
+"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48,material_name
+"Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,NaNO3KNO3,material_name
+Syltherm XLT,Syltherm XLT,,material_name
+Dowtherm A,Dowtherm,C24H20O,material_name
+Vegetable oil,Vegetable oil,C57H104O9,material_name
+Sodium (Na),Sodium,Na,molecular_formula
+Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium Potassium Alloy,NaK,molecular_formula
+Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Sodium Bismuth,BiNa3,molecular_formula
+Granite,Granite,,material_name
+Quartzite,Quartzite,,material_name
+Marble,Marble,,material_name
+Basalt,Basalt,,material_name
+Hornfels,,,

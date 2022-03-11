@@ -15,13 +15,14 @@ s_prices_avg
 df_singlemat = pd.read_csv('data/df_singlemat.csv', index_col=0) 
 df_singlemat = df_singlemat.dropna(subset=['specific_energy'])
 
-df_singlemat = df_singlemat[['energy_type','specific_energy', 'index_name']]
+df_singlemat = df_singlemat[['energy_type','specific_energy']]
 
 #TODO: improve handling
-df_singlemat = df_singlemat.where(df_singlemat['index_name'] != 'O3U').dropna(how='all')
+# df_singlemat = df
+# df_singlemat = df_singlemat.where(df_singlemat['index'] != 'O3U').dropna(how='all')
 
-df_singlemat['specific_price'] = [s_prices_avg[f] if f in s_prices_avg.index else np.nan for f in df_singlemat['index_name']]
-df_singlemat = df_singlemat.set_index('index_name')
+df_singlemat['specific_price'] = [s_prices_avg[f] if f in s_prices_avg.index else np.nan for f in df_singlemat.index]
+# df_singlemat = df_singlemat.set_index('index')
 
 df_singlemat.info()
 
@@ -38,7 +39,7 @@ df_couples['specific_price'] = (df_couples['SP_A']*df_couples['mu_A'] + df_coupl
 # df_couples = df_couples.rename({''})
 
 df_couples['energy_type'] = 'EC Couple'
-df_couples.index.name = 'index_name'
+df_couples.index.name = 'index'
 
 df_couples.info()
 
@@ -124,7 +125,7 @@ df_prices_2
 
 #%%
 
-df_vis = pd.merge(df_prices_2, df_singlemat[['energy_type','specific_energy']], on='index_name')
+df_vis = pd.merge(df_prices_2, df_singlemat[['energy_type','specific_energy']], on='index')
 
 
 df_vis['C_kwh'] = df_vis['specific_price']/df_vis['specific_energy']

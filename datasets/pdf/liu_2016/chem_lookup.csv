@@ -1,20 +1,20 @@
-original_name,material_name,pubchem_cid
-Sand,Sand,
-Na2CO3,Sodium carbonate,10340
-K2CO3,Potassium carbonate,11430
-Li2CO3,Lithium carbonate,11125
-Solar Salt,Solar Salt,
-Hitec XL,Hitec XL,
-Hitec,Hitec,
-Halotechnics,,
-Anhydrous,Ammonia,222
-Vermiculite,Vermiculite,156593754
-Silica Gel,Silica,222
-Zeolite,Aluminosilicate,9942228
-Activated Carbon,Activated Carbon,5462310
-Expanded Natural,Graphite,5462310
-Activated Alumina,Alumina,14769
-KCl,Potassium chloride,4873
-MgCl2,Magnesium chloride,24584
-NaCl,Sodium chloride,5234
-LiCl,Lithium chloride,433294
+original_name,material_name,molecular_formula,index_use
+Sand,Sand,SiO2,material_name
+Na2CO3,Sodium carbonate,Na2CO3,molecular_formula
+K2CO3,Potassium carbonate,K2CO3,molecular_formula
+Li2CO3,Lithium carbonate,Li2CO3,molecular_formula
+Solar Salt,Solar Salt,,material_name
+Hitec XL,Hitec XL,,material_name
+Hitec,Hitec,,material_name
+Halotechnics,,,
+Anhydrous,Ammonia,H3N,molecular_formula
+Vermiculite,Vermiculite,AlFeH3MgO6Si,material_name
+Silica Gel,Silica,H3N,molecular_formula
+Zeolite,Aluminosilicate,Al2O5Si,material_name
+Activated Carbon,Activated Carbon,C,molecular_formula
+Expanded Natural,Graphite,C,material_name
+Activated Alumina,Alumina,Al2O3,molecular_formula
+KCl,Potassium chloride,ClK,molecular_formula
+MgCl2,Magnesium chloride,Cl2Mg,molecular_formula
+NaCl,Sodium chloride,ClNa,molecular_formula
+LiCl,Lithium chloride,ClLi,molecular_formula

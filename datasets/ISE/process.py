@@ -89,11 +89,12 @@ df['commodity'].value_counts()
 # df['commodity_info'] = df['commodity_info'].replace({'Conc.': 'Concrete'})
 df['original_name'] = df['commodity'] + ' ' + df['commodity_info']
 
-chem_lookup = pd.read_csv('output/chem_lookup.csv', index_col=0)
 
-df['material_name'] = chem_lookup.loc[df['original_name'].values]['material_name'].values
-# df['molecular_formula'] = chem_lookup.loc[df['original_name'].values]['molecular_formula'].values
+from es_utils.chem import process_chem_lookup
 
+chem_lookup = pd.read_csv('chem_lookup.csv')
+chem_lookup = process_chem_lookup(chem_lookup)
+df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 # %%
 
 df = df[['material_name','commodity','commodity_info','Specification','specific_price']]

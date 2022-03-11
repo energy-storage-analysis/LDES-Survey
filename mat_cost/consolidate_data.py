@@ -13,30 +13,23 @@ datasets = []
 
 for source, row in dataset_index.iterrows():
     fp = os.path.join(dataset_folder, row['price_data_path'])
-    df = pd.read_csv(fp)
+    df = pd.read_csv(fp,index_col=0)
     col_select_present = [col for col in col_select if col in df.columns]
     df = df[col_select_present]
 
-    if source == 'USGS':
-        df_1 = df.groupby('material_name')['specific_price'].mean()
-        df_1 = df_1.to_frame().reset_index()
-        df_2 = df.groupby('molecular_formula')['specific_price'].mean()
-        df_2 = df_2.to_frame().reset_index()
-        
-        df = pd.concat([df_1, df_2]).reset_index(drop=True)
-
-    if source == 'ISE':
-        sp_price_mean = df.groupby('material_name')['specific_price'].mean()
-        df = sp_price_mean.to_frame().reset_index()
-        # test
+    if source in ['USGS','ISE']:
+        sp_price_mean = df.groupby('index')['specific_price'].mean()
+        df = sp_price_mean.to_frame()
+        break
 
     df['source'] = source
 
     datasets.append(df)
 
-df = pd.concat(datasets).reset_index(drop=True)
+df = pd.concat(datasets)
 
-df['material_name'] = df['material_name'].str.lower()
+df.index.name = 'index'
+
 #%%
 energy_type_lookup = {
     'Alva 2018 (Latent)': 'Latent Thermal',
@@ -49,34 +42,6 @@ energy_type = [energy_type_lookup[s] if s in energy_type_lookup else np.nan for 
 df['energy_type'] = energy_type
 #%%
 
-pubchem_lookup = pd.read_csv(r'data\pubchem_lookup.csv', index_col=0)
-pubchem_forms = pubchem_lookup['pubchem_top_formula']
-
-
-#%%
-#TODO: implement index_name upstream, so the name of materials can be set explicity by source. 
-
-#For data where formula is missing, we are going to use pubchem index
-
-df_temp = df.where(df['molecular_formula'].isna()).dropna(subset=['material_name'])
-
-formulas = [pubchem_forms[m] if m in pubchem_forms.index else np.nan for m in df_temp['material_name'] ]
-
-df.loc[df_temp.index, 'molecular_formula'] = formulas
-#%%
-
-# Mat2Vec
-
-df['molecular_formula_norm'] = df['molecular_formula'].astype(str).apply(mat2vec_process)
-df['molecular_formula_norm'] = df['molecular_formula_norm'].replace('nan',np.nan) 
-df
-
-#%%
-
-# If the formula is missing, then use the material name for the index_name
-
-df['index_name'] = df['molecular_formula_norm'].where(~df['molecular_formula_norm'].isna(), df['material_name'])
-df = df.dropna(subset=['index_name'])
 
 df.to_csv('data/df_singlemat.csv')
 
@@ -89,16 +54,16 @@ def join_material_dups(df_dup, column):
     return source_list
 
 
-s_temp = df.groupby('index_name').apply(join_material_dups, column='source')
+s_temp = df.groupby('index').apply(join_material_dups, column='source')
 s_temp.name = 'source'
 df_price = s_temp.to_frame()
 
-df_price['material_names']= df.groupby('index_name').apply(join_material_dups, column='material_name')
-df_price['energy_types']= df.groupby('index_name').apply(join_material_dups, column='energy_type')
+df_price['material_names']= df.groupby('index').apply(join_material_dups, column='material_name')
+df_price['energy_types']= df.groupby('index').apply(join_material_dups, column='energy_type')
 df_price['num_source'] = df_price['source'].str.split(',').apply(len)
-df_price['specific_price_refs'] = df.groupby('index_name')['specific_price'].mean()
+df_price['specific_price_refs'] = df.groupby('index')['specific_price'].mean()
 
-# df_price['specific_energy'] = df.groupby('index_name')['specific_energy'].mean()
+# df_price['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
 df_price
 
