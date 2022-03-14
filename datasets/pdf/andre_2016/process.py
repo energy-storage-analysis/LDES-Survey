@@ -19,14 +19,7 @@ df = df.rename({
     'reactant':'original_name'
 }, axis=1)
 
-#If no lookup table is needed
-# from es_utils.chem import mat2vec_process
-# df['molecular_formula'] = df['original_name'].apply(mat2vec_process)
 
-# index_use = 'molecular_formula'
-# df['index_use'] = index_use
-# df['index'] = df[index_use]
-# df = df.set_index('index')
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)

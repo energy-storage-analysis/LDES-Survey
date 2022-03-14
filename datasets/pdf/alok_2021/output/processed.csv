@@ -1,0 +1,25 @@
+index,original_name,specific_energy,specific_price,molecular_formula,material_name,index_use
+FLi,LiF,0.2891666666666667,0.0325,FLi,,molecular_formula
+FNa,NaF,0.22055555555555556,1.61,FNa,,molecular_formula
+KF,KF,0.14083333333333334,5.3,KF,,molecular_formula
+F2Mg,MgF2,0.26055555555555554,0.87,F2Mg,,molecular_formula
+CaF2,CaF2,0.10583333333333333,0.12,CaF2,,molecular_formula
+ClLi,LiCl,0.11555555555555555,8.0,ClLi,,molecular_formula
+ClNa,NaCl,0.1338888888888889,0.049,ClNa,,molecular_formula
+ClK,KCl,0.09805555555555556,0.455,ClK,,molecular_formula
+Cl2Mg,MgCl2,0.12611111111111112,0.342,Cl2Mg,,molecular_formula
+CaCl2,CaCl2,0.07027777777777777,0.2,CaCl2,,molecular_formula
+CLi2O3,Li2CO3,0.1413888888888889,7.05,CLi2O3,,molecular_formula
+CNa2O3,Na2CO3,0.04583333333333333,0.324,CNa2O3,,molecular_formula
+CK2O3,K2CO3,0.05611111111111111,1.1,CK2O3,,molecular_formula
+CMg2O3,Mg2CO3,0.1938888888888889,,CMg2O3,,molecular_formula
+CCaO3,CaCO3,,,CCaO3,,molecular_formula
+Cu,Copper (Cu),0.05361111111111111,3.25,Cu,,molecular_formula
+Ni,Nickel (Ni),0.08333333333333333,6.25,Ni,,molecular_formula
+Cr,Chromium (Cr),0.11111111111111112,5.25,Cr,,molecular_formula
+V,Vanadium (V),0.125,205.0,V,,molecular_formula
+Metallurgical Silicon,Silicon (Si),0.49722222222222223,1.35,Si,Metallurgical Silicon,material_name
+B,Boron (B),1.2777777777777777,22.5,B,,molecular_formula
+Al,Aluminium (Al),0.11027777777777778,1.75,Al,,molecular_formula
+Mg,Magnesium (Mg),0.10777777777777778,,Mg,,molecular_formula
+Zn,Zinc (Zn),0.04055555555555555,,Zn,,molecular_formula

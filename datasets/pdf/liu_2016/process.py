@@ -3,9 +3,6 @@
 import pandas as pd
 import os
 
-from sympy import O
-
-
 
 df = pd.read_csv('tables/table_4.csv', index_col=0)
 

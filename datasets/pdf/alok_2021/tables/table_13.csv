@@ -1,0 +1,10 @@
+﻿original_name,Melting Point (°C),Latent Heat (MJ/kg),Density (kg/m3),Specific heat (J/kg K),Thermal Conductivity (W/m K),Cost ($/lb)
+Copper (Cu),1356,0.193,8800,385,350,3–3.5
+Nickel (Ni),1728,0.3,8908,440,83,6–6.5
+Chromium (Cr),2180,0.4,7140,450,48,5–5.5
+Vanadium (V),2183,0.45,6110,490,51,200–210
+Silicon (Si),1410,1.79,2570,1040,20,1.2–1.5
+Boron (B),2350,4.6,2340,1020,10,20–25
+Aluminium (Al),660,0.397,2800,900,204,1.5–2
+Magnesium (Mg),661,0.388,1746,1270,156,NA
+Zinc (Zn),419,0.146,7140,0.48,112.2,NA
