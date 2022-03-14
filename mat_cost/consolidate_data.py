@@ -106,6 +106,10 @@ df_prices
 df_prices = df_prices.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
 
 
+#TODO: revisit. Was having issues with output changing with rounding errors
+df_prices['specific_price_refs'] = df_prices['specific_price_refs'].apply(lambda x: round(x,7))
+df_prices['specific_price_element'] = df_prices['specific_price_element'].apply(lambda x: round(x,7))
+
 #%%
 
 # df_prices['specific_price_avg'] = np.sum([
