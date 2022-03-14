@@ -17,9 +17,6 @@ for source, row in dataset_index.iterrows():
     col_select_present = [col for col in col_select if col in df.columns]
     df = df[col_select_present]
 
-    if source in ['USGS','ISE']:
-        sp_price_mean = df.groupby('index')['specific_price'].mean()
-        df = sp_price_mean.to_frame()
 
     df['source'] = source
 

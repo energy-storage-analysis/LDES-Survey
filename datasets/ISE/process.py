@@ -11,10 +11,10 @@ from es_utils.pdf import average_range
 
 # %%
 
-df = pd.read_csv('ISE.csv', encoding='ISO-8859-1', skiprows=[1,2])
+df = pd.read_csv('ISE.csv', encoding='ISO-8859-1')
 
 df = df.rename({
-    'Commodity': 'commodity',
+    'Price in USD': 'price',
 },axis=1)
 
 
@@ -22,13 +22,17 @@ df.columns = [c.strip() for c in df.columns]
 
 df =df.drop([47,79,81,124]).reset_index(drop=True) # Seems to be a typo for cobalt entry
 
-df['Price in USD'] = df['Price in USD'].apply(average_range)
-df['Price in USD'] = df['Price in USD'].astype(float)
+df['price'] = df['price'].apply(average_range)
+df['price'] = df['price'].astype(float)
 
 df[['currency','mass_unit']] = df['Unit'].str.split(' / ', expand=True)
 df['mass_unit'] = df['mass_unit'].astype('string')
 # df = df.drop('Unit', axis=1)
 df
+
+
+#%%
+
 #%%
 df['currency'].value_counts()
 #%%
@@ -56,7 +60,7 @@ ureg.load_definitions('unit_defs.txt')
 specific_price = []
 for index, row in df.iterrows():
     unit = row['mass_unit']
-    val = row['Price in USD']
+    val = row['price']
     val = ureg.Quantity(val, 'USD/{}'.format(unit))
     val = val.to('USD/kg').magnitude
     specific_price.append(val)
@@ -71,7 +75,7 @@ plt.xlabel('Cost ($/kg)')
 plt.ylabel('Count')
 # %%
 
-df['commodity'] = df['commodity'].replace({
+df['original_name'] = df['original_name'].replace({
     'Ethylene glycol antimony': 'Antimony ethelyene_glycol',
     'polysilicon': 'Silicon polysilicon',
     'Lithium hydroxides monohydrates': 'Lithium hydroxides_monohydrates',
@@ -79,25 +83,40 @@ df['commodity'] = df['commodity'].replace({
     'Reduced Ilmenite': 'Ilmenite Reduced'
 })
 
-df[['commodity', 'commodity_info']] = df['commodity'].str.split(' ', expand=True)
+df[['original_name', 'commodity_info']] = df['original_name'].str.split(' ', expand=True)
 #%%
 
-df['commodity'].value_counts()
+df['original_name'].value_counts()
 
 #%%
 
 # df['commodity_info'] = df['commodity_info'].replace({'Conc.': 'Concrete'})
-df['original_name'] = df['commodity'] + ' ' + df['commodity_info']
+df['original_name'] = df['original_name'] + ' ' + df['commodity_info']
 
 
 from es_utils.chem import process_chem_lookup
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = process_chem_lookup(chem_lookup)
-df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+df = pd.merge(df, chem_lookup, on='original_name')
+
+
+df.to_csv('output/processed_orig.csv', index=False)
+
 # %%
 
-df = df[['material_name','commodity','commodity_info','Specification','specific_price']]
+# df = df[['material_name','original_name','commodity_info','Specification','specific_price']]
+
+df = df[['index','original_name','specific_price']]
+#%%
+cols_not_price = [col for col in df.columns if col != 'specific_price']
+
+df = pd.concat([
+df[cols_not_price].groupby('index').first(),
+df[['index','specific_price']].groupby('index').mean()
+], axis=1)
+df
+
 
 #%%
 df.to_csv('output/processed.csv')
