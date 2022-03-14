@@ -8,7 +8,7 @@ from es_utils.chem import mat2vec_process
 dataset_folder = '../datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
-col_select = ['material_name', 'molecular_formula', 'specific_price','specific_energy']
+col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy']
 datasets = []
 
 for source, row in dataset_index.iterrows():
@@ -111,10 +111,33 @@ df_price = df_price.dropna(subset=['specific_price_refs', 'specific_price_elemen
 
 #%%
 
-df_price['specific_price_avg'] = sum([
-    df_price['specific_price_refs'].fillna(0),
-    df_price['specific_price_element'].fillna(0)
-])/2
+# df_price['specific_price_avg'] = np.sum([
+#     df_price['specific_price_refs'],
+#     df_price['specific_price_element']
+# ])/2
+
+
+#TODO: Logic to get one price, didn't like averaging reference and elemntal price...but this isn't great eithger
+
+specific_prices = []
+price_types = []
+
+for idx, row in df_price.iterrows():
+    if row['specific_price_refs'] == row['specific_price_refs']:
+        specific_price = row['specific_price_refs']
+        price_type = 'Ref(s)' 
+    else:
+        specific_price = row['specific_price_element']
+        price_type = 'Element'
+
+    specific_prices.append(specific_price)
+    price_types.append(price_type)
+
+df_price['specific_price'] = specific_prices
+df_price['price_type'] = price_types
+    
+
+    
 
 
 #%%
