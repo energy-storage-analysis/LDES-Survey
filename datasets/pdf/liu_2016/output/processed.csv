@@ -1,19 +1,19 @@
-index,original_name,material_type,specific_price,material_name,molecular_formula,index_use
-Sand,Sand,Quartz/Sand,0.72,Sand,SiO2,material_name
-Na2CO3,Na2CO3,Carbonate salts,0.23,Sodium carbonate,Na2CO3,molecular_formula
-K2CO3,K2CO3,Carbonate salts,1.1,Potassium carbonate,K2CO3,molecular_formula
-Li2CO3,Li2CO3,Carbonate salts,7.0,Lithium carbonate,Li2CO3,molecular_formula
-Solar Salt,Solar Salt,Molten salts,0.49,Solar Salt,,material_name
-Hitec XL,Hitec XL,Molten salts,1.43,Hitec XL,,material_name
-Hitec,Hitec,Molten salts,0.93,Hitec,,material_name
-H3N,Anhydrous,Ammonia,0.7,Ammonia,H3N,molecular_formula
-Vermiculite,Vermiculite,Matrices,0.33,Vermiculite,AlFeH3MgO6Si,material_name
-H3N,Silica Gel,Matrices,1.11,Silica,H3N,molecular_formula
-Aluminosilicate,Zeolite,Matrices,1.93,Aluminosilicate,Al2O5Si,material_name
-C,Activated Carbon,Matrices,2.75,Activated Carbon,C,molecular_formula
-Graphite,Expanded Natural,Matrices,2.15,Graphite,C,material_name
-Al2O3,Activated Alumina,Matrices,1.32,Alumina,Al2O3,molecular_formula
-ClK,KCl,Chloride salts,0.35,Potassium chloride,ClK,molecular_formula
-Cl2Mg,MgCl2,Chloride salts,0.2,Magnesium chloride,Cl2Mg,molecular_formula
-ClNa,NaCl,Chloride salts,0.12,Sodium chloride,ClNa,molecular_formula
-ClLi,LiCl,Chloride salts,7.8,Lithium chloride,ClLi,molecular_formula
+index,original_name,material_type,specific_price,material_name,molecular_formula,index_use,pubchem_formula
+Sand,Sand,Quartz/Sand,0.72,Sand,SiO2,material_name,O2Si
+Na2CO3,Na2CO3,Carbonate salts,0.23,Sodium Carbonate,Na2CO3,molecular_formula,CNa2O3
+K2CO3,K2CO3,Carbonate salts,1.1,Potassium Carbonate,K2CO3,molecular_formula,CK2O3
+Li2CO3,Li2CO3,Carbonate salts,7.0,Lithium Carbonate,Li2CO3,molecular_formula,CLi2O3
+Solar Salt,Solar Salt,Molten salts,0.49,Solar Salt,,material_name,
+Hitec XL,Hitec XL,Molten salts,1.43,Hitec XL,,material_name,
+Hitec,Hitec,Molten salts,0.93,Hitec,,material_name,KN3Na2O8
+H3N,Anhydrous,Ammonia,0.7,Ammonia,H3N,molecular_formula,H3N
+Vermiculite,Vermiculite,Matrices,0.33,Vermiculite,AlFeH3MgO6Si,material_name,AlFeH3MgO6Si-3
+H3N,Silica Gel,Matrices,1.11,Silica,H3N,molecular_formula,O2Si
+Aluminosilicate,Zeolite,Matrices,1.93,Aluminosilicate,Al2O5Si,material_name,Al2O5Si
+C,Activated Carbon,Matrices,2.75,Activated Carbon,C,molecular_formula,CH4
+Graphite,Expanded Natural,Matrices,2.15,Graphite,C,material_name,CH4
+Al2O3,Activated Alumina,Matrices,1.32,Alumina,Al2O3,molecular_formula,Al2O3
+ClK,KCl,Chloride salts,0.35,Potassium Chloride,ClK,molecular_formula,ClK
+Cl2Mg,MgCl2,Chloride salts,0.2,Magnesium Chloride,Cl2Mg,molecular_formula,Cl2Mg
+ClNa,NaCl,Chloride salts,0.12,Sodium Chloride,ClNa,molecular_formula,ClNa
+ClLi,LiCl,Chloride salts,7.8,Lithium chloride,ClLi,molecular_formula,ClLi

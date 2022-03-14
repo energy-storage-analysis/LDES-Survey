@@ -25,8 +25,8 @@ def mat2vec_process(f):
     return s
 
 
-pubchem_lookup = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\mat_cost\data\pubchem_lookup.csv', index_col=0)
-pubchem_forms = pubchem_lookup['pubchem_top_formula']
+# pubchem_lookup = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\mat_cost\data\pubchem_lookup.csv', index_col=0)
+# pubchem_forms = pubchem_lookup['pubchem_top_formula']
 
 def process_chem_lookup(chem_lookup):
     if 'molecular_formula' in chem_lookup.index:
@@ -37,15 +37,7 @@ def process_chem_lookup(chem_lookup):
     for i, row in chem_lookup.iterrows(): 
         index_use = row['index_use']
         if index_use == index_use:
-
-            if index_use == 'pubchem_search':
-                #First check in the pubchem material lookup table, if fail, then just return the material
-                index_val = row['material_name']
-
-                if index_val.lower() in pubchem_forms.index: #TODO: pubchem index is lowercase. perhaps revert that. 
-                    index_val = pubchem_forms[index_val.lower()]
-            else:
-                index_val = row[index_use]
+            index_val = row[index_use]
         else:
             index_val = np.nan
         

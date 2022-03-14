@@ -52,7 +52,7 @@ df = df.rename({'specific_strength': 'specific_energy'}, axis=1) #Assuming Q=1
 df['specific_energy'] = df['specific_energy']/3600  
 
 #%%
-mat_lookup = pd.read_csv('mat_lookup.csv', index_col=0)
+mat_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
 
 from es_utils.chem import process_chem_lookup
 mat_lookup = process_chem_lookup(mat_lookup)

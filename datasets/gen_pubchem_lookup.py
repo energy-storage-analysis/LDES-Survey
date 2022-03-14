@@ -1,29 +1,47 @@
+"""Updates the pubchem lookup table for all materials found (used before update_pubchem_forms.py)"""
 #%%
 import sys
 import pandas as pd
 from os.path import join as pjoin
 import numpy as np
+import os
+
+dataset_folder = '.'
+dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
+
+mat_names = []
+
+for source, row in dataset_index.iterrows():
+
+    fp = os.path.join(dataset_folder, row['price_data_path'])
+
+    #TODO: add source forlder in index
+    output_folder = os.path.split(fp)[0]
+    source_folder = os.path.split(output_folder)[0]
+    fp_chem_lookup = os.path.join(source_folder,'chem_lookup.csv')
+    if os.path.exists(fp_chem_lookup):
+        mat_names_source = pd.read_csv(fp_chem_lookup)['material_name'].dropna().values
+        mat_names.extend(mat_names_source)
 
 
-df_singlemat = pd.read_csv('data/df_singlemat.csv', index_col=0)
+mat_names = list(set(mat_names))
 
-#%%k
-
-
-
-chemical_list = list(set(df_singlemat['material_name'].dropna()))
-chemical_list
 # %%
+import os
 
-df_pubchem_existing = pd.read_csv('data/pubchem_lookup.csv', index_col=0)
-df_pubchem_existing.index = df_pubchem_existing.index.str.lower()
-df_pubchem_existing
+fp_pubchem_lookup = 'pubchem_lookup.csv'
+if os.path.exists(fp_pubchem_lookup):
+    df_pubchem_existing = pd.read_csv(fp_pubchem_lookup, index_col=0)
+    # df_pubchem_existing.index = df_pubchem_existing.index.str.lower()
+    missing_materials = [c for c in mat_names if not c in df_pubchem_existing.index]
+    mat_search_list = missing_materials
+else:
+    df_pubchem_existing = None
+    mat_search_list = mat_names
 
-# %%
-missing_chemicals = [c for c in chemical_list if not c in df_pubchem_existing.index]
-missing_chemicals 
+
+# mat_search_list = mat_search_list[0:4]
 #%%
-
 
 from tqdm import tqdm
 import time
@@ -44,7 +62,7 @@ pubchem_output = []
 
 num_tries =10
 
-for chem in tqdm(missing_chemicals):
+for chem in tqdm(mat_search_list):
     tries = 0
     while True:
         if tries > num_tries:
@@ -76,7 +94,7 @@ pubchem_output
 
 df_chem = pd.DataFrame(
     {'pubchem_formulas': pubchem_output},
-    index = missing_chemicals,
+    index = mat_search_list,
 )
 
 df_chem
@@ -105,11 +123,14 @@ df_chem
 # df_chem['pubchem_top_formula'].values
 #%%
 
-df_out = pd.concat([
-    df_pubchem_existing,
-    df_chem
-])
-df_out
+
+if type(df_pubchem_existing) == type(None):
+    df_out = df_chem
+else:
+    df_out = pd.concat([
+        df_pubchem_existing,
+        df_chem
+    ])
 
 #%%
 
@@ -121,7 +142,7 @@ from es_utils.chem import mat2vec_process
 
 #TODO: lowercase original pubchem lookup
 df_out = df_out.reset_index()
-df_out['index'] = df_out['index'].str.lower()
+# df_out['index'] = df_out['index'].str.lower()
 df_out = df_out.drop_duplicates(subset=['index'])
 df_out = df_out.set_index('index')
 
@@ -141,5 +162,5 @@ df_out.index.name = 'material_name'
 
 #%%
 
-df_out.to_csv('data/pubchem_lookup.csv')
+df_out.to_csv('pubchem_lookup.csv')
 # %%

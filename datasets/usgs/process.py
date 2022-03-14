@@ -69,7 +69,7 @@ df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 # df = df.drop('original_name', axis=1)
 #%%
 
-df = df[['material_name','molecular_formula','commodity', 'extra_info', 'price', 'price_units',  'price_desc', 'specific_price']]
+df = df[['material_name','molecular_formula','commodity', 'extra_info', 'specific_price',  'price_desc']]
 
 #%%
 

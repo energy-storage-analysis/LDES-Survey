@@ -1,89 +1,89 @@
-﻿original_name,material_name,index_use
-Antimony Ingot,Antimony,pubchem_search
-Antimony Trioxide,Antimony Trioxide,pubchem_search
-Antimony ethelyene_glycol,antimony ethylene glycoxide,pubchem_search
-Arsenic metal,Arsenic,pubchem_search
-Arsenic trioxide,Arsenic Trioxide,pubchem_search
-Bismuth ingot,Bismuth,pubchem_search
-Bismuth oxides,Bismuth oxide,pubchem_search
-Cadmium Ingot,Cadmium,pubchem_search
-Calcium Ingot,Cadmium,pubchem_search
-Calcium Granule,Calcium,pubchem_search
-Chrome Conc.,Chromite,pubchem_search
-Chrome lump,Chromite,pubchem_search
-Chromium metal,Chromium,pubchem_search
-Cobalt Conc.,Cobalt,pubchem_search
-Cobalt Intermediate,Cobalt,pubchem_search
-Cobalt metal,Cobalt,pubchem_search
-Cobalt Carbonates,Cobalt Carbonate,pubchem_search
-Cobalt Chloride,Cobalt Chloride,pubchem_search
-Cobalt Monoxide,Cobalt monoxide,pubchem_search
-Cobalt oxides,Cobalt tetraoxide,pubchem_search
-Cobalt Powder,Cobalt,pubchem_search
-Cobalt sulphates,Cobalt Sulphate,pubchem_search
-Cobalt Tetroxide,Cobalt Tetroxide,pubchem_search
-Gallium metal,Gallium,pubchem_search
-Germanium metal,Germanium,pubchem_search
-Germanium dioxides,Germanium dioxide,pubchem_search
-Indium ingot,Indium,pubchem_search
-Lithium metal,Lithium,pubchem_search
-Lithium Carbonates,Lithium Carbonate,pubchem_search
-Lithium Cobaltate,Lithium Cobaltate,pubchem_search
-Lithium manganates,Lithium manganate,pubchem_search
-Lithium hydroxides_monohydrates,Lithium Hydroxide,pubchem_search
-Lithium chlorides,Lithium chloride,pubchem_search
-Magnesium Ingot,Magnesium,pubchem_search
-Magnesium Powder,Magnesium,pubchem_search
-Magnesium Alloy,Magnesium,pubchem_search
-Manganese flakes,Magnesium,pubchem_search
-Manganese Lump,Magnesium,pubchem_search
-Manganese Briquette,Magnesium,pubchem_search
-Manganese dioxides,Magnesium,pubchem_search
-Manganese sulphates,Magnesium,pubchem_search
-Mercury metal,Magnesium,pubchem_search
-Molybdenum Conc.,"molybdenite ",pubchem_search
-Molybdenum oxides,Molybdenum oxide,pubchem_search
-Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,pubchem_search
-Ammonium heptamolybdate,Ammonium heptamolybdate,pubchem_search
-Sodium Molybdate,Sodium Molybdate,pubchem_search
-Molybdenum Powder,Molybdenum,pubchem_search
-Molybdenum bar,Molybdenum,pubchem_search
-Molybdenum Rod,Molybdenum,pubchem_search
-Niobium Conc.,Niobium pentoxide,pubchem_search
-Niobium pentoxides,Niobium pentoxide,pubchem_search
-Rhenium APR,Rhenium,pubchem_search
-Selenium Powder,Selenium,pubchem_search
-Selenium dioxides,Selenium dioxide,pubchem_search
-Silicon metal,Silicon,pubchem_search
-Silicon polysilicon,Silicon,pubchem_search
-Strontium metal,Strontium,pubchem_search
-Tantalum Conc.,Tantalum oxide,pubchem_search
-Tantalum metal,Tantalum,pubchem_search
-Tantalum pentoxide,Tantalum pentoxide,pubchem_search
-Tellurium metal,Tellurium,pubchem_search
-Ilmenite Conc,Ilmenite,pubchem_search
-Ilmenite Reduced,Ilmenite,pubchem_search
-Rutile Conc,Ilmenite,pubchem_search
-Titanium Slag,Ilmenite,pubchem_search
-Titanium tetrachloride,Titanium tetrachloride,pubchem_search
-Titan Sponge,Titanium,pubchem_search
-Titanium plate,Titanium,pubchem_search
-Titanium pipe,Titanium,pubchem_search
-Titanium Dioxide,Titanium,pubchem_search
-Wolfram Ore,Tungsten trioxide,pubchem_search
-Tungsten APT,ammonium paratungstate,pubchem_search
-Sodium Tungstate,Sodium Tungstate,pubchem_search
-Tungsten oxides,Tungsten oxide,pubchem_search
-Tungsten powder,Tungsten,pubchem_search
-Wolfram Bar,Wolfram,pubchem_search
-Tungsten carbide,Tungsten carbide,pubchem_search
-Tungsten scrap,Tungsten,pubchem_search
-Ammonium metavanadate,Ammonium metavanadate,pubchem_search
-Vanadium nitrides,Vanadium nitrides,pubchem_search
-Vanadium pentoxides,Vanadium pentoxide,pubchem_search
-Zircon sand,Zirconium silicate,pubchem_search
-Zirconium fused_cubic,Zirconium oxide,pubchem_search
-Zirconium Sponge,Zirconium,pubchem_search
-Zirconium silicate,Zirconium silicate,pubchem_search
-Zirconium Oxychloride,Zirconium oxychloride,pubchem_search
-Zirconium Carbonates,Zirconium carbonate,pubchem_search
+,original_name,material_name,index_use,pubchem_formula
+0,Antimony Ingot,Antimony,pubchem_formula,Sb
+1,Antimony Trioxide,Antimony Trioxide,pubchem_formula,O3Sb2
+2,Antimony ethelyene_glycol,Antimony Ethylene Glycoxide,material_name,
+3,Arsenic metal,Arsenic,pubchem_formula,As
+4,Arsenic trioxide,Arsenic Trioxide,pubchem_formula,As2O3
+5,Bismuth ingot,Bismuth,pubchem_formula,Bi
+6,Bismuth oxides,Bismuth Oxide,pubchem_formula,Bi2O3
+7,Cadmium Ingot,Cadmium,pubchem_formula,Cd
+8,Calcium Ingot,Cadmium,pubchem_formula,Cd
+9,Calcium Granule,Calcium,pubchem_formula,Ca
+10,Chrome Conc.,Chromite,pubchem_formula,CrFeO4
+11,Chrome lump,Chromite,pubchem_formula,CrFeO4
+12,Chromium metal,Chromium,pubchem_formula,Cr
+13,Cobalt Conc.,Cobalt,pubchem_formula,Co
+14,Cobalt Intermediate,Cobalt,pubchem_formula,Co
+15,Cobalt metal,Cobalt,pubchem_formula,Co
+16,Cobalt Carbonates,Cobalt Carbonate,pubchem_formula,CCoO3
+17,Cobalt Chloride,Cobalt Chloride,pubchem_formula,Cl2Co
+18,Cobalt Monoxide,Cobalt Monoxide,pubchem_formula,CoO
+19,Cobalt oxides,Cobalt Tetraoxide,pubchem_formula,Co3O4
+20,Cobalt Powder,Cobalt,pubchem_formula,Co
+21,Cobalt sulphates,Cobalt Sulphate,pubchem_formula,CoO4S
+22,Cobalt Tetroxide,Cobalt Tetroxide,material_name,
+23,Gallium metal,Gallium,pubchem_formula,Ga
+24,Germanium metal,Germanium,pubchem_formula,Ge
+25,Germanium dioxides,Germanium Dioxide,pubchem_formula,GeO2
+26,Indium ingot,Indium,pubchem_formula,In
+27,Lithium metal,Lithium,pubchem_formula,Li
+28,Lithium Carbonates,Lithium Carbonate,pubchem_formula,CLi2O3
+29,Lithium Cobaltate,Lithium Cobaltate,material_name,
+30,Lithium manganates,Lithium Manganate,pubchem_formula,Li2MnO4
+31,Lithium hydroxides_monohydrates,Lithium Hydroxide,pubchem_formula,HLiO
+32,Lithium chlorides,Lithium Chloride,pubchem_formula,ClLi
+33,Magnesium Ingot,Magnesium,pubchem_formula,Mg
+34,Magnesium Powder,Magnesium,pubchem_formula,Mg
+35,Magnesium Alloy,Magnesium,pubchem_formula,Mg
+36,Manganese flakes,Magnesium,pubchem_formula,Mg
+37,Manganese Lump,Magnesium,pubchem_formula,Mg
+38,Manganese Briquette,Magnesium,pubchem_formula,Mg
+39,Manganese dioxides,Magnesium,pubchem_formula,Mg
+40,Manganese sulphates,Magnesium,pubchem_formula,Mg
+41,Mercury metal,Magnesium,pubchem_formula,Mg
+42,Molybdenum Conc.,"Molybdenite ",pubchem_formula,MoS2
+43,Molybdenum oxides,Molybdenum Oxide,pubchem_formula,MoO3
+44,Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,pubchem_formula,H10MoN2S4
+45,Ammonium heptamolybdate,Ammonium Teptamolybdate,material_name,
+46,Sodium Molybdate,Sodium Molybdate,pubchem_formula,MoNa2O4
+47,Molybdenum Powder,Molybdenum,pubchem_formula,Mo
+48,Molybdenum bar,Molybdenum,pubchem_formula,Mo
+49,Molybdenum Rod,Molybdenum,pubchem_formula,Mo
+50,Niobium Conc.,Niobium Pentoxide,pubchem_formula,Nb2O5
+51,Niobium pentoxides,Niobium Pentoxide,pubchem_formula,Nb2O5
+52,Rhenium APR,Rhenium,pubchem_formula,Re
+53,Selenium Powder,Selenium,pubchem_formula,Se
+54,Selenium dioxides,Selenium Dioxide,pubchem_formula,O2Se
+55,Silicon metal,Silicon,pubchem_formula,Si
+56,Silicon polysilicon,Silicon,pubchem_formula,Si
+57,Strontium metal,Strontium,pubchem_formula,Sr
+58,Tantalum Conc.,Tantalum Oxide,pubchem_formula,O5Ta2
+59,Tantalum metal,Tantalum,pubchem_formula,Ta
+60,Tantalum pentoxide,Tantalum Pentoxide,pubchem_formula,O5Ta2
+61,Tellurium metal,Tellurium,pubchem_formula,Te
+62,Ilmenite Conc,Ilmenite,pubchem_formula,FeH6O3Ti
+63,Ilmenite Reduced,Ilmenite,pubchem_formula,FeH6O3Ti
+64,Rutile Conc,Ilmenite,pubchem_formula,FeH6O3Ti
+65,Titanium Slag,Ilmenite,pubchem_formula,FeH6O3Ti
+66,Titanium tetrachloride,Titanium Tetrachloride,pubchem_formula,Cl4Ti
+67,Titan Sponge,Titanium,pubchem_formula,Ti
+68,Titanium plate,Titanium,pubchem_formula,Ti
+69,Titanium pipe,Titanium,pubchem_formula,Ti
+70,Titanium Dioxide,Titanium,pubchem_formula,Ti
+71,Wolfram Ore,Tungsten Trioxide,pubchem_formula,O3W
+72,Tungsten APT,Ammonium Paratungstate,pubchem_formula,H8N2O4W
+73,Sodium Tungstate,Sodium Tungstate,pubchem_formula,Na2O4W
+74,Tungsten oxides,Tungsten Oxide,pubchem_formula,O3W
+75,Tungsten powder,Tungsten,pubchem_formula,W
+76,Wolfram Bar,Wolfram,pubchem_formula,W
+77,Tungsten carbide,Tungsten Carbide,pubchem_formula,CW
+78,Tungsten scrap,Tungsten,pubchem_formula,W
+79,Ammonium metavanadate,Ammonium Metavanadate,pubchem_formula,H4NO3V
+80,Vanadium nitrides,Vanadium Nitride,pubchem_formula,NV
+81,Vanadium pentoxides,Vanadium Pentoxide,pubchem_formula,O5V2
+82,Zircon sand,Zirconium Silicate,pubchem_formula,O4SiZr
+83,Zirconium fused_cubic,Zirconium Oxide,pubchem_formula,O2Zr
+84,Zirconium Sponge,Zirconium,pubchem_formula,Zr
+85,Zirconium silicate,Zirconium Silicate,pubchem_formula,O4SiZr
+86,Zirconium Oxychloride,Zirconium Oxychloride,pubchem_formula,Cl2H2OZr
+87,Zirconium Carbonates,Zirconium Carbonate,pubchem_formula,C2O6Zr

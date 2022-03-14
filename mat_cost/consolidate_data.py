@@ -20,7 +20,6 @@ for source, row in dataset_index.iterrows():
     if source in ['USGS','ISE']:
         sp_price_mean = df.groupby('index')['specific_price'].mean()
         df = sp_price_mean.to_frame()
-        break
 
     df['source'] = source
 

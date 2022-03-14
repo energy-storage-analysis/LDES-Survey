@@ -1,59 +1,59 @@
-original_name,molecular_formula,material_name,index_use
-Active carbon,C,Carbon,molecular_formula
-AQDS,C14H8O8S2,AQDS,material_name
-CaCl2,CaCl2,,molecular_formula
-Carbonate Electrolyte,,,
-Cd(OH)2,Cd(OH)2,,molecular_formula
-CrCl3 6H2O,CrCl3(H2O)6,,molecular_formula
-CuCl,CuCl,,molecular_formula
-Cu-PBA,,,
-FeCl2,FeCl2,,molecular_formula
-DI H2O,H2O,Water,
-Graphite,C6,Graphite,
-H2SO4,H2SO4,,molecular_formula
-HBr,HBr,,molecular_formula
-HCl,HCl,,molecular_formula
-KOH,KOH,,molecular_formula
-LaNi5,LaNi5,,molecular_formula
-LCO,LiCoO2,,molecular_formula
-LFP,LiFePO4,,molecular_formula
-Li2S,Li2S,,molecular_formula
-Li2SO4,Li2SO4,,molecular_formula
-LiOH H2O,LiOH(H2O),,molecular_formula
-Lithium metal,Li,Lithium,molecular_formula
-LMO,LiMn2O4,,molecular_formula
-LMP,LiMnPO4,,molecular_formula
-LNMO,LiMn1.5Ni0.5O4,,molecular_formula
-LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,,molecular_formula
-LTO,Li4Ti5O12,,molecular_formula
-Mg,Mg,,molecular_formula
-MnO2,MnO2,,molecular_formula
-MoS2,MoS2,,molecular_formula
-Na,Na,,molecular_formula
-Na2S,Na2S,,molecular_formula
-Na2SO4,Na2SO4,,molecular_formula
-Na2Zn(OH)4,Na2Zn(OH)4,,molecular_formula
-NaBr,NaBr,,molecular_formula
-NaCl,NaCl,,molecular_formula
-NaOH,NaOH,,molecular_formula
-NCA,LiNi0.8Co0.15Al0.05O2,,molecular_formula
-NCM111,LiNi0.33Co0.33Mn0.33O2,,molecular_formula
-NCM622,LiNi0.6Co0.2Mn0.2O2,,molecular_formula
-NH4Cl,NH4Cl,,molecular_formula
-Ni(OH)2,Ni(OH)2,,molecular_formula
-NiCl2 6H2O,NiCl2(H2O)6,,molecular_formula
-NMO,Na0.44MnO2,,molecular_formula
-NTP,NaTi2(PO4)3,,molecular_formula
-P2-Na2Mn2NiO6,Na0.67Mn0.67Ni0.33O2,,molecular_formula
-Pb,Pb,,molecular_formula
-Pb2Sb,Pb2Sb,,molecular_formula
-PPy-AC,,,
-S,S,,molecular_formula
-Si,Si,,molecular_formula
-Ti2S4,Ti2S4,,molecular_formula
-TiS2,TiS2,,molecular_formula
-VOSO4 4H2O,VOSO4(H2O)4,,molecular_formula
-Zn,Zn,,molecular_formula
-Zn0.25V2O5,Zn0.25V2O5,,molecular_formula
-ZnBr2,ZnBr2,,molecular_formula
-ZnSO4 7H2O,ZnSO4(H2O)7,,molecular_formula
+original_name,molecular_formula,material_name,index_use,pubchem_formula
+Active carbon,C,Carbon,molecular_formula,CH4
+AQDS,C14H8O8S2,AQDS,material_name,C7H4O4S
+CaCl2,CaCl2,,molecular_formula,
+Carbonate Electrolyte,,,,
+Cd(OH)2,Cd(OH)2,,molecular_formula,
+CrCl3 6H2O,CrCl3(H2O)6,,molecular_formula,
+CuCl,CuCl,,molecular_formula,
+Cu-PBA,,,,
+FeCl2,FeCl2,,molecular_formula,
+DI H2O,H2O,Water,,H2O
+Graphite,C6,Graphite,,CH4
+H2SO4,H2SO4,,molecular_formula,
+HBr,HBr,,molecular_formula,
+HCl,HCl,,molecular_formula,
+KOH,KOH,,molecular_formula,
+LaNi5,LaNi5,,molecular_formula,
+LCO,LiCoO2,,molecular_formula,
+LFP,LiFePO4,,molecular_formula,
+Li2S,Li2S,,molecular_formula,
+Li2SO4,Li2SO4,,molecular_formula,
+LiOH H2O,LiOH(H2O),,molecular_formula,
+Lithium metal,Li,Lithium,molecular_formula,Li
+LMO,LiMn2O4,,molecular_formula,
+LMP,LiMnPO4,,molecular_formula,
+LNMO,LiMn1.5Ni0.5O4,,molecular_formula,
+LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,,molecular_formula,
+LTO,Li4Ti5O12,,molecular_formula,
+Mg,Mg,,molecular_formula,
+MnO2,MnO2,,molecular_formula,
+MoS2,MoS2,,molecular_formula,
+Na,Na,,molecular_formula,
+Na2S,Na2S,,molecular_formula,
+Na2SO4,Na2SO4,,molecular_formula,
+Na2Zn(OH)4,Na2Zn(OH)4,,molecular_formula,
+NaBr,NaBr,,molecular_formula,
+NaCl,NaCl,,molecular_formula,
+NaOH,NaOH,,molecular_formula,
+NCA,LiNi0.8Co0.15Al0.05O2,,molecular_formula,
+NCM111,LiNi0.33Co0.33Mn0.33O2,,molecular_formula,
+NCM622,LiNi0.6Co0.2Mn0.2O2,,molecular_formula,
+NH4Cl,NH4Cl,,molecular_formula,
+Ni(OH)2,Ni(OH)2,,molecular_formula,
+NiCl2 6H2O,NiCl2(H2O)6,,molecular_formula,
+NMO,Na0.44MnO2,,molecular_formula,
+NTP,NaTi2(PO4)3,,molecular_formula,
+P2-Na2Mn2NiO6,Na0.67Mn0.67Ni0.33O2,,molecular_formula,
+Pb,Pb,,molecular_formula,
+Pb2Sb,Pb2Sb,,molecular_formula,
+PPy-AC,,,,
+S,S,,molecular_formula,
+Si,Si,,molecular_formula,
+Ti2S4,Ti2S4,,molecular_formula,
+TiS2,TiS2,,molecular_formula,
+VOSO4 4H2O,VOSO4(H2O)4,,molecular_formula,
+Zn,Zn,,molecular_formula,
+Zn0.25V2O5,Zn0.25V2O5,,molecular_formula,
+ZnBr2,ZnBr2,,molecular_formula,
+ZnSO4 7H2O,ZnSO4(H2O)7,,molecular_formula,

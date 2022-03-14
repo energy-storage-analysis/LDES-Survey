@@ -8,6 +8,7 @@ O3Sb2,Antimony Trioxide,Antimony,Trioxide,99.5% min delivered in China,5.0815
 O3Sb2,Antimony Trioxide,Antimony,Trioxide,99.8% min delivered in China,5.2265
 O3Sb2,Antimony Trioxide,Antimony,Trioxide,99.5% min FOB China,5.3
 O3Sb2,Antimony Trioxide,Antimony,Trioxide,99.5% min in the Baltimore warehouse,5.908388626554718
+Antimony Ethylene Glycoxide,Antimony Ethylene Glycoxide,Antimony,ethelyene_glycol,57% min delivered in China,5.299
 As,Arsenic,Arsenic,metal,99% min EXW China,1.125
 As,Arsenic,Arsenic,metal,99% min FOB China,1.165
 As2O3,Arsenic Trioxide,Arsenic,trioxide,99% min EXW China,0.45
@@ -16,7 +17,7 @@ Bi,Bismuth,Bismuth,ingot,99.99% min EXW China,5.9885
 Bi,Bismuth,Bismuth,ingot,99.99% min FOB China,6.228058906722792
 Bi,Bismuth,Bismuth,ingot,99.99% min delivered in Europe,6.448521168907669
 Bi,Bismuth,Bismuth,ingot,99.99% min delivered in US,6.668983431092547
-Bi2O3,Bismuth oxide,Bismuth,oxides,99.9% min EXW China,6.497
+Bi2O3,Bismuth Oxide,Bismuth,oxides,99.9% min EXW China,6.497
 Cd,Cadmium,Cadmium,Ingot,99.99% min EXW China,2.7655
 Cd,Cadmium,Cadmium,Ingot,99.99% min in the warehouse Rotterdam,2.7888476166387015
 Cd,Cadmium,Cadmium,Ingot,99.99% min in the Baltimore warehouse,2.799870729747945
@@ -46,10 +47,11 @@ Co,Cobalt,Cobalt,metal,99.8% min in the Baltimore warehouse,31.526103492437493
 Co,Cobalt,Cobalt,metal,99.8% min delivered in China,30.5
 CCoO3,Cobalt Carbonate,Cobalt,Carbonates,46% min delivered in China,14.445
 Cl2Co,Cobalt Chloride,Cobalt,Chloride,24% min delivered in China,6.388
-CoO,Cobalt monoxide,Cobalt,Monoxide,78% min delivered in China,31.6
-Co3O4,Cobalt tetraoxide,Cobalt,oxides,72% min delivered in China,22.15
+CoO,Cobalt Monoxide,Cobalt,Monoxide,78% min delivered in China,31.6
+Co3O4,Cobalt Tetraoxide,Cobalt,oxides,72% min delivered in China,22.15
 Co,Cobalt,Cobalt,Powder,99.5% min delivered in China,33.3
 CoO4S,Cobalt Sulphate,Cobalt,sulphates,20.5% min delivered in China,5.3715
+Cobalt Tetroxide,Cobalt Tetroxide,Cobalt,Tetroxide,73.5% min delivered in China,22.25
 Ga,Gallium,Gallium,metal,99.99% min EXW China,146.0
 Ga,Gallium,Gallium,metal,99.99% min FOB China,146.5
 Ga,Gallium,Gallium,metal,99.99% min delivered in Europe,157.0
@@ -58,9 +60,9 @@ Ge,Germanium,Germanium,metal,99.99% min EXW China,1096.0
 Ge,Germanium,Germanium,metal,99.99% min FOB China,1145.0
 Ge,Germanium,Germanium,metal,99.99% min delivered in Europe,1185.0
 Ge,Germanium,Germanium,metal,99.99% min delivered in US,1185.0
-GeO2,Germanium dioxide,Germanium,dioxides,99.99% min FOB China,720.0
-GeO2,Germanium dioxide,Germanium,dioxides,99.99% min EXW China,711.5
-GeO2,Germanium dioxide,Germanium,dioxides,99.99% min delivered in US,730.0
+GeO2,Germanium Dioxide,Germanium,dioxides,99.99% min FOB China,720.0
+GeO2,Germanium Dioxide,Germanium,dioxides,99.99% min EXW China,711.5
+GeO2,Germanium Dioxide,Germanium,dioxides,99.99% min delivered in US,730.0
 In,Indium,Indium,ingot,99.99% min EXW China,162.0
 In,Indium,Indium,ingot,99.99% min FOB China,163.0
 In,Indium,Indium,ingot,99.99% min delivered in Europe,175.0
@@ -71,12 +73,13 @@ CLi2O3,Lithium Carbonate,Lithium,Carbonates,99% min delivered in China,9.219
 CLi2O3,Lithium Carbonate,Lithium,Carbonates,99.5% min delivered in China,10.453
 CLi2O3,Lithium Carbonate,Lithium,Carbonates,99.5% min delivered in EU,14.25
 CLi2O3,Lithium Carbonate,Lithium,Carbonates,99.5% min FOB South America,11.05
-Li2MnO4,Lithium manganate,Lithium,manganates,Mn 58% delivered in China,6.968500000000001
+Lithium Cobaltate,Lithium Cobaltate,Lithium,Cobaltate,Co 60% min delivered in China,28.950000000000003
+Li2MnO4,Lithium Manganate,Lithium,manganates,Mn 58% delivered in China,6.968500000000001
 HLiO,Lithium Hydroxide,Lithium,hydroxides_monohydrates,LiOH 56.5% min delivered in China,10.6705
 HLiO,Lithium Hydroxide,Lithium,hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in China",11.9045
 HLiO,Lithium Hydroxide,Lithium,hydroxides_monohydrates,"LiOH 56.5% min, Magnets 0.0001% max FOB China",14.45
 HLiO,Lithium Hydroxide,Lithium,hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in South Korea",15.7
-ClLi,Lithium chloride,Lithium,chlorides,99.3% min delivered in China,9.7995
+ClLi,Lithium Chloride,Lithium,chlorides,99.3% min delivered in China,9.7995
 Mg,Magnesium,Magnesium,Ingot,99.9% min EXW China,2.25
 Mg,Magnesium,Magnesium,Ingot,99.9% min Ex-VAT FOB China,2.325
 Mg,Magnesium,Magnesium,Ingot,99.9% min FOB China,2.355
@@ -96,30 +99,30 @@ Mg,Magnesium,Manganese,dioxides,Alkaline 91% min EXW China,1.713
 Mg,Magnesium,Manganese,dioxides,Carbon 91% min EXW China,1.4955
 Mg,Magnesium,Manganese,sulphates,Mn 32% min EXW China,0.9875
 Mg,Magnesium,Mercury,metal,99.999% min EXW China,61.7
-MoS2,molybdenite ,Molybdenum,Conc.,45% min EXW China,26.35
-MoO3,Molybdenum oxide,Molybdenum,oxides,50% min EXW China,27.1
-MoO3,Molybdenum oxide,Molybdenum,oxides,57% min in the warehouse Rotterdam,26.12477806890799
-MoO3,Molybdenum oxide,Molybdenum,oxides,57% min in the port of South Korea,26.014546937815556
-MoO3,Molybdenum oxide,Molybdenum,oxides,57% min in the port of India,26.014546937815556
-MoO3,Molybdenum oxide,Molybdenum,oxides,99.9% min EXW China,23.083000000000002
+MoS2,Molybdenite ,Molybdenum,Conc.,45% min EXW China,26.35
+MoO3,Molybdenum Oxide,Molybdenum,oxides,50% min EXW China,27.1
+MoO3,Molybdenum Oxide,Molybdenum,oxides,57% min in the warehouse Rotterdam,26.12477806890799
+MoO3,Molybdenum Oxide,Molybdenum,oxides,57% min in the port of South Korea,26.014546937815556
+MoO3,Molybdenum Oxide,Molybdenum,oxides,57% min in the port of India,26.014546937815556
+MoO3,Molybdenum Oxide,Molybdenum,oxides,99.9% min EXW China,23.083000000000002
 H10MoN2S4,Ammonium Tetrathiomolybdate,Ammonium,Tetrathiomolybdate,56% min EXW China,18.728
-H66Mo7N6O24,Ammonium heptamolybdate,Ammonium,heptamolybdate,54% min EXW China,19.018
+Ammonium Teptamolybdate,Ammonium Teptamolybdate,Ammonium,heptamolybdate,54% min EXW China,19.018
 MoNa2O4,Sodium Molybdate,Sodium,Molybdate,99% min EXW China,12.485
 Mo,Molybdenum,Molybdenum,Powder,99.95% min EXW China,37.7
 Mo,Molybdenum,Molybdenum,bar,99.9% min EXW China,40.45
 Mo,Molybdenum,Molybdenum,Rod,?0.40mm EXW China,52.75
-Nb2O5,Niobium pentoxide,Niobium,Conc.,"Nb2O5 50% min, Ta2O5 5% min, CIF China",20.613221514286053
-Nb2O5,Niobium pentoxide,Niobium,pentoxides,99.5% min EXW China,33.45
-Nb2O5,Niobium pentoxide,Niobium,pentoxides,99.5% min FOB China,33.5
-Nb2O5,Niobium pentoxide,Niobium,pentoxides,99.99% min EXW China,45.0
-Nb2O5,Niobium pentoxide,Niobium,pentoxides,99.99% min FOB China,44.8
+Nb2O5,Niobium Pentoxide,Niobium,Conc.,"Nb2O5 50% min, Ta2O5 5% min, CIF China",20.613221514286053
+Nb2O5,Niobium Pentoxide,Niobium,pentoxides,99.5% min EXW China,33.45
+Nb2O5,Niobium Pentoxide,Niobium,pentoxides,99.5% min FOB China,33.5
+Nb2O5,Niobium Pentoxide,Niobium,pentoxides,99.99% min EXW China,45.0
+Nb2O5,Niobium Pentoxide,Niobium,pentoxides,99.99% min FOB China,44.8
 Re,Rhenium,Rhenium,APR,99.99% min EXW China,1502.5
 Se,Selenium,Selenium,Powder,99.5% min in the warehouse Rotterdam,18.629061154622153
 Se,Selenium,Selenium,Powder,99.9% min delivered in China,20.700000000000003
 Se,Selenium,Selenium,Powder,99.9% min CIF China,19.400679072269227
 Se,Selenium,Selenium,Powder,99.9% min FOB Russia,24.0
 Se,Selenium,Selenium,Powder,99.9% min delivered in US,18.629061154622153
-O2Se,Selenium dioxide,Selenium,dioxides,98% min delivered in China,12.7
+O2Se,Selenium Dioxide,Selenium,dioxides,98% min delivered in China,12.7
 Si,Silicon,Silicon,metal,5-5-3 delivered in China,1.4955
 Si,Silicon,Silicon,metal,5-5-3 FOB China,1.54
 Si,Silicon,Silicon,metal,5-5-3 Ex-VAT FOB China,1.42
@@ -138,14 +141,14 @@ Si,Silicon,Silicon,metal,98.5% min delivered in US,2.6235009200000428
 Si,Silicon,Silicon,polysilicon,6N delivered in China,10.55
 Sr,Strontium,Strontium,metal,99% min EXW China,6.6055
 Sr,Strontium,Strontium,metal,99% min FOB China,7.0
-O5Ta2,Tantalum oxide,Tantalum,Conc.,Ta2O5 30% min CIF China,120.15193289075827
+O5Ta2,Tantalum Oxide,Tantalum,Conc.,Ta2O5 30% min CIF China,120.15193289075827
 Ta,Tantalum,Tantalum,metal,99.95% min EXW China,305.0
 Ta,Tantalum,Tantalum,metal,99.95% min FOB China,260.0
 Ta,Tantalum,Tantalum,metal,99.95% min delivered in US,280.0
-O5Ta2,Tantalum pentoxide,Tantalum,pentoxide,99.5% min EXW China,185.0
-O5Ta2,Tantalum pentoxide,Tantalum,pentoxide,99.5% min FOB China,185.0
-O5Ta2,Tantalum pentoxide,Tantalum,pentoxide,99.99% min EXW China,252.0
-O5Ta2,Tantalum pentoxide,Tantalum,pentoxide,99.99% min FOB China,247.5
+O5Ta2,Tantalum Pentoxide,Tantalum,pentoxide,99.5% min EXW China,185.0
+O5Ta2,Tantalum Pentoxide,Tantalum,pentoxide,99.5% min FOB China,185.0
+O5Ta2,Tantalum Pentoxide,Tantalum,pentoxide,99.99% min EXW China,252.0
+O5Ta2,Tantalum Pentoxide,Tantalum,pentoxide,99.99% min FOB China,247.5
 Te,Tellurium,Tellurium,metal,99.9% min in the warehouse Rotterdam,51.0
 Te,Tellurium,Tellurium,metal,99.99% min EXW China,55.900000000000006
 Te,Tellurium,Tellurium,metal,99.99% min in the warehouse Rotterdam,61.0
@@ -161,43 +164,44 @@ FeH6O3Ti,Ilmenite,Ilmenite,Reduced,TiO2 56% min EXW China,0.542
 FeH6O3Ti,Ilmenite,Rutile,Conc,TiO2 95% min in the port of China,1.314
 FeH6O3Ti,Ilmenite,Titanium,Slag,TiO2 74% min EXW China,0.5225
 FeH6O3Ti,Ilmenite,Titanium,Slag,TiO2 90% min EXW China,0.8855000000000001
-Cl4Ti,Titanium tetrachloride,Titanium,tetrachloride,99.99% min EXW China,1.1685
+Cl4Ti,Titanium Tetrachloride,Titanium,tetrachloride,99.99% min EXW China,1.1685
 Ti,Titanium,Titan,Sponge,99.7% min EXW China,10.743
 Ti,Titanium,Titanium,plate,TA2 2mm EXW China,16.35
 Ti,Titanium,Titanium,pipe,TA2 25.4x1mm EXW China,20.1
 Ti,Titanium,Titanium,Dioxide,R TiO2 93% min EXW China,2.069
 Ti,Titanium,Titanium,Dioxide,R TiO2 93% min FOB China,2.14
 Ti,Titanium,Titanium,Dioxide,A TiO2 98% min EXW China,1.735
-O3W,Tungsten trioxide,Wolfram,Ore,WO3 65% min EXW China,10.743
-O3W,Tungsten trioxide,Wolfram,Ore,WO3 50% min FOB Africa,20.75
-H8N2O4W,ammonium paratungstate,Tungsten,APT,88.5% min EXW China,15.897
-H8N2O4W,ammonium paratungstate,Tungsten,APT,88.5% min FOB China,22.0
-H8N2O4W,ammonium paratungstate,Tungsten,APT,88.5% min in the warehouse Rotterdam,22.5
+O3W,Tungsten Trioxide,Wolfram,Ore,WO3 65% min EXW China,10.743
+O3W,Tungsten Trioxide,Wolfram,Ore,WO3 50% min FOB Africa,20.75
+H8N2O4W,Ammonium Paratungstate,Tungsten,APT,88.5% min EXW China,15.897
+H8N2O4W,Ammonium Paratungstate,Tungsten,APT,88.5% min FOB China,22.0
+H8N2O4W,Ammonium Paratungstate,Tungsten,APT,88.5% min in the warehouse Rotterdam,22.5
 Na2O4W,Sodium Tungstate,Sodium,Tungstate,WO3 68% min EXW China,14.9535
-O3W,Tungsten oxide,Tungsten,oxides,WO3 99.95% min EXW China,20.978
-O3W,Tungsten oxide,Tungsten,oxides,WO3 99.95% min FOB China,22.8
+O3W,Tungsten Oxide,Tungsten,oxides,WO3 99.95% min EXW China,20.978
+O3W,Tungsten Oxide,Tungsten,oxides,WO3 99.95% min FOB China,22.8
 W,Tungsten,Tungsten,powder,99.95% min 2.5-7.0?m EXW China,26.9
 W,Wolfram,Wolfram,Bar,W-4 99.9% min EXW China,31.0
 W,Wolfram,Wolfram,Bar,W-4 99.9% min FOB China,32.0
-CW,Tungsten carbide,Tungsten,carbide,99.8% min 2.5-7.0?m EXW China,26.65
-CW,Tungsten carbide,Tungsten,carbide,99.8% min 2.5-7.0?m FOB China,30.3
+CW,Tungsten Carbide,Tungsten,carbide,99.8% min 2.5-7.0?m EXW China,26.65
+CW,Tungsten Carbide,Tungsten,carbide,99.8% min 2.5-7.0?m FOB China,30.3
 W,Tungsten,Tungsten,scrap,"Grinding Swarf W 70% min, Co 5% min Ex-VAT delivered in China",18.25
 W,Tungsten,Tungsten,scrap,CNC Cutting Blades 70% min Ex-VAT delivered in China,19.4
 W,Tungsten,Tungsten,scrap,Anvil 90% min Ex-VAT delivered in China,22.3
 W,Tungsten,Tungsten,scrap,Drills 70% min ex-VAT delivered in China,20.55
-H4NO3V,Ammonium metavanadate,Ammonium,metavanadate,98% min EXW China,16.913
-O5V2,Vanadium pentoxide,Vanadium,pentoxides,Flakes 98% min EXW China,17.639
-O5V2,Vanadium pentoxide,Vanadium,pentoxides,Flakes 98% min FOB China,17.857443236975083
-O5V2,Vanadium pentoxide,Vanadium,pentoxides,98% min in the warehouse Rotterdam,16.424438532773376
-O4SiZr,Zirconium silicate,Zircon,sand,Zr (Hf) O2 65% min Ex-VAT EXW China,1.4955
-O4SiZr,Zirconium silicate,Zircon,sand,Australian Zr (Hf) O2 66% min in China port,1.8800000000000001
-O4SiZr,Zirconium silicate,Zircon,sand,Australian Zr (Hf) O2 66% min in China port,1.605
-O4SiZr,Zirconium silicate,Zircon,sand,SA Zr (Hf) O2 65% min in the port of China,1.6765
-O4SiZr,Zirconium silicate,Zircon,sand,SA Zr (Hf) O2 65% min in the port of China,1.465
-O4SiZr,Zirconium silicate,Zircon,sand,SA Zr (Hf) O2 66% min in the port of China,1.555
-O4SiZr,Zirconium silicate,Zircon,sand,Indonesian Zr (Hf) O2 66% min CIF China,1.485
-O2Zr,Zirconium oxide,Zirconium,fused_cubic,Zr (Hf) O2 98.5% min EXW China,4.3555
+H4NO3V,Ammonium Metavanadate,Ammonium,metavanadate,98% min EXW China,16.913
+NV,Vanadium Nitride,Vanadium,nitrides,N 14% min EXW China,27.0755
+O5V2,Vanadium Pentoxide,Vanadium,pentoxides,Flakes 98% min EXW China,17.639
+O5V2,Vanadium Pentoxide,Vanadium,pentoxides,Flakes 98% min FOB China,17.857443236975083
+O5V2,Vanadium Pentoxide,Vanadium,pentoxides,98% min in the warehouse Rotterdam,16.424438532773376
+O4SiZr,Zirconium Silicate,Zircon,sand,Zr (Hf) O2 65% min Ex-VAT EXW China,1.4955
+O4SiZr,Zirconium Silicate,Zircon,sand,Australian Zr (Hf) O2 66% min in China port,1.8800000000000001
+O4SiZr,Zirconium Silicate,Zircon,sand,Australian Zr (Hf) O2 66% min in China port,1.605
+O4SiZr,Zirconium Silicate,Zircon,sand,SA Zr (Hf) O2 65% min in the port of China,1.6765
+O4SiZr,Zirconium Silicate,Zircon,sand,SA Zr (Hf) O2 65% min in the port of China,1.465
+O4SiZr,Zirconium Silicate,Zircon,sand,SA Zr (Hf) O2 66% min in the port of China,1.555
+O4SiZr,Zirconium Silicate,Zircon,sand,Indonesian Zr (Hf) O2 66% min CIF China,1.485
+O2Zr,Zirconium Oxide,Zirconium,fused_cubic,Zr (Hf) O2 98.5% min EXW China,4.3555
 Zr,Zirconium,Zirconium,Sponge,Zr + Hf 99.4% min EXW China,35.85
-O4SiZr,Zirconium silicate,Zirconium,silicate,Zr (Hf) O2 64.5% min EXW China,1.938
-Cl2H2OZr,Zirconium oxychloride,Zirconium,Oxychloride,Zr (Hf) O2 36% min EXW China,2.2720000000000002
-C2O6Zr,Zirconium carbonate,Zirconium,Carbonates,Zr (Hf) O2 40% min EXW China,3.3825000000000003
+O4SiZr,Zirconium Silicate,Zirconium,silicate,Zr (Hf) O2 64.5% min EXW China,1.938
+Cl2H2OZr,Zirconium Oxychloride,Zirconium,Oxychloride,Zr (Hf) O2 36% min EXW China,2.2720000000000002
+C2O6Zr,Zirconium Carbonate,Zirconium,Carbonates,Zr (Hf) O2 40% min EXW China,3.3825000000000003

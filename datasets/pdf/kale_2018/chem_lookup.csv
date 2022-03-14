@@ -1,0 +1,19 @@
+original_name,material_name,index_use,pubchem_formula
+Al-2024,Aluminum,pubchem_formula,Al
+Al-6061-T6,Aluminum,pubchem_formula,Al
+Al-7075-T6,Aluminum,pubchem_formula,Al
+Steel-4340,Steel,material_name,
+Steel-18Ni-300,Steel,material_name,
+Stainless-Steel-15-7,Steel,material_name,
+Stainless-Steel-440C,Steel,material_name,
+Stainless-Steel-455,Steel,material_name,
+Carbon-Steel-1020,Steel,material_name,
+AS4-3501–6,CFRP,material_name,
+AS4–8552,CFRP,material_name,
+E-Glass Epoxy,GRE,material_name,C7H6O4
+IM7-8551–7,CFRP,material_name,
+IM7–8552,CFRP,material_name,
+Kevlar-49 Epoxy,KFRP,material_name,
+S-2 Glass Epoxy,GRE,material_name,C7H6O4
+T300-BSL914C,CFRP,material_name,
+T300-PR319,CFRP,material_name,
