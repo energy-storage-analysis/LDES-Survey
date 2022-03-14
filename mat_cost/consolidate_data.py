@@ -3,12 +3,11 @@ import os
 from os.path import join as pjoin
 import numpy as np
 import pandas as pd
-from es_utils.chem import mat2vec_process
 
 dataset_folder = '../datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
-col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy']
+col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','source']
 datasets = []
 
 for source, row in dataset_index.iterrows():
@@ -17,8 +16,9 @@ for source, row in dataset_index.iterrows():
     col_select_present = [col for col in col_select if col in df.columns]
     df = df[col_select_present]
 
-
-    df['source'] = source
+    #Custom data dataset already has source column
+    if source != 'custom_data':
+        df['source'] = source
 
     datasets.append(df)
 
