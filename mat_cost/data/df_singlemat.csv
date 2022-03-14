@@ -167,10 +167,10 @@ Solar Salt,,Alva 2018 (Sensible),Solar Salt,NaNO3KNO3,0.2083333333333333,Sensibl
 Na,2.0,Alva 2018 (Sensible),Sodium,Na,0.1805555555555555,Sensible Thermal
 NaK,2.0,Alva 2018 (Sensible),Sodium Potassium Alloy,NaK,0.1236111111111111,Sensible Thermal
 BiNa3,13.0,Alva 2018 (Sensible),Sodium Bismuth,BiNa3,0.0194444444444444,Sensible Thermal
-Granite,,Alva 2018 (Sensible),Granite,,0.1249999999999999,Sensible Thermal
-Quartzite,,Alva 2018 (Sensible),Quartzite,,0.1180555555555555,Sensible Thermal
-Marble,,Alva 2018 (Sensible),Marble,,0.1180555555555555,Sensible Thermal
-Basalt,,Alva 2018 (Sensible),Basalt,,0.2041666666666666,Sensible Thermal
+Stone,,Alva 2018 (Sensible),Stone,,0.1249999999999999,Sensible Thermal
+Stone,,Alva 2018 (Sensible),Stone,,0.1180555555555555,Sensible Thermal
+Stone,,Alva 2018 (Sensible),Stone,,0.1180555555555555,Sensible Thermal
+Stone,,Alva 2018 (Sensible),Stone,,0.2041666666666666,Sensible Thermal
 NNaO3,6.0,Alva 2018 (Latent),,NNaO3,0.0477777777777777,Latent Thermal
 KNO3,7.0,Alva 2018 (Latent),,KNO3,0.0738888888888888,Latent Thermal
 CaN2O6,,Alva 2018 (Latent),,CaN2O6,0.0402777777777777,Latent Thermal

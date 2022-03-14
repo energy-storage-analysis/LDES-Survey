@@ -8,7 +8,7 @@ Solar Salt,"Solar Salt, NaNO3e KNO3 (50-50)",0.0004166666666666667,0.55,,Molten 
 Na,Sodium (Na),0.00036111111111111115,64.9,2.0,Metal Alloy,Sodium,Na,molecular_formula,Na,0.18055555555555558
 NaK,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),0.00024722222222222224,26.3,2.0,Metal Alloy,Sodium Potassium Alloy,NaK,molecular_formula,,0.12361111111111112
 BiNa3,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),3.888888888888889e-05,14.9,13.0,Metal Alloy,Sodium Bismuth,BiNa3,molecular_formula,,0.019444444444444445
-Granite,Granite,0.00024999999999999995,2.8,,Rocks,Granite,,material_name,C16F5H14N5O5S,0.12499999999999997
-Quartzite,Quartzite,0.00023611111111111115,2.0,,Rocks,Quartzite,,material_name,,0.11805555555555557
-Marble,Marble,0.0002361111111111111,7.7,,Rocks,Marble,,material_name,CCaO3,0.11805555555555555
-Basalt,Basalt,0.0004083333333333333,3.2,,Rocks,Basalt,,material_name,CaMgO6Si2,0.20416666666666666
+Stone,Granite,0.00024999999999999995,2.8,,Rocks,Stone,,material_name,C16F5H14N5O5S,0.12499999999999997
+Stone,Quartzite,0.00023611111111111115,2.0,,Rocks,Stone,,material_name,,0.11805555555555557
+Stone,Marble,0.0002361111111111111,7.7,,Rocks,Stone,,material_name,CCaO3,0.11805555555555555
+Stone,Basalt,0.0004083333333333333,3.2,,Rocks,Stone,,material_name,CaMgO6Si2,0.20416666666666666
