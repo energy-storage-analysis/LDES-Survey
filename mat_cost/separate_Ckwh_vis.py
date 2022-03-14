@@ -27,6 +27,8 @@ df_all['C_kwh'] = df_all['specific_price']/df_all['specific_energy']
 
 df_all = df_all.dropna(subset=['C_kwh'])
 
+df_all = df_all.where(df_all['energy_type'] != 'electrostatic').dropna(subset=['energy_type'])
+
 #%%
 
 df_all
@@ -43,9 +45,9 @@ mat_cost_line = energy_densities_line*10
 #%%
 
 import seaborn as sns
-fig = plt.figure()
+fig = plt.figure(figsize=(9,6))
 
-sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', hue='energy_type')
+sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='energy_type', hue='energy_type')
 plt.xscale('log')
 plt.yscale('log')
 plt.gca().get_legend().set_bbox_to_anchor([0,0,1.4,1])
