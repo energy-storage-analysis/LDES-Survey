@@ -33,8 +33,8 @@ Diamond (Industrial) Stones_Imports,Diamond,,material_name,CH4
 "Diatomite ",Diatomite,,material_name,O2Si
 Feldspar and Nepheline Syenite Feldspar,Feldspar,,material_name,AlKO8Si3
 Feldspar and Nepheline Syenite Nepheline_syenite,Syenite,,material_name,
-"Iron Ore ",Iron Ore,,pubchem_formula,Fe2O3
-"Iron Oxide Pigments ",Iron Oxide,,pubchem_formula,Fe2O3
+"Iron Ore ",Iron Ore,,material_name,Fe2O3
+"Iron Oxide Pigments ",Iron Oxide Pigment,,material_name,Fe2O3
 "Iron and Steel Scrap ",Iron,,pubchem_formula,Fe
 "Iron and Steel Slag ",Iron,,pubchem_formula,Fe
 "Iron and Steel ",Steel,,material_name,Fe

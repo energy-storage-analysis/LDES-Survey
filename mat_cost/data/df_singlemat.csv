@@ -36,7 +36,6 @@ Dy2O3,253.2,USGS,,,,,,Ref(s)
 Eu2O3,45.4,USGS,,,,,,Ref(s)
 F3Sc,224400.0,USGS,,,,,,Ref(s)
 Fe,0.1801177,USGS,,,,,,Ref(s)
-Fe2O3,0.5645765,USGS,,,,,,Ref(s)
 FeH6O3Ti,0.3898154,USGS,,,,,,Ref(s)
 FeSi2,2.2607303,USGS,,,,,,Ref(s)
 Feldspar,0.1067037,USGS,,,,,,Ref(s)
@@ -53,6 +52,8 @@ I2,26.392,USGS,,,,,,Ref(s)
 I3Sc,165400.0,USGS,,,,,,Ref(s)
 In,359.7216387,USGS,,,,,,Ref(s)
 Ir,2.3635605,USGS,,,,,,Ref(s)
+Iron Ore,0.1190765,USGS,,,,,,Ref(s)
+Iron Oxide Pigment,1.03,USGS,,,,,,Ref(s)
 K2O,0.9193276,USGS,,,,,,Ref(s)
 La2O3,2.0,USGS,,,,,,Ref(s)
 Mg,47.6282911,USGS,,,,,,Ref(s)
@@ -266,45 +267,45 @@ Zn0.25V2O5,10.0,Li 2017,Zn0.25V2O5,,Zn0.25V2O5,,,Ref(s)
 ZnBr2,1.56,Li 2017,ZnBr2,,ZnBr2,,,Ref(s)
 ZnSO4(H2O)7,0.41,Li 2017,ZnSO4 7H2O,,ZnSO4(H2O)7,,,Ref(s)
 Air,0.0,Li 2017,,,O2,,,Ref(s)
-MgO4S,13.7,Andre 2016,,,MgO4S,0.8048611111111111,Thermochemical,Ref(s)
-MnO4S,0.7471247,Andre 2016,,,MnO4S,0.65825,Thermochemical,Element
-FeO4S,0.240304,Andre 2016,,,FeO4S,0.6332722222222222,Thermochemical,Element
-CoO4S,5.3715,Andre 2016,,,CoO4S,0.5906388888888889,Thermochemical,Ref(s)
-CuO4S,2.4692682,Andre 2016,,,CuO4S,0.52275,Thermochemical,Element
-O4SZn,1.112163,Andre 2016,,,O4SZn,0.4911666666666667,Thermochemical,Element
-CdO4S,1.5336229,Andre 2016,,,CdO4S,0.4723611111111111,Thermochemical,Element
-NiO4S,5.3548666,Andre 2016,,,NiO4S,0.3998333333333334,Thermochemical,Element
-CCaO3,8.0,Andre 2016,,,CCaO3,0.4602222222222222,Thermochemical,Ref(s)
-CO3Sr,3.9801865,Andre 2016,,,CO3Sr,0.3807361111111111,Thermochemical,Element
-CMgO3,0.7738365,Andre 2016,,,CMgO3,0.3261111111111111,Thermochemical,Element
-BaCO3,0.2261665,Andre 2016,,,BaCO3,0.2323888888888889,Thermochemical,Element
-CCdO3,1.831246,Andre 2016,,,CCdO3,0.1555833333333333,Thermochemical,Element
-CO3Zn,1.4002606,Andre 2016,,,CO3Zn,0.1513611111111111,Thermochemical,Element
-CO3Pb,1.5839978,Andre 2016,,,CO3Pb,0.0872222222222222,Thermochemical,Element
-CaH2O2,1.3376312,Andre 2016,,,CaH2O2,0.3755555555555555,Thermochemical,Element
-H2MgO2,1.0994278,Andre 2016,,,H2MgO2,0.3702777777777777,Thermochemical,Element
-BeH2O2,179.6852589,Andre 2016,,,BeH2O2,0.3308333333333333,Thermochemical,Element
-H2MnO2,1.2109578,Andre 2016,,,H2MnO2,0.2094444444444444,Thermochemical,Element
-H2O2Sr,4.821514,Andre 2016,,,H2O2Sr,0.2023055555555555,Thermochemical,Element
-BaH2O2,0.2539008,Andre 2016,,,BaH2O2,0.1515194444444444,Thermochemical,Element
-H2NiO2,8.8835216,Andre 2016,,,H2NiO2,0.1433333333333333,Thermochemical,Element
-H2O2Zn,1.7551254,Andre 2016,,,H2O2Zn,0.1386,Thermochemical,Element
-CdH2O2,2.1486338,Andre 2016,,,CdH2O2,0.1137222222222222,Thermochemical,Element
-O3Rh2,119201.2223238,Andre 2016,,,O3Rh2,0.2728055555555556,Thermochemical,Element
-O5V2,17.3069606,Andre 2016,,,O5V2,0.2696944444444444,Thermochemical,Ref(s)
-Co3O4,22.15,Andre 2016,,,Co3O4,0.2266944444444444,Thermochemical,Ref(s)
-Mn3O4,1.3540358,Andre 2016,,,Mn3O4,0.2362777777777777,Thermochemical,Element
-CuO,4.8241856,Andre 2016,,,CuO,0.2250555555555555,Thermochemical,Element
-LiO,25.3696258,Andre 2016,,,LiO,0.2071944444444444,Thermochemical,Element
-Fe2O3,0.5645765,Andre 2016,,,Fe2O3,0.1348888888888889,Thermochemical,Ref(s)
-BaO2,0.2403743,Andre 2016,,,BaO2,0.1201666666666666,Thermochemical,Element
-MgO2,1.0890235,Andre 2016,,,MgO2,0.1057222222222222,Thermochemical,Element
-Cr5O12,5.4724673,Andre 2016,,,Cr5O12,0.0775277777777777,Thermochemical,Element
-O2Pt,23882.7389564,Andre 2016,,,O2Pt,0.0768055555555555,Thermochemical,Element
-O2Pb,1.7530568,Andre 2016,,,O2Pb,0.0641388888888888,Thermochemical,Element
-O5Sb2,4.3963959,Andre 2016,,,O5Sb2,0.0584444444444444,Thermochemical,Element
-Mn2O3,1.3134982,Andre 2016,,,Mn2O3,0.0528055555555555,Thermochemical,Element
-O3U,,Andre 2016,,,O3U,0.0341666666666666,Thermochemical,
+MgO4S,13.7,Andre 2016,MgSO4,,MgO4S,0.8048611111111111,Thermochemical,Ref(s)
+MnO4S,0.7471247,Andre 2016,MnSO4,,MnO4S,0.65825,Thermochemical,Element
+FeO4S,0.240304,Andre 2016,FeSO4,,FeO4S,0.6332722222222222,Thermochemical,Element
+CoO4S,5.3715,Andre 2016,CoSO4,,CoO4S,0.5906388888888889,Thermochemical,Ref(s)
+CuO4S,2.4692682,Andre 2016,CuSO4,,CuO4S,0.52275,Thermochemical,Element
+O4SZn,1.112163,Andre 2016,ZnSO4,,O4SZn,0.4911666666666667,Thermochemical,Element
+CdO4S,1.5336229,Andre 2016,CdSO4,,CdO4S,0.4723611111111111,Thermochemical,Element
+NiO4S,5.3548666,Andre 2016,NiSO4,,NiO4S,0.3998333333333334,Thermochemical,Element
+CCaO3,8.0,Andre 2016,CaCO3,,CCaO3,0.4602222222222222,Thermochemical,Ref(s)
+CO3Sr,3.9801865,Andre 2016,SrCO3,,CO3Sr,0.3807361111111111,Thermochemical,Element
+CMgO3,0.7738365,Andre 2016,MgCO3,,CMgO3,0.3261111111111111,Thermochemical,Element
+BaCO3,0.2261665,Andre 2016,BaCO3,,BaCO3,0.2323888888888889,Thermochemical,Element
+CCdO3,1.831246,Andre 2016,CdCO3,,CCdO3,0.1555833333333333,Thermochemical,Element
+CO3Zn,1.4002606,Andre 2016,ZnCO3,,CO3Zn,0.1513611111111111,Thermochemical,Element
+CO3Pb,1.5839978,Andre 2016,PbCO3,,CO3Pb,0.0872222222222222,Thermochemical,Element
+CaH2O2,1.3376312,Andre 2016,Ca(OH)2,,CaH2O2,0.3755555555555555,Thermochemical,Element
+H2MgO2,1.0994278,Andre 2016,Mg(OH)2,,H2MgO2,0.3702777777777777,Thermochemical,Element
+BeH2O2,179.6852589,Andre 2016,Be(OH)2,,BeH2O2,0.3308333333333333,Thermochemical,Element
+H2MnO2,1.2109578,Andre 2016,Mn(OH)2,,H2MnO2,0.2094444444444444,Thermochemical,Element
+H2O2Sr,4.821514,Andre 2016,Sr(OH)2,,H2O2Sr,0.2023055555555555,Thermochemical,Element
+BaH2O2,0.2539008,Andre 2016,Ba(OH)2,,BaH2O2,0.1515194444444444,Thermochemical,Element
+H2NiO2,8.8835216,Andre 2016,Ni(OH)2,,H2NiO2,0.1433333333333333,Thermochemical,Element
+H2O2Zn,1.7551254,Andre 2016,Zn(OH)2,,H2O2Zn,0.1386,Thermochemical,Element
+CdH2O2,2.1486338,Andre 2016,Cd(OH)2,,CdH2O2,0.1137222222222222,Thermochemical,Element
+O3Rh2,119201.2223238,Andre 2016,Rh2O3,,O3Rh2,0.2728055555555556,Thermochemical,Element
+O5V2,17.3069606,Andre 2016,V2O5,,O5V2,0.2696944444444444,Thermochemical,Ref(s)
+Co3O4,22.15,Andre 2016,Co3O4,,Co3O4,0.2266944444444444,Thermochemical,Ref(s)
+Mn3O4,1.3540358,Andre 2016,Mn3O4,,Mn3O4,0.2362777777777777,Thermochemical,Element
+CuO,4.8241856,Andre 2016,CuO,,CuO,0.2250555555555555,Thermochemical,Element
+LiO,25.3696258,Andre 2016,Li2O2,,LiO,0.2071944444444444,Thermochemical,Element
+Iron Ore,0.1190765,Andre 2016,Fe2O3,Iron Ore,Fe2O3,0.1348888888888889,Thermochemical,Ref(s)
+BaO2,0.2403743,Andre 2016,BaO2,,BaO2,0.1201666666666666,Thermochemical,Element
+MgO2,1.0890235,Andre 2016,MgO2,,MgO2,0.1057222222222222,Thermochemical,Element
+Cr5O12,5.4724673,Andre 2016,Cr5O12,,Cr5O12,0.0775277777777777,Thermochemical,Element
+O2Pt,23882.7389564,Andre 2016,PtO2,,O2Pt,0.0768055555555555,Thermochemical,Element
+O2Pb,1.7530568,Andre 2016,PbO2,,O2Pb,0.0641388888888888,Thermochemical,Element
+O5Sb2,4.3963959,Andre 2016,Sb2O5,,O5Sb2,0.0584444444444444,Thermochemical,Element
+Mn2O3,1.3134982,Andre 2016,Mn2O3,,Mn2O3,0.0528055555555555,Thermochemical,Element
+O3U,,Andre 2016,UO3,,O3U,0.0341666666666666,Thermochemical,
 Sand,0.72,Liu 2016,Sand,Sand,SiO2,,,Ref(s)
 Na2CO3,0.23,Liu 2016,Na2CO3,Sodium Carbonate,Na2CO3,,,Ref(s)
 K2CO3,1.1,Liu 2016,K2CO3,Potassium Carbonate,K2CO3,,,Ref(s)
@@ -346,6 +347,6 @@ Pb,2.0759813,Kim 2013,,,Pb,,,Ref(s)
 Sb,9.6329944,Kim 2013,,,Sb,,,Ref(s)
 Bi,12.7341164,Kim 2013,,,Bi,,,Ref(s)
 Te,153.3314176,Kim 2013,,,Te,,,Ref(s)
-Iron Ore,0.139,Olympios 2021,Magnetite,Iron Ore,Fe3O4,,,Ref(s)
+Iron Ore,0.1190765,Olympios 2021,Magnetite,Iron Ore,Fe3O4,,,Ref(s)
 Solar Salt,0.745,Olympios 2021,Molten Salt,Solar Salt,,,,Ref(s)
-Iron Ore,0.139,Grosu 2017,Magnetite,Iron Ore,Fe3O4,0.125,,Ref(s)
+Iron Ore,0.1190765,Grosu 2017,Magnetite,Iron Ore,Fe3O4,0.125,Sensible Thermal,Ref(s)
