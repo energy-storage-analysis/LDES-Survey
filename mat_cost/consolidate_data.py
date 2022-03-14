@@ -31,6 +31,7 @@ energy_type_lookup = {
     'Alva 2018 (Latent)': 'Latent Thermal',
     'Alva 2018 (Sensible)': 'Sensible Thermal',
     'Grosu 2017': 'Sensible Thermal', #TODO: this is only magnetite (called iron ore along iwth hematite). 
+    'Ray 2021': 'Latent Thermal',
     'Andre 2016': 'Thermochemical',
     'Kale 2018': 'Virial'
 }

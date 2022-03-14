@@ -54,8 +54,8 @@
 52,Rhenium APR,Rhenium,pubchem_formula,Re
 53,Selenium Powder,Selenium,pubchem_formula,Se
 54,Selenium dioxides,Selenium Dioxide,pubchem_formula,O2Se
-55,Silicon metal,Silicon,pubchem_formula,Si
-56,Silicon polysilicon,Silicon,pubchem_formula,Si
+55,Silicon metal,Metallurgical Silicon,material_name,Si
+56,Silicon polysilicon,Polysilicon,material_name,Si
 57,Strontium metal,Strontium,pubchem_formula,Sr
 58,Tantalum Conc.,Tantalum Oxide,pubchem_formula,O5Ta2
 59,Tantalum metal,Tantalum,pubchem_formula,Ta

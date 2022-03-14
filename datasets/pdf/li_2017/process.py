@@ -87,6 +87,7 @@ df = df.rename({'anode':'A', 'cathode':'B'}, axis=1)
 
 # df['anode'].where(~df['anode'].isin(chem_lookup['molecular_formula'])).dropna()
 
+
 # %%
 
 df['A'].where(~df['A'].isin(chem_lookup['molecular_formula'])).dropna()
@@ -148,6 +149,11 @@ df['deltaV'] = [deltaV_lookup[t] for t in df['type']]
 df['specific_energy'] = (1/3600)*F*df['deltaV']/(df['mu_A'] + df['mu_B'])
 
 #%%
+
+#TODO: hacky way to get the A Si material associated with polysilicon. I am assuming from the price that is what they are saying needs to be used in a battery anode material.
+df['A'] = df['A'].str.replace("Si", "Polysilicon", regex=False) 
+#%%
+
 
 df.to_csv('output/couples.csv')
 # %%

@@ -1,4 +1,5 @@
 index,original_name,material_name,molecular_formula,specific_price,specific_energy,source,notes
-Iron Ore,Magnetite,"Iron Ore","Fe3O4","0.139",,"Olympios 2021",
-Solar Salt,Molten Salt,"Solar Salt",,"1",,"Olympios 2021",
-Iron Ore,Magnetite,"Iron Ore","Fe3O4",,"0.125","Grosu 2017",approximate from graph averaged to 500K by eye and calculated by hand (TODO)
+Iron Ore,Magnetite,Iron Ore,Fe3O4,0.139,,Olympios 2021,
+Solar Salt,Molten Salt,Solar Salt,,1,,Olympios 2021,
+Iron Ore,Magnetite,Iron Ore,Fe3O4,,0.125,Grosu 2017,approximate from graph averaged to 500K by eye and calculated by hand (TODO)
+Metallurgical Silicon,Silicon,Metallurgical Silicon,Si,,0.516,Ray 2021,https://www.sciencedirect.com/science/article/abs/pii/S2213138821002599

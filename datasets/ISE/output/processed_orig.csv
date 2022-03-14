@@ -123,22 +123,22 @@ Selenium Powder,99.9% min CIF China,USD / lb,8.8,,08.07.19,USD,lb,19.40067907226
 Selenium Powder,99.9% min FOB Russia,USD / kg,24.0,,08.07.19,USD,kg,24.0,Powder,53,Selenium,pubchem_formula,Se,Se
 Selenium Powder,99.9% min delivered in US,USD / lb,8.45,,08.07.19,USD,lb,18.629061154622153,Powder,53,Selenium,pubchem_formula,Se,Se
 Selenium dioxides,98% min delivered in China,USD / kg,12.7,,08.07.19,USD,kg,12.7,dioxides,54,Selenium Dioxide,pubchem_formula,O2Se,O2Se
-Silicon metal,5-5-3 delivered in China,USD / mt,1495.5,ï¿½0.96,08.07.19,USD,metric_ton,1.4955,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,5-5-3 FOB China,USD / mt,1540.0,,08.07.19,USD,metric_ton,1.54,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,5-5-3 Ex-VAT FOB China,USD / mt,1420.0,,08.07.19,USD,metric_ton,1.42,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,4-4-1 delivered in China,USD / mt,1640.5,ï¿½0.88,08.07.19,USD,metric_ton,1.6405,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,4-4-1 FOB China,USD / mt,1720.0,,08.07.19,USD,metric_ton,1.72,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,4-4-1 Ex-VAT FOB China,USD / mt,1565.0,,08.07.19,USD,metric_ton,1.565,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,4-2-1 delivered in China,USD / mt,1785.5,,08.07.19,USD,metric_ton,1.7855,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,4-1-1 delivered in China,USD / mt,1814.5,,08.07.19,USD,metric_ton,1.8145,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,3-3-03 delivered in China,USD / mt,1727.5,,08.07.19,USD,metric_ton,1.7275,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,3-3-03 FOB China,USD / mt,1755.0,,08.07.19,USD,metric_ton,1.7550000000000001,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,3-3-03 P 50ppm max delivered in China,USD / mt,1756.5,,08.07.19,USD,metric_ton,1.7565,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,3-3-03 P 50ppm max FOB China,USD / mt,1800.0,,08.07.19,USD,metric_ton,1.8,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,2-2-02 delivered in China,USD / mt,1901.5,,08.07.19,USD,metric_ton,1.9015,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,2-2-02 FOB China,USD / mt,1940.0,,08.07.19,USD,metric_ton,1.94,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon metal,98.5% min delivered in US,USD / lb,1.19,,08.07.19,USD,lb,2.6235009200000428,metal,55,Silicon,pubchem_formula,Si,Si
-Silicon polysilicon,6N delivered in China,USD / kg,10.55,ï¿½1.40,08.07.19,USD,kg,10.55,polysilicon,56,Silicon,pubchem_formula,Si,Si
+Silicon metal,5-5-3 delivered in China,USD / mt,1495.5,ï¿½0.96,08.07.19,USD,metric_ton,1.4955,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,5-5-3 FOB China,USD / mt,1540.0,,08.07.19,USD,metric_ton,1.54,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,5-5-3 Ex-VAT FOB China,USD / mt,1420.0,,08.07.19,USD,metric_ton,1.42,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,4-4-1 delivered in China,USD / mt,1640.5,ï¿½0.88,08.07.19,USD,metric_ton,1.6405,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,4-4-1 FOB China,USD / mt,1720.0,,08.07.19,USD,metric_ton,1.72,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,4-4-1 Ex-VAT FOB China,USD / mt,1565.0,,08.07.19,USD,metric_ton,1.565,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,4-2-1 delivered in China,USD / mt,1785.5,,08.07.19,USD,metric_ton,1.7855,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,4-1-1 delivered in China,USD / mt,1814.5,,08.07.19,USD,metric_ton,1.8145,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,3-3-03 delivered in China,USD / mt,1727.5,,08.07.19,USD,metric_ton,1.7275,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,3-3-03 FOB China,USD / mt,1755.0,,08.07.19,USD,metric_ton,1.7550000000000001,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,3-3-03 P 50ppm max delivered in China,USD / mt,1756.5,,08.07.19,USD,metric_ton,1.7565,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,3-3-03 P 50ppm max FOB China,USD / mt,1800.0,,08.07.19,USD,metric_ton,1.8,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,2-2-02 delivered in China,USD / mt,1901.5,,08.07.19,USD,metric_ton,1.9015,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,2-2-02 FOB China,USD / mt,1940.0,,08.07.19,USD,metric_ton,1.94,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon metal,98.5% min delivered in US,USD / lb,1.19,,08.07.19,USD,lb,2.6235009200000428,metal,55,Metallurgical Silicon,material_name,Si,Metallurgical Silicon
+Silicon polysilicon,6N delivered in China,USD / kg,10.55,ï¿½1.40,08.07.19,USD,kg,10.55,polysilicon,56,Polysilicon,material_name,Si,Polysilicon
 Strontium metal,99% min EXW China,USD / mt,6605.5,,08.07.19,USD,metric_ton,6.6055,metal,57,Strontium,pubchem_formula,Sr,Sr
 Strontium metal,99% min FOB China,USD / mt,7000.0,,08.07.19,USD,metric_ton,7.0,metal,57,Strontium,pubchem_formula,Sr,Sr
 Tantalum Conc.,Ta2O5 30% min CIF China,USD / lb Ta2O5,54.5,ï¿½0.91,08.07.19,USD,lb,120.15193289075827,Conc.,58,Tantalum Oxide,pubchem_formula,O5Ta2,O5Ta2

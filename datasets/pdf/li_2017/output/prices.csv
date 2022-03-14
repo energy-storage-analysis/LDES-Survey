@@ -44,7 +44,7 @@ Na0.67Mn0.67Ni0.33O2,P2-Na2Mn2NiO6,15.0,41.0,Na0.67Mn0.67Ni0.33O2,,molecular_for
 Pb,Pb,1.5,42.0,Pb,,molecular_formula,
 Pb2Sb,Pb2Sb,3.0,49.0,Pb2Sb,,molecular_formula,
 S,S,0.25,42.0,S,,molecular_formula,
-Si,Si,40.0,41.0,Si,,molecular_formula,
+Polysilicon,Si,40.0,41.0,Si,Polysilicon,material_name,
 Ti2S4,Ti2S4,80.0,51.0,Ti2S4,,molecular_formula,
 TiS2,TiS2,80.0,51.0,TiS2,,molecular_formula,
 VOSO4(H2O)4,VOSO4 4H2O,10.2,42.0,VOSO4(H2O)4,,molecular_formula,

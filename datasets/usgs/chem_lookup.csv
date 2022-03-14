@@ -110,7 +110,7 @@ Scandium Mtl_Alloy,Scandium Aluminum Alloy,AlSc,molecular_formula,
 Silver Bullion,Silver,,pubchem_formula,Ag
 Silicon FeSi2_50,Ferrosilicon,,pubchem_formula,FeSi2
 Silicon FeSi2_75,Ferrosilicon,,pubchem_formula,FeSi2
-Silicon Si,Silicon,,pubchem_formula,Si
+Silicon Si,Metallurgical Silicon,,material_name,Si
 "Soda Ash ",Soda Ash,,pubchem_formula,CNa2O3
 Stone (Crushed) Average,Stone,,material_name,
 Stone (Dimension) Average,Stone,,material_name,
