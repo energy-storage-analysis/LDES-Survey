@@ -64,6 +64,6 @@ df = pd.merge(df, mat_lookup, on='original_name').set_index('index')
 df = df.groupby('index')[['specific_energy', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
 
 
-
+df['energy_type'] = 'virial_limited'
 
 df.to_csv('output/processed.csv')

@@ -25,4 +25,6 @@ chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
 df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 
+df['energy_type'] = 'thermochemical'
+
 df.to_csv('output/process.csv')

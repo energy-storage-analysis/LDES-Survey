@@ -42,6 +42,8 @@ df = pd.concat([
     df_table13
 ])
 
+df['energy_type'] = 'latent_thermal'
+
 df
 
 #%%

@@ -52,6 +52,7 @@ df_latent['index'] = df_latent[index_use]
 df_latent = df_latent.set_index('index')
 #%%
 
+df_latent['energy_type'] = 'latent_thermal'
 
 
 #%%
@@ -81,7 +82,7 @@ df_sens['Cp'] = df_sens['Cp']/3600
 #TODO: How to have consistent naming without introducing delta T?
 df_sens['specific_energy'] = df_sens['Cp']*500
 # df_sens['C_kwh'] = df_sens['specific_price']/(df_sens['Cp']*500)
-df_sens
+df_sens['energy_type'] = 'sensible_thermal'
 # %%
 df_sens.to_csv('output/sensible.csv')
 # %%
