@@ -20,8 +20,8 @@ def calc_lcos(DD, CF, C_Ein, eta, C_kW, C_kWh, LT):
 
 #%%
 
-DD = np.logspace(np.log2(1),np.log2(1024), base=2)
-num_cycles_year = np.logspace(np.log10(1),np.log10(10000), base=10)
+DD = np.logspace(np.log2(1),np.log2(1024), base=2, num=500)
+num_cycles_year = np.logspace(np.log10(1),np.log10(10000), base=10, num=500)
 
 DD_2d, ncy_2d = np.meshgrid(DD, num_cycles_year)
 
@@ -39,6 +39,8 @@ da_CF = da_CF.where(da_CF <= 1)
 da_CF
 
 #%%
+plt.figure()
+
 da_CF.plot(norm=mpl.colors.LogNorm())
 plt.xscale('log')
 plt.yscale('log')
@@ -58,6 +60,8 @@ LT = 20
 da_lcos = calc_lcos(da_CF.coords['DD'], da_CF, C_Ein=C_Ein, eta=eta, C_kW=C_kW, C_kWh=C_kWh, LT=LT)
 da_lcos
 # %%
+plt.figure()
+
 da_lcos.plot(norm=mpl.colors.LogNorm())
 plt.xscale('log')
 plt.yscale('log')

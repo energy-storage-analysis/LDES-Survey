@@ -5,25 +5,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import iqplot
-from bokeh.io import output_notebook, show
-from bokeh.models import ColumnDataSource, HoverTool, Range1d
-from bokeh.io import output_file
-
-
+from bokeh.io import show, output_file
 
 df_prices = pd.read_csv('data/df_prices.csv', index_col=0)
-
-
-#%%
 
 df_singlemat = pd.read_csv('data/df_singlemat.csv', index_col=0) 
 df_singlemat = df_singlemat.dropna(subset=['specific_energy'])
 
-
 df_singlemat['specific_price'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_singlemat.index]
 df_singlemat['price_type'] = [df_prices['price_type'][f] if f in df_prices.index else np.nan for f in df_singlemat.index]
-
-df_singlemat.info()
 
 #%%k
 
@@ -39,8 +29,6 @@ df_couples.index.name = 'index'
 df_couples['original_name'] = df_couples.index
 df_couples['price_type'] = 'TODO'
 
-df_couples.info()
-
 # %%
 
 col_select = ['energy_type', 'specific_energy','specific_price', 'source', 'original_name','price_type']
@@ -51,8 +39,6 @@ df_all = pd.concat([
 ]) 
 
 df_all['C_kwh'] = df_all['specific_price']/df_all['specific_energy']
-
-df_all
 
 #%%
 cat_label = 'energy_type'
@@ -77,22 +63,17 @@ fig.axes[0].yaxis.set_ticks([np.log10(x) for p in range(-1,4) for x in np.linspa
 plt.xticks(rotation=45)
 plt.ylabel('Material Energy Cost ($/kWh)')
 plt.tight_layout()
-plt.savefig('output/fig_C_kwh_avgprice.png')
+plt.savefig('output/fig_C_kwh.png')
 # %%
-
-# %%
-
 #Raw entries
 
-df_vis_2 = df_all.reset_index().dropna(subset= ['C_kwh'])
-
-
+df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
 #%%
 
 tips = [('index','@index'), ('entry source','@source'), ('original name', '@original_name'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy'), ("price type",'@price_type')]
 
 figure = iqplot.strip(
-    data=df_vis_2, cats='energy_type', q='C_kwh', 
+    data=df_vis, cats='energy_type', q='C_kwh', 
     q_axis='y',y_axis_type='log' ,
     jitter=True,
     tooltips= tips,
@@ -108,5 +89,3 @@ figure.xaxis.major_label_text_font_size = "16pt"
 
 output_file('output/mat_cost_compare.html')
 show(figure)
-
-
