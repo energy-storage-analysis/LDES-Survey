@@ -39,9 +39,6 @@ df['energy_type'] = energy_type
 #%%
 
 
-df.to_csv('data/df_singlemat.csv')
-
-
 ## Collect prices 
 
 #%%
@@ -52,21 +49,21 @@ def join_material_dups(df_dup, column):
 
 s_temp = df.groupby('index').apply(join_material_dups, column='source')
 s_temp.name = 'source'
-df_price = s_temp.to_frame()
+df_prices = s_temp.to_frame()
 
-df_price['material_names']= df.groupby('index').apply(join_material_dups, column='material_name')
-df_price['energy_types']= df.groupby('index').apply(join_material_dups, column='energy_type')
-df_price['num_source'] = df_price['source'].str.split(',').apply(len)
-df_price['specific_price_refs'] = df.groupby('index')['specific_price'].mean()
+df_prices['material_names']= df.groupby('index').apply(join_material_dups, column='material_name')
+df_prices['energy_types']= df.groupby('index').apply(join_material_dups, column='energy_type')
+df_prices['num_source'] = df_prices['source'].str.split(',').apply(len)
+df_prices['specific_price_refs'] = df.groupby('index')['specific_price'].mean()
 
-# df_price['specific_energy'] = df.groupby('index')['specific_energy'].mean()
+# df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
-df_price
+df_prices
 
 #%%
 
 
-df_price
+df_prices
 
 
 #%%
@@ -97,23 +94,23 @@ def calculate_formula_price(chemparse_dict):
 
     return price
 
-f_dicts = [chemparse.parse_formula(f) for f in df_price.index]
+f_dicts = [chemparse.parse_formula(f) for f in df_prices.index]
 e_price = [calculate_formula_price(d) for d in f_dicts]
-df_price['specific_price_element'] = e_price
-df_price
+df_prices['specific_price_element'] = e_price
+df_prices
 
 #%%
 
 #TODO: reexamine. Happening with Alva rock material (quartzite) that also doesn't happen to be on pubchem
 # Need to figure out how to tie to USGS prices anyway
-df_price = df_price.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
+df_prices = df_prices.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
 
 
 #%%
 
-# df_price['specific_price_avg'] = np.sum([
-#     df_price['specific_price_refs'],
-#     df_price['specific_price_element']
+# df_prices['specific_price_avg'] = np.sum([
+#     df_prices['specific_price_refs'],
+#     df_prices['specific_price_element']
 # ])/2
 
 
@@ -122,7 +119,7 @@ df_price = df_price.dropna(subset=['specific_price_refs', 'specific_price_elemen
 specific_prices = []
 price_types = []
 
-for idx, row in df_price.iterrows():
+for idx, row in df_prices.iterrows():
     if row['specific_price_refs'] == row['specific_price_refs']:
         specific_price = row['specific_price_refs']
         price_type = 'Ref(s)' 
@@ -133,8 +130,8 @@ for idx, row in df_price.iterrows():
     specific_prices.append(specific_price)
     price_types.append(price_type)
 
-df_price['specific_price'] = specific_prices
-df_price['price_type'] = price_types
+df_prices['specific_price'] = specific_prices
+df_prices['price_type'] = price_types
     
 
     
@@ -142,7 +139,18 @@ df_price['price_type'] = price_types
 
 #%%
 
-df_price.to_csv('data/df_prices.csv')
+df_prices.to_csv('data/df_prices.csv')
+
+#%%
+
+# Apply prices to signle mat data
+df['specific_price'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df.index]
+df['price_type'] = [df_prices['price_type'][f] if f in df_prices.index else np.nan for f in df.index]
+
+
+
+df.to_csv('data/df_singlemat.csv')
+
 
 
 #%%
@@ -160,6 +168,17 @@ df_ec = pd.concat([
     df_ec_li[col_select],
     df_ec_lmb[col_select],
 ])
+
+df_ec['SP_A'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_ec['A']]
+df_ec['SP_B'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_ec['B']]
+
+#TODO: chech this equation
+df_ec['specific_price'] = (df_ec['SP_A']*df_ec['mu_A'] + df_ec['SP_B']*df_ec['mu_B'])/(df_ec['mu_A']+df_ec['mu_B'])
+
+df_ec['energy_type'] = 'EC Couple'
+df_ec.index.name = 'index'
+df_ec['original_name'] = df_ec.index
+df_ec['price_type'] = 'TODO'
 
 df_ec.to_csv('data/df_couples.csv')
 #%%

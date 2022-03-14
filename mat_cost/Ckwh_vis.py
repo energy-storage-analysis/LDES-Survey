@@ -12,22 +12,8 @@ df_prices = pd.read_csv('data/df_prices.csv', index_col=0)
 df_singlemat = pd.read_csv('data/df_singlemat.csv', index_col=0) 
 df_singlemat = df_singlemat.dropna(subset=['specific_energy'])
 
-df_singlemat['specific_price'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_singlemat.index]
-df_singlemat['price_type'] = [df_prices['price_type'][f] if f in df_prices.index else np.nan for f in df_singlemat.index]
-
-#%%k
-
 df_couples = pd.read_csv('data/df_couples.csv', index_col=0) 
-df_couples['SP_A'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_couples['A']]
-df_couples['SP_B'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_couples['B']]
 
-#TODO: chech this equation
-df_couples['specific_price'] = (df_couples['SP_A']*df_couples['mu_A'] + df_couples['SP_B']*df_couples['mu_B'])/(df_couples['mu_A']+df_couples['mu_B'])
-
-df_couples['energy_type'] = 'EC Couple'
-df_couples.index.name = 'index'
-df_couples['original_name'] = df_couples.index
-df_couples['price_type'] = 'TODO'
 
 # %%
 
