@@ -4,6 +4,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import matplotlib as mpl
+
+plt.rcParams.update({
+    # "figure.facecolor":  (1.0, 0.0, 0.0, 0.3),  # red   with alpha = 30%
+    # "axes.facecolor":    (0.0, 1.0, 0.0, 0.5),  # green with alpha = 50%
+    "savefig.facecolor": 'white',
+    "font.size": 14
+})
 # %%
 
 def calc_lcos(DD, CF, C_Ein, eta, C_kW, C_kWh, LT):
@@ -88,3 +95,42 @@ plt.xlabel('Discharge Duration')
 plt.ylabel('LCOS ($/kWh)')
 
 plt.savefig('output/LCOS_CF_fig.png')
+
+
+
+#%%
+
+plt.figure()
+DDs = np.logspace(np.log10(1), np.log10(300), 5)
+
+DDs = [round(n,3) for n in DDs] #TODO
+
+C_kWh = np.logspace(np.log10(1), np.log10(1000), num=500)
+LCOS_set = 0.05
+DD_set = 10
+PE = 0.05
+for DD_set in DDs:
+    C_kW = LT*8760*eta*( LCOS_set - ( (1/eta)-1 )*PE ) - C_kWh*DD_set
+
+    plt.plot(C_kWh, C_kW, label=DD_set)
+    plt.xscale('log')
+    plt.yscale('log')
+
+
+plt.legend(title='Discharge Duration')
+plt.xlabel('Energy Capital Cost ($/kWh)')
+plt.ylabel('Power Capital Cost ($/kW)')
+
+plt.savefig('output/EP_capitaltradeoff.png')
+# %%
+
+plt.figure()
+
+C_kW_set = 100
+C_kWh = np.logspace(np.log10(1), np.log10(1000))
+
+DD = ( LT*8760*eta*( LCOS_set - ( (1/eta)-1 )*PE ) - C_kW_set)/C_kWh
+
+plt.plot(C_kWh, DD)
+plt.xscale('log')
+plt.yscale('log')
