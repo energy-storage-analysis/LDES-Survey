@@ -65,11 +65,30 @@ from es_utils.chem import process_chem_lookup
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = process_chem_lookup(chem_lookup)
-df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+df = pd.merge(df, chem_lookup, on='original_name')
 # df = df.drop('original_name', axis=1)
+
+#Grouping by the orignal name above, can keep a lot of the original data (this basically averages over years)
+df.to_csv('output/processed_orig.csv', index=False)
+
 #%%
 
-df = df[['material_name','molecular_formula','commodity', 'extra_info', 'specific_price',  'price_desc']]
+# To group by the index name, for now just drop everything other than the price. (USGS metadata can change for the same index, e.g. clays)
+
+
+df = df[['index','specific_price']]
+#%%
+cols_not_price = [col for col in df.columns if col != 'specific_price']
+
+df = pd.concat([
+df[cols_not_price].groupby('index').first(),
+df[['index','specific_price']].groupby('index').mean()
+], axis=1)
+df
+
+
+#%%
+
 
 #%%
 

@@ -5,8 +5,8 @@ Arsenic Mtl-CN,Arsenic,,pubchem_formula,As
 Arsenic Triox-CN,Arsenic Trioxide,,pubchem_formula,As2O3
 Arsenic Triox-MA,Arsenic Trioxide,,pubchem_formula,As2O3
 Asbestos Customs,Asbestos,,material_name,
-"Barite ",Barite,,pubchem_formula,BaO4S
-Bauxite and Alumina Bauxite,Bauxite,,pubchem_formula,AlHO2
+"Barite ",Barite,,material_name,BaO4S
+Bauxite and Alumina Bauxite,Bauxite,,material_name,AlHO2
 Bauxite and Alumina Alumina,Alumina,,pubchem_formula,Al2O3
 Beryllium Alloy,Beryllium,,pubchem_formula,Be
 "Bismuth ",Bismuth,,pubchem_formula,Bi
@@ -17,27 +17,27 @@ Cement Avg,Cement,,material_name,
 Chromium Ore,Chromite,,pubchem_formula,CrFeO4
 Chromium Ferrrochromium,Ferrrochromium,,material_name,
 Chromium Metal,Chromium,,pubchem_formula,Cr
-Clays Ball,Clay,,pubchem_formula,Al2O5Si
-Clays Bentonite,Clay,,pubchem_formula,Al2O5Si
-Clays Common,Clay,,pubchem_formula,Al2O5Si
-Clays Fire,Clay,,pubchem_formula,Al2O5Si
-Clays Fullers,Clay,,pubchem_formula,Al2O5Si
-Clays Kaolin,Clay,,pubchem_formula,Al2O5Si
+Clays Ball,Clay,,material_name,Al2O5Si
+Clays Bentonite,Clay,,material_name,Al2O5Si
+Clays Common,Clay,,material_name,Al2O5Si
+Clays Fire,Clay,,material_name,Al2O5Si
+Clays Fullers,Clay,,material_name,Al2O5Si
+Clays Kaolin,Clay,,material_name,Al2O5Si
 Cobalt Spot,Cobalt,,pubchem_formula,Co
 Cobalt LME,Cobalt,,pubchem_formula,Co
 Copper US,Copper,,pubchem_formula,Cu
 Copper COMEX,Copper,,pubchem_formula,Cu
 Copper LME,Copper,,pubchem_formula,Cu
-Diamond (Industrial) Bort_Imports,Diamond,,pubchem_formula,CH4
-Diamond (Industrial) Stones_Imports,Diamond,,pubchem_formula,CH4
-"Diatomite ",Diatomite,,pubchem_formula,O2Si
-Feldspar and Nepheline Syenite Feldspar,Feldspar,,pubchem_formula,AlKO8Si3
+Diamond (Industrial) Bort_Imports,Diamond,,material_name,CH4
+Diamond (Industrial) Stones_Imports,Diamond,,material_name,CH4
+"Diatomite ",Diatomite,,material_name,O2Si
+Feldspar and Nepheline Syenite Feldspar,Feldspar,,material_name,AlKO8Si3
 Feldspar and Nepheline Syenite Nepheline_syenite,Syenite,,material_name,
 "Iron Ore ",Iron Ore,,pubchem_formula,Fe2O3
 "Iron Oxide Pigments ",Iron Oxide,,pubchem_formula,Fe2O3
 "Iron and Steel Scrap ",Iron,,pubchem_formula,Fe
 "Iron and Steel Slag ",Iron,,pubchem_formula,Fe
-"Iron and Steel ",Iron,,pubchem_formula,Fe
+"Iron and Steel ",Steel,,material_name,Fe
 Fluorspar Acid,Fluorspar,,pubchem_formula,CaF2
 Fluorspar Metallurgical,Fluorspar,,pubchem_formula,CaF2
 Gallium High-purity,Gallium,,pubchem_formula,Ga
@@ -46,16 +46,16 @@ Garnet (Industrial) Import,Gallium,,pubchem_formula,Ga
 Germanium Metal,Germanium,,pubchem_formula,Ge
 Germanium GeO2,Germanium Dioxide,,pubchem_formula,GeO2
 "Gold ",Gold,,pubchem_formula,Au
-Graphite (Natural) Flake,Graphite,,pubchem_formula,CH4
-Graphite (Natural) Lump,Graphite,,pubchem_formula,CH4
-Graphite (Natural) Amorphous,Graphite,,pubchem_formula,CH4
+Graphite (Natural) Flake,Graphite,,material_name,CH4
+Graphite (Natural) Lump,Graphite,,material_name,CH4
+Graphite (Natural) Amorphous,Graphite,,material_name,CH4
 Gypsum Mine,Gypsum,,pubchem_formula,CaO4S
 Gypsum Plant,Gypsum,,pubchem_formula,CaO4S
 Indium NY,Indium,,pubchem_formula,In
 Indium FOB,Indium,,pubchem_formula,In
 Indium Rotterdam,Indium,,pubchem_formula,In
 Iodine Crude_CIF,Iodine,,pubchem_formula,I2
-Kyanite and Related Minerals FOB,kyanite,,pubchem_formula,Al2H6O5Si
+Kyanite and Related Minerals FOB,kyanite,,material_name,Al2H6O5Si
 Lead North_American,Lead,,pubchem_formula,Pb
 Lead LME,Lead,,pubchem_formula,Pb
 Lime Quicklime,Lime,,pubchem_formula,CaO
@@ -70,8 +70,8 @@ Magnesium Metal European,Magnesium,,pubchem_formula,Mg
 "Nickel ",Nickel,,pubchem_formula,Ni
 "Niobium (Columbium) ","Niobium ",,pubchem_formula,Nb
 "Nitrogen (Fixed)--Ammonia ",Ammonia,,pubchem_formula,H3N
-"Peat ",Peat,,pubchem_formula,K
-Perlite FOB,Perlite,,pubchem_formula,Al2CaFe2K2MgNa2O12Si
+"Peat ",Peat,,material_name,K
+Perlite FOB,Perlite,,material_name,Al2CaFe2K2MgNa2O12Si
 "Phosphate Rock ",Phosphorite,,material_name,
 Platinum-Group Metals Palladium,Palladium,,pubchem_formula,Pd
 Platinum-Group Metals Platinum,Platinum,,pubchem_formula,Pt
@@ -80,14 +80,14 @@ Platinum-Group Metals Rhodium,Rhodium,,pubchem_formula,Rh
 Platinum-Group Metals Ruthenium,Ruthenium,,pubchem_formula,Ru
 Potash All,Potassium Oxide,,pubchem_formula,K2O
 Potash Muriate,Potassium Chloride,,pubchem_formula,ClK
-"Pumice and Pumicite ",Pumice,,pubchem_formula,C28FH37O7
-Quartz Crystal (Industrial) Cultured,Quartz,,pubchem_formula,O2Si
-Quartz Crystal (Industrial) Lumbered,Quartz,,pubchem_formula,O2Si
+"Pumice and Pumicite ",Pumice,,material_name,C28FH37O7
+Quartz Crystal (Industrial) Cultured,Quartz,,material_name,O2Si
+Quartz Crystal (Industrial) Lumbered,Quartz,,material_name,O2Si
 Rare Earths CeO2,,CeO2,molecular_formula,
 Rare Earths Dy2O3,,Dy2O3,molecular_formula,
 Rare Earths Eu2O3,,Eu2O3,molecular_formula,
 Rare Earths La2O3,,La2O3,molecular_formula,
-Rare Earths Mischmetal,Mischmetal,,pubchem_formula,C3CeH8LaNd
+Rare Earths Mischmetal,Mischmetal,,material_name,C3CeH8LaNd
 Rare Earths Nd2O3,,Nd2O3,molecular_formula,
 Rare Earths TbO2,,TbO2,molecular_formula,
 Rhenium Metal,Rhenium,,pubchem_formula,Re
@@ -96,8 +96,8 @@ Salt Vacuum,Sodium Chloride,,pubchem_formula,ClNa
 Salt Solar,Sodium Chloride,,pubchem_formula,ClNa
 Salt Rock,Sodium Chloride,,pubchem_formula,ClNa
 Salt Brine,Sodium Chloride,,pubchem_formula,ClNa
-"Sand and Gravel (Construction) ",Gravel,,pubchem_formula,C15H21NO
-"Sand and Gravel (Industrial) ",Gravel,,pubchem_formula,C15H21NO
+"Sand and Gravel (Construction) ",Gravel,,material_name,C15H21NO
+"Sand and Gravel (Industrial) ",Gravel,,material_name,C15H21NO
 Scandium Cmpds_Acetate,Scandium Acetate,,pubchem_formula,C6H12O6Sc
 Scandium Cmpds_Chloride,Scandium Chloride,,pubchem_formula,Cl3Sc
 Scandium Cmpds_Fluoride,Scandium Fluoride,,pubchem_formula,F3Sc
@@ -105,7 +105,7 @@ Scandium Cmpds_Iodide,Scandium Iodide,,pubchem_formula,I3Sc
 Scandium Cmpds_Oxide,Scandium Oxide,,pubchem_formula,O3Sc2
 Scandium Mtl_Dendritic,Scandium,,pubchem_formula,Sc
 Scandium Mtl_Ingot,Scandium,,pubchem_formula,Sc
-Scandium Mtl_Alloy,Scandium Aluminum Alloy,,pubchem_formula,
+Scandium Mtl_Alloy,Scandium Aluminum Alloy,AlSc,molecular_formula,
 "Selenium ",Selenium,,pubchem_formula,Se
 Silver Bullion,Silver,,pubchem_formula,Ag
 Silicon FeSi2_50,Ferrosilicon,,pubchem_formula,FeSi2
@@ -117,7 +117,7 @@ Stone (Dimension) Average,Stone,,material_name,
 Stone (Dimension) Granite,Granite,,material_name,C16F5H14N5O5S
 "Strontium ",Celestite,,material_name,
 Sulfur Sulfur,Sulfur,S,molecular_formula,H2S
-"Talc and Pyrophyllite  ",Talc,,pubchem_formula,H2Mg3O12Si4
+"Talc and Pyrophyllite  ",Talc,,material_name,H2Mg3O12Si4
 Tantalum Ta2O5,Tantalum Pentoxide,,pubchem_formula,O5Ta2
 "Tellurium ",Tellurium,,pubchem_formula,Te
 Thallium Metal,Thallium,,pubchem_formula,Tl
@@ -131,10 +131,10 @@ Tin LME,Tin,,pubchem_formula,Sn
 Titanium and Titanium Dioxide Sponge,Titanium,,pubchem_formula,Ti
 Titanium and Titanium Dioxide Dioxide,Titanium Dioxide,,pubchem_formula,O2Ti
 Tungsten WO3,Tungsten Trioxide,,pubchem_formula,O3W
-Vermiculite Range,Vermiculite,,pubchem_formula,AlFeH3MgO6Si-3
+Vermiculite Range,Vermiculite,,material_name,AlFeH3MgO6Si-3
 Yttrium Y2O3,Yttrium Oxide,,pubchem_formula,O3Y2
 Yttrium Metal,Yttrium,,pubchem_formula,Y
-Zeolites (Natural) Range,Zeolite,,pubchem_formula,Al2O5Si
+Zeolites (Natural) Range,Zeolite,,material_name,Al2O5Si
 "Zinc ",Zinc,,pubchem_formula,Zn
 Zinc LME,Zinc,,pubchem_formula,Zn
 Zirconium and Hafnium Zircon_AU,Zirconium Silicate,,pubchem_formula,O4SiZr
