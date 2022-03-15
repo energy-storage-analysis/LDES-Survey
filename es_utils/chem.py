@@ -1,4 +1,3 @@
-from re import S
 import numpy as np
 import pandas as pd
 
@@ -13,7 +12,6 @@ def get_top_formula(formula_dict):
     else:
         return None
 
-
 from mat2vec.processing import MaterialsTextProcessor
 mtp = MaterialsTextProcessor()
 
@@ -23,10 +21,6 @@ def mat2vec_process(f):
     f = str(f)
     s = mtp.process(f)[0][0]
     return s
-
-
-# pubchem_lookup = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\mat_cost\data\pubchem_lookup.csv', index_col=0)
-# pubchem_forms = pubchem_lookup['pubchem_top_formula']
 
 def process_chem_lookup(chem_lookup):
     if 'molecular_formula' in chem_lookup.index:
