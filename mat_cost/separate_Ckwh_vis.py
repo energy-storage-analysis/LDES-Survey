@@ -4,9 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-import iqplot
-from bokeh.io import show, output_file
+import matplotlib as mpl
 
+mpl.rcParams.update({'font.size': 16})
 
 df_prices = pd.read_csv('data/df_prices.csv', index_col=0)
 
@@ -45,16 +45,19 @@ mat_cost_line = energy_densities_line*10
 #%%
 
 import seaborn as sns
-fig = plt.figure(figsize=(9,6))
+fig = plt.figure(figsize=(10,6))
 
 sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='energy_type', hue='energy_type')
 plt.xscale('log')
 plt.yscale('log')
-plt.gca().get_legend().set_bbox_to_anchor([0,0,1.4,1])
+# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.6,1])
+
+plt.xlabel('Energy Density (kWh/kg)')
+plt.ylabel('Material cost ($/kg)')
 
 plt.plot(energy_densities_line, mat_cost_line, color='gray')
 
-plt.tight_layout()
+# plt.tight_layout()
 
 plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False,)
 #%%
@@ -62,7 +65,7 @@ plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False,)
 energy_types = df_all['energy_type'].value_counts().index
 energy_types
 
-fig, axes = plt.subplots(1, len(energy_types), figsize=(15,4), sharex=True, sharey=True)
+fig, axes = plt.subplots(1, len(energy_types), figsize=(20,4), sharex=True, sharey=True)
 
 for i, energy_type in enumerate(energy_types):
     df_sel = df_all.where(df_all['energy_type'] == energy_type).dropna(how='all')
@@ -70,11 +73,13 @@ for i, energy_type in enumerate(energy_types):
     axes[i].set_xscale('log')
     axes[i].set_yscale('log')
     axes[i].set_title(energy_type)
-    axes[i].set_xlabel('Energy Density (kWh/kg)')
+    axes[i].set_xlabel('Energy Density \n(kWh/kg)')
 
     axes[i].plot(energy_densities_line, mat_cost_line, color='gray')
 
 axes[0].set_ylabel('Material Cost ($/kg)')
+
+fig.tight_layout()
 
 plt.savefig('output/C_kwh_linefig_separate.png', facecolor='white', transparent=False,)
 
