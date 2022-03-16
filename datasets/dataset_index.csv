@@ -1,12 +1,12 @@
 source,price_data_path,processing_script
 USGS,usgs/output/processed.csv,usgs/process.py
 ISE,ISE/output/processed.csv,ISE/process.py
-Alva 2018 (Sensible),pdf/alva_2018/output/sensible.csv,pdf/alva_2018/process.py
-Alva 2018 (Latent),pdf/alva_2018/output/latent.csv,
-Li 2017,pdf/li_2017/output/prices.csv,pdf/li_2017/process.py
-Andre 2016,pdf/andre_2016/output/process.csv,pdf/andre_2016/process.py
-Liu 2016,pdf/liu_2016/output/processed.csv,pdf/liu_2016/process.py
-Kale 2018,pdf/kale_2018/output/processed.csv,pdf/kale_2018/process.py
-Kim 2013,pdf/kim_2013/output/prices.csv,pdf/kim_2013/process.py
+Alva 2018 (Sensible),pub/alva_2018/output/sensible.csv,pub/alva_2018/process.py
+Alva 2018 (Latent),pub/alva_2018/output/latent.csv,
+Li 2017,pub/li_2017/output/prices.csv,pub/li_2017/process.py
+Andre 2016,pub/andre_2016/output/process.csv,pub/andre_2016/process.py
+Liu 2016,pub/liu_2016/output/processed.csv,pub/liu_2016/process.py
+Kale 2018,pub/kale_2018/output/processed.csv,pub/kale_2018/process.py
+Kim 2013,pub/kim_2013/output/prices.csv,pub/kim_2013/process.py
 custom_data,custom_data/custom_data.csv,
-Alok 2021,pdf/alok_2021/output/processed.csv,pdf/alok_2021/process.py
+Alok 2021,pub/alok_2021/output/processed.csv,pub/alok_2021/process.py
