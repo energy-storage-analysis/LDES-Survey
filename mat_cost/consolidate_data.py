@@ -150,9 +150,9 @@ df.to_csv('data/df_singlemat.csv')
 #%%
 
 
-df_ec_li = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\li_2017\output\couples.csv',index_col=0)
+df_ec_li = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\datasets\pub\li_2017\output\couples.csv',index_col=0)
 df_ec_li['source'] = 'Li 2017'
-df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\datasets\pdf\kim_2013\output\couples.csv', index_col=0)
+df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\datasets\pub\kim_2013\output\couples.csv', index_col=0)
 df_ec_lmb['type'] = 'Liquid Metal'
 df_ec_lmb['source'] = 'Kim 2013'
 

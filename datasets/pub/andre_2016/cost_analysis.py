@@ -12,8 +12,8 @@ import sys
 
 
 
-usgs_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\pdf_data\usgs\output'
-ise_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy Storage Analysis\pdf_data\ISE\output'
+usgs_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\pdf_data\usgs\output'
+ise_folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\pdf_data\ISE\output'
 
 df_ise_chem = pd.read_csv(os.path.join(ise_folder, 'ISE_chem_data.csv'), index_col=0)
 
