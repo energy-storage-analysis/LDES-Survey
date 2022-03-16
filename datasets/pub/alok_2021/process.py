@@ -2,7 +2,8 @@
 import pandas as pd
 import os
 
-df_table12 = pd.read_csv('tables/table_12.csv', index_col=0)
+#TODO: process salt mixture table
+df_table12 = pd.read_csv('tables/table_12_single.csv', index_col=0)
 
 #I am not sure exatly what the other 'latent heat' entry is in the table (booiling?)
 df_table12 = df_table12.rename({
