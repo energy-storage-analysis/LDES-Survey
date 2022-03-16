@@ -35,17 +35,11 @@ table_3.to_csv('output/prices.csv')
 #%%
 df = pd.read_csv('tables/table_2.csv')
 
+df = df.rename({'C_kwh': 'C_kwh_orig'}, axis=1)
+
 df = df.dropna(how='all')
 
 df = df.drop('ref',axis=1)
-
-df['type'] = df['type'].str.replace('\n','')
-
-df = df.rename({'C_kwh': 'C_kwh_orig'}, axis=1)
-
-df['ancat'] = df['ancat'].str.replace('\n','')
-df['ancat'] = df['ancat'].str.replace('F-','Fe') #TODO: looks like regex to replace 'e' in table extraction accidentally gets Fe with charge \d+-, but don't want to change without testing other tables. 
-
 
 df['ancat'] = df['ancat'].str.replace('Cu0','Cr')
 df['ancat'] = df['ancat'].str.replace('Fe0','Fe')
@@ -87,13 +81,6 @@ df = df.rename({'anode':'A', 'cathode':'B'}, axis=1)
 
 # df['anode'].where(~df['anode'].isin(chem_lookup['molecular_formula'])).dropna()
 
-
-# %%
-
-df['A'].where(~df['A'].isin(chem_lookup['molecular_formula'])).dropna()
-# %%
-
-df['B'].where(~df['B'].isin(chem_lookup['molecular_formula'])).dropna()
 # %%
 
 
@@ -112,7 +99,7 @@ def get_molecular_mass(f):
     return total_mm
 
 df['mu_A'] = [get_molecular_mass(f) for f in df['A']]
-df['mu_B'] = [get_molecular_mass(f)for f in df['B']]
+df['mu_B'] = [get_molecular_mass(f) for f in df['B']]
 
 #%%
 

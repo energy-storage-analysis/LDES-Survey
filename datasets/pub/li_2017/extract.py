@@ -54,6 +54,18 @@ axis=1)
 
 df_table2 = df_table2.drop(' ',axis=1)
 
+#TODO: improve
+df_table2['type'] = df_table2['type'].str.replace('\n','')
+df_table2['type'] = df_table2['type'].str.replace('\r','')
+df_table2['ancat'] = df_table2['ancat'].str.replace('\n','')
+df_table2['ancat'] = df_table2['ancat'].str.replace('\r','')
+df_table2['label'] = df_table2['label'].str.replace('\n','')
+df_table2['label'] = df_table2['label'].str.replace('\r','')
+df_table2['ref'] = df_table2['ref'].str.replace('\n','')
+df_table2['ref'] = df_table2['ref'].str.replace('\r','')
+
+df_table2['ancat'] = df_table2['ancat'].str.replace('F-','Fe') #TODO: looks like regex to replace 'e' in table extraction accidentally gets Fe with charge \d+-, but don't want to change without testing other tables. 
+
 
 tables['table_2'] = df_table2
 #%%
