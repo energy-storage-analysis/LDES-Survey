@@ -1,8 +1,8 @@
 original_name,material_name,molecular_formula,index_use,pubchem_formula
 MgSO4,,MgO4S,molecular_formula,
-MnSO4,,MnO4S,molecular_formula,
+MnSO4,Manganese sulphate,MnO4S,molecular_formula,MnO4S
 FeSO4,,FeO4S,molecular_formula,
-CoSO4,,CoO4S,molecular_formula,
+CoSO4,Cobalt Sulphate,CoO4S,molecular_formula,CoO4S
 CuSO4,,CuO4S,molecular_formula,
 ZnSO4,,O4SZn,molecular_formula,
 CdSO4,,CdO4S,molecular_formula,
@@ -29,7 +29,7 @@ Co3O4,,Co3O4,molecular_formula,
 Mn3O4,,Mn3O4,molecular_formula,
 CuO,,CuO,molecular_formula,
 Li2O2,,LiO,molecular_formula,
-Fe2O3,Iron Ore,Fe2O3,material_name,
+Fe2O3,Iron Ore,Fe2O3,material_name,Fe2O3
 BaO2,,BaO2,molecular_formula,
 MgO2,,MgO2,molecular_formula,
 Cr5O12,,Cr5O12,molecular_formula,

@@ -9,7 +9,6 @@ Al30Mg17Zn3,Alva 2018 (Latent),,latent_thermal,1,,2.0494178,2.0494178,Element
 Al59Mg33Zn6,Alva 2018 (Latent),,latent_thermal,1,,2.0495696,2.0495696,Element
 AlSc,USGS,,,1,340.0,2162.93108,340.0,Ref(s)
 AlZn24,Alva 2018 (Latent),,latent_thermal,1,,2.5371525,2.5371525,Element
-Aluminosilicate,Liu 2016,Aluminosilicate,,1,1.93,,1.93,Ref(s)
 Ammonium Teptamolybdate,ISE,,,1,19.018,,19.018,Ref(s)
 Antimony Ethylene Glycoxide,ISE,,,1,5.299,,5.299,Ref(s)
 As,"USGS, ISE",,,2,1.3435,1.1545,1.3435,Ref(s)
@@ -28,6 +27,7 @@ BeH2O2,Andre 2016,,thermochemical,1,,179.6852589,179.6852589,Element
 Bi,"USGS, ISE, Kim 2013",,,3,12.7341164,6.36,12.7341164,Ref(s)
 Bi2O3,ISE,,,1,6.497,5.7207374,6.497,Ref(s)
 BiNa3,Alva 2018 (Sensible),Sodium Bismuth,sensible_thermal,1,13.0,5.5262633,13.0,Ref(s)
+Br,USGS,,,1,2.442,4.39,2.442,Ref(s)
 C,"Li 2017, Liu 2016","Carbon, Activated Carbon",,2,16.375,0.122,16.375,Ref(s)
 C2O6Zr,ISE,,,1,3.3825,15.8031971,3.3825,Ref(s)
 C6H12O6Sc,USGS,,,1,44200.0,691.1577074,44200.0,Ref(s)
@@ -44,7 +44,7 @@ CO3Pb,Andre 2016,,thermochemical,1,,1.5839978,1.5839978,Element
 CO3Sr,Andre 2016,,thermochemical,1,,3.9801865,3.9801865,Element
 CO3Zn,Andre 2016,,thermochemical,1,,1.4002606,1.4002606,Element
 CW,ISE,,,1,28.475,33.1426306,28.475,Ref(s)
-Ca,"ISE, Kim 2013",,,2,3.8465316,2.28,3.8465316,Ref(s)
+Ca,"ISE, Kim 2013",,,2,3.6333941,2.28,3.6333941,Ref(s)
 Ca21Mg30Si49,Alva 2018 (Latent),,latent_thermal,1,,2.0190492,2.0190492,Element
 Ca4Mg21,Alva 2018 (Latent),,latent_thermal,1,,2.3104394,2.3104394,Element
 CaCl2,"Alva 2018 (Latent), Li 2017, Alok 2021",,"latent_thermal, latent_thermal",3,1.87,0.8757739,1.87,Ref(s)
@@ -53,7 +53,7 @@ CaH2O2,Andre 2016,,thermochemical,1,,1.3376312,1.3376312,Element
 CaN2O6,Alva 2018 (Latent),,latent_thermal,1,,0.6708852,0.6708852,Element
 CaO,USGS,,,1,0.1560983,1.6734434,0.1560983,Ref(s)
 CaO4S,"USGS, Alva 2018 (Latent)",,latent_thermal,2,13.5099208,0.7654368,13.5099208,Ref(s)
-Cd,"USGS, ISE, Kim 2013",,,3,2.8309995,2.73,2.8309995,Ref(s)
+Cd,"USGS, ISE, Kim 2013",,,3,2.8906861,2.73,2.8906861,Ref(s)
 Cd(OH)2,Li 2017,,,1,3.43,2.1486338,3.43,Ref(s)
 CdH2O2,Andre 2016,,thermochemical,1,,2.1486338,2.1486338,Element
 CdO4S,Andre 2016,,thermochemical,1,,1.5336229,1.5336229,Element
@@ -71,10 +71,9 @@ ClLi,"ISE, Alva 2018 (Latent), Liu 2016, Alok 2021",Lithium chloride,"latent_the
 ClNa,"USGS, Alva 2018 (Latent), Liu 2016, Alok 2021",Sodium Chloride,"latent_thermal, latent_thermal",4,0.7699673,1.2299194,0.7699673,Ref(s)
 Clay,USGS,,,1,0.0792929,,0.0792929,Ref(s)
 Co,"USGS, ISE",,,2,39.2330222,32.8,39.2330222,Ref(s)
-Co3O4,"ISE, Andre 2016",,thermochemical,2,22.15,24.1237054,22.15,Ref(s)
+Co3O4,"ISE, Andre 2016",,thermochemical,2,22.2,24.1237054,22.2,Ref(s)
 CoO,ISE,,,1,31.6,25.8296535,31.6,Ref(s)
-CoO4S,"ISE, Andre 2016",,thermochemical,2,5.3715,12.5546359,5.3715,Ref(s)
-Cobalt Tetroxide,ISE,,,1,22.25,,22.25,Ref(s)
+CoO4S,"ISE, Andre 2016",Cobalt Sulphate,thermochemical,2,5.3715,12.5546359,5.3715,Ref(s)
 Cr,"USGS, ISE, Alok 2021",,latent_thermal,3,7.9403712,9.4,7.9403712,Ref(s)
 Cr5O12,Andre 2016,,thermochemical,1,,5.4724673,5.4724673,Element
 CrCl3(H2O)6,Li 2017,,,1,2.04,1.985769,2.04,Ref(s)
@@ -96,16 +95,16 @@ FLi,"Alva 2018 (Latent), Alok 2021",,"latent_thermal, latent_thermal",2,110.0162
 FNa,"Alva 2018 (Latent), Alok 2021",,"latent_thermal, latent_thermal",2,4.605,2.5475296,4.605,Ref(s)
 Fe,USGS,,,1,0.1801177,0.424,0.1801177,Ref(s)
 FeCl2,Li 2017,,,1,2.53,0.2326883,2.53,Ref(s)
+FeCr,USGS,,,1,2.5282612,4.7518212,2.5282612,Ref(s)
 FeH6O3Ti,"USGS, ISE",,,2,0.3898154,3.7092512,0.3898154,Ref(s)
 FeO4S,Andre 2016,,thermochemical,1,,0.240304,0.240304,Element
 FeSi2,USGS,,,1,2.2607303,1.0638511,2.2607303,Ref(s)
 Feldspar,USGS,,,1,0.1067037,,0.1067037,Ref(s)
-Ferrrochromium,USGS,,,1,2.5282612,,2.5282612,Ref(s)
 GRE,Kale 2018,,virial_limited,1,24.815,,24.815,Ref(s)
 Ga,"USGS, ISE, Kim 2013",,,3,373.2624041,148.0,373.2624041,Ref(s)
 Ge,"USGS, ISE",,,2,1187.075,962.0,1187.075,Ref(s)
 GeO2,"USGS, ISE",,,2,782.45,667.8421426,782.45,Ref(s)
-Graphite,"USGS, Liu 2016",Graphite,,2,1.8758292,,1.8758292,Ref(s)
+Graphite,"USGS, Li 2017, Liu 2016","Graphite, Graphite",,3,5.2505528,,5.2505528,Ref(s)
 Gravel,USGS,,,1,0.0291804,,0.0291804,Ref(s)
 H10MoN2S4,ISE,,,1,18.728,14.7832242,18.728,Ref(s)
 H2MgO2,Andre 2016,,thermochemical,1,,1.0994278,1.0994278,Element
@@ -120,7 +119,7 @@ H8N2O4W,ISE,,,1,20.1323333,22.9454634,20.1323333,Ref(s)
 HBr,Li 2017,,,1,3.33,4.3526261,3.33,Ref(s)
 HCl,Li 2017,,,1,0.65,0.1181639,0.65,Ref(s)
 HITEC XL,Alva 2018 (Sensible),HITEC XL,sensible_thermal,1,1.19,,1.19,Ref(s)
-HLiO,"ISE, Alva 2018 (Latent)",,latent_thermal,2,89.090625,24.3602525,89.090625,Ref(s)
+HLiO,Alva 2018 (Latent),,latent_thermal,1,165.0,24.3602525,165.0,Ref(s)
 HNaO,Alva 2018 (Latent),,latent_thermal,1,4.1,1.8210039,4.1,Ref(s)
 Hf,USGS,,,1,0.9038953,900.0,0.9038953,Ref(s)
 Hg,"USGS, Kim 2013",,,2,24.2285151,30.2,24.2285151,Ref(s)
@@ -144,24 +143,22 @@ La2O3,USGS,,,1,2.0,4.1582001,2.0,Ref(s)
 LaNi5,Li 2017,,,1,10.05,10.9925658,10.05,Ref(s)
 Li,"ISE, Li 2017, Kim 2013",Lithium,,3,70.7274681,83.5,70.7274681,Ref(s)
 Li2CO3,Liu 2016,Lithium Carbonate,,1,7.0,15.8055013,7.0,Ref(s)
-Li2MnO4,ISE,,,1,6.9685,9.553377,6.9685,Ref(s)
 Li2O4S,Alva 2018 (Latent),,latent_thermal,1,180.0,10.6589665,180.0,Ref(s)
 Li2S,Li 2017,,,1,1.87,25.2927461,1.87,Ref(s)
 Li2SO4,Li 2017,,,1,0.85,10.6589665,0.85,Ref(s)
 Li4Ti5O12,Li 2017,,,1,12.0,11.0567047,12.0,Ref(s)
-LiCoO2,Li 2017,,,1,40.0,25.7218325,40.0,Ref(s)
 LiFePO4,Li 2017,,,1,10.0,4.414086,10.0,Ref(s)
 LiMn1.5Ni0.5O4,Li 2017,,,1,20.0,6.2797463,20.0,Ref(s)
-LiMn2O4,Li 2017,,,1,10.0,4.3654154,10.0,Ref(s)
 LiMnPO4,Li 2017,,,1,10.0,4.9261259,10.0,Ref(s)
 LiNi0.33Co0.33Mn0.33O2,Li 2017,,,1,20.0,15.8997095,20.0,Ref(s)
 LiNi0.6Co0.2Mn0.2O2,Li 2017,,,1,25.0,15.2743837,25.0,Ref(s)
 LiNi0.8Co0.15Al0.05O2,Li 2017,,,1,34.0,15.9182576,34.0,Ref(s)
 LiO,Andre 2016,,thermochemical,1,,25.3696258,25.3696258,Element
-LiOH(H2O),Li 2017,,,1,1.52,14.0274785,1.52,Ref(s)
-Lithium Cobaltate,ISE,,,1,28.95,,28.95,Ref(s)
+Lithium Cobaltate,"ISE, Li 2017",Lithium Cobaltate,,2,34.475,,34.475,Ref(s)
+Lithium Hydroxide Monohydrate,"ISE, Li 2017",Lithium Hydroxide Monohydrate,,2,7.350625,,7.350625,Ref(s)
+Lithium Manganate,"ISE, Li 2017",Lithium Manganate,,2,8.48425,,8.48425,Ref(s)
 Metallurgical Silicon,"USGS, ISE, Ray 2021, Alok 2021","Metallurgical Silicon, Metallurgical Silicon","sensible_thermal, latent_thermal",4,1.9104838,,1.9104838,Ref(s)
-Mg,"USGS, ISE, Alva 2018 (Latent), Li 2017, Kim 2013, Alok 2021",,"latent_thermal, latent_thermal",6,47.6282911,2.32,47.6282911,Ref(s)
+Mg,"USGS, ISE, Alva 2018 (Latent), Li 2017, Kim 2013, Alok 2021",,"latent_thermal, latent_thermal",6,48.0126082,2.32,48.0126082,Ref(s)
 Mg11Si14,Alva 2018 (Latent),,latent_thermal,1,,1.9509444,1.9509444,Element
 Mg12Zn13,Alva 2018 (Latent),,latent_thermal,1,,2.4912388,2.4912388,Element
 Mg23Zn27,Alva 2018 (Latent),,latent_thermal,1,,2.4946823,2.4946823,Element
@@ -169,11 +166,11 @@ Mg47Si38Zn15,Alva 2018 (Latent),,latent_thermal,1,,2.1832961,2.1832961,Element
 MgO2,Andre 2016,,thermochemical,1,,1.0890235,1.0890235,Element
 MgO4S,"Alva 2018 (Latent), Andre 2016",,"latent_thermal, thermochemical",2,13.7,0.5750346,13.7,Ref(s)
 Mischmetal,USGS,,,1,5.8,,5.8,Ref(s)
-Mn,USGS,,,1,0.0062942,1.82,0.0062942,Ref(s)
+Mn,"USGS, ISE",,,2,1.0056471,1.82,1.0056471,Ref(s)
 Mn2O3,Andre 2016,,thermochemical,1,,1.3134982,1.3134982,Element
 Mn3O4,Andre 2016,,thermochemical,1,,1.3540358,1.3540358,Element
-MnO2,Li 2017,,,1,1.52,1.2068059,1.52,Ref(s)
-MnO4S,Andre 2016,,thermochemical,1,,0.7471247,0.7471247,Element
+MnO2,"ISE, Li 2017",,,2,1.562125,1.2068059,1.562125,Ref(s)
+MnO4S,"ISE, Andre 2016",Manganese sulphate,thermochemical,2,0.9875,0.7471247,0.9875,Ref(s)
 Mo,"USGS, ISE",,,2,34.5666667,40.1,34.5666667,Ref(s)
 MoNa2O4,ISE,,,1,12.485,19.4021054,12.485,Ref(s)
 MoO3,ISE,,,1,25.6673744,26.7805966,25.6673744,Ref(s)
@@ -205,7 +202,7 @@ NiO4S,Andre 2016,,thermochemical,1,,5.3548666,5.3548666,Element
 O2Pb,Andre 2016,,thermochemical,1,,1.7530568,1.7530568,Element
 O2Pt,Andre 2016,,thermochemical,1,,23882.7389564,23882.7389564,Element
 O2Se,ISE,,,1,12.7,15.2736989,12.7,Ref(s)
-O2Ti,USGS,,,1,1.6847726,6.8942777,1.6847726,Ref(s)
+O2Ti,"USGS, ISE",,,2,1.833053,6.8942777,1.833053,Ref(s)
 O2Zr,ISE,,,1,4.3555,26.9877237,4.3555,Ref(s)
 O3Rh2,Andre 2016,,thermochemical,1,,119201.2223238,119201.2223238,Element
 O3Sb2,ISE,,,1,5.3790972,4.8620572,5.3790972,Ref(s)
@@ -251,7 +248,7 @@ Talc,USGS,,,1,0.2680821,,0.2680821,Ref(s)
 TbO2,USGS,,,1,686.6,547.7476088,686.6,Ref(s)
 Te,"USGS, ISE, Kim 2013",,,3,153.3314176,63.5,153.3314176,Ref(s)
 Th,USGS,,,1,72.3333333,,72.3333333,Ref(s)
-Ti,"USGS, ISE",,,2,10.0580833,11.4,10.0580833,Ref(s)
+Ti,"USGS, ISE",,,2,13.4955,11.4,13.4955,Ref(s)
 Ti2S4,Li 2017,,,1,80.0,4.925762,80.0,Ref(s)
 TiS2,Li 2017,,,1,80.0,4.925762,80.0,Ref(s)
 Tl,"USGS, Kim 2013",,,2,6969.0413282,4200.0,6969.0413282,Ref(s)
@@ -260,12 +257,13 @@ VOSO4(H2O)4,Li 2017,,,1,10.2,80.5578609,10.2,Ref(s)
 Vegetable Oil,Alva 2018 (Sensible),Vegetable Oil,sensible_thermal,1,0.835,,0.835,Ref(s)
 Vermiculite,Liu 2016,Vermiculite,,1,0.33,,0.33,Ref(s)
 W,ISE,,,1,24.3428571,35.3,24.3428571,Ref(s)
+Water,Li 2017,Water,,1,0.001,,0.001,Ref(s)
 Water Reservoir,Calculation/Black and Veatch,,gravitational,1,0.261,,0.261,Ref(s)
 Y,USGS,,,1,35.4,31.0,35.4,Ref(s)
+Zeolite,Liu 2016,Zeolite,,1,1.93,,1.93,Ref(s)
 Zn,"USGS, Alva 2018 (Latent), Li 2017, Kim 2013, Alok 2021",,"latent_thermal, latent_thermal",5,4.5281673,2.55,4.5281673,Ref(s)
 Zn0.25V2O5,Li 2017,,,1,10.0,190.9596363,10.0,Ref(s)
 ZnBr2,Li 2017,,,1,1.56,3.8557833,1.56,Ref(s)
 ZnSO4(H2O)7,Li 2017,,,1,0.41,0.7526083,0.41,Ref(s)
 Zr,"USGS, ISE",,,2,23.225,36.4,23.225,Ref(s)
-br2,USGS,,,1,2.442,,2.442,Ref(s)
 kyanite,USGS,,,1,0.3952888,,0.3952888,Ref(s)

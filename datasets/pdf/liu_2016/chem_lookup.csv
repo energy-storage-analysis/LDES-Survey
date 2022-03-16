@@ -10,7 +10,7 @@ Halotechnics,,,,
 Anhydrous,Ammonia,H3N,molecular_formula,H3N
 Vermiculite,Vermiculite,AlFeH3MgO6Si,material_name,AlFeH3MgO6Si-3
 Silica Gel,Silica,H3N,molecular_formula,O2Si
-Zeolite,Aluminosilicate,Al2O5Si,material_name,Al2O5Si
+Zeolite,Zeolite,Al2O5Si,material_name,Al2O5Si
 Activated Carbon,Activated Carbon,C,molecular_formula,CH4
 Expanded Natural,Graphite,C,material_name,CH4
 Activated Alumina,Alumina,Al2O3,molecular_formula,Al2O3

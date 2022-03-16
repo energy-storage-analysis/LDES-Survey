@@ -8,8 +8,8 @@ Vegetable oil,Vegetable Oil,C57H104O9,material_name,C57H104O9
 Sodium (Na),Sodium,Na,molecular_formula,Na
 Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium Potassium Alloy,NaK,molecular_formula,
 Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Sodium Bismuth,BiNa3,molecular_formula,
-Granite,Stone,,material_name,C16F5H14N5O5S
+Granite,Stone,,material_name,
 Quartzite,Stone,,material_name,
-Marble,Stone,,material_name,CCaO3
-Basalt,Stone,,material_name,CaMgO6Si2
+Marble,Stone,,material_name,
+Basalt,Stone,,material_name,
 Hornfels,,,,

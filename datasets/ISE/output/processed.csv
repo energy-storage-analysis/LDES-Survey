@@ -9,17 +9,16 @@ C2O6Zr,Zirconium Carbonates,3.3825000000000003
 CCoO3,Cobalt Carbonates,14.445
 CLi2O3,Lithium Carbonates,11.243
 CW,Tungsten carbide,28.475
-Ca,Calcium Granule,4.1998750000000005
-Cd,Cadmium Ingot,2.6056795865966618
+Ca,Calcium Ingot,3.7736000000000005
+Cd,Cadmium Ingot,2.784739448795549
 Cl2Co,Cobalt Chloride,6.388
 Cl2H2OZr,Zirconium Oxychloride,2.2720000000000002
 Cl4Ti,Titanium tetrachloride,1.1685
 ClLi,Lithium chlorides,9.7995
 Co,Cobalt Conc.,27.900819913325638
-Co3O4,Cobalt oxides,22.15
+Co3O4,Cobalt oxides,22.2
 CoO,Cobalt Monoxide,31.6
 CoO4S,Cobalt sulphates,5.3715
-Cobalt Tetroxide,Cobalt Tetroxide,22.25
 Cr,Chromium metal,8.244
 CrFeO4,Chrome Conc.,0.12297727272727271
 FeH6O3Ti,Ilmenite Conc,0.3993333333333333
@@ -29,13 +28,16 @@ GeO2,Germanium dioxides,720.5
 H10MoN2S4,Ammonium Tetrathiomolybdate,18.728
 H4NO3V,Ammonium metavanadate,16.913
 H8N2O4W,Tungsten APT,20.13233333333333
-HLiO,Lithium hydroxides_monohydrates,13.18125
 In,Indium ingot,168.75
 Li,Lithium metal,100.17275000000001
-Li2MnO4,Lithium manganates,6.968500000000001
 Lithium Cobaltate,Lithium Cobaltate,28.950000000000003
+Lithium Hydroxide Monohydrate,Lithium hydroxides_monohydrates,13.18125
+Lithium Manganate,Lithium manganates,6.968500000000001
 Metallurgical Silicon,Silicon metal,1.765666728000003
-Mg,Magnesium Ingot,5.2022894736842105
+Mg,Magnesium Ingot,7.123875000000001
+Mn,Manganese Lump,2.005
+MnO2,Manganese dioxides,1.60425
+MnO4S,Manganese sulphates,0.9875
 Mo,Molybdenum Powder,43.63333333333333
 MoNa2O4,Sodium Molybdate,12.485
 MoO3,Molybdenum oxides,25.66737438890782
@@ -44,6 +46,7 @@ NV,Vanadium nitrides,27.0755
 Na2O4W,Sodium Tungstate,14.9535
 Nb2O5,Niobium Conc.,35.47264430285721
 O2Se,Selenium dioxides,12.7
+O2Ti,Titanium Dioxide,1.9813333333333334
 O2Zr,Zirconium fused_cubic,4.3555
 O3Sb2,Antimony Trioxide,5.37909715663868
 O3W,Wolfram Ore,18.81775
@@ -57,6 +60,6 @@ Se,Selenium Powder,20.271760276302707
 Sr,Strontium metal,6.80275
 Ta,Tantalum metal,281.6666666666667
 Te,Tellurium metal,55.96666666666667
-Ti,Titan Sponge,8.856166666666669
+Ti,Titan Sponge,15.731000000000002
 W,Tungsten powder,24.342857142857145
 Zr,Zirconium Sponge,35.85

@@ -7,7 +7,7 @@
 5,Bismuth ingot,Bismuth,,pubchem_formula,Bi
 6,Bismuth oxides,Bismuth Oxide,,pubchem_formula,Bi2O3
 7,Cadmium Ingot,Cadmium,,pubchem_formula,Cd
-8,Calcium Ingot,Cadmium,,pubchem_formula,Cd
+8,Calcium Ingot,Calcium,,pubchem_formula,Ca
 9,Calcium Granule,Calcium,,pubchem_formula,Ca
 10,Chrome Conc.,Chromite,,pubchem_formula,CrFeO4
 11,Chrome lump,Chromite,,pubchem_formula,CrFeO4
@@ -21,25 +21,25 @@
 19,Cobalt oxides,Cobalt Tetraoxide,,pubchem_formula,Co3O4
 20,Cobalt Powder,Cobalt,,pubchem_formula,Co
 21,Cobalt sulphates,Cobalt Sulphate,,pubchem_formula,CoO4S
-22,Cobalt Tetroxide,Cobalt Tetroxide,,material_name,
+22,Cobalt Tetroxide,Cobalt Tetroxide,Co3O4,molecular_formula,
 23,Gallium metal,Gallium,,pubchem_formula,Ga
 24,Germanium metal,Germanium,,pubchem_formula,Ge
 25,Germanium dioxides,Germanium Dioxide,,pubchem_formula,GeO2
 26,Indium ingot,Indium,,pubchem_formula,In
 27,Lithium metal,Lithium,,pubchem_formula,Li
 28,Lithium Carbonates,Lithium Carbonate,,pubchem_formula,CLi2O3
-29,Lithium Cobaltate,Lithium Cobaltate,,material_name,
-30,Lithium manganates,Lithium Manganate,,pubchem_formula,Li2MnO4
-31,Lithium hydroxides_monohydrates,Lithium Hydroxide,,pubchem_formula,HLiO
+29,Lithium Cobaltate,Lithium Cobaltate,LiCoO2,material_name,
+30,Lithium manganates,Lithium Manganate,LiMn2O4,material_name,Li2MnO4
+31,Lithium hydroxides_monohydrates,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,H3LiO2
 32,Lithium chlorides,Lithium Chloride,,pubchem_formula,ClLi
 33,Magnesium Ingot,Magnesium,,pubchem_formula,Mg
 34,Magnesium Powder,Magnesium,,pubchem_formula,Mg
-35,Magnesium Alloy,Magnesium,,pubchem_formula,Mg
+35,Magnesium Alloy AZ91D,Magnesium,,pubchem_formula,Mg
 36,Manganese flakes,Magnesium,,pubchem_formula,Mg
-37,Manganese Lump,Magnesium,,pubchem_formula,Mg
-38,Manganese Briquette,Magnesium,,pubchem_formula,Mg
-39,Manganese dioxides,Magnesium,,pubchem_formula,Mg
-40,Manganese sulphates,Magnesium,,pubchem_formula,Mg
+37,Manganese Lump,Manganese,,pubchem_formula,Mn
+38,Manganese Briquette,Manganese,,pubchem_formula,Mn
+39,Manganese dioxides,Manganese dioxide,,pubchem_formula,MnO2
+40,Manganese sulphates,Manganese sulphate,,pubchem_formula,MnO4S
 41,Mercury metal,Magnesium,,pubchem_formula,Mg
 42,Molybdenum Conc.,"Molybdenite ",,pubchem_formula,MoS2
 43,Molybdenum oxides,Molybdenum Oxide,,pubchem_formula,MoO3
@@ -54,8 +54,8 @@
 52,Rhenium APR,Rhenium,,pubchem_formula,Re
 53,Selenium Powder,Selenium,,pubchem_formula,Se
 54,Selenium dioxides,Selenium Dioxide,,pubchem_formula,O2Se
-55,Silicon metal,Metallurgical Silicon,,material_name,Si
-56,Silicon polysilicon,Polysilicon,,material_name,Si
+55,Silicon metal,Metallurgical Silicon,,material_name,
+56,Silicon polysilicon,Polysilicon,,material_name,
 57,Strontium metal,Strontium,,pubchem_formula,Sr
 58,Tantalum Conc.,Tantalum Oxide,,pubchem_formula,O5Ta2
 59,Tantalum metal,Tantalum,,pubchem_formula,Ta
@@ -69,7 +69,7 @@
 67,Titan Sponge,Titanium,,pubchem_formula,Ti
 68,Titanium plate,Titanium,,pubchem_formula,Ti
 69,Titanium pipe,Titanium,,pubchem_formula,Ti
-70,Titanium Dioxide,Titanium,,pubchem_formula,Ti
+70,Titanium Dioxide,Titanium Dioxide,,pubchem_formula,O2Ti
 71,Wolfram Ore,Tungsten Trioxide,,pubchem_formula,O3W
 72,Tungsten APT,Ammonium Paratungstate,,pubchem_formula,H8N2O4W
 73,Sodium Tungstate,Sodium Tungstate,,pubchem_formula,Na2O4W

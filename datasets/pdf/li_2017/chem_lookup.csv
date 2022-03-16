@@ -8,20 +8,20 @@ CrCl3 6H2O,CrCl3(H2O)6,,molecular_formula,
 CuCl,CuCl,,molecular_formula,
 Cu-PBA,,,,
 FeCl2,FeCl2,,molecular_formula,
-DI H2O,H2O,Water,,H2O
-Graphite,C6,Graphite,,CH4
+DI H2O,H2O,Water,material_name,H2O
+Graphite,C6,Graphite,material_name,CH4
 H2SO4,H2SO4,,molecular_formula,
 HBr,HBr,,molecular_formula,
 HCl,HCl,,molecular_formula,
 KOH,KOH,,molecular_formula,
 LaNi5,LaNi5,,molecular_formula,
-LCO,LiCoO2,,molecular_formula,
+LCO,LiCoO2,Lithium Cobaltate,material_name,
 LFP,LiFePO4,,molecular_formula,
 Li2S,Li2S,,molecular_formula,
 Li2SO4,Li2SO4,,molecular_formula,
-LiOH H2O,LiOH(H2O),,molecular_formula,
+LiOH H2O,LiOH(H2O),Lithium Hydroxide Monohydrate,material_name,H3LiO2
 Lithium metal,Li,Lithium,molecular_formula,Li
-LMO,LiMn2O4,,molecular_formula,
+LMO,LiMn2O4,Lithium Manganate,material_name,Li2MnO4
 LMP,LiMnPO4,,molecular_formula,
 LNMO,LiMn1.5Ni0.5O4,,molecular_formula,
 LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,,molecular_formula,

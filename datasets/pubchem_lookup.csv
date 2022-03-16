@@ -163,3 +163,9 @@ Ammonium Tetrathiomolybdate,"{'H10MoN2S4': 14, 'H2MoS4-2': 1, 'H8MoN2S4-6': 1, '
 Carbon,"{'CH4': 30, 'C': 17, 'C5H4': 3, 'C4': 2}",CH4
 Magnesium Chloride,"{'Cl2Mg': 57, 'Cl2H12MgO6': 8, 'ClHMg': 3, 'ClMg+': 2, 'C27H50CaCl6KMgN6Na5O27PS2': 1, 'C10H24CaCl6KMgNa2O14': 1, 'C8H19CaCl6KMgNa2O10': 1, 'C14H24CaCl6KMgNa5O17': 1, 'C11H24CaCl6KMgNa3O13': 1, 'C8H19CaCl5MgNa2O10': 1, 'C9H21CaCl5MgNa2O11': 1, 'C2H7CaCl6KMgNa2O4': 1, 'C8H12CaCl6KMgNa5O11': 1, 'C5H12CaCl6KMgNa3O7': 1, 'CaCl6H4KMgNaO2': 1, 'C8H31Cl4K2MgNa5O24P2': 1, 'C8H14Cl4KMgNa3O9': 1, 'CH2Cl3MgNa2O3': 1, 'C8H16Cl3K3MgNaO12P': 1, 'C9H20Cl4K3MgNa3O17P2': 1, 'C9H19Cl4K2MgNa2O13P': 1, 'C9H21Cl3K2MgNa2O17P2': 1, 'C8H15Cl4KMgNa2O8': 1, 'C14H26Cl4KMgNa3O15': 1, 'C19H26N2O5S': 1}",Cl2Mg
 Gold,"{'Au': 44, 'C15H27N4O4+': 2, 'Au+': 1}",Au
+Polysilicon,{},
+Iron Oxide Pigment,{},
+Manganese dioxide,"{'MnO2': 26, 'MnO2-4': 7}",MnO2
+Manganese sulphate,"{'MnO4S': 14, 'MnO4P-': 1}",MnO4S
+Lithium Hydroxide Monohydrate,"{'H3LiO2': 39, 'H2LiO2': 1}",H3LiO2
+Metallurgical Silicon,{},

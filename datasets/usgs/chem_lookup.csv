@@ -11,11 +11,11 @@ Bauxite and Alumina Alumina,Alumina,,pubchem_formula,Al2O3
 Beryllium Alloy,Beryllium,,pubchem_formula,Be
 "Bismuth ",Bismuth,,pubchem_formula,Bi
 Boron CIF,Boron,,pubchem_formula,B
-Bromine Imports,Bromine,,pubchem_formula,br2
+Bromine Imports,Bromine,Br,molecular_formula,br2
 Cadmium Metal,Cadmium,,pubchem_formula,Cd
 Cement Avg,Cement,,material_name,
 Chromium Ore,Chromite,,pubchem_formula,CrFeO4
-Chromium Ferrrochromium,Ferrrochromium,,material_name,
+Chromium Ferrrochromium,Ferrrochromium,FeCr,molecular_formula,
 Chromium Metal,Chromium,,pubchem_formula,Cr
 Clays Ball,Clay,,material_name,Al2O5Si
 Clays Bentonite,Clay,,material_name,Al2O5Si
@@ -34,10 +34,10 @@ Diamond (Industrial) Stones_Imports,Diamond,,material_name,CH4
 Feldspar and Nepheline Syenite Feldspar,Feldspar,,material_name,AlKO8Si3
 Feldspar and Nepheline Syenite Nepheline_syenite,Syenite,,material_name,
 "Iron Ore ",Iron Ore,,material_name,Fe2O3
-"Iron Oxide Pigments ",Iron Oxide Pigment,,material_name,Fe2O3
+"Iron Oxide Pigments ",Iron Oxide Pigment,,material_name,
 "Iron and Steel Scrap ",Iron,,pubchem_formula,Fe
 "Iron and Steel Slag ",Iron,,pubchem_formula,Fe
-"Iron and Steel ",Steel,,material_name,Fe
+"Iron and Steel ",Steel,,material_name,
 Fluorspar Acid,Fluorspar,,pubchem_formula,CaF2
 Fluorspar Metallurgical,Fluorspar,,pubchem_formula,CaF2
 Gallium High-purity,Gallium,,pubchem_formula,Ga
@@ -110,7 +110,7 @@ Scandium Mtl_Alloy,Scandium Aluminum Alloy,AlSc,molecular_formula,
 Silver Bullion,Silver,,pubchem_formula,Ag
 Silicon FeSi2_50,Ferrosilicon,,pubchem_formula,FeSi2
 Silicon FeSi2_75,Ferrosilicon,,pubchem_formula,FeSi2
-Silicon Si,Metallurgical Silicon,,material_name,Si
+Silicon Si,Metallurgical Silicon,,material_name,
 "Soda Ash ",Soda Ash,,pubchem_formula,CNa2O3
 Stone (Crushed) Average,Stone,,material_name,
 Stone (Dimension) Average,Stone,,material_name,

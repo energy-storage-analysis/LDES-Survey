@@ -6,18 +6,20 @@ Cd(OH)2,Cd(OH)2,3.43,42.0,Cd(OH)2,,molecular_formula,
 CrCl3(H2O)6,CrCl3 6H2O,2.04,42.0,CrCl3(H2O)6,,molecular_formula,
 CuCl,CuCl,4.55,42.0,CuCl,,molecular_formula,
 FeCl2,FeCl2,2.53,42.0,FeCl2,,molecular_formula,
+Water,DI H2O,0.001,45.0,H2O,Water,material_name,H2O
+Graphite,Graphite,12.0,41.0,C6,Graphite,material_name,CH4
 H2SO4,H2SO4,0.2,42.0,H2SO4,,molecular_formula,
 HBr,HBr,3.33,42.0,HBr,,molecular_formula,
 HCl,HCl,0.65,42.0,HCl,,molecular_formula,
 KOH,KOH,0.82,42.0,KOH,,molecular_formula,
 LaNi5,LaNi5,10.05,42.0,LaNi5,,molecular_formula,
-LiCoO2,LCO,40.0,41.0,LiCoO2,,molecular_formula,
+Lithium Cobaltate,LCO,40.0,41.0,LiCoO2,Lithium Cobaltate,material_name,
 LiFePO4,LFP,10.0,42.0,LiFePO4,,molecular_formula,
 Li2S,Li2S,1.87,48.0,Li2S,,molecular_formula,
 Li2SO4,Li2SO4,0.85,50.0,Li2SO4,,molecular_formula,
-LiOH(H2O),LiOH H2O,1.52,42.0,LiOH(H2O),,molecular_formula,
+Lithium Hydroxide Monohydrate,LiOH H2O,1.52,42.0,LiOH(H2O),Lithium Hydroxide Monohydrate,material_name,H3LiO2
 Li,Lithium metal,50.05,42.0,Li,Lithium,molecular_formula,Li
-LiMn2O4,LMO,10.0,42.0,LiMn2O4,,molecular_formula,
+Lithium Manganate,LMO,10.0,42.0,LiMn2O4,Lithium Manganate,material_name,Li2MnO4
 LiMnPO4,LMP,10.0,47.0,LiMnPO4,,molecular_formula,
 LiMn1.5Ni0.5O4,LNMO,20.0,41.0,LiMn1.5Ni0.5O4,,molecular_formula,
 (Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,LRMO LMNO,20.0,41.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,,molecular_formula,

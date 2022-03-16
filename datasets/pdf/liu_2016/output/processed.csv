@@ -9,7 +9,7 @@ Hitec,Hitec,Molten salts,0.93,Hitec,,material_name,KN3Na2O8
 H3N,Anhydrous,Ammonia,0.7,Ammonia,H3N,molecular_formula,H3N
 Vermiculite,Vermiculite,Matrices,0.33,Vermiculite,AlFeH3MgO6Si,material_name,AlFeH3MgO6Si-3
 H3N,Silica Gel,Matrices,1.11,Silica,H3N,molecular_formula,O2Si
-Aluminosilicate,Zeolite,Matrices,1.93,Aluminosilicate,Al2O5Si,material_name,Al2O5Si
+Zeolite,Zeolite,Matrices,1.93,Zeolite,Al2O5Si,material_name,Al2O5Si
 C,Activated Carbon,Matrices,2.75,Activated Carbon,C,molecular_formula,CH4
 Graphite,Expanded Natural,Matrices,2.15,Graphite,C,material_name,CH4
 Al2O3,Activated Alumina,Matrices,1.32,Alumina,Al2O3,molecular_formula,Al2O3

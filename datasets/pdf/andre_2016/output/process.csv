@@ -1,8 +1,8 @@
 index,original_name,temperature,enthalpy,specific_energy,product,type,material_name,molecular_formula,index_use,pubchem_formula,energy_type
 MgO4S,MgSO4,1140.0,0.09687944444444445,0.8048611111111111,MgO,sulfates,,MgO4S,molecular_formula,,thermochemical
-MnO4S,MnSO4,1065.0,0.0993963888888889,0.65825,MnO,sulfates,,MnO4S,molecular_formula,,thermochemical
+MnO4S,MnSO4,1065.0,0.0993963888888889,0.65825,MnO,sulfates,Manganese sulphate,MnO4S,molecular_formula,MnO4S,thermochemical
 FeO4S,FeSO4,1030.0,0.09619944444444443,0.6332722222222222,FeO,sulfates,,FeO4S,molecular_formula,,thermochemical
-CoO4S,CoSO4,1005.0,0.09154555555555556,0.5906388888888889,CoO,sulfates,,CoO4S,molecular_formula,,thermochemical
+CoO4S,CoSO4,1005.0,0.09154555555555556,0.5906388888888889,CoO,sulfates,Cobalt Sulphate,CoO4S,molecular_formula,CoO4S,thermochemical
 CuO4S,CuSO4,875.0,0.08343694444444444,0.52275,CuO,sulfates,,CuO4S,molecular_formula,,thermochemical
 O4SZn,ZnSO4,1080.0,0.07930944444444445,0.4911666666666667,ZnO,sulfates,,O4SZn,molecular_formula,,thermochemical
 CdO4S,CdSO4,1095.0,0.09847333333333334,0.4723611111111111,CdO,sulfates,,CdO4S,molecular_formula,,thermochemical
@@ -29,7 +29,7 @@ Co3O4,Co3O4,935.0,0.05459222222222222,0.22669444444444445,CoO,oxides,,Co3O4,mole
 Mn3O4,Mn3O4,1700.0,0.05406388888888889,0.23627777777777778,MnO,oxides,,Mn3O4,molecular_formula,,thermochemical
 CuO,CuO,1115.0,0.017901666666666666,0.22505555555555556,Cu2O,oxides,,CuO,molecular_formula,,thermochemical
 LiO,Li2O2,145.0,0.009506944444444445,0.20719444444444443,Li2O,oxides,,LiO,molecular_formula,,thermochemical
-Iron Ore,Fe2O3,1360.0,0.06461472222222223,0.1348888888888889,Fe3O4,oxides,Iron Ore,Fe2O3,material_name,,thermochemical
+Iron Ore,Fe2O3,1360.0,0.06461472222222223,0.1348888888888889,Fe3O4,oxides,Iron Ore,Fe2O3,material_name,Fe2O3,thermochemical
 BaO2,BaO2,880.0,0.020349444444444444,0.12016666666666667,BaO,oxides,,BaO2,molecular_formula,,thermochemical
 MgO2,MgO2,205.0,0.005953333333333333,0.10572222222222223,MgO,oxides,,MgO2,molecular_formula,,thermochemical
 Cr5O12,Cr5O12,105.0,0.03504722222222222,0.07752777777777778,Cr2O3,oxides,,Cr5O12,molecular_formula,,thermochemical
