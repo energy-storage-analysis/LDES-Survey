@@ -12,10 +12,16 @@ def get_top_formula(formula_dict):
     else:
         return None
 
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
 
-def mat2vec_process(f):
+#mtp is passed in as an instance to avoid loading mat2vec for all es_utils imports
+def mat2vec_process(f, mtp):
+    """
+    Use mat2vec processor to normalize a chemical formula
+    f: formula
+    mtp: MaterialsTextProcessor instance
+
+    TODO: mtp is overpowered for this application and should potentially be replaced with the component of mtp doing formula normalizations
+    """
     if f != f:
         return np.nan
     f = str(f)

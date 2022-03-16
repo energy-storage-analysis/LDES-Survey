@@ -6,7 +6,6 @@ from os.path import join as pjoin
 import numpy as np
 import pandas as pd
 from sympy import O
-from es_utils.chem import mat2vec_process
 
 
 

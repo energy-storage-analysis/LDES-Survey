@@ -139,6 +139,8 @@ else:
 
 from es_utils.chem import mat2vec_process
 
+from mat2vec.processing import MaterialsTextProcessor
+mtp = MaterialsTextProcessor()
 
 #TODO: lowercase original pubchem lookup
 df_out = df_out.reset_index()
@@ -146,7 +148,7 @@ df_out = df_out.reset_index()
 df_out = df_out.drop_duplicates(subset=['index'])
 df_out = df_out.set_index('index')
 
-pubchem_forms = df_out['pubchem_top_formula'].astype(str).apply(mat2vec_process)
+pubchem_forms = df_out['pubchem_top_formula'].astype(str).apply(lambda x: mat2vec_process(x, mtp))
 pubchem_forms = pubchem_forms.replace('nan', np.nan)
 pubchem_forms
 

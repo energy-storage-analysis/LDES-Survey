@@ -44,7 +44,11 @@ df_latent['original_name'] = df_latent['original_name'].replace('Aluminum', 'Al'
 
 #If no lookup table is needed
 from es_utils.chem import mat2vec_process
-df_latent['molecular_formula'] = df_latent['original_name'].apply(mat2vec_process)
+
+from mat2vec.processing import MaterialsTextProcessor
+mtp = MaterialsTextProcessor()
+
+df_latent['molecular_formula'] = df_latent['original_name'].apply(lambda x: mat2vec_process(x, mtp))
 
 index_use = 'molecular_formula'
 df_latent['index_use'] = index_use
