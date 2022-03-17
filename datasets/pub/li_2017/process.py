@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import os
+from es_utils import chem
 
 from es_utils.chem import process_chem_lookup
 
@@ -137,8 +138,15 @@ df['specific_energy'] = (1/3600)*F*df['deltaV']/(df['mu_A'] + df['mu_B'])
 
 #%%
 
-#TODO: hacky way to get the A Si material associated with polysilicon. I am assuming from the price that is what they are saying needs to be used in a battery anode material.
-df['A'] = df['A'].str.replace("Si", "Polysilicon", regex=False) 
+# #TODO: hacky way to get A and B back to index names. Have to use moleuclar formulas above... 
+
+chem_lookup_idx = chem_lookup.set_index('original_name')
+
+df['A'] = [chem_lookup_idx['index'].loc[f] if f in chem_lookup_idx.index.values else f for f in df['A']]
+df['B'] = [chem_lookup_idx['index'].loc[f] if f in chem_lookup_idx.index.values else f for f in df['B']]
+# df[''] = pd.merge(table_3, chem_lookup, on='original_name').set_index('index')
+
+
 #%%
 
 

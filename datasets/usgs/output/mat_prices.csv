@@ -12,7 +12,7 @@ Barite,Barite ,0.1977546491798352
 Bauxite,Bauxite and Alumina Bauxite,0.033510263852101395
 Be,Beryllium Alloy,616.0
 Bi,Bismuth ,8.421658415462323
-Br,Bromine Imports,2.442
+Br2,Bromine Imports,2.442
 C6H12O6Sc,Scandium Cmpds_Acetate,44200.0
 CLi2O3,Lithium ,15.366219674285968
 CNa2O3,Soda Ash ,0.15747619387865805
@@ -25,33 +25,33 @@ Celestite,Strontium ,0.08928721618487542
 Cement,Cement Avg,0.13448197993277533
 Cl3Sc,Scandium Cmpds_Chloride,129600.0
 ClK,Potash Muriate,0.5136770708907648
-ClNa,"Salt Rock, Salt Vacuum, Salt Brine, Salt Solar",0.11086936934146402
-Clay,"Clays Fire, Clays Ball, Clays Fullers, Clays Common, Clays Bentonite, Clays Kaolin",0.07929292696582764
+ClNa,"Salt Rock, Salt Vacuum, Salt Solar, Salt Brine",0.11086936934146402
+Clay,"Clays Common, Clays Bentonite, Clays Fire, Clays Fullers, Clays Kaolin, Clays Ball",0.07929292696582764
 Co,"Cobalt LME, Cobalt Spot",50.56522445472352
 Cr,Chromium Metal,10.327113747526221
 CrFeO4,Chromium Ore,0.25904315806723116
-Cu,"Copper LME, Copper US, Copper COMEX",6.868575265790589
+Cu,"Copper US, Copper COMEX, Copper LME",6.868575265790589
 Diamond,"Diamond (Industrial) Stones_Imports, Diamond (Industrial) Bort_Imports",21410.0
 Diatomite,Diatomite ,0.3725812230924431
 Dy2O3,Rare Earths Dy2O3,253.2
 Eu2O3,Rare Earths Eu2O3,45.4
 F3Sc,Scandium Cmpds_Fluoride,224400.0
-Fe,"Iron and Steel Slag , Iron and Steel Scrap ",0.180117668205045
+Fe,"Iron and Steel Scrap , Iron and Steel Slag ",0.180117668205045
 FeCr,Chromium Ferrrochromium,2.5282612227361763
 FeH6O3Ti,"Titanium Mineral Concentrates Ilmente_Leucoxene, Titanium Mineral Concentrates Ilmenite",0.3802974022689138
 FeSi2,"Silicon FeSi2_75, Silicon FeSi2_50",2.260730267574827
 Feldspar,Feldspar and Nepheline Syenite Feldspar,0.10670373489748075
-Ga,"Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import",236.69626852115405
+Ga,"Gallium Low-purity, Garnet (Industrial) Import, Gallium High-purity",236.69626852115405
 Ge,Germanium Metal,1221.4
 GeO2,Germanium GeO2,844.4
 Graphite,"Graphite (Natural) Flake, Graphite (Natural) Lump, Graphite (Natural) Amorphous",1.601658334773136
-Gravel,"Sand and Gravel (Industrial) , Sand and Gravel (Construction) ",0.029180385022790398
+Gravel,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",0.029180385022790398
 H3N,Nitrogen (Fixed)--Ammonia ,0.32915015744202225
 Hf,Zirconium and Hafnium Hf_unwrought,0.9038952749579982
-Hg,"Mercury EU, Mercury Global",47.111014408664545
+Hg,"Mercury Global, Mercury EU",47.111014408664545
 I2,Iodine Crude_CIF,26.392000000000003
 I3Sc,Scandium Cmpds_Iodide,165400.0
-In,"Indium NY, Indium FOB, Indium Rotterdam",265.9166666666667
+In,"Indium Rotterdam, Indium FOB, Indium NY",265.9166666666667
 Ir,Platinum-Group Metals Iridium,2.3635604805257198
 Iron Ore,Iron Ore ,0.0991529024176487
 Iron Oxide Pigment,Iron Oxide Pigments ,1.03
@@ -65,11 +65,11 @@ Mo,Molybdenum ,25.5
 Nb,Niobium (Columbium) ,21.0
 Nd2O3,Rare Earths Nd2O3,48.6
 Ni,Nickel ,7.630587238493453
-O2Ti,"Titanium Mineral Concentrates Slag, Titanium Mineral Concentrates Rutile, Titanium and Titanium Dioxide Dioxide",1.6847726076168346
+O2Ti,"Titanium Mineral Concentrates Rutile, Titanium and Titanium Dioxide Dioxide, Titanium Mineral Concentrates Slag",1.6847726076168346
 O3Sc2,Scandium Cmpds_Oxide,3819.9999999999995
 O3W,Tungsten WO3,0.30445838407731596
 O3Y2,Yttrium Y2O3,3.4
-O4SiZr,"Zirconium and Hafnium Zircon_AU, Zirconium and Hafnium Zircon_import, Zirconium and Hafnium Zircon_CN",428.6574376489916
+O4SiZr,"Zirconium and Hafnium Zircon_AU, Zirconium and Hafnium Zircon_CN, Zirconium and Hafnium Zircon_import",428.6574376489916
 O5Ta2,Tantalum Ta2O5,176.8
 Pb,"Lead North_American, Lead LME",2.2182912821042384
 Pd,Platinum-Group Metals Palladium,1.821086628948366
@@ -84,9 +84,9 @@ Rh,Platinum-Group Metals Rhodium,9.361209052083481
 Ru,Platinum-Group Metals Ruthenium,0.3010831068432655
 S,Sulfur Sulfur,0.06461748904638763
 Sb,Antimony Metal,8.152694455596773
-Sc,"Scandium Mtl_Dendritic, Scandium Mtl_Ingot",182500.0
+Sc,"Scandium Mtl_Ingot, Scandium Mtl_Dendritic",182500.0
 Se,Selenium ,24.762321288605452
-Sn,"Tin LME, Tin NY",22.24023300921045
+Sn,"Tin NY, Tin LME",22.24023300921045
 Stone,Stone (Crushed) Average,0.013267418938285933
 Syenite,Feldspar and Nepheline Syenite Nepheline_syenite,0.13800937612773337
 Talc,Talc and Pyrophyllite  ,0.26808211081681116
