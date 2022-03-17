@@ -44,10 +44,10 @@ for i in range(1,5):
     
 for table in tables:
     
-    tables[table] = tables[table].rename({'Chemical material': 'chemical'}, axis=1)
-    tables[table]['chemical'] = tables[table]['chemical'].replace('F-2O3/F-3O4', 'Fe2O3/Fe3O4')
-    tables[table][['reactant','product']] = tables[table]['chemical'].str.split('/', expand=True)
-    tables[table] = tables[table].drop('chemical', axis=1).set_index('reactant')
+    tables[table] = tables[table].rename({'Chemical material': 'original_name'}, axis=1)
+    tables[table]['original_name'] = tables[table]['original_name'].replace('F-2O3/F-3O4', 'Fe2O3/Fe3O4')
+    tables[table] = tables[table].set_index('original_name')
+
 
 
 
@@ -66,7 +66,7 @@ tables['table_2'] = tables['table_2'].iloc[:,3:]
 
 # tables['table_2'] = tables['table_2'][['Chemical','Temperature.1','Reaction Enthalpy','Gravimetric Storage den-']]
 
-columns = ['temperature','enthalpy','specific_energy','product']
+columns = ['temperature','enthalpy','specific_energy']
 for table in tables:
     # tables[table] = tables[table].iloc[1:] #remove the extra column information
     tables[table].columns = columns
