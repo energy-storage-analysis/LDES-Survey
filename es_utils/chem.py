@@ -28,9 +28,10 @@ def mat2vec_process(f, mtp):
     s = mtp.process(f)[0][0]
     return s
 
-def process_chem_lookup(chem_lookup):
-    if 'molecular_formula' in chem_lookup.index:
-        chem_lookup['molecular_formula'] = chem_lookup['molecular_formula'].apply(mat2vec_process)
+def process_chem_lookup(chem_lookup, mtp=None):
+    if mtp != None:
+        if 'molecular_formula' in chem_lookup.columns:
+            chem_lookup['molecular_formula'] = chem_lookup['molecular_formula'].apply(lambda x: mat2vec_process(x, mtp))
 
     index_values = []
 
