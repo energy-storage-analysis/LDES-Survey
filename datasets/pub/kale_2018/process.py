@@ -48,8 +48,6 @@ df = pd.concat([
 
 # df = df.set_index('original_name', drop=True)
 
-df = df.rename({'specific_strength': 'specific_energy'}, axis=1) #Assuming Q=1
-df['specific_energy'] = df['specific_energy']/3600  
 
 #%%
 mat_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
@@ -58,12 +56,18 @@ from es_utils.chem import process_chem_lookup
 mat_lookup = process_chem_lookup(mat_lookup)
 
 df = pd.merge(df, mat_lookup, on='original_name').set_index('index')
+df_combine = df.groupby('index')[['specific_strength', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
 
-# df = pd.merge(df, mat_lookup, on='original_name')
+from es_utils import join_col_vals
+df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
 
-df = df.groupby('index')[['specific_energy', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
+
+from es_utils import extract_df_physprop, extract_df_price
+df_physprop = extract_df_physprop(df_combine, ['specific_strength'])
 
 
-df['energy_type'] = 'virial_limited'
+df_prices = extract_df_price(df_combine)
 
-df.to_csv('output/processed.csv')
+df_prices.to_csv('output/mat_prices.csv')
+
+df_physprop.to_csv('output/physprop.csv')

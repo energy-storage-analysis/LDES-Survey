@@ -3,58 +3,59 @@ import os
 from os.path import join as pjoin
 import numpy as np
 import pandas as pd
+from es_utils import join_col_vals
 
 dataset_folder = '../datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
-col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','energy_type','source']
-datasets = []
+# col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','energy_type','source']
+dfs_price = []
+dfs_physprop = []
 
 for source, row in dataset_index.iterrows():
-    fp = os.path.join(dataset_folder, row['price_data_path'])
-    df = pd.read_csv(fp,index_col=0)
-    col_select_present = [col for col in col_select if col in df.columns]
-    df = df[col_select_present]
+    fp_prices = os.path.join(dataset_folder, row['folder'], 'output', 'mat_prices.csv')
+    if os.path.exists(fp_prices):
+        df_price = pd.read_csv(fp_prices,index_col=0)
 
-    #Custom data dataset already has source column
-    if source != 'custom_data':
-        df['source'] = source
+        #Custom data dataset already has source column
+        if source != 'custom_data':
+            df_price['source'] = source
 
-    datasets.append(df)
+        dfs_price.append(df_price)
 
-df = pd.concat(datasets)
+    fp_physprop = os.path.join(dataset_folder, row['folder'], 'output', 'physprop.csv')
+    if os.path.exists(fp_physprop):
+        df_price = pd.read_csv(fp_physprop,index_col=0)
 
-df.index.name = 'index'
+        #Custom data dataset already has source column
+        if source != 'custom_data':
+            df_price['source'] = source
+
+        dfs_physprop.append(df_price)
+    
+
+df_prices = pd.concat(dfs_price)
+df_physprop = pd.concat(dfs_physprop)
+
+# df.index.name = 'index'
 
 #%%
 
+df_physprop.to_csv('data/physprops.csv')
 
 ## Collect prices 
 
 #%%
-def join_material_dups(df_dup, column):
-    source_list = ", ".join(df_dup[column].dropna())
-    return source_list
 
 
-s_temp = df.groupby('index').apply(join_material_dups, column='source')
+s_temp = df_prices.groupby('index').apply(join_col_vals, column='source')
 s_temp.name = 'source'
-df_prices = s_temp.to_frame()
+df_prices_combine = s_temp.to_frame()
 
-df_prices['material_names']= df.groupby('index').apply(join_material_dups, column='material_name')
-df_prices['energy_types']= df.groupby('index').apply(join_material_dups, column='energy_type')
-df_prices['num_source'] = df_prices['source'].str.split(',').apply(len)
-df_prices['specific_price_refs'] = df.groupby('index')['specific_price'].mean()
+df_prices_combine['num_source'] = df_prices_combine['source'].str.split(',').apply(len)
+df_prices_combine['specific_price_refs'] = df_prices.groupby('index')['specific_price'].mean()
 
 # df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
-
-df_prices
-
-#%%
-
-
-df_prices
-
 
 #%%
 import chemparse
@@ -84,28 +85,23 @@ def calculate_formula_price(chemparse_dict):
 
     return price
 
-f_dicts = [chemparse.parse_formula(f) for f in df_prices.index]
+f_dicts = [chemparse.parse_formula(f) for f in df_prices_combine.index]
 e_price = [calculate_formula_price(d) for d in f_dicts]
-df_prices['specific_price_element'] = e_price
-df_prices
+df_prices_combine['specific_price_element'] = e_price
+df_prices_combine
 
 #%%
 
 #TODO: reexamine. Happening with Alva rock material (quartzite) that also doesn't happen to be on pubchem
 # Need to figure out how to tie to USGS prices anyway
-df_prices = df_prices.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
+df_prices_combine = df_prices_combine.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
 
 
 #TODO: revisit. Was having issues with output changing with rounding errors
-df_prices['specific_price_refs'] = df_prices['specific_price_refs'].apply(lambda x: round(x,7))
-df_prices['specific_price_element'] = df_prices['specific_price_element'].apply(lambda x: round(x,7))
+df_prices_combine['specific_price_refs'] = df_prices_combine['specific_price_refs'].apply(lambda x: round(x,7))
+df_prices_combine['specific_price_element'] = df_prices_combine['specific_price_element'].apply(lambda x: round(x,7))
 
 #%%
-
-# df_prices['specific_price_avg'] = np.sum([
-#     df_prices['specific_price_refs'],
-#     df_prices['specific_price_element']
-# ])/2
 
 
 #TODO: Logic to get one price, didn't like averaging reference and elemntal price...but this isn't great eithger
@@ -113,7 +109,7 @@ df_prices['specific_price_element'] = df_prices['specific_price_element'].apply(
 specific_prices = []
 price_types = []
 
-for idx, row in df_prices.iterrows():
+for idx, row in df_prices_combine.iterrows():
     if row['specific_price_refs'] == row['specific_price_refs']:
         specific_price = row['specific_price_refs']
         price_type = 'Ref(s)' 
@@ -124,8 +120,8 @@ for idx, row in df_prices.iterrows():
     specific_prices.append(specific_price)
     price_types.append(price_type)
 
-df_prices['specific_price'] = specific_prices
-df_prices['price_type'] = price_types
+df_prices_combine['specific_price'] = specific_prices
+df_prices_combine['price_type'] = price_types
     
 
     
@@ -133,49 +129,7 @@ df_prices['price_type'] = price_types
 
 #%%
 
-df_prices.to_csv('data/df_prices.csv')
-
-#%%
-
-# Apply prices to signle mat data
-df['specific_price'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df.index]
-df['price_type'] = [df_prices['price_type'][f] if f in df_prices.index else np.nan for f in df.index]
-
-
-
-df.to_csv('data/df_singlemat.csv')
-
-
-
-#%%
-
-
-df_ec_li = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\datasets\pub\li_2017\output\couples.csv',index_col=0)
-df_ec_li['source'] = 'Li 2017'
-df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\datasets\pub\kim_2013\output\couples.csv', index_col=0)
-df_ec_lmb['type'] = 'Liquid Metal'
-df_ec_lmb['source'] = 'Kim 2013'
-
-col_select = ['type','A','B','mu_A', 'mu_B', 'deltaV', 'specific_energy', 'source']
-
-df_ec = pd.concat([
-    df_ec_li[col_select],
-    df_ec_lmb[col_select],
-])
-
-df_ec['SP_A'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_ec['A']]
-df_ec['SP_B'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_ec['B']]
-
-#TODO: chech this equation
-df_ec['specific_price'] = (df_ec['SP_A']*df_ec['mu_A'] + df_ec['SP_B']*df_ec['mu_B'])/(df_ec['mu_A']+df_ec['mu_B'])
-
-df_ec['energy_type'] = 'EC Couple'
-df_ec.index.name = 'index'
-df_ec['original_name'] = df_ec.index
-df_ec['price_type'] = 'TODO'
-
-df_ec.to_csv('data/df_couples.csv')
-#%%
+df_prices_combine.to_csv('data/mat_prices.csv')
 
 
 

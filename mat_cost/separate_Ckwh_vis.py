@@ -8,26 +8,9 @@ import matplotlib as mpl
 
 mpl.rcParams.update({'font.size': 16})
 
-df_prices = pd.read_csv('data/df_prices.csv', index_col=0)
+df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 
-df_singlemat = pd.read_csv('data/df_singlemat.csv', index_col=0) 
-df_singlemat = df_singlemat.dropna(subset=['specific_energy'])
-
-df_couples = pd.read_csv('data/df_couples.csv', index_col=0) 
-
-#%%
-col_select = ['energy_type', 'specific_energy','specific_price', 'source', 'original_name','price_type']
-
-df_all = pd.concat([
-    df_singlemat[col_select],
-    df_couples[col_select]
-]) 
-
-df_all['C_kwh'] = df_all['specific_price']/df_all['specific_energy']
-
-df_all = df_all.dropna(subset=['C_kwh'])
-
-df_all = df_all.where(df_all['energy_type'] != 'electrostatic').dropna(subset=['energy_type'])
+df_all = df_all.where(df_all['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
 
 #%%
 
@@ -45,18 +28,21 @@ mat_cost_line = energy_densities_line*10
 #%%
 
 import seaborn as sns
-fig = plt.figure(figsize=(10,6))
+fig = plt.figure(figsize=(12,6))
 
 sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='energy_type', hue='energy_type')
 plt.xscale('log')
 plt.yscale('log')
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.6,1])
 
+plt.xlim(1e-5,1e2)
+
 plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Material cost ($/kg)')
 
 plt.plot(energy_densities_line, mat_cost_line, color='gray')
 
+# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
 # plt.tight_layout()
 
 plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False,)

@@ -23,9 +23,11 @@ df_table4['index_use'] = index_use
 df_table4['index'] = df_table4[index_use]
 df_table4 = df_table4.set_index('index')
 
-df_table4
+df_table4['original_name'] = df_table4['molecular_formula']
 
-df_table4.to_csv('output/prices.csv')
+from es_utils import extract_df_price
+df_price = extract_df_price(df_table4)
+df_price.to_csv('output/mat_prices.csv')
 
 
 #%%

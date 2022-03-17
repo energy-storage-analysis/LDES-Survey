@@ -20,17 +20,17 @@ added_rows = pd.DataFrame({
     'ref': [np.nan],
     'specific_price': [0]
 }, index = ['Air'])
+added_rows.index.name ='index'
 
 table_3 = pd.merge(table_3, chem_lookup, on='original_name').set_index('index')
 
 table_3 = table_3.append(added_rows)
 
-
-
-table_3
-
 # %%
-table_3.to_csv('output/prices.csv')
+
+from es_utils import extract_df_price
+df_price = extract_df_price(table_3)
+df_price.to_csv('output/mat_prices.csv')
 
 #%%
 df = pd.read_csv('tables/table_2.csv')

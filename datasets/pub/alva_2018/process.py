@@ -16,8 +16,8 @@ chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
 # Alva Thermal
 df_latent = pd.read_csv('tables/table_8.csv', index_col=0)
 
-df_latent['specific_energy'] = df_latent['sp_latent_heat']/3600 #TODO: units
-df_latent = df_latent.drop('sp_latent_heat',axis=1)
+df_latent['sp_latent_heat'] = df_latent['sp_latent_heat']/3600 #TODO: units
+# df_latent = df_latent.drop('sp_latent_heat',axis=1)
 
 
 #Only keep data relevant to high temperature storage (not buildings)
@@ -60,7 +60,6 @@ df_latent['energy_type'] = 'latent_thermal'
 
 
 #%%
-df_latent.to_csv('output/latent.csv')
 
 #%%
 df_4 = pd.read_csv('tables/table_4.csv')
@@ -87,8 +86,17 @@ df_sens['Cp'] = df_sens['Cp']/3600
 df_sens['specific_energy'] = df_sens['Cp']*500
 # df_sens['C_kwh'] = df_sens['specific_price']/(df_sens['Cp']*500)
 df_sens['energy_type'] = 'sensible_thermal'
-# %%
-df_sens.to_csv('output/sensible.csv')
-# %%
 
-# %%
+#%%
+
+df = pd.concat([
+    df_latent,
+    df_sens
+])
+
+from es_utils import extract_df_physprop, extract_df_price
+df_physprop = extract_df_physprop(df, ['Cp','kth','sp_latent_heat','phase_change_T'])
+df_price = extract_df_price(df)
+
+df_price.to_csv('output/mat_prices.csv')
+df_physprop.to_csv('output/physprop.csv')

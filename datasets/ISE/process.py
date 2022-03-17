@@ -101,24 +101,17 @@ chem_lookup = process_chem_lookup(chem_lookup)
 df = pd.merge(df, chem_lookup, on='original_name')
 
 
-df.to_csv('output/processed_orig.csv', index=False)
+df.to_csv('output/processed.csv', index=False)
 
 # %%
 
 # df = df[['material_name','original_name','commodity_info','Specification','specific_price']]
 
-df = df[['index','original_name','specific_price']]
-#%%
-cols_not_price = [col for col in df.columns if col != 'specific_price']
+df_combine = df.groupby('index')[['specific_price']].mean()
 
-df = pd.concat([
-df[cols_not_price].groupby('index').first(),
-df[['index','specific_price']].groupby('index').mean()
-], axis=1)
-df
+from es_utils import join_col_vals
+df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
 
-
-#%%
-df.to_csv('output/processed.csv')
-
-# %%
+from es_utils import extract_df_price
+df_price = extract_df_price(df_combine)
+df_price.to_csv('output/mat_prices.csv')

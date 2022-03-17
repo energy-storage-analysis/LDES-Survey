@@ -3,6 +3,7 @@
 import pandas as pd
 import os
 
+if not os.path.exists('output'): os.mkdir('output')
 
 df = pd.read_csv('tables/table_4.csv', index_col=0)
 
@@ -28,16 +29,7 @@ df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 #%%
 df
 
+from es_utils import extract_df_price
+df_price = extract_df_price(df)
+df_price.to_csv('output/mat_prices.csv')
 
-#%%
-
-# import pubchempy as pcp
-
-# df_out['molecular_formula'] = df_out['pubchem_cid'].dropna().apply(lambda x: pcp.Compound.from_cid(x).molecular_formula)
-
-#%%
-
-if not os.path.exists('output'): os.mkdir('output')
-
-df.to_csv('output/processed.csv')
-# %%

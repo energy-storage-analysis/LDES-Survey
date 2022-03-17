@@ -73,24 +73,14 @@ df.to_csv('output/processed_orig.csv', index=False)
 
 #%%
 
-# To group by the index name, for now just drop everything other than the price. (USGS metadata can change for the same index, e.g. clays)
-
-
-df = df[['index','specific_price']]
-#%%
-cols_not_price = [col for col in df.columns if col != 'specific_price']
-
-df = pd.concat([
-df[cols_not_price].groupby('index').first(),
-df[['index','specific_price']].groupby('index').mean()
-], axis=1)
-df
-
 
 #%%
+df_combine = df.groupby('index')[['specific_price']].mean()
+
+from es_utils import join_col_vals
+df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
 
 
-#%%
-
-df.to_csv('output/processed.csv')
-# %%
+from es_utils import extract_df_price
+df_price = extract_df_price(df_combine)
+df_price.to_csv('output/mat_prices.csv')

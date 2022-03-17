@@ -1,65 +1,205 @@
-index,original_name,specific_price
-Ammonium Teptamolybdate,Ammonium heptamolybdate,19.018
-Antimony Ethylene Glycoxide,Antimony ethelyene_glycol,5.299
-As,Arsenic metal,1.145
-As2O3,Arsenic trioxide,0.43000000000000005
-Bi,Bismuth ingot,6.333515876680752
-Bi2O3,Bismuth oxides,6.497
-C2O6Zr,Zirconium Carbonates,3.3825000000000003
-CCoO3,Cobalt Carbonates,14.445
-CLi2O3,Lithium Carbonates,11.243
-CW,Tungsten carbide,28.475
-Ca,Calcium Ingot,3.7736000000000005
-Cd,Cadmium Ingot,2.784739448795549
-Cl2Co,Cobalt Chloride,6.388
-Cl2H2OZr,Zirconium Oxychloride,2.2720000000000002
-Cl4Ti,Titanium tetrachloride,1.1685
-ClLi,Lithium chlorides,9.7995
-Co,Cobalt Conc.,27.900819913325638
-Co3O4,Cobalt oxides,22.2
-CoO,Cobalt Monoxide,31.6
-CoO4S,Cobalt sulphates,5.3715
-Cr,Chromium metal,8.244
-CrFeO4,Chrome Conc.,0.12297727272727271
-FeH6O3Ti,Ilmenite Conc,0.3993333333333333
-Ga,Gallium metal,151.625
-Ge,Germanium metal,1152.75
-GeO2,Germanium dioxides,720.5
-H10MoN2S4,Ammonium Tetrathiomolybdate,18.728
-H4NO3V,Ammonium metavanadate,16.913
-H8N2O4W,Tungsten APT,20.13233333333333
-In,Indium ingot,168.75
-Li,Lithium metal,100.17275000000001
-Lithium Cobaltate,Lithium Cobaltate,28.950000000000003
-Lithium Hydroxide Monohydrate,Lithium hydroxides_monohydrates,13.18125
-Lithium Manganate,Lithium manganates,6.968500000000001
-Metallurgical Silicon,Silicon metal,1.765666728000003
-Mg,Magnesium Ingot,7.123875000000001
-Mn,Manganese Lump,2.005
-MnO2,Manganese dioxides,1.60425
-MnO4S,Manganese sulphates,0.9875
-Mo,Molybdenum Powder,43.63333333333333
-MoNa2O4,Sodium Molybdate,12.485
-MoO3,Molybdenum oxides,25.66737438890782
-MoS2,Molybdenum Conc.,26.35
-NV,Vanadium nitrides,27.0755
-Na2O4W,Sodium Tungstate,14.9535
-Nb2O5,Niobium Conc.,35.47264430285721
-O2Se,Selenium dioxides,12.7
-O2Ti,Titanium Dioxide,1.9813333333333334
-O2Zr,Zirconium fused_cubic,4.3555
-O3Sb2,Antimony Trioxide,5.37909715663868
-O3W,Wolfram Ore,18.81775
-O4SiZr,Zircon sand,1.6375
-O5Ta2,Tantalum Conc.,197.93038657815165
-O5V2,Vanadium pentoxides,17.306960589916155
-Polysilicon,Silicon polysilicon,10.55
-Re,Rhenium APR,1502.5
-Sb,Antimony Ingot,5.963108856403382
-Se,Selenium Powder,20.271760276302707
-Sr,Strontium metal,6.80275
-Ta,Tantalum metal,281.6666666666667
-Te,Tellurium metal,55.96666666666667
-Ti,Titan Sponge,15.731000000000002
-W,Tungsten powder,24.342857142857145
-Zr,Zirconium Sponge,35.85
+original_name,Specification,Unit,price,+/-,pricing,currency,mass_unit,specific_price,commodity_info,Unnamed: 0,material_name,molecular_formula,index_use,pubchem_formula,index
+Antimony Ingot,99.65% min EXW China,USD / mt,5516.5,,08.07.19,USD,metric_ton,5.5165,Ingot,0,Antimony,,pubchem_formula,Sb,Sb
+Antimony Ingot,99.85% min EXW China,USD / mt,5589.5,,08.07.19,USD,metric_ton,5.5895,Ingot,0,Antimony,,pubchem_formula,Sb,Sb
+Antimony Ingot,99.65% min FOB China,USD / mt,6100.0,,08.07.19,USD,metric_ton,6.1000000000000005,Ingot,0,Antimony,,pubchem_formula,Sb,Sb
+Antimony Ingot,99.65% min in the warehouse Rotterdam,USD / mt,6150.0,,08.07.19,USD,metric_ton,6.15,Ingot,0,Antimony,,pubchem_formula,Sb,Sb
+Antimony Ingot,99.65% min in the Baltimore warehouse,USD / lb,2.9299999999999997,,08.07.19,USD,lb,6.459544282016912,Ingot,0,Antimony,,pubchem_formula,Sb,Sb
+Antimony Trioxide,99.5% min delivered in China,USD / mt,5081.5,,08.07.19,USD,metric_ton,5.0815,Trioxide,1,Antimony Trioxide,,pubchem_formula,O3Sb2,O3Sb2
+Antimony Trioxide,99.8% min delivered in China,USD / mt,5226.5,,08.07.19,USD,metric_ton,5.2265,Trioxide,1,Antimony Trioxide,,pubchem_formula,O3Sb2,O3Sb2
+Antimony Trioxide,99.5% min FOB China,USD / mt,5300.0,,08.07.19,USD,metric_ton,5.3,Trioxide,1,Antimony Trioxide,,pubchem_formula,O3Sb2,O3Sb2
+Antimony Trioxide,99.5% min in the Baltimore warehouse,USD / lb,2.6799999999999997,,08.07.19,USD,lb,5.908388626554718,Trioxide,1,Antimony Trioxide,,pubchem_formula,O3Sb2,O3Sb2
+Antimony ethelyene_glycol,57% min delivered in China,USD / mt,5299.0,,08.07.19,USD,metric_ton,5.299,ethelyene_glycol,2,Antimony Ethylene Glycoxide,,material_name,,Antimony Ethylene Glycoxide
+Arsenic metal,99% min EXW China,USD / mt,1125.0,,08.07.19,USD,metric_ton,1.125,metal,3,Arsenic,,pubchem_formula,As,As
+Arsenic metal,99% min FOB China,USD / mt,1165.0,,08.07.19,USD,metric_ton,1.165,metal,3,Arsenic,,pubchem_formula,As,As
+Arsenic trioxide,99% min EXW China,USD / mt,450.0,,08.07.19,USD,metric_ton,0.45,trioxide,4,Arsenic Trioxide,,pubchem_formula,As2O3,As2O3
+Arsenic trioxide,99% min FOB China,USD / mt,410.0,,08.07.19,USD,metric_ton,0.41000000000000003,trioxide,4,Arsenic Trioxide,,pubchem_formula,As2O3,As2O3
+Bismuth ingot,99.99% min EXW China,USD / mt,5988.5,,08.07.19,USD,metric_ton,5.9885,ingot,5,Bismuth,,pubchem_formula,Bi,Bi
+Bismuth ingot,99.99% min FOB China,USD / lb,2.825,,08.07.19,USD,lb,6.228058906722792,ingot,5,Bismuth,,pubchem_formula,Bi,Bi
+Bismuth ingot,99.99% min delivered in Europe,USD / lb,2.925,,08.07.19,USD,lb,6.448521168907669,ingot,5,Bismuth,,pubchem_formula,Bi,Bi
+Bismuth ingot,99.99% min delivered in US,USD / lb,3.0250000000000004,,08.07.19,USD,lb,6.668983431092547,ingot,5,Bismuth,,pubchem_formula,Bi,Bi
+Bismuth oxides,99.9% min EXW China,USD / mt,6497.0,,08.07.19,USD,metric_ton,6.497,oxides,6,Bismuth Oxide,,pubchem_formula,Bi2O3,Bi2O3
+Cadmium Ingot,99.99% min EXW China,USD / mt,2765.5,,08.07.19,USD,metric_ton,2.7655,Ingot,7,Cadmium,,pubchem_formula,Cd,Cd
+Cadmium Ingot,99.99% min in the warehouse Rotterdam,USD / lb,1.2650000000000001,,08.07.19,USD,lb,2.7888476166387015,Ingot,7,Cadmium,,pubchem_formula,Cd,Cd
+Cadmium Ingot,99.99% min in the Baltimore warehouse,USD / lb,1.27,,08.07.19,USD,lb,2.799870729747945,Ingot,7,Cadmium,,pubchem_formula,Cd,Cd
+Calcium Ingot,Reductive 98% min EXW China,USD / mt,2068.5,,08.07.19,USD,metric_ton,2.0685000000000002,Ingot,8,Calcium,,pubchem_formula,Ca,Ca
+Calcium Granule,Reductive 98% min EXW China,USD / mt,2526.0,,08.07.19,USD,metric_ton,2.5260000000000002,Granule,9,Calcium,,pubchem_formula,Ca,Ca
+Calcium Granule,Reductive 98% min FOB China,USD / mt,2660.0,,08.07.19,USD,metric_ton,2.66,Granule,9,Calcium,,pubchem_formula,Ca,Ca
+Calcium Granule,Electrolytic 98.5% min EXW China,USD / mt,5473.5,,08.07.19,USD,metric_ton,5.4735000000000005,Granule,9,Calcium,,pubchem_formula,Ca,Ca
+Calcium Granule,Electrolytic 98.5% min FOB China,USD / mt,6140.0,,08.07.19,USD,metric_ton,6.140000000000001,Granule,9,Calcium,,pubchem_formula,Ca,Ca
+Chrome Conc.,SA 42% min CIF China,USD / mt,165.0,,08.07.19,USD,metric_ton,0.165,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,SA 40% min in the port of China,USD / dmtu,3.9899999999999998,,08.07.19,USD,dmtu,0.00399,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,SA 40% min CIF China,USD / mt,145.0,,08.07.19,USD,metric_ton,0.145,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,46% min FOB Turkey,USD / mt,192.5,,08.07.19,USD,metric_ton,0.1925,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,42% min FOB SA,USD / mt,129.5,ï¿½2.26,08.07.19,USD,metric_ton,0.1295,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,40% min FOB SA,USD / mt,112.5,ï¿½2.60,08.07.19,USD,metric_ton,0.1125,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,Turkish 46% min CIF China,USD / mt,217.5,,08.07.19,USD,metric_ton,0.2175,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome Conc.,Turkish 46% min in the port of China,USD / dmtu,6.025,,08.07.19,USD,dmtu,0.006025000000000001,Conc.,10,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome lump,Turkish 40% min in the port of China,USD / dmtu,5.734999999999999,,08.07.19,USD,dmtu,0.005735,lump,11,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome lump,Turkish 40% min CIF China,USD / mt,197.5,,08.07.19,USD,metric_ton,0.1975,lump,11,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chrome lump,40% min FOB Turkey,USD / mt,177.5,,08.07.19,USD,metric_ton,0.1775,lump,11,Chromite,,pubchem_formula,CrFeO4,CrFeO4
+Chromium metal,99% min EXW China,USD / mt,8348.0,ï¿½1.71,08.07.19,USD,metric_ton,8.348,metal,12,Chromium,,pubchem_formula,Cr,Cr
+Chromium metal,99% min FOB China,USD / mt,8140.0,ï¿½1.75,08.07.19,USD,metric_ton,8.14,metal,12,Chromium,,pubchem_formula,Cr,Cr
+Cobalt Conc.,6-8% CIF China,USD / lb Co,8.35,ï¿½2.34,08.07.19,USD,lb,18.408598892437276,Conc.,13,Cobalt,,pubchem_formula,Co,Co
+Cobalt Intermediate,20-30% CIF China,USD / lb Co,8.45,ï¿½2.31,08.07.19,USD,lb,18.629061154622153,Intermediate,14,Cobalt,,pubchem_formula,Co,Co
+Cobalt metal,99.3% min in the warehouse Rotterdam,USD / lb,13.95,,08.07.19,USD,lb,30.75448557479042,metal,15,Cobalt,,pubchem_formula,Co,Co
+Cobalt metal,99.8% min in the warehouse Rotterdam,USD / lb,14.6,,08.07.19,USD,lb,32.18749027899212,metal,15,Cobalt,,pubchem_formula,Co,Co
+Cobalt metal,99.8% min in the Baltimore warehouse,USD / lb,14.3,,08.07.19,USD,lb,31.526103492437493,metal,15,Cobalt,,pubchem_formula,Co,Co
+Cobalt metal,99.8% min delivered in China,USD / kg,30.5,,08.07.19,USD,kg,30.5,metal,15,Cobalt,,pubchem_formula,Co,Co
+Cobalt Carbonates,46% min delivered in China,USD / mt,14445.0,ï¿½2.93,08.07.19,USD,metric_ton,14.445,Carbonates,16,Cobalt Carbonate,,pubchem_formula,CCoO3,CCoO3
+Cobalt Chloride,24% min delivered in China,USD / mt,6388.0,,08.07.19,USD,metric_ton,6.388,Chloride,17,Cobalt Chloride,,pubchem_formula,Cl2Co,Cl2Co
+Cobalt Monoxide,78% min delivered in China,USD / kg,31.6,,08.07.19,USD,kg,31.6,Monoxide,18,Cobalt Monoxide,,pubchem_formula,CoO,CoO
+Cobalt oxides,72% min delivered in China,USD / kg,22.15,,08.07.19,USD,kg,22.15,oxides,19,Cobalt Tetraoxide,,pubchem_formula,Co3O4,Co3O4
+Cobalt Powder,99.5% min delivered in China,USD / kg,33.3,ï¿½1.29,08.07.19,USD,kg,33.3,Powder,20,Cobalt,,pubchem_formula,Co,Co
+Cobalt sulphates,20.5% min delivered in China,USD / mt,5371.5,ï¿½1.33,08.07.19,USD,metric_ton,5.3715,sulphates,21,Cobalt Sulphate,,pubchem_formula,CoO4S,CoO4S
+Cobalt Tetroxide,73.5% min delivered in China,USD / kg,22.25,,08.07.19,USD,kg,22.25,Tetroxide,22,Cobalt Tetroxide,Co3O4,molecular_formula,,Co3O4
+Gallium metal,99.99% min EXW China,USD / kg,146.0,,08.07.19,USD,kg,146.0,metal,23,Gallium,,pubchem_formula,Ga,Ga
+Gallium metal,99.99% min FOB China,USD / kg,146.5,,08.07.19,USD,kg,146.5,metal,23,Gallium,,pubchem_formula,Ga,Ga
+Gallium metal,99.99% min delivered in Europe,USD / kg,157.0,,08.07.19,USD,kg,157.0,metal,23,Gallium,,pubchem_formula,Ga,Ga
+Gallium metal,99.99% min delivered in US,USD / kg,157.0,,08.07.19,USD,kg,157.0,metal,23,Gallium,,pubchem_formula,Ga,Ga
+Germanium metal,99.99% min EXW China,USD / kg,1096.0,,08.07.19,USD,kg,1096.0,metal,24,Germanium,,pubchem_formula,Ge,Ge
+Germanium metal,99.99% min FOB China,USD / kg,1145.0,,08.07.19,USD,kg,1145.0,metal,24,Germanium,,pubchem_formula,Ge,Ge
+Germanium metal,99.99% min delivered in Europe,USD / kg,1185.0,,08.07.19,USD,kg,1185.0,metal,24,Germanium,,pubchem_formula,Ge,Ge
+Germanium metal,99.99% min delivered in US,USD / kg,1185.0,,08.07.19,USD,kg,1185.0,metal,24,Germanium,,pubchem_formula,Ge,Ge
+Germanium dioxides,99.99% min FOB China,USD / kg,720.0,,08.07.19,USD,kg,720.0,dioxides,25,Germanium Dioxide,,pubchem_formula,GeO2,GeO2
+Germanium dioxides,99.99% min EXW China,USD / kg,711.5,,08.07.19,USD,kg,711.5,dioxides,25,Germanium Dioxide,,pubchem_formula,GeO2,GeO2
+Germanium dioxides,99.99% min delivered in US,USD / kg,730.0,,08.07.19,USD,kg,730.0,dioxides,25,Germanium Dioxide,,pubchem_formula,GeO2,GeO2
+Indium ingot,99.99% min EXW China,USD / kg,162.0,,08.07.19,USD,kg,162.0,ingot,26,Indium,,pubchem_formula,In,In
+Indium ingot,99.99% min FOB China,USD / kg,163.0,,08.07.19,USD,kg,163.0,ingot,26,Indium,,pubchem_formula,In,In
+Indium ingot,99.99% min delivered in Europe,USD / kg,175.0,,08.07.19,USD,kg,175.0,ingot,26,Indium,,pubchem_formula,In,In
+Indium ingot,99.99% min delivered in US,USD / kg,175.0,,08.07.19,USD,kg,175.0,ingot,26,Indium,,pubchem_formula,In,In
+Lithium metal,99% min delivered in China,USD / mt,97269.0,,08.07.19,USD,metric_ton,97.269,metal,27,Lithium,,pubchem_formula,Li,Li
+Lithium metal,99.9% min delivered in China,USD / mt,103076.5,,08.07.19,USD,metric_ton,103.0765,metal,27,Lithium,,pubchem_formula,Li,Li
+Lithium Carbonates,99% min delivered in China,USD / mt,9219.0,,08.07.19,USD,metric_ton,9.219,Carbonates,28,Lithium Carbonate,,pubchem_formula,CLi2O3,CLi2O3
+Lithium Carbonates,99.5% min delivered in China,USD / mt,10453.0,ï¿½0.69,08.07.19,USD,metric_ton,10.453,Carbonates,28,Lithium Carbonate,,pubchem_formula,CLi2O3,CLi2O3
+Lithium Carbonates,99.5% min delivered in EU,USD / kg,14.25,,08.07.19,USD,kg,14.25,Carbonates,28,Lithium Carbonate,,pubchem_formula,CLi2O3,CLi2O3
+Lithium Carbonates,99.5% min FOB South America,USD / kg,11.05,,08.07.19,USD,kg,11.05,Carbonates,28,Lithium Carbonate,,pubchem_formula,CLi2O3,CLi2O3
+Lithium Cobaltate,Co 60% min delivered in China,USD / kg,28.950000000000003,,08.07.19,USD,kg,28.950000000000003,Cobaltate,29,Lithium Cobaltate,LiCoO2,material_name,,Lithium Cobaltate
+Lithium manganates,Mn 58% delivered in China,USD / mt,6968.5,,08.07.19,USD,metric_ton,6.968500000000001,manganates,30,Lithium Manganate,LiMn2O4,material_name,Li2MnO4,Lithium Manganate
+Lithium hydroxides_monohydrates,LiOH 56.5% min delivered in China,USD / mt,10670.5,ï¿½0.68,08.07.19,USD,metric_ton,10.6705,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,H3LiO2,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in China",USD / mt,11904.5,ï¿½0.61,08.07.19,USD,metric_ton,11.9045,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,H3LiO2,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,"LiOH 56.5% min, Magnets 0.0001% max FOB China",USD / kg,14.45,,08.07.19,USD,kg,14.45,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,H3LiO2,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in South Korea",USD / kg,15.7,,08.07.19,USD,kg,15.7,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,H3LiO2,Lithium Hydroxide Monohydrate
+Lithium chlorides,99.3% min delivered in China,USD / mt,9799.5,,08.07.19,USD,metric_ton,9.7995,chlorides,32,Lithium Chloride,,pubchem_formula,ClLi,ClLi
+Magnesium Ingot,99.9% min EXW China,USD / mt,2250.0,,08.07.19,USD,metric_ton,2.25,Ingot,33,Magnesium,,pubchem_formula,Mg,Mg
+Magnesium Ingot,99.9% min Ex-VAT FOB China,USD / mt,2325.0,,08.07.19,USD,metric_ton,2.325,Ingot,33,Magnesium,,pubchem_formula,Mg,Mg
+Magnesium Ingot,99.9% min FOB China,USD / mt,2355.0,,08.07.19,USD,metric_ton,2.355,Ingot,33,Magnesium,,pubchem_formula,Mg,Mg
+Magnesium Ingot,99.9% min in the warehouse Rotterdam,USD / mt,2355.0,,08.07.19,USD,metric_ton,2.355,Ingot,33,Magnesium,,pubchem_formula,Mg,Mg
+Magnesium Powder,99.9% min EXW China,USD / mt,2410.0,,08.07.19,USD,metric_ton,2.41,Powder,34,Magnesium,,pubchem_formula,Mg,Mg
+Magnesium Powder,99.9% min FOB China,USD / mt,2455.0,,08.07.19,USD,metric_ton,2.455,Powder,34,Magnesium,,pubchem_formula,Mg,Mg
+Manganese flakes,99.7% min EXW China,USD / mt,1901.5,,08.07.19,USD,metric_ton,1.9015,flakes,36,Magnesium,,pubchem_formula,Mg,Mg
+Manganese flakes,99.7% min FOB China,USD / mt,1945.0,,08.07.19,USD,metric_ton,1.945,flakes,36,Magnesium,,pubchem_formula,Mg,Mg
+Manganese flakes,99.7% min Ex-VAT FOB China,USD / mt,1865.0,,08.07.19,USD,metric_ton,1.865,flakes,36,Magnesium,,pubchem_formula,Mg,Mg
+Manganese flakes,99.7% min in the warehouse Rotterdam,USD / mt,1950.0,,08.07.19,USD,metric_ton,1.95,flakes,36,Magnesium,,pubchem_formula,Mg,Mg
+Manganese flakes,99.7% min CIF India,USD / mt,1975.0,,08.07.19,USD,metric_ton,1.975,flakes,36,Magnesium,,pubchem_formula,Mg,Mg
+Manganese Lump,96.5% min FOB China,USD / mt,2015.0,,08.07.19,USD,metric_ton,2.015,Lump,37,Manganese,,pubchem_formula,Mn,Mn
+Manganese Briquette,97% min FOB China,USD / mt,1995.0,,08.07.19,USD,metric_ton,1.995,Briquette,38,Manganese,,pubchem_formula,Mn,Mn
+Manganese dioxides,Alkaline 91% min EXW China,USD / mt,1713.0,ï¿½0.42,08.07.19,USD,metric_ton,1.713,dioxides,39,Manganese dioxide,,pubchem_formula,MnO2,MnO2
+Manganese dioxides,Carbon 91% min EXW China,USD / mt,1495.5,ï¿½0.48,08.07.19,USD,metric_ton,1.4955,dioxides,39,Manganese dioxide,,pubchem_formula,MnO2,MnO2
+Manganese sulphates,Mn 32% min EXW China,USD / t,987.5,,08.07.19,USD,metric_ton,0.9875,sulphates,40,Manganese sulphate,,pubchem_formula,MnO4S,MnO4S
+Mercury metal,99.999% min EXW China,USD / kg,61.7,,08.07.19,USD,kg,61.7,metal,41,Magnesium,,pubchem_formula,Mg,Mg
+Molybdenum Conc.,45% min EXW China,USD / mtu,263.5,,08.07.19,USD,mtu,26.35,Conc.,42,Molybdenite ,,pubchem_formula,MoS2,MoS2
+Molybdenum oxides,50% min EXW China,USD / mtu,271.0,,08.07.19,USD,mtu,27.1,oxides,43,Molybdenum Oxide,,pubchem_formula,MoO3,MoO3
+Molybdenum oxides,57% min in the warehouse Rotterdam,USD / lb,11.85,,08.07.19,USD,lb,26.12477806890799,oxides,43,Molybdenum Oxide,,pubchem_formula,MoO3,MoO3
+Molybdenum oxides,57% min in the port of South Korea,USD / lb,11.8,,08.07.19,USD,lb,26.014546937815556,oxides,43,Molybdenum Oxide,,pubchem_formula,MoO3,MoO3
+Molybdenum oxides,57% min in the port of India,USD / lb,11.8,,08.07.19,USD,lb,26.014546937815556,oxides,43,Molybdenum Oxide,,pubchem_formula,MoO3,MoO3
+Molybdenum oxides,99.9% min EXW China,USD / mt,23083.0,,08.07.19,USD,metric_ton,23.083000000000002,oxides,43,Molybdenum Oxide,,pubchem_formula,MoO3,MoO3
+Ammonium Tetrathiomolybdate,56% min EXW China,USD / mt,18728.0,,08.07.19,USD,metric_ton,18.728,Tetrathiomolybdate,44,Ammonium Tetrathiomolybdate,,pubchem_formula,H10MoN2S4,H10MoN2S4
+Ammonium heptamolybdate,54% min EXW China,USD / mt,19018.0,,08.07.19,USD,metric_ton,19.018,heptamolybdate,45,Ammonium Teptamolybdate,,material_name,,Ammonium Teptamolybdate
+Sodium Molybdate,99% min EXW China,USD / mt,12485.0,,08.07.19,USD,metric_ton,12.485,Molybdate,46,Sodium Molybdate,,pubchem_formula,MoNa2O4,MoNa2O4
+Molybdenum Powder,99.95% min EXW China,USD / kg,37.7,,08.07.19,USD,kg,37.7,Powder,47,Molybdenum,,pubchem_formula,Mo,Mo
+Molybdenum bar,99.9% min EXW China,USD / kg,40.45,,08.07.19,USD,kg,40.45,bar,48,Molybdenum,,pubchem_formula,Mo,Mo
+Molybdenum Rod,?0.40mm EXW China,USD / kg,52.75,,08.07.19,USD,kg,52.75,Rod,49,Molybdenum,,pubchem_formula,Mo,Mo
+Niobium Conc.,"Nb2O5 50% min, Ta2O5 5% min, CIF China",USD / lb,9.35,,08.07.19,USD,lb,20.613221514286053,Conc.,50,Niobium Pentoxide,,pubchem_formula,Nb2O5,Nb2O5
+Niobium pentoxides,99.5% min EXW China,USD / kg,33.45,,08.07.19,USD,kg,33.45,pentoxides,51,Niobium Pentoxide,,pubchem_formula,Nb2O5,Nb2O5
+Niobium pentoxides,99.5% min FOB China,USD / kg,33.5,,08.07.19,USD,kg,33.5,pentoxides,51,Niobium Pentoxide,,pubchem_formula,Nb2O5,Nb2O5
+Niobium pentoxides,99.99% min EXW China,USD / kg,45.0,,08.07.19,USD,kg,45.0,pentoxides,51,Niobium Pentoxide,,pubchem_formula,Nb2O5,Nb2O5
+Niobium pentoxides,99.99% min FOB China,USD / kg,44.8,,08.07.19,USD,kg,44.8,pentoxides,51,Niobium Pentoxide,,pubchem_formula,Nb2O5,Nb2O5
+Rhenium APR,99.99% min EXW China,USD / kg,1502.5,,08.07.19,USD,kg,1502.5,APR,52,Rhenium,,pubchem_formula,Re,Re
+Selenium Powder,99.5% min in the warehouse Rotterdam,USD / lb,8.45,,08.07.19,USD,lb,18.629061154622153,Powder,53,Selenium,,pubchem_formula,Se,Se
+Selenium Powder,99.9% min delivered in China,USD / kg,20.700000000000003,,08.07.19,USD,kg,20.700000000000003,Powder,53,Selenium,,pubchem_formula,Se,Se
+Selenium Powder,99.9% min CIF China,USD / lb,8.8,,08.07.19,USD,lb,19.400679072269227,Powder,53,Selenium,,pubchem_formula,Se,Se
+Selenium Powder,99.9% min FOB Russia,USD / kg,24.0,,08.07.19,USD,kg,24.0,Powder,53,Selenium,,pubchem_formula,Se,Se
+Selenium Powder,99.9% min delivered in US,USD / lb,8.45,,08.07.19,USD,lb,18.629061154622153,Powder,53,Selenium,,pubchem_formula,Se,Se
+Selenium dioxides,98% min delivered in China,USD / kg,12.7,,08.07.19,USD,kg,12.7,dioxides,54,Selenium Dioxide,,pubchem_formula,O2Se,O2Se
+Silicon metal,5-5-3 delivered in China,USD / mt,1495.5,ï¿½0.96,08.07.19,USD,metric_ton,1.4955,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,5-5-3 FOB China,USD / mt,1540.0,,08.07.19,USD,metric_ton,1.54,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,5-5-3 Ex-VAT FOB China,USD / mt,1420.0,,08.07.19,USD,metric_ton,1.42,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,4-4-1 delivered in China,USD / mt,1640.5,ï¿½0.88,08.07.19,USD,metric_ton,1.6405,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,4-4-1 FOB China,USD / mt,1720.0,,08.07.19,USD,metric_ton,1.72,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,4-4-1 Ex-VAT FOB China,USD / mt,1565.0,,08.07.19,USD,metric_ton,1.565,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,4-2-1 delivered in China,USD / mt,1785.5,,08.07.19,USD,metric_ton,1.7855,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,4-1-1 delivered in China,USD / mt,1814.5,,08.07.19,USD,metric_ton,1.8145,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,3-3-03 delivered in China,USD / mt,1727.5,,08.07.19,USD,metric_ton,1.7275,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,3-3-03 FOB China,USD / mt,1755.0,,08.07.19,USD,metric_ton,1.7550000000000001,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,3-3-03 P 50ppm max delivered in China,USD / mt,1756.5,,08.07.19,USD,metric_ton,1.7565,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,3-3-03 P 50ppm max FOB China,USD / mt,1800.0,,08.07.19,USD,metric_ton,1.8,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,2-2-02 delivered in China,USD / mt,1901.5,,08.07.19,USD,metric_ton,1.9015,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,2-2-02 FOB China,USD / mt,1940.0,,08.07.19,USD,metric_ton,1.94,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon metal,98.5% min delivered in US,USD / lb,1.19,,08.07.19,USD,lb,2.6235009200000428,metal,55,Metallurgical Silicon,,material_name,,Metallurgical Silicon
+Silicon polysilicon,6N delivered in China,USD / kg,10.55,ï¿½1.40,08.07.19,USD,kg,10.55,polysilicon,56,Polysilicon,,material_name,,Polysilicon
+Strontium metal,99% min EXW China,USD / mt,6605.5,,08.07.19,USD,metric_ton,6.6055,metal,57,Strontium,,pubchem_formula,Sr,Sr
+Strontium metal,99% min FOB China,USD / mt,7000.0,,08.07.19,USD,metric_ton,7.0,metal,57,Strontium,,pubchem_formula,Sr,Sr
+Tantalum Conc.,Ta2O5 30% min CIF China,USD / lb Ta2O5,54.5,ï¿½0.91,08.07.19,USD,lb,120.15193289075827,Conc.,58,Tantalum Oxide,,pubchem_formula,O5Ta2,O5Ta2
+Tantalum metal,99.95% min EXW China,USD / kg,305.0,,08.07.19,USD,kg,305.0,metal,59,Tantalum,,pubchem_formula,Ta,Ta
+Tantalum metal,99.95% min FOB China,USD / kg,260.0,,08.07.19,USD,kg,260.0,metal,59,Tantalum,,pubchem_formula,Ta,Ta
+Tantalum metal,99.95% min delivered in US,USD / kg,280.0,,08.07.19,USD,kg,280.0,metal,59,Tantalum,,pubchem_formula,Ta,Ta
+Tantalum pentoxide,99.5% min EXW China,USD / kg,185.0,ï¿½0.78,08.07.19,USD,kg,185.0,pentoxide,60,Tantalum Pentoxide,,pubchem_formula,O5Ta2,O5Ta2
+Tantalum pentoxide,99.5% min FOB China,USD / kg,185.0,ï¿½1.07,08.07.19,USD,kg,185.0,pentoxide,60,Tantalum Pentoxide,,pubchem_formula,O5Ta2,O5Ta2
+Tantalum pentoxide,99.99% min EXW China,USD / kg,252.0,,08.07.19,USD,kg,252.0,pentoxide,60,Tantalum Pentoxide,,pubchem_formula,O5Ta2,O5Ta2
+Tantalum pentoxide,99.99% min FOB China,USD / kg,247.5,,08.07.19,USD,kg,247.5,pentoxide,60,Tantalum Pentoxide,,pubchem_formula,O5Ta2,O5Ta2
+Tellurium metal,99.9% min in the warehouse Rotterdam,USD / kg,51.0,,08.07.19,USD,kg,51.0,metal,61,Tellurium,,pubchem_formula,Te,Te
+Tellurium metal,99.99% min EXW China,USD / kg,55.900000000000006,,08.07.19,USD,kg,55.900000000000006,metal,61,Tellurium,,pubchem_formula,Te,Te
+Tellurium metal,99.99% min in the warehouse Rotterdam,USD / kg,61.0,,08.07.19,USD,kg,61.0,metal,61,Tellurium,,pubchem_formula,Te,Te
+Ilmenite Conc,TiO2 46% min; Fe2O3 8% max; Ex-VAT EXW China,USD / mt,164.5,,08.07.19,USD,metric_ton,0.1645,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,TiO2 50% min; Fe2O3 14% max; in the port of China,USD / mt,234.0,,08.07.19,USD,metric_ton,0.234,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,TiO2 50% min; Fe 30% min; in the port of China,USD / mt,188.0,,08.07.19,USD,metric_ton,0.188,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,"Mozambican TiO2 52% min, Fe2O3 25% max CIF China",USD / mt,197.5,,08.07.19,USD,metric_ton,0.1975,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,"Australian TiO2 55-58% min, Fe 27% min CIF China",USD / mt,178.0,,08.07.19,USD,metric_ton,0.178,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,"Kenyan TiO2 48% min, Fe2O3 20% max CIF China",USD / mt,185.5,,08.07.19,USD,metric_ton,0.1855,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,"TiO2 52% min, Fe2O3 25% max FOB Vietnam",USD / mt,164.5,,08.07.19,USD,metric_ton,0.1645,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Conc,"TiO2 49% min, Fe2O3 11% max FOB India",USD / mt,216.0,,08.07.19,USD,metric_ton,0.216,Conc,62,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Ilmenite Reduced,TiO2 56% min EXW China,USD / mt,542.0,ï¿½0.27,08.07.19,USD,metric_ton,0.542,Reduced,63,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Rutile Conc,TiO2 95% min in the port of China,USD / mt,1314.0,ï¿½2.26,08.07.19,USD,metric_ton,1.314,Conc,64,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Titanium Slag,TiO2 74% min EXW China,USD / mt,522.5,ï¿½1.37,08.07.19,USD,metric_ton,0.5225,Slag,65,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Titanium Slag,TiO2 90% min EXW China,USD / mt,885.5,,08.07.19,USD,metric_ton,0.8855000000000001,Slag,65,Ilmenite,,pubchem_formula,FeH6O3Ti,FeH6O3Ti
+Titanium tetrachloride,99.99% min EXW China,USD / mt,1168.5,,08.07.19,USD,metric_ton,1.1685,tetrachloride,66,Titanium Tetrachloride,,pubchem_formula,Cl4Ti,Cl4Ti
+Titan Sponge,99.7% min EXW China,USD / mt,10743.0,,08.07.19,USD,metric_ton,10.743,Sponge,67,Titanium,,pubchem_formula,Ti,Ti
+Titanium plate,TA2 2mm EXW China,USD / kg,16.35,,08.07.19,USD,kg,16.35,plate,68,Titanium,,pubchem_formula,Ti,Ti
+Titanium pipe,TA2 25.4x1mm EXW China,USD / kg,20.1,,08.07.19,USD,kg,20.1,pipe,69,Titanium,,pubchem_formula,Ti,Ti
+Titanium Dioxide,R TiO2 93% min EXW China,USD / mt,2069.0,,08.07.19,USD,metric_ton,2.069,Dioxide,70,Titanium Dioxide,,pubchem_formula,O2Ti,O2Ti
+Titanium Dioxide,R TiO2 93% min FOB China,USD / mt,2140.0,ï¿½0.47,08.07.19,USD,metric_ton,2.14,Dioxide,70,Titanium Dioxide,,pubchem_formula,O2Ti,O2Ti
+Titanium Dioxide,A TiO2 98% min EXW China,USD / mt,1735.0,ï¿½0.83,08.07.19,USD,metric_ton,1.735,Dioxide,70,Titanium Dioxide,,pubchem_formula,O2Ti,O2Ti
+Wolfram Ore,WO3 65% min EXW China,USD / mt,10743.0,,08.07.19,USD,metric_ton,10.743,Ore,71,Tungsten Trioxide,,pubchem_formula,O3W,O3W
+Wolfram Ore,WO3 50% min FOB Africa,USD / mtu,207.5,,08.07.19,USD,mtu,20.75,Ore,71,Tungsten Trioxide,,pubchem_formula,O3W,O3W
+Tungsten APT,88.5% min EXW China,USD / mt,15897.0,,08.07.19,USD,metric_ton,15.897,APT,72,Ammonium Paratungstate,,pubchem_formula,H8N2O4W,H8N2O4W
+Tungsten APT,88.5% min FOB China,USD / mtu,220.0,,08.07.19,USD,mtu,22.0,APT,72,Ammonium Paratungstate,,pubchem_formula,H8N2O4W,H8N2O4W
+Tungsten APT,88.5% min in the warehouse Rotterdam,USD / mtu,225.0,ï¿½2.17,08.07.19,USD,mtu,22.5,APT,72,Ammonium Paratungstate,,pubchem_formula,H8N2O4W,H8N2O4W
+Sodium Tungstate,WO3 68% min EXW China,USD / mt,14953.5,,08.07.19,USD,metric_ton,14.9535,Tungstate,73,Sodium Tungstate,,pubchem_formula,Na2O4W,Na2O4W
+Tungsten oxides,WO3 99.95% min EXW China,USD / mt,20978.0,,08.07.19,USD,metric_ton,20.978,oxides,74,Tungsten Oxide,,pubchem_formula,O3W,O3W
+Tungsten oxides,WO3 99.95% min FOB China,USD / mtu,228.0,,08.07.19,USD,mtu,22.8,oxides,74,Tungsten Oxide,,pubchem_formula,O3W,O3W
+Tungsten powder,99.95% min 2.5-7.0?m EXW China,USD / kg,26.9,ï¿½0.54,08.07.19,USD,kg,26.9,powder,75,Tungsten,,pubchem_formula,W,W
+Wolfram Bar,W-4 99.9% min EXW China,USD / kg,31.0,,08.07.19,USD,kg,31.0,Bar,76,Wolfram,,pubchem_formula,W,W
+Wolfram Bar,W-4 99.9% min FOB China,USD / kg,32.0,,08.07.19,USD,kg,32.0,Bar,76,Wolfram,,pubchem_formula,W,W
+Tungsten carbide,99.8% min 2.5-7.0?m EXW China,USD / kg,26.65,ï¿½0.54,08.07.19,USD,kg,26.65,carbide,77,Tungsten Carbide,,pubchem_formula,CW,CW
+Tungsten carbide,99.8% min 2.5-7.0?m FOB China,USD / kg,30.3,,08.07.19,USD,kg,30.3,carbide,77,Tungsten Carbide,,pubchem_formula,CW,CW
+Tungsten scrap,"Grinding Swarf W 70% min, Co 5% min Ex-VAT delivered in China",USD / mtu,182.5,,08.07.19,USD,mtu,18.25,scrap,78,Tungsten,,pubchem_formula,W,W
+Tungsten scrap,CNC Cutting Blades 70% min Ex-VAT delivered in China,USD / kg,19.4,,08.07.19,USD,kg,19.4,scrap,78,Tungsten,,pubchem_formula,W,W
+Tungsten scrap,Anvil 90% min Ex-VAT delivered in China,USD / kg,22.3,,08.07.19,USD,kg,22.3,scrap,78,Tungsten,,pubchem_formula,W,W
+Tungsten scrap,Drills 70% min ex-VAT delivered in China,USD / kg,20.55,,08.07.19,USD,kg,20.55,scrap,78,Tungsten,,pubchem_formula,W,W
+Ammonium metavanadate,98% min EXW China,USD / mt,16913.0,,08.07.19,USD,metric_ton,16.913,metavanadate,79,Ammonium Metavanadate,,pubchem_formula,H4NO3V,H4NO3V
+Vanadium nitrides,N 14% min EXW China,USD / mt,27075.5,,08.07.19,USD,metric_ton,27.0755,nitrides,80,Vanadium Nitride,,pubchem_formula,NV,NV
+Vanadium pentoxides,Flakes 98% min EXW China,USD / mt,17639.0,,08.07.19,USD,metric_ton,17.639,pentoxides,81,Vanadium Pentoxide,,pubchem_formula,O5V2,O5V2
+Vanadium pentoxides,Flakes 98% min FOB China,USD / lb VO5,8.1,,08.07.19,USD,lb,17.857443236975083,pentoxides,81,Vanadium Pentoxide,,pubchem_formula,O5V2,O5V2
+Vanadium pentoxides,98% min in the warehouse Rotterdam,USD / lb VO5,7.449999999999999,,08.07.19,USD,lb,16.424438532773376,pentoxides,81,Vanadium Pentoxide,,pubchem_formula,O5V2,O5V2
+Zircon sand,Zr (Hf) O2 65% min Ex-VAT EXW China,USD / mt,1495.5,,08.07.19,USD,metric_ton,1.4955,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zircon sand,Australian Zr (Hf) O2 66% min in China port,USD / mt,1880.0,,08.07.19,USD,metric_ton,1.8800000000000001,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zircon sand,Australian Zr (Hf) O2 66% min in China port,USD / mt,1605.0,,08.07.19,USD,metric_ton,1.605,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zircon sand,SA Zr (Hf) O2 65% min in the port of China,USD / mt,1676.5,,08.07.19,USD,metric_ton,1.6765,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zircon sand,SA Zr (Hf) O2 65% min in the port of China,USD / mt,1465.0,,08.07.19,USD,metric_ton,1.465,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zircon sand,SA Zr (Hf) O2 66% min in the port of China,USD / mt,1555.0,,08.07.19,USD,metric_ton,1.555,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zircon sand,Indonesian Zr (Hf) O2 66% min CIF China,USD / mt,1485.0,,08.07.19,USD,metric_ton,1.485,sand,82,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zirconium fused_cubic,Zr (Hf) O2 98.5% min EXW China,USD / mt,4355.5,,08.07.19,USD,metric_ton,4.3555,fused_cubic,83,Zirconium Oxide,,pubchem_formula,O2Zr,O2Zr
+Zirconium Sponge,Zr + Hf 99.4% min EXW China,USD / kg,35.85,,08.07.19,USD,kg,35.85,Sponge,84,Zirconium,,pubchem_formula,Zr,Zr
+Zirconium silicate,Zr (Hf) O2 64.5% min EXW China,USD / mt,1938.0,,08.07.19,USD,metric_ton,1.938,silicate,85,Zirconium Silicate,,pubchem_formula,O4SiZr,O4SiZr
+Zirconium Oxychloride,Zr (Hf) O2 36% min EXW China,USD / mt,2272.0,,08.07.19,USD,metric_ton,2.2720000000000002,Oxychloride,86,Zirconium Oxychloride,,pubchem_formula,Cl2H2OZr,Cl2H2OZr
+Zirconium Carbonates,Zr (Hf) O2 40% min EXW China,USD / mt,3382.5,,08.07.19,USD,metric_ton,3.3825000000000003,Carbonates,87,Zirconium Carbonate,,pubchem_formula,C2O6Zr,C2O6Zr
