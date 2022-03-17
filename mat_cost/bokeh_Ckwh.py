@@ -1,4 +1,5 @@
 #%%``
+import numpy as np
 import pandas as pd
 from bokeh.plotting import figure, show, save, output_file
 from bokeh.transform import factor_cmap, factor_mark
@@ -8,6 +9,16 @@ from bokeh.models import HoverTool
 df = pd.read_csv('data/C_kwh.csv')
 df = df.where(df['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
 
+#%%
+
+
+energy_densities_line = np.logspace(
+    np.log10(df['specific_energy'].min()),
+    np.log10(df['specific_energy'].max()),
+    )
+
+#Mat cost for given C_kwh
+mat_cost_line = energy_densities_line*10
 #%%
 
 energy_types = df['energy_type'].unique()
@@ -29,6 +40,9 @@ p.scatter("specific_energy", "specific_price", source=df,
           legend_group="energy_type", fill_alpha=0.5, size=20,
           marker=factor_mark('energy_type', MARKERS, energy_types),
           color=factor_cmap('energy_type', color_category, energy_types))
+
+p.line(energy_densities_line, mat_cost_line)
+
 
 p.legend.location = "top_left"
 p.legend.title = "energy_type"
