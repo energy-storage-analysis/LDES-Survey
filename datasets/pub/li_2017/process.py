@@ -90,6 +90,9 @@ from pyvalem.formula import Formula
 import chemparse
 
 def get_molecular_mass(f):
+    if f == 'O2': #Assuming O2 means air in this dataset
+        return 0
+
     element_dict = chemparse.parse_formula(f)
     
     total_mm = 0
