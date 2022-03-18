@@ -4,26 +4,26 @@ BaH2O2,0.1,Ba(OH)2 barium
 BaO,0.3,barium oxide BaO
 BaO2,10.0,BaO2 barium oxide
 CCdO3,0.5,CdCO3 cadmium carbonate
-CMgO3,0.64242875,MgCO3 magnesium carbonate
+CMgO3,1.003943,MgCO3 magnesium carbonate
 CNT,100.0,Carbon Nanotube
 CO3Pb,0.136,PbCO3 lead carbonate
-CO3Sr,0.9728122222222222,SrCO3 strontium carbonate
+CO3Sr,1.4323009090909091,SrCO3 strontium carbonate
 CaH2O2,0.7600555555555555,Ca(OH)2 calcium hydrate
 CaN2O6,0.83,Calcum nitrate Ca(NO3)2
 CdH2O2,10.0,Cd(OH)2 cadmium hydroxide
 CdO4S,0.77,CdSO4 cadmium sulphate
 Cr2O3,1.0,Cr2O3 chromium oxide
-CuO,23.53333333333333,Copper Oxide CuO
+CuO,17.8,Copper Oxide CuO
 CuO4S,1.088625,Copper Sulfate CuSO4
 FeO4S,0.09471428571428572,Iron Sulfate FeSO4
 Graphene Oxide,400.0,Graphene Oxide
 H2MgO2,0.73375,Mg(OH)2 magnesium hydroxide
 H2NiO2,0.48200000000000004,Ni(OH)2 nickel hydroxide
-H2O2Sr,1.25,Sr(OH)2
+H2O2Sr,1.3,Sr(OH)2
 H2O2Zn,1.0,Zn(OH)2 zinc hydroxide
 MgO,0.09,MgO magnesium oxide
-MnO2,2.7014285714285715,MnO2 manganese oxide
-NiO4S,3.1494678571428567,NiSO4 nickel sulphate
+MnO2,177.36375,MnO2 manganese oxide
+NiO4S,3.362034375,NiSO4 nickel sulphate
 O3Sb2,7.383333333333333,Sb2O3 antimony oxide
-O4SZn,0.592,ZnSO4 zinc sulphate
+O4SZn,0.5632,ZnSO4 zinc sulphate
 OPb,2.7,PbO lead oxide
