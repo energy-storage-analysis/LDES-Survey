@@ -7,7 +7,7 @@ from bokeh.models import HoverTool
 
 #%%
 df = pd.read_csv('data/C_kwh.csv')
-df = df.where(df['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
+# df = df.where(df['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
 
 #%%
 

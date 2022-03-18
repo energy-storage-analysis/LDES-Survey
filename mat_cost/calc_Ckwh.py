@@ -39,7 +39,7 @@ virial['energy_type'] = 'Viral Limited'
 
 epsilon_0 = 8.85e-12
 def calc_electrostatic_SE(V_breakdown, dielectric_const, rho_m):
-    specific_energy = 0.5*(V_breakdown**2)*dielectric_const*epsilon_0/rho_m #J/m3
+    specific_energy = 0.5*(V_breakdown**2)*dielectric_const*epsilon_0 #J/m3
     specific_energy = specific_energy/(rho_m*1000) #J/kg
     specific_energy = specific_energy/3600000 #kWh/kg
     return specific_energy
