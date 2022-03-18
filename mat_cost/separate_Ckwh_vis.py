@@ -50,6 +50,80 @@ lgd.set_bbox_to_anchor((1, 1))
 plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
 #%%
 
+df_log = df_all[['specific_price','specific_energy']].apply(np.log10)
+# df_log = df_all
+
+df_log['energy_type'] = df_all['energy_type']
+
+df_stats = df_log.groupby('energy_type').agg({
+    'specific_price': ['mean','std'],
+    'specific_energy': ['mean','std'],
+})
+
+# df_stats = df_stats.apply(np.exp)
+
+df_stats
+
+#%%
+
+#https://stackoverflow.com/questions/26290493/matplotlib-errorbar-plot-using-a-custom-colormap
+
+colors = ["b","g","c","m","y","k","r","g","c","m","y","k"]
+
+cdict = {etype: colors[i] for i, etype in enumerate(df_stats.index)}
+
+for etype, row in df_stats.iterrows():
+    plt.scatter(
+    x = row['specific_energy']['mean'],
+    y = row['specific_price']['mean'],
+    c=cdict[etype],
+    label=etype
+    )
+
+    plt.errorbar(
+        x = row['specific_energy']['mean'],
+        y = row['specific_price']['mean'],
+        xerr = row['specific_energy']['std'],
+        yerr = row['specific_price']['std'],
+        fmt='none',
+        # color='gray',
+        c= cdict[etype],
+        alpha = 0.5,
+        capsize=3
+
+    )
+mat_cost_line_log = np.log10(mat_cost_line)
+energy_densities_line_log = np.log10(energy_densities_line)
+
+plt.plot(energy_densities_line_log, mat_cost_line_log, color='gray')
+lgd = plt.legend()
+
+
+# lgd = plt.gca().get_legend()
+lgd.set_bbox_to_anchor((1, 1))
+
+
+from matplotlib.ticker import FuncFormatter
+
+#This is assuming that log tick values are integeers
+# TODO: built in way to do this?  
+def logformatter10(val, pos):
+    return "$10^{" + str(int(val)) + "}$"
+
+formatter = FuncFormatter(logformatter10)
+
+plt.gca().xaxis.set_major_formatter(formatter)
+plt.gca().yaxis.set_major_formatter(formatter)
+
+# plt.grid()
+plt.xlabel('Energy Density (kWh/kg)')
+plt.ylabel('Material cost ($/kg)')
+# plt.xscale('log')
+
+plt.savefig('output/errorbar_agg.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
+# plt.yscale('log')
+#%%
+
 energy_types = df_all['energy_type'].value_counts().index
 energy_types
 
