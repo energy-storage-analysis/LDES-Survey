@@ -1,0 +1,28 @@
+Materials,"Electrode System (1,2)",Electrolyte,Current Density or Scan Rate,Potential Range (V),Specific Capacitance (F·g-1),Ref.
+CoCl2 nanostructures,Three,2 M KOH,1 A·g−1,0.45,1962,9
+PANI nanotubes,Two,1 M H2SO4,1–30 A·g−1,0.5,477–896,10
+PPy-clay core–shell nanoarrays,Three,1 M KOH,1–20 A·g−1,1.2,1750–2342,11
+Polythiophene nanostructures,Two,0.5 M TEABF4,40–100 mV·s−1,4.0,75–250,12
+NiO nanoblocks,Three,1 M KOH,1.11–111 A·g−1,0.6,680–1336,51
+PPy–sepiolite nanocomposites,Three,1 M KCl,3 mA·cm−2,1.0,165,52
+ZnCo2O4 nanorods/Ni foams,Two,PVA-KOH gel,1–20 A·g−1,1.0,1015–1400,53
+NiCo2(OH)6 nanotubes,Two,1.9 M KCL 0.1M KOH,10–100 A·g−1,0.5,169–200,54
+3D Co3O4 nanonetworks,Three,6 M KOH,2–100 mV·s−1,1.5,546–1049,55
+Ni2(CO3)(OH)2 nanosheets,Three,3 M KOH,0.5–10 A·g−1,0.4,612–1178,56
+PPy–PANI double-wall,Three,1 M H2SO4,5–250 mV·s−1,0.6,366–693,58
+nanotubes,,,,,,
+PANI nanofibers,Three,1 M H2SO4,0.1–10 A·g−1,0.8,20–192,61
+PPy nanofibrils,Three,1 M H2SO4,0.1 A·g−1,0.7,280,62
+Hollow NiCo2S4 nanoplates,Three,3 M KOH,1–20 A·g−1,0.5,231–437,63
+α-F-2O3/MnO2 nanowires,Three,0.7 M H3BO3,1–50 A·g−1,0.6,480–838,70
+2D TiS2 nanocrystals,Three,1 M LiClO4,0.5–10 A·g−1,1.2,320–470,71
+CoAl/PEDOT nanoarrays,Three,6 M KOH,1–40 A·g−1,0.6,424–672,76
+Au-MnO2 core–shell,Two,PVA-LiClO4 gel,0.56 A·g−1,2.0,524,77
+nanomesh,,,,,,
+CoO/PPy nanowires,Two,3 M NaOH,1–50 mA·cm−2,1.6,647–2223,78
+V2O5-PPy nanofibers,Two,PVA-LiCl gel,4.5 mA·cm−2,2.0,412,79
+CuO nanowires,Three,2 M KOH,1–5 A·g−1,0.45,102–118,80
+Nanoporous Ni(OH)2 films,Two,6 M KOH,0.9–50 A·g−1,1.6,20–192,81
+β-Co(OH)2 nanosheets,Two,2 M KOH,1–25 A·g−1,0.5,1530–2080,82
+Co3O4 nanostructures,Two,2 M KOH,0.5–2.5 A·g−1,0.8,150–476,83
+NiCo2O4 nanosheets,Three,2 M KOH,6–30 A·g−1,0.5,1500–1886,84
