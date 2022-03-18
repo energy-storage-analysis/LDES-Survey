@@ -83,3 +83,25 @@ if not os.path.exists('output'): os.mkdir('output')
 
 df.to_csv('output/processed.csv')
 
+
+#%%
+df_single = pd.read_csv('single_manual.csv', index_col=0)
+isin_single = pd.Series(df.index.isin(df_single.index), index=df.index)
+
+df_t = df.where((df['min_quantity_kg'] > 999) | isin_single).dropna(how='all')
+
+
+df_t.index.value_counts()
+#%%
+
+df_stats = df_t.reset_index().groupby('index').agg({'specific_price':['mean', 'std','count']})['specific_price']
+
+
+df_stats['ratio'] = df_stats['std']/df_stats['mean']
+df_stats['original_name'] = df_t.groupby('index').first()['search_text']
+df_stats
+
+#%%
+
+df_prices = df_stats[['mean','original_name']].rename({'mean':'specific_price'}, axis=1)
+df_prices.to_csv('output/mat_prices.csv')
