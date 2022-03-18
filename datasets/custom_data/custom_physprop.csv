@@ -4,9 +4,9 @@ Metallurgical Silicon,Silicon,0.516,sp_latent_heat,Ray 2021,https://www.scienced
 Al2O3,Al2O3 Dielectric Capacitor,10000000,dielectric_breakdown,TODO,
 Al2O3,Al2O3 Dielectric Capacitor,10,dielectric_constant,TODO,
 Al2O3,Al2O3 Dielectric Capacitor,3.95,mass_density,Wikipedia,
-Synthetic H2,,39.4,deltaG_chem,TODO,
-Synthetic CH4 (Sabatier),,15.4,deltaG_chem,TODO,
-Synthetic NH3 (Haber-Bosch),,6.25,deltaG_chem,TODO,
-Synthetic H2 (Cavern),,39.4,deltaG_chem,TODO,
+Synthetic H2,Synthetic H2,39.4,deltaG_chem,TODO,
+Synthetic CH4 (Sabatier),Synthetic CH4 (Sabatier),15.4,deltaG_chem,TODO,
+Synthetic NH3 (Haber-Bosch),Synthetic NH3 (Haber-Bosch),6.25,deltaG_chem,TODO,
+Synthetic H2 (Cavern),Synthetic H2 (Cavern),39.4,deltaG_chem,TODO,
 Stone,Block Stacking,100,delta_height,Energy Vault Press Release Height,"Estimate based on deltaH = 100m, from energy vault design"
 Water Reservoir Excavation,Pumped Hydro,300,delta_height,Calculation/Black and Veatch,Height 300 meters typical

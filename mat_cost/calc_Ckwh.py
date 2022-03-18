@@ -15,31 +15,26 @@ sensible_thermal = (df_physprop['Cp']*500)
 sensible_thermal.name='specific_energy'
 sensible_thermal = sensible_thermal.to_frame()
 sensible_thermal['energy_type'] = 'Thermal (Sensible)'
-sensible_thermal['source'] = df_physprop['source']
 
 latent_thermal = (df_physprop['sp_latent_heat'])
 latent_thermal.name='specific_energy'
 latent_thermal = latent_thermal.to_frame()
 latent_thermal['energy_type'] = 'Thermal (Latent)'
-latent_thermal['source'] = df_physprop['source']
 
 thermochem = (df_physprop['deltaH_thermochem'])
 thermochem.name='specific_energy'
 thermochem = thermochem.to_frame()
 thermochem['energy_type'] = 'Chemical (Thermochemical)'
-thermochem['source'] = df_physprop['source']
 
 chemical = (df_physprop['deltaG_chem'])
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
 chemical['energy_type'] = 'Chemical (Syn. Fuel)'
-chemical['source'] = df_physprop['source']
 
 virial = (df_physprop['specific_strength']/3600) #TODO:Assuming Q=1
 virial.name='specific_energy'
 virial = virial.to_frame()
 virial['energy_type'] = 'Viral Limited'
-virial['source'] = df_physprop['source']
 
 
 epsilon_0 = 8.85e-12
@@ -57,15 +52,13 @@ electrostatic = calc_electrostatic_SE(
 electrostatic.name='specific_energy'
 electrostatic = electrostatic.to_frame()
 electrostatic['energy_type'] = 'Electrostatic (Capacitor)'
-electrostatic['source'] = df_physprop['source']
 
 gravitational = (df_physprop['delta_height']*9.81/3600000)
 gravitational.name='specific_energy'
 gravitational = gravitational.to_frame()
 gravitational['energy_type'] = 'Gravitational'
-gravitational['source'] = df_physprop['source']
 
-df_out = pd.concat([
+dfs = [
     chemical,
     thermochem,
     sensible_thermal,
@@ -73,9 +66,16 @@ df_out = pd.concat([
     virial,
     electrostatic,
     gravitational
-]).dropna()
+]
 
-df_out = df_out.rename({'source': 'physprop_source'}, axis=1)
+dfs_2 = []
+for df in dfs:
+    df['physprop_source'] = df_physprop['source']
+    df['original_name'] = df_physprop['original_name']
+    dfs_2.append(df)
+
+df_out = pd.concat(dfs_2).dropna()
+
 
 df_out
 
@@ -128,7 +128,7 @@ df_ec.to_csv('data/df_couples.csv')
 
 
 df_out = pd.concat([
-    df_ec[['specific_energy', 'energy_type','specific_price','physprop_source', 'price_sources']],
+    df_ec[['specific_energy', 'energy_type','specific_price','physprop_source', 'price_sources', 'original_name']],
     df_out,
 ])
 

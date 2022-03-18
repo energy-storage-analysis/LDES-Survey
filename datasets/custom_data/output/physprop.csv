@@ -1,12 +1,12 @@
-index,Cp,dielectric_constant,sp_latent_heat,deltaG_chem,dielectric_breakdown,delta_height,mass_density,original_name,source
-Iron Ore,0.00025,,,,,,,Magnetite,Grosu 2017
-Metallurgical Silicon,,,0.516,,,,,Silicon,Ray 2021
-Al2O3,,10.0,,,10000000.0,,3.95,Al2O3 Dielectric Capacitor,TODO
-Al2O3,,10.0,,,10000000.0,,3.95,Al2O3 Dielectric Capacitor,TODO
-Al2O3,,10.0,,,10000000.0,,3.95,Al2O3 Dielectric Capacitor,Wikipedia
-Synthetic H2,,,,39.4,,,,,TODO
-Synthetic CH4 (Sabatier),,,,15.4,,,,,TODO
-Synthetic NH3 (Haber-Bosch),,,,6.25,,,,,TODO
-Synthetic H2 (Cavern),,,,39.4,,,,,TODO
-Stone,,,,,,100.0,,Block Stacking,Energy Vault Press Release Height
-Water Reservoir Excavation,,,,,,300.0,,Pumped Hydro,Calculation/Black and Veatch
+index,deltaG_chem,Cp,dielectric_constant,sp_latent_heat,delta_height,mass_density,dielectric_breakdown,original_name,source
+Iron Ore,,0.00025,,,,,,Magnetite,Grosu 2017
+Metallurgical Silicon,,,,0.516,,,,Silicon,Ray 2021
+Al2O3,,,10.0,,,3.95,10000000.0,Al2O3 Dielectric Capacitor,TODO
+Al2O3,,,10.0,,,3.95,10000000.0,Al2O3 Dielectric Capacitor,TODO
+Al2O3,,,10.0,,,3.95,10000000.0,Al2O3 Dielectric Capacitor,Wikipedia
+Synthetic H2,39.4,,,,,,,Synthetic H2,TODO
+Synthetic CH4 (Sabatier),15.4,,,,,,,Synthetic CH4 (Sabatier),TODO
+Synthetic NH3 (Haber-Bosch),6.25,,,,,,,Synthetic NH3 (Haber-Bosch),TODO
+Synthetic H2 (Cavern),39.4,,,,,,,Synthetic H2 (Cavern),TODO
+Stone,,,,,100.0,,,Block Stacking,Energy Vault Press Release Height
+Water Reservoir Excavation,,,,,300.0,,,Pumped Hydro,Calculation/Black and Veatch

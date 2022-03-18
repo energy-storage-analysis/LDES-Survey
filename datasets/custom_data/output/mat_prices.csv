@@ -1,8 +1,8 @@
 index,original_name,specific_price,source,notes
 Iron Ore,Magnetite,0.139,Olympios 2021,
 Solar Salt,Molten Salt,1.0,Olympios 2021,
-Synthetic H2,,0.009,Calculation,Assuming Water cost 0.001 $/kg
-Synthetic CH4 (Sabatier),,0.095,Calculation,Revist: Sabbatier reaction Using previously calculated H2 cost and carbon cost
-Synthetic NH3 (Haber-Bosch),,0.0592,Calculation,Using elemental N2 cost and previously calculated H2 cost
-Synthetic H2 (Cavern),,0.36,Ahluwalia,"Ahluwalia, Rajesh. “System Level Analysis of Hydrogen Storage Options,” n.d., 42"
+Synthetic H2,Synthetic H2,0.009,Calculation,Assuming Water cost 0.001 $/kg
+Synthetic CH4 (Sabatier),Synthetic CH4 (Sabatier),0.095,Calculation,Revist: Sabbatier reaction Using previously calculated H2 cost and carbon cost
+Synthetic NH3 (Haber-Bosch),Synthetic NH3 (Haber-Bosch),0.0592,Calculation,Using elemental N2 cost and previously calculated H2 cost
+Synthetic H2 (Cavern),Synthetic H2 (Cavern),0.36,Ahluwalia,"Ahluwalia, Rajesh. “System Level Analysis of Hydrogen Storage Options,” n.d., 42"
 Water Reservoir Excavation,Pumped Hydro,0.261,Calculation/Black and Veatch,Based on Black and Veatch 2012 resirvoir cost numbers. 
