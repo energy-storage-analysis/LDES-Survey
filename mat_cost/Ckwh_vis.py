@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import iqplot
-from bokeh.io import show, output_file
+from bokeh.io import show, output_file, save
 
 
 
@@ -62,4 +62,4 @@ figure.yaxis.axis_label_text_font_size = "16pt"
 figure.xaxis.major_label_text_font_size = "16pt"
 
 output_file('output/mat_cost_compare.html')
-show(figure)
+save(figure)
