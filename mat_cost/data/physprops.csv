@@ -144,23 +144,20 @@ Graphite,Nanofibers/mesoporous carbon,,,,,Choi 2015,,EDLC,,,,,,,85.5,0.8
 Graphite,N-doped carbon nanospheres,,,,,Choi 2015,,EDLC,,,,,,,128.0,1.0
 Graphite,Nanoporous carbon,,,,,Choi 2015,,EDLC,,,,,,,129.0,3.5
 Graphite,Mesoporous carbon nanosheets,,,,,Choi 2015,,EDLC,,,,,,,115.0,2.7
-Graphite,GO-activate carbon,,,,,Choi 2015,,EDLC,,,,,,,122.5,3.5
-Graphite,Porous carbon/CNTs,,,,,Choi 2015,,EDLC,,,,,,,181.0,0.9
-Graphite,Porous CNFs,,,,,Choi 2015,,EDLC,,,,,,,107.5,2.0
-Graphite,Porous CNTs,,,,,Choi 2015,,EDLC,,,,,,,582.0,0.7
+Graphene Oxide,GO-activate carbon,,,,,Choi 2015,,EDLC,,,,,,,122.5,3.5
+CNT,Porous carbon/CNTs,,,,,Choi 2015,,EDLC,,,,,,,181.0,0.9
+CNT,Porous CNTs,,,,,Choi 2015,,EDLC,,,,,,,582.0,0.7
 Graphite,Nanoporous carbon foams,,,,,Choi 2015,,EDLC,,,,,,,252.0,1.1
 Graphite,Carbonization of carbon hydrates,,,,,Choi 2015,,EDLC,,,,,,,140.0,0.8
 Graphite,Carbonized hollow nanocarbon,,,,,Choi 2015,,EDLC,,,,,,,171.5,0.9
-Graphite,Graphene-coated CNTs,,,,,Choi 2015,,EDLC,,,,,,,95.0,3.0
-Graphite,Graphene/CNF,,,,,Choi 2015,,EDLC,,,,,,,174.0,1.5
-Graphite,3D porous graphene-like carbon,,,,,Choi 2015,,EDLC,,,,,,,167.0,2.5
-Graphite,Mesoporous graphene nanoballs,,,,,Choi 2015,,EDLC,,,,,,,206.0,0.8
-Graphite,Graphene/CNT composite fibers,,,,,Choi 2015,,EDLC,,,,,,,20.5,0.8
+CNT,Graphene-coated CNTs,,,,,Choi 2015,,EDLC,,,,,,,95.0,3.0
+Graphene,Graphene/CNF,,,,,Choi 2015,,EDLC,,,,,,,174.0,1.5
+Graphene,3D porous graphene-like carbon,,,,,Choi 2015,,EDLC,,,,,,,167.0,2.5
+Graphene,Mesoporous graphene nanoballs,,,,,Choi 2015,,EDLC,,,,,,,206.0,0.8
+CNT,Graphene/CNT composite fibers,,,,,Choi 2015,,EDLC,,,,,,,20.5,0.8
 Graphite,N-doped 3D nanoporous carbon,,,,,Choi 2015,,EDLC,,,,,,,265.0,1.0
-Graphite,Graphene/CNT,,,,,Choi 2015,,EDLC,,,,,,,199.0,4.0
-Graphite,Graphene/carbon,,,,,Choi 2015,,EDLC,,,,,,,175.0,3.5
-Graphite,RGO/CNT,,,,,Choi 2015,,EDLC,,,,,,,216.0,1.0
-Graphite,Carbonized PPy nanostructures,,,,,Choi 2015,,EDLC,,,,,,,264.0,0.9
-Graphite,Carbonized PPy-CNTs,,,,,Choi 2015,,EDLC,,,,,,,90.0,1.5
+Graphene,Graphene/CNT,,,,,Choi 2015,,EDLC,,,,,,,199.0,4.0
+Graphene,Graphene/carbon,,,,,Choi 2015,,EDLC,,,,,,,175.0,3.5
+Graphene Oxide,RGO/CNT,,,,,Choi 2015,,EDLC,,,,,,,216.0,1.0
 Graphite,Halogen-containing nanoporous carbon,,,,,Choi 2015,,EDLC,,,,,,,211.5,1.0
 Graphite,Oxygen-rich nanoporous carbon,,,,,Choi 2015,,EDLC,,,,,,,253.5,1.0

@@ -206,24 +206,21 @@ Graphite,0.007600000000000002,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017,
 Graphite,0.017777777777777778,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",N-doped carbon nanospheres,295.343595
 Graphite,0.21947916666666667,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Nanoporous carbon,23.92278447081158
 Graphite,0.11643750000000001,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Mesoporous carbon nanosheets,45.09331443907676
-Graphite,0.20842013888888888,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",GO-activate carbon,25.19215670803832
-Graphite,0.020362500000000002,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Porous carbon/CNTs,257.85403560466546
-Graphite,0.059722222222222225,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Porous CNFs,87.91623293023255
-Graphite,0.03960833333333333,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Porous CNTs,132.56182116557966
+Graphene Oxide,0.20842013888888888,Electrostatic (EDLC),400.0,Choi 2015,alibaba,GO-activate carbon,1919.2003331945023
+CNT,0.020362500000000002,Electrostatic (EDLC),100.0,Choi 2015,alibaba,Porous carbon/CNTs,4910.988336402701
+CNT,0.03960833333333333,Electrostatic (EDLC),100.0,Choi 2015,alibaba,Porous CNTs,2524.721228697665
 Graphite,0.04235000000000001,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Nanoporous carbon foams,123.97999527744979
 Graphite,0.012444444444444447,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Carbonization of carbon hydrates,421.91942142857135
 Graphite,0.019293750000000002,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Carbonized hollow nanocarbon,272.13749530288305
-Graphite,0.11875,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Graphene-coated CNTs,44.21518147368422
-Graphite,0.054375,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Graphene/CNF,96.56189057471265
-Graphite,0.1449652777777778,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",3D porous graphene-like carbon,36.219382189221555
-Graphite,0.018311111111111115,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Mesoporous graphene nanoballs,286.741354368932
-Graphite,0.0018222222222222227,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Graphene/CNT composite fibers,2881.400926829268
+CNT,0.11875,Electrostatic (EDLC),100.0,Choi 2015,alibaba,Graphene-coated CNTs,842.1052631578948
+Graphene,0.054375,Electrostatic (EDLC),90.0,Choi 2015,Graphene Lab,Graphene/CNF,1655.1724137931035
+Graphene,0.1449652777777778,Electrostatic (EDLC),90.0,Choi 2015,Graphene Lab,3D porous graphene-like carbon,620.8383233532934
+Graphene,0.018311111111111115,Electrostatic (EDLC),90.0,Choi 2015,Graphene Lab,Mesoporous graphene nanoballs,4915.04854368932
+CNT,0.0018222222222222227,Electrostatic (EDLC),100.0,Choi 2015,alibaba,Graphene/CNT composite fibers,54878.04878048779
 Graphite,0.03680555555555556,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",N-doped 3D nanoporous carbon,142.6565289056604
-Graphite,0.44222222222222224,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Graphene/CNT,11.873109346733669
-Graphite,0.2977430555555556,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Graphene/carbon,17.63450969562682
-Graphite,0.03,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",RGO/CNT,175.0184266666667
-Graphite,0.0297,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Carbonized PPy nanostructures,176.78628956228957
-Graphite,0.028125,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Carbonized PPy-CNTs,186.68632177777778
+Graphene,0.44222222222222224,Electrostatic (EDLC),90.0,Choi 2015,Graphene Lab,Graphene/CNT,203.51758793969847
+Graphene,0.2977430555555556,Electrostatic (EDLC),90.0,Choi 2015,Graphene Lab,Graphene/carbon,302.2740524781341
+Graphene Oxide,0.03,Electrostatic (EDLC),400.0,Choi 2015,alibaba,RGO/CNT,13333.333333333334
 Graphite,0.029375,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Halogen-containing nanoporous carbon,178.74222297872342
 Graphite,0.035208333333333335,Electrostatic (EDLC),5.2505528,Choi 2015,"Li 2017, Liu 2016, USGS",Oxygen-rich nanoporous carbon,149.12812686390532
 Al2O3,0.0007779535864978904,Electrostatic (Capacitor),0.9267593,TODO,"Liu 2016, USGS",Al2O3 Dielectric Capacitor,1191.2783951186439

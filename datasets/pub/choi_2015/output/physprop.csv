@@ -13,23 +13,20 @@ Graphite,Nanofibers/mesoporous carbon,85.5,0.8,EDLC
 Graphite,N-doped carbon nanospheres,128.0,1.0,EDLC
 Graphite,Nanoporous carbon,129.0,3.5,EDLC
 Graphite,Mesoporous carbon nanosheets,115.0,2.7,EDLC
-Graphite,GO-activate carbon,122.5,3.5,EDLC
-Graphite,Porous carbon/CNTs,181.0,0.9,EDLC
-Graphite,Porous CNFs,107.5,2.0,EDLC
-Graphite,Porous CNTs,582.0,0.7,EDLC
+Graphene Oxide,GO-activate carbon,122.5,3.5,EDLC
+CNT,Porous carbon/CNTs,181.0,0.9,EDLC
+CNT,Porous CNTs,582.0,0.7,EDLC
 Graphite,Nanoporous carbon foams,252.0,1.1,EDLC
 Graphite,Carbonization of carbon hydrates,140,0.8,EDLC
 Graphite,Carbonized hollow nanocarbon,171.5,0.9,EDLC
-Graphite,Graphene-coated CNTs,95.0,3.0,EDLC
-Graphite,Graphene/CNF,174,1.5,EDLC
-Graphite,3D porous graphene-like carbon,167.0,2.5,EDLC
-Graphite,Mesoporous graphene nanoballs,206,0.8,EDLC
-Graphite,Graphene/CNT composite fibers,20.5,0.8,EDLC
+CNT,Graphene-coated CNTs,95.0,3.0,EDLC
+Graphene,Graphene/CNF,174,1.5,EDLC
+Graphene,3D porous graphene-like carbon,167.0,2.5,EDLC
+Graphene,Mesoporous graphene nanoballs,206,0.8,EDLC
+CNT,Graphene/CNT composite fibers,20.5,0.8,EDLC
 Graphite,N-doped 3D nanoporous carbon,265.0,1.0,EDLC
-Graphite,Graphene/CNT,199,4.0,EDLC
-Graphite,Graphene/carbon,175.0,3.5,EDLC
-Graphite,RGO/CNT,216.0,1.0,EDLC
-Graphite,Carbonized PPy nanostructures,264,0.9,EDLC
-Graphite,Carbonized PPy-CNTs,90.0,1.5,EDLC
+Graphene,Graphene/CNT,199,4.0,EDLC
+Graphene,Graphene/carbon,175.0,3.5,EDLC
+Graphene Oxide,RGO/CNT,216.0,1.0,EDLC
 Graphite,Halogen-containing nanoporous carbon,211.5,1.0,EDLC
 Graphite,Oxygen-rich nanoporous carbon,253.5,1.0,EDLC
