@@ -10,7 +10,7 @@ mpl.rcParams.update({'font.size': 16})
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 
-df_all = df_all.where(df_all['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
+# df_all = df_all.where(df_all['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
 
 #%%
 
@@ -28,24 +28,26 @@ mat_cost_line = energy_densities_line*10
 #%%
 
 import seaborn as sns
-fig = plt.figure(figsize=(12,6))
+fig = plt.figure(figsize=(8,6))
 
 sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='energy_type', hue='energy_type')
 plt.xscale('log')
 plt.yscale('log')
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.6,1])
 
-plt.xlim(1e-5,1e2)
+# plt.xlim(1e-5,1e2)
 
 plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Material cost ($/kg)')
 
 plt.plot(energy_densities_line, mat_cost_line, color='gray')
 
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
+lgd = plt.gca().get_legend()
+lgd.set_bbox_to_anchor((1, 1))
 # plt.tight_layout()
 
-plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False,)
+#https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box
+
+plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
 #%%
 
 energy_types = df_all['energy_type'].value_counts().index
