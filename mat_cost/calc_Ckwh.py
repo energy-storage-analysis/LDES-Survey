@@ -53,6 +53,17 @@ electrostatic.name='specific_energy'
 electrostatic = electrostatic.to_frame()
 electrostatic['energy_type'] = 'Electrostatic (Capacitor)'
 
+
+#TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
+electrostatic_edlc = (0.5*df_physprop['specific_capacitance']*df_physprop['deltaV']**2) #J/g
+electrostatic_edlc = electrostatic_edlc/3600
+
+electrostatic_edlc.name='specific_energy'
+electrostatic_edlc = electrostatic_edlc.to_frame()
+electrostatic_edlc['energy_type'] = 'Electrostatic (EDLC)'
+
+
+
 gravitational = (df_physprop['delta_height']*9.81/3600000)
 gravitational.name='specific_energy'
 gravitational = gravitational.to_frame()
@@ -64,6 +75,7 @@ dfs = [
     sensible_thermal,
     latent_thermal,
     virial,
+    electrostatic_edlc,
     electrostatic,
     gravitational
 ]
