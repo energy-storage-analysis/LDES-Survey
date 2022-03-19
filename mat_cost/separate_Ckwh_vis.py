@@ -66,17 +66,22 @@ df_stats
 
 #%%
 
+plt.figure()
+
 #https://stackoverflow.com/questions/26290493/matplotlib-errorbar-plot-using-a-custom-colormap
 
-colors = ["b","g","c","m","y","k","r","g","c","m","y","k"]
+colors = ["g","g","g","y","y","k","r","r","b"]
+markers = ["o", "^", "s", "o", "^", "o", "o", "^","o"]
 
 cdict = {etype: colors[i] for i, etype in enumerate(df_stats.index)}
+mdict = {etype: markers[i] for i, etype in enumerate(df_stats.index)}
 
 for etype, row in df_stats.iterrows():
     plt.scatter(
     x = row['specific_energy']['mean'],
     y = row['specific_price']['mean'],
     c=cdict[etype],
+    marker=mdict[etype],
     label=etype
     )
 
@@ -124,6 +129,8 @@ plt.savefig('output/errorbar_agg.png', facecolor='white', transparent=False, bbo
 # plt.yscale('log')
 #%%
 
+
+plt.figure()
 energy_types = df_all['energy_type'].value_counts().index
 energy_types
 

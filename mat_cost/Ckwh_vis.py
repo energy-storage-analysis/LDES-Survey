@@ -13,6 +13,16 @@ from bokeh.io import show, output_file, save
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 
+replace_dict = {
+    'Chemical (Thermochemical)': 'Thermochemical',
+    'Electrostatic (EDLC)': 'Supercapacitor (EDLC)',
+    'Electrostatic (Capacitor)': 'Dielectric Capacitor'
+}
+df_all['energy_type'] = df_all['energy_type'].replace(replace_dict)
+
+df_all['energy_type'] = df_all['energy_type'].str.replace("(","\n(", regex=False)
+
+
 #%%
 cat_label = 'energy_type'
 

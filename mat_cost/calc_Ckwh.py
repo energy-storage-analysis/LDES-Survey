@@ -129,7 +129,7 @@ df_ec['price_sources'] = "A: " + df_ec['price_source_A'] + " --- B: " + df_ec['p
 #TODO: chech this equation
 df_ec['specific_price'] = (df_ec['SP_A']*df_ec['mu_A'] + df_ec['SP_B']*df_ec['mu_B'])/(df_ec['mu_A']+df_ec['mu_B'])
 
-df_ec['energy_type'] = 'Chemical (EC Couple)'
+df_ec['energy_type'] = 'Chemical (Battery)'
 df_ec.index.name = 'index'
 df_ec['original_name'] = df_ec.index
 df_ec['price_type'] = 'TODO'
