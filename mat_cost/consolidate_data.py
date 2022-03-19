@@ -11,6 +11,7 @@ dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col
 # col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','energy_type','source']
 dfs_price = []
 dfs_physprop = []
+dfs_SM = []
 
 for source, row in dataset_index.iterrows():
     fp_prices = os.path.join(dataset_folder, row['folder'], 'output', 'mat_prices.csv')
@@ -25,28 +26,40 @@ for source, row in dataset_index.iterrows():
 
     fp_physprop = os.path.join(dataset_folder, row['folder'], 'output', 'physprop.csv')
     if os.path.exists(fp_physprop):
-        df_price = pd.read_csv(fp_physprop,index_col=0)
+        df_physprop = pd.read_csv(fp_physprop,index_col=0)
 
         #Custom data dataset already has source column
         if source != 'custom_data':
-            df_price['source'] = source
+            df_physprop['source'] = source
 
-        dfs_physprop.append(df_price)
+        dfs_physprop.append(df_physprop)
     
+    fp_SM = os.path.join(dataset_folder, row['folder'], 'output', 'SM_data.csv')
+    if os.path.exists(fp_SM):
+        df_SM = pd.read_csv(fp_SM,index_col=0)
+
+        #Custom data dataset already has source column
+        if source != 'custom_data':
+            df_SM['source'] = source
+
+        dfs_SM.append(df_SM)
 
 df_prices = pd.concat(dfs_price)
 df_physprop = pd.concat(dfs_physprop)
+df_SM = pd.concat(dfs_SM)
 
 # df.index.name = 'index'
 
 #%%
 
+df_SM.to_csv('data/SMs.csv')
 df_physprop.to_csv('data/physprops.csv')
 
 ## Collect prices 
 
 #%%
 
+from es_utils import join_col_vals
 
 s_temp = df_prices.groupby('index').apply(join_col_vals, column='source')
 s_temp.name = 'source'
@@ -54,6 +67,12 @@ df_prices_combine = s_temp.to_frame()
 
 df_prices_combine['num_source'] = df_prices_combine['source'].str.split(',').apply(len)
 df_prices_combine['specific_price_refs'] = df_prices.groupby('index')['specific_price'].mean()
+
+#Should only be one molecular formula
+df_prices_combine['molecular_formula'] = df_prices.groupby('index').apply(join_col_vals, column='molecular_formula')
+
+from es_utils.chem import get_molecular_mass
+df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molecular_mass)
 
 # df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 

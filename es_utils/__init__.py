@@ -8,7 +8,7 @@ def extract_df_physprop(df, physprops):
 
 def extract_df_price(df):
     df_prices = df.where(~df['specific_price'].isna()).dropna(subset=['specific_price'])
-    df_prices = df_prices[['original_name','specific_price']]
+    df_prices = df_prices[['original_name','specific_price','molecular_formula']]
     return df_prices
 
 

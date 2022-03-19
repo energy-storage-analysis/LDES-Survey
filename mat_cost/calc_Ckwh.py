@@ -106,41 +106,75 @@ df_out['price_sources'] = sources
 df_out
 
 #%%
-df_ec_li = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\datasets\pub\li_2017\output\couples.csv',index_col=0)
-df_ec_li['physprop_source'] = 'Li 2017'
-df_ec_lmb = pd.read_csv(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\datasets\pub\kim_2013\output\couples.csv', index_col=0)
-df_ec_lmb['type'] = 'Liquid Metal'
-df_ec_lmb['physprop_source'] = 'Kim 2013'
 
-col_select = ['type','A','B','mu_A', 'mu_B', 'deltaV', 'specific_energy', 'physprop_source']
+df_SMs = pd.read_csv('data/SMs.csv', index_col=0)
 
-df_ec = pd.concat([
-    df_ec_li[col_select],
-    df_ec_lmb[col_select],
-])
+df_SMs.index.name = 'index'
+df_SMs['original_name'] = df_SMs.index #TODO:
+df_SMs
 
-df_ec['SP_A'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_ec['A']]
-df_ec['price_source_A'] = [df_prices['source'][f] if f in df_prices.index else np.nan for f in df_ec['A']]
-df_ec['SP_B'] = [df_prices['specific_price'][f] if f in df_prices.index else np.nan for f in df_ec['B']]
-df_ec['price_source_B'] = [df_prices['source'][f] if f in df_prices.index else np.nan for f in df_ec['B']]
 
-df_ec['price_sources'] = "A: " + df_ec['price_source_A'] + " --- B: " + df_ec['price_source_B']
 
-#TODO: chech this equation
-df_ec['specific_price'] = (df_ec['SP_A']*df_ec['mu_A'] + df_ec['SP_B']*df_ec['mu_B'])/(df_ec['mu_A']+df_ec['mu_B'])
 
-df_ec['energy_type'] = 'Chemical (Battery)'
-df_ec.index.name = 'index'
-df_ec['original_name'] = df_ec.index
-df_ec['price_type'] = 'TODO'
+def get_mat_info_list(l, column):
+    l = l.strip('][').split(', ')
+    l_mu = []
+    for f in l:
+        f = str(f)
+        f= f.strip('\'')
+        if f not in df_prices.index:
+            print(f)
+            return np.nan
+        l_mu.append(df_prices[column].loc[f])
+    return l_mu
 
-df_ec.to_csv('data/df_couples.csv')
+df_SMs['mus'] = df_SMs['materials'].apply(get_mat_info_list, column='mu')
+df_SMs['mu_total'] = df_SMs['mus'].apply(np.sum)
+df_SMs['prices'] = df_SMs['materials'].apply(get_mat_info_list, column='specific_price')
+df_SMs['price_sources'] = df_SMs['materials'].apply(get_mat_info_list, column='source')
+df_SMs
+
+#%%
+df_SMs.where(df_SMs['mus'].isna()).dropna(how='all')['materials']
+
+#TODO: all energy types are electrochemical temporarily
+F = 96485 # C/mol
+df_SMs['specific_energy'] = (1/3600)*F*df_SMs['deltaV']/df_SMs['mu_total']
+#%%
+
+df_SMs = df_SMs.dropna(subset=['mus'])
+
+specific_price_totals = []
+
+for idx, row in df_SMs.iterrows():
+    # mats = row['materials']
+    mus = row['mus']
+    mu_total = row['mu_total'] #Should be the same as sum(mus), but needed for specific energy...
+    SPs = row['prices']
+
+    #Arrays should be the same length
+    #TODO: chech this equation
+    weighted_SPs = []
+    for i in range(len(mus)):
+        weighted_SP = (mus[i]*SPs[i])/mu_total
+        weighted_SPs.append(weighted_SP)
+    
+    specific_price_total = sum(weighted_SPs)
+    specific_price_totals.append(specific_price_total)
+
+
+
+df_SMs['specific_price'] = specific_price_totals
+
+df_SMs = df_SMs.rename({'source': 'physprop_source'}, axis=1)
+
+df_SMs
 
 #%%
 
 
 df_out = pd.concat([
-    df_ec[['specific_energy', 'energy_type','specific_price','physprop_source', 'price_sources', 'original_name']],
+    df_SMs[['specific_energy', 'energy_type','specific_price','physprop_source', 'price_sources', 'original_name']],
     df_out,
 ])
 

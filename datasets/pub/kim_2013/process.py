@@ -62,22 +62,23 @@ for metal_B, row in df_table3.iterrows():
 
 df_couples = s_deltaV.to_frame()
 df_couples['index'] = df_couples.index
+
+#This is in place of a SM lookup
 df_couples[['A','B']] = df_couples['index'].str.split('/',expand=True)
-df_couples = df_couples.drop('index', axis=1)
-df_couples.index.name = 'couple_name'
-df_couples
-# %%
-df_couples['mu_A'] = df_table4.loc[df_couples['A']]['molar_mass'].values
-df_couples['mu_B'] = df_table4.loc[df_couples['B']]['molar_mass'].values
 
+df_couples['materials'] = "['" + df_couples['A'] + "', '" + df_couples['B'] + "']"
+df_couples['materials'] = df_couples['materials'].astype(str)
 
-F = 96485 # C/mol
-df_couples['specific_energy'] = (1/3600)*F*df_couples['deltaV']/(df_couples['mu_A'] + df_couples['mu_B'])
+df_couples = df_couples.drop(['A', 'B'], axis=1)
+df_couples = df_couples.rename({'index': 'original_name'}, axis=1)
 
-df_couples
+df_couples['type'] = 'Liquid Metal'
+df_couples['energy_type'] = 'electrochemical'
+
+df_couples.to_csv('output/SM_data.csv')
 #%%
 
 
-df_couples.to_csv('output/couples.csv')
+
 
 

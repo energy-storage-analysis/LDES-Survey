@@ -28,8 +28,8 @@
 26,Indium ingot,Indium,,pubchem_formula,In
 27,Lithium metal,Lithium,,pubchem_formula,Li
 28,Lithium Carbonates,Lithium Carbonate,,pubchem_formula,CLi2O3
-29,Lithium Cobaltate,Lithium Cobaltate,LiCoO2,material_name,
-30,Lithium manganates,Lithium Manganate,LiMn2O4,material_name,Li2MnO4
+29,Lithium Cobaltate,LCO,LiCoO2,material_name,
+30,Lithium manganates,LMO,LiMn2O4,material_name,Li2MnO4
 31,Lithium hydroxides_monohydrates,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,H3LiO2
 32,Lithium chlorides,Lithium Chloride,,pubchem_formula,ClLi
 33,Magnesium Ingot,Magnesium,,pubchem_formula,Mg

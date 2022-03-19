@@ -49,3 +49,22 @@ def process_chem_lookup(chem_lookup, mtp=None):
 
     chem_lookup = chem_lookup.dropna(subset=['index'])
     return chem_lookup
+
+
+from pyvalem.formula import Formula
+import chemparse
+
+def get_molecular_mass(f):
+    if f == 'O2': #Assuming O2 means air...
+        return 0
+    if len(f) == 0:
+        return np.nan
+
+    element_dict = chemparse.parse_formula(f)
+    
+    total_mm = 0
+    for element, amount in element_dict.items():
+        element_mm = Formula(element).rmm
+        total_mm += element_mm*amount
+
+    return total_mm
