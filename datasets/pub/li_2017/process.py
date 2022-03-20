@@ -32,7 +32,7 @@ table_3 = table_3.append(added_rows)
 
 from es_utils import extract_df_price
 df_price = extract_df_price(table_3)
-df_price.to_csv('output/mat_prices.csv')
+df_price.to_csv('output/mat_data.csv')
 
 #%%
 df = pd.read_csv('tables/table_2.csv')

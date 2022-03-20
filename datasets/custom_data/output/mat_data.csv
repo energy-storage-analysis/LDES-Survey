@@ -1,0 +1,11 @@
+index,original_name,specific_price,source,notes,sp_latent_heat,deltaG_chem,mass_density,dielectric_breakdown,dielectric_constant,Cp,source,original_name
+Iron Ore,Magnetite,0.139,Olympios 2021,,,,,,,0.00025,Grosu 2017,Iron Ore
+Solar Salt,Molten Salt,1.0,Olympios 2021,,,,,,,,,
+Synthetic H2,Synthetic H2,0.009,Calculation,Assuming Water cost 0.001 $/kg,,39.4,,,,,TODO,Synthetic H2
+Synthetic CH4 (Sabatier),Synthetic CH4 (Sabatier),0.095,Calculation,Revist: Sabbatier reaction Using previously calculated H2 cost and carbon cost,,15.4,,,,,TODO,Synthetic CH4 (Sabatier)
+Synthetic NH3 (Haber-Bosch),Synthetic NH3 (Haber-Bosch),0.0592,Calculation,Using elemental N2 cost and previously calculated H2 cost,,6.25,,,,,TODO,Synthetic NH3 (Haber-Bosch)
+Synthetic H2 (Cavern),Synthetic H2 (Cavern),0.36,Ahluwalia,"Ahluwalia, Rajesh. “System Level Analysis of Hydrogen Storage Options,” n.d., 42",,39.4,,,,,TODO,Synthetic H2 (Cavern)
+Water Reservoir Excavation,Pumped Hydro,0.261,Calculation/Black and Veatch,Based on Black and Veatch 2012 resirvoir cost numbers. ,,,,,,,,
+Graphene,Graphene,90.0,Graphene Lab,https://www.i-graphenelab.com/price/,,,,,,,,
+Metallurgical Silicon,,,,,0.516,,,,,,Ray 2021,Metallurgical Silicon
+Al2O3,,,,,,,3.95,500000000.0,10.0,,"TODO, Wikipedia",Al2O3

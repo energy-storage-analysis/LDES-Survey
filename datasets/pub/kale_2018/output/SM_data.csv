@@ -1,0 +1,6 @@
+index,energy_type,materials
+Al,virial,[Al]
+CFRP,virial,[CFRP]
+GRE,virial,[GRE]
+KFRP,virial,[KFRP]
+Steel,virial,[Steel]

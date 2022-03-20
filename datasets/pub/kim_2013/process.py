@@ -27,7 +27,7 @@ df_table4['original_name'] = df_table4['molecular_formula']
 
 from es_utils import extract_df_price
 df_price = extract_df_price(df_table4)
-df_price.to_csv('output/mat_prices.csv')
+df_price.to_csv('output/mat_data.csv')
 
 
 #%%

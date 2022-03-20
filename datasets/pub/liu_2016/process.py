@@ -31,5 +31,5 @@ df
 
 from es_utils import extract_df_price
 df_price = extract_df_price(df)
-df_price.to_csv('output/mat_prices.csv')
+df_price.to_csv('output/mat_data.csv')
 

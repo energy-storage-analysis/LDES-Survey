@@ -112,6 +112,8 @@ df_combine = df.groupby('index')[['specific_price']].mean()
 from es_utils import join_col_vals
 df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
 
+df_combine['molecular_formula']= df.groupby('index').apply(join_col_vals, column='molecular_formula')
+
 from es_utils import extract_df_price
 df_price = extract_df_price(df_combine)
-df_price.to_csv('output/mat_prices.csv')
+df_price.to_csv('output/mat_data.csv')

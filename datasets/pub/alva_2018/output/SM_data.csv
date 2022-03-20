@@ -1,0 +1,55 @@
+index,energy_type,materials
+NNaO3,latent_thermal,[NNaO3]
+KNO3,latent_thermal,[KNO3]
+Mg,latent_thermal,[Mg]
+CNa2O3,latent_thermal,[CNa2O3]
+CK2O3,latent_thermal,[CK2O3]
+CCaO3,latent_thermal,[CCaO3]
+CLi2O3,latent_thermal,[CLi2O3]
+Cl2Zn,latent_thermal,[Cl2Zn]
+ClNa,latent_thermal,[ClNa]
+ClK,latent_thermal,[ClK]
+Cl2Mg,latent_thermal,[Cl2Mg]
+ClLi,latent_thermal,[ClLi]
+CaCl2,latent_thermal,[CaCl2]
+Na2O4S,latent_thermal,[Na2O4S]
+Li2O4S,latent_thermal,[Li2O4S]
+K2O4S,latent_thermal,[K2O4S]
+MgO4S,latent_thermal,[MgO4S]
+CaO4S,latent_thermal,[CaO4S]
+FLi,latent_thermal,[FLi]
+FNa,latent_thermal,[FNa]
+KF,latent_thermal,[KF]
+CaF2,latent_thermal,[CaF2]
+HNaO,latent_thermal,[HNaO]
+KOH,latent_thermal,[KOH]
+HLiO,latent_thermal,[HLiO]
+Cu,latent_thermal,[Cu]
+Zn,latent_thermal,[Zn]
+Al,latent_thermal,[Al]
+Syltherm XLT,sensible_thermal,[Syltherm XLT]
+Vegetable Oil,sensible_thermal,[Vegetable Oil]
+HITEC XL,sensible_thermal,[HITEC XL]
+Na,sensible_thermal,[Na]
+NaK,sensible_thermal,[NaK]
+PbBi,sensible_thermal,[PbBi]
+CaN2O6,latent_thermal,[CaN2O6]
+Zn/Mg (53.7/46.3),latent_thermal,"[Mg, Zn]"
+Zn/Mg (52/48),latent_thermal,"[Mg, Zn]"
+Zn/Al (96/4),latent_thermal,[Zn]
+Al/Mg/Zn (59/33/6),latent_thermal,"[Al, Mg]"
+Al/Mg/Zn (60/34/6),latent_thermal,"[Al, Mg]"
+Mg/Cu/Zn (60/25/15),latent_thermal,"[Mg, Cu]"
+Mg/Ca (84/16),latent_thermal,"[Mg, Ca]"
+Mg/Si/Zn (47/38/15),latent_thermal,"[Mg, Si]"
+Cu/Si (80/20),latent_thermal,"[Cu, Si]"
+Cu/P/Si (83/10/7),latent_thermal,[Cu]
+Si/Mg/Ca (49/30/21),latent_thermal,"[Si, Mg]"
+Si/Mg (56/44),latent_thermal,"[Si, Mg]"
+Dowtherm,sensible_thermal,[Dowtherm]
+HITEC,sensible_thermal,[HITEC]
+Solar Salt,sensible_thermal,[Solar Salt]
+Granite,sensible_thermal,[Granite]
+Quartzite,sensible_thermal,[Quartzite]
+Marble,sensible_thermal,[Marble]
+Basalt,sensible_thermal,[Basalt]

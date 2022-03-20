@@ -104,4 +104,4 @@ df_stats
 #%%
 
 df_prices = df_stats[['mean','original_name']].rename({'mean':'specific_price'}, axis=1)
-df_prices.to_csv('output/mat_prices.csv')
+df_prices.to_csv('output/mat_data.csv')

@@ -2,6 +2,7 @@ from os.path import join as pjoin
 import os
 from re import I
 import pandas as pd
+from sympy import O
 
 if not os.path.exists('output'): os.mkdir('output')
 
@@ -60,7 +61,7 @@ df_combine = df.groupby('index')[['specific_strength', 'specific_price']].mean()
 
 from es_utils import join_col_vals
 df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
-
+df_combine['molecular_formula']= df.groupby('index').apply(join_col_vals, column='molecular_formula')
 
 from es_utils import extract_df_physprop, extract_df_price
 df_physprop = extract_df_physprop(df_combine, ['specific_strength'])
@@ -68,6 +69,17 @@ df_physprop = extract_df_physprop(df_combine, ['specific_strength'])
 
 df_prices = extract_df_price(df_combine)
 
-df_prices.to_csv('output/mat_prices.csv')
 
-df_physprop.to_csv('output/physprop.csv')
+df_mat_data = pd.concat([
+    df_prices,
+    df_physprop,
+], axis=1)
+
+df_mat_data.to_csv('output/mat_data.csv')
+
+#No SM lookup needed as SM are just just the materials
+
+df_SMs = pd.DataFrame(index=df_mat_data.index)
+df_SMs['energy_type'] = 'virial'
+df_SMs['materials'] = "[" + df_SMs.index + "]"
+df_SMs.to_csv('output/SM_data.csv')

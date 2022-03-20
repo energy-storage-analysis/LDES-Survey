@@ -33,4 +33,12 @@ df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 from es_utils import extract_df_physprop
 df_physprop = extract_df_physprop(df, ['deltaH_thermochem','type'])
 
-df_physprop.to_csv('output/physprop.csv')
+df_mat_data = df_physprop
+
+df_mat_data.to_csv('output/mat_data.csv')
+
+
+df_SMs = pd.DataFrame(index=df_mat_data.index)
+df_SMs['energy_type'] = 'thermochemical'
+df_SMs['materials'] = "[" + df_SMs.index + "]"
+df_SMs.to_csv('output/SM_data.csv')

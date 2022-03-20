@@ -1,59 +1,59 @@
-original_name,molecular_formula,material_name,index_use,pubchem_formula
-Active carbon,C,Carbon,molecular_formula,CH4
-AQDS,C14H8O8S2,AQDS,material_name,C7H4O4S
-CaCl2,CaCl2,,molecular_formula,
-Carbonate Electrolyte,,,,
-Cd(OH)2,Cd(OH)2,,molecular_formula,
-CrCl3 6H2O,CrCl3(H2O)6,,molecular_formula,
-CuCl,CuCl,,molecular_formula,
-FeCl2,FeCl2,,molecular_formula,
-DI H2O,H2O,Water,material_name,H2O
-Graphite,C6,Graphite,material_name,CH4
-H2SO4,H2SO4,,molecular_formula,
-HBr,HBr,,molecular_formula,
-HCl,HCl,,molecular_formula,
-KOH,KOH,,molecular_formula,
-LaNi5,LaNi5,,molecular_formula,
-LCO,LiCoO2,Lithium Cobaltate,material_name,
-LFP,LiFePO4,LFP,material_name,
-Li2S,Li2S,,molecular_formula,
-Li2SO4,Li2SO4,,molecular_formula,
-LiOH H2O,LiOH(H2O),Lithium Hydroxide Monohydrate,material_name,H3LiO2
-Lithium metal,Li,Lithium,molecular_formula,Li
-LMO,LiMn2O4,LMO,material_name,Li2MnO4
-LMP,LiMnPO4,LMP,material_name,
-LNMO,LiMn1.5Ni0.5O4,LMNO,material_name,
-LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,LRMO LMNO,material_name,
-LTO,Li4Ti5O12,LTO,material_name,
-Mg,Mg,,molecular_formula,
-MnO2,MnO2,,molecular_formula,
-MoS2,MoS2,,molecular_formula,
-Na,Na,,molecular_formula,
-Na2S,Na2S,,molecular_formula,
-Na2SO4,Na2SO4,,molecular_formula,
-Na2Zn(OH)4,Na2Zn(OH)4,,molecular_formula,
-NaBr,NaBr,,molecular_formula,
-NaCl,NaCl,,molecular_formula,
-NaOH,NaOH,,molecular_formula,
-NCA,LiNi0.8Co0.15Al0.05O2,NCA,material_name,
-NCM111,LiNi0.33Co0.33Mn0.33O2,NCM111,material_name,
-NCM622,LiNi0.6Co0.2Mn0.2O2,NCM622,material_name,
-NH4Cl,NH4Cl,,molecular_formula,
-Ni(OH)2,Ni(OH)2,,molecular_formula,
-NiCl2 6H2O,NiCl2(H2O)6,,molecular_formula,
-NMO,Na0.44MnO2,NMO,material_name,
-NTP,NaTi2(PO4)3,NTP,material_name,
-P2-Na2Mn2NiO6,Na0.67Mn0.67Ni0.33O2,P2-NMO,material_name,
-Pb,Pb,,molecular_formula,
-Pb2Sb,Pb2Sb,,molecular_formula,
-PPy-AC,,PPy-AC,material_name,
-S,S,,molecular_formula,
-Si,Si,Polysilicon,material_name,
-Ti2S4,Ti2S4,,molecular_formula,
-TiS2,TiS2,,molecular_formula,
-VOSO4 4H2O,VOSO4(H2O)4,,molecular_formula,
-Zn,Zn,,molecular_formula,
-Zn0.25V2O5,Zn0.25V2O5,,molecular_formula,
-ZnBr2,ZnBr2,,molecular_formula,
-ZnSO4 7H2O,ZnSO4(H2O)7,,molecular_formula,
-O2,,Air,material_name,
+original_name,molecular_formula,material_name,index_use
+Active carbon,C,Carbon,molecular_formula
+AQDS,C14H8O8S2,AQDS,material_name
+CaCl2,CaCl2,,molecular_formula
+Carbonate Electrolyte,,,
+Cd(OH)2,Cd(OH)2,,molecular_formula
+CrCl3 6H2O,CrCl3(H2O)6,,molecular_formula
+CuCl,CuCl,,molecular_formula
+FeCl2,FeCl2,,molecular_formula
+DI H2O,H2O,Water,material_name
+Graphite,C6,Graphite,material_name
+H2SO4,H2SO4,,molecular_formula
+HBr,HBr,,molecular_formula
+HCl,HCl,,molecular_formula
+KOH,KOH,,molecular_formula
+LaNi5,LaNi5,,molecular_formula
+LCO,LiCoO2,Lithium Cobaltate,material_name
+LFP,LiFePO4,LFP,material_name
+Li2S,Li2S,,molecular_formula
+Li2SO4,Li2SO4,,molecular_formula
+LiOH H2O,LiOH(H2O),Lithium Hydroxide Monohydrate,material_name
+Lithium metal,Li,Lithium,molecular_formula
+LMO,LiMn2O4,LMO,material_name
+LMP,LiMnPO4,LMP,material_name
+LNMO,LiMn1.5Ni0.5O4,LMNO,material_name
+LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,LRMO LMNO,material_name
+LTO,Li4Ti5O12,LTO,material_name
+Mg,Mg,,molecular_formula
+MnO2,MnO2,,molecular_formula
+MoS2,MoS2,,molecular_formula
+Na,Na,,molecular_formula
+Na2S,Na2S,,molecular_formula
+Na2SO4,Na2SO4,,molecular_formula
+Na2Zn(OH)4,Na2Zn(OH)4,,molecular_formula
+NaBr,NaBr,,molecular_formula
+NaCl,NaCl,,molecular_formula
+NaOH,NaOH,,molecular_formula
+NCA,LiNi0.8Co0.15Al0.05O2,NCA,material_name
+NCM111,LiNi0.33Co0.33Mn0.33O2,NCM111,material_name
+NCM622,LiNi0.6Co0.2Mn0.2O2,NCM622,material_name
+NH4Cl,NH4Cl,,molecular_formula
+Ni(OH)2,Ni(OH)2,,molecular_formula
+NiCl2 6H2O,NiCl2(H2O)6,,molecular_formula
+NMO,Na0.44MnO2,NMO,material_name
+NTP,NaTi2(PO4)3,NTP,material_name
+P2-Na2Mn2NiO6,Na0.67Mn0.67Ni0.33O2,P2-NMO,material_name
+Pb,Pb,,molecular_formula
+Pb2Sb,Pb2Sb,,molecular_formula
+PPy-AC,,PPy-AC,material_name
+S,S,,molecular_formula
+Si,Si,Polysilicon,material_name
+Ti2S4,Ti2S4,,molecular_formula
+TiS2,TiS2,,molecular_formula
+VOSO4 4H2O,VOSO4(H2O)4,,molecular_formula
+Zn,Zn,,molecular_formula
+Zn0.25V2O5,Zn0.25V2O5,,molecular_formula
+ZnBr2,ZnBr2,,molecular_formula
+ZnSO4 7H2O,ZnSO4(H2O)7,,molecular_formula
+O2,,Air,material_name

@@ -1,0 +1,10 @@
+SM_name,energy_type,materials,delta_height
+Synthetic H2,chemcial,[Synthetic H2],
+Synthetic CH4 (Sabatier),chemcial,[Synthetic CH4 (Sabatier)],
+Synthetic NH3 (Haber-Bosch),chemcial,[Synthetic NH3 (Haber-Bosch)],
+Synthetic H2 (Cavern),chemcial,[Synthetic H2 (Cavern)],
+Pumped Hydro,gravitational,[Water Reservoir Excavation],300
+Block Stacking,gravitational,[Stone],300
+Metallurgical Silicon,latent_thermal,[Metallurgical Silicon],
+Al2O3 Dielectric Capacitor,electrostatic,[Al2O3],
+Magnetite Thermal Storage,sensible_thermal,[Iron Ore],

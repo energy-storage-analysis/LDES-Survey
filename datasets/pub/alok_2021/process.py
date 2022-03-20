@@ -64,8 +64,19 @@ df_physprop = es_utils.extract_df_physprop(df, physprops=['sp_latent_heat','phas
 
 df_prices = es_utils.extract_df_price(df)
 
-df_prices.to_csv('output/mat_prices.csv')
-df_physprop.to_csv('output/physprop.csv')
 
+df_mat_data = pd.concat([
+    df_prices,
+    df_physprop,
+], axis=1)
+
+df_mat_data.to_csv('output/mat_data.csv')
+
+#No SM lookup needed as SM are just just the materials
+
+df_SMs = pd.DataFrame(index=df_mat_data.index)
+df_SMs['energy_type'] = 'latent_thermal'
+df_SMs['materials'] = "[" + df_SMs.index + "]"
+df_SMs.to_csv('output/SM_data.csv')
 
 # %%

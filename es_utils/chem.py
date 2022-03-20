@@ -68,3 +68,27 @@ def get_molecular_mass(f):
         total_mm += element_mm*amount
 
     return total_mm
+
+
+
+
+def calculate_formula_price(chemparse_dict, element_prices):
+    total_price = 0
+    total_mass = 0
+    for atom, num in chemparse_dict.items():
+        if atom in element_prices.index:
+
+            row = element_prices.loc[atom]
+            
+            kg_per_mol = row['molar_mass']/1000
+
+            total_mass += kg_per_mol*num #kg/mol
+
+            cost_per_mol = row['cost']*kg_per_mol
+            total_price += cost_per_mol*num   #$/mol 
+        else:
+            return np.nan
+
+    price = total_price/total_mass #$/kg
+
+    return price

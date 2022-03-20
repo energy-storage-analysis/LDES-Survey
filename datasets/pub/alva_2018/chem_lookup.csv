@@ -1,15 +1,44 @@
-original_name,material_name,molecular_formula,index_use,pubchem_formula
-"HITEC, NaNO3eKNO3e NaNO2",HITEC,(NaNO3)7(KNO3)53(NaNO2)40,material_name,KN3Na2O8
-"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48,material_name,
-"Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,NaNO3KNO3,material_name,
-Syltherm XLT,Syltherm XLT,,material_name,
-Dowtherm A,Dowtherm,C24H20O,material_name,C24H20O
-Vegetable oil,Vegetable Oil,C57H104O9,material_name,C57H104O9
-Sodium (Na),Sodium,Na,molecular_formula,Na
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium Potassium Alloy,NaK,molecular_formula,
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Sodium Bismuth,BiNa3,molecular_formula,
-Granite,Stone,,material_name,
-Quartzite,Stone,,material_name,
-Marble,Stone,,material_name,
-Basalt,Stone,,material_name,
-Hornfels,,,,
+original_name,material_name,molecular_formula,index_use
+"HITEC, NaNO3eKNO3e NaNO2",HITEC,(NaNO3)7(KNO3)53(NaNO2)40,material_name
+"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48,material_name
+"Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,NaNO3KNO3,material_name
+Syltherm XLT,Syltherm XLT,,material_name
+Dowtherm A,Dowtherm,C24H20O,material_name
+Vegetable oil,Vegetable Oil,C57H104O9,material_name
+Sodium (Na),Sodium,Na,molecular_formula
+Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium Potassium Alloy,NaK,molecular_formula
+Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Sodium Bismuth,PbBi,molecular_formula
+Granite,Granite,SiO2,material_name
+Quartzite,Quartzite,SiO2,material_name
+Marble,Marble,CaO,material_name
+Basalt,Basalt,SiO2,material_name
+Hornfels,,,
+NaNO3,,NNaO3,molecular_formula
+KNO3,,KNO3,molecular_formula
+Mg (NO3)2,,Mg,molecular_formula
+Na2CO3,,CNa2O3,molecular_formula
+K2CO3,,CK2O3,molecular_formula
+CaCO3,,CCaO3,molecular_formula
+Li2CO3,,CLi2O3,molecular_formula
+ZnCl2,,Cl2Zn,molecular_formula
+NaCl,,ClNa,molecular_formula
+KCl,,ClK,molecular_formula
+MgCl2,,Cl2Mg,molecular_formula
+LiCl,,ClLi,molecular_formula
+CaCl2,,CaCl2,molecular_formula
+Na2SO4,,Na2O4S,molecular_formula
+Li2SO4,,Li2O4S,molecular_formula
+K2SO4,,K2O4S,molecular_formula
+MgSO4,,MgO4S,molecular_formula
+CaSO4,,CaO4S,molecular_formula
+LiF,,FLi,molecular_formula
+NaF,,FNa,molecular_formula
+KF,,KF,molecular_formula
+CaF2,,CaF2,molecular_formula
+NaOH,,HNaO,molecular_formula
+KOH,,KOH,molecular_formula
+LiOH,,HLiO,molecular_formula
+Cu,,Cu,molecular_formula
+Zn,,Zn,molecular_formula
+Al,,Al,molecular_formula
+CaN2O6,,CaN2O6,molecular_formula

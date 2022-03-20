@@ -9,31 +9,21 @@ dataset_folder = '../datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
 # col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','energy_type','source']
-dfs_price = []
-dfs_physprop = []
+dfs_mat_data = []
 dfs_SM = []
 
 for source, row in dataset_index.iterrows():
-    fp_prices = os.path.join(dataset_folder, row['folder'], 'output', 'mat_prices.csv')
+    fp_prices = os.path.join(dataset_folder, row['folder'], 'output', 'mat_data.csv')
     if os.path.exists(fp_prices):
-        df_price = pd.read_csv(fp_prices,index_col=0)
+        df_mat_data = pd.read_csv(fp_prices,index_col=0)
 
         #Custom data dataset already has source column
         if source != 'custom_data':
-            df_price['source'] = source
+            df_mat_data['source'] = source
 
-        dfs_price.append(df_price)
+        dfs_mat_data.append(df_mat_data)
 
-    fp_physprop = os.path.join(dataset_folder, row['folder'], 'output', 'physprop.csv')
-    if os.path.exists(fp_physprop):
-        df_physprop = pd.read_csv(fp_physprop,index_col=0)
 
-        #Custom data dataset already has source column
-        if source != 'custom_data':
-            df_physprop['source'] = source
-
-        dfs_physprop.append(df_physprop)
-    
     fp_SM = os.path.join(dataset_folder, row['folder'], 'output', 'SM_data.csv')
     if os.path.exists(fp_SM):
         df_SM = pd.read_csv(fp_SM,index_col=0)
@@ -44,16 +34,26 @@ for source, row in dataset_index.iterrows():
 
         dfs_SM.append(df_SM)
 
-df_prices = pd.concat(dfs_price)
-df_physprop = pd.concat(dfs_physprop)
+df_mat_data = pd.concat(dfs_mat_data)
 df_SM = pd.concat(dfs_SM)
+df_SM.index.name = 'SM_name'
+
+# df_SM = df_SM[]
 
 # df.index.name = 'index'
 
 #%%
 
+SM_cols = ['energy_type','materials','source','C_kwh_orig','type','deltaV','original_name','delta_height','specific_capacitance']
+
+df_SM = df_SM[SM_cols]
+
+
 df_SM.to_csv('data/SMs.csv')
-df_physprop.to_csv('data/physprops.csv')
+
+
+#%%
+df_mat_data.to_csv('data/mat_data_all.csv')
 
 ## Collect prices 
 
@@ -61,18 +61,14 @@ df_physprop.to_csv('data/physprops.csv')
 
 from es_utils import join_col_vals
 
-s_temp = df_prices.groupby('index').apply(join_col_vals, column='source')
+s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
 s_temp.name = 'source'
 df_prices_combine = s_temp.to_frame()
 
 df_prices_combine['num_source'] = df_prices_combine['source'].str.split(',').apply(len)
-df_prices_combine['specific_price_refs'] = df_prices.groupby('index')['specific_price'].mean()
+df_prices_combine['specific_price_refs'] = df_mat_data.groupby('index')['specific_price'].mean()
 
-#Should only be one molecular formula
-df_prices_combine['molecular_formula'] = df_prices.groupby('index').apply(join_col_vals, column='molecular_formula')
 
-from es_utils.chem import get_molecular_mass
-df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molecular_mass)
 
 # df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
@@ -83,42 +79,13 @@ element_prices = pd.read_csv(
     os.path.join(dataset_folder, r'wiki_element_cost\output\process.csv')
     , index_col=1)
 
-def calculate_formula_price(chemparse_dict):
-    total_price = 0
-    total_mass = 0
-    for atom, num in chemparse_dict.items():
-        if atom in element_prices.index:
 
-            row = element_prices.loc[atom]
-            
-            kg_per_mol = row['molar_mass']/1000
-
-            total_mass += kg_per_mol*num #kg/mol
-
-            cost_per_mol = row['cost']*kg_per_mol
-            total_price += cost_per_mol*num   #$/mol 
-        else:
-            return np.nan
-
-    price = total_price/total_mass #$/kg
-
-    return price
+from es_utils.chem import calculate_formula_price
 
 f_dicts = [chemparse.parse_formula(f) for f in df_prices_combine.index]
-e_price = [calculate_formula_price(d) for d in f_dicts]
+e_price = [calculate_formula_price(d, element_prices) for d in f_dicts]
 df_prices_combine['specific_price_element'] = e_price
 df_prices_combine
-
-#%%
-
-#TODO: reexamine. Happening with Alva rock material (quartzite) that also doesn't happen to be on pubchem
-# Need to figure out how to tie to USGS prices anyway
-df_prices_combine = df_prices_combine.dropna(subset=['specific_price_refs', 'specific_price_element'], how='all')
-
-
-#TODO: revisit. Was having issues with output changing with rounding errors
-df_prices_combine['specific_price_refs'] = df_prices_combine['specific_price_refs'].apply(lambda x: round(x,7))
-df_prices_combine['specific_price_element'] = df_prices_combine['specific_price_element'].apply(lambda x: round(x,7))
 
 #%%
 
@@ -142,6 +109,9 @@ for idx, row in df_prices_combine.iterrows():
 df_prices_combine['specific_price'] = specific_prices
 df_prices_combine['price_type'] = price_types
     
+#TODO: revisit. Was having issues with output changing with rounding errors
+df_prices_combine['specific_price_refs'] = df_prices_combine['specific_price_refs'].apply(lambda x: round(x,7))
+
 
     
 
@@ -152,3 +122,24 @@ df_prices_combine.to_csv('data/mat_prices.csv')
 
 
 
+#%%
+
+
+s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
+s_temp.name = 'source'
+df_physprop_combine = s_temp.to_frame()
+
+df_physprop_combine['num_source'] = df_physprop_combine['source'].str.split(',').apply(len)
+
+#Should only be one molecular formula
+df_physprop_combine['molecular_formula'] = df_mat_data.groupby('index').apply(join_col_vals, column='molecular_formula')
+
+from es_utils.chem import get_molecular_mass
+df_physprop_combine['mu'] = df_physprop_combine['molecular_formula'].apply(get_molecular_mass)
+
+physprop_cols = ['Cp','kth','sp_latent_heat','phase_change_T','deltaH_thermochem','specific_strength', 'deltaG_chem','mass_density','dielectric_breakdown','dielectric_constant']
+
+for col in physprop_cols:
+    df_physprop_combine[col] = df_mat_data.groupby('index')[col].mean()
+
+df_physprop_combine.to_csv('data/mat_physprop.csv')
