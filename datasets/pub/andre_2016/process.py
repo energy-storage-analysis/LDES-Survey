@@ -50,6 +50,14 @@ df_SMs = pd.merge(
     
 )
 
+
+from es_utils.chem import normalize_list
+from mat2vec.processing import MaterialsTextProcessor
+mtp = MaterialsTextProcessor()
+
+df_SMs['materials'] = df_SMs['materials'].apply(normalize_list, mtp=mtp)
+
+
 df_SMs.index.name = 'SM_name'
 df_SMs.to_csv('output/SM_data.csv')
 # %%
