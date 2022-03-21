@@ -117,6 +117,8 @@ df_SMs = pd.merge(
     
 )
 
+#%%
+
 df_SMs.index.name = 'SM_name'
 
 df_SMs = df_SMs[['materials','energy_type','Cp', 'phase_change_T','sp_latent_heat','density','kth','vol_latent_heat']]
