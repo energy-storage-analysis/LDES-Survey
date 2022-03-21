@@ -44,9 +44,9 @@ df_SM.index.name = 'SM_name'
 
 #%%
 
-SM_cols = ['energy_type','materials','source','C_kwh_orig','type','deltaV','original_name','delta_height','specific_capacitance']
+# SM_cols = ['energy_type','materials','source','C_kwh_orig','type','deltaV','original_name','delta_height','specific_capacitance']
 
-df_SM = df_SM[SM_cols]
+# df_SM = df_SM[SM_cols]
 
 
 df_SM.to_csv('data/SMs.csv')
@@ -112,34 +112,34 @@ df_prices_combine['price_type'] = price_types
 #TODO: revisit. Was having issues with output changing with rounding errors
 df_prices_combine['specific_price_refs'] = df_prices_combine['specific_price_refs'].apply(lambda x: round(x,7))
 
+#%%
+#Should only be one molecular formula
+df_prices_combine['molecular_formula'] = df_mat_data.groupby('index').apply(join_col_vals, column='molecular_formula')
 
+from es_utils.chem import get_molecular_mass
+df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molecular_mass)
     
 
 
 #%%
 
-df_prices_combine.to_csv('data/mat_prices.csv')
+df_prices_combine.to_csv('data/mat_data.csv')
 
 
 
 #%%
 
 
-s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
-s_temp.name = 'source'
-df_physprop_combine = s_temp.to_frame()
+# s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
+# s_temp.name = 'source'
+# df_physprop_combine = s_temp.to_frame()
 
-df_physprop_combine['num_source'] = df_physprop_combine['source'].str.split(',').apply(len)
+# df_physprop_combine['num_source'] = df_physprop_combine['source'].str.split(',').apply(len)
 
-#Should only be one molecular formula
-df_physprop_combine['molecular_formula'] = df_mat_data.groupby('index').apply(join_col_vals, column='molecular_formula')
 
-from es_utils.chem import get_molecular_mass
-df_physprop_combine['mu'] = df_physprop_combine['molecular_formula'].apply(get_molecular_mass)
+# physprop_cols = ['Cp','kth','sp_latent_heat','phase_change_T','deltaH_thermochem','specific_strength', 'deltaG_chem','mass_density','dielectric_breakdown','dielectric_constant']
 
-physprop_cols = ['Cp','kth','sp_latent_heat','phase_change_T','deltaH_thermochem','specific_strength', 'deltaG_chem','mass_density','dielectric_breakdown','dielectric_constant']
+# for col in physprop_cols:
+#     df_physprop_combine[col] = df_mat_data.groupby('index')[col].mean()
 
-for col in physprop_cols:
-    df_physprop_combine[col] = df_mat_data.groupby('index')[col].mean()
-
-df_physprop_combine.to_csv('data/mat_physprop.csv')
+# df_physprop_combine.to_csv('data/mat_physprop.csv')

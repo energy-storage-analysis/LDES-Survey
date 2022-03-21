@@ -4,7 +4,7 @@ Antimony Metal,Antimony,Sb,molecular_formula
 Arsenic Mtl-CN,Arsenic,As,molecular_formula
 Arsenic Triox-CN,Arsenic Trioxide,As2O3,molecular_formula
 Arsenic Triox-MA,Arsenic Trioxide,As2O3,molecular_formula
-Asbestos Customs,Asbestos,,material_name
+Asbestos Customs,Asbestos,Mg3Si2O5(OH)4,material_name
 "Barite ",Barite,BaO4S,material_name
 Bauxite and Alumina Bauxite,Bauxite,AlHO2,material_name
 Bauxite and Alumina Alumina,Alumina,Al2O3,molecular_formula
@@ -13,7 +13,7 @@ Beryllium Alloy,Beryllium,Be,molecular_formula
 Boron CIF,Boron,B,molecular_formula
 Bromine Imports,Bromine,Br2,molecular_formula
 Cadmium Metal,Cadmium,Cd,molecular_formula
-Cement Avg,Cement,,material_name
+Cement Avg,Cement,(CaO)1(Al2O5Si)1,material_name
 Chromium Ore,Chromite,CrFeO4,molecular_formula
 Chromium Ferrrochromium,Ferrrochromium,FeCr,molecular_formula
 Chromium Metal,Chromium,Cr,molecular_formula
@@ -32,12 +32,12 @@ Diamond (Industrial) Bort_Imports,Diamond,CH4,material_name
 Diamond (Industrial) Stones_Imports,Diamond,CH4,material_name
 "Diatomite ",Diatomite,O2Si,material_name
 Feldspar and Nepheline Syenite Feldspar,Feldspar,AlKO8Si3,material_name
-Feldspar and Nepheline Syenite Nepheline_syenite,Syenite,,material_name
+Feldspar and Nepheline Syenite Nepheline_syenite,Syenite,"Al2KNaO8Si2 ",material_name
 "Iron Ore ",Iron Ore,Fe2O3,material_name
-"Iron Oxide Pigments ",Iron Oxide Pigment,,material_name
+"Iron Oxide Pigments ",Iron Oxide Pigment,Fe2O3,material_name
 "Iron and Steel Scrap ",Iron,Fe,molecular_formula
 "Iron and Steel Slag ",Iron,Fe,molecular_formula
-"Iron and Steel ",Steel,,material_name
+"Iron and Steel ",Steel,Fe,material_name
 Fluorspar Acid,Fluorspar,CaF2,molecular_formula
 Fluorspar Metallurgical,Fluorspar,CaF2,molecular_formula
 Gallium High-purity,Gallium,Ga,molecular_formula
@@ -72,7 +72,7 @@ Magnesium Metal European,Magnesium,Mg,molecular_formula
 "Nitrogen (Fixed)--Ammonia ",Ammonia,H3N,molecular_formula
 "Peat ",Peat,K,material_name
 Perlite FOB,Perlite,Al2CaFe2K2MgNa2O12Si,material_name
-"Phosphate Rock ",Phosphorite,,material_name
+"Phosphate Rock ",Phosphorite,Ca5(PO4)3F,material_name
 Platinum-Group Metals Palladium,Palladium,Pd,molecular_formula
 Platinum-Group Metals Platinum,Platinum,Pt,molecular_formula
 Platinum-Group Metals Iridium,Iridium,Ir,molecular_formula
@@ -110,12 +110,12 @@ Scandium Mtl_Alloy,Scandium Aluminum Alloy,AlSc,molecular_formula
 Silver Bullion,Silver,Ag,molecular_formula
 Silicon FeSi2_50,Ferrosilicon,FeSi2,molecular_formula
 Silicon FeSi2_75,Ferrosilicon,FeSi2,molecular_formula
-Silicon Si,Metallurgical Silicon,,material_name
+Silicon Si,Metallurgical Silicon,Si,material_name
 "Soda Ash ",Soda Ash,CNa2O3,molecular_formula
-Stone (Crushed) Average,Stone,,material_name
-Stone (Dimension) Average,Stone,,material_name
+Stone (Crushed) Average,Stone,Al2O5Si,material_name
+Stone (Dimension) Average,Stone,Al2O5Si,material_name
 Stone (Dimension) Granite,Granite,C16F5H14N5O5S,material_name
-"Strontium ",Celestite,,material_name
+"Strontium ",Celestite,SrSO4,material_name
 Sulfur Sulfur,Sulfur,H2S,molecular_formula
 "Talc and Pyrophyllite  ",Talc,H2Mg3O12Si4,material_name
 Tantalum Ta2O5,Tantalum Pentoxide,O5Ta2,molecular_formula

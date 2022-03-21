@@ -49,34 +49,21 @@ df['energy_type'] = 'latent_thermal'
 
 df
 
-#%%
-
-
-
-#%%
 import es_utils
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
-df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+df = pd.merge(df, chem_lookup, on='original_name')
 
-from es_utils import extract_df_physprop, extract_df_price
-df_physprop = es_utils.extract_df_physprop(df, physprops=['sp_latent_heat','phase_change_T'])
+df_prices = es_utils.extract_df_mat(df.set_index('index'))
+df_prices.to_csv('output/mat_data.csv')
 
-df_prices = es_utils.extract_df_price(df)
-
-
-df_mat_data = pd.concat([
-    df_prices,
-    df_physprop,
-], axis=1)
-
-df_mat_data.to_csv('output/mat_data.csv')
-
+df_SMs = df.set_index('original_name')[['sp_latent_heat','phase_change_T']]
 #No SM lookup needed as SM are just just the materials
-
-df_SMs = pd.DataFrame(index=df_mat_data.index)
 df_SMs['energy_type'] = 'latent_thermal'
 df_SMs['materials'] = "[" + df_SMs.index + "]"
+df_SMs.index.name = 'SM_name'
+
 df_SMs.to_csv('output/SM_data.csv')
+
 
 # %%

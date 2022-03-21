@@ -1,43 +1,43 @@
-SM_name,year,C_kwh_orig,ancat,type,deltaV,materials,energy_type
-Pb acid,1859.0,12.4,Pb/PbO2,Pb acid,1,[Pb],electrochemical
-NiCd,1899.0,66.0,Cd(OH)2/Ni(OH)2,NiCd,1,"[Cd(OH)2, Ni(OH)2]",electrochemical
-NiMH,1978.0,82.8,LaNi5/Ni(OH)2,NiMH,1,"[LaNi5, Ni(OH)2]",electrochemical
-Zn/air,1878.0,5.8,Zn/O2,Zn2+ based,1,"[Zn, Air]",electrochemical
-Zn/NiOOH,1899.0,44.2,Zn/NiOOH,Zn2+ based,1,"[Zn, Ni(OH)2]",electrochemical
-Zn/MnO2,1959.0,9.0,Zn/MnO2,Zn2+ based,1,"[Zn, MnO2]",electrochemical
-Zn/Br2,1972.0,8.0,Zn/Br2,Zn2+ based,1,"[Zn, Br2]",electrochemical
-Zn/Fe,2015.0,9.3,2-/Fe2+ Zn(OH)4,Zn2+ based,1,"[Zn(OH)4, Fe]",electrochemical
-Zn/Zn0.25V2O5,2016.0,50.7,Zn/Zn0.25V2O5,Zn2+ based,1,"[Zn, Zn0.25V2O5]",electrochemical
-Mg/Ti2S4,2016.0,358.7,Mg/Ti2S4,Mg2+ based,1,"[Mg, Ti2S4]",electrochemical
-Li/S,1958.0,13.7,Li/S,Lithium metal,3,"[Li, S]",electrochemical
-Li/TiS2,1976.0,192.1,Li/TiS2,Lithium metal,3,"[Li, TiS2]",electrochemical
-Li/MoS2,1979.0,35.7,Li/MoS2,Lithium metal,3,"[Li, MoS2]",electrochemical
-Li/LCO,1980.0,90.3,Li/LiCoO2,Lithium metal,3,"[Li, Lithium Cobaltate]",electrochemical
-Li/air,1996.0,45.5,Li/O2,Lithium metal,3,"[Li, Air]",electrochemical
-Na/S,1966.0,1.6,Na/S,High temperature,1,"[Na, S]",electrochemical
-Na/NiCl2,1978.0,6.6,Na/NiCl2,High temperature,1,"[Na, NiCl2(H2O)6]",electrochemical
-Li/Pb2Sb,2014.0,64.1,Li/Pb2Sb,High temperature,1,"[Li, Pb2Sb]",electrochemical
-ICB,1975.0,28.3,Cr2+/Fe3+,Redox flow,1,[Cr],electrochemical
-Fe/Fe,1981.0,15.5,Fe0/Fe3+,Redox flow,1,[Fe],electrochemical
-PSB,1981.0,7.4,- S22-/Br3,Redox flow,1,"[S, Br2]",electrochemical
-VRFB,1986.0,124.4,V2+/V5+,Redox flow,1,[V],electrochemical
-Cu/Cu,2014.0,53.0,Cu0/Cu2+,Redox flow,1,[Cr],electrochemical
-AQDS/Br,2014.0,57.9,"9,10-Anthraquinone-2,7-disulphonic acid/Br2",Redox flow,1,"[AQDS, Br2]",electrochemical
-"Aq-S/air  (Na, H+)",2017.0,1.7,S22-/O2,Flow-air,1,"[S, Air]",electrochemical
-"Aq-S/air  (Na, OH-)",2017.0,4.0,S22-/O2,Flow-air,1,"[S, Air]",electrochemical
-"Aq-S/air  (Li, H+)",2017.0,4.6,S22-/O2,Flow-air,1,"[S, Air]",electrochemical
-"Aq-S/air (Li, OH-)",2017.0,13.2,S22-/O2,Flow-air,1,"[S, Air]",electrochemical
-C6/LMO,1984.0,45.6,C6/LiMn2O4,Li ion  (C6 anode),3,"[Graphite, LMO]",electrochemical
-C6/LCO,1991.0,98.3,C6/LiCoO2,Li ion  (C6 anode),3,"[Graphite, Lithium Cobaltate]",electrochemical
-C6/LFP,1997.0,44.0,C6/LiFePO4,Li ion  (C6 anode),3,"[Graphite, LFP]",electrochemical
-C6/LMNO,1997.0,51.3,C6/LiMn1.5Ni0.5O4,Li ion  (C6 anode),3,"[Graphite, LMNO]",electrochemical
-LTO/LMO,1998.0,90.1,Li4Ti5O12/ LiMn2O4,Li ion  (C6 anode),3,"[LTO, LMO]",electrochemical
-C6/NCM111,2001.0,51.3,C6/LiNi0.33Co0.33- Mn0.33O2,Li ion  (C6 anode),3,"[Graphite, NCM111]",electrochemical
-C6/LMP,2002.0,36.3,C6/LiMnPO4,Li ion  (C6 anode),3,"[Graphite, LMP]",electrochemical
-C6/NCA,2002.0,68.3,C6/LiNi0.8Co0.15-Al0.05O2,Li ion  (C6 anode),3,"[Graphite, NCA]",electrochemical
-C6/LRMO LMNO,2005.0,35.6,C6/0.3Li2MnO3 0.7LiMn0.5-Ni0.5O2,Li ion  (C6 anode),3,"[Graphite, LRMO LMNO]",electrochemical
-C6/NCM622,2016.0,47.1,C6/LiNi0.6Co0.2-Mn0.2O2,Li ion  (C6 anode),3,"[Graphite, NCM622]",electrochemical
-Si/LCO,2009.0,97.2,Si/LiCoO2,Li ion  (Si anode),3,"[Polysilicon, Lithium Cobaltate]",electrochemical
-Si/Li2S,2010.0,12.5,Si/Li2S,Li ion  (Si anode),3,"[Polysilicon, Li2S]",electrochemical
-Na/P2-NMO,2001.0,38.9,Na/Na0.67Mn0.67-Ni0.33O2,Na ion (nonaqueous),3,"[Na, P2_NMO]",electrochemical
-NTP/NMO,2013.0,212.4,NaTi2(PO4)3/ Na0.44MnO2,Na ion (aqueous),1,"[NTP, NMO]",electrochemical
+SM_name,C_kwh_orig,type,deltaV,materials,energy_type
+Pb acid,12.4,Pb acid,1,[Pb],electrochemical
+NiCd,66.0,NiCd,1,"[Cd(OH)2, Ni(OH)2]",electrochemical
+NiMH,82.8,NiMH,1,"[LaNi5, Ni(OH)2]",electrochemical
+Zn/air,5.8,Zn2+ based,1,"[Zn, Air]",electrochemical
+Zn/NiOOH,44.2,Zn2+ based,1,"[Zn, Ni(OH)2]",electrochemical
+Zn/MnO2,9.0,Zn2+ based,1,"[Zn, MnO2]",electrochemical
+Zn/Br2,8.0,Zn2+ based,1,"[Zn, Br2]",electrochemical
+Zn/Fe,9.3,Zn2+ based,1,"[Zn(OH)4, Fe]",electrochemical
+Zn/Zn0.25V2O5,50.7,Zn2+ based,1,"[Zn, Zn0.25V2O5]",electrochemical
+Mg/Ti2S4,358.7,Mg2+ based,1,"[Mg, Ti2S4]",electrochemical
+Li/S,13.7,Lithium metal,3,"[Li, S]",electrochemical
+Li/TiS2,192.1,Lithium metal,3,"[Li, TiS2]",electrochemical
+Li/MoS2,35.7,Lithium metal,3,"[Li, MoS2]",electrochemical
+Li/LCO,90.3,Lithium metal,3,"[Li, Lithium Cobaltate]",electrochemical
+Li/air,45.5,Lithium metal,3,"[Li, Air]",electrochemical
+Na/S,1.6,High temperature,1,"[Na, S]",electrochemical
+Na/NiCl2,6.6,High temperature,1,"[Na, NiCl2(H2O)6]",electrochemical
+Li/Pb2Sb,64.1,High temperature,1,"[Li, Pb2Sb]",electrochemical
+ICB,28.3,Redox flow,1,[Cr],electrochemical
+Fe/Fe,15.5,Redox flow,1,[Fe],electrochemical
+PSB,7.4,Redox flow,1,"[S, Br2]",electrochemical
+VRFB,124.4,Redox flow,1,[V],electrochemical
+Cu/Cu,53.0,Redox flow,1,[Cr],electrochemical
+AQDS/Br,57.9,Redox flow,1,"[AQDS, Br2]",electrochemical
+"Aq-S/air  (Na, H+)",1.7,Flow-air,1,"[S, Air]",electrochemical
+"Aq-S/air  (Na, OH-)",4.0,Flow-air,1,"[S, Air]",electrochemical
+"Aq-S/air  (Li, H+)",4.6,Flow-air,1,"[S, Air]",electrochemical
+"Aq-S/air (Li, OH-)",13.2,Flow-air,1,"[S, Air]",electrochemical
+C6/LMO,45.6,Li ion  (C6 anode),3,"[Graphite, LMO]",electrochemical
+C6/LCO,98.3,Li ion  (C6 anode),3,"[Graphite, Lithium Cobaltate]",electrochemical
+C6/LFP,44.0,Li ion  (C6 anode),3,"[Graphite, LFP]",electrochemical
+C6/LMNO,51.3,Li ion  (C6 anode),3,"[Graphite, LMNO]",electrochemical
+LTO/LMO,90.1,Li ion  (C6 anode),3,"[LTO, LMO]",electrochemical
+C6/NCM111,51.3,Li ion  (C6 anode),3,"[Graphite, NCM111]",electrochemical
+C6/LMP,36.3,Li ion  (C6 anode),3,"[Graphite, LMP]",electrochemical
+C6/NCA,68.3,Li ion  (C6 anode),3,"[Graphite, NCA]",electrochemical
+C6/LRMO LMNO,35.6,Li ion  (C6 anode),3,"[Graphite, LRMO LMNO]",electrochemical
+C6/NCM622,47.1,Li ion  (C6 anode),3,"[Graphite, NCM622]",electrochemical
+Si/LCO,97.2,Li ion  (Si anode),3,"[Polysilicon, Lithium Cobaltate]",electrochemical
+Si/Li2S,12.5,Li ion  (Si anode),3,"[Polysilicon, Li2S]",electrochemical
+Na/P2-NMO,38.9,Na ion (nonaqueous),3,"[Na, P2_NMO]",electrochemical
+NTP/NMO,212.4,Na ion (aqueous),1,"[NTP, NMO]",electrochemical

@@ -1,0 +1,19 @@
+original_name,materials,energy_type
+Al-2024,[Al],virial
+Al-6061-T6,[Al],virial
+Al-7075-T6,[Al],virial
+Steel-4340,[Steel],virial
+Steel-18Ni-300,[Steel],virial
+Stainless-Steel-15-7,[Steel],virial
+Stainless-Steel-440C,[Steel],virial
+Stainless-Steel-455,[Steel],virial
+Carbon-Steel-1020,[Steel],virial
+AS4-3501–6,[CFRP],virial
+AS4–8552,[CFRP],virial
+E-Glass Epoxy,[GRE],virial
+IM7-8551–7,[CFRP],virial
+IM7–8552,[CFRP],virial
+Kevlar-49 Epoxy,[KFRP],virial
+S-2 Glass Epoxy,[GRE],virial
+T300-BSL914C,[CFRP],virial
+T300-PR319,[CFRP],virial

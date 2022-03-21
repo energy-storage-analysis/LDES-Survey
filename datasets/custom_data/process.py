@@ -8,7 +8,7 @@ if not os.path.exists('output'):
     os.mkdir('output')
 
 df_custom_prices = pd.read_csv('custom_prices.csv',index_col=0)
-# df_custom_prices.to_csv('output/mat_prices.csv')
+# df_custom_prices.to_csv('output/mat_data.csv')
 
 df_custom_physprop = pd.read_csv('custom_physprop.csv',index_col=0)
 

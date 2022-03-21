@@ -1,65 +1,65 @@
-index,original_name,specific_price,molecular_formula
-Ammonium Teptamolybdate,Ammonium heptamolybdate,19.018,
-Antimony Ethylene Glycoxide,Antimony ethelyene_glycol,5.299,
-As,Arsenic metal,1.145,As
-As2O3,Arsenic trioxide,0.43000000000000005,As2O3
-Bi,Bismuth ingot,6.333515876680752,Bi
-Bi2O3,Bismuth oxides,6.497,Bi2O3
-C2O6Zr,Zirconium Carbonates,3.3825000000000003,C2O6Zr
-CCoO3,Cobalt Carbonates,14.445,CCoO3
-CLi2O3,Lithium Carbonates,11.243,CLi2O3
-CW,Tungsten carbide,28.475,CW
-Ca,"Calcium Granule, Calcium Ingot",3.7736000000000005,Ca
-Cd,Cadmium Ingot,2.784739448795549,Cd
-Cl2Co,Cobalt Chloride,6.388,Cl2Co
-Cl2H2OZr,Zirconium Oxychloride,2.2720000000000002,Cl2H2OZr
-Cl4Ti,Titanium tetrachloride,1.1685,Cl4Ti
-ClLi,Lithium chlorides,9.7995,ClLi
-Co,"Cobalt Conc., Cobalt Intermediate, Cobalt Powder, Cobalt metal",27.900819913325638,Co
-Co3O4,"Cobalt Tetroxide, Cobalt oxides",22.2,Co3O4
-CoO,Cobalt Monoxide,31.6,CoO
-CoO4S,Cobalt sulphates,5.3715,CoO4S
-Cr,Chromium metal,8.244,Cr
-CrFeO4,"Chrome Conc., Chrome lump",0.12297727272727271,CrFeO4
-FeH6O3Ti,"Ilmenite Conc, Ilmenite Reduced, Rutile Conc, Titanium Slag",0.3993333333333333,FeH6O3Ti
-Ga,Gallium metal,151.625,Ga
-Ge,Germanium metal,1152.75,Ge
-GeO2,Germanium dioxides,720.5,GeO2
-H10MoN2S4,Ammonium Tetrathiomolybdate,18.728,H10MoN2S4
-H4NO3V,Ammonium metavanadate,16.913,H4NO3V
-H8N2O4W,Tungsten APT,20.13233333333333,H8N2O4W
-In,Indium ingot,168.75,In
-LCO,Lithium Cobaltate,28.950000000000003,LiCoO2
-LMO,Lithium manganates,6.968500000000001,LiMn2O4
-Li,Lithium metal,100.17275000000001,Li
-Lithium Hydroxide Monohydrate,Lithium hydroxides_monohydrates,13.18125,LiOH(H2O)
-Metallurgical Silicon,Silicon metal,1.765666728000003,
-Mg,"Magnesium Ingot, Magnesium Powder, Manganese flakes, Mercury metal",7.123875000000001,Mg
-Mn,"Manganese Briquette, Manganese Lump",2.005,Mn
-MnO2,Manganese dioxides,1.60425,MnO2
-MnO4S,Manganese sulphates,0.9875,MnO4S
-Mo,"Molybdenum Powder, Molybdenum Rod, Molybdenum bar",43.63333333333333,Mo
-MoNa2O4,Sodium Molybdate,12.485,MoNa2O4
-MoO3,Molybdenum oxides,25.66737438890782,MoO3
-MoS2,Molybdenum Conc.,26.35,MoS2
-NV,Vanadium nitrides,27.0755,NV
-Na2O4W,Sodium Tungstate,14.9535,Na2O4W
-Nb2O5,"Niobium Conc., Niobium pentoxides",35.47264430285721,Nb2O5
-O2Se,Selenium dioxides,12.7,O2Se
-O2Ti,Titanium Dioxide,1.9813333333333334,O2Ti
-O2Zr,Zirconium fused_cubic,4.3555,O2Zr
-O3Sb2,Antimony Trioxide,5.37909715663868,O3Sb2
-O3W,"Tungsten oxides, Wolfram Ore",18.81775,O3W
-O4SiZr,"Zircon sand, Zirconium silicate",1.6375,O4SiZr
-O5Ta2,"Tantalum Conc., Tantalum pentoxide",197.93038657815165,O5Ta2
-O5V2,Vanadium pentoxides,17.306960589916155,O5V2
-Polysilicon,Silicon polysilicon,10.55,
-Re,Rhenium APR,1502.5,Re
-Sb,Antimony Ingot,5.963108856403382,Sb
-Se,Selenium Powder,20.271760276302707,Se
-Sr,Strontium metal,6.80275,Sr
-Ta,Tantalum metal,281.6666666666667,Ta
-Te,Tellurium metal,55.96666666666667,Te
-Ti,"Titan Sponge, Titanium pipe, Titanium plate",15.731000000000002,Ti
-W,"Tungsten powder, Tungsten scrap, Wolfram Bar",24.342857142857145,W
-Zr,Zirconium Sponge,35.85,Zr
+index,original_name,molecular_formula,specific_price
+Ammonium Heptamolybdate,Ammonium heptamolybdate,H50Mo7N6O28 ,19.018
+Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,H10MoN2S4,18.728
+Antimony Ethylene Glycoxide,Antimony ethelyene_glycol,,5.299
+As,Arsenic metal,As,1.145
+As2O3,Arsenic trioxide,As2O3,0.43000000000000005
+Bi,Bismuth ingot,Bi,6.333515876680752
+Bi2O3,Bismuth oxides,Bi2O3,6.497
+C2O6Zr,Zirconium Carbonates,C2O6Zr,3.3825000000000003
+CCoO3,Cobalt Carbonates,CCoO3,14.445
+CLi2O3,Lithium Carbonates,CLi2O3,11.243
+CW,Tungsten carbide,CW,28.475
+Ca,"Calcium Granule, Calcium Ingot",Ca,3.7736000000000005
+Cd,Cadmium Ingot,Cd,2.784739448795549
+Cl2Co,Cobalt Chloride,Cl2Co,6.388
+Cl2H2OZr,Zirconium Oxychloride,Cl2H2OZr,2.2720000000000002
+Cl4Ti,Titanium tetrachloride,Cl4Ti,1.1685
+ClLi,Lithium chlorides,ClLi,9.7995
+Co,"Cobalt Conc., Cobalt Intermediate, Cobalt Powder, Cobalt metal",Co,27.900819913325638
+Co3O4,"Cobalt Tetroxide, Cobalt oxides",Co3O4,22.2
+CoO,Cobalt Monoxide,CoO,31.6
+CoO4S,Cobalt sulphates,CoO4S,5.3715
+Cr,Chromium metal,Cr,8.244
+CrFeO4,"Chrome Conc., Chrome lump",CrFeO4,0.12297727272727271
+FeH6O3Ti,"Ilmenite Conc, Ilmenite Reduced, Rutile Conc, Titanium Slag",FeH6O3Ti,0.3993333333333333
+Ga,Gallium metal,Ga,151.625
+Ge,Germanium metal,Ge,1152.75
+GeO2,Germanium dioxides,GeO2,720.5
+H4NO3V,Ammonium metavanadate,H4NO3V,16.913
+H8N2O4W,Tungsten APT,H8N2O4W,20.13233333333333
+In,Indium ingot,In,168.75
+LCO,Lithium Cobaltate,LiCoO2,28.950000000000003
+LMO,Lithium manganates,LiMn2O4,6.968500000000001
+Li,Lithium metal,Li,100.17275000000001
+Lithium Hydroxide Monohydrate,Lithium hydroxides_monohydrates,LiOH(H2O),13.18125
+Metallurgical Silicon,Silicon metal,,1.765666728000003
+Mg,"Magnesium Ingot, Magnesium Powder, Manganese flakes, Mercury metal",Mg,7.123875000000001
+Mn,"Manganese Briquette, Manganese Lump",Mn,2.005
+MnO2,Manganese dioxides,MnO2,1.60425
+MnO4S,Manganese sulphates,MnO4S,0.9875
+Mo,"Molybdenum Powder, Molybdenum Rod, Molybdenum bar",Mo,43.63333333333333
+MoNa2O4,Sodium Molybdate,MoNa2O4,12.485
+MoO3,Molybdenum oxides,MoO3,25.66737438890782
+MoS2,Molybdenum Conc.,MoS2,26.35
+NV,Vanadium nitrides,NV,27.0755
+Na2O4W,Sodium Tungstate,Na2O4W,14.9535
+Nb2O5,"Niobium Conc., Niobium pentoxides",Nb2O5,35.47264430285721
+O2Se,Selenium dioxides,O2Se,12.7
+O2Ti,Titanium Dioxide,O2Ti,1.9813333333333334
+O2Zr,Zirconium fused_cubic,O2Zr,4.3555
+O3Sb2,Antimony Trioxide,O3Sb2,5.37909715663868
+O3W,"Tungsten oxides, Wolfram Ore",O3W,18.81775
+O4SiZr,"Zircon sand, Zirconium silicate",O4SiZr,1.6375
+O5Ta2,"Tantalum Conc., Tantalum pentoxide",O5Ta2,197.93038657815165
+O5V2,Vanadium pentoxides,O5V2,17.306960589916155
+Polysilicon,Silicon polysilicon,,10.55
+Re,Rhenium APR,Re,1502.5
+Sb,Antimony Ingot,Sb,5.963108856403382
+Se,Selenium Powder,Se,20.271760276302707
+Sr,Strontium metal,Sr,6.80275
+Ta,Tantalum metal,Ta,281.6666666666667
+Te,Tellurium metal,Te,55.96666666666667
+Ti,"Titan Sponge, Titanium pipe, Titanium plate",Ti,15.731000000000002
+W,"Tungsten powder, Tungsten scrap, Wolfram Bar",W,24.342857142857145
+Zr,Zirconium Sponge,Zr,35.85

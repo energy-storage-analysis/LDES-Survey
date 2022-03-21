@@ -1,40 +1,40 @@
-SM_name,num_electrodes,Electrolyte,Current Density or Scan Rate,deltaV,specific_capacitance,Ref.,type,energy_type,materials
-Carbon nanosheets,Two,(3) EMIMBF4,1–10 A·g−1,3.5,198.5,6.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,(3) EMIMBF4,1–10 A·g−1,3.5,198.5,6.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,(3) EMIMBF4,1–10 A·g−1,3.5,198.5,6.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,(3) EMIMBF4,1–10 A·g−1,3.5,198.5,6.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,PVA–H3PO4 gel,0.25–1.3 A·g−1,0.8,17.05,7.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,PVA–H3PO4 gel,0.25–1.3 A·g−1,0.8,17.05,7.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,PVA–H3PO4 gel,0.25–1.3 A·g−1,0.8,17.05,7.0,EDLC,electrostatic,[Graphite]
-Carbon nanosheets,Two,PVA–H3PO4 gel,0.25–1.3 A·g−1,0.8,17.05,7.0,EDLC,electrostatic,[Graphite]
-N-doped carbon nanosheets,Two,1 M NaOH,0.75–7 A·g−1,1.0,165.0,8.0,EDLC,electrostatic,[Graphite]
-Porous carbon nanowhiskers,Two,6 M KOH,0.5–30 A·g−1,1.0,167.5,16.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,165.0,17.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,165.0,17.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,165.0,17.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,165.0,17.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,1–10 A·g−1,1.0,212.5,22.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,1–10 A·g−1,1.0,212.5,22.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,1–10 A·g−1,1.0,212.5,22.0,EDLC,electrostatic,[Graphite]
-N-doped nanoporous carbon,Three,6 M KOH,1–10 A·g−1,1.0,212.5,22.0,EDLC,electrostatic,[Graphite]
-Nanofibers/mesoporous carbon,Three,0.5 M K2SO4,0.5–6 A·g−1,0.8,85.5,18.0,EDLC,electrostatic,[Graphite]
-N-doped carbon nanospheres,Three,6 M KOH,0.5–40 A·g−1,1.0,128.0,19.0,EDLC,electrostatic,[Graphite]
-Nanoporous carbon,Two,(4) EMI–TFSI,0.5–25 A·g−1,3.5,129.0,21.0,EDLC,electrostatic,[Graphite]
-Mesoporous carbon nanosheets,Two,(5) 1 M,0.1–120 A·g−1,2.7,115.0,24.0,EDLC,electrostatic,[Graphite]
-GO-activate carbon,Two,EMIMBF4,1–10 A·g−1,3.5,122.5,25.0,EDLC,electrostatic,[Graphene Oxide]
-Porous carbon/CNTs,Two,3 M H2SO4,0.1–50 A·g−1,0.9,181.0,26.0,EDLC,electrostatic,"[Graphite, CNT]"
-Porous CNTs,Three,1 M H2SO4,1–10 A·g−1,0.7,582.0,28.0,EDLC,electrostatic,[CNT]
-Nanoporous carbon foams,Two,6 M KOH,0.2–20 A·g−1,1.1,252.0,29.0,EDLC,electrostatic,[Graphite]
-Carbonization of carbon hydrates,Two,5 M KOH,1 A·g−1,0.8,140,32.0,EDLC,electrostatic,[Graphite]
-Carbonized hollow nanocarbon,Two,1 M KOH,1–20 A·g−1,0.9,171.5,35.0,EDLC,electrostatic,[Graphite]
-Graphene-coated CNTs,Two,EMI-TFSI,0.01–10 A·g−1,3.0,95.0,36.0,EDLC,electrostatic,"[Graphene, CNT]"
-Graphene/CNF,Three,1 M H2SO4,0.2 A·g−1,1.5,174,39.0,EDLC,electrostatic,"[Graphene, Graphite]"
-3D porous graphene-like carbon,Two,(6) TEMABF4/PC,1–32 A·g−1,2.5,167.0,40.0,EDLC,electrostatic,[Graphene]
-Mesoporous graphene nanoballs,Three,1 M H2SO4,5–100 mV·s−1,0.8,206,41.0,EDLC,electrostatic,[Graphene]
-Graphene/CNT composite fibers,Two,0.5 M H2SO4,0.2–2 A·g−1,0.8,20.5,42.0,EDLC,electrostatic,"[Graphene, CNT]"
-N-doped 3D nanoporous carbon,Two,0.5 M Na2SO4,0.5–20 A·g−1,1.0,265.0,43.0,EDLC,electrostatic,[Graphite]
-Graphene/CNT,Two,EMIMBF4,10 A·g−11,4.0,199,44.0,EDLC,electrostatic,"[Graphene, CNT]"
-Graphene/carbon,Two,EMIMBF4,1–10 A·g−1,3.5,175.0,45.0,EDLC,electrostatic,"[Graphene, Graphite]"
-RGO/CNT,Two,PVA–H2SO4 gel,0.5–4 A·g−1,1.0,216.0,46.0,EDLC,electrostatic,"[Graphene Oxide, CNT]"
-Halogen-containing nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,211.5,49.0,EDLC,electrostatic,[Graphite]
-Oxygen-rich nanoporous carbon,Two,1 M H2SO4,0.5–10 A·g−1,1.0,253.5,50.0,EDLC,electrostatic,[Graphite]
+SM_name,materials,energy_type,specific_capacitance,deltaV_electrolyte,type
+Carbon nanosheets,[Graphite],electrostatic,198.5,3.5,EDLC
+Carbon nanosheets,[Graphite],electrostatic,17.05,0.8,EDLC
+Carbon nanosheets,[Graphite],electrostatic,198.5,3.5,EDLC
+Carbon nanosheets,[Graphite],electrostatic,17.05,0.8,EDLC
+Carbon nanosheets,[Graphite],electrostatic,198.5,3.5,EDLC
+Carbon nanosheets,[Graphite],electrostatic,17.05,0.8,EDLC
+Carbon nanosheets,[Graphite],electrostatic,198.5,3.5,EDLC
+Carbon nanosheets,[Graphite],electrostatic,17.05,0.8,EDLC
+N-doped carbon nanosheets,[Graphite],electrostatic,165.0,1.0,EDLC
+Porous carbon nanowhiskers,[Graphite],electrostatic,167.5,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,165.0,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,212.5,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,165.0,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,212.5,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,165.0,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,212.5,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,165.0,1.0,EDLC
+N-doped nanoporous carbon,[Graphite],electrostatic,212.5,1.0,EDLC
+Nanofibers/mesoporous carbon,[Graphite],electrostatic,85.5,0.8,EDLC
+N-doped carbon nanospheres,[Graphite],electrostatic,128.0,1.0,EDLC
+Nanoporous carbon,[Graphite],electrostatic,129.0,3.5,EDLC
+Mesoporous carbon nanosheets,[Graphite],electrostatic,115.0,2.7,EDLC
+GO-activate carbon,[Graphene Oxide],electrostatic,122.5,3.5,EDLC
+Porous carbon/CNTs,"[Graphite, CNT]",electrostatic,181.0,0.9,EDLC
+Porous CNTs,[CNT],electrostatic,582.0,0.7,EDLC
+Nanoporous carbon foams,[Graphite],electrostatic,252.0,1.1,EDLC
+Carbonization of carbon hydrates,[Graphite],electrostatic,140,0.8,EDLC
+Carbonized hollow nanocarbon,[Graphite],electrostatic,171.5,0.9,EDLC
+Graphene-coated CNTs,"[Graphene, CNT]",electrostatic,95.0,3.0,EDLC
+Graphene/CNF,"[Graphene, Graphite]",electrostatic,174,1.5,EDLC
+3D porous graphene-like carbon,[Graphene],electrostatic,167.0,2.5,EDLC
+Mesoporous graphene nanoballs,[Graphene],electrostatic,206,0.8,EDLC
+Graphene/CNT composite fibers,"[Graphene, CNT]",electrostatic,20.5,0.8,EDLC
+N-doped 3D nanoporous carbon,[Graphite],electrostatic,265.0,1.0,EDLC
+Graphene/CNT,"[Graphene, CNT]",electrostatic,199,4.0,EDLC
+Graphene/carbon,"[Graphene, Graphite]",electrostatic,175.0,3.5,EDLC
+RGO/CNT,"[Graphene Oxide, CNT]",electrostatic,216.0,1.0,EDLC
+Halogen-containing nanoporous carbon,[Graphite],electrostatic,211.5,1.0,EDLC
+Oxygen-rich nanoporous carbon,[Graphite],electrostatic,253.5,1.0,EDLC

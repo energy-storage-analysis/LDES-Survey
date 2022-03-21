@@ -1,39 +1,32 @@
-index,original_name,Unnamed: 0,class,phase_change_T,sp_latent_heat,density,kth,vol_latent_heat,specific_price,Cp,specific_energy,energy_type,material_name,molecular_formula,index_use
-NNaO3,NaNO3,84.0,Nitrate salts,306.0,0.04777777777777778,2261 (S),,388.9,6.0,,,,,NNaO3,molecular_formula
-KNO3,KNO3,85.0,Nitrate salts,335.0,0.07388888888888889,2109(S),0.5,561.0,7.0,,,,,KNO3,molecular_formula
-Mg,Mg (NO3)2,87.0,Nitrate salts,426.0,,,,,226.0,,,,,Mg,molecular_formula
-CNa2O3,Na2CO3,88.0,Carbonate salts,854.0,0.07666666666666666,2533(S),,699.1,3.0,,,,,CNa2O3,molecular_formula
-CK2O3,K2CO3,90.0,Carbonate salts,897.0,0.06555555555555556,2290(S),,540.4,7.0,,,,,CK2O3,molecular_formula
-CCaO3,CaCO3,91.0,Carbonate salts,1330.0,0.03944444444444444,2930(S),,416.1,8.0,,,,,CCaO3,molecular_formula
-CLi2O3,Li2CO3,92.0,Carbonate salts,732.0,0.1413888888888889,2110(S),,1074.0,111.0,,,,,CLi2O3,molecular_formula
-Cl2Zn,ZnCl2,93.0,Chloride salts,280.0,0.020833333333333332,2907(S),0.5,218.0,14.0,,,,,Cl2Zn,molecular_formula
-ClNa,NaCl,95.0,Chloride salts,802.0,0.11666666666666667,2160(S),,907.2,2.8,,,,,ClNa,molecular_formula
-ClK,KCl,96.0,Chloride salts,771.0,0.09805555555555556,1980(S),,698.9,7.6,,,,,ClK,molecular_formula
-Cl2Mg,MgCl2,98.0,Chloride salts,714.0,0.12555555555555556,2320(S),,1048.6,55.0,,,,,Cl2Mg,molecular_formula
-ClLi,LiCl,100.0,Chloride salts,610.0,0.1225,2070(S),,912.9,55.0,,,,,ClLi,molecular_formula
-CaCl2,CaCl2,102.0,Chloride salts,772.0,0.07027777777777777,2150(S),,544.0,5.3,,,,,CaCl2,molecular_formula
-Na2O4S,Na2SO4,104.0,Sulfate salts,884.0,0.04583333333333333,2680(S),,442.2,3.4,,,,,Na2O4S,molecular_formula
-Li2O4S,Li2SO4,105.0,Sulfate salts,858.0,0.023333333333333334,2220(S),,186.5,180.0,,,,,Li2O4S,molecular_formula
-K2O4S,K2SO4,107.0,Sulfate salts,1069.0,0.058888888888888886,2660(S),,563.9,8.25,,,,,K2O4S,molecular_formula
-MgO4S,MgSO4,108.0,Sulfate salts,1130.0,0.03388888888888889,2660(S),,324.5,13.7,,,,,MgO4S,molecular_formula
-CaO4S,CaSO4,109.0,Sulfate salts,1460.0,0.05638888888888889,2320(S),,471.0,27.0,,,,,CaO4S,molecular_formula
-FLi,LiF,110.0,Fluoride salts,850.0,0.29,2640(S),,2756.2,220.0,,,,,FLi,molecular_formula
-FNa,NaF,112.0,Fluoride salts,996.0,0.22055555555555556,2558(S),,2031.1,7.6,,,,,FNa,molecular_formula
-KF,KF,114.0,Fluoride salts,858.0,0.13,2370(S),,1109.2,203.0,,,,,KF,molecular_formula
-CaF2,CaF2,116.0,Fluoride salts,1418.0,0.10861111111111112,3180(S),,1243.4,11.4,,,,,CaF2,molecular_formula
-HNaO,NaOH,118.0,Hydroxides,318.0,0.04583333333333333,2100(S),,346.5,4.1,,,,,HNaO,molecular_formula
-KOH,KOH,119.0,Hydroxides,380.0,0.041666666666666664,2040(S),,306.0,5.0,,,,,KOH,molecular_formula
-HLiO,LiOH,120.0,Hydroxides,462.0,0.2425,1460(S),,1274.6,165.0,,,,,HLiO,molecular_formula
-Syltherm XLT,Syltherm XLT,,Thermal Oils,,,,0.06,,29.4,0.0006030555555555555,0.30152777777777773,sensible_thermal,Syltherm XLT,,material_name
-Dowtherm,Dowtherm A,,Thermal Oils,,,,0.1083,,,0.00045277777777777775,0.22638888888888886,sensible_thermal,Dowtherm,C24H20O,material_name
-Vegetable Oil,Vegetable oil,,Thermal Oils,,,,0.11,,0.835,0.0006969444444444444,0.3484722222222222,sensible_thermal,Vegetable Oil,C57H104O9,material_name
-HITEC,"HITEC, NaNO3eKNO3e NaNO2",,Molten Salt,,,,0.6,,,0.0004336111111111111,0.21680555555555556,sensible_thermal,HITEC,(NaNO3)7(KNO3)53(NaNO2)40,material_name
-HITEC XL,"HITEC XL, NaNO3e KNO3eCa(NO3)2",,Molten Salt,,,,0.519,,1.19,0.00040194444444444446,0.20097222222222222,sensible_thermal,HITEC XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48,material_name
-Solar Salt,"Solar Salt, NaNO3e KNO3 (50-50)",,Molten Salt,,,,0.55,,,0.0004166666666666667,0.20833333333333334,sensible_thermal,Solar Salt,NaNO3KNO3,material_name
-Na,Sodium (Na),,Metal Alloy,,,,64.9,,2.0,0.00036111111111111115,0.18055555555555558,sensible_thermal,Sodium,Na,molecular_formula
-NaK,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),,Metal Alloy,,,,26.3,,2.0,0.00024722222222222224,0.12361111111111112,sensible_thermal,Sodium Potassium Alloy,NaK,molecular_formula
-PbBi,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),,Metal Alloy,,,,14.9,,13.0,3.888888888888889e-05,0.019444444444444445,sensible_thermal,Sodium Bismuth,PbBi,molecular_formula
-Granite,Granite,,Rocks,,,,2.8,,,0.00024999999999999995,0.12499999999999997,sensible_thermal,Granite,SiO2,material_name
-Quartzite,Quartzite,,Rocks,,,,2.0,,,0.00023611111111111115,0.11805555555555557,sensible_thermal,Quartzite,SiO2,material_name
-Marble,Marble,,Rocks,,,,7.7,,,0.0002361111111111111,0.11805555555555555,sensible_thermal,Marble,CaO,material_name
-Basalt,Basalt,,Rocks,,,,3.2,,,0.0004083333333333333,0.20416666666666666,sensible_thermal,Basalt,SiO2,material_name
+index,original_name,molecular_formula,specific_price
+NNaO3,NaNO3,NNaO3,6.0
+KNO3,KNO3,KNO3,7.0
+Mg,Mg (NO3)2,Mg,226.0
+CNa2O3,Na2CO3,CNa2O3,3.0
+CK2O3,K2CO3,CK2O3,7.0
+CCaO3,CaCO3,CCaO3,8.0
+CLi2O3,Li2CO3,CLi2O3,111.0
+Cl2Zn,ZnCl2,Cl2Zn,14.0
+ClNa,NaCl,ClNa,2.8
+ClK,KCl,ClK,7.6
+Cl2Mg,MgCl2,Cl2Mg,55.0
+ClLi,LiCl,ClLi,55.0
+CaCl2,CaCl2,CaCl2,5.3
+Na2O4S,Na2SO4,Na2O4S,3.4
+Li2O4S,Li2SO4,Li2O4S,180.0
+K2O4S,K2SO4,K2O4S,8.25
+MgO4S,MgSO4,MgO4S,13.7
+CaO4S,CaSO4,CaO4S,27.0
+FLi,LiF,FLi,220.0
+FNa,NaF,FNa,7.6
+KF,KF,KF,203.0
+CaF2,CaF2,CaF2,11.4
+HNaO,NaOH,HNaO,4.1
+KOH,KOH,KOH,5.0
+HLiO,LiOH,HLiO,165.0
+Syltherm XLT,Syltherm XLT,,29.4
+Vegetable Oil,Vegetable oil,C57H104O9,0.835
+HITEC XL,"HITEC XL, NaNO3e KNO3eCa(NO3)2",(NaNO3)7(KNO3)45(Ca(NO3)2)48,1.19
+Na,Sodium (Na),Na,2.0
+NaK,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),NaK,2.0
+PbBi,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),PbBi,13.0

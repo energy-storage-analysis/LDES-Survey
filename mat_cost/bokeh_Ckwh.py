@@ -47,7 +47,7 @@ p.line(energy_densities_line, mat_cost_line)
 p.legend.location = "top_left"
 p.legend.title = "energy_type"
 
-hovertool = HoverTool(tooltips=[('index','@index'), ('physical property source','@physprop_source'), ('price_sources', '@price_sources'),('original name', '@original_name')])
+hovertool = HoverTool(tooltips=[('SM name','@SM_name'), ('source','@SM_source'), ('price_sources', '@price_sources'),('original name', '@original_name')])
 p.add_tools(hovertool)
 
 

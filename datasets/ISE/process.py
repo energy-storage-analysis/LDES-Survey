@@ -114,6 +114,6 @@ df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='or
 
 df_combine['molecular_formula']= df.groupby('index').apply(join_col_vals, column='molecular_formula')
 
-from es_utils import extract_df_price
-df_price = extract_df_price(df_combine)
+from es_utils import extract_df_mat
+df_price = extract_df_mat(df_combine)
 df_price.to_csv('output/mat_data.csv')

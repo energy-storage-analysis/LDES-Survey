@@ -1,10 +1,10 @@
-SM_name,energy_type,materials,delta_height
-Synthetic H2,chemcial,[Synthetic H2],
-Synthetic CH4 (Sabatier),chemcial,[Synthetic CH4 (Sabatier)],
-Synthetic NH3 (Haber-Bosch),chemcial,[Synthetic NH3 (Haber-Bosch)],
-Synthetic H2 (Cavern),chemcial,[Synthetic H2 (Cavern)],
-Pumped Hydro,gravitational,[Water Reservoir Excavation],300
-Block Stacking,gravitational,[Stone],300
-Metallurgical Silicon,latent_thermal,[Metallurgical Silicon],
-Al2O3 Dielectric Capacitor,electrostatic,[Al2O3],
-Magnetite Thermal Storage,sensible_thermal,[Iron Ore],
+SM_name,materials,original_name,energy_type,Cp,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,delta_height,source,notes
+Iron Ore,[Iron Ore],Magnetite,sensible_thermal,0.00025,,,,,,,Grosu 2017,TODO: approximate from graph average by eye
+Metallurgical Silicon,[Metallurgical Silicon],Silicon,latent_thermal,,0.516,,,,,,Ray 2021,https://www.sciencedirect.com/science/article/abs/pii/S2213138821002599
+Al2O3,[Al2O3],Al2O3 Dielectric Capacitor,electrostatic,,,500000000,10,3950,,,TODO,"The dielectric breakdown strength is larger for thin films of Aluminum oxide than in bulk samples and is on the order of 500 MV/um.(Hanby et al., 2018; Stellanova, 2012; Talbi et al., 2010) "
+Synthetic H2,[Synthetic H2],Synthetic H2,chemical,,,,,,39.4,,TODO,
+Synthetic CH4 (Sabatier),[Synthetic CH4 (Sabatier)],Synthetic CH4 (Sabatier),chemical,,,,,,15.4,,TODO,
+Synthetic NH3 (Haber-Bosch),[Synthetic NH3 (Haber-Bosch)],Synthetic NH3 (Haber-Bosch),chemical,,,,,,6.25,,TODO,
+Synthetic H2 (Cavern),[Synthetic H2 (Cavern)],Synthetic H2 (Cavern),chemical,,,,,,39.4,,TODO,
+Pumped Hydro,[Water Reservoir Excavation],Pumped Hydro,gravitational,,,,,,,300,,
+Block Stacking,[Stone],Block Stacking,gravitational,,,,,,,100,,

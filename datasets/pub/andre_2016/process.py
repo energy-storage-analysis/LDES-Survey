@@ -1,3 +1,4 @@
+#%%
 import pandas as pd
 import os
 import es_utils
@@ -30,15 +31,25 @@ chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup, mtp=mtp)
 df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 
-from es_utils import extract_df_physprop
-df_physprop = extract_df_physprop(df, ['deltaH_thermochem','type'])
 
-df_mat_data = df_physprop
+#TODO: extract_df_mat assuming prices are in there, but called mat_data to just also be able to hold molecular formula
+df_mat_data = df[['original_name', 'molecular_formula']]
 
 df_mat_data.to_csv('output/mat_data.csv')
 
 
-df_SMs = pd.DataFrame(index=df_mat_data.index)
-df_SMs['energy_type'] = 'thermochemical'
-df_SMs['materials'] = "[" + df_SMs.index + "]"
+
+SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
+
+df_SMs = df[['original_name','deltaH_thermochem','type']].set_index('original_name')
+
+df_SMs = pd.merge(
+    SM_lookup,
+    df_SMs,
+    on='original_name'
+    
+)
+
+df_SMs.index.name = 'SM_name'
 df_SMs.to_csv('output/SM_data.csv')
+# %%

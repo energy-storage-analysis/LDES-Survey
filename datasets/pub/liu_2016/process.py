@@ -29,7 +29,7 @@ df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 #%%
 df
 
-from es_utils import extract_df_price
-df_price = extract_df_price(df)
+from es_utils import extract_df_mat
+df_price = extract_df_mat(df)
 df_price.to_csv('output/mat_data.csv')
 

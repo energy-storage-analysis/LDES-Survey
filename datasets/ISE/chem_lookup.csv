@@ -43,8 +43,8 @@
 41,Mercury metal,Magnesium,Mg,molecular_formula
 42,Molybdenum Conc.,"Molybdenite ",MoS2,molecular_formula
 43,Molybdenum oxides,Molybdenum Oxide,MoO3,molecular_formula
-44,Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,H10MoN2S4,molecular_formula
-45,Ammonium heptamolybdate,Ammonium Teptamolybdate,,material_name
+44,Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,H10MoN2S4,material_name
+45,Ammonium heptamolybdate,Ammonium Heptamolybdate,"H50Mo7N6O28 ",material_name
 46,Sodium Molybdate,Sodium Molybdate,MoNa2O4,molecular_formula
 47,Molybdenum Powder,Molybdenum,Mo,molecular_formula
 48,Molybdenum bar,Molybdenum,Mo,molecular_formula

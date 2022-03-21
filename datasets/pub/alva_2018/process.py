@@ -57,6 +57,8 @@ mtp = MaterialsTextProcessor()
 # df_latent['index_use'] = index_use
 # df_latent['index'] = df_latent[index_use]
 # df_latent = df_latent.set_index('index')
+
+
 #%%
 
 
@@ -86,7 +88,6 @@ df_sens['Cp'] = df_sens['Cp']/3600
 #TODO: How to have consistent naming without introducing delta T?
 df_sens['specific_energy'] = df_sens['Cp']*500
 # df_sens['C_kwh'] = df_sens['specific_price']/(df_sens['Cp']*500)
-df_sens['energy_type'] = 'sensible_thermal'
 
 #%%
 
@@ -96,10 +97,32 @@ df = pd.concat([
 ])
 
 df_mat = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+
+df_mat = es_utils.extract_df_mat(df_mat)
 df_mat
 #%%
 
 df_mat.to_csv('output/mat_data.csv')
 
 
+# %%
+
+
+SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
+
+df_SMs = pd.merge(
+    SM_lookup,
+    df,
+    on='original_name'
+    
+)
+
+df_SMs.index.name = 'SM_name'
+
+df_SMs = df_SMs[['materials','energy_type','Cp', 'phase_change_T','sp_latent_heat','density','kth','vol_latent_heat']]
+
+df_SMs = df_SMs.rename({'density': 'mass_density'}, axis=1)
+df_SMs['mass_density'] = df_SMs['mass_density'].str.strip('(S)').astype(float) #kg/m3
+
+df_SMs.to_csv('output/SM_data.csv')
 # %%

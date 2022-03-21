@@ -1,19 +1,19 @@
-index,original_name,specific_price,molecular_formula
-Sand,Sand,0.72,SiO2
-Na2CO3,Na2CO3,0.23,Na2CO3
-K2CO3,K2CO3,1.1,K2CO3
-Li2CO3,Li2CO3,7.0,Li2CO3
-Solar Salt,Solar Salt,0.49,
-Hitec XL,Hitec XL,1.43,
-Hitec,Hitec,0.93,
-H3N,Anhydrous,0.7,H3N
-Vermiculite,Vermiculite,0.33,AlFeH3MgO6Si
-H3N,Silica Gel,1.11,H3N
-Zeolite,Zeolite,1.93,Al2O5Si
-C,Activated Carbon,2.75,C
-Graphite,Expanded Natural,2.15,C
-Al2O3,Activated Alumina,1.32,Al2O3
-ClK,KCl,0.35,ClK
-Cl2Mg,MgCl2,0.2,Cl2Mg
-ClNa,NaCl,0.12,ClNa
-ClLi,LiCl,7.8,ClLi
+index,original_name,molecular_formula,specific_price
+Sand,Sand,SiO2,0.72
+Na2CO3,Na2CO3,Na2CO3,0.23
+K2CO3,K2CO3,K2CO3,1.1
+Li2CO3,Li2CO3,Li2CO3,7.0
+Solar Salt,Solar Salt,,0.49
+Hitec XL,Hitec XL,,1.43
+Hitec,Hitec,,0.93
+H3N,Anhydrous,H3N,0.7
+Vermiculite,Vermiculite,AlFeH3MgO6Si,0.33
+H3N,Silica Gel,H3N,1.11
+Zeolite,Zeolite,Al2O5Si,1.93
+C,Activated Carbon,C,2.75
+Graphite,Expanded Natural,C,2.15
+Al2O3,Activated Alumina,Al2O3,1.32
+ClK,KCl,ClK,0.35
+Cl2Mg,MgCl2,Cl2Mg,0.2
+ClNa,NaCl,ClNa,0.12
+ClLi,LiCl,ClLi,7.8

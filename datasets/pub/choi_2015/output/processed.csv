@@ -1,4 +1,4 @@
-original_name,num_electrodes,Electrolyte,Current Density or Scan Rate,deltaV,specific_capacitance,Ref.,type,energy_type
+original_name,num_electrodes,Electrolyte,Current Density or Scan Rate,deltaV_electrolyte,specific_capacitance,Ref.,type,energy_type
 Carbon nanosheets,Two,(3) EMIMBF4,1–10 A·g−1,3.5,198.5,6.0,EDLC,electrostatic
 Carbon nanosheets,Two,PVA–H3PO4 gel,0.25–1.3 A·g−1,0.8,17.05,7.0,EDLC,electrostatic
 N-doped carbon nanosheets,Two,1 M NaOH,0.75–7 A·g−1,1.0,165.0,8.0,EDLC,electrostatic

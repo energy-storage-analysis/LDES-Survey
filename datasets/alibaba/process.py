@@ -1,5 +1,6 @@
 #%%
 import os
+from re import search
 import numpy as np
 import pandas as pd
 
@@ -8,22 +9,32 @@ import pandas as pd
 df = pd.read_csv('out.csv')
 # df = df.set_index('search_text')
 
-search_lookup = pd.read_csv('keywords.csv', index_col=0)['index']
-df.index= [search_lookup[t] for t in df['search_text'].values]
+search_lookup = pd.read_csv('keywords.csv', index_col=0)[['index', 'molecular_formula']]
+df.index= [search_lookup['index'][t] for t in df['search_text'].values]
 df.index.name = 'index'
 
 df = df.rename({
     'Price': 'price'
 },axis=1)
 
+
 df_single = pd.read_csv('single_manual.csv', index_col=0)
 df_single.index.name = 'index'
-df_single = df_single[['search_text', 'price', 'min_order']]
+df_single = df_single[['search_text', 'price', 'min_order','molecular_formula']]
+
+
+single_data_lookup = df_single[['search_text', 'molecular_formula']].reset_index().set_index('search_text')
+single_data_lookup.index.name = 'keyword'
+search_lookup = pd.concat([search_lookup, single_data_lookup])
+
+print(search_lookup)
 
 df = pd.concat([
     df,
     df_single
 ])
+
+#%%
 
 
 df = df.dropna(subset=['price'])
@@ -98,10 +109,17 @@ df_stats = df_t.reset_index().groupby('index').agg({'specific_price':['mean', 's
 
 
 df_stats['ratio'] = df_stats['std']/df_stats['mean']
-df_stats['original_name'] = df_t.groupby('index').first()['search_text']
 df_stats
 
 #%%
 
-df_prices = df_stats[['mean','original_name']].rename({'mean':'specific_price'}, axis=1)
+df_prices = df_stats[['mean']].rename({'mean':'specific_price'}, axis=1)
+
+df_prices['original_name'] = df_t.groupby('index').first()['search_text']
+
+
+df_prices['molecular_formula'] = [search_lookup['molecular_formula'][f] for f in df_prices['original_name']]
+# df_prices['molecular_formula'] = df_t.groupby('index').first()['molecular_formula']
+# df_prices['molecular_formula'] = df_prices.index
+
 df_prices.to_csv('output/mat_data.csv')

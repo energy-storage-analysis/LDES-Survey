@@ -20,7 +20,7 @@ df = df.rename({
     'Materials': 'original_name',
     'Electrode System (1,2)': 'num_electrodes',
     'Specific Capacitance (F·g-1)': 'specific_capacitance',
-    'Potential Range (V)': 'deltaV'
+    'Potential Range (V)': 'deltaV_electrolyte'
 }, axis=1)
 
 df = df.dropna(subset=['specific_capacitance'])
@@ -41,23 +41,42 @@ df.to_csv('output/processed.csv')
 
 # %%
 
+
+
+
+
+
+#%%
+
+
+SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
+
+df_SMs = df[['specific_capacitance', 'deltaV_electrolyte', 'type']]
+
+df_SMs = pd.merge(
+    SM_lookup,
+    df_SMs,
+    on='original_name'
+    
+)
+
+df_SMs.index.name = 'SM_name'
+df_SMs.to_csv('output/SM_data.csv')
+# %%
+
+
+#TODO: incorporate chem lookup? Only getting molecular formulas. Going to define those along with prices in custom data anyway... 
+
+# materials = df_SMs['materials'].to_list()
+# flat_list = [item for sublist in materials for item in sublist]
+
+# #This is just to get the molecular formulas of the materials, many duplicates
+
 # chem_lookup = pd.read_csv('chem_lookup.csv')
 # chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup, mtp=None)
-# df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+# df_mat_data= pd.merge(df, chem_lookup, on='original_name').set_index('index')
 
-# from es_utils import extract_df_physprop
-# df_physprop = extract_df_physprop(df, ['specific_capacitance', 'deltaV', 'type']) #TODO: figure out how to combine with battery deltaV
-#%%
-SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
-SM_lookup
+# df_mat_data = df_mat_data[['original_name', 'molecular_formula']]
 
-df_SM = pd.merge(df, SM_lookup, on='original_name')
+# df_mat_data.to_csv('output/mat_data.csv')
 
-df_SM.index.name = 'SM_name'
-
-df_SM.to_csv('output/SM_data.csv')
-
-df_SM.to_csv('output/SM_data.csv')
-
-
-# %%

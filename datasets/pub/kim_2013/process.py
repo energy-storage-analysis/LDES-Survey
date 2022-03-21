@@ -25,8 +25,8 @@ df_table4 = df_table4.set_index('index')
 
 df_table4['original_name'] = df_table4['molecular_formula']
 
-from es_utils import extract_df_price
-df_price = extract_df_price(df_table4)
+from es_utils import extract_df_mat
+df_price = extract_df_mat(df_table4)
 df_price.to_csv('output/mat_data.csv')
 
 
@@ -66,7 +66,7 @@ df_couples['index'] = df_couples.index
 #This is in place of a SM lookup
 df_couples[['A','B']] = df_couples['index'].str.split('/',expand=True)
 
-df_couples['materials'] = "['" + df_couples['A'] + "', '" + df_couples['B'] + "']"
+df_couples['materials'] = "[" + df_couples['A'] + ", " + df_couples['B'] + "]"
 df_couples['materials'] = df_couples['materials'].astype(str)
 
 df_couples = df_couples.drop(['A', 'B'], axis=1)
@@ -74,6 +74,8 @@ df_couples = df_couples.rename({'index': 'original_name'}, axis=1)
 
 df_couples['type'] = 'Liquid Metal'
 df_couples['energy_type'] = 'electrochemical'
+
+df_couples.index.name = 'SM_name'
 
 df_couples.to_csv('output/SM_data.csv')
 #%%

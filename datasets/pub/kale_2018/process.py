@@ -1,3 +1,4 @@
+#%%
 from os.path import join as pjoin
 import os
 from re import I
@@ -48,7 +49,7 @@ df = pd.concat([
 ])
 
 # df = df.set_index('original_name', drop=True)
-
+df
 
 #%%
 mat_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
@@ -56,30 +57,39 @@ mat_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
 from es_utils.chem import process_chem_lookup
 mat_lookup = process_chem_lookup(mat_lookup)
 
-df = pd.merge(df, mat_lookup, on='original_name').set_index('index')
-df_combine = df.groupby('index')[['specific_strength', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
+df_mat = pd.merge(df, mat_lookup, on='original_name')
+
+
+#For the mat data, we group by price index
+
+df_mat = df_mat.set_index('index')
+
+df_mat_grouped = df_mat.groupby('index')[['specific_strength', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
 
 from es_utils import join_col_vals
-df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
-df_combine['molecular_formula']= df.groupby('index').apply(join_col_vals, column='molecular_formula')
+df_mat_grouped['original_name']= df_mat.groupby('index').apply(join_col_vals, column='original_name')
+df_mat_grouped['molecular_formula']= df_mat.groupby('index').apply(join_col_vals, column='molecular_formula')
 
-from es_utils import extract_df_physprop, extract_df_price
-df_physprop = extract_df_physprop(df_combine, ['specific_strength'])
-
-
-df_prices = extract_df_price(df_combine)
+df_mat_grouped.to_csv('output/mat_data.csv')
 
 
-df_mat_data = pd.concat([
-    df_prices,
-    df_physprop,
-], axis=1)
+#%%
 
-df_mat_data.to_csv('output/mat_data.csv')
+SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
+
+
+
+
+df_SMs = df[['original_name', 'specific_strength']].set_index('original_name')
 
 #No SM lookup needed as SM are just just the materials
+df_SMs = pd.merge(
+    SM_lookup,
+    df_SMs,
+    on='original_name'
+)
 
-df_SMs = pd.DataFrame(index=df_mat_data.index)
-df_SMs['energy_type'] = 'virial'
-df_SMs['materials'] = "[" + df_SMs.index + "]"
+
+
+df_SMs.index.name = 'SM_name'
 df_SMs.to_csv('output/SM_data.csv')
