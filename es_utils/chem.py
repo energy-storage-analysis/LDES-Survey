@@ -92,3 +92,12 @@ def calculate_formula_price(chemparse_dict, element_prices):
     price = total_price/total_mass #$/kg
 
     return price
+
+
+def normalize_list(l_str, mtp):
+    l = l_str.strip('][').split(', ')
+    list_out = []
+    for f in l:
+        list_out.append(mat2vec_process(f, mtp))
+    list_out = str(list_out)
+    return list_out

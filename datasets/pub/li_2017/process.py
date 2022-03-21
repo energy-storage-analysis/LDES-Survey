@@ -55,15 +55,9 @@ SM_lookup
 
 
 
-from es_utils.chem import mat2vec_process
+from es_utils.chem import normalize_list
 
-def normalize_list(l_str):
-    l = l_str.strip('][').split(', ')
-    list_out = []
-    for f in l:
-        list_out.append(mat2vec_process(f, mtp))
-    list_out = str(list_out)
-    return list_out
+
 
 # SM_lookup['materials'] = SM_lookup['materials'].apply(normalize_list)
 
