@@ -9,7 +9,7 @@ from mat2vec.processing import MaterialsTextProcessor
 mtp = MaterialsTextProcessor()
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = process_chem_lookup(chem_lookup, mtp=None)
+chem_lookup = process_chem_lookup(chem_lookup, mtp=mtp)
 # %%
 table_3 = pd.read_csv('tables/table_3.csv', index_col=0)
 table_3

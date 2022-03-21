@@ -1,22 +1,22 @@
 SM_name,C_kwh_orig,type,deltaV,materials,energy_type
 Pb acid,12.4,Pb acid,1,[Pb],electrochemical
-NiCd,66.0,NiCd,1,"[Cd(OH)2, Ni(OH)2]",electrochemical
-NiMH,82.8,NiMH,1,"[LaNi5, Ni(OH)2]",electrochemical
+NiCd,66.0,NiCd,1,"[CdH2O2, H2NiO2]",electrochemical
+NiMH,82.8,NiMH,1,"[LaNi5, H2NiO2]",electrochemical
 Zn/air,5.8,Zn2+ based,1,"[Zn, Air]",electrochemical
-Zn/NiOOH,44.2,Zn2+ based,1,"[Zn, Ni(OH)2]",electrochemical
+Zn/NiOOH,44.2,Zn2+ based,1,"[Zn, H2NiO2]",electrochemical
 Zn/MnO2,9.0,Zn2+ based,1,"[Zn, MnO2]",electrochemical
 Zn/Br2,8.0,Zn2+ based,1,"[Zn, Br2]",electrochemical
-Zn/Fe,9.3,Zn2+ based,1,"[Zn(OH)4, Fe]",electrochemical
-Zn/Zn0.25V2O5,50.7,Zn2+ based,1,"[Zn, Zn0.25V2O5]",electrochemical
-Mg/Ti2S4,358.7,Mg2+ based,1,"[Mg, Ti2S4]",electrochemical
+Zn/Fe,9.3,Zn2+ based,1,"[Zn, Fe]",electrochemical
+Zn/Zn0.25V2O5,50.7,Zn2+ based,1,"[Zn, O5V2]",electrochemical
+Mg/Ti2S4,358.7,Mg2+ based,1,"[Mg, TiS2]",electrochemical
 Li/S,13.7,Lithium metal,3,"[Li, S]",electrochemical
 Li/TiS2,192.1,Lithium metal,3,"[Li, TiS2]",electrochemical
 Li/MoS2,35.7,Lithium metal,3,"[Li, MoS2]",electrochemical
 Li/LCO,90.3,Lithium metal,3,"[Li, Lithium Cobaltate]",electrochemical
 Li/air,45.5,Lithium metal,3,"[Li, Air]",electrochemical
 Na/S,1.6,High temperature,1,"[Na, S]",electrochemical
-Na/NiCl2,6.6,High temperature,1,"[Na, NiCl2(H2O)6]",electrochemical
-Li/Pb2Sb,64.1,High temperature,1,"[Li, Pb2Sb]",electrochemical
+Na/NiCl2,6.6,High temperature,1,"[Na, Cl2H12NiO6]",electrochemical
+Li/Pb2Sb,64.1,High temperature,1,"[Li, Pb, Sb]",electrochemical
 ICB,28.3,Redox flow,1,[Cr],electrochemical
 Fe/Fe,15.5,Redox flow,1,[Fe],electrochemical
 PSB,7.4,Redox flow,1,"[S, Br2]",electrochemical
