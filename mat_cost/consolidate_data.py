@@ -49,7 +49,7 @@ df_SM.index.name = 'SM_name'
 # df_SM = df_SM[SM_cols]
 
 
-df_SM.to_csv('data/SMs.csv')
+df_SM.to_csv('data/SM_data.csv')
 
 
 #%%

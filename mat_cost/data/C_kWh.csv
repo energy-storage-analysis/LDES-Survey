@@ -1,8 +1,8 @@
 SM_name,specific_energy,energy_type,price_sources,SM_source,original_name,specific_price,C_kwh
-Synthetic H2,39.4,Chemical (syn. fuel),['Calculation'],TODO,Synthetic H2,0.009,0.00022842639593908628
-Synthetic CH4 (Sabatier),15.4,Chemical (syn. fuel),['Calculation'],TODO,Synthetic CH4 (Sabatier),0.095,0.006168831168831169
-Synthetic NH3 (Haber-Bosch),6.25,Chemical (syn. fuel),['Calculation'],TODO,Synthetic NH3 (Haber-Bosch),0.059199999999999996,0.009472
-Synthetic H2 (Cavern),39.4,Chemical (syn. fuel),['Ahluwalia'],TODO,Synthetic H2 (Cavern),0.36,0.009137055837563452
+Synthetic H2,39.4,Chemical (Syn. fuel),['Calculation'],TODO,Synthetic H2,0.009,0.00022842639593908628
+Synthetic CH4 (Sabatier),15.4,Chemical (Syn. fuel),['Calculation'],TODO,Synthetic CH4 (Sabatier),0.095,0.006168831168831169
+Synthetic NH3 (Haber-Bosch),6.25,Chemical (Syn. fuel),['Calculation'],TODO,Synthetic NH3 (Haber-Bosch),0.059199999999999996,0.009472
+Synthetic H2 (Cavern),39.4,Chemical (Syn. fuel),['Ahluwalia'],TODO,Synthetic H2 (Cavern),0.36,0.009137055837563452
 BaCO3/BaO,0.2323888888888889,Chemical (Thermochemical),"['Andre 2016, alibaba']",Andre 2016,,0.3295454545454545,1.4180774998370023
 Ni(OH)2/NiO,0.1433333333333333,Chemical (Thermochemical),['Li 2017'],Andre 2016,,20.0,139.53488372093025
 Cd(OH)2/CdO,0.1137222222222222,Chemical (Thermochemical),['Li 2017'],Andre 2016,,3.43,30.161211529066936

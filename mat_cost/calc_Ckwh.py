@@ -7,7 +7,7 @@ import pandas as pd
 from es_utils import join_col_vals
 
 df_mat_data = pd.read_csv('data/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('data/SMs.csv', index_col=0)
+df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
 
 
 
@@ -83,7 +83,7 @@ thermochem['energy_type'] = 'Chemical (Thermochemical)'
 chemical = (df_SMs['deltaG_chem'])
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
-chemical['energy_type'] = 'Chemical (syn. fuel)'
+chemical['energy_type'] = 'Chemical (Syn. fuel)'
 
 
 #TODO: deltaV means battery deltaV

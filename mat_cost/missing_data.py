@@ -5,8 +5,8 @@ import numpy as np
 import pandas as pd
 from es_utils import join_col_vals
 
-df_prices = pd.read_csv('data/mat_prices.csv', index_col=0)
-df_physprop = pd.read_csv('data/physprops.csv', index_col=0)
+df_prices = pd.read_csv('data/mat_data.csv', index_col=0)
+df_physprop = pd.read_csv('data/SM_data.csv', index_col=0)
 
 
 # %%
