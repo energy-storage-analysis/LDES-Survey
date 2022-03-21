@@ -73,12 +73,12 @@ Lithium Carbonates,99% min delivered in China,USD / mt,9219.0,,08.07.19,USD,metr
 Lithium Carbonates,99.5% min delivered in China,USD / mt,10453.0,ï¿½0.69,08.07.19,USD,metric_ton,10.453,Carbonates,28,Lithium Carbonate,CLi2O3,molecular_formula,CLi2O3
 Lithium Carbonates,99.5% min delivered in EU,USD / kg,14.25,,08.07.19,USD,kg,14.25,Carbonates,28,Lithium Carbonate,CLi2O3,molecular_formula,CLi2O3
 Lithium Carbonates,99.5% min FOB South America,USD / kg,11.05,,08.07.19,USD,kg,11.05,Carbonates,28,Lithium Carbonate,CLi2O3,molecular_formula,CLi2O3
-Lithium Cobaltate,Co 60% min delivered in China,USD / kg,28.950000000000003,,08.07.19,USD,kg,28.950000000000003,Cobaltate,29,LCO,LiCoO2,material_name,LCO
+Lithium Cobaltate,Co 60% min delivered in China,USD / kg,28.950000000000003,,08.07.19,USD,kg,28.950000000000003,Cobaltate,29,LCO,CoLiO2,material_name,LCO
 Lithium manganates,Mn 58% delivered in China,USD / mt,6968.5,,08.07.19,USD,metric_ton,6.968500000000001,manganates,30,LMO,LiMn2O4,material_name,LMO
-Lithium hydroxides_monohydrates,LiOH 56.5% min delivered in China,USD / mt,10670.5,ï¿½0.68,08.07.19,USD,metric_ton,10.6705,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,Lithium Hydroxide Monohydrate
-Lithium hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in China",USD / mt,11904.5,ï¿½0.61,08.07.19,USD,metric_ton,11.9045,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,Lithium Hydroxide Monohydrate
-Lithium hydroxides_monohydrates,"LiOH 56.5% min, Magnets 0.0001% max FOB China",USD / kg,14.45,,08.07.19,USD,kg,14.45,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,Lithium Hydroxide Monohydrate
-Lithium hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in South Korea",USD / kg,15.7,,08.07.19,USD,kg,15.7,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,LiOH(H2O),material_name,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,LiOH 56.5% min delivered in China,USD / mt,10670.5,ï¿½0.68,08.07.19,USD,metric_ton,10.6705,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,H3LiO2,material_name,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in China",USD / mt,11904.5,ï¿½0.61,08.07.19,USD,metric_ton,11.9045,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,H3LiO2,material_name,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,"LiOH 56.5% min, Magnets 0.0001% max FOB China",USD / kg,14.45,,08.07.19,USD,kg,14.45,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,H3LiO2,material_name,Lithium Hydroxide Monohydrate
+Lithium hydroxides_monohydrates,"LiOH 56.5% min, 0.0001% max magnets supplied in South Korea",USD / kg,15.7,,08.07.19,USD,kg,15.7,hydroxides_monohydrates,31,Lithium Hydroxide Monohydrate,H3LiO2,material_name,Lithium Hydroxide Monohydrate
 Lithium chlorides,99.3% min delivered in China,USD / mt,9799.5,,08.07.19,USD,metric_ton,9.7995,chlorides,32,Lithium Chloride,ClLi,molecular_formula,ClLi
 Magnesium Ingot,99.9% min EXW China,USD / mt,2250.0,,08.07.19,USD,metric_ton,2.25,Ingot,33,Magnesium,Mg,molecular_formula,Mg
 Magnesium Ingot,99.9% min Ex-VAT FOB China,USD / mt,2325.0,,08.07.19,USD,metric_ton,2.325,Ingot,33,Magnesium,Mg,molecular_formula,Mg
@@ -104,7 +104,7 @@ Molybdenum oxides,57% min in the port of South Korea,USD / lb,11.8,,08.07.19,USD
 Molybdenum oxides,57% min in the port of India,USD / lb,11.8,,08.07.19,USD,lb,26.014546937815556,oxides,43,Molybdenum Oxide,MoO3,molecular_formula,MoO3
 Molybdenum oxides,99.9% min EXW China,USD / mt,23083.0,,08.07.19,USD,metric_ton,23.083000000000002,oxides,43,Molybdenum Oxide,MoO3,molecular_formula,MoO3
 Ammonium Tetrathiomolybdate,56% min EXW China,USD / mt,18728.0,,08.07.19,USD,metric_ton,18.728,Tetrathiomolybdate,44,Ammonium Tetrathiomolybdate,H10MoN2S4,material_name,Ammonium Tetrathiomolybdate
-Ammonium heptamolybdate,54% min EXW China,USD / mt,19018.0,,08.07.19,USD,metric_ton,19.018,heptamolybdate,45,Ammonium Heptamolybdate,H50Mo7N6O28 ,material_name,Ammonium Heptamolybdate
+Ammonium heptamolybdate,54% min EXW China,USD / mt,19018.0,,08.07.19,USD,metric_ton,19.018,heptamolybdate,45,Ammonium Heptamolybdate,H50Mo7N6O28,material_name,Ammonium Heptamolybdate
 Sodium Molybdate,99% min EXW China,USD / mt,12485.0,,08.07.19,USD,metric_ton,12.485,Molybdate,46,Sodium Molybdate,MoNa2O4,molecular_formula,MoNa2O4
 Molybdenum Powder,99.95% min EXW China,USD / kg,37.7,,08.07.19,USD,kg,37.7,Powder,47,Molybdenum,Mo,molecular_formula,Mo
 Molybdenum bar,99.9% min EXW China,USD / kg,40.45,,08.07.19,USD,kg,40.45,bar,48,Molybdenum,Mo,molecular_formula,Mo

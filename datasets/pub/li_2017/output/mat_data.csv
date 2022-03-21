@@ -7,11 +7,11 @@ Cl3CrH12O6,CrCl3 6H2O,Cl3CrH12O6,2.04
 ClCu,CuCl,ClCu,4.55
 Cl2Fe,FeCl2,Cl2Fe,2.53
 Water,DI H2O,H2O,0.001
-Graphite,Graphite,C6,12.0
+Graphite,Graphite,C,12.0
 H2O4S,H2SO4,H2O4S,0.2
 BrH,HBr,BrH,3.33
 ClH,HCl,ClH,0.65
-KOH,KOH,KOH,0.82
+HKO,KOH,HKO,0.82
 LaNi5,LaNi5,LaNi5,10.05
 Lithium Cobaltate,LCO,CoLiO2,40.0
 LFP,LFP,FeLiO4P,10.0

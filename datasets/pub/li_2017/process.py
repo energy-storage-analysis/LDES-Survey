@@ -5,11 +5,10 @@ import os
 from es_utils import chem
 
 from es_utils.chem import process_chem_lookup
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
+
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = process_chem_lookup(chem_lookup, mtp=mtp)
+chem_lookup = process_chem_lookup(chem_lookup)
 # %%
 table_3 = pd.read_csv('tables/table_3.csv', index_col=0)
 table_3

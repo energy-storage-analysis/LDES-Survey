@@ -13,25 +13,12 @@ def get_top_formula(formula_dict):
         return None
 
 
-#mtp is passed in as an instance to avoid loading mat2vec for all es_utils imports
-def mat2vec_process(f, mtp):
-    """
-    Use mat2vec processor to normalize a chemical formula
-    f: formula
-    mtp: MaterialsTextProcessor instance
 
-    TODO: mtp is overpowered for this application and should potentially be replaced with the component of mtp doing formula normalizations
-    """
-    if f != f:
-        return np.nan
-    f = str(f)
-    s = mtp.process(f)[0][0]
-    return s
 
-def process_chem_lookup(chem_lookup, mtp=None):
-    if mtp != None:
-        if 'molecular_formula' in chem_lookup.columns:
-            chem_lookup['molecular_formula'] = chem_lookup['molecular_formula'].apply(lambda x: mat2vec_process(x, mtp))
+
+def process_chem_lookup(chem_lookup):
+
+    chem_lookup['molecular_formula'] = chem_lookup['molecular_formula'].apply(pymatgen_process)
 
     index_values = []
 
@@ -94,10 +81,67 @@ def calculate_formula_price(chemparse_dict, element_prices):
     return price
 
 
-def normalize_list(l_str, mtp):
+def normalize_list(l_str):
     l = l_str.strip('][').split(', ')
     list_out = []
     for f in l:
-        list_out.append(mat2vec_process(f, mtp))
+        list_out.append(normalize_formula(f))
     list_out = str(list_out)
     return list_out
+
+## Custom functions from mat2vec. 
+
+from monty.fractions import gcd_float
+from pymatgen.core.composition import CompositionError, Composition
+
+def get_ordered_integer_formula(el_amt, max_denominator=1000):
+    """Converts a mapping of {element: stoichiometric value} to a alphabetically ordered string.
+
+    Given a dictionary of {element : stoichiometric value, ..}, returns a string with
+    elements ordered alphabetically and stoichiometric values normalized to smallest common
+    integer denominator.
+
+    Args:
+        el_amt: {element: stoichiometric value} mapping.
+        max_denominator: The maximum common denominator of stoichiometric values to use for
+            normalization. Smaller stoichiometric fractions will be converted to the same
+            integer stoichiometry.
+
+    Returns:
+        A material formula string with elements ordered alphabetically and the stoichiometry
+        normalized to the smallest integer fractions.
+    """
+    g = gcd_float(list(el_amt.values()), 1 / max_denominator)
+    d = {k: round(v / g) for k, v in el_amt.items()}
+    formula = ""
+    for k in sorted(d):
+        if d[k] > 1:
+            formula += k + str(d[k])
+        elif d[k] != 0:
+            formula += k
+    return formula
+
+def normalize_formula(formula, max_denominator=1000):
+    """Normalizes chemical formula to smallest common integer denominator, and orders elements alphabetically.
+
+    Args:
+        formula: the string formula.
+        max_denominator: highest precision for the denominator (1000 by default).
+
+    Returns:
+        A normalized formula string, e.g. Ni0.5Fe0.5 -> FeNi.
+    """
+    try:
+        formula_dict = Composition(formula).get_el_amt_dict()
+        return get_ordered_integer_formula(formula_dict, max_denominator)
+    except (CompositionError, ValueError):
+        return formula
+
+def pymatgen_process(f):
+    if f != f:
+        return np.nan
+    f = str(f)
+    s = normalize_formula(f)
+    return s
+
+

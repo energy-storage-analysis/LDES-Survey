@@ -46,17 +46,9 @@ df_latent = df_latent.where(df_latent['phase_change_T'] > 200).dropna(subset=['p
 df_latent = df_latent.set_index('original_name')
 
 #If no lookup table is needed
-from es_utils.chem import mat2vec_process
+from es_utils.chem import pymatgen_process
 
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
 
-# df_latent['molecular_formula'] = df_latent['original_name'].apply(lambda x: mat2vec_process(x, mtp))
-
-# index_use = 'molecular_formula'
-# df_latent['index_use'] = index_use
-# df_latent['index'] = df_latent[index_use]
-# df_latent = df_latent.set_index('index')
 
 
 #%%

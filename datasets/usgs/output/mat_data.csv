@@ -5,14 +5,14 @@ Al2O3,Bauxite and Alumina Alumina,Al2O3,0.5335186744874038
 AlSc,Scandium Mtl_Alloy,AlSc,340.0
 As,Arsenic Mtl-CN,As,1.542
 As2O3,"Arsenic Triox-CN, Arsenic Triox-MA",As2O3,0.609
-Asbestos,Asbestos Customs,Mg3Si2O5(OH)4,2.0326620573445715
+Asbestos,Asbestos Customs,H4Mg3O9Si2,2.0326620573445715
 Au,Gold ,Au,48238.98015156943
 B,Boron CIF,B,0.42747632637647764
 Barite,Barite ,BaO4S,0.1977546491798352
 Bauxite,Bauxite and Alumina Bauxite,AlHO2,0.033510263852101395
 Be,Beryllium Alloy,Be,616.0
 Bi,Bismuth ,Bi,8.421658415462323
-Br2,Bromine Imports,Br2,2.442
+Br,Bromine Imports,Br,2.442
 C6H12O6Sc,Scandium Cmpds_Acetate,C6H12O6Sc,44200.0
 CLi2O3,Lithium ,CLi2O3,15.366219674285968
 CNa2O3,Soda Ash ,CNa2O3,0.15747619387865805
@@ -21,14 +21,15 @@ CaO,"Lime Hydrated, Lime Quicklime",CaO,0.15609830474000258
 CaO4S,"Gypsum Mine, Gypsum Plant",CaO4S,0.019841603596638984
 Cd,Cadmium Metal,Cd,2.418
 CeO2,Rare Earths CeO2,CeO2,2.0
-Celestite,Strontium ,SrSO4,0.08928721618487542
-Cement,Cement Avg,(CaO)1(Al2O5Si)1,0.13448197993277533
+Celestite,Strontium ,O4SSr,0.08928721618487542
+Cement,Cement Avg,Al2CaO6Si,0.13448197993277533
 Cl3Sc,Scandium Cmpds_Chloride,Cl3Sc,129600.0
 ClK,Potash Muriate,ClK,0.5136770708907648
 ClNa,"Salt Brine, Salt Rock, Salt Solar, Salt Vacuum",ClNa,0.11086936934146402
 Clay,"Clays Ball, Clays Bentonite, Clays Common, Clays Fire, Clays Fullers, Clays Kaolin",Al2O5Si,0.07929292696582764
 Co,"Cobalt LME, Cobalt Spot",Co,50.56522445472352
 Cr,Chromium Metal,Cr,10.327113747526221
+CrFe,Chromium Ferrrochromium,CrFe,2.5282612227361763
 CrFeO4,Chromium Ore,CrFeO4,0.25904315806723116
 Cu,"Copper COMEX, Copper LME, Copper US",Cu,6.868575265790589
 Diamond,"Diamond (Industrial) Bort_Imports, Diamond (Industrial) Stones_Imports",CH4,21410.0
@@ -37,7 +38,6 @@ Dy2O3,Rare Earths Dy2O3,Dy2O3,253.2
 Eu2O3,Rare Earths Eu2O3,Eu2O3,45.4
 F3Sc,Scandium Cmpds_Fluoride,F3Sc,224400.0
 Fe,"Iron and Steel Scrap , Iron and Steel Slag ",Fe,0.180117668205045
-FeCr,Chromium Ferrrochromium,FeCr,2.5282612227361763
 FeH6O3Ti,"Titanium Mineral Concentrates Ilmenite, Titanium Mineral Concentrates Ilmente_Leucoxene",FeH6O3Ti,0.3802974022689138
 FeSi2,"Silicon FeSi2_50, Silicon FeSi2_75",FeSi2,2.260730267574827
 Feldspar,Feldspar and Nepheline Syenite Feldspar,AlKO8Si3,0.10670373489748075
@@ -50,7 +50,7 @@ H2S,Sulfur Sulfur,H2S,0.06461748904638763
 H3N,Nitrogen (Fixed)--Ammonia ,H3N,0.32915015744202225
 Hf,Zirconium and Hafnium Hf_unwrought,Hf,0.9038952749579982
 Hg,"Mercury EU, Mercury Global",Hg,47.111014408664545
-I2,Iodine Crude_CIF,I2,26.392000000000003
+I,Iodine Crude_CIF,I,26.392000000000003
 I3Sc,Scandium Cmpds_Iodide,I3Sc,165400.0
 In,"Indium FOB, Indium NY, Indium Rotterdam",In,265.9166666666667
 Ir,Platinum-Group Metals Iridium,Ir,2.3635604805257198
@@ -66,6 +66,7 @@ Mo,Molybdenum ,Mo,25.5
 Nb,Niobium (Columbium) ,Nb,21.0
 Nd2O3,Rare Earths Nd2O3,Nd2O3,48.6
 Ni,Nickel ,Ni,7.630587238493453
+O2Tb,Rare Earths TbO2,O2Tb,686.6
 O2Ti,"Titanium Mineral Concentrates Rutile, Titanium Mineral Concentrates Slag, Titanium and Titanium Dioxide Dioxide",O2Ti,1.6847726076168346
 O3Sc2,Scandium Cmpds_Oxide,O3Sc2,3819.9999999999995
 O3W,Tungsten WO3,O3W,0.30445838407731596
@@ -76,7 +77,7 @@ Pb,"Lead LME, Lead North_American",Pb,2.2182912821042384
 Pd,Platinum-Group Metals Palladium,Pd,1.821086628948366
 Peat,Peat ,K,0.02816625861673996
 Perlite,Perlite FOB,Al2CaFe2K2MgNa2O12Si,0.07231162199663985
-Phosphorite,Phosphate Rock ,Ca5(PO4)3F,0.08008953060652232
+Phosphorite,Phosphate Rock ,Ca5FO12P3,0.08008953060652232
 Pt,Platinum-Group Metals Platinum,Pt,1.0553197797396814
 Pumice,Pumice and Pumicite ,C28FH37O7,0.035714886473950165
 Quartz,"Quartz Crystal (Industrial) Cultured, Quartz Crystal (Industrial) Lumbered",O2Si,328.0
@@ -88,9 +89,8 @@ Sc,"Scandium Mtl_Dendritic, Scandium Mtl_Ingot",Sc,182500.0
 Se,Selenium ,Se,24.762321288605452
 Sn,"Tin LME, Tin NY",Sn,22.24023300921045
 Stone,Stone (Crushed) Average,Al2O5Si,0.013267418938285933
-Syenite,Feldspar and Nepheline Syenite Nepheline_syenite,Al2KNaO8Si2 ,0.13800937612773337
+Syenite,Feldspar and Nepheline Syenite Nepheline_syenite,Al2KNaO8Si2,0.13800937612773337
 Talc,Talc and Pyrophyllite  ,H2Mg3O12Si4,0.26808211081681116
-TbO2,Rare Earths TbO2,TbO2,686.6
 Te,Tellurium ,Te,59.2
 Th,Thorium ,Th,72.33333333333333
 Ti,Titanium and Titanium Dioxide Sponge,Ti,11.26

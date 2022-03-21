@@ -137,10 +137,8 @@ else:
 #I thnk this is not necessary anymore If I am only using pubchem? which returns normalized formulas
 
 
-from es_utils.chem import mat2vec_process
+from es_utils.chem import pymatgen_process
 
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
 
 #TODO: lowercase original pubchem lookup
 df_out = df_out.reset_index()
@@ -148,7 +146,7 @@ df_out = df_out.reset_index()
 df_out = df_out.drop_duplicates(subset=['index'])
 df_out = df_out.set_index('index')
 
-pubchem_forms = df_out['pubchem_top_formula'].astype(str).apply(lambda x: mat2vec_process(x, mtp))
+pubchem_forms = df_out['pubchem_top_formula'].astype(str).apply(pymatgen_process)
 pubchem_forms = pubchem_forms.replace('nan', np.nan)
 pubchem_forms
 

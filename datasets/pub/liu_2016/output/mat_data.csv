@@ -1,8 +1,8 @@
 index,original_name,molecular_formula,specific_price
-Sand,Sand,SiO2,0.72
-Na2CO3,Na2CO3,Na2CO3,0.23
-K2CO3,K2CO3,K2CO3,1.1
-Li2CO3,Li2CO3,Li2CO3,7.0
+Sand,Sand,O2Si,0.72
+CNa2O3,Na2CO3,CNa2O3,0.23
+CK2O3,K2CO3,CK2O3,1.1
+CLi2O3,Li2CO3,CLi2O3,7.0
 Solar Salt,Solar Salt,,0.49
 Hitec XL,Hitec XL,,1.43
 Hitec,Hitec,,0.93

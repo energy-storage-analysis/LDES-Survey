@@ -27,7 +27,6 @@ single_data_lookup = df_single[['search_text', 'molecular_formula']].reset_index
 single_data_lookup.index.name = 'keyword'
 search_lookup = pd.concat([search_lookup, single_data_lookup])
 
-print(search_lookup)
 
 df = pd.concat([
     df,

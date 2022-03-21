@@ -24,11 +24,10 @@ df['deltaH_thermochem'] = df['deltaH_thermochem']/3600 #kJ to kWh
 df['temperature'] = df['temperature'].astype(float)
 
 
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
+
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup, mtp=mtp)
+chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
 df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 
 
@@ -52,10 +51,9 @@ df_SMs = pd.merge(
 
 
 from es_utils.chem import normalize_list
-from mat2vec.processing import MaterialsTextProcessor
-mtp = MaterialsTextProcessor()
 
-df_SMs['materials'] = df_SMs['materials'].apply(normalize_list, mtp=mtp)
+
+df_SMs['materials'] = df_SMs['materials'].apply(normalize_list)
 
 
 df_SMs.index.name = 'SM_name'
