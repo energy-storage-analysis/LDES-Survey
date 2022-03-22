@@ -1,25 +1,25 @@
 original_name,molecular_formula,material_name,index_use
-LiF,FLi,,molecular_formula
-NaF,FNa,,molecular_formula
-KF,KF,,molecular_formula
-MgF2,F2Mg,,molecular_formula
-CaF2,CaF2,,molecular_formula
-LiCl,ClLi,,molecular_formula
-NaCl,ClNa,,molecular_formula
-KCl,ClK,,molecular_formula
-MgCl2,Cl2Mg,,molecular_formula
-CaCl2,CaCl2,,molecular_formula
-Li2CO3,CLi2O3,,molecular_formula
-Na2CO3,CNa2O3,,molecular_formula
-K2CO3,CK2O3,,molecular_formula
-Mg2CO3,CMg2O3,,molecular_formula
-CaCO3,CCaO3,,molecular_formula
-Copper (Cu),Cu,,molecular_formula
-Nickel (Ni),Ni,,molecular_formula
-Chromium (Cr),Cr,,molecular_formula
-Vanadium (V),V,,molecular_formula
+LiF,LiF,,molecular_formula_norm
+NaF,NaF,,molecular_formula_norm
+KF,KF,,molecular_formula_norm
+MgF2,MgF2,,molecular_formula_norm
+CaF2,CaF2,,molecular_formula_norm
+LiCl,LiCl,,molecular_formula_norm
+NaCl,NaCl,,molecular_formula_norm
+KCl,KCl,,molecular_formula_norm
+MgCl2,MgCl2,,molecular_formula_norm
+CaCl2,CaCl2,,molecular_formula_norm
+Li2CO3,Li2CO3,,molecular_formula_norm
+Na2CO3,Na2CO3,,molecular_formula_norm
+K2CO3,K2CO3,,molecular_formula_norm
+Mg2CO3,Mg2CO3,,molecular_formula_norm
+CaCO3,CaCO3,,molecular_formula_norm
+Copper (Cu),Cu,,molecular_formula_norm
+Nickel (Ni),Ni,,molecular_formula_norm
+Chromium (Cr),Cr,,molecular_formula_norm
+Vanadium (V),V,,molecular_formula_norm
 Silicon (Si),Si,Metallurgical Silicon,material_name
-Boron (B),B,,molecular_formula
-Aluminium (Al),Al,,molecular_formula
-Magnesium (Mg),Mg,,molecular_formula
-Zinc (Zn),Zn,,molecular_formula
+Boron (B),B,,molecular_formula_norm
+Aluminium (Al),Al,,molecular_formula_norm
+Magnesium (Mg),Mg,,molecular_formula_norm
+Zinc (Zn),Zn,,molecular_formula_norm

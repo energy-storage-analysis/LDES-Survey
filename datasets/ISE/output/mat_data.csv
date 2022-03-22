@@ -1,5 +1,5 @@
 index,original_name,molecular_formula,specific_price
-Ammonium Heptamolybdate,Ammonium heptamolybdate,H50Mo7N6O28,19.018
+Ammonium Heptamolybdate,Ammonium heptamolybdate,H50Mo7N6O28 ,19.018
 Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,H10MoN2S4,18.728
 Antimony Ethylene Glycoxide,Antimony ethelyene_glycol,,5.299
 As,Arsenic metal,As,1.145
@@ -29,10 +29,10 @@ GeO2,Germanium dioxides,GeO2,720.5
 H4NO3V,Ammonium metavanadate,H4NO3V,16.913
 H8N2O4W,Tungsten APT,H8N2O4W,20.13233333333333
 In,Indium ingot,In,168.75
-LCO,Lithium Cobaltate,CoLiO2,28.950000000000003
+LCO,Lithium Cobaltate,LiCoO2,28.950000000000003
 LMO,Lithium manganates,LiMn2O4,6.968500000000001
 Li,Lithium metal,Li,100.17275000000001
-Lithium Hydroxide Monohydrate,Lithium hydroxides_monohydrates,H3LiO2,13.18125
+Lithium Hydroxide Monohydrate,Lithium hydroxides_monohydrates,LiOH(H2O),13.18125
 Metallurgical Silicon,Silicon metal,,1.765666728000003
 Mg,"Magnesium Ingot, Magnesium Powder, Manganese flakes, Mercury metal",Mg,7.123875000000001
 Mn,"Manganese Briquette, Manganese Lump",Mn,2.005

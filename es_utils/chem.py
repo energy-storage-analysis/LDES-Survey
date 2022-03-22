@@ -18,7 +18,7 @@ def get_top_formula(formula_dict):
 
 def process_chem_lookup(chem_lookup):
 
-    chem_lookup['molecular_formula'] = chem_lookup['molecular_formula'].apply(pymatgen_process)
+    chem_lookup['molecular_formula_norm'] = chem_lookup['molecular_formula'].apply(pymatgen_process)
 
     index_values = []
 

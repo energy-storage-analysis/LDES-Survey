@@ -1,32 +1,26 @@
 original_name,materials,energy_type
-Carbon nanosheets,[Graphite],electrostatic
-Carbon nanosheets,[Graphite],electrostatic
-Carbon nanosheets,[Graphite],electrostatic
-Carbon nanosheets,[Graphite],electrostatic
-N-doped carbon nanosheets,[Graphite],electrostatic
-Porous carbon nanowhiskers,[Graphite],electrostatic
-N-doped nanoporous carbon,[Graphite],electrostatic
-N-doped nanoporous carbon,[Graphite],electrostatic
-N-doped nanoporous carbon,[Graphite],electrostatic
-N-doped nanoporous carbon,[Graphite],electrostatic
-Nanofibers/mesoporous carbon,[Graphite],electrostatic
-N-doped carbon nanospheres,[Graphite],electrostatic
-Nanoporous carbon,[Graphite],electrostatic
-Mesoporous carbon nanosheets,[Graphite],electrostatic
-GO-activate carbon,[Graphene Oxide],electrostatic
-Porous carbon/CNTs,"[Graphite, CNT]",electrostatic
-Porous CNTs,[CNT],electrostatic
-Nanoporous carbon foams,[Graphite],electrostatic
-Carbonization of carbon hydrates,[Graphite],electrostatic
-Carbonized hollow nanocarbon,[Graphite],electrostatic
-Graphene-coated CNTs,"[Graphene, CNT]",electrostatic
-Graphene/CNF,"[Graphene, Graphite]",electrostatic
-3D porous graphene-like carbon,[Graphene],electrostatic
-Mesoporous graphene nanoballs,[Graphene],electrostatic
-Graphene/CNT composite fibers,"[Graphene, CNT]",electrostatic
-N-doped 3D nanoporous carbon,[Graphite],electrostatic
-Graphene/CNT,"[Graphene, CNT]",electrostatic
-Graphene/carbon,"[Graphene, Graphite]",electrostatic
-RGO/CNT,"[Graphene Oxide, CNT]",electrostatic
-Halogen-containing nanoporous carbon,[Graphite],electrostatic
-Oxygen-rich nanoporous carbon,[Graphite],electrostatic
+Carbon nanosheets,Graphite,electrostatic
+N-doped carbon nanosheets,Graphite,electrostatic
+Porous carbon nanowhiskers,Graphite,electrostatic
+N-doped nanoporous carbon,Graphite,electrostatic
+Nanofibers/mesoporous carbon,Graphite,electrostatic
+N-doped carbon nanospheres,Graphite,electrostatic
+Nanoporous carbon,Graphite,electrostatic
+Mesoporous carbon nanosheets,Graphite,electrostatic
+GO-activate carbon,Graphene Oxide,electrostatic
+Porous carbon/CNTs,"[('Graphite', 0.5), ('CNT', 0.5)]",electrostatic
+Porous CNTs,CNT,electrostatic
+Nanoporous carbon foams,Graphite,electrostatic
+Carbonization of carbon hydrates,Graphite,electrostatic
+Carbonized hollow nanocarbon,Graphite,electrostatic
+Graphene-coated CNTs,"[('Graphene', 0.5), ('CNT', 0.5)]",electrostatic
+Graphene/CNF,"[('Graphene', 0.5), ('Graphite', 0.5)]",electrostatic
+3D porous graphene-like carbon,Graphene,electrostatic
+Mesoporous graphene nanoballs,Graphene,electrostatic
+Graphene/CNT composite fibers,"[('Graphene', 0.5), ('CNT', 0.5)]",electrostatic
+N-doped 3D nanoporous carbon,Graphite,electrostatic
+Graphene/CNT,"[('Graphene', 0.5), ('CNT', 0.5)]",electrostatic
+Graphene/carbon,"[('Graphene', 0.5), ('Graphite', 0.5)]",electrostatic
+RGO/CNT,"[('Graphene Oxide', 0.5), ('CNT', 0.5)]",electrostatic
+Halogen-containing nanoporous carbon,Graphite,electrostatic
+Oxygen-rich nanoporous carbon,Graphite,electrostatic

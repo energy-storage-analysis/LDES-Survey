@@ -1,57 +1,56 @@
 original_name,energy_type,materials
-NNaO3,latent_thermal,[NNaO3]
-KNO3,latent_thermal,[KNO3]
-Mg,latent_thermal,[Mg]
-NaNO3,latent_thermal,[CNa2O3]
-KNO3,latent_thermal,[CK2O3]
-Mg (NO3)2,latent_thermal,[CCaO3]
-Na2CO3,latent_thermal,[CLi2O3]
-K2CO3,latent_thermal,[Cl2Zn]
-CaCO3,latent_thermal,[ClNa]
-Li2CO3,latent_thermal,[ClK]
-ZnCl2,latent_thermal,[Cl2Mg]
-NaCl,latent_thermal,[ClLi]
-KCl,latent_thermal,[CaCl2]
-MgCl2,latent_thermal,[Na2O4S]
-LiCl,latent_thermal,[Li2O4S]
-CaCl2,latent_thermal,[K2O4S]
-Na2SO4,latent_thermal,[MgO4S]
-Li2SO4,latent_thermal,[CaO4S]
-K2SO4,latent_thermal,[FLi]
-MgSO4,latent_thermal,[FNa]
-CaSO4,latent_thermal,[KF]
-LiF,latent_thermal,[CaF2]
-NaF,latent_thermal,[HNaO]
-KF,latent_thermal,[KOH]
-CaF2,latent_thermal,[HLiO]
-NaOH,latent_thermal,[Cu]
-KOH,latent_thermal,[Zn]
-LiOH,latent_thermal,[Al]
-Cu,sensible_thermal,[Syltherm XLT]
-Zn,sensible_thermal,[Vegetable Oil]
-Al,sensible_thermal,[HITEC XL]
-Sodium (Na),sensible_thermal,[Na]
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,"[Na, K]"
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,"[Pb, Bi]"
-CaN2O6,latent_thermal,[CaN2O6]
-Zn/Mg (53.7/46.3),latent_thermal,"[Mg, Zn]"
-Zn/Mg (52/48),latent_thermal,"[Mg, Zn]"
-Zn/Al (96/4),latent_thermal,[Zn]
-Al/Mg/Zn (59/33/6),latent_thermal,"[Al, Mg]"
-Al/Mg/Zn (60/34/6),latent_thermal,"[Al, Mg]"
-Mg/Cu/Zn (60/25/15),latent_thermal,"[Mg, Cu]"
-Mg/Ca (84/16),latent_thermal,"[Mg, Ca]"
-Mg/Si/Zn (47/38/15),latent_thermal,"[Mg, Si]"
-Cu/Si (80/20),latent_thermal,"[Cu, Si]"
-Cu/P/Si (83/10/7),latent_thermal,[Cu]
-Si/Mg/Ca (49/30/21),latent_thermal,"[Si, Mg]"
-Si/Mg (56/44),latent_thermal,"[Si, Mg]"
-Dowtherm A,sensible_thermal,[Dowtherm]
-"HITEC, NaNO3eKNO3e NaNO2",sensible_thermal,[HITEC]
-"Solar Salt, NaNO3e KNO3 (50-50)",sensible_thermal,[Solar Salt]
-Granite,sensible_thermal,[Stone]
-Quartzite,sensible_thermal,[Stone]
-Marble,sensible_thermal,[Stone]
-Basalt,sensible_thermal,[Stone]
-"HITEC XL, NaNO3e KNO3eCa(NO3)2",sensible_thermal,[HITEC]
-Vegetable oil,sensible_thermal,[Vegetable Oil]
+NNaO3,latent_thermal,NNaO3
+Mg,latent_thermal,Mg
+NaNO3,latent_thermal,NaNO3
+KNO3,latent_thermal,KNO3
+Mg (NO3)2,latent_thermal,Mg(NO3)2
+Na2CO3,latent_thermal,Na2CO3
+K2CO3,latent_thermal,K2CO3
+CaCO3,latent_thermal,CaCO3
+Li2CO3,latent_thermal,Li2CO3
+ZnCl2,latent_thermal,ZnCl2
+NaCl,latent_thermal,NaCl
+KCl,latent_thermal,KCl
+MgCl2,latent_thermal,MgCl2
+LiCl,latent_thermal,LiCl
+CaCl2,latent_thermal,CaCl2
+Na2SO4,latent_thermal,Na2SO4
+Li2SO4,latent_thermal,Li2SO4
+K2SO4,latent_thermal,K2SO4
+MgSO4,latent_thermal,MgSO4
+CaSO4,latent_thermal,CaSO4
+LiF,latent_thermal,LiF
+NaF,latent_thermal,NaF
+KF,latent_thermal,KF
+CaF2,latent_thermal,CaF2
+NaOH,latent_thermal,NaOH
+KOH,latent_thermal,KOH
+LiOH,latent_thermal,LiOH
+Cu,sensible_thermal,Cu
+Zn,sensible_thermal,Zn
+Al,sensible_thermal,Al
+Sodium (Na),sensible_thermal,Na
+Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,"[('Na', 0.5), ('K', 0.5)]"
+Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,"[('Pb', 0.445), ('Bi', 0.555)]"
+CaN2O6,latent_thermal,CaN2O6
+Zn/Mg (53.7/46.3),latent_thermal,"[('Mg', 0.537), ('Zn', 0.463)]"
+Zn/Mg (52/48),latent_thermal,"[('Mg', 0.52), ('Zn', 0.48)]"
+Zn/Al (96/4),latent_thermal,"[('Zn', 0.96) , ('Al', 0.04)]"
+Al/Mg/Zn (59/33/6),latent_thermal,"[('Al', 0.59), ('Mg', 0.33), ('Zn', 0.06)]"
+Al/Mg/Zn (60/34/6),latent_thermal,"[('Al', 0.6), ('Mg', 0.34), ('Zn', 0.06)]"
+Mg/Cu/Zn (60/25/15),latent_thermal,"[('Mg', 0.6), ('Cu', 0.25), ('Zn', 0.15)]"
+Mg/Ca (84/16),latent_thermal,"[('Mg', 0.84), ('Ca', 0.16)]"
+Mg/Si/Zn (47/38/15),latent_thermal,"[('Mg', 0.47), ('Metallurgical Silicon', 0.38), ('Zn', 0.15)]"
+Cu/Si (80/20),latent_thermal,"[('Cu', 0.8), ('Metallurgical Silicon', 0.2)]"
+Cu/P/Si (83/10/7),latent_thermal,"[('Cu', 0.83), ('P', 0.1), ('Metallurgical Silicon', 0.07)]"
+Si/Mg/Ca (49/30/21),latent_thermal,"[('Metallurgical Silicon', 0.49), ('Mg', 0.3), ('Ca', 0.21)]"
+Si/Mg (56/44),latent_thermal,"[('Metallurgical Silicon', 0.56), ('Mg', 0.44)]"
+Dowtherm A,sensible_thermal,Dowtherm
+"HITEC, NaNO3eKNO3e NaNO2",sensible_thermal,HITEC
+"Solar Salt, NaNO3e KNO3 (50-50)",sensible_thermal,Solar Salt
+Granite,sensible_thermal,Stone
+Quartzite,sensible_thermal,Stone
+Marble,sensible_thermal,Stone
+Basalt,sensible_thermal,Stone
+"HITEC XL, NaNO3e KNO3eCa(NO3)2",sensible_thermal,HITEC
+Vegetable oil,sensible_thermal,Vegetable Oil

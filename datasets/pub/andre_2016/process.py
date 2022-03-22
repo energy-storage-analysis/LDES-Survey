@@ -50,10 +50,7 @@ df_SMs = pd.merge(
 )
 
 
-from es_utils.chem import normalize_list
 
-
-df_SMs['materials'] = df_SMs['materials'].apply(normalize_list)
 
 
 df_SMs.index.name = 'SM_name'

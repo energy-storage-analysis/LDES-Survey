@@ -28,8 +28,8 @@ Cobalt LME,Cobalt,Co,molecular_formula
 Copper US,Copper,Cu,molecular_formula
 Copper COMEX,Copper,Cu,molecular_formula
 Copper LME,Copper,Cu,molecular_formula
-Diamond (Industrial) Bort_Imports,Diamond,CH4,material_name
-Diamond (Industrial) Stones_Imports,Diamond,CH4,material_name
+Diamond (Industrial) Bort_Imports,Diamond,C,material_name
+Diamond (Industrial) Stones_Imports,Diamond,C,material_name
 "Diatomite ",Diatomite,O2Si,material_name
 Feldspar and Nepheline Syenite Feldspar,Feldspar,AlKO8Si3,material_name
 Feldspar and Nepheline Syenite Nepheline_syenite,Syenite,"Al2KNaO8Si2 ",material_name
@@ -46,9 +46,9 @@ Garnet (Industrial) Import,Gallium,Ga,molecular_formula
 Germanium Metal,Germanium,Ge,molecular_formula
 Germanium GeO2,Germanium Dioxide,GeO2,molecular_formula
 "Gold ",Gold,Au,molecular_formula
-Graphite (Natural) Flake,Graphite,CH4,material_name
-Graphite (Natural) Lump,Graphite,CH4,material_name
-Graphite (Natural) Amorphous,Graphite,CH4,material_name
+Graphite (Natural) Flake,Graphite,C6,material_name
+Graphite (Natural) Lump,Graphite,C6,material_name
+Graphite (Natural) Amorphous,Graphite,C6,material_name
 Gypsum Mine,Gypsum,CaO4S,molecular_formula
 Gypsum Plant,Gypsum,CaO4S,molecular_formula
 Indium NY,Indium,In,molecular_formula

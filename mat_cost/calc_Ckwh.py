@@ -9,50 +9,87 @@ from es_utils import join_col_vals
 df_mat_data = pd.read_csv('data/mat_data.csv', index_col=0)
 df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
 
-
-
-def get_mat_info_list(l, column, lookup_df):
-    l = l.strip('][').split(', ')
-    l_mu = []
-    for f in l:
-        f = str(f)
-        f= f.strip('\'')
-        if f not in lookup_df.index:
-            return np.nan
-        l_mu.append(lookup_df[column].loc[f])
-    return l_mu
-
-df_SMs['mus'] = df_SMs['materials'].apply(get_mat_info_list, column='mu', lookup_df=df_mat_data)
-df_SMs['mu_total'] = df_SMs['mus'].apply(np.sum)
-df_SMs['prices'] = df_SMs['materials'].apply(get_mat_info_list, column='specific_price', lookup_df=df_mat_data)
-df_SMs['price_sources'] = df_SMs['materials'].apply(get_mat_info_list, column='source', lookup_df=df_mat_data)
-df_SMs
+#TODO: figure out how to deal with duplicate SM (i.e physical properties). 
+# Also removed duplicate SM (with different electrolytes from choi 2015)
+df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
 
 #%%
 
-df_SMs = df_SMs.dropna(subset=['mus'])
+mats = df_SMs['materials']
+mats_single = mats.where(~mats.str.contains('[', regex=False)).dropna()
 
-specific_price_totals = []
+# present_mats = [m for m in mats_single if m in df_mat_data.index]
+missing_mats = [m for m in mats_single if m not in df_mat_data.index]
 
-for idx, row in df_SMs.iterrows():
-    # mats = row['materials']
-    mus = row['mus']
-    mu_total = row['mu_total'] #Should be the same as sum(mus), but needed for specific energy...
-    SPs = row['prices']
+print("missing single materials: {}".format(missing_mats))
 
-    #Arrays should be the same length
-    #TODO: chech this equation
-    weighted_SPs = []
-    for i in range(len(mus)):
-        weighted_SP = (mus[i]*SPs[i])/mu_total
-        weighted_SPs.append(weighted_SP)
+SP_single = [df_mat_data['specific_price'][m] if m in df_mat_data.index else np.nan for m in mats_single]
+mu_totals_single = [df_mat_data['mu'][m] if m in df_mat_data.index else np.nan for m in mats_single]
+
+
+df_single = pd.DataFrame({
+    'specific_price': SP_single,
+    'mu_total': mu_totals_single
+    }, index= mats_single.index)
+
+
+SP_single = pd.Series(SP_single, index=mats_single.index)
+SP_single
+
+
+#%%
+
+
+import ast
+
+mats_comp = mats.where(mats.str.contains('[', regex=False)).dropna()
+mats_comp = mats_comp.apply(ast.literal_eval)
+mats_comp
+#%%
+specific_prices = []
+mu_totals = []
+for mat_list in mats_comp:
+    mus = []
+    molar_prices = []
+    for mat_index, mole_fraction in mat_list:
+        if mat_index not in df_mat_data.index:
+            print('missing: {}'.format(mat_index))
+            continue
+
+        sp = df_mat_data['specific_price'][mat_index]
+        mu = df_mat_data['mu'][mat_index]
+
+        #really molar prices weighted by mole fraciton
+        molar_price = mole_fraction*sp*mu*1000 #($/kg * g/mol * kg/g)
+        
+        mus.append(mu)
+        molar_prices.append(molar_price)
     
-    specific_price_total = sum(weighted_SPs)
-    specific_price_totals.append(specific_price_total)
+    mu_total = sum(mus)
+    mu_totals.append(mu_total)
+    specific_price = sum(molar_prices)/(mu_total*1000)
+    specific_prices.append(specific_price)
+
+
+df_comp = pd.DataFrame({
+    'specific_price': specific_prices,
+    'mu_total': mu_totals
+    }, index= mats_comp.index)
+
+
+#%%
+
+df_all = pd.concat([df_single, df_comp])
+df_all
+#%%
+
+#TODO: can't assign by index because of duplicate SM indexes. Mainly two latent datasets alva and alok.
+df_SMs['specific_price'] = df_all['specific_price']
+df_SMs['mu_total'] = df_all['mu_total']
+df_SMs['price_sources'] = 'TODO'
 
 
 
-df_SMs['specific_price'] = specific_price_totals
 
 df_SMs = df_SMs.rename({'source': 'SM_source'}, axis=1)
 
@@ -144,57 +181,17 @@ dfs = [
     gravitational
 ]
 
-#TODO: improve or make list
 
 dfs_2 = []
+
+#TODO: improve
+columns_keep = ['mu_total','specific_price','price_sources', 'SM_source', 'original_name']
 for df in dfs:
-    df['price_sources'] = df_SMs['price_sources']
-    df['SM_source'] = df_SMs['SM_source']
-    df['original_name'] = df_SMs['original_name']
-    df['specific_price'] = df_SMs['specific_price']
+    for col in columns_keep:
+        df[col] = df_SMs[col]
     dfs_2.append(df)
 
 df_out = pd.concat(dfs_2).dropna(subset=['specific_energy'])
-
-
-df_out
-
-# #%%
-# prices = [df_prices['specific_price'][p] if p in df_prices.index else np.nan for p in df_out.index]
-# sources = [df_prices['source'][p] if p in df_prices.index else np.nan for p in df_out.index]
-
-# df_out['specific_price'] = prices
-# df_out['price_sources'] = sources
-
-
-# # #drop any whwere price or energy data is missing
-# # #TODO: make aware of missing prices and materials 
-# # df_out = df_out.dropna(subset=['specific_price', 'specific_energy'], how='any')
-
-# df_out
-
-#%%
-
-
-
-df_SMs
-
-#%%
-# df_SMs.where(df_SMs['mus'].isna()).dropna(how='all')['materials']
-
-#TODO: all energy types are electrochemical temporarily
-#%%
-df_SMs
-
-# df_latent_thermal['mat']
-
-#%%
-# df_out = df_SMs
-
-# df_out = pd.concat([
-#     df_SMs[['specific_energy', 'energy_type','specific_price','physprop_source', 'price_sources', 'original_name']],
-#     df_out,
-# ])
 
 df_out['C_kwh'] = df_out['specific_price']/df_out['specific_energy']
 

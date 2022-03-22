@@ -66,7 +66,7 @@ df_couples['index'] = df_couples.index
 #This is in place of a SM lookup
 df_couples[['A','B']] = df_couples['index'].str.split('/',expand=True)
 
-df_couples['materials'] = "[" + df_couples['A'] + ", " + df_couples['B'] + "]"
+df_couples['materials'] = "[('" + df_couples['A'] + "', 0.5), ('" + df_couples['B'] + "', 0.5)]"
 df_couples['materials'] = df_couples['materials'].astype(str)
 
 df_couples = df_couples.drop(['A', 'B'], axis=1)

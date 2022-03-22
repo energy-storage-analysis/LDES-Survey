@@ -14,7 +14,7 @@ HBr,HBr,,molecular_formula
 HCl,HCl,,molecular_formula
 KOH,KOH,,molecular_formula
 LaNi5,LaNi5,,molecular_formula
-LCO,LiCoO2,Lithium Cobaltate,material_name
+LCO,LiCoO2,LCO,material_name
 LFP,LiFePO4,LFP,material_name
 Li2S,Li2S,,molecular_formula
 Li2SO4,Li2SO4,,molecular_formula

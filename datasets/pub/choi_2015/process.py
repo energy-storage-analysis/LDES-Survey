@@ -2,7 +2,6 @@
 import pandas as pd
 import os
 
-from sympy import O
 import es_utils
 
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn)) for fn in os.listdir('tables')}
@@ -61,6 +60,10 @@ df_SMs = pd.merge(
 )
 
 df_SMs.index.name = 'SM_name'
+
+#TODO: deal with duplicate SM with different electrolytes
+df_SMs = df_SMs.groupby(level=0).first()
+
 df_SMs.to_csv('output/SM_data.csv')
 # %%
 

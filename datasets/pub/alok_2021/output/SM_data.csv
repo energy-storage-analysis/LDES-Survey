@@ -1,25 +1,25 @@
-SM_name,sp_latent_heat,phase_change_T,energy_type,materials
-LiF,0.2891666666666667,,latent_thermal,[LiF]
-NaF,0.22055555555555556,,latent_thermal,[NaF]
-KF,0.14083333333333334,,latent_thermal,[KF]
-MgF2,0.26055555555555554,,latent_thermal,[MgF2]
-CaF2,0.10583333333333333,,latent_thermal,[CaF2]
-LiCl,0.11555555555555555,,latent_thermal,[LiCl]
-NaCl,0.1338888888888889,,latent_thermal,[NaCl]
-KCl,0.09805555555555556,,latent_thermal,[KCl]
-MgCl2,0.12611111111111112,,latent_thermal,[MgCl2]
-CaCl2,0.07027777777777777,,latent_thermal,[CaCl2]
-Li2CO3,0.1413888888888889,,latent_thermal,[Li2CO3]
-Na2CO3,0.04583333333333333,,latent_thermal,[Na2CO3]
-K2CO3,0.05611111111111111,,latent_thermal,[K2CO3]
-Mg2CO3,0.1938888888888889,,latent_thermal,[Mg2CO3]
-CaCO3,,,latent_thermal,[CaCO3]
-Copper (Cu),0.05361111111111111,1356.0,latent_thermal,[Copper (Cu)]
-Nickel (Ni),0.08333333333333333,1728.0,latent_thermal,[Nickel (Ni)]
-Chromium (Cr),0.11111111111111112,2180.0,latent_thermal,[Chromium (Cr)]
-Vanadium (V),0.125,2183.0,latent_thermal,[Vanadium (V)]
-Silicon (Si),0.49722222222222223,1410.0,latent_thermal,[Silicon (Si)]
-Boron (B),1.2777777777777777,2350.0,latent_thermal,[Boron (B)]
-Aluminium (Al),0.11027777777777778,660.0,latent_thermal,[Aluminium (Al)]
-Magnesium (Mg),0.10777777777777778,661.0,latent_thermal,[Magnesium (Mg)]
-Zinc (Zn),0.04055555555555555,419.0,latent_thermal,[Zinc (Zn)]
+SM_name,sp_latent_heat,phase_change_T,materials,energy_type
+LiF,0.2891666666666667,,LiF,latent_thermal
+NaF,0.22055555555555556,,NaF,latent_thermal
+KF,0.14083333333333334,,KF,latent_thermal
+MgF2,0.26055555555555554,,MgF2,latent_thermal
+CaF2,0.10583333333333333,,CaF2,latent_thermal
+LiCl,0.11555555555555555,,LiCl,latent_thermal
+NaCl,0.1338888888888889,,NaCl,latent_thermal
+KCl,0.09805555555555556,,KCl,latent_thermal
+MgCl2,0.12611111111111112,,MgCl2,latent_thermal
+CaCl2,0.07027777777777777,,CaCl2,latent_thermal
+Li2CO3,0.1413888888888889,,Li2CO3,latent_thermal
+Na2CO3,0.04583333333333333,,Na2CO3,latent_thermal
+K2CO3,0.05611111111111111,,K2CO3,latent_thermal
+Mg2CO3,0.1938888888888889,,Mg2CO3,latent_thermal
+CaCO3,,,CaCO3,latent_thermal
+Copper (Cu),0.05361111111111111,1356.0,Cu,latent_thermal
+Nickel (Ni),0.08333333333333333,1728.0,Ni,latent_thermal
+Chromium (Cr),0.11111111111111112,2180.0,Cr,latent_thermal
+Vanadium (V),0.125,2183.0,V,latent_thermal
+Silicon (Si),0.49722222222222223,1410.0,Si,latent_thermal
+Boron (B),1.2777777777777777,2350.0,B,latent_thermal
+Aluminium (Al),0.11027777777777778,660.0,Al,latent_thermal
+Magnesium (Mg),0.10777777777777778,661.0,Mg,latent_thermal
+Zinc (Zn),0.04055555555555555,419.0,Zn,latent_thermal

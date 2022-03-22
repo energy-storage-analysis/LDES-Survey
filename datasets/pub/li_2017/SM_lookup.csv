@@ -1,43 +1,43 @@
 original_name,deltaV,materials
-Pb acid,1,[Pb]
-NiCd,1,"[CdH2O2, H2NiO2]"
-NiMH,1,"[LaNi5, H2NiO2]"
-Zn/air,1,"[Zn, Air]"
-Zn/NiOOH,1,"[Zn, H2NiO2]"
-Zn/MnO2,1,"[Zn, MnO2]"
-Zn/Br2,1,"[Zn, Br2]"
-Zn/Fe,1,"[Zn, Fe]"
-Zn/Zn0.25V2O5,1,"[Zn, O5V2]"
-Mg/Ti2S4,1,"[Mg, TiS2]"
-Li/S,3,"[Li, S]"
-Li/TiS2,3,"[Li, TiS2]"
-Li/MoS2,3,"[Li, MoS2]"
-Li/LCO,3,"[Li, Lithium Cobaltate]"
-Li/air,3,"[Li, Air]"
-Na/S,1,"[Na, S]"
-Na/NiCl2,1,"[Na, Cl2H12NiO6]"
-Li/Pb2Sb,1,"[Li, Pb, Sb]"
-ICB,1,[Cr]
-Fe/Fe,1,[Fe]
-PSB,1,"[S, Br2]"
-VRFB,1,[V]
-Cu/Cu,1,[Cr]
-AQDS/Br,1,"[AQDS, Br2]"
-"Aq-S/air  (Na, H+)",1,"[S, Air]"
-"Aq-S/air  (Na, OH-)",1,"[S, Air]"
-"Aq-S/air  (Li, H+)",1,"[S, Air]"
-"Aq-S/air (Li, OH-)",1,"[S, Air]"
-C6/LMO,3,"[Graphite, LMO]"
-C6/LCO,3,"[Graphite, Lithium Cobaltate]"
-C6/LFP,3,"[Graphite, LFP]"
-C6/LMNO,3,"[Graphite, LMNO]"
-LTO/LMO,3,"[LTO, LMO]"
-C6/NCM111,3,"[Graphite, NCM111]"
-C6/LMP,3,"[Graphite, LMP]"
-C6/NCA,3,"[Graphite, NCA]"
-C6/LRMO LMNO,3,"[Graphite, LRMO LMNO]"
-C6/NCM622,3,"[Graphite, NCM622]"
-Si/LCO,3,"[Polysilicon, Lithium Cobaltate]"
-Si/Li2S,3,"[Polysilicon, Li2S]"
-Na/P2-NMO,3,"[Na, P2_NMO]"
-NTP/NMO,1,"[NTP, NMO]"
+Pb acid,1,Pb
+NiCd,1,"[('Cd(OH)2', 0.5), ('Ni(OH)2', 0.5)]"
+NiMH,1,"[('LaNi5', 0.5), ('Ni(OH)2', 0.5)]"
+Zn/air,1,Zn
+Zn/NiOOH,1,"[('Zn', 0.5), ('Ni(OH)2', 0.5)]"
+Zn/MnO2,1,"[('Zn', 0.5), ('MnO2', 0.5)]"
+Zn/Br2,1,"[('Zn', 0.5), ('Br2', 0.5)]"
+Zn/Fe,1,"[('Zn', 0.5), ('Fe', 0.5)]"
+Zn/Zn0.25V2O5,1,"[('Zn', 0.5), ('V2O5', 0.5)]"
+Mg/Ti2S4,1,"[('Mg', 0.25), ('TiS2', 0.75)]"
+Li/S,3,"[('Li', 0.5), ('S', 0.5)]"
+Li/TiS2,3,"[('Li', 0.5), ('TiS2', 0.5)]"
+Li/MoS2,3,"[('Li', 0.5), ('MoS2', 0.5)]"
+Li/LCO,3,"[('Li', 0.5), ('LCO', 0.5)]"
+Li/air,3,Li
+Na/S,1,"[('Na', 0.5), ('S', 0.5)]"
+Na/NiCl2,1,"[('Na', 0.5), ('NiCl2(H2O)6', 0.5)]"
+Li/Pb2Sb,1,"[('Li', 0.25), ('Pb', 0.5), ('Sb', 0.25)]"
+ICB,1,Cr
+Fe/Fe,1,Fe
+PSB,1,"[('S',0.5), ('Br2', 0.5)]"
+VRFB,1,V
+Cu/Cu,1,Cr
+AQDS/Br,1,"[('AQDS', 0.5), ('Br2', 0.5)]"
+"Aq-S/air  (Na, H+)",1,S
+"Aq-S/air  (Na, OH-)",1,S
+"Aq-S/air  (Li, H+)",1,S
+"Aq-S/air (Li, OH-)",1,S
+C6/LMO,3,"[('Graphite', 0.5), ('LMO', 0.5)]"
+C6/LCO,3,"[('Graphite', 0.5), ('LCO', 0.5)]"
+C6/LFP,3,"[('Graphite', 0.5), ('LFP', 0.5)]"
+C6/LMNO,3,"[('Graphite', 0.5), ('LMNO', 0.5)]"
+LTO/LMO,3,"[('LTO', 0.5), ('LMO', 0.5)]"
+C6/NCM111,3,"[('Graphite', 0.5), ('NCM111', 0.5)]"
+C6/LMP,3,"[('Graphite', 0.5), ('LMP', 0.5)]"
+C6/NCA,3,"[('Graphite', 0.5), ('NCA', 0.5)]"
+C6/LRMO LMNO,3,"[('Graphite', 0.5), ('LRMO LMNO', 0.5)]"
+C6/NCM622,3,"[('Graphite', 0.5), ('NCM622', 0.5)]"
+Si/LCO,3,"[('Polysilicon', 0.5), ('LCO', 0.5)]"
+Si/Li2S,3,"[('Polysilicon', 0.5), ('Li2S', 0.5)]"
+Na/P2-NMO,3,"[('Na', 0.5), ('P2_NMO', 0.5)]"
+NTP/NMO,1,"[('NTP', 0.5), ('NMO', 0.5)]"
