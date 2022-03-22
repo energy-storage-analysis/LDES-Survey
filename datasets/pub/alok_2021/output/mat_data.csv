@@ -1,17 +1,17 @@
 index,original_name,molecular_formula,specific_price
-FLi,LiF,LiF,0.0325
-FNa,NaF,NaF,1.61
-FK,KF,KF,5.3
-F2Mg,MgF2,MgF2,0.87
+LiF,LiF,LiF,0.0325
+NaF,NaF,NaF,1.61
+KF,KF,KF,5.3
+MgF2,MgF2,MgF2,0.87
 CaF2,CaF2,CaF2,0.12
-ClLi,LiCl,LiCl,8.0
-ClNa,NaCl,NaCl,0.049
-ClK,KCl,KCl,0.455
-Cl2Mg,MgCl2,MgCl2,0.342
+LiCl,LiCl,LiCl,8.0
+NaCl,NaCl,NaCl,0.049
+KCl,KCl,KCl,0.455
+MgCl2,MgCl2,MgCl2,0.342
 CaCl2,CaCl2,CaCl2,0.2
-CLi2O3,Li2CO3,Li2CO3,7.05
-CNa2O3,Na2CO3,Na2CO3,0.324
-CK2O3,K2CO3,K2CO3,1.1
+Li2CO3,Li2CO3,Li2CO3,7.05
+Na2CO3,Na2CO3,Na2CO3,0.324
+K2CO3,K2CO3,K2CO3,1.1
 Cu,Copper (Cu),Cu,3.25
 Ni,Nickel (Ni),Ni,6.25
 Cr,Chromium (Cr),Cr,5.25

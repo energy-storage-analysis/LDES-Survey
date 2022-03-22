@@ -1,28 +1,28 @@
-keyword,index,molecular_formula,material_name,limit
-Iron Sulfate FeSO4,FeO4S,FeO4S,,
-Copper Sulfate CuSO4,CuO4S,CuO4S,,
-CdSO4 cadmium sulphate,CdO4S,CdO4S,,4
-Calcum nitrate Ca(NO3)2,CaN2O6,CaN2O6,,3
-ZnSO4 zinc sulphate,O4SZn,O4SZn,,
-NiSO4 nickel sulphate,NiO4S,NiO4S,,
-SrCO3 strontium carbonate,CO3Sr,CO3Sr,,
-MgCO3 magnesium carbonate,CMgO3,CMgO3,,
-BaCO3 barium carbonate,BaCO3,BaCO3,,
-ZnCO3 zinc carbonate,CO3Zn,CO3Zn,,
-PbCO3 lead carbonate,CO3Pb,CO3Pb,,3
-Ca(OH)2 calcium hydrate,CaH2O2,CaH2O2,Hydrated lime,
-Mg(OH)2 magnesium hydroxide,H2MgO2,H2MgO2,,
-Ba(OH)2 barium,BaH2O2,BaH2O2,,5
-Sr(OH)2,H2O2Sr,H2O2Sr,,4
-Ni(OH)2 nickel hydroxide,H2NiO2,H2NiO2,,
-Rh2O3 rhodium oxide,O3Rh2,O3Rh2,,6
-MnO2 manganese oxide,MnO2,MnO2,,
-Copper Oxide CuO,CuO,CuO,,
-Li2O,Li2O,Li2O,,
-MgO magnesium oxide,MgO,MgO,,
-Cr2O3 chromium oxide,Cr2O3,Cr2O3,,
-PtO2,O2Pt,O2Pt,,
-PbO lead oxide,OPb,OPb,,
-Sb2O3 antimony oxide,O3Sb2,O3Sb2,,
-barium oxide BaO,BaO,BaO,,
-vanadium oxide V2O5,O2V5,O2V5,,
+keyword,index,molecular_formula,molecular_formula_norm,material_name,limit
+Iron Sulfate FeSO4,FeSO4,FeSO4,FeO4S,,
+Copper Sulfate CuSO4,CuSO4,CuSO4,CuO4S,,
+CdSO4 cadmium sulphate,"CdSO4 ","CdSO4 ",CdO4S,,4
+Calcum nitrate Ca(NO3)2,Ca(NO3)2,Ca(NO3)2,CaN2O6,,3
+ZnSO4 zinc sulphate,ZnSO4,ZnSO4,O4SZn,,
+NiSO4 nickel sulphate,NiSO4,NiSO4,NiO4S,,
+SrCO3 strontium carbonate,SrCO3,SrCO3,CO3Sr,,
+MgCO3 magnesium carbonate,MgCO3,MgCO3,CMgO3,,
+BaCO3 barium carbonate,BaCO3,BaCO3,BaCO3,,
+ZnCO3 zinc carbonate,ZnCO3,ZnCO3,CO3Zn,,
+PbCO3 lead carbonate,PbCO3,PbCO3,CO3Pb,,3
+Ca(OH)2 calcium hydrate,"Ca(OH)2 ","Ca(OH)2 ",CaH2O2,Hydrated lime,
+Mg(OH)2 magnesium hydroxide,Mg(OH)2,Mg(OH)2,H2MgO2,,
+Ba(OH)2 barium,Ba(OH)2,Ba(OH)2,BaH2O2,,5
+Sr(OH)2,Sr(OH)2,Sr(OH)2,H2O2Sr,,4
+Ni(OH)2 nickel hydroxide,Ni(OH)2,Ni(OH)2,H2NiO2,,
+Rh2O3 rhodium oxide,Rh2O3,Rh2O3,O3Rh2,,6
+MnO2 manganese oxide,MnO2,MnO2,MnO2,,
+Copper Oxide CuO,CuO,CuO,CuO,,
+Li2O,Li2O,Li2O,Li2O,,
+MgO magnesium oxide,MgO,MgO,MgO,,
+Cr2O3 chromium oxide,Cr2O3,Cr2O3,Cr2O3,,
+PtO2,PtO2,PtO2,O2Pt,,
+PbO lead oxide,PbO,PbO,OPb,,
+Sb2O3 antimony oxide,Sb2O3,Sb2O3,O3Sb2,,
+barium oxide BaO,BaO,BaO,BaO,,
+vanadium oxide V2O5,V2O5,V2O5,O2V5,,

@@ -31,11 +31,6 @@ chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
 df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 
 
-#TODO: extract_df_mat assuming prices are in there, but called mat_data to just also be able to hold molecular formula
-df_mat_data = df[['original_name', 'molecular_formula']]
-
-df_mat_data.to_csv('output/mat_data.csv')
-
 
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
