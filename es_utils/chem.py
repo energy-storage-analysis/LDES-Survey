@@ -85,7 +85,7 @@ def normalize_list(l_str):
     l = l_str.strip('][').split(', ')
     list_out = []
     for f in l:
-        list_out.append(normalize_formula(f))
+        list_out.append(normalize_formula(f)[0])
     list_out = str(list_out)
     return list_out
 
@@ -97,9 +97,10 @@ from pymatgen.core.composition import CompositionError, Composition
 def get_ordered_integer_formula(el_amt, max_denominator=1000):
     """Converts a mapping of {element: stoichiometric value} to a alphabetically ordered string.
 
-    Given a dictionary of {element : stoichiometric value, ..}, returns a string with
-    elements ordered alphabetically and stoichiometric values normalized to smallest common
-    integer denominator.
+    Given a dictionary of {element : stoichiometric value, ..}, returns 
+    1)a string with elements ordered alphabetically and stoichiometric values normalized to smallest common
+    integer denominator
+    2) the greatest common denominator used  
 
     Args:
         el_amt: {element: stoichiometric value} mapping.
@@ -110,16 +111,17 @@ def get_ordered_integer_formula(el_amt, max_denominator=1000):
     Returns:
         A material formula string with elements ordered alphabetically and the stoichiometry
         normalized to the smallest integer fractions.
+
     """
-    g = gcd_float(list(el_amt.values()), 1 / max_denominator)
-    d = {k: round(v / g) for k, v in el_amt.items()}
+    gcd = gcd_float(list(el_amt.values()), 1 / max_denominator)
+    d = {k: round(v / gcd) for k, v in el_amt.items()}
     formula = ""
     for k in sorted(d):
         if d[k] > 1:
             formula += k + str(d[k])
         elif d[k] != 0:
             formula += k
-    return formula
+    return formula, gcd
 
 def normalize_formula(formula, max_denominator=1000):
     """Normalizes chemical formula to smallest common integer denominator, and orders elements alphabetically.
@@ -133,15 +135,16 @@ def normalize_formula(formula, max_denominator=1000):
     """
     try:
         formula_dict = Composition(formula).get_el_amt_dict()
-        return get_ordered_integer_formula(formula_dict, max_denominator)
+        norm_formula, gcd = get_ordered_integer_formula(formula_dict, max_denominator)
+        return norm_formula, gcd 
     except (CompositionError, ValueError):
-        return formula
+        #Happens if string does not match formula
+        return formula, 1
 
 def pymatgen_process(f):
     if f != f:
         return np.nan
     f = str(f)
-    s = normalize_formula(f)
+    s, gcd = normalize_formula(f)
     return s
-
 
