@@ -6,7 +6,20 @@ from bokeh.transform import factor_cmap, factor_mark
 from bokeh.models import HoverTool
 
 #%%
-df = pd.read_csv('data/C_kwh.csv')
+df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=0)
+
+df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
+#TODO: duplicated in calc_Ckwh
+df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
+
+df_SMs = df_SMs[['materials', 'notes']]
+
+df_SMs = df_SMs.loc[df_Ckwh.index]
+
+
+
+df = pd.concat([df_Ckwh, df_SMs], axis=1)
+
 # df = df.where(df['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
 
 #%%
@@ -47,7 +60,17 @@ p.line(energy_densities_line, mat_cost_line)
 p.legend.location = "top_left"
 p.legend.title = "energy_type"
 
-hovertool = HoverTool(tooltips=[('SM name','@SM_name'), ('source','@SM_source'), ('price_sources', '@price_sources'),('original name', '@original_name')])
+hovertool = HoverTool(tooltips=[
+    ('SM name','@SM_name'), 
+    ('Specific Energy (kWh/kg)','@specific_energy'), 
+    ('Specific Price ($/kg)','@specific_price'), 
+    ('$/kWh','@C_kwh'), 
+    ('source','@SM_source'), 
+    ('price_sources', '@price_sources'),
+    ('materials', '@materials'),
+    ('notes', '@notes')
+    ])
+
 p.add_tools(hovertool)
 
 

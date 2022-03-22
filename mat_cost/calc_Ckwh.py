@@ -25,11 +25,13 @@ print("missing single materials: {}".format(missing_mats))
 
 SP_single = [df_mat_data['specific_price'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 mu_totals_single = [df_mat_data['mu'][m] if m in df_mat_data.index else np.nan for m in mats_single]
+price_sources = [df_mat_data['source'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 
 
 df_single = pd.DataFrame({
     'specific_price': SP_single,
-    'mu_total': mu_totals_single
+    'mu_total': mu_totals_single,
+    'price_sources': price_sources
     }, index= mats_single.index)
 
 
@@ -48,32 +50,41 @@ mats_comp
 #%%
 specific_prices = []
 mu_totals = []
+price_sources = []
 for mat_list in mats_comp:
     mus = []
     molar_prices = []
-    for mat_index, mole_fraction in mat_list:
+    price_sources_mat = []
+    for i, (mat_index, mole_fraction) in enumerate(mat_list):
         if mat_index not in df_mat_data.index:
             print('missing: {}'.format(mat_index))
             continue
 
         sp = df_mat_data['specific_price'][mat_index]
         mu = df_mat_data['mu'][mat_index]
+        price_source = '{} : {}'.format(i, df_mat_data['source'][mat_index])
 
         #really molar prices weighted by mole fraciton
         molar_price = mole_fraction*sp*mu*1000 #($/kg * g/mol * kg/g)
         
         mus.append(mu)
         molar_prices.append(molar_price)
-    
+        price_sources_mat.append(price_source)
+
+    price_sources.append(", ".join(price_sources_mat))
+
     mu_total = sum(mus)
     mu_totals.append(mu_total)
     specific_price = sum(molar_prices)/(mu_total*1000)
     specific_prices.append(specific_price)
 
 
+
+
 df_comp = pd.DataFrame({
     'specific_price': specific_prices,
-    'mu_total': mu_totals
+    'mu_total': mu_totals,
+    'price_sources':price_sources
     }, index= mats_comp.index)
 
 
@@ -86,7 +97,7 @@ df_all
 #TODO: can't assign by index because of duplicate SM indexes. Mainly two latent datasets alva and alok.
 df_SMs['specific_price'] = df_all['specific_price']
 df_SMs['mu_total'] = df_all['mu_total']
-df_SMs['price_sources'] = 'TODO'
+df_SMs['price_sources'] = df_all['price_sources']
 
 
 
@@ -185,7 +196,7 @@ dfs = [
 dfs_2 = []
 
 #TODO: improve
-columns_keep = ['mu_total','specific_price','price_sources', 'SM_source', 'original_name']
+columns_keep = ['mu_total','specific_price','price_sources', 'SM_source']
 for df in dfs:
     for col in columns_keep:
         df[col] = df_SMs[col]
