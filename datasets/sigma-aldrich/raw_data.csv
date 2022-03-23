@@ -1,0 +1,5 @@
+index,material_name,molecular_formula,price,quantity,quantity_unit,url
+PPy,Polypyrrole,C4H6N,359.00,25,g,https://www.sigmaaldrich.com/US/en/product/aldrich/577030
+PANI,Polyaniline,C6H8N2,900.00,50,g,https://www.sigmaaldrich.com/US/en/product/aldrich/530689
+PEDOT,PEDOT,C6H4O2S,395.00,0.5,g,https://www.sigmaaldrich.com/US/en/product/aldrich/678392
+sepiolite,sepiolite,H8Mg2O10Si3,75.90,1,kg,https://www.sigmaaldrich.com/US/en/product/aldrich/70253

@@ -81,7 +81,6 @@ C6/LRMO LMNO,0.4617264022161955,174.1381179,6.492326536047166,"0 : Alibaba (Bulk
 C6/NCM622,0.4757803823057907,168.99428740000002,7.8194592113737915,"0 : Alibaba (Bulk), Li 2017, Liu 2016, USGS, 1 : Li 2017",Li 2017,integrated_battery,16.435018134791687
 Si/LCO,0.638350239978406,125.95619400000001,12.783192310097904,"0 : ISE, Li 2017, 1 : Alibaba (Bulk), ISE, Li 2017",Li 2017,integrated_battery,20.02535835269731
 Si/Li2S,1.0861758414949905,74.025,5.374915062478893,"0 : ISE, Li 2017, 1 : Li 2017",Li 2017,integrated_battery,4.948475980722392
-Na/P2-NMO,3.4973890175864737,22.9897693,1.2474204656307015,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017",Li 2017,integrated_battery,0.3566719227852836
 NTP/NMO,0.05352948554875313,500.6845968,4.5154057957830105,"0 : Li 2017, 1 : Li 2017",Li 2017,integrated_battery,84.35361837487692
 Li/Zn,0.0704129409414946,72.32,4.44991897599418,"0 : ISE, Kim 2013, Li 2017, 1 : Alibaba (Bulk), Kim 2013, Li 2017, USGS",Kim 2013,liquid_metal_battery,63.19745939445382
 Mg/Zn,0.04333167629914577,89.685,1.2277431106406311,"0 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 1 : Alibaba (Bulk), Kim 2013, Li 2017, USGS",Kim 2013,liquid_metal_battery,28.333616778745174
@@ -178,7 +177,7 @@ Mg/Cu/Zn (60/25/15),0.0705555555555555,153.231,0.9648734964455783,"0 : Alibaba (
 Mg/Ca (84/16),0.0755555555555555,64.38300000000001,1.2416705646049737,"0 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 1 : ISE, Kim 2013",Alva 2018,latent_thermal,16.433875119771724
 Mg/Si/Zn (47/38/15),0.0872222222222222,117.77,0.6020252320103011,"0 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 1 : Alibaba (Bulk), Alok 2021, ISE, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, USGS",Alva 2018,latent_thermal,6.902200112220014
 Cu/Si (80/20),0.0547222222222222,91.631,3.0435087399249396,"0 : Alibaba (Bulk), Alok 2021, USGS, 1 : Alibaba (Bulk), Alok 2021, ISE, USGS",Alva 2018,latent_thermal,55.61741859761313
-Cu/P/Si (83/10/7),0.0255555555555555,91.631,3.0933164955071093,"0 : Alibaba (Bulk), Alok 2021, USGS, 2 : Alibaba (Bulk), Alok 2021, ISE, USGS",Alva 2018,latent_thermal,121.04281938940888
+Cu/P/Si (83/10/7),0.0255555555555555,,,missing,Alva 2018,latent_thermal,
 Si/Mg/Ca (49/30/21),0.0847222222222222,92.468,0.7766371871948217,"0 : Alibaba (Bulk), Alok 2021, ISE, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : ISE, Kim 2013",Alva 2018,latent_thermal,9.166865160332323
 Si/Mg (56/44),0.2102777777777777,52.39,1.0245321656941755,"0 : Alibaba (Bulk), Alok 2021, ISE, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS",Alva 2018,latent_thermal,4.872279784014575
 Metallurgical Silicon,0.516,28.085,1.5262902937647151,"Alibaba (Bulk), Alok 2021, ISE, USGS",Ray 2021,latent_thermal,2.9579269259006105
@@ -208,9 +207,9 @@ Carbon nanosheets,0.33772569444444445,72.066,3.048326389128856,"Alibaba (Bulk), 
 Carbonization of carbon hydrates,0.012444444444444447,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,244.95479912642588
 Carbonized hollow nanocarbon,0.019293750000000002,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,157.99553685151182
 Co3O4 nanostructures,0.02782222222222223,240.795582,17.18,"Alibaba (Bulk), ISE",Choi 2015,pseudocapacitor,617.4920127795525
-CoAl/PEDOT nanoarrays,0.0274,,,missing,Choi 2015,pseudocapacitor,
+CoAl/PEDOT nanoarrays,0.0274,226.0707324,244888.54129825262,"0 : Alibaba (Bulk), ISE, USGS, 1 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, USGS, 2 : Sigma Aldrich",Choi 2015,pseudocapacitor,8937538.003585862
 CoCl2 nanostructures,0.05518125,129.833194,10.494,"Alibaba (Bulk), ISE",Choi 2015,pseudocapacitor,190.17329255861364
-CoO/PPy nanowires,0.5102222222222224,161.868237,19.46576609153484,"0 : ISE, 1 : Alibaba (Bulk), Alibaba (Manual), ISE, Li 2017",Choi 2015,pseudocapacitor,38.15154504002907
+CoO/PPy nanowires,0.5102222222222224,143.031194,3426.7682101933656,"0 : ISE, 1 : Sigma Aldrich",Choi 2015,pseudocapacitor,6716.226892800584
 CuO nanowires,0.00309375,79.545,17.8,Alibaba (Manual),Choi 2015,pseudocapacitor,5753.535353535353
 GO-activate carbon,0.20842013888888888,102.092,400.0,Alibaba (Manual),Choi 2015,ELDC,1919.2003331945023
 Graphene-coated CNTs,0.11875,144.132,47.5,"0 : Graphene Lab, 1 : Alibaba (Manual)",Choi 2015,ELDC,400.0
@@ -235,19 +234,19 @@ NiCo2(OH)6 nanotubes,0.00640625,,,,Choi 2015,pseudocapacitor,
 NiCo2O4 nanosheets,0.058784722222222224,,,,Choi 2015,pseudocapacitor,
 NiO nanoblocks,0.0504,,,,Choi 2015,pseudocapacitor,
 Oxygen-rich nanoporous carbon,0.035208333333333335,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,86.57968442496158
-PANI nanofibers,0.009422222222222224,,,,Choi 2015,pseudocapacitor,
-PANI nanotubes,0.023836805555555556,,,,Choi 2015,pseudocapacitor,
-PPy nanofibrils,0.019055555555555555,,,,Choi 2015,pseudocapacitor,
-PPy-PANI double-wall,0.026475000000000002,,,missing,Choi 2015,pseudocapacitor,
-PPy-clay core-shell nanoarrays,0.40919999999999995,,,,Choi 2015,pseudocapacitor,
-PPy-sepiolite nanocomposites,0.022916666666666665,,,missing,Choi 2015,pseudocapacitor,
+PANI nanofibers,0.009422222222222224,108.144,18000.0,Sigma Aldrich,Choi 2015,pseudocapacitor,1910377.3584905656
+PANI nanotubes,0.023836805555555556,108.144,18000.0,Sigma Aldrich,Choi 2015,pseudocapacitor,755134.7414420976
+PPy nanofibrils,0.019055555555555555,68.099,14360.0,Sigma Aldrich,Choi 2015,pseudocapacitor,753586.0058309038
+PPy-PANI double-wall,0.026475000000000002,176.243,8296.765375078727,"0 : Sigma Aldrich, 1 : Sigma Aldrich",Choi 2015,pseudocapacitor,313381.1284260142
+PPy-clay core-shell nanoarrays,0.40919999999999995,68.099,14360.0,Sigma Aldrich,Choi 2015,pseudocapacitor,35092.86412512219
+PPy-sepiolite nanocomposites,0.022916666666666665,369.018,1355.952002476844,"0 : Sigma Aldrich, 1 : Sigma Aldrich",Choi 2015,pseudocapacitor,59168.81465353502
 Polythiophene nanostructures,0.3611111111111111,,,,Choi 2015,pseudocapacitor,
 Porous CNTs,0.03960833333333333,72.066,100.0,Alibaba (Manual),Choi 2015,ELDC,2524.721228697665
 Porous carbon nanowhiskers,0.02326388888888889,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,131.03253732374785
 Porous carbon/CNTs,0.020362500000000002,144.132,25.762081597282215,"0 : Alibaba (Bulk), Li 2017, Liu 2016, USGS, 1 : Alibaba (Manual)",Choi 2015,ELDC,1265.172822457076
 RGO/CNT,0.03,174.15800000000002,137.93049989090363,"0 : Alibaba (Manual), 1 : Alibaba (Manual)",Choi 2015,ELDC,4597.683329696788
-V2O5-PPy nanofibers,0.2288888888888889,181.878,8.653480294958076,0 : ISE,Choi 2015,pseudocapacitor,37.806467308069266
-ZnCo2O4 nanorods/Ni foams,0.16770833333333332,58.6934,3.485097873082242,"1 : Alibaba (Bulk), Alok 2021, USGS",Choi 2015,pseudocapacitor,20.78070781465188
+V2O5-PPy nanofibers,0.2288888888888889,249.97699999999998,1962.2793204538275,"0 : ISE, 1 : Sigma Aldrich",Choi 2015,pseudocapacitor,8573.064992274003
+ZnCo2O4 nanorods/Ni foams,0.16770833333333332,,,missing,Choi 2015,pseudocapacitor,
 α-F-2O3/MnO2 nanowires,0.03295,246.623043,8.51837639247753,"0 : Alibaba (Bulk), Olympios 2021, USGS, 1 : Alibaba (Bulk), Alibaba (Manual), ISE, Li 2017",Choi 2015,pseudocapacitor,258.52432147124523
 β-Co(OH)2 nanosheets,0.06267361111111111,,,,Choi 2015,pseudocapacitor,
 Al2O3,0.0007779535864978904,101.9600768,0.926759337243702,"Liu 2016, USGS",TODO,dielectric_capacitor,1191.2784429925823

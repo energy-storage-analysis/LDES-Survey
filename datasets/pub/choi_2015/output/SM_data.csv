@@ -7,9 +7,9 @@ Carbon nanosheets,Graphite,ELDC,198.5,3.5
 Carbonization of carbon hydrates,Graphite,ELDC,140,0.8
 Carbonized hollow nanocarbon,Graphite,ELDC,171.5,0.9
 Co3O4 nanostructures,Co3O4,pseudocapacitor,313.0,0.8
-CoAl/PEDOT nanoarrays,"[('CoAl', 0.5), ('PEDOT', 0.5)]",pseudocapacitor,548.0,0.6
+CoAl/PEDOT nanoarrays,"[('Co', 0.25), ('Al', 0.25), ('PEDOT', 0.5)]",pseudocapacitor,548.0,0.6
 CoCl2 nanostructures,CoCl2,pseudocapacitor,1962,0.45
-CoO/PPy nanowires,"[('CoO', 0.5), ('MnO2', 0.5)]",pseudocapacitor,1435.0,1.6
+CoO/PPy nanowires,"[('CoO', 0.5), ('PPy', 0.5)]",pseudocapacitor,1435.0,1.6
 CuO nanowires,CuO,pseudocapacitor,110.0,0.45
 GO-activate carbon,Graphene Oxide,ELDC,122.5,3.5
 Graphene-coated CNTs,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,95.0,3.0

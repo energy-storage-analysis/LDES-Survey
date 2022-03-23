@@ -40,9 +40,9 @@ PPy nanofibrils,PPy,pseudocapacitor
 Hollow NiCo2S4 nanoplates,NiCo2S4,pseudocapacitor
 α-F-2O3/MnO2 nanowires,"[('Iron Ore', 0.5), ('MnO2', 0.5)]",pseudocapacitor
 2D TiS2 nanocrystals,TiS2,pseudocapacitor
-CoAl/PEDOT nanoarrays,"[('CoAl', 0.5), ('PEDOT', 0.5)]",pseudocapacitor
+CoAl/PEDOT nanoarrays,"[('Co', 0.25), ('Al', 0.25), ('PEDOT', 0.5)]",pseudocapacitor
 Au-MnO2 core-shell,"[('Au', 0.5), ('MnO2', 0.5)]",pseudocapacitor
-CoO/PPy nanowires,"[('CoO', 0.5), ('MnO2', 0.5)]",pseudocapacitor
+CoO/PPy nanowires,"[('CoO', 0.5), ('PPy', 0.5)]",pseudocapacitor
 V2O5-PPy nanofibers,"[('V2O5', 0.5), ('PPy', 0.5)]",pseudocapacitor
 CuO nanowires,CuO,pseudocapacitor
 Nanoporous Ni(OH)2 films,Ni(OH)2,pseudocapacitor

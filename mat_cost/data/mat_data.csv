@@ -167,6 +167,9 @@ Ni(OH)2,9.160666666666666,"Alibaba (Bulk), Alibaba (Manual), Li 2017",Ni(OH)2,92
 NiCl2(H2O)6,5.1,Li 2017,NiCl2(H2O)6,237.6834,NiCl2 6H2O,Ref(s),1,5.1,3.5898535
 NiSO4,3.362034375,Alibaba (Manual),NiSO4,154.7494,,Ref(s),1,3.3620344,5.3548666
 P2-NMO,15.0,Li 2017,Na0.67Mn0.67Ni0.33O2,103.5784562,P2-Na2Mn2NiO6,Ref(s),1,15.0,
+PANI,18000.0,Sigma Aldrich,C6H8N2,108.144,,Ref(s),1,18000.0,
+PEDOT,790000.0,Sigma Aldrich,C6H4O2S,140.156,,Ref(s),1,790000.0,
+PPy,14360.0,Sigma Aldrich,C4H6N,68.099,,Ref(s),1,14360.0,
 PPy-AC,30.0,Li 2017,,,PPy-AC,Ref(s),1,30.0,
 Pb,1.9386526146058536,"Alibaba (Bulk), Kim 2013, Li 2017, USGS",Pb,207.2,"Lead LME, Lead North_American, Pb",Ref(s),4,1.9386526,2.0
 Pb2Sb,3.0,Li 2017,Pb2Sb,536.16,Pb2Sb,Ref(s),1,3.0,2.8606953
@@ -245,3 +248,4 @@ ZrO2,4.3555,ISE,ZrO2,123.222,Zirconium fused_cubic,Ref(s),1,4.3555,26.9877237
 ZrSO4,428.6574376489916,USGS,ZrSO4,187.28,"Zirconium and Hafnium Zircon_AU, Zirconium and Hafnium Zircon_CN, Zirconium and Hafnium Zircon_import",Ref(s),1,428.6574376,17.7988987
 ZrSiO4,1.1221785714285715,"Alibaba (Bulk), ISE",ZrSiO4,183.305,"Zircon sand, Zirconium silicate",Ref(s),2,1.1221786,18.4291399
 kyanite,0.3952888360974855,USGS,Al2H6O5Si,168.0910768,Kyanite and Related Minerals FOB,Ref(s),1,0.3952888,
+sepiolite,75.9,Sigma Aldrich,H8Mg2O10Si3,300.919,,Ref(s),1,75.9,
