@@ -87,6 +87,7 @@ from es_utils.chem import calculate_formula_price
 f_dicts = [chemparse.parse_formula(f) for f in df_prices_combine.index]
 e_price = [calculate_formula_price(d, element_prices) for d in f_dicts]
 df_prices_combine['specific_price_element'] = e_price
+df_prices_combine['specific_price_element'] = df_prices_combine['specific_price_element'].apply(lambda x: round(x,7))
 df_prices_combine
 
 #%%
@@ -120,8 +121,7 @@ df_prices_combine['molecular_formula'] = df_mat_data.groupby('index').apply(join
 
 from es_utils.chem import get_molecular_mass
 df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molecular_mass)
-    
-
+df_prices_combine['mu'] = df_prices_combine['mu'].apply(lambda x: round(x,7))
 
 #%%
 
