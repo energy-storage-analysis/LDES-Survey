@@ -44,10 +44,14 @@ tables['table_1'] = pd.concat([dfs[0], dfs[1]])
 tables['table_2'] = dfs[2]
 tables['table_3'] = dfs[3]
 
+
+dash_characters = ['\u2013','\u2212']
+
 for table in tables:
-    tables[table].columns = [c.strip().replace('−','-') for c in tables[table].columns]
-    # for column in tables[table].columns:
-    #     tables[table][column] = tables[table][column].str.replace('−','-',regex=False)
+    for dash_character in dash_characters:
+        tables[table].columns = [c.strip().replace(dash_character,'-') for c in tables[table].columns]
+        for column in tables[table].columns:
+            tables[table][column] = tables[table][column].str.replace(dash_character,'-', regex=False)
 
 
 tables['table_3'] = tables['table_3'].rename({
