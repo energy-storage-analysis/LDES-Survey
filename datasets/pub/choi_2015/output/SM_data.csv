@@ -1,26 +1,26 @@
-SM_name,materials,energy_type,specific_capacitance,deltaV_electrolyte,type
-3D porous graphene-like carbon,Graphene,electrostatic,167.0,2.5,EDLC
-Carbon nanosheets,Graphite,electrostatic,198.5,3.5,EDLC
-Carbonization of carbon hydrates,Graphite,electrostatic,140,0.8,EDLC
-Carbonized hollow nanocarbon,Graphite,electrostatic,171.5,0.9,EDLC
-GO-activate carbon,Graphene Oxide,electrostatic,122.5,3.5,EDLC
-Graphene-coated CNTs,"[('Graphene', 0.5), ('CNT', 0.5)]",electrostatic,95.0,3.0,EDLC
-Graphene/CNF,"[('Graphene', 0.5), ('Graphite', 0.5)]",electrostatic,174,1.5,EDLC
-Graphene/CNT,"[('Graphene', 0.5), ('CNT', 0.5)]",electrostatic,199,4.0,EDLC
-Graphene/CNT composite fibers,"[('Graphene', 0.5), ('CNT', 0.5)]",electrostatic,20.5,0.8,EDLC
-Graphene/carbon,"[('Graphene', 0.5), ('Graphite', 0.5)]",electrostatic,175.0,3.5,EDLC
-Halogen-containing nanoporous carbon,Graphite,electrostatic,211.5,1.0,EDLC
-Mesoporous carbon nanosheets,Graphite,electrostatic,115.0,2.7,EDLC
-Mesoporous graphene nanoballs,Graphene,electrostatic,206,0.8,EDLC
-N-doped 3D nanoporous carbon,Graphite,electrostatic,265.0,1.0,EDLC
-N-doped carbon nanosheets,Graphite,electrostatic,165.0,1.0,EDLC
-N-doped carbon nanospheres,Graphite,electrostatic,128.0,1.0,EDLC
-N-doped nanoporous carbon,Graphite,electrostatic,165.0,1.0,EDLC
-Nanofibers/mesoporous carbon,Graphite,electrostatic,85.5,0.8,EDLC
-Nanoporous carbon,Graphite,electrostatic,129.0,3.5,EDLC
-Nanoporous carbon foams,Graphite,electrostatic,252.0,1.1,EDLC
-Oxygen-rich nanoporous carbon,Graphite,electrostatic,253.5,1.0,EDLC
-Porous CNTs,CNT,electrostatic,582.0,0.7,EDLC
-Porous carbon nanowhiskers,Graphite,electrostatic,167.5,1.0,EDLC
-Porous carbon/CNTs,"[('Graphite', 0.5), ('CNT', 0.5)]",electrostatic,181.0,0.9,EDLC
-RGO/CNT,"[('Graphene Oxide', 0.5), ('CNT', 0.5)]",electrostatic,216.0,1.0,EDLC
+SM_name,materials,SM_type,specific_capacitance,deltaV_electrolyte
+3D porous graphene-like carbon,Graphene,ELDC,167.0,2.5
+Carbon nanosheets,Graphite,ELDC,198.5,3.5
+Carbonization of carbon hydrates,Graphite,ELDC,140,0.8
+Carbonized hollow nanocarbon,Graphite,ELDC,171.5,0.9
+GO-activate carbon,Graphene Oxide,ELDC,122.5,3.5
+Graphene-coated CNTs,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,95.0,3.0
+Graphene/CNF,"[('Graphene', 0.5), ('Graphite', 0.5)]",ELDC,174,1.5
+Graphene/CNT,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,199,4.0
+Graphene/CNT composite fibers,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,20.5,0.8
+Graphene/carbon,"[('Graphene', 0.5), ('Graphite', 0.5)]",ELDC,175.0,3.5
+Halogen-containing nanoporous carbon,Graphite,ELDC,211.5,1.0
+Mesoporous carbon nanosheets,Graphite,ELDC,115.0,2.7
+Mesoporous graphene nanoballs,Graphene,ELDC,206,0.8
+N-doped 3D nanoporous carbon,Graphite,ELDC,265.0,1.0
+N-doped carbon nanosheets,Graphite,ELDC,165.0,1.0
+N-doped carbon nanospheres,Graphite,ELDC,128.0,1.0
+N-doped nanoporous carbon,Graphite,ELDC,165.0,1.0
+Nanofibers/mesoporous carbon,Graphite,ELDC,85.5,0.8
+Nanoporous carbon,Graphite,ELDC,129.0,3.5
+Nanoporous carbon foams,Graphite,ELDC,252.0,1.1
+Oxygen-rich nanoporous carbon,Graphite,ELDC,253.5,1.0
+Porous CNTs,CNT,ELDC,582.0,0.7
+Porous carbon nanowhiskers,Graphite,ELDC,167.5,1.0
+Porous carbon/CNTs,"[('Graphite', 0.5), ('CNT', 0.5)]",ELDC,181.0,0.9
+RGO/CNT,"[('Graphene Oxide', 0.5), ('CNT', 0.5)]",ELDC,216.0,1.0

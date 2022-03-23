@@ -49,25 +49,12 @@ df
 # %%
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
-SM_lookup
-
-
-
-
-from es_utils.chem import normalize_list
-
-
-
-# SM_lookup['materials'] = SM_lookup['materials'].apply(normalize_list)
-
-#%%
 
 df_SM = pd.merge(df, SM_lookup, on='original_name')
 
-df_SM['energy_type'] = 'electrochemical'
 df_SM.index.name = 'SM_name'
 
-df_SM = df_SM[['C_kwh_orig','type','deltaV','materials','energy_type']]
+df_SM = df_SM[['C_kwh_orig','type','deltaV','materials','SM_type']]
 
 df_SM.to_csv('output/SM_data.csv')
 

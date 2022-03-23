@@ -1,4 +1,4 @@
-SM_name,materials,energy_type,specific_strength
+SM_name,materials,SM_type,specific_strength
 Al-2024,Al,virial,150.8303249097473
 Al-6061-T6,Al,virial,101.4760147601476
 Al-7075-T6,Al,virial,166.66666666666666

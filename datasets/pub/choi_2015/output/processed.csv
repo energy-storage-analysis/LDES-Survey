@@ -1,84 +1,84 @@
-original_name,num_electrodes,Electrolyte,Current Density or Scan Rate,deltaV_electrolyte,specific_capacitance,Ref.,type,energy_type
-Carbon nanosheets,Two,(3) EMIMBF4,1–10 A·g−1,3.5,198.5,6.0,EDLC,electrostatic
-Carbon nanosheets,Two,PVA–H3PO4 gel,0.25–1.3 A·g−1,0.8,17.05,7.0,EDLC,electrostatic
-N-doped carbon nanosheets,Two,1 M NaOH,0.75–7 A·g−1,1.0,165.0,8.0,EDLC,electrostatic
-Porous carbon nanowhiskers,Two,6 M KOH,0.5–30 A·g−1,1.0,167.5,16.0,EDLC,electrostatic
-N-doped nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,165.0,17.0,EDLC,electrostatic
-Nanofibers/mesoporous carbon,Three,0.5 M K2SO4,0.5–6 A·g−1,0.8,85.5,18.0,EDLC,electrostatic
-N-doped carbon nanospheres,Three,6 M KOH,0.5–40 A·g−1,1.0,128.0,19.0,EDLC,electrostatic
-Nanoporous carbon,Two,(4) EMI–TFSI,0.5–25 A·g−1,3.5,129.0,21.0,EDLC,electrostatic
-N-doped nanoporous carbon,Three,6 M KOH,1–10 A·g−1,1.0,212.5,22.0,EDLC,electrostatic
-Mesoporous carbon nanosheets,Two,(5) 1 M,0.1–120 A·g−1,2.7,115.0,24.0,EDLC,electrostatic
-GO-activate carbon,Two,EMIMBF4,1–10 A·g−1,3.5,122.5,25.0,EDLC,electrostatic
-Porous carbon/CNTs,Two,3 M H2SO4,0.1–50 A·g−1,0.9,181.0,26.0,EDLC,electrostatic
-Porous CNFs,Two,EMI-TFSI,5–100 mV·s−1,2.0,107.5,27.0,EDLC,electrostatic
-Porous CNTs,Three,1 M H2SO4,1–10 A·g−1,0.7,582.0,28.0,EDLC,electrostatic
-Nanoporous carbon foams,Two,6 M KOH,0.2–20 A·g−1,1.1,252.0,29.0,EDLC,electrostatic
-Carbonization of carbon hydrates,Two,5 M KOH,1 A·g−1,0.8,140,32.0,EDLC,electrostatic
-Carbonized hollow nanocarbon,Two,1 M KOH,1–20 A·g−1,0.9,171.5,35.0,EDLC,electrostatic
-Graphene-coated CNTs,Two,EMI-TFSI,0.01–10 A·g−1,3.0,95.0,36.0,EDLC,electrostatic
-Graphene/CNF,Three,1 M H2SO4,0.2 A·g−1,1.5,174,39.0,EDLC,electrostatic
-3D porous graphene-like carbon,Two,(6) TEMABF4/PC,1–32 A·g−1,2.5,167.0,40.0,EDLC,electrostatic
-Mesoporous graphene nanoballs,Three,1 M H2SO4,5–100 mV·s−1,0.8,206,41.0,EDLC,electrostatic
-Graphene/CNT composite fibers,Two,0.5 M H2SO4,0.2–2 A·g−1,0.8,20.5,42.0,EDLC,electrostatic
-N-doped 3D nanoporous carbon,Two,0.5 M Na2SO4,0.5–20 A·g−1,1.0,265.0,43.0,EDLC,electrostatic
-Graphene/CNT,Two,EMIMBF4,10 A·g−11,4.0,199,44.0,EDLC,electrostatic
-Graphene/carbon,Two,EMIMBF4,1–10 A·g−1,3.5,175.0,45.0,EDLC,electrostatic
-RGO/CNT,Two,PVA–H2SO4 gel,0.5–4 A·g−1,1.0,216.0,46.0,EDLC,electrostatic
-Carbonized PPy nanostructures,Three,1 M H2SO4,5 mV·s−1,0.9,264,47.0,EDLC,electrostatic
-Carbonized PPy-CNTs,Three,1 M KCL,5–100 mV·s−1,1.5,90.0,48.0,EDLC,electrostatic
-Halogen-containing nanoporous carbon,Three,6 M KOH,0.5–40 A·g−1,1.0,211.5,49.0,EDLC,electrostatic
-Oxygen-rich nanoporous carbon,Two,1 M H2SO4,0.5–10 A·g−1,1.0,253.5,50.0,EDLC,electrostatic
-CoCl2 nanostructures,Three,2 M KOH,1 A·g−1,0.45,1962,9.0,Pseudocapacitor,chemical
-PANI nanotubes,Two,1 M H2SO4,1–30 A·g−1,0.5,686.5,10.0,Pseudocapacitor,chemical
-PPy-clay core–shell nanoarrays,Three,1 M KOH,1–20 A·g−1,1.2,2046.0,11.0,Pseudocapacitor,chemical
-Polythiophene nanostructures,Two,0.5 M TEABF4,40–100 mV·s−1,4.0,162.5,12.0,Pseudocapacitor,chemical
-NiO nanoblocks,Three,1 M KOH,1.11–111 A·g−1,0.6,1008.0,51.0,Pseudocapacitor,chemical
-PPy–sepiolite nanocomposites,Three,1 M KCl,3 mA·cm−2,1.0,165,52.0,Pseudocapacitor,chemical
-ZnCo2O4 nanorods/Ni foams,Two,PVA-KOH gel,1–20 A·g−1,1.0,1207.5,53.0,Pseudocapacitor,chemical
-NiCo2(OH)6 nanotubes,Two,1.9 M KCL 0.1M KOH,10–100 A·g−1,0.5,184.5,54.0,Pseudocapacitor,chemical
-3D Co3O4 nanonetworks,Three,6 M KOH,2–100 mV·s−1,1.5,797.5,55.0,Pseudocapacitor,chemical
-Ni2(CO3)(OH)2 nanosheets,Three,3 M KOH,0.5–10 A·g−1,0.4,895.0,56.0,Pseudocapacitor,chemical
-PPy–PANI double-wall,Three,1 M H2SO4,5–250 mV·s−1,0.6,529.5,58.0,Pseudocapacitor,chemical
-PANI nanofibers,Three,1 M H2SO4,0.1–10 A·g−1,0.8,106.0,61.0,Pseudocapacitor,chemical
-PPy nanofibrils,Three,1 M H2SO4,0.1 A·g−1,0.7,280,62.0,Pseudocapacitor,chemical
-Hollow NiCo2S4 nanoplates,Three,3 M KOH,1–20 A·g−1,0.5,334.0,63.0,Pseudocapacitor,chemical
-α-F-2O3/MnO2 nanowires,Three,0.7 M H3BO3,1–50 A·g−1,0.6,659.0,70.0,Pseudocapacitor,chemical
-2D TiS2 nanocrystals,Three,1 M LiClO4,0.5–10 A·g−1,1.2,395.0,71.0,Pseudocapacitor,chemical
-CoAl/PEDOT nanoarrays,Three,6 M KOH,1–40 A·g−1,0.6,548.0,76.0,Pseudocapacitor,chemical
-Au-MnO2 core–shell,Two,PVA-LiClO4 gel,0.56 A·g−1,2.0,524,77.0,Pseudocapacitor,chemical
-CoO/PPy nanowires,Two,3 M NaOH,1–50 mA·cm−2,1.6,1435.0,78.0,Pseudocapacitor,chemical
-V2O5-PPy nanofibers,Two,PVA-LiCl gel,4.5 mA·cm−2,2.0,412,79.0,Pseudocapacitor,chemical
-CuO nanowires,Three,2 M KOH,1–5 A·g−1,0.45,110.0,80.0,Pseudocapacitor,chemical
-Nanoporous Ni(OH)2 films,Two,6 M KOH,0.9–50 A·g−1,1.6,106.0,81.0,Pseudocapacitor,chemical
-β-Co(OH)2 nanosheets,Two,2 M KOH,1–25 A·g−1,0.5,1805.0,82.0,Pseudocapacitor,chemical
-Co3O4 nanostructures,Two,2 M KOH,0.5–2.5 A·g−1,0.8,313.0,83.0,Pseudocapacitor,chemical
-NiCo2O4 nanosheets,Three,2 M KOH,6–30 A·g−1,0.5,1693.0,84.0,Pseudocapacitor,chemical
-NiO/graphene,Two,1 M NaOH,7–20 A·g−1,1.5,285.0,13.0,Hybrid,electrostatic/chemical
-Porous carbon/ F-2O3 nanoparticles,Three,1 M Na2SO3,0.5–10 A·g−1,1.0,177.0,14.0,Hybrid,electrostatic/chemical
-α-F-2O3/Graphene,Three,1 M Na2SO4,3–10 A·g−1,1.0,202.0,15.0,Hybrid,electrostatic/chemical
-Ni graphene aerogels,Two,6 M KOH,2–20 A·g−1,1.0,276.0,85.0,Hybrid,electrostatic/chemical
-CoO carbon nanoflakes,Three,2 M KOH,10 mA·cm−2,0.75,476,86.0,Hybrid,electrostatic/chemical
-Faradaic CNTs,Three,0.5 M H2SO4,3–100 mV·s−1,0.9,167.5,87.0,Hybrid,electrostatic/chemical
-Nanoporous CuO/active carbon,Two,3 M KOH,1–10 A·g−1,1.4,63.0,88.0,Hybrid,electrostatic/chemical
-Co(OH)2/graphene,Three,6 M KOH,2–10 A·g−1,0.7,444.0,89.0,Hybrid,electrostatic/chemical
-PANI/RGO,Three,1 M H2SO4,0.45 A·g−1,0.8,431,90.0,Hybrid,electrostatic/chemical
-PANI/CNF,Three,1 M H2SO4,0.3–10 A·g−1,1.2,478.5,91.0,Hybrid,electrostatic/chemical
-PANI/N-doped CNTs,Three,0.1 M Na2SO4,50 mV·s−1,1.0,250,92.0,Hybrid,electrostatic/chemical
-PPy/graphene,Two,1 M H2SO4,0.1 A·g−1,1.0,277,94.0,Hybrid,electrostatic/chemical
-Ni–Mn–RGO,Two,1 M KOH,2–10 A·g−1,1.6,1354.5,95.0,Hybrid,electrostatic/chemical
-3D carbon/CoNi3O4 asymmetric,Two,3 M KOH,1–100 mA·cm−2,1.8,53.0,96.0,Hybrid,electrostatic/chemical
-N-doped carbon/PANI asymmetric,Two,1 M Na2SO4,0.5–20 A·g−1,1.1,94.0,97.0,Hybrid,electrostatic/chemical
-WO3/PPy nanowire asymmetric,Three,3 M NaOH,0.7–7 mA·cm−2,0.6,525.0,98.0,Hybrid,electrostatic/chemical
-Mn–Ni–Co oxide nanowire/RGO,Three,6 M KOH,1–20 A·g−1,0.5,521.0,99.0,Hybrid,electrostatic/chemical
-PEDOT/ROG/CNF asymmetric,Two,1 M H2SO4,0.1–2 A·g−1,1.0,55.0,100.0,Hybrid,electrostatic/chemical
-MnO2/GO asymmetric,Two,1 M Na2SO4,0.1–2 A·g−1,2.0,62.5,101.0,Hybrid,electrostatic/chemical
-RGO/MnO2 asymmetric,Three,1 M Na2SO4,0.1–1 A·g−1,1.5,230.0,102.0,Hybrid,electrostatic/chemical
-CNF/GO/PANI,Two,1 M H2SO4,2 A·g−1,0.8,479,103.0,Hybrid,electrostatic/chemical
-Ni/graphene/CNT,Two,6 M KOH,0.2–1.0 A·g−1,0.8,102.5,104.0,Hybrid,electrostatic/chemical
-Graphene/PANI nanorods,Three,1 M H2SO4,1–8 A·g−1,0.7,1250.5,106.0,Hybrid,electrostatic/chemical
-3D CoMoO4/graphene,Three,2 M KOH,1.5–85 A·g−1,0.9,1921.0,108.0,Hybrid,electrostatic/chemical
-Graphene/CNT/Mn,Two,2 M Li2SO4,1.9 A·g−1,1.6,1108,109.0,Hybrid,electrostatic/chemical
-PPy nanowire/RGO,Two,PVA–H2SO4 gel,1–20 A·g−1,0.8,397.5,110.0,Hybrid,electrostatic/chemical
-Porous graphene/PANI,Two,1 M H2SO4,1–8 A·g−1,0.8,661.0,111.0,Hybrid,electrostatic/chemical
-Porous graphene/PANI,Two,1 M H2SO4,0.5–10 A·g−1,0.7,373.5,112.0,Hybrid,electrostatic/chemical
+original_name,num_electrodes,Electrolyte,Current Density or Scan Rate,deltaV_electrolyte,specific_capacitance,Ref.
+Carbon nanosheets,Two,(3) EMIMBF4,1-10 A·g-1,3.5,198.5,6.0
+Carbon nanosheets,Two,PVA-H3PO4 gel,0.25-1.3 A·g-1,0.8,17.05,7.0
+N-doped carbon nanosheets,Two,1 M NaOH,0.75-7 A·g-1,1.0,165.0,8.0
+Porous carbon nanowhiskers,Two,6 M KOH,0.5-30 A·g-1,1.0,167.5,16.0
+N-doped nanoporous carbon,Three,6 M KOH,0.5-40 A·g-1,1.0,165.0,17.0
+Nanofibers/mesoporous carbon,Three,0.5 M K2SO4,0.5-6 A·g-1,0.8,85.5,18.0
+N-doped carbon nanospheres,Three,6 M KOH,0.5-40 A·g-1,1.0,128.0,19.0
+Nanoporous carbon,Two,(4) EMI-TFSI,0.5-25 A·g-1,3.5,129.0,21.0
+N-doped nanoporous carbon,Three,6 M KOH,1-10 A·g-1,1.0,212.5,22.0
+Mesoporous carbon nanosheets,Two,(5) 1 M,0.1-120 A·g-1,2.7,115.0,24.0
+GO-activate carbon,Two,EMIMBF4,1-10 A·g-1,3.5,122.5,25.0
+Porous carbon/CNTs,Two,3 M H2SO4,0.1-50 A·g-1,0.9,181.0,26.0
+Porous CNFs,Two,EMI-TFSI,5-100 mV·s-1,2.0,107.5,27.0
+Porous CNTs,Three,1 M H2SO4,1-10 A·g-1,0.7,582.0,28.0
+Nanoporous carbon foams,Two,6 M KOH,0.2-20 A·g-1,1.1,252.0,29.0
+Carbonization of carbon hydrates,Two,5 M KOH,1 A·g-1,0.8,140,32.0
+Carbonized hollow nanocarbon,Two,1 M KOH,1-20 A·g-1,0.9,171.5,35.0
+Graphene-coated CNTs,Two,EMI-TFSI,0.01-10 A·g-1,3.0,95.0,36.0
+Graphene/CNF,Three,1 M H2SO4,0.2 A·g-1,1.5,174,39.0
+3D porous graphene-like carbon,Two,(6) TEMABF4/PC,1-32 A·g-1,2.5,167.0,40.0
+Mesoporous graphene nanoballs,Three,1 M H2SO4,5-100 mV·s-1,0.8,206,41.0
+Graphene/CNT composite fibers,Two,0.5 M H2SO4,0.2-2 A·g-1,0.8,20.5,42.0
+N-doped 3D nanoporous carbon,Two,0.5 M Na2SO4,0.5-20 A·g-1,1.0,265.0,43.0
+Graphene/CNT,Two,EMIMBF4,10 A·g-11,4.0,199,44.0
+Graphene/carbon,Two,EMIMBF4,1-10 A·g-1,3.5,175.0,45.0
+RGO/CNT,Two,PVA-H2SO4 gel,0.5-4 A·g-1,1.0,216.0,46.0
+Carbonized PPy nanostructures,Three,1 M H2SO4,5 mV·s-1,0.9,264,47.0
+Carbonized PPy-CNTs,Three,1 M KCL,5-100 mV·s-1,1.5,90.0,48.0
+Halogen-containing nanoporous carbon,Three,6 M KOH,0.5-40 A·g-1,1.0,211.5,49.0
+Oxygen-rich nanoporous carbon,Two,1 M H2SO4,0.5-10 A·g-1,1.0,253.5,50.0
+CoCl2 nanostructures,Three,2 M KOH,1 A·g-1,0.45,1962,9.0
+PANI nanotubes,Two,1 M H2SO4,1-30 A·g-1,0.5,686.5,10.0
+PPy-clay core-shell nanoarrays,Three,1 M KOH,1-20 A·g-1,1.2,2046.0,11.0
+Polythiophene nanostructures,Two,0.5 M TEABF4,40-100 mV·s-1,4.0,162.5,12.0
+NiO nanoblocks,Three,1 M KOH,1.11-111 A·g-1,0.6,1008.0,51.0
+PPy-sepiolite nanocomposites,Three,1 M KCl,3 mA·cm-2,1.0,165,52.0
+ZnCo2O4 nanorods/Ni foams,Two,PVA-KOH gel,1-20 A·g-1,1.0,1207.5,53.0
+NiCo2(OH)6 nanotubes,Two,1.9 M KCL 0.1M KOH,10-100 A·g-1,0.5,184.5,54.0
+3D Co3O4 nanonetworks,Three,6 M KOH,2-100 mV·s-1,1.5,797.5,55.0
+Ni2(CO3)(OH)2 nanosheets,Three,3 M KOH,0.5-10 A·g-1,0.4,895.0,56.0
+PPy-PANI double-wall,Three,1 M H2SO4,5-250 mV·s-1,0.6,529.5,58.0
+PANI nanofibers,Three,1 M H2SO4,0.1-10 A·g-1,0.8,106.0,61.0
+PPy nanofibrils,Three,1 M H2SO4,0.1 A·g-1,0.7,280,62.0
+Hollow NiCo2S4 nanoplates,Three,3 M KOH,1-20 A·g-1,0.5,334.0,63.0
+α-F-2O3/MnO2 nanowires,Three,0.7 M H3BO3,1-50 A·g-1,0.6,659.0,70.0
+2D TiS2 nanocrystals,Three,1 M LiClO4,0.5-10 A·g-1,1.2,395.0,71.0
+CoAl/PEDOT nanoarrays,Three,6 M KOH,1-40 A·g-1,0.6,548.0,76.0
+Au-MnO2 core-shell,Two,PVA-LiClO4 gel,0.56 A·g-1,2.0,524,77.0
+CoO/PPy nanowires,Two,3 M NaOH,1-50 mA·cm-2,1.6,1435.0,78.0
+V2O5-PPy nanofibers,Two,PVA-LiCl gel,4.5 mA·cm-2,2.0,412,79.0
+CuO nanowires,Three,2 M KOH,1-5 A·g-1,0.45,110.0,80.0
+Nanoporous Ni(OH)2 films,Two,6 M KOH,0.9-50 A·g-1,1.6,106.0,81.0
+β-Co(OH)2 nanosheets,Two,2 M KOH,1-25 A·g-1,0.5,1805.0,82.0
+Co3O4 nanostructures,Two,2 M KOH,0.5-2.5 A·g-1,0.8,313.0,83.0
+NiCo2O4 nanosheets,Three,2 M KOH,6-30 A·g-1,0.5,1693.0,84.0
+NiO/graphene,Two,1 M NaOH,7-20 A·g-1,1.5,285.0,13.0
+Porous carbon/ F-2O3 nanoparticles,Three,1 M Na2SO3,0.5-10 A·g-1,1.0,177.0,14.0
+α-F-2O3/Graphene,Three,1 M Na2SO4,3-10 A·g-1,1.0,202.0,15.0
+Ni graphene aerogels,Two,6 M KOH,2-20 A·g-1,1.0,276.0,85.0
+CoO carbon nanoflakes,Three,2 M KOH,10 mA·cm-2,0.75,476,86.0
+Faradaic CNTs,Three,0.5 M H2SO4,3-100 mV·s-1,0.9,167.5,87.0
+Nanoporous CuO/active carbon,Two,3 M KOH,1-10 A·g-1,1.4,63.0,88.0
+Co(OH)2/graphene,Three,6 M KOH,2-10 A·g-1,0.7,444.0,89.0
+PANI/RGO,Three,1 M H2SO4,0.45 A·g-1,0.8,431,90.0
+PANI/CNF,Three,1 M H2SO4,0.3-10 A·g-1,1.2,478.5,91.0
+PANI/N-doped CNTs,Three,0.1 M Na2SO4,50 mV·s-1,1.0,250,92.0
+PPy/graphene,Two,1 M H2SO4,0.1 A·g-1,1.0,277,94.0
+Ni-Mn-RGO,Two,1 M KOH,2-10 A·g-1,1.6,1354.5,95.0
+3D carbon/CoNi3O4 asymmetric,Two,3 M KOH,1-100 mA·cm-2,1.8,53.0,96.0
+N-doped carbon/PANI asymmetric,Two,1 M Na2SO4,0.5-20 A·g-1,1.1,94.0,97.0
+WO3/PPy nanowire asymmetric,Three,3 M NaOH,0.7-7 mA·cm-2,0.6,525.0,98.0
+Mn-Ni-Co oxide nanowire/RGO,Three,6 M KOH,1-20 A·g-1,0.5,521.0,99.0
+PEDOT/ROG/CNF asymmetric,Two,1 M H2SO4,0.1-2 A·g-1,1.0,55.0,100.0
+MnO2/GO asymmetric,Two,1 M Na2SO4,0.1-2 A·g-1,2.0,62.5,101.0
+RGO/MnO2 asymmetric,Three,1 M Na2SO4,0.1-1 A·g-1,1.5,230.0,102.0
+CNF/GO/PANI,Two,1 M H2SO4,2 A·g-1,0.8,479,103.0
+Ni/graphene/CNT,Two,6 M KOH,0.2-1.0 A·g-1,0.8,102.5,104.0
+Graphene/PANI nanorods,Three,1 M H2SO4,1-8 A·g-1,0.7,1250.5,106.0
+3D CoMoO4/graphene,Three,2 M KOH,1.5-85 A·g-1,0.9,1921.0,108.0
+Graphene/CNT/Mn,Two,2 M Li2SO4,1.9 A·g-1,1.6,1108,109.0
+PPy nanowire/RGO,Two,PVA-H2SO4 gel,1-20 A·g-1,0.8,397.5,110.0
+Porous graphene/PANI,Two,1 M H2SO4,1-8 A·g-1,0.8,661.0,111.0
+Porous graphene/PANI,Two,1 M H2SO4,0.5-10 A·g-1,0.7,373.5,112.0

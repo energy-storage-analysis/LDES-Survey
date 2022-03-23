@@ -1,4 +1,4 @@
-SM_name,energy_type,materials,deltaH_thermochem,type
+SM_name,SM_type,materials,deltaH_thermochem,type
 MgSO4/MgO,thermochemical,MgSO4,0.8048611111111111,sulfates
 MnSO4/MnO,thermochemical,MnSO4,0.65825,sulfates
 FeSO4/FeO,thermochemical,FeSO4,0.6332722222222222,sulfates

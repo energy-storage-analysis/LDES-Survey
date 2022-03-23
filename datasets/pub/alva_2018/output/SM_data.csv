@@ -1,4 +1,4 @@
-SM_name,materials,energy_type,Cp,phase_change_T,sp_latent_heat,mass_density,kth,vol_latent_heat
+SM_name,materials,SM_type,Cp,phase_change_T,sp_latent_heat,mass_density,kth,vol_latent_heat
 NaNO3,NaNO3,latent_thermal,,306.0,0.04777777777777778,2261.0,,388.9
 KNO3,KNO3,latent_thermal,,335.0,0.07388888888888889,2109.0,0.5,561.0
 Mg (NO3)2,Mg(NO3)2,latent_thermal,,426.0,,,,

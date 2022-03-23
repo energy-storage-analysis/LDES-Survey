@@ -1,4 +1,4 @@
-SM_name,sp_latent_heat,phase_change_T,materials,energy_type
+SM_name,sp_latent_heat,phase_change_T,materials,SM_type
 LiF,0.2891666666666667,,LiF,latent_thermal
 NaF,0.22055555555555556,,NaF,latent_thermal
 KF,0.14083333333333334,,KF,latent_thermal

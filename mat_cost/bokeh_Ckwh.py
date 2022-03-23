@@ -20,7 +20,7 @@ df_SMs = df_SMs.loc[df_Ckwh.index]
 
 df = pd.concat([df_Ckwh, df_SMs], axis=1)
 
-# df = df.where(df['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
+# df = df.where(df['SM_type'] != 'Electrostatic (Capacitor)').dropna(subset=['SM_type'])
 
 #%%
 
@@ -34,14 +34,15 @@ energy_densities_line = np.logspace(
 mat_cost_line = energy_densities_line*10
 #%%
 
-energy_types = df['energy_type'].unique()
-energy_types
+SM_types = df['SM_type'].unique()
+
+print(SM_types)
 
 #https://docs.bokeh.org/en/latest/docs/user_guide/plotting.html#userguide-plotting-scatter-markers
-MARKERS = ['circle','square','triangle','star','plus','inverted_triangle','hex','diamond','cross','square_x']
-MARKERS = MARKERS[0:len(energy_types)]
+MARKERS = ['circle','square','triangle','star','plus','inverted_triangle','hex','diamond','square_pin','square_x']
+MARKERS = MARKERS[0:len(SM_types)]
 
-color_category = 'Category10_{}'.format(len(energy_types))
+color_category = 'Category10_{}'.format(len(SM_types))
 
 #%%
 p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',plot_width=1500,plot_height=800)
@@ -50,15 +51,15 @@ p.xaxis.axis_label = 'Energy Density (kWh/kg)'
 p.yaxis.axis_label = 'Material Cost ($/kg)'
 
 p.scatter("specific_energy", "specific_price", source=df,
-          legend_group="energy_type", fill_alpha=0.5, size=20,
-          marker=factor_mark('energy_type', MARKERS, energy_types),
-          color=factor_cmap('energy_type', color_category, energy_types))
+          legend_group="SM_type", fill_alpha=0.5, size=15,
+          marker=factor_mark('SM_type', MARKERS, SM_types),
+          color=factor_cmap('SM_type', color_category, SM_types))
 
 p.line(energy_densities_line, mat_cost_line)
 
 
 p.legend.location = "top_left"
-p.legend.title = "energy_type"
+p.legend.title = "SM_type"
 
 hovertool = HoverTool(tooltips=[
     ('SM name','@SM_name'), 

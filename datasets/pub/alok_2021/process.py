@@ -45,7 +45,7 @@ df = pd.concat([
     df_table13
 ])
 
-df['energy_type'] = 'latent_thermal'
+df['SM_type'] = 'latent_thermal'
 
 df
 
@@ -59,7 +59,7 @@ df_prices.to_csv('output/mat_data.csv')
 
 df_SMs = df.set_index('original_name')[['sp_latent_heat','phase_change_T', 'molecular_formula']]
 #No SM lookup needed as SM are just just the materials
-df_SMs['energy_type'] = 'latent_thermal'
+df_SMs['SM_type'] = 'latent_thermal'
 
 df_SMs = df_SMs.rename({'molecular_formula': 'materials'}, axis=1) #All signle materia molecular form
 

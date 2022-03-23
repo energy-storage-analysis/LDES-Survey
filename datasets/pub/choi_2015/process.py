@@ -4,14 +4,9 @@ import os
 
 import es_utils
 
-tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn)) for fn in os.listdir('tables')}
+tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8') for fn in os.listdir('tables')}
 
-tables['table_1']['type'] = 'EDLC'
-tables['table_1']['energy_type'] = 'electrostatic'
-tables['table_2']['type'] = 'Pseudocapacitor'
-tables['table_2']['energy_type'] = 'chemical'
-tables['table_3']['type'] = 'Hybrid'
-tables['table_3']['energy_type'] = 'electrostatic/chemical'
+
 
 df = pd.concat(tables.values())
 
@@ -50,7 +45,7 @@ df.to_csv('output/processed.csv')
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df_SMs = df[['specific_capacitance', 'deltaV_electrolyte', 'type']]
+df_SMs = df[['specific_capacitance', 'deltaV_electrolyte']]
 
 df_SMs = pd.merge(
     SM_lookup,

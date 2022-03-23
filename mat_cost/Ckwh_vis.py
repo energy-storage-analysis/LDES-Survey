@@ -13,18 +13,18 @@ from bokeh.io import show, output_file, save
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 
-replace_dict = {
-    'Chemical (Thermochemical)': 'Thermochemical',
-    'Electrostatic (EDLC)': 'Supercapacitor (EDLC)',
-    'Electrostatic (Capacitor)': 'Dielectric Capacitor'
-}
-df_all['energy_type'] = df_all['energy_type'].replace(replace_dict)
+# replace_dict = {
+#     'Chemical (Thermochemical)': 'Thermochemical',
+#     'Electrostatic (EDLC)': 'Supercapacitor (EDLC)',
+#     'Electrostatic (Capacitor)': 'Dielectric Capacitor'
+# }
+# df_all['energy_type'] = df_all['energy_type'].replace(replace_dict)
 
-df_all['energy_type'] = df_all['energy_type'].str.replace("(","\n(", regex=False)
+df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 
 
 #%%
-cat_label = 'energy_type'
+cat_label = 'SM_type'
 
 from matplotlib import ticker as mticker
 plt.rcParams.update({'font.size': 20})
@@ -57,7 +57,7 @@ df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
 tips = [('index','@SM_name'),  ('source','@SM_source'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
 
 figure = iqplot.strip(
-    data=df_vis, cats='energy_type', q='C_kwh', 
+    data=df_vis, cats='SM_type', q='C_kwh', 
     q_axis='y',y_axis_type='log' ,
     jitter=True,
     tooltips= tips,

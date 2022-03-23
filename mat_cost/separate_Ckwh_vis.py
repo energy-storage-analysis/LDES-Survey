@@ -10,7 +10,6 @@ mpl.rcParams.update({'font.size': 16})
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 
-# df_all = df_all.where(df_all['energy_type'] != 'Electrostatic (Capacitor)').dropna(subset=['energy_type'])
 
 #%%
 
@@ -30,7 +29,7 @@ mat_cost_line = energy_densities_line*10
 import seaborn as sns
 fig = plt.figure(figsize=(8,6))
 
-sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='energy_type', hue='energy_type')
+sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='SM_type', hue='SM_type')
 plt.xscale('log')
 plt.yscale('log')
 
@@ -53,9 +52,9 @@ plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False, bb
 df_log = df_all[['specific_price','specific_energy']].apply(np.log10)
 # df_log = df_all
 
-df_log['energy_type'] = df_all['energy_type']
+df_log['SM_type'] = df_all['SM_type']
 
-df_stats = df_log.groupby('energy_type').agg({
+df_stats = df_log.groupby('SM_type').agg({
     'specific_price': ['mean','std'],
     'specific_energy': ['mean','std'],
 })
@@ -70,8 +69,8 @@ plt.figure()
 
 #https://stackoverflow.com/questions/26290493/matplotlib-errorbar-plot-using-a-custom-colormap
 
-colors = ["g","g","g","y","y","k","r","r","b"]
-markers = ["o", "^", "s", "o", "^", "o", "o", "^","o"]
+colors = ["g","g","g","y","y","k","r","r","b","r","g","b"]
+markers = ["o", "^", "s", "o", "^", "o", "o", "^","o","x","x","x"]
 
 cdict = {etype: colors[i] for i, etype in enumerate(df_stats.index)}
 mdict = {etype: markers[i] for i, etype in enumerate(df_stats.index)}
@@ -131,17 +130,17 @@ plt.savefig('output/errorbar_agg.png', facecolor='white', transparent=False, bbo
 
 
 plt.figure()
-energy_types = df_all['energy_type'].value_counts().index
-energy_types
+SM_types = df_all['SM_type'].value_counts().index
+SM_types
 
-fig, axes = plt.subplots(1, len(energy_types), figsize=(20,4), sharex=True, sharey=True)
+fig, axes = plt.subplots(1, len(SM_types), figsize=(20,4), sharex=True, sharey=True)
 
-for i, energy_type in enumerate(energy_types):
-    df_sel = df_all.where(df_all['energy_type'] == energy_type).dropna(how='all')
+for i, SM_type in enumerate(SM_types):
+    df_sel = df_all.where(df_all['SM_type'] == SM_type).dropna(how='all')
     axes[i].scatter(df_sel['specific_energy'], df_sel['specific_price'])
     axes[i].set_xscale('log')
     axes[i].set_yscale('log')
-    axes[i].set_title(energy_type)
+    axes[i].set_title(SM_type)
     axes[i].set_xlabel('Energy Density \n(kWh/kg)')
 
     axes[i].plot(energy_densities_line, mat_cost_line, color='gray')
