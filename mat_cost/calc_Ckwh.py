@@ -25,7 +25,7 @@ print("missing single materials: {}".format(missing_mats))
 
 SP_single = [df_mat_data['specific_price'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 mu_totals_single = [df_mat_data['mu'][m] if m in df_mat_data.index else np.nan for m in mats_single]
-price_sources = [df_mat_data['source'][m] if m in df_mat_data.index else np.nan for m in mats_single]
+price_sources = [df_mat_data['sources'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 
 
 df_single = pd.DataFrame({
@@ -62,7 +62,7 @@ for mat_list in mats_comp:
 
         sp = df_mat_data['specific_price'][mat_index]
         mu = df_mat_data['mu'][mat_index]
-        price_source = '{} : {}'.format(i, df_mat_data['source'][mat_index])
+        price_source = '{} : {}'.format(i, df_mat_data['sources'][mat_index])
 
         #really molar prices weighted by mole fraciton
         molar_price = mole_fraction*sp*mu*1000 #($/kg * g/mol * kg/g)

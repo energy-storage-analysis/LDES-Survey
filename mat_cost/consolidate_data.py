@@ -62,12 +62,12 @@ df_mat_data.to_csv('data/mat_data_all.csv')
 from es_utils import join_col_vals
 
 s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
-s_temp.name = 'source'
+s_temp.name = 'sources'
 df_prices_combine = s_temp.to_frame()
 
 df_prices_combine['original_names'] = df_mat_data.groupby('index').apply(join_col_vals,column='original_name') 
 
-df_prices_combine['num_source'] = df_prices_combine['source'].str.split(',').apply(len)
+df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
 df_prices_combine['specific_price_refs'] = df_mat_data.groupby('index')['specific_price'].mean()
 
 
@@ -104,7 +104,7 @@ for idx, row in df_prices_combine.iterrows():
         price_type = 'Ref(s)' 
     else:
         specific_price = row['specific_price_element']
-        price_type = 'Element'
+        price_type = 'Wiki Element'
 
     specific_prices.append(specific_price)
     price_types.append(price_type)
@@ -124,6 +124,11 @@ df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molec
 df_prices_combine['mu'] = df_prices_combine['mu'].apply(lambda x: round(x,7))
 
 #%%
+
+
+df_prices_combine = df_prices_combine[[
+'specific_price','sources','molecular_formula','mu','original_names','price_type','num_source','specific_price_refs','specific_price_element',
+]]
 
 df_prices_combine.to_csv('data/mat_data.csv')
 

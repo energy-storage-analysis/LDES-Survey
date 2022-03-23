@@ -23,7 +23,7 @@ with open('output/missing_data.txt', 'w') as f:
     f.write("\n---Unused Price data---\n\n")
     for idx, row in df_prices.iterrows():
         if idx not in df_physprop.index:
-            f.write("{} ({})".format(idx, row['source']))
+            f.write("{} ({})".format(idx, row['sources']))
             f.write("\n")
     # f.write("\n\n---Price data without property--\n")
     # f.write("\n".join([f for f in df_prices.index if f not in df_physprop.index]))
