@@ -1,29 +1,28 @@
-index,specific_price,original_name,molecular_formula
-Ba(OH)2,0.1,Ba(OH)2 barium,Ba(OH)2
-BaCO3,0.32954545454545453,BaCO3 barium carbonate,BaCO3
-BaO,0.3,barium oxide BaO,BaO
-BaO2,10.0,BaO2 barium oxide,BaO2
-CNT,100.0,Carbon Nanotube,C6
-Ca(NO3)2,0.83,Calcum nitrate Ca(NO3)2,Ca(NO3)2
-Ca(OH)2 ,0.7600555555555555,Ca(OH)2 calcium hydrate,Ca(OH)2 
-Cd(OH)2,10.0,Cd(OH)2 cadmium hydroxide,CdH2O2
-CdCO3,0.5,CdCO3 cadmium carbonate,CCdO3
-CdSO4 ,0.77,CdSO4 cadmium sulphate,CdSO4 
-Cr2O3,1.0,Cr2O3 chromium oxide,Cr2O3
-CuO,17.8,Copper Oxide CuO,CuO
-CuSO4,1.088625,Copper Sulfate CuSO4,CuSO4
-FeSO4,0.09471428571428572,Iron Sulfate FeSO4,FeSO4
-Graphene Oxide,400.0,Graphene Oxide,C7H2O
-Mg(OH)2,0.73375,Mg(OH)2 magnesium hydroxide,Mg(OH)2
-MgCO3,1.003943,MgCO3 magnesium carbonate,MgCO3
-MgO,0.09,MgO magnesium oxide,MgO
-MnO2,177.36375,MnO2 manganese oxide,MnO2
-Ni(OH)2,0.48200000000000004,Ni(OH)2 nickel hydroxide,Ni(OH)2
-NiSO4,3.362034375,NiSO4 nickel sulphate,NiSO4
-PbCO3,0.136,PbCO3 lead carbonate,PbCO3
-PbO,2.7,PbO lead oxide,PbO
-Sb2O3,7.383333333333333,Sb2O3 antimony oxide,Sb2O3
-Sr(OH)2,1.3,Sr(OH)2,Sr(OH)2
-SrCO3,1.4323009090909091,SrCO3 strontium carbonate,SrCO3
-Zn(OH)2,1.0,Zn(OH)2 zinc hydroxide,H2O2Zn
-ZnSO4,0.5632,ZnSO4 zinc sulphate,ZnSO4
+index,specific_price,molecular_formula
+Ba(OH)2,0.1,Ba(OH)2
+BaCO3,0.32954545454545453,BaCO3
+Ca(OH)2 ,0.7600555555555555,Ca(OH)2 
+Ca(NO3)2,0.83,Ca(NO3)2
+CNT,100.0,C6
+Cd(OH)2,10.0,CdH2O2
+CdCO3,0.5,CCdO3
+CdSO4 ,0.77,CdSO4 
+CuO,17.8,CuO
+CuSO4,1.088625,CuSO4
+Cr2O3,1.0,Cr2O3
+Graphene Oxide,400.0,C7H2O
+FeSO4,0.09471428571428572,FeSO4
+Mg(OH)2,0.73375,Mg(OH)2
+MgCO3,1.003943,MgCO3
+MgO,0.09,MgO
+MnO2,177.36375,MnO2
+Ni(OH)2,0.48200000000000004,Ni(OH)2
+NiSO4,3.362034375,NiSO4
+PbCO3,0.136,PbCO3
+PbO,2.7,PbO
+Sb2O3,7.383333333333333,Sb2O3
+Sr(OH)2,1.3,Sr(OH)2
+SrCO3,1.4323009090909091,SrCO3
+Zn(OH)2,1.0,H2O2Zn
+ZnSO4,0.5632,ZnSO4
+BaO,0.3,BaO

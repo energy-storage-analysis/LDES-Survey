@@ -6,53 +6,37 @@ import pandas as pd
 
 
 # %%
-df = pd.read_csv('out_bulk.csv', index_col=0)
+df = pd.read_csv('out.csv')
+df = df.set_index('search_text')
 
-df = df.drop(['CFRP AS4-3501â€“6', 'CFRP IM7-8551â€“7', 'CFRP IM7â€“8552'])
-# df = df.set_index('search_text')
-df
 #%%
-search_lookup = pd.read_csv('keywords_bulk.csv').set_index('search_text')[['index', 'molecular_formula']]
-# df.index= [search_lookup['index'][t] for t in df.index]
+
+search_lookup = pd.read_csv('keywords.csv', index_col=0)[['index', 'molecular_formula']]
+df['index']= [search_lookup['index'][t] for t in df.index]
+df['molecular_formula']= [search_lookup['molecular_formula'][t] for t in df.index]
 # df.index.name = 'index'
-search_lookup
 
-search_lookup
 
-df['index'] = search_lookup.loc[df.index]['index'].values
-df['molecular_formula'] = search_lookup.loc[df.index]['molecular_formula'].values
+df = df.rename({
+    'Price': 'price'
+},axis=1)
 
-df
 
-# #%%
-# df_single = pd.read_csv('single_manual.csv', index_col=0)
+df_single = pd.read_csv('single_manual.csv')
 # df_single.index.name = 'index'
+df_single = df_single[['index','search_text', 'price', 'min_order','molecular_formula']].set_index('search_text')
 
 
+single_data_lookup = df_single.reset_index()[['search_text', 'molecular_formula']]
 
-# single_data_lookup = df_single[['search_text', 'molecular_formula']].reset_index().set_index('search_text')
-# single_data_lookup.index.name = 'keyword'
-# search_lookup = pd.concat([search_lookup, single_data_lookup])
-
-# df_single = df_single[['search_text', 'price', 'min_order', 'molecular_formula']]
-
-# df_single = df_single.reset_index().set_index('search_text')
-
-# df_single
-# #%%
-
-# #%%
-# df = pd.concat([
-#     df,
-#     df_single
-# ])
-
-# df
+search_lookup = pd.concat([search_lookup, single_data_lookup])
 
 
+df = pd.concat([
+    df,
+    df_single
+])
 
-
-# df_keywords = pd.read_csv('keywords_allmats.csv').set_index('search_text')
 #%%
 
 
@@ -71,9 +55,6 @@ unit_lookup = {
 }
 
 df['min_unit'] = [unit_lookup[t] if t in unit_lookup else np.nan for t in df['min_unit'].values]
-df
-
-#%%
 df= df.dropna(subset=['min_unit'])
 
 df['price'] = df['price'].str.extract("\$(\S+)")
@@ -82,10 +63,6 @@ df['price'] = df['price'].str.replace('.00','', regex=False)
 df['price'] = df['price'].str.replace(',','', regex=False)
 df['price'] = df['price'].astype(float)
 
-#%%
-
-
-df
 # %%
 
 import pint
@@ -116,15 +93,17 @@ df
 
 #%%
 
-if not os.path.exists('output'): os.mkdir('output')
-
-
 df = df[[
-'title','specific_price','min_quantity_kg','index','molecular_formula','link','min_quantity','min_unit'
+'Title','specific_price','min_quantity_kg','index','molecular_formula','link','min_quantity','min_unit'
 ]]
 
+
+if not os.path.exists('output'): os.mkdir('output')
 
 df.to_csv('output/extracted.csv')
 
 
-#%%
+
+# %%
+
+# %%
