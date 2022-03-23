@@ -71,13 +71,18 @@ for mat_list in mats_comp:
         molar_prices.append(molar_price)
         price_sources_mat.append(price_source)
 
-    price_sources.append(", ".join(price_sources_mat))
+    if len(mus):
+        price_sources.append(", ".join(price_sources_mat))
 
-    mu_total = sum(mus)
-    mu_totals.append(mu_total)
-    specific_price = sum(molar_prices)/(mu_total*1000)
-    specific_prices.append(specific_price)
+        mu_total = sum(mus)
+        mu_totals.append(mu_total)
 
+        specific_price = sum(molar_prices)/(mu_total*1000)
+        specific_prices.append(specific_price)
+    else:
+        price_sources.append('missing')
+        mu_totals.append(np.nan)
+        specific_prices.append(np.nan)
 
 
 
