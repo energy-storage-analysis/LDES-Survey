@@ -55,9 +55,13 @@ for mat_list in mats_comp:
     mus = []
     molar_prices = []
     price_sources_mat = []
+
+    missing_price_data = False
+
     for i, (mat_index, mole_fraction) in enumerate(mat_list):
         if mat_index not in df_mat_data.index:
             print('missing: {}'.format(mat_index))
+            missing_price_data = True
             continue
 
         sp = df_mat_data['specific_price'][mat_index]
@@ -71,7 +75,7 @@ for mat_list in mats_comp:
         molar_prices.append(molar_price)
         price_sources_mat.append(price_source)
 
-    if len(mus):
+    if not missing_price_data:
         price_sources.append(", ".join(price_sources_mat))
 
         mu_total = sum(mus)
