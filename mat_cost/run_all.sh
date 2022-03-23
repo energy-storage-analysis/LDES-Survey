@@ -6,8 +6,8 @@ echo "Calculating C_kWh"
 python "calc_Ckwh.py"
 
 
-echo "Generate Missing Data Info"
-python "missing_data.py"
+# echo "Generate Missing Data Info"
+# python "missing_data.py"
 
 echo "Generate visualizations"
 python "Ckwh_vis.py"
