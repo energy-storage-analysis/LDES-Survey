@@ -251,10 +251,18 @@ Boron (B),B,latent_thermal,,2350.0,1.2777777777777777,,,,Alok 2021,,,,,,,,,,,,,
 Aluminium (Al),Al,latent_thermal,,660.0,0.1102777777777777,,,,Alok 2021,,,,,,,,,,,,,
 Magnesium (Mg),Mg,latent_thermal,,661.0,0.1077777777777777,,,,Alok 2021,,,,,,,,,,,,,
 Zinc (Zn),Zn,latent_thermal,,419.0,0.0405555555555555,,,,Alok 2021,,,,,,,,,,,,,
+2D TiS2 nanocrystals,TiS2,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,395.0,1.2
+3D Co3O4 nanonetworks,Co3O4,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,797.5,1.5
 3D porous graphene-like carbon,Graphene,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,167.0,2.5
+Au-MnO2 core-shell,"[('Au', 0.5), ('MnO2', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,524.0,2.0
 Carbon nanosheets,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,198.5,3.5
 Carbonization of carbon hydrates,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,140.0,0.8
 Carbonized hollow nanocarbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,171.5,0.9
+Co3O4 nanostructures,Co3O4,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,313.0,0.8
+CoAl/PEDOT nanoarrays,"[('CoAl', 0.5), ('PEDOT', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,548.0,0.6
+CoCl2 nanostructures,CoCl2,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,1962.0,0.45
+CoO/PPy nanowires,"[('CoO', 0.5), ('MnO2', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,1435.0,1.6
+CuO nanowires,CuO,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,110.0,0.45
 GO-activate carbon,Graphene Oxide,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,122.5,3.5
 Graphene-coated CNTs,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,,95.0,3.0
 Graphene/CNF,"[('Graphene', 0.5), ('Graphite', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,,174.0,1.5
@@ -262,6 +270,7 @@ Graphene/CNT,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,
 Graphene/CNT composite fibers,"[('Graphene', 0.5), ('CNT', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,,20.5,0.8
 Graphene/carbon,"[('Graphene', 0.5), ('Graphite', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,,175.0,3.5
 Halogen-containing nanoporous carbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,211.5,1.0
+Hollow NiCo2S4 nanoplates,NiCo2S4,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,334.0,0.5
 Mesoporous carbon nanosheets,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,115.0,2.7
 Mesoporous graphene nanoballs,Graphene,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,206.0,0.8
 N-doped 3D nanoporous carbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,265.0,1.0
@@ -269,10 +278,26 @@ N-doped carbon nanosheets,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,165.0,1.0
 N-doped carbon nanospheres,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,128.0,1.0
 N-doped nanoporous carbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,165.0,1.0
 Nanofibers/mesoporous carbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,85.5,0.8
+Nanoporous Ni(OH)2 films,Ni(OH)2,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,106.0,1.6
 Nanoporous carbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,129.0,3.5
 Nanoporous carbon foams,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,252.0,1.1
+Ni2(CO3)(OH)2 nanosheets,(CO3)(OH)2,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,895.0,0.4
+NiCo2(OH)6 nanotubes,NiCo2(OH)6,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,184.5,0.5
+NiCo2O4 nanosheets,NiCo2O4,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,1693.0,0.5
+NiO nanoblocks,NiO,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,1008.0,0.6
 Oxygen-rich nanoporous carbon,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,253.5,1.0
+PANI nanofibers,PANI,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,106.0,0.8
+PANI nanotubes,PANI,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,686.5,0.5
+PPy nanofibrils,PPy,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,280.0,0.7
+PPy-PANI double-wall,"[('PPy', 0.5), ('PANI', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,529.5,0.6
+PPy-clay core-shell nanoarrays,PPy,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,2046.0,1.2
+PPy-sepiolite nanocomposites,"[('PPy', 0.5), ('sepiolite', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,165.0,1.0
+Polythiophene nanostructures,Polythiophene,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,162.5,4.0
 Porous CNTs,CNT,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,582.0,0.7
 Porous carbon nanowhiskers,Graphite,ELDC,,,,,,,Choi 2015,,,,,,,,,,,,167.5,1.0
 Porous carbon/CNTs,"[('Graphite', 0.5), ('CNT', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,,181.0,0.9
 RGO/CNT,"[('Graphene Oxide', 0.5), ('CNT', 0.5)]",ELDC,,,,,,,Choi 2015,,,,,,,,,,,,216.0,1.0
+V2O5-PPy nanofibers,"[('V2O5', 0.5), ('PPy', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,412.0,2.0
+ZnCo2O4 nanorods/Ni foams,"[('ZnCo2O4', 0.5), ('Ni', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,1207.5,1.0
+α-F-2O3/MnO2 nanowires,"[('Iron Ore', 0.5), ('MnO2', 0.5)]",pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,659.0,0.6
+β-Co(OH)2 nanosheets,Co(OH)2,pseudocapacitor,,,,,,,Choi 2015,,,,,,,,,,,,1805.0,0.5

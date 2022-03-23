@@ -200,10 +200,18 @@ Kevlar-49 Epoxy,0.16588391136801542,,27.1,Kale 2018,Kale 2018,virial,163.3672595
 S-2 Glass Epoxy,0.20655628031443382,,24.815,Kale 2018,Kale 2018,virial,120.13674898785428
 T300-BSL914C,0.21381227282446014,,31.38,Kale 2018,Kale 2018,virial,146.76425999999998
 T300-PR319,0.2069995731967563,,31.38,Kale 2018,Kale 2018,virial,151.59451546391753
+2D TiS2 nanocrystals,0.07899999999999999,111.987,80.0,Li 2017,Choi 2015,pseudocapacitor,1012.6582278481014
+3D Co3O4 nanonetworks,0.24921875,240.795582,17.18,"Alibaba (Bulk), ISE",Choi 2015,pseudocapacitor,68.93542319749217
 3D porous graphene-like carbon,0.1449652777777778,72.066,90.0,Graphene Lab,Choi 2015,ELDC,620.8383233532934
+Au-MnO2 core-shell,0.2911111111111111,283.902613,16740.600379575393,"0 : USGS, 1 : Alibaba (Bulk), Alibaba (Manual), ISE, Li 2017",Choi 2015,pseudocapacitor,57505.87916648036
 Carbon nanosheets,0.33772569444444445,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,9.026042256403748
 Carbonization of carbon hydrates,0.012444444444444447,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,244.95479912642588
 Carbonized hollow nanocarbon,0.019293750000000002,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,157.99553685151182
+Co3O4 nanostructures,0.02782222222222223,240.795582,17.18,"Alibaba (Bulk), ISE",Choi 2015,pseudocapacitor,617.4920127795525
+CoAl/PEDOT nanoarrays,0.0274,,,missing,Choi 2015,pseudocapacitor,
+CoCl2 nanostructures,0.05518125,129.833194,10.494,"Alibaba (Bulk), ISE",Choi 2015,pseudocapacitor,190.17329255861364
+CoO/PPy nanowires,0.5102222222222224,161.868237,19.46576609153484,"0 : ISE, 1 : Alibaba (Bulk), Alibaba (Manual), ISE, Li 2017",Choi 2015,pseudocapacitor,38.15154504002907
+CuO nanowires,0.00309375,79.545,17.8,Alibaba (Manual),Choi 2015,pseudocapacitor,5753.535353535353
 GO-activate carbon,0.20842013888888888,102.092,400.0,Alibaba (Manual),Choi 2015,ELDC,1919.2003331945023
 Graphene-coated CNTs,0.11875,144.132,47.5,"0 : Graphene Lab, 1 : Alibaba (Manual)",Choi 2015,ELDC,400.0
 Graphene/CNF,0.054375,144.132,23.26208159728222,"0 : Graphene Lab, 1 : Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,427.80839719139715
@@ -211,6 +219,7 @@ Graphene/CNT,0.44222222222222224,144.132,47.5,"0 : Graphene Lab, 1 : Alibaba (Ma
 Graphene/CNT composite fibers,0.0018222222222222227,144.132,47.5,"0 : Graphene Lab, 1 : Alibaba (Manual)",Choi 2015,ELDC,26067.0731707317
 Graphene/carbon,0.2977430555555556,144.132,23.26208159728222,"0 : Graphene Lab, 1 : Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,78.12804081652803
 Halogen-containing nanoporous carbon,0.029375,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,103.77281324693979
+Hollow NiCo2S4 nanoplates,0.011597222222222222,,,,Choi 2015,pseudocapacitor,
 Mesoporous carbon nanosheets,0.11643750000000001,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,26.17993678264181
 Mesoporous graphene nanoballs,0.018311111111111115,72.066,90.0,Graphene Lab,Choi 2015,ELDC,4915.04854368932
 N-doped 3D nanoporous carbon,0.03680555555555556,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,82.82245283670854
@@ -218,11 +227,27 @@ N-doped carbon nanosheets,0.022916666666666665,72.066,3.048326389128856,"Alibaba
 N-doped carbon nanospheres,0.017777777777777778,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,171.46835938849816
 N-doped nanoporous carbon,0.022916666666666665,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,133.0178787983501
 Nanofibers/mesoporous carbon,0.007600000000000002,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,401.0955775169547
+Nanoporous Ni(OH)2 films,0.0376888888888889,92.7074,9.160666666666666,"Alibaba (Bulk), Alibaba (Manual), Li 2017",Choi 2015,pseudocapacitor,243.0601415094339
 Nanoporous carbon,0.21947916666666667,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,13.888909983691038
 Nanoporous carbon foams,0.04235000000000001,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,71.97937164412882
+Ni2(CO3)(OH)2 nanosheets,0.01988888888888889,,,,Choi 2015,pseudocapacitor,
+NiCo2(OH)6 nanotubes,0.00640625,,,,Choi 2015,pseudocapacitor,
+NiCo2O4 nanosheets,0.058784722222222224,,,,Choi 2015,pseudocapacitor,
+NiO nanoblocks,0.0504,,,,Choi 2015,pseudocapacitor,
 Oxygen-rich nanoporous carbon,0.035208333333333335,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,86.57968442496158
+PANI nanofibers,0.009422222222222224,,,,Choi 2015,pseudocapacitor,
+PANI nanotubes,0.023836805555555556,,,,Choi 2015,pseudocapacitor,
+PPy nanofibrils,0.019055555555555555,,,,Choi 2015,pseudocapacitor,
+PPy-PANI double-wall,0.026475000000000002,,,missing,Choi 2015,pseudocapacitor,
+PPy-clay core-shell nanoarrays,0.40919999999999995,,,,Choi 2015,pseudocapacitor,
+PPy-sepiolite nanocomposites,0.022916666666666665,,,missing,Choi 2015,pseudocapacitor,
+Polythiophene nanostructures,0.3611111111111111,,,,Choi 2015,pseudocapacitor,
 Porous CNTs,0.03960833333333333,72.066,100.0,Alibaba (Manual),Choi 2015,ELDC,2524.721228697665
 Porous carbon nanowhiskers,0.02326388888888889,72.066,3.048326389128856,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,ELDC,131.03253732374785
 Porous carbon/CNTs,0.020362500000000002,144.132,25.762081597282215,"0 : Alibaba (Bulk), Li 2017, Liu 2016, USGS, 1 : Alibaba (Manual)",Choi 2015,ELDC,1265.172822457076
 RGO/CNT,0.03,174.15800000000002,137.93049989090363,"0 : Alibaba (Manual), 1 : Alibaba (Manual)",Choi 2015,ELDC,4597.683329696788
+V2O5-PPy nanofibers,0.2288888888888889,181.878,8.653480294958076,0 : ISE,Choi 2015,pseudocapacitor,37.806467308069266
+ZnCo2O4 nanorods/Ni foams,0.16770833333333332,58.6934,3.485097873082242,"1 : Alibaba (Bulk), Alok 2021, USGS",Choi 2015,pseudocapacitor,20.78070781465188
+α-F-2O3/MnO2 nanowires,0.03295,246.623043,8.51837639247753,"0 : Alibaba (Bulk), Olympios 2021, USGS, 1 : Alibaba (Bulk), Alibaba (Manual), ISE, Li 2017",Choi 2015,pseudocapacitor,258.52432147124523
+β-Co(OH)2 nanosheets,0.06267361111111111,,,,Choi 2015,pseudocapacitor,
 Al2O3,0.0007779535864978904,101.9600768,0.926759337243702,"Liu 2016, USGS",TODO,dielectric_capacitor,1191.2784429925823

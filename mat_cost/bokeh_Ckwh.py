@@ -42,7 +42,10 @@ print(SM_types)
 MARKERS = ['circle','square','triangle','star','plus','inverted_triangle','hex','diamond','square_pin','square_x']
 MARKERS = MARKERS[0:len(SM_types)]
 
-color_category = 'Category10_{}'.format(len(SM_types))
+if len(SM_types) <= 10:
+    color_category = 'Category10_{}'.format(len(SM_types))
+else:
+    color_category = 'Category20_{}'.format(len(SM_types))
 
 #%%
 p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',plot_width=1500,plot_height=800)
