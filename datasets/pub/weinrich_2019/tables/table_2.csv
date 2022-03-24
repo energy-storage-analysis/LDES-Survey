@@ -1,0 +1,16 @@
+system,product,voltage,specific_energy,energy_density,performance,condition,ref_condition,cycles,ref_cycles
+Fe-air,Fe(OH)2,1.28,1229,9677,453 Wh/kgFe,"[b,c,d,e]",[95],"3500 [b,d]",[100]
+Zn-air,ZnO,1.65,1352,9653,>700 Wh/kgZn,"[a,c,d]",[94],">75 [a,c]",[97]
+K-O2,KO2,2.48,1700,1513,"~19,500 Wh/kgC","[a,c,d]",[101],">200 [a,c]",[101]
+Na-O2,Na2O2,2.33,2716,2634,"~18,300 Wh/kgC","[a,c,d]","[46,47]",">20 [a,c]",[102]
+Na-O2,NaO2,2.27,2646,2567,,,,,
+Ca-O2,CaO2,3.38,4520,6961,tbd,-,-,tbd,"[44,45]"
+Ca-O2,CaO,3.13,4186,6446,,,,,
+Mg-Air,Mg(OH)2,2.77,6098,10610,~2750 Wh/kgCath.,"[a,c,d,f]","[103,104]","<10 [a,c,d]",[51]
+Mg-O2,MgO,2.95,6493,11299,,,,,
+Si-air,Si(OH)4,2.09,8001,18644,~1600 Wh/kgSi,"[a,c,d]",[52],not yet,[50]
+Si-air,SiO2,2.21,8461,19748,,,,,
+Al-air,Al(OH)3,2.71,8091,21837,~2300 Wh/kgAl,"[a,c,d]",[55],limited,"[92,100]"
+Al-O2,Al2O3,~2.1,~6258,~16897,,,,,
+Li-O2,Li2O2,2.96,11430,6104,">11,000 Wh/kgC","[a,c,d]","[41,105]",">250 [a,c]",[98]
+Li-O2,Li2O,2.91,11238,6001,,,,,

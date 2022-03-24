@@ -39,7 +39,8 @@ display_text = {
 'flow_battery': 'Flow Battery', 
 'synfuel': 'Syn. Fuel', 
 'gravitational': 'Gravity',
-'dielectric_capacitor': 'Dielectric \nCapacitor'
+'dielectric_capacitor': 'Dielectric \nCapacitor',
+'metal_air': 'Metal Air'
 }
 
 df_all['display_text'] = [display_text[s] for s in df_all['SM_type'].values]

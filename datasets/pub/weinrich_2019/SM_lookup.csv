@@ -1,0 +1,12 @@
+SM_name,materials,SM_type
+Al-O2,Al,metal_air
+Al-air,Al,metal_air
+Ca-O2,Ca,metal_air
+Fe-air,Fe,metal_air
+K-O2,K,metal_air
+Li-O2,Li,metal_air
+Mg-Air,Mg,metal_air
+Mg-O2,Mg,metal_air
+Na-O2,Na,metal_air
+Si-air,Metallurgical Silicon,metal_air
+Zn-air,Zn,metal_air
