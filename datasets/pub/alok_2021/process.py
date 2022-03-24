@@ -59,11 +59,18 @@ df_prices.to_csv('output/mat_data.csv')
 
 df_SMs = df.set_index('original_name')[['sp_latent_heat','phase_change_T', 'molecular_formula']]
 #No SM lookup needed as SM are just just the materials
-df_SMs['SM_type'] = 'latent_thermal'
+SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df_SMs = df_SMs.rename({'molecular_formula': 'materials'}, axis=1) #All signle materia molecular form
+df_SMs = pd.merge(df_SMs, SM_lookup, on='original_name')
 
-df_SMs.index.name = 'SM_name'
+df_SMs = df_SMs.set_index('SM_name')
+
+# df_SMs['SM_type'] = 'latent_thermal'
+df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','SM_type']]
+# df_SMs = df_SMs.rename({'molecular_formula': 'materials'}, axis=1) #All signle materia molecular form
+
+# df_SMs.index.name = 'SM_name'
+
 
 df_SMs.to_csv('output/SM_data.csv')
 

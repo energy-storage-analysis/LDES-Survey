@@ -1,0 +1,25 @@
+original_name,SM_type,materials,SM_name
+LiF,latent_thermal,LiF,LiF
+NaF,latent_thermal,NaF,NaF
+KF,latent_thermal,KF,KF
+MgF2,latent_thermal,MgF2,MgF2
+CaF2,latent_thermal,CaF2,CaF2
+LiCl,latent_thermal,LiCl,LiCl
+NaCl,latent_thermal,NaCl,NaCl
+KCl,latent_thermal,KCl,KCl
+MgCl2,latent_thermal,MgCl2,MgCl2
+CaCl2,latent_thermal,CaCl2,CaCl2
+Li2CO3,latent_thermal,Li2CO3,Li2CO3
+Na2CO3,latent_thermal,Na2CO3,Na2CO3
+K2CO3,latent_thermal,K2CO3,K2CO3
+Mg2CO3,latent_thermal,Mg2CO3,Mg2CO3
+CaCO3,latent_thermal,CaCO3,CaCO3
+Copper (Cu),latent_thermal,Cu,Cu
+Nickel (Ni),latent_thermal,Ni,Ni
+Chromium (Cr),latent_thermal,Cr,Cr
+Vanadium (V),latent_thermal,V,V
+Silicon (Si),latent_thermal,Metallurgical Silicon,Si
+Boron (B),latent_thermal,B,B
+Aluminium (Al),latent_thermal,Al,Al
+Magnesium (Mg),latent_thermal,Mg,Mg
+Zinc (Zn),latent_thermal,Zn,Zn
