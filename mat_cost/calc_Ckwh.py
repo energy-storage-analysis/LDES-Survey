@@ -55,6 +55,7 @@ for mat_list in mats_comp:
     mus = []
     molar_prices = []
     price_sources_mat = []
+    total_mole_fractions = 0 #Used to normalize mole fractions to 1 at the end
 
     missing_price_data = False
 
@@ -63,6 +64,8 @@ for mat_list in mats_comp:
             print('missing: {}'.format(mat_index))
             missing_price_data = True
             continue
+
+        total_mole_fractions += mole_fraction
 
         sp = df_mat_data['specific_price'][mat_index]
         mu = df_mat_data['mu'][mat_index]
@@ -81,7 +84,7 @@ for mat_list in mats_comp:
         mu_total = sum(mus)
         mu_totals.append(mu_total)
 
-        specific_price = sum(molar_prices)/(mu_total*1000)
+        specific_price = sum(molar_prices)/(total_mole_fractions*mu_total*1000)
         specific_prices.append(specific_price)
     else:
         price_sources.append('missing')
