@@ -94,7 +94,7 @@ df_prices_combine = s_temp.to_frame()
 df_prices_combine['original_names'] = df_mat_data.groupby('index').apply(join_col_vals,column='original_name') 
 
 df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
-df_prices_combine['specific_price_refs'] = df_mat_data.groupby('index')['specific_price'].mean()
+df_prices_combine['specific_price_refs'] = df_mat_data.groupby('index')['specific_price'].median()
 
 
 
