@@ -31,7 +31,7 @@ display_text = {
 'liquid_metal_battery': 'Liquid Metal\n Battery',
 'latent_thermal': "Latent \nThermal", 
 'thermochemical': 'Thermochemical',
-'integrated_battery': 'Conventional\n Battery', 
+'solid_electrode': 'Dual Solid\nElectrode Battery', 
 'pseudocapacitor': 'Pseudocapacitor', 
 'ELDC': 'ELDC', 
 'virial': 'Virial Limited',
