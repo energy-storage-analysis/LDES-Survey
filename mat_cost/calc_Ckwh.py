@@ -11,7 +11,7 @@ df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
 
 #TODO: figure out how to deal with duplicate SM (i.e physical properties). 
 # Also removed duplicate SM (with different electrolytes from choi 2015)
-df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
+# df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
 
 #%%
 
@@ -111,7 +111,6 @@ df_SMs['price_sources'] = df_all['price_sources']
 
 
 
-df_SMs = df_SMs.rename({'source': 'SM_source'}, axis=1)
 
 
 
@@ -205,7 +204,7 @@ dfs = [
 dfs_2 = []
 
 #TODO: improve
-columns_keep = ['mu_total','specific_price','price_sources', 'SM_source','SM_type']
+columns_keep = ['mu_total','specific_price','price_sources', 'SM_sources','SM_type']
 for df in dfs:
     for col in columns_keep:
         df[col] = df_SMs[col]

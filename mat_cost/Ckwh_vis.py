@@ -54,7 +54,7 @@ df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
 #%%
 
 # tips = [('index','@index'), ('entry source','@source'), ('original name', '@original_name'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy'), ("price type",'@price_type')]
-tips = [('index','@SM_name'),  ('source','@SM_source'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
+tips = [('index','@SM_name'),  ('SM_sources','@SM_sources'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
 
 figure = iqplot.strip(
     data=df_vis, cats='SM_type', q='C_kwh', 

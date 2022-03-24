@@ -10,7 +10,7 @@ df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=0)
 
 df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
 #TODO: duplicated in calc_Ckwh
-df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
+# df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
 
 df_SMs = df_SMs[['materials', 'notes']]
 
@@ -69,7 +69,7 @@ hovertool = HoverTool(tooltips=[
     ('Specific Energy (kWh/kg)','@specific_energy'), 
     ('Specific Price ($/kg)','@specific_price'), 
     ('$/kWh','@C_kwh'), 
-    ('source','@SM_source'), 
+    ('SM_sources','@SM_sources'), 
     ('price_sources', '@price_sources'),
     ('materials', '@materials'),
     ('notes', '@notes')

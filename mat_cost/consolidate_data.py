@@ -44,12 +44,39 @@ df_SM.index.name = 'SM_name'
 
 #%%
 
-# SM_cols = ['energy_type','materials','source','C_kwh_orig','type','deltaV','original_name','delta_height','specific_capacitance']
+#We are going to index by both SM_name and SM_type, then average all duplicate values that are floats
 
-# df_SM = df_SM[SM_cols]
+df_SM = df_SM.reset_index().set_index(['SM_name','SM_type'])
+
+#%%
+
+float_cols = []
+for column in df_SM.columns:
+    dtype = df_SM[column].dtype
+    if dtype == float:
+        float_cols.append(column)
 
 
-df_SM.to_csv('data/SM_data.csv')
+float_cols
+other_cols = [c for c in df_SM.columns if c not in float_cols]
+
+other_cols
+
+df_grouped = df_SM[float_cols].groupby(level=[0,1]).mean()
+
+#TODO: the join col vals function should be able to work over multiple columns
+for column in other_cols:
+    df_grouped[column] = df_SM[other_cols].groupby(level=[0,1]).apply(join_col_vals, column=column)
+
+# df_grouped_other = df_SM[other_cols].groupby(level=[0,1]).apply(join_col_vals)
+df_grouped
+
+#TODO: rename others to indicate multiple sources
+# the other columns probably don't have duplciates, would be nice to have some quick way to know if there are duplicate values at all
+df_grouped = df_grouped.rename({'source': 'SM_sources'}, axis=1)
+
+
+df_grouped.to_csv('data/SM_data.csv')
 
 
 #%%
@@ -59,7 +86,6 @@ df_mat_data.to_csv('data/mat_data_all.csv')
 
 #%%
 
-from es_utils import join_col_vals
 
 s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
 s_temp.name = 'sources'
