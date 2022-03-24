@@ -10,6 +10,13 @@ mpl.rcParams.update({'font.size': 16})
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 
+df_all = df_all.where(~df_all['SM_type'].isin([
+    'gravitational',
+    'EDLC',
+    'synfuel',
+    'dielectric_capacitor',
+    'pseudocapacitor'
+])).dropna(subset=['SM_type'])
 
 #%%
 
@@ -63,6 +70,7 @@ df_stats = df_log.groupby('SM_type').agg({
 
 df_stats
 
+
 #%%
 
 plt.figure()
@@ -96,6 +104,18 @@ for etype, row in df_stats.iterrows():
         capsize=3
 
     )
+
+xlim = plt.gca().get_xlim()
+print(xlim)
+
+energy_densities_line = np.logspace(
+    xlim[0],
+    xlim[1],
+    )
+
+
+mat_cost_line = energy_densities_line*10
+
 mat_cost_line_log = np.log10(mat_cost_line)
 energy_densities_line_log = np.log10(energy_densities_line)
 

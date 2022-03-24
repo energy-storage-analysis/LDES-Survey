@@ -23,8 +23,29 @@ df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
 df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 
 
+#%%%
+
+df_all['SM_type'].value_counts().index.values
+
+display_text = {
+'liquid_metal_battery': 'Liquid Metal\n Battery',
+'latent_thermal': "Latent \nThermal", 
+'thermochemical': 'Thermochemical',
+'integrated_battery': 'Conventional\n Battery', 
+'pseudocapacitor': 'Pseudocapacitor', 
+'ELDC': 'ELDC', 
+'virial': 'Virial Limited',
+'sensible_thermal': 'Sensible \nThermal', 
+'flow_battery': 'Flow Battery', 
+'synfuel': 'Syn. Fuel', 
+'gravitational': 'Gravity',
+'dielectric_capacitor': 'Dielectric \nCapacitor'
+}
+
+df_all['display_text'] = [display_text[s] for s in df_all['SM_type'].values]
+
 #%%
-cat_label = 'SM_type'
+cat_label = 'display_text'
 
 from matplotlib import ticker as mticker
 plt.rcParams.update({'font.size': 20})
@@ -39,11 +60,14 @@ sns.stripplot(data=df_all, x=cat_label, y='C_kwh_log', size=10)
 plt.axhline(np.log10(10), linestyle='--', color='gray')
 
 fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-fig.axes[0].yaxis.set_ticks([np.log10(x) for p in range(-1,4) for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
+
+log_ticks = range(int(np.floor(df_all['C_kwh_log'].min())), int(np.ceil(df_all['C_kwh_log'].max())))
+
+fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
 # plt.gca().set_xticks(np.arange(0, len(labels)), labels=labels)
 
 # plt.yscale('log')
-plt.xticks(rotation=45)
+plt.xticks(rotation=90)
 plt.ylabel('Material Energy Cost ($/kWh)')
 plt.tight_layout()
 plt.savefig('output/fig_C_kwh.png')
