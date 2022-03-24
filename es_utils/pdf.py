@@ -21,15 +21,22 @@ def concat_row_to_columns(df: pd.DataFrame, column_rows: int):
 
 from PyPDF2 import PdfFileReader
 
-def get_pdf_size(pdf_path, page):
-    """Get pdf width and height"""
+def get_pdf_size(pdf_path, page, page_rotate):
+    """
+    Get pdf width and height
+    the page rotate can be manually set to 90. Normally this is picked up by looking at the pages "/Rotate" property but this doesn't always seem to work. 
+    """
     input1 = PdfFileReader(open(pdf_path, 'rb'))
     media_box = input1.getPage(page).mediaBox
+    print(media_box)
     pdf_width = float(media_box[2])-float(media_box[0])
     pdf_height = float(media_box[3])-float(media_box[1])
 
-    rotate = input1.getPage(page).get("/Rotate")
-    if rotate == 90:
+
+    if page_rotate == None:
+        page_rotate = input1.getPage(page).get("/Rotate")
+
+    if page_rotate == 90:
         pdf_width, pdf_height = pdf_height, pdf_width
         
     return pdf_width, pdf_height
@@ -53,7 +60,11 @@ def extract_dfs(pdf_path, table_settings):
         print("table on page {}".format(setting['template']['page']))
         template = setting['template']
         page = template['page']
-        pdf_width, pdf_height = get_pdf_size(pdf_path, page + 1) #assumes all heights are same as page 1
+
+        page_rotate = setting['page_rotate'] if 'page_rotate' in setting else None
+
+        pdf_width, pdf_height = get_pdf_size(pdf_path, page + 1, page_rotate) #assumes all heights are same as page 1
+
 
         table_area = extract_table_area(template, pdf_height)
         camelot_kwargs = setting['camelot_kwargs']
