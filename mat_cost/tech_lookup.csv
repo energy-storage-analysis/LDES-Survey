@@ -1,0 +1,15 @@
+name,long_name,energy_type
+liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled E/P)
+latent_thermal,Latent \n Thermal,Thermal
+thermochemical,Thermochemical,Chemical \n(Decoupled E/P)
+solid_electrode,Dual Solid \nElectrode Battery,Chemical \n(Coupled E/P)
+pseudocapacitor,Pseudocapacitor,Chemical \n(Coupled E/P)
+ELDC,ELDC,Electrostatic
+virial,Virial Limited,Virial Limited
+sensible_thermal,Sensible \nThermal,Thermal
+flow_battery,Flow Battery,Chemical \n(Decoupled E/P)
+synfuel,Syn. Fuel,Chemical \n(Decoupled E/P)
+gravitational,Gravity,Gravitational
+dielectric_capacitor,Dielectric \nCapacitor,Electrostatic
+metal_air,Metal Air,Chemical \n(Coupled E/P)
+hybrid_flow,Hybrid Flow,Chemical \n(Coupled E/P)

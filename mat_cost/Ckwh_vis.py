@@ -12,39 +12,14 @@ from bokeh.io import show, output_file, save
 # %%
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
-
-# replace_dict = {
-#     'Chemical (Thermochemical)': 'Thermochemical',
-#     'Electrostatic (EDLC)': 'Supercapacitor (EDLC)',
-#     'Electrostatic (Capacitor)': 'Dielectric Capacitor'
-# }
-# df_all['energy_type'] = df_all['energy_type'].replace(replace_dict)
+display_text = pd.read_csv('tech_lookup.csv', index_col=0)
 
 df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 
+df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
+df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 
-#%%%
-
-df_all['SM_type'].value_counts().index.values
-
-display_text = {
-'liquid_metal_battery': 'Liquid Metal\n Battery',
-'latent_thermal': "Latent \nThermal", 
-'thermochemical': 'Thermochemical',
-'solid_electrode': 'Dual Solid\nElectrode Battery', 
-'pseudocapacitor': 'Pseudocapacitor', 
-'ELDC': 'ELDC', 
-'virial': 'Virial Limited',
-'sensible_thermal': 'Sensible \nThermal', 
-'flow_battery': 'Flow Battery', 
-'synfuel': 'Syn. Fuel', 
-'gravitational': 'Gravity',
-'dielectric_capacitor': 'Dielectric \nCapacitor',
-'metal_air': 'Metal Air',
-'hybrid_flow': 'Hybrid Flow'
-}
-
-df_all['display_text'] = [display_text[s] for s in df_all['SM_type'].values]
+df_all = df_all.sort_values('C_kwh').sort_values('energy_type')
 
 #%%
 cat_label = 'display_text'
@@ -54,10 +29,10 @@ plt.rcParams.update({'font.size': 20})
 
 df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
 
-fig = plt.figure(figsize = (13,8))
+fig = plt.figure(figsize = (16,8))
 # plt.violinplot(dataset=df_singlemat['C_kwh'].values)
 # sns.violinplot(data=df_singlemat, x='cat_label', y='C_kwh_log')
-sns.stripplot(data=df_all, x=cat_label, y='C_kwh_log', size=10)
+sns.stripplot(data=df_all, x=cat_label, y='C_kwh_log', size=10, hue='energy_type')
 
 plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -71,6 +46,13 @@ fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace
 # plt.yscale('log')
 plt.xticks(rotation=90)
 plt.ylabel('Material Energy Cost ($/kWh)')
+
+
+plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
+
+plt.xlabel('Technology')
+
+
 plt.tight_layout()
 plt.savefig('output/fig_C_kwh.png')
 # %%
@@ -83,7 +65,7 @@ df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
 tips = [('index','@SM_name'),  ('SM_sources','@SM_sources'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
 
 figure = iqplot.strip(
-    data=df_vis, cats='SM_type', q='C_kwh', 
+    data=df_vis, cats='SM_type', q='C_kwh', color_column='energy_type',
     q_axis='y',y_axis_type='log' ,
     jitter=True,
     tooltips= tips,
