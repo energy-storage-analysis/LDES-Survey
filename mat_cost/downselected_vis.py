@@ -68,7 +68,7 @@ plt.yscale('log')
 
 
 plt.figure()
-df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='viridis', sharex=False)
+df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
 
 
 ax = plt.gca()
@@ -85,9 +85,12 @@ for name, row in df_latent_ds.iterrows():
     ax.annotate(name, (x,y))
 
 plt.yscale('log')
+plt.ylim(0.8,10)
 
 plt.xlabel('Phase Change Temperature (K)')
 plt.ylabel("Material capital cost ($/kWh)")
+
+plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
 
 plt.savefig('ds_output/latent.png')
 # %%
@@ -111,7 +114,10 @@ plt.figure()
 x_str='kth'
 y_str='C_kwh'
 
-df_sens_ds.plot.scatter(y=y_str, x=x_str, c='Cp', cmap='viridis', sharex=False)
+#TODO: https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
+df_sens_ds.loc['Iron Ore','kth'] = 5
+
+df_sens_ds.plot.scatter(y=y_str, x=x_str, c='Cp', cmap='jet', sharex=False)
 
 
 ax = plt.gca()
@@ -137,6 +143,10 @@ plt.xscale('log')
 
 plt.xlabel('Thermal Conductivity (W/m/K)')
 plt.ylabel("Material capital cost ($/kWh)")
+
+plt.ylim(0,4)
+
+plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
 
 plt.savefig('ds_output/sensible.png')
 # %%

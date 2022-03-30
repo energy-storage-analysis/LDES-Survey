@@ -1,15 +1,15 @@
 name,long_name,energy_type
-liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled E/P)
+liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled)
 latent_thermal,Latent \n Thermal,Thermal
-thermochemical,Thermochemical,Chemical \n(Decoupled E/P)
-solid_electrode,Dual Solid \nElectrode Battery,Chemical \n(Coupled E/P)
-pseudocapacitor,Pseudocapacitor,Chemical \n(Coupled E/P)
+thermochemical,Thermochemical,Chemical \n(Decoupled)
+solid_electrode,Dual Solid \nElectrode Battery,Chemical \n(Coupled)
+pseudocapacitor,Pseudocapacitor,Chemical \n(Coupled)
 ELDC,ELDC,Electrostatic
 virial,Virial Limited,Virial Limited
 sensible_thermal,Sensible \nThermal,Thermal
-flow_battery,Flow Battery,Chemical \n(Decoupled E/P)
-synfuel,Syn. Fuel,Chemical \n(Decoupled E/P)
+flow_battery,Flow Battery,Chemical \n(Decoupled)
+synfuel,Syn. Fuel,Chemical \n(Decoupled)
 gravitational,Gravity,Gravitational
 dielectric_capacitor,Dielectric \nCapacitor,Electrostatic
-metal_air,Metal Air,Chemical \n(Coupled E/P)
-hybrid_flow,Hybrid Flow,Chemical \n(Coupled E/P)
+metal_air,Metal Air,Chemical \n(Coupled)
+hybrid_flow,Hybrid Flow,Chemical \n(Coupled)

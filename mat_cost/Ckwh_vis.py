@@ -12,6 +12,8 @@ from bokeh.io import show, output_file, save
 # %%
 
 df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
+df_all = df_all.dropna(subset=['C_kwh'])
+
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
 
 df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
@@ -51,7 +53,7 @@ plt.ylabel('Material Energy Cost ($/kWh)')
 plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
 
 plt.xlabel('Technology')
-
+plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_all)))
 
 plt.tight_layout()
 plt.savefig('output/fig_C_kwh.png')
