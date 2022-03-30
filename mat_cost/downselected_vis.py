@@ -150,3 +150,42 @@ plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
 
 plt.savefig('ds_output/sensible.png')
 # %%
+
+
+df_tc = df.where(df['SM_type'] == 'thermochemical').dropna(subset=['SM_type'])
+df_tc = df_tc.dropna(axis=1,how='all')
+
+
+df_tc = df_tc.where(df_tc['C_kwh'] < 10).dropna(how='all')
+
+df_tc
+
+#%%
+import seaborn as sns
+
+plt.figure()
+x_str='temperature'
+y_str='C_kwh'
+
+
+sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='type', legend=True)
+
+
+ax = plt.gca()
+for name, row in df_tc.iterrows():
+    x = row[x_str]
+    y = row[y_str]
+    name = row['materials']
+
+    ax.annotate(name, (x,y))
+
+plt.xlim(0,2000)
+plt.gca().get_legend().set_bbox_to_anchor([0,0,1.3,1])
+
+plt.yscale('log')
+plt.xlabel('Reaction Temperature (C)')
+plt.ylabel("Material capital cost ($/kWh)")
+plt.tight_layout()
+
+plt.savefig('ds_output/thermochem.png')
+# %%
