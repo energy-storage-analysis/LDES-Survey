@@ -89,13 +89,16 @@ s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals)
 s_temp.name = 'sources'
 df_prices_combine = s_temp.to_frame()
 
+df_prices_combine['specific_prices'] = df_mat_data['specific_price'].apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals)
 
 df_prices_combine['original_names'] = df_mat_data.groupby('index')['original_name'].apply(join_col_vals) 
 
 df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
-df_prices_combine['specific_price_refs'] = df_mat_data.groupby('index')['specific_price'].median()
+df_prices_combine['specific_price'] = df_mat_data.groupby('index')['specific_price'].median()
+df_prices_combine['specific_price_std'] = df_mat_data.groupby('index')['specific_price'].std()
 
-
+df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_std']/df_prices_combine['specific_price'] 
+df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].apply(lambda x:round(x,2)) 
 
 # df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
@@ -118,27 +121,7 @@ df_prices_combine
 #%%
 
 
-#TODO: Logic to get one price, didn't like averaging reference and elemntal price...but this isn't great eithger
 
-specific_prices = []
-price_types = []
-
-for idx, row in df_prices_combine.iterrows():
-    if row['specific_price_refs'] == row['specific_price_refs']:
-        specific_price = row['specific_price_refs']
-        price_type = 'Ref(s)' 
-    else:
-        specific_price = row['specific_price_element']
-        price_type = 'Wiki Element'
-
-    specific_prices.append(specific_price)
-    price_types.append(price_type)
-
-df_prices_combine['specific_price'] = specific_prices
-df_prices_combine['price_type'] = price_types
-    
-#TODO: revisit. Was having issues with output changing with rounding errors
-df_prices_combine['specific_price_refs'] = df_prices_combine['specific_price_refs'].apply(lambda x: round(x,7))
 
 #%%
 #Should only be one molecular formula
@@ -150,9 +133,34 @@ df_prices_combine['mu'] = df_prices_combine['mu'].apply(lambda x: round(x,7))
 
 #%%
 
+import ast
+mats = df_grouped['materials']
+
+mats_single = mats.where(~mats.str.contains('[', regex=False)).dropna()
+mats_comp = mats.where(mats.str.contains('[', regex=False)).dropna()
+mats_comp = mats_comp.apply(ast.literal_eval)
+
+
+
+num_sms = []
+for idx in df_prices_combine.index:
+    n = 0 
+    if idx in mats_single.index:
+        n = n+1
+    for comp_list in mats_comp:
+        mats = [t[0] for t in comp_list]
+        if idx in mats:
+            n = n+1
+
+    num_sms.append(n)
+
+df_prices_combine['num_SMs'] = num_sms
+
+#%%
+
 
 df_prices_combine = df_prices_combine[[
-'specific_price','sources','molecular_formula','mu','original_names','price_type','num_source','specific_price_refs','specific_price_element',
+'specific_price', 'specific_price_std','specific_price_rat','sources','specific_prices','num_SMs','molecular_formula','mu','original_names','num_source','specific_price_element',
 ]]
 
 df_prices_combine.to_csv('data/mat_data.csv')
