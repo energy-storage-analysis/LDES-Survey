@@ -66,10 +66,8 @@ df_grouped = df_SM[float_cols].groupby(level=[0,1]).mean()
 
 #TODO: the join col vals function should be able to work over multiple columns
 for column in other_cols:
-    df_grouped[column] = df_SM[other_cols].groupby(level=[0,1]).apply(join_col_vals, column=column)
+    df_grouped[column] = df_SM[other_cols].groupby(level=[0,1])[column].apply(join_col_vals)
 
-# df_grouped_other = df_SM[other_cols].groupby(level=[0,1]).apply(join_col_vals)
-df_grouped
 
 #TODO: rename others to indicate multiple sources
 # the other columns probably don't have duplciates, would be nice to have some quick way to know if there are duplicate values at all
@@ -87,11 +85,12 @@ df_mat_data.to_csv('data/mat_data_all.csv')
 #%%
 
 
-s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
+s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals)
 s_temp.name = 'sources'
 df_prices_combine = s_temp.to_frame()
 
-df_prices_combine['original_names'] = df_mat_data.groupby('index').apply(join_col_vals,column='original_name') 
+
+df_prices_combine['original_names'] = df_mat_data.groupby('index')['original_name'].apply(join_col_vals) 
 
 df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
 df_prices_combine['specific_price_refs'] = df_mat_data.groupby('index')['specific_price'].median()
@@ -143,7 +142,7 @@ df_prices_combine['specific_price_refs'] = df_prices_combine['specific_price_ref
 
 #%%
 #Should only be one molecular formula
-df_prices_combine['molecular_formula'] = df_mat_data.groupby('index').apply(join_col_vals, column='molecular_formula')
+df_prices_combine['molecular_formula'] = df_mat_data.groupby('index')['molecular_formula'].apply(join_col_vals)
 
 from es_utils.chem import get_molecular_mass
 df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molecular_mass)
