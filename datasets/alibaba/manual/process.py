@@ -5,7 +5,7 @@ df = pd.read_csv('output/extracted_edit.csv', index_col=0)
 df
 #%%
 df_single = pd.read_csv('single_manual.csv', index_col=0)
-isin_single = pd.Series(df.index.isin(df_single.index), index=df.index)
+isin_single = pd.Series(df['index'].isin(df_single.index), index=df.index)
 
 df_t = df.where((df['min_quantity_kg'] > 99) | isin_single).dropna(how='all')
 

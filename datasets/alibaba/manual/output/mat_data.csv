@@ -1,6 +1,8 @@
 index,specific_price,molecular_formula
 Ba(OH)2,0.1,Ba(OH)2
 BaCO3,0.32954545454545453,BaCO3
+BaO2,10.0,BaO2
+Ba,120.0,Ba
 Ca(OH)2 ,0.7600555555555555,Ca(OH)2 
 Ca(NO3)2,0.83,Ca(NO3)2
 CNT,100.0,C6
