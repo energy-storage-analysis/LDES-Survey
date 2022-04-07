@@ -160,7 +160,7 @@ df_prices_combine['num_SMs'] = num_sms
 
 
 df_prices_combine = df_prices_combine[[
-'specific_price', 'specific_price_std','specific_price_rat','sources','specific_prices','num_SMs','molecular_formula','mu','original_names','num_source','specific_price_element',
+'specific_price', 'specific_price_std','specific_price_rat','num_SMs','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
 ]]
 
 df_prices_combine.to_csv('data/mat_data.csv')
