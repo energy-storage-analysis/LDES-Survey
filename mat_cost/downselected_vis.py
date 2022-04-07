@@ -2,6 +2,9 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import re
+
+from adjustText import adjust_text
 
 df_SM = pd.read_csv('data/SM_data.csv', index_col=0)
 df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=0)
@@ -13,8 +16,8 @@ df_SM = df_SM.drop(common_columns, axis=1)
 # %%
 df = pd.concat([df_SM, df_Ckwh], axis=1)
 
-df.info()
 
+df.index = [re.sub('(\d)',r'_\1', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 #%%
 
 df['SM_type'].value_counts()
@@ -24,7 +27,6 @@ df_latent = df.where(df['SM_type'] == 'latent_thermal').dropna(subset=['SM_type'
 
 df_latent = df_latent.dropna(axis=1, how='all')
 
-df_latent.info()
 
 #%%
 
@@ -42,28 +44,17 @@ df_latent_ds.plot.scatter(y='sp_latent_heat', x='phase_change_T', c='C_kwh', cma
 
 
 ax = plt.gca()
+texts = []
 for name, row in df_latent_ds.iterrows():
     x = row['phase_change_T']
     y = row['sp_latent_heat']
     name = name.split(' ')[0]
 
-    if x > 1200:
-        x = x-100
-        y = y+0.005
-    else:
-        x = x+50
-
-    if y > 0.2:
-        y = y
-    else:
-        y = y+0.001
-
-    if name == 'Si/Mg/Ca':
-        y = y - 0.005
-
-    ax.annotate(name, (x,y))
+    txt = ax.text(x, y, "${}$".format(name))
+    texts.append(txt)
 
 plt.yscale('log')
+adjust_text(texts)
 # %%
 
 
@@ -72,17 +63,15 @@ df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cma
 
 
 ax = plt.gca()
+texts = []
 for name, row in df_latent_ds.iterrows():
     x = row['phase_change_T']
     y = row['C_kwh']
     name = name.split(' ')[0]
 
-    if x > 1200:
-        x = x-100
-    else:
-        x = x+50
+    txt = ax.text(x, y, "${}$".format(name))
+    texts.append(txt)
 
-    ax.annotate(name, (x,y))
 
 plt.yscale('log')
 plt.ylim(0.8,10)
@@ -92,13 +81,14 @@ plt.ylabel("Material capital cost ($/kWh)")
 
 plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
 
+adjust_text(texts)
+
 plt.savefig('ds_output/latent.png')
 # %%
 df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
 
 df_sens = df_sens.dropna(axis=1, how='all')
 
-df_sens.info()
 # %%
 
 # df_latent.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet')
@@ -121,22 +111,14 @@ df_sens_ds.plot.scatter(y=y_str, x=x_str, c='Cp', cmap='jet', sharex=False)
 
 
 ax = plt.gca()
+texts = []
 for name, row in df_sens_ds.iterrows():
     x = row[x_str]
     y = row[y_str]
-    name = name[0:24]
+    name = name[0:25]
 
-    
-    if x > 1:
-        x = x-np.log(x*1.2)
-        y=y+ 0.1
-
-    if name=='Quartzite':
-        y = y +0.1
-    # else:
-    #     x = x+50
-
-    ax.annotate(name, (x,y))
+    txt= ax.text(x, y, "${}$".format(name))
+    texts.append(txt)
 
 # plt.yscale('log')
 plt.xscale('log')
@@ -147,6 +129,8 @@ plt.ylabel("Material capital cost ($/kWh)")
 plt.ylim(0,4)
 
 plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
+
+adjust_text(texts)
 
 plt.savefig('ds_output/sensible.png')
 # %%
@@ -172,20 +156,24 @@ sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='type', legend=True)
 
 
 ax = plt.gca()
+texts = []
 for name, row in df_tc.iterrows():
     x = row[x_str]
     y = row[y_str]
-    name = row['materials']
+    # name = row['materials']
 
-    ax.annotate(name, (x,y))
+    txt = ax.text(x,y,"${}$".format(name))
+    texts.append(txt)
 
 plt.xlim(0,2000)
 plt.gca().get_legend().set_bbox_to_anchor([0,0,1.3,1])
-
 plt.yscale('log')
 plt.xlabel('Reaction Temperature (C)')
 plt.ylabel("Material capital cost ($/kWh)")
 plt.tight_layout()
+
+adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+
 
 plt.savefig('ds_output/thermochem.png')
 # %%

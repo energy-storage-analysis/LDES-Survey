@@ -14,5 +14,6 @@ python "Ckwh_vis.py"
 python "separate_Ckwh_vis.py"
 python "bokeh_Ckwh.py"
 python "eda.py"
+python "downselected_vis.py"
 
 echo "Done"
