@@ -1,0 +1,118 @@
+original_name,material_name,molecular_formula,index_use
+Alumina (Averaged),Alumina,Al2O3,molecular_formula
+Alumina - Shandong,Alumina,Al2O3,molecular_formula
+Alumina - Henan,Alumina,Al2O3,molecular_formula
+Alumina - Shanxi,Alumina,Al2O3,molecular_formula
+Alumina - Guizhou,Alumina,Al2O3,molecular_formula
+Alumina - Guangxi,Alumina,Al2O3,molecular_formula
+Alumina - Lianyungang,Alumina,Al2O3,molecular_formula
+Alumina - Bayuquan,Alumina,Al2O3,molecular_formula
+Australian Alumina FOB Price,Alumina,Al2O3,molecular_formula
+SMM A00 Aluminum Ingot,Aluminum,Al,molecular_formula
+SMM A00 Aluminum Ingot Premium and Discount,Aluminum,Al,
+SMM Aluminum Ingot - Gong Yi,Aluminum,Al,molecular_formula
+SMM Aluminum Premium - Gong Yi,Aluminum,Al,
+Aluminum Ingot - Fo Shan,Aluminum,Al,molecular_formula
+SMM Aluminum Premium - Foshan,Aluminum,Al,
+Low Carbon Aluminum,Aluminum,Al,molecular_formula
+Aluminum Ingot - Wu Xi,Aluminum,Al,molecular_formula
+Aluminum Ingot - Hang Zhou,Aluminum,Al,molecular_formula
+Aluminum Ingot - Chong Qing,Aluminum,Al,molecular_formula
+Aluminum Ingot - Shen Yang,Aluminum,Al,molecular_formula
+Aluminum Ingot - Tian Jin,Aluminum,Al,molecular_formula
+Aluminum Ingot - Lin Yi,Aluminum,Al,molecular_formula
+Yangshan Aluminium Premium (Bill of Lading),Aluminum,Al,
+Yangshan Aluminium Premium (Warehouse Warrant),Aluminum,Al,
+High purity aluminium(99.99%),Aluminum,Al,molecular_formula
+High purity aluminium(99.996%),Aluminum,Al,molecular_formula
+Bauxite(6.0≤Al/Si<7.0)Shanxi,Bauxite,AlHO2,material_name
+Bauxite(4.5≤Al/Si<5.5)Shanxi,Bauxite,AlHO2,material_name
+Bauxite(4.5≤Al/Si<5.5)Henan,Bauxite,AlHO2,material_name
+Bauxite(6.0≤Al/Si<7.0)Henan,Bauxite,AlHO2,material_name
+Bauxite(6.5≤Al/Si<7.5)Guangxi,Bauxite,AlHO2,material_name
+Bauxite(5.5≤Al/Si<6.5)Guangxi,Bauxite,AlHO2,material_name
+Bauxite(6.5≤Al/Si<7.5)Guizhou,Bauxite,AlHO2,material_name
+Bauxite(5.5≤Al/Si<6.5)Guizhou,Bauxite,AlHO2,material_name
+Australia Bauxite CIF,Bauxite,AlHO2,material_name
+Guinea Bauxite CIF,Bauxite,AlHO2,material_name
+Indonesia Bauxite CIF,Bauxite,AlHO2,material_name
+Malaysia Bauxite CIF,Bauxite,AlHO2,material_name
+SMM Copper Cathode,Copper,Cu,molecular_formula
+SMM Copper Cathode Premium/Discount,Copper,Cu,
+SMM Copper Cathode Premium/Discount,Copper,Cu,
+Standard-Grade Copper,Copper,Cu,molecular_formula
+Standard-Quality Copper Premiums/Discounts,Copper,Cu,
+High-Grade Copper,Copper,Cu,molecular_formula
+High-Quality Copper Premiums/Discounts,Copper,Cu,
+Guixi Copper,Copper,Cu,molecular_formula
+Guixi Copper Premiums/Discounts,Copper,Cu,
+Low-Quality Copper,Copper,Cu,molecular_formula
+Low-Quality Copper Premiums/Discounts,Copper,Cu,
+Yangshan Copper Premium(Bill of Lading),Copper,Cu,
+Yangshan Copper Premium(Warehouse Warrant),Copper,Cu,
+SMM bonded copper spot price,Copper,Cu,molecular_formula
+Cadmium Ingot,Cadmium,Cd,molecular_formula
+Cadmium Ingot,Cadmium,Cd,molecular_formula
+Molybdenum Fine (second grade),Molybdenum,Mo,molecular_formula
+Titanium Sponge,Titanium,Ti,molecular_formula
+Titanium tetrachloride(99.9%),Titanium tetrachloride,TiCl4,molecular_formula
+High Titanium Slag(TiO2≥90%),Titanium Slag,TiO2,molecular_formula
+Titanium Concentrate(TiO2≥46%),Titanium Concentrate,TiO2,molecular_formula
+Titanium Concentrate(TiO2≥47%),Titanium Concentrate,TiO2,molecular_formula
+Anatase Titanium Dioxide,Anatase Titanium Dioxide,TiO2,molecular_formula
+Rutile Titanium Dioxide,Rutile Titanium Dioxide,TiO2,molecular_formula
+Zirconium Sponge,Zirconium Sponge,Zn,molecular_formula
+Niobium Pentoxide 99.5%,Niobium Pentoxide,Nb2O5,molecular_formula
+Niobium,Niobium,Nb,molecular_formula
+Ferroniobium 60A,Ferroniobium,FeNb,molecular_formula
+Ferroniobium 60B,Ferroniobium,FeNb,molecular_formula
+Tantalum Pentoxide(Ta2O5≥99.5%),Tantalum Pentoxide,Ta2O5,molecular_formula
+Tantalum Pentoxide(Ta2O5≥99.95%),Tantalum Pentoxide,Ta2O5,molecular_formula
+Tantalum Powders for metallurgy(Ta≥99.95%),Tantalum,Ta,molecular_formula
+Vanadium,Vanadium,V,molecular_formula
+Vanadium pentoxide( Flake V2O5>=98%),Vanadium pentoxide,V2O5,molecular_formula
+50 Ferrovanadium,Ferrovanadium,FeV,molecular_formula
+Vanadium nitrogen alloy,Vanadium nitride,VN,molecular_formula
+Rhenium,Rhenium,Re,molecular_formula
+Molybdenum Fines (first grade),Molybdenum,Mo,molecular_formula
+Molybdenum,Molybdenum,Mo,molecular_formula
+Molybdenum strip,Molybdenum,Mo,molecular_formula
+"Molybdenum ores and concentrates, roasted 45%",Molybdenum ore,MoO3,molecular_formula
+"Molybdenum ores and concentrates, roasted 50%",Molybdenum ore,MoO3,molecular_formula
+Molybdenum oxides and hydroxides,Molybdenum oxide,MoO3,molecular_formula
+"Molybdenum Oxide, FOB, China",Molybdenum oxide,MoO3,molecular_formula
+Ferro-molybdenum 60%,Ferro-molybdenum,FeMo,molecular_formula
+High-purity Molybdenum Trioxide,Molybdenum oxide,MoO3,molecular_formula
+Ammoinum Tetramolybdate,Ammonium tetrathiomolybdate,H8N2MoS4,molecular_formula
+Hexaammonium molybdate,Ammonium heptamolybdate,(NH4)6Mo7O24,molecular_formula
+Brushed molybdenum strip,molybdenum,Mo,molecular_formula
+SMM Lead,Lead,Pb,molecular_formula
+Lead -Tianjin,Lead,Pb,molecular_formula
+Lead - Henan,Lead,Pb,molecular_formula
+Lead - Guangdong,Lead,Pb,molecular_formula
+Calcium 98.5%,Calcium,Ca,molecular_formula
+Calcium 99%,Calcium,Ca,molecular_formula
+Potassium,Potassium,K,molecular_formula
+Sodium,Sodium,Na,molecular_formula
+Beryllium,Beryllium,Be,molecular_formula
+Cesium(Cs≥99.5%),Cesium,Cs,molecular_formula
+Cesium Carbonate(Cs2CO3≥99%),Cesium Carbonate,Cs2CO3,molecular_formula
+Rubidium(Rb≥99.5%),Rubidium,Rb,molecular_formula
+Rubidium Carbonate(Rb2CO3≥99%),Rubidium Carbonate,Rb2CO3,molecular_formula
+SMM Nickel,Nickel,Ni,molecular_formula
+JinChuan Nickel,Nickel,Ni,molecular_formula
+JinChuan Nickel premium/discount,Nickel,Ni,
+Import Nickel,Nickel,Ni,molecular_formula
+Import Nickel premium/discount,Nickel,Ni,
+Nickel Briquettes,Nickel,Ni,molecular_formula
+"Nickel Briquettes contract premium/discount ",Nickel,Ni,
+Lithium Metal,Lithium,Li,molecular_formula
+Arsenic Metal,Arsenic,As,molecular_formula
+Lithium Carbonate (99.5% Battery Grade),Lithium Carbonate,Li2CO3,molecular_formula
+SMM Tin Ingot,Tin,Sn,molecular_formula
+Zinc-Qilin (Guangdong),Zinc,Zn,molecular_formula
+Zinc-Shuangyan,Zinc,Zn,molecular_formula
+Zinc-Ibis,Zinc,Zn,molecular_formula
+Zinc-Nanhua,Zinc,Zn,molecular_formula
+Zinc-HX,Zinc,Zn,molecular_formula
+Zinc-Torch,Zinc,Zn,molecular_formula

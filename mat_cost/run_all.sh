@@ -13,5 +13,6 @@ echo "Generate visualizations"
 python "Ckwh_vis.py"
 python "separate_Ckwh_vis.py"
 python "bokeh_Ckwh.py"
+python "eda.py"
 
 echo "Done"

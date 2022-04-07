@@ -110,9 +110,8 @@ df.to_csv('output/processed.csv', index=False)
 df_combine = df.groupby('index')[['specific_price']].mean()
 
 from es_utils import join_col_vals
-df_combine['original_name']= df.groupby('index').apply(join_col_vals, column='original_name')
-
-df_combine['molecular_formula']= df.groupby('index').apply(join_col_vals, column='molecular_formula')
+df_combine['original_name']= df.groupby('index')['original_name'].apply(join_col_vals)
+df_combine['molecular_formula']= df.groupby('index')['molecular_formula'].apply(join_col_vals)
 
 from es_utils import extract_df_mat
 df_price = extract_df_mat(df_combine)
