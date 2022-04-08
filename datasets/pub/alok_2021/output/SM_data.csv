@@ -23,3 +23,17 @@ B,1.2777777777777777,2350.0,B,latent_thermal
 Al,0.11027777777777778,660.0,Al,latent_thermal
 Mg,0.10777777777777778,661.0,Mg,latent_thermal
 Zn,0.04055555555555555,419.0,Zn,latent_thermal
+KF/KCl,0.11305555555555556,605.0,"[('KF', 0.55), ('KCl', 0.45)]",latent_thermal
+LiF/NaF,0.22666666666666666,652.0,"[('LiF', 0.6), ('NaF', 0.4)]",latent_thermal
+NaF/CaF2/MgF2,0.15777777777777777,743.0,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",latent_thermal
+NaF/MgF2/KF,0.18055555555555555,804.0,"[('NaF', 0.64), ('MgF2', 0.2), ('KF', 0.16)]",latent_thermal
+NaF/MgF2,0.17416666666666666,832.0,"[('NaF', 0.75), ('MgF2', 0.25)]",latent_thermal
+KCl/NaF/K2CO3,0.07611111111111112,520.0,"[('KCl', 0.21), ('NaF', 0.17), ('K2CO3', 0.62)]",latent_thermal
+KCl/KF/K2CO3,0.07861111111111112,528.0,"[('KCl', 0.4), ('KF', 0.23), ('K2CO3', 0.37)]",latent_thermal
+KCl/KF,0.11305555555555556,605.0,"[('KCl', 0.45), ('KF', 0.55)]",latent_thermal
+K2CO3/Na2CO3,0.04527777777777778,710.0,"[('K2CO3', 0.5), ('Na2CO3', 0.5)]",latent_thermal
+LiF/MgF2,0.26305555555555554,746.0,"[('LiF', 0.67), ('MgF2', 0.33)]",latent_thermal
+NaF/CaF2/MgF2,0.15944444444444444,745.0,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",latent_thermal
+LiF/NaF2/MgF2,0.2388888888888889,650.0,"[('LiF', 0.334), ('NaF2', 0.499), ('MgF2', 0.171)]",latent_thermal
+NaCl/NaBr/Na2MoO4,0.04666666666666667,612.0,"[('NaCl', 0.385), ('NaBr', 0.23), ('Na2MoO4', 0.385)]",latent_thermal
+CaCl2/CaSO4/CaMoO4,0.06222222222222222,673.0,"[('CaCl2', 0.385), ('CaSO4', 0.11), ('CaMoO4', 0.04)]",latent_thermal
