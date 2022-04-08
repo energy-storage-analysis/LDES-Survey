@@ -1,0 +1,17 @@
+name,composition,phase_change_T,decomposition_T,ref,type
+Solar Salt,60 NaNO3-40 KNO3,240,565,[19],Nitrate
+Hitec,7 NaNO3-53 KNO3-40 NaNO2,142,450,[20],Nitrate
+Hitec XL,15 NaNO3-43 KNO3-42 Ca(NO3)2,130,450,"[21,22]",Nitrate
+LiNaKNO3,30 LiNO3-18 NaNO3-52 KNO3,118,550,"[23,24]",Nitrate
+LiNaKCaNO3,15.5 LiNO3-8.2 NaNO3-54.3 KNO3-22 Ca(NO3)2,93,450,[25],Nitrate
+LiNaKNO3NO2,9 LiNO3-42.3 NaNO3-33.6 KNO3-15.1 KNO2,97,450,[26],Nitrate
+KMgCl,62.5 KCl-37.5 MgCl2,430,>700,[27],Chloride
+NaKMgCl,20.5 NaCl-30.9 KCl-48.6 MgCl2,383,>700,"[27,28]",Chloride
+NaMgCaCl,39.6 NaCl-39 MgCl2-21.4 CaCl2,407,650,[29–31],Chloride
+NaKZnCl,7.5 NaCl-23.9 KCl-68.6 ZnCl2,204,>700,"[31,32]",Chloride
+KMgZnCl,49.4 KCl-15.5 MgCl2-35.1 ZnCl2,356,>700,"[31,32]",Chloride
+LiNaKF,29.2 LiF-11.7 NaF-59.1 KF,454,>700,[33],Fluoride
+NaBF,3 NaF-97 NaBF4,385,>700,[34],Fluoride
+KBF,13 KF-87 KBF4,460,>700,[35],Fluoride
+KZrF,32.5 KF-67.5 ZrF4,420,>700,[34],Fluoride
+LiNaKCO3,32.1 Li2CO3-33.4 Na2CO3-34.5 K2CO3,397,670,[36],Carbonate

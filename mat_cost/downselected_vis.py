@@ -101,6 +101,7 @@ df_sens_ds = df_sens.where(df_sens['C_kwh'] < 10).dropna(how='all')
 # %%
 plt.figure()
 
+#TODO: LINaKCO3 appears to not have measured thermal conductivity data
 x_str='kth'
 y_str='C_kwh'
 
@@ -126,7 +127,7 @@ plt.xscale('log')
 plt.xlabel('Thermal Conductivity (W/m/K)')
 plt.ylabel("Material capital cost ($/kWh)")
 
-plt.ylim(0,4)
+plt.ylim(0,5)
 
 plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
 

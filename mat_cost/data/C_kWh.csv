@@ -147,12 +147,28 @@ Dowtherm A,0.22638888888885,,,,Alva 2018,sensible_thermal,
 Granite,0.12499999999995,162.0430768,0.0816337094691429,"Alibaba (Bulk), USGS",Alva 2018,sensible_thermal,0.6530696757534045
 "HITEC XL, NaNO3e KNO3eCa(NO3)2",0.20097222222220001,,,,Alva 2018,sensible_thermal,
 "HITEC, NaNO3eKNO3e NaNO2",0.21680555555555,,,,Alva 2018,sensible_thermal,
+Hitec,0.21666652777775,,,,Caraballo 2021,sensible_thermal,
+Hitec XL,0.2141636111111,,,,Caraballo 2021,sensible_thermal,
 Iron Ore,0.125,159.687,0.122,"Alibaba (Bulk), Olympios 2021, USGS",Grosu 2017,sensible_thermal,0.976
+KBF,0.18130555555555,,,missing,Caraballo 2021,sensible_thermal,
+KMgCl,0.13875,169.7533,5.960651005694316,"0 : Alok 2021, Alva 2018, USGS, 1 : Alok 2021, Alva 2018",Caraballo 2021,sensible_thermal,42.959646887886954
+KMgZnCl,0.1203333333333,306.0333,2.571913140504447,"0 : Alok 2021, Alva 2018, USGS, 1 : Alok 2021, Alva 2018, 2 : Alibaba (Bulk), Alva 2018",Caraballo 2021,sensible_thermal,21.37323939477972
+KZrF,0.13888888888884998,,,missing,Caraballo 2021,sensible_thermal,
 Lead(44.5%)ebismuth(55.5%) eutectic (LBE),0.019444444444444445,416.18039999999996,3.8293419727108224,"0 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, USGS",Alva 2018,sensible_thermal,196.93758716798516
+LiNaKCO3,0.2236111111111,318.0801386,0.9184919121073029,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, ISE, Liu 2016, SMM, USGS, 1 : Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016, USGS, 2 : Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016",Caraballo 2021,sensible_thermal,4.107541470293732
+LiNaKCaNO3,0.21083333333329998,,,missing,Caraballo 2021,sensible_thermal,
+LiNaKF,0.13581158333329998,126.02327880000001,29.937571752665857,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, 1 : Alok 2021, Alva 2018, 2 : Alok 2021, Alva 2018",Caraballo 2021,sensible_thermal,220.43459782951658
+LiNaKNO3,0.2194444444444,,,missing,Caraballo 2021,sensible_thermal,
+LiNaKNO3NO2,0.15769041666665,,,missing,Caraballo 2021,sensible_thermal,
 Marble,0.11805555555555,162.0430768,0.0816337094691429,"Alibaba (Bulk), USGS",Alva 2018,sensible_thermal,0.6914855390327724
+NaBF,0.20916666666665,,,missing,Caraballo 2021,sensible_thermal,
+NaKMgCl,0.14219444444440002,228.1930693,5.668392721828404,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alok 2021, Alva 2018",Caraballo 2021,sensible_thermal,39.86367219884475
+NaKZnCl,0.12658018055555,269.2680693,2.6475982885396476,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alibaba (Bulk), Alva 2018",Caraballo 2021,sensible_thermal,20.916373139298397
+NaMgCaCl,0.15516666666665002,264.6227693,3.908412701148592,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, USGS, 1 : Alok 2021, Alva 2018, 2 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017",Caraballo 2021,sensible_thermal,25.188481425235302
 Quartzite,0.11805555555555,162.0430768,0.0816337094691429,"Alibaba (Bulk), USGS",Alva 2018,sensible_thermal,0.6914855390327724
 Sodium (Na),0.18055555555555,22.9897693,2.5,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM",Alva 2018,sensible_thermal,13.846153846154271
 Sodium(22.2%)epotassium (77.8%) eutectic (NaK),0.12361111111110001,62.0880693,24.40664320069701,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, 1 : Kim 2013, SMM",Alva 2018,sensible_thermal,197.4470011741958
+Solar Salt,0.20044055555555,186.0960693,0.745,"Liu 2016, Olympios 2021",Caraballo 2021,sensible_thermal,3.716812687607679
 "Solar Salt, NaNO3e KNO3 (50-50)",0.2083333333333,186.0960693,0.745,"Liu 2016, Olympios 2021",Alva 2018,sensible_thermal,3.576000000000572
 Vegetable oil,0.34847222222220003,933.45,0.835,Alva 2018,Alva 2018,sensible_thermal,2.3961737744122686
 Al,0.1102777777777777,26.9815384,2.3315963855664066,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, USGS",Alok 2021,latent_thermal,21.14293951647121
