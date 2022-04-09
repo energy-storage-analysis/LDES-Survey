@@ -289,6 +289,7 @@ Quartzite,sensible_thermal,0.0002361111111111,,,,2.0,,,,,,,,,,,,,,Stone,Alva 201
 RGO/CNT,ELDC,,,,,,,,,,,,,,,,216.0,1.0,,"[('Graphene Oxide', 0.5), ('CNT', 0.5)]",Choi 2015,,,
 Rh2O3/Rh2O,thermochemical,,,,,,,,,0.2728055555555556,970.0,,,,,,,,,Rh2O3,Andre 2016,oxides,,
 S-2 Glass Epoxy,virial,,,,,,,,,,,743.6026091319618,,,,,,,,GRE,Kale 2018,,,
+Sand,sensible_thermal,0.000277,,,,,,,,,,,,,,,,,,Sand,Diago 2018,,Sand,https://doi.org/10.1016/j.apenergy.2018.02.106
 Sandstone,sensible_thermal,0.0001972222222222,,,2200.0,1.8,,,,,,,,,,,,,,Sandstone,Bauer 2012,,Sandstone,
 Sb2O5/SbO2,thermochemical,,,,,,,,,0.0584444444444444,325.0,,,,,,,,,Sb2O5,Andre 2016,oxides,,
 Si,latent_thermal,,1410.0,0.4972222222222222,,,,,,,,,,,,,,,,Metallurgical Silicon,Alok 2021,,,

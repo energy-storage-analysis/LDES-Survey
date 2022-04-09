@@ -7,3 +7,4 @@ Synthetic NH3 (Haber-Bosch),Synthetic NH3 (Haber-Bosch),Synthetic NH3 (Haber-Bos
 Synthetic H2 (Cavern),Synthetic H2 (Cavern),Synthetic H2 (Cavern),synfuel,,,,,,39.4,,TODO,
 Pumped Hydro,Water Reservoir Excavation,Pumped Hydro,gravitational,,,,,,,300,,
 Block Stacking,Stone,Block Stacking,gravitational,,,,,,,100,,
+Sand,Sand,Sand,sensible_thermal,0.000277,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
