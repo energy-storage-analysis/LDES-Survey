@@ -52,7 +52,7 @@ Cl2Mg,0.2,,,0,1,Liu 2016,0.2,Cl2Mg,95.205,MgCl2,0.6533417
 ClK,0.307,0.06081118318204306,0.2,0,2,"Alibaba (Bulk), Liu 2016","0.26, 0.35",ClK,74.5483,KCl,6.7784249
 ClLi,8.79975,1.4138600089825015,0.16,0,2,"ISE, Liu 2016","7.8, 9.8",ClLi,42.39,"LiCl, Lithium chlorides",13.7390163
 ClNa,0.12,,,0,1,Liu 2016,0.12,ClNa,58.4397693,NaCl,1.2299194
-Clay,0.233175,0.12020147992632904,0.52,0,2,"Alibaba (Bulk), USGS","0.08, 0.15, 0.16, 0.31, 0.35, 0.36",Al2O5Si,162.0430768,"Clays Ball, Clays Bentonite, Clays Common, Clays Fire, Clays Fullers, Clays Kaolin",
+Clay,0.233175,0.12020147992632904,0.52,1,2,"Alibaba (Bulk), USGS","0.08, 0.15, 0.16, 0.31, 0.35, 0.36",Al2O5Si,162.0430768,"Clays Ball, Clays Bentonite, Clays Common, Clays Fire, Clays Fullers, Clays Kaolin",
 Co,27.90081991332564,11.683118750882576,0.42,1,3,"Alibaba (Bulk), ISE, USGS","24.0, 24.85, 27.9, 41.15, 50.57",Co,58.933194,"Cobalt Conc., Cobalt Intermediate, Cobalt Powder, Cobalt metal, Cobalt LME, Cobalt Spot",32.8
 Co3O4,17.18,7.099352083112937,0.41,0,2,"Alibaba (Bulk), ISE","12.16, 22.2",Co3O4,240.795582,"Cobalt Tetroxide, Cobalt oxides",24.1237054
 CoCl2,10.494,5.806760887103928,0.55,0,2,"Alibaba (Bulk), ISE","14.6, 6.39",CoCl2,129.833194,Cobalt Chloride,14.9331808
@@ -72,7 +72,7 @@ Diamond,21410.0,,,0,1,USGS,21410.0,C,12.011,"Diamond (Industrial) Bort_Imports, 
 Diatomite,0.3725812230924431,,,0,1,USGS,0.37,SiO2,60.083,Diatomite ,
 Dy2O3,253.2,,,0,1,USGS,253.2,Dy2O3,372.997,Rare Earths Dy2O3,267.5152656
 Eu2O3,45.4,,,0,1,USGS,45.4,Eu2O3,351.925,Rare Earths Eu2O3,27.1385401
-Fe,0.10735883410252249,0.10289652997024136,0.96,2,2,"Alibaba (Bulk), USGS","0.03, 0.18",Fe,55.845,"Iron and Steel Scrap , Iron and Steel Slag ",0.424
+Fe,0.10735883410252249,0.10289652997024136,0.96,3,2,"Alibaba (Bulk), USGS","0.03, 0.18",Fe,55.845,"Iron and Steel Scrap , Iron and Steel Slag ",0.424
 FeCl2,1.4983333333333333,1.4589969918482428,0.97,0,2,"Alibaba (Bulk), Li 2017","0.47, 2.53",FeCl2,126.745,FeCl2,0.2326883
 FeCr,2.5282612227361763,,,0,1,USGS,2.53,FeCr,107.8411,Chromium Ferrrochromium,4.7518212
 FeMo,28.18498,,,0,1,SMM,28.18,FeMo,151.795,Ferro-molybdenum 60%,25.5032991
@@ -89,7 +89,7 @@ GeO2,782.45,87.61053018901326,0.11,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"
 Graphene,90.0,,,5,1,Graphene Lab,90.0,C6,72.066,Graphene,
 Graphene Oxide,400.0,,,1,1,Alibaba (Manual),400.0,C7H2O,102.092,,
 Graphite,1.7008291673865679,4.448542521397139,2.62,12,4,"Alibaba (Bulk), Li 2017, Liu 2016, USGS","0.35, 0.39, 1.6, 1.8, 12.0, 2.15",C6,72.066,"Expanded Natural, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
-Gravel,0.0291803850227903,,,0,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
+Gravel,0.0291803850227903,,,1,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
 H2SO4,0.2475,0.067175144212722,0.27,0,2,"Alibaba (Bulk), Li 2017","0.2, 0.29",H2SO4,98.072,H2SO4,0.1593358
 H3N,0.7,0.3905884625254771,0.56,0,2,"Liu 2016, USGS","0.33, 0.7, 1.11",H3N,17.031,"Anhydrous, Nitrogen (Fixed)--Ammonia , Silica Gel",0.3619482
 H8N2MoS4,27.39769,,,0,1,SMM,27.4,H8N2MoS4,260.268,Ammoinum Tetramolybdate,14.8869663
@@ -179,7 +179,7 @@ PANI,18000.0,,,1,1,Sigma Aldrich,18000.0,C6H8N2,108.144,,
 PEDOT,790000.0,,,1,1,Sigma Aldrich,790000.0,C6H4O2S,140.156,,
 PPy,14360.0,,,4,1,Sigma Aldrich,14360.0,C4H6N,68.099,,
 PPy-AC,30.0,,,0,1,Li 2017,30.0,,,PPy-AC,
-Pb,2.2182912821042384,0.49052386134739623,0.22,8,5,"Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS","1.5, 1.53, 2.22, 2.43, 2.51",Pb,207.2,"Lead - Guangdong, Lead - Henan, Lead -Tianjin, SMM Lead, Lead LME, Lead North_American, Pb",2.0
+Pb,2.2182912821042384,0.49052386134739623,0.22,9,5,"Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS","1.5, 1.53, 2.22, 2.43, 2.51",Pb,207.2,"Lead - Guangdong, Lead - Henan, Lead -Tianjin, SMM Lead, Lead LME, Lead North_American, Pb",2.0
 Pb2Sb,3.0,,,0,1,Li 2017,3.0,Pb2Sb,536.16,Pb2Sb,2.8606953
 PbBi,13.0,,,0,1,Alva 2018,13.0,PbBi,416.1804,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),4.1893259
 PbCO3,0.136,,,0,1,Alibaba (Manual),0.14,PbCO3,267.208,,1.5839978

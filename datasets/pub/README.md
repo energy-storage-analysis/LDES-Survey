@@ -21,6 +21,7 @@ had to press ctrl-C in the prompt to get the web page to unfreeze
 1. extract table with tabula
 2. export to `tabula_template.json`
 3. copy `tablua_template.json` to `extract_settings.json` and delete all contents of each list element leaving a blank dictionary. This is where you can add settings to pass into camelot for each table, but can be left blank if default settings extract all tables. Using a vscode extension to 'prettify' the json file helps here. 
+    * column_rows: number of rows at the top to combined into column names
 4. copy an `extract_template.py` script and set specific info in the script. 
 
 

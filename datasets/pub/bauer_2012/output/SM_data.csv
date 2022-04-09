@@ -1,0 +1,12 @@
+SM_name,original_name,mass_density,Cp,kth,SM_type,materials
+Al,Aluminum 99.99 %,2700,0.0002625,238.4,sensible_thermal,Al
+Cu,Copper (commercial),8300,0.00011638888888888888,372.0,sensible_thermal,Cu
+Fe,Iron,7850,0.00012916666666666667,59.3,sensible_thermal,Fe
+Pb,Lead,11340,3.638888888888889e-05,35.25,sensible_thermal,Pb
+Granite,Granite,2750,0.00024722222222222224,2.9,sensible_thermal,Granite
+C6,Graphite,2200,0.00016944444444444445,155.0,sensible_thermal,C6
+Limestone,Limestone,2500,0.00020555555555555556,2.2,sensible_thermal,Limestone
+Sandstone,Sandstone,2200,0.00019722222222222222,1.8,sensible_thermal,Sandstone
+NaCl,Sodium chloride,2165,0.00023888888888888888,6.5,sensible_thermal,NaCl
+Clay,Soil (clay),1450,0.00024444444444444443,1.28,sensible_thermal,Clay
+Gravel,Soil (gravelly),2040,0.0005111111111111112,0.59,sensible_thermal,Gravel

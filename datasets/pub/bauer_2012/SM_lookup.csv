@@ -1,0 +1,15 @@
+original_name,SM_type,SM_name,materials
+Aluminum 99.99 %,sensible_thermal,Al,Al
+Copper (commercial),sensible_thermal,Cu,Cu
+Iron,sensible_thermal,Fe,Fe
+Lead,sensible_thermal,Pb,Pb
+Brick (dry),sensible_thermal,,
+Concrete (aggregates),sensible_thermal,,
+Granite,sensible_thermal,Granite,Granite
+Graphite,sensible_thermal,C6,C6
+Limestone,sensible_thermal,Limestone,Limestone
+Sandstone,sensible_thermal,Sandstone,Sandstone
+Slag,sensible_thermal,,
+Sodium chloride,sensible_thermal,NaCl,NaCl
+Soil (clay),sensible_thermal,Clay,Clay
+Soil (gravelly),sensible_thermal,Gravel,Gravel
