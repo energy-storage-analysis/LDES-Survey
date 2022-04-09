@@ -5,19 +5,27 @@ import numpy as np
 import pandas as pd
 
 
+# %%
+df = pd.read_csv('out.csv')
+df = df.set_index('search_text')
+
+#%%
+
+search_lookup = pd.read_csv('keywords.csv', index_col=0)[['index', 'molecular_formula']]
+df['index']= [search_lookup['index'][t] for t in df.index]
+df['molecular_formula']= [search_lookup['molecular_formula'][t] for t in df.index]
+# df.index.name = 'index'
+
+
+df = df.rename({
+    'Price': 'price'
+},axis=1)
+
 
 #%%
 
 
-df_single = pd.read_csv('single_manual.csv')
-# df_single.index.name = 'index'
-df_single = df_single[['index','search_text', 'price', 'min_order','molecular_formula', 'Title','link']].set_index('search_text')
-
-
-single_data_lookup = df_single.reset_index()[['search_text', 'molecular_formula']]
-
-
-df = df_single
+df = df.dropna(subset=['price'])
 
 df[['min_quantity','min_unit']] = df['min_order'].str.extract("(\S+) ([\S ]+)", expand=True)
 df['min_quantity'] = df['min_quantity'].astype(float)

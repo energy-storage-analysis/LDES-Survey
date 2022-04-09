@@ -1,11 +1,12 @@
 #%%
 import pandas as pd
 
-df = pd.read_csv('output/extracted.csv', index_col=0)
+df = pd.read_csv('output/extracted_edit.csv', index_col=0)
 df
 #%%
 
-df_t = df
+
+df_t = df.where((df['min_quantity_kg'] > 99)).dropna(how='all')
 
 search_lookup = df_t[['index', 'molecular_formula']]
 search_lookup = search_lookup.groupby(level=0).first()

@@ -1,10 +1,10 @@
-index,molecular_formula,search_text,price,min_order,url
-Cd(OH)2,CdH2O2,Cd(OH)2 cadmium hydroxide,$10.00,1000.0 Kilograms,https://www.alibaba.com/product-detail/Cadmium-hydroxide-Cd-OH-2-CAS_573991118.html
-CdCO3,CCdO3,CdCO3 cadmium carbonate,$500.00,10.0 Metric Tons,https://www.alibaba.com/product-detail/quality-industrial-Cadmium-Carbonate_11000000302128.html?spm=a2700.galleryofferlist.normal_offer.d_title.2282377aapuH8m
-Zn(OH)2,H2O2Zn,Zn(OH)2 zinc hydroxide,"$1,000.00",1 Metric Ton,https://www.alibaba.com/product-detail/Zinc-Hydroxide-Zn-OH-2-CAS_573828343.html
-BaO2,BaO2,BaO2 barium oxide,$10.00,1.0 Kilograms,https://www.alibaba.com/product-detail/Lukong-Supply-99-Barium-Oxide-Powder_1600452959529.html?spm=a2700.galleryofferlist.normal_offer.d_title.5a9c1f9bvCniMi
-CNT,C6,Carbon Nanotube,$100.00,1000 Kilograms,https://www.alibaba.com/product-detail/Industrial-Grade-Multi-Walled-Carbon-Nanotubes_1600261135010.html?spm=a2700.7724857.normal_offer.d_title.188e249abm1JaT
-Graphene Oxide,C7H2O,Graphene Oxide,$400.00,1 Kilogram,https://www.alibaba.com/product-detail/Hot-Sale-High-Quality-Single-Layer_2014447663.html?spm=a2700.galleryofferlist.topad_classic.d_title.33826445ouEIPk
-Ba,Ba,Barium,$120,1 Kilogram,https://www.alibaba.com/product-detail/High-purity-99-9-Ba-granules_1600272056627.html?spm=a2700.galleryofferlist.normal_offer.d_title.10c356b4tLJPj7
-Sand,SiO2,Sand,$110,1 Metric Ton,https://www.alibaba.com/product-detail/Sand-Sand-Round-Sand-Quartz-Rounded_1600465480796.html?spm=a2700.galleryofferlist.normal_offer.d_title.586c3f68hdBkic&s=p
-Sand,SiO2,Sand,$60,1 Metric Ton,https://www.alibaba.com/product-detail/Sand-Sandsand-70-110-Mesh-Desert_1600229120509.html?spm=a2700.galleryofferlist.normal_offer.d_title.586c3f68hdBkic&s=p
+index,molecular_formula,search_text,price,min_order,Title,link
+Cd(OH)2,CdH2O2,Cd(OH)2 cadmium hydroxide,$10.00,1000.0 Kilograms,,https://www.alibaba.com/product-detail/Cadmium-hydroxide-Cd-OH-2-CAS_573991118.html
+CdCO3,CCdO3,CdCO3 cadmium carbonate,$500.00,10.0 Metric Tons,,https://www.alibaba.com/product-detail/quality-industrial-Cadmium-Carbonate_11000000302128.html?spm=a2700.galleryofferlist.normal_offer.d_title.2282377aapuH8m
+Zn(OH)2,H2O2Zn,Zn(OH)2 zinc hydroxide,"$1,000.00",1 Metric Ton,,https://www.alibaba.com/product-detail/Zinc-Hydroxide-Zn-OH-2-CAS_573828343.html
+BaO2,BaO2,BaO2 barium oxide,$10.00,1.0 Kilograms,,https://www.alibaba.com/product-detail/Lukong-Supply-99-Barium-Oxide-Powder_1600452959529.html?spm=a2700.galleryofferlist.normal_offer.d_title.5a9c1f9bvCniMi
+CNT,C6,Carbon Nanotube,$100.00,1000 Kilograms,,https://www.alibaba.com/product-detail/Industrial-Grade-Multi-Walled-Carbon-Nanotubes_1600261135010.html?spm=a2700.7724857.normal_offer.d_title.188e249abm1JaT
+Graphene Oxide,C7H2O,Graphene Oxide,$400.00,1 Kilogram,,https://www.alibaba.com/product-detail/Hot-Sale-High-Quality-Single-Layer_2014447663.html?spm=a2700.galleryofferlist.topad_classic.d_title.33826445ouEIPk
+Ba,Ba,Barium,$120,1 Kilogram,,https://www.alibaba.com/product-detail/High-purity-99-9-Ba-granules_1600272056627.html?spm=a2700.galleryofferlist.normal_offer.d_title.10c356b4tLJPj7
+Sand,SiO2,Sand,$110,1 Metric Ton,,https://www.alibaba.com/product-detail/Sand-Sand-Round-Sand-Quartz-Rounded_1600465480796.html?spm=a2700.galleryofferlist.normal_offer.d_title.586c3f68hdBkic&s=p
+Sand,SiO2,Sand,$60,1 Metric Ton,,https://www.alibaba.com/product-detail/Sand-Sandsand-70-110-Mesh-Desert_1600229120509.html?spm=a2700.galleryofferlist.normal_offer.d_title.586c3f68hdBkic&s=p
