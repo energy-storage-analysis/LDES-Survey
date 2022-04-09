@@ -6,11 +6,8 @@ import numpy as np
 import pandas as pd
 
 df_mat_data = pd.read_csv('data/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
+df_SMs = pd.read_csv('data/SM_data.csv', index_col=[0,1])
 
-#TODO: figure out how to deal with duplicate SM (i.e physical properties). 
-# Also removed duplicate SM (with different electrolytes from choi 2015)
-# df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
 
 #%%
 
@@ -105,7 +102,6 @@ df_all = pd.concat([df_single, df_comp])
 df_all
 #%%
 
-#TODO: can't assign by index because of duplicate SM indexes. Mainly two latent datasets alva and alok.
 df_SMs['specific_price'] = df_all['specific_price']
 df_SMs['mu_total'] = df_all['mu_total']
 df_SMs['price_sources'] = df_all['price_sources']
@@ -206,7 +202,7 @@ dfs = [
 dfs_2 = []
 
 #TODO: improve
-columns_keep = ['mu_total','specific_price','price_sources', 'SM_sources','SM_type']
+columns_keep = ['mu_total','specific_price','price_sources', 'SM_sources']
 for df in dfs:
     for col in columns_keep:
         df[col] = df_SMs[col]

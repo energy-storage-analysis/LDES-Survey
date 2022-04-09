@@ -6,19 +6,16 @@ from bokeh.transform import factor_cmap, factor_mark
 from bokeh.models import HoverTool
 
 #%%
-df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=0)
-
-df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
-#TODO: duplicated in calc_Ckwh
-# df_SMs = df_SMs.where(df_SMs['source'] != 'Alok 2021').dropna(subset=['source'])
+df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=[0,1])
+df_SMs = pd.read_csv('data/SM_data.csv', index_col=[0,1])
 
 df_SMs = df_SMs[['materials', 'notes']]
 
 df_SMs = df_SMs.loc[df_Ckwh.index]
 
-
-
 df = pd.concat([df_Ckwh, df_SMs], axis=1)
+
+df = df.reset_index('SM_type')
 
 # df = df.where(df['SM_type'] != 'Electrostatic (Capacitor)').dropna(subset=['SM_type'])
 

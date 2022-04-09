@@ -6,8 +6,8 @@ import re
 
 from adjustText import adjust_text
 
-df_SM = pd.read_csv('data/SM_data.csv', index_col=0)
-df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=0)
+df_SM = pd.read_csv('data/SM_data.csv', index_col=[0,1])
+df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=[0,1])
 
 common_columns = [c for c in df_SM.columns if c in df_Ckwh.columns]
 
@@ -15,6 +15,8 @@ df_SM = df_SM.drop(common_columns, axis=1)
 
 # %%
 df = pd.concat([df_SM, df_Ckwh], axis=1)
+
+df = df.reset_index('SM_type')
 
 
 df.index = [re.sub('(\d)',r'_\1', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
