@@ -170,7 +170,7 @@ df_prices_combine.to_csv('data/mat_data.csv')
 #%%
 
 
-# s_temp = df_mat_data.groupby('index').apply(join_col_vals, column='source')
+# s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals)
 # s_temp.name = 'source'
 # df_physprop_combine = s_temp.to_frame()
 

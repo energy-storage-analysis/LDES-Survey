@@ -24,7 +24,7 @@ for idx,row in df_custom_physprop.iterrows():
 
 
 from es_utils import join_col_vals
-df_physprops['source'] = df_custom_physprop.groupby('index').apply(join_col_vals, column='source')
+df_physprops['source'] = df_custom_physprop.groupby('index')['source'].apply(join_col_vals)
 
 
 #TODO: implement physprop

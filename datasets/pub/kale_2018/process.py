@@ -67,8 +67,8 @@ df_mat = df_mat.set_index('index')
 df_mat_grouped = df_mat.groupby('index')[['specific_strength', 'specific_price']].mean() #TODO: can't think of another way to handle multiple entries for given class of material (i.e. steel)
 
 from es_utils import join_col_vals
-df_mat_grouped['original_name']= df_mat.groupby('index').apply(join_col_vals, column='original_name')
-df_mat_grouped['molecular_formula']= df_mat.groupby('index').apply(join_col_vals, column='molecular_formula')
+df_mat_grouped['original_name']= df_mat.groupby('index')['original_name'].apply(join_col_vals)
+df_mat_grouped['molecular_formula']= df_mat.groupby('index')['molecular_formula'].apply(join_col_vals)
 
 df_mat_grouped.to_csv('output/mat_data.csv')
 
