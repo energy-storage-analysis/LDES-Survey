@@ -33,16 +33,20 @@ mat_cost_line = energy_densities_line*10
 
 SM_types = df['SM_type'].unique()
 
-print(SM_types)
-
 #https://docs.bokeh.org/en/latest/docs/user_guide/plotting.html#userguide-plotting-scatter-markers
-MARKERS = ['circle','square','triangle','star','plus','inverted_triangle','hex','diamond','square_pin','square_x']
-MARKERS = MARKERS[0:len(SM_types)]
+# MARKERS = ['circle','square','triangle','star','plus','inverted_triangle','hex','diamond','square_pin','square_x']
+# MARKERS = MARKERS[0:len(SM_types)]
+
+MARKERS = ['circle','square','triangle','star','plus','inverted_triangle','hex','diamond','square_pin','square_x']*2
 
 if len(SM_types) <= 10:
     color_category = 'Category10_{}'.format(len(SM_types))
 else:
     color_category = 'Category20_{}'.format(len(SM_types))
+
+#TODO: Temporary override not using factor_cmap for separated scatter plot. How to specify cmap by string. 
+from bokeh.palettes import Category20_15
+color_category = Category20_15 
 
 #%%
 p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',plot_width=1500,plot_height=800)
@@ -50,10 +54,22 @@ p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',
 p.xaxis.axis_label = 'Energy Density (kWh/kg)'
 p.yaxis.axis_label = 'Material Cost ($/kg)'
 
-p.scatter("specific_energy", "specific_price", source=df,
-          legend_group="SM_type", fill_alpha=0.5, size=15,
-          marker=factor_mark('SM_type', MARKERS, SM_types),
-          color=factor_cmap('SM_type', color_category, SM_types))
+# p.scatter("specific_energy", "specific_price", source=df,
+#           legend_group="SM_type", fill_alpha=0.5, size=15,
+#           marker=factor_mark('SM_type', MARKERS, SM_types),
+#           color=factor_cmap('SM_type', color_category, SM_types))
+
+for i, SM_type in enumerate(SM_types):
+    df_sel = df.where(df['SM_type'] == SM_type).dropna(subset=['SM_type'])
+
+    points = p.scatter("specific_energy", "specific_price", source=df_sel,
+            fill_alpha=1, size=15,
+            legend_label=SM_type,
+            marker= MARKERS[i],
+            color=color_category[i]
+    )
+
+    points.muted = False
 
 p.line(energy_densities_line, mat_cost_line)
 
@@ -73,6 +89,7 @@ hovertool = HoverTool(tooltips=[
     ])
 
 p.add_tools(hovertool)
+p.legend.click_policy="mute"
 
 
 output_file('output/bokeh_Ckwh.html')
