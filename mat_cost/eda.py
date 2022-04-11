@@ -34,11 +34,16 @@ plt.savefig('output_eda/mat_cost.png')
 
 #%%
 
-plt.figure(figsize=(2,2))
+# plt.figure(figsize=(2,2))
+plt.figure(figsize=(5,5))
 
 df_mat_data['num_source'].value_counts().plot.bar()
 plt.xlabel("# Sources")
 plt.ylabel("Count")
+
+plt.tight_layout()
+
+plt.savefig('output_eda/source_count.png')
 
 #%%
 
