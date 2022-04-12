@@ -74,11 +74,11 @@ for column in other_cols:
 df_grouped = df_grouped.rename({'source': 'SM_sources'}, axis=1)
 
 
-df_grouped.to_csv('data/SM_data.csv')
+df_grouped.to_csv('data_consolidated/SM_data.csv')
 
 
 #%%
-df_mat_data.to_csv('data/mat_data_all.csv')
+df_mat_data.to_csv('data_consolidated/mat_data_all.csv')
 
 ## Collect prices 
 
@@ -163,7 +163,7 @@ df_prices_combine = df_prices_combine[[
 'specific_price', 'specific_price_std','specific_price_rat','num_SMs','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
 ]]
 
-df_prices_combine.to_csv('data/mat_data.csv')
+df_prices_combine.to_csv('data_consolidated/mat_data.csv')
 
 
 
@@ -182,4 +182,4 @@ df_prices_combine.to_csv('data/mat_data.csv')
 # for col in physprop_cols:
 #     df_physprop_combine[col] = df_mat_data.groupby('index')[col].mean()
 
-# df_physprop_combine.to_csv('data/mat_physprop.csv')
+# df_physprop_combine.to_csv('data_consolidated/mat_physprop.csv')

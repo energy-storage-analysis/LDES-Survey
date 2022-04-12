@@ -5,8 +5,8 @@ from os.path import join as pjoin
 import numpy as np
 import pandas as pd
 
-df_mat_data = pd.read_csv('data/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('data/SM_data.csv', index_col=[0,1])
+df_mat_data = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
+df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
 
 
 #%%
@@ -216,6 +216,6 @@ df_out['C_kwh'] = df_out['specific_price']/df_out['specific_energy']
 
 # %%
 
-df_out.to_csv('data/C_kwh.csv')
+df_out.to_csv('data_consolidated/C_kwh.csv')
 
 # %%

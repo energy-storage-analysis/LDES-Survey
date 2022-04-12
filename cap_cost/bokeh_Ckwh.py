@@ -6,8 +6,8 @@ from bokeh.transform import factor_cmap, factor_mark
 from bokeh.models import HoverTool
 
 #%%
-df_Ckwh = pd.read_csv('data/C_kwh.csv', index_col=[0,1])
-df_SMs = pd.read_csv('data/SM_data.csv', index_col=[0,1])
+df_Ckwh = pd.read_csv('data_consolidated/C_kwh.csv', index_col=[0,1])
+df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
 
 df_SMs = df_SMs[['materials', 'notes']]
 
@@ -92,7 +92,7 @@ p.add_tools(hovertool)
 p.legend.click_policy="mute"
 
 
-output_file('output/bokeh_Ckwh.html')
+output_file('results/bokeh_Ckwh.html')
 save(p)
 
 

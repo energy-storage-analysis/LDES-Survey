@@ -8,7 +8,7 @@ import matplotlib as mpl
 
 mpl.rcParams.update({'font.size': 16})
 
-df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
+df_all = pd.read_csv('data_consolidated/C_kWh.csv', index_col=0)
 
 df_all = df_all.where(~df_all['SM_type'].isin([
     'gravitational',
@@ -53,7 +53,7 @@ lgd.set_bbox_to_anchor((1, 1))
 
 #https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box
 
-plt.savefig('output/C_kwh_linefig.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
+plt.savefig('results/C_kwh_linefig.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
 #%%
 
 df_log = df_all[['specific_price','specific_energy']].apply(np.log10)
@@ -144,7 +144,7 @@ plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Material cost ($/kg)')
 # plt.xscale('log')
 
-plt.savefig('output/errorbar_agg.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
+plt.savefig('results/errorbar_agg.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
 # plt.yscale('log')
 #%%
 
@@ -169,10 +169,10 @@ axes[0].set_ylabel('Material Cost ($/kg)')
 
 fig.tight_layout()
 
-plt.savefig('output/C_kwh_linefig_separate.png', facecolor='white', transparent=False,)
+plt.savefig('results/C_kwh_linefig_separate.png', facecolor='white', transparent=False,)
 
 #%%
 
 df_sel = df_all.where(df_all['C_kwh'] < 10).dropna(how='all')
 
-df_sel.sort_values('C_kwh').to_csv('output/downselected.csv')
+df_sel.sort_values('C_kwh').to_csv('results/downselected.csv')

@@ -11,7 +11,7 @@ from bokeh.io import show, output_file, save
 
 # %%
 
-df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
+df_all = pd.read_csv('data_consolidated/C_kWh.csv', index_col=0)
 df_all = df_all.dropna(subset=['C_kwh'])
 
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
@@ -56,7 +56,7 @@ plt.xlabel('Technology')
 plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_all)))
 
 plt.tight_layout()
-plt.savefig('output/fig_C_kwh.png')
+plt.savefig('results/fig_C_kwh.png')
 # %%
 #Raw entries
 
@@ -81,5 +81,5 @@ figure.yaxis.axis_label = "Energy Capital Cost ($/kWh)"
 figure.yaxis.axis_label_text_font_size = "16pt"
 figure.xaxis.major_label_text_font_size = "16pt"
 
-output_file('output/mat_cost_compare.html')
+output_file('results/mat_cost_compare.html')
 save(figure)

@@ -4,15 +4,15 @@ from os.path import join as pjoin
 import numpy as np
 import pandas as pd
 
-df_prices = pd.read_csv('data/mat_data.csv', index_col=0)
-df_physprop = pd.read_csv('data/SM_data.csv', index_col=0)
+df_prices = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
+df_physprop = pd.read_csv('data_consolidated/SM_data.csv', index_col=0)
 
 
 # %%
 # [df_prices[p] for p in df_physprop.index
 # df_physprop.index
 
-with open('output/missing_data.txt', 'w') as f:
+with open('results/missing_data.txt', 'w') as f:
     f.write("---Property data without a price---\n\n")
     for idx, row in df_physprop.iterrows():
         if idx not in df_prices.index:

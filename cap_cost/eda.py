@@ -11,9 +11,9 @@ mpl.rcParams.update({'font.size':13.5})
 # %%
 
 
-df_mat_data = pd.read_csv('data/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('data/SM_data.csv', index_col=0)
-df_all = pd.read_csv('data/C_kWh.csv', index_col=0)
+df_mat_data = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
+df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=0)
+df_all = pd.read_csv('data_consolidated/C_kWh.csv', index_col=0)
 # %%
 plt.figure()
 
@@ -29,7 +29,7 @@ plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
 plt.tight_layout()
 
-plt.savefig('output_eda/mat_cost.png')
+plt.savefig('results/eda/mat_cost.png')
 
 
 #%%
@@ -43,7 +43,7 @@ plt.ylabel("Count")
 
 plt.tight_layout()
 
-plt.savefig('output_eda/source_count.png')
+plt.savefig('results/eda/source_count.png')
 
 #%%
 
@@ -75,7 +75,7 @@ plt.ylabel('Count')
 plt.tight_layout()
 
 
-plt.savefig('output_eda/SM_energy.png')
+plt.savefig('results/eda/SM_energy.png')
 
 #%%
 
@@ -100,4 +100,4 @@ plt.ylabel('Count')
 
 plt.gca().get_legend().remove()
 
-plt.savefig('output_eda/SM_w_prices.png')
+plt.savefig('results/eda/SM_w_prices.png')
