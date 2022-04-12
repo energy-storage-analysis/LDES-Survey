@@ -8,6 +8,11 @@ import matplotlib as mpl
 
 mpl.rcParams.update({'font.size': 16})
 
+import os
+from os.path import join as pjoin
+output_dir = 'results/Ckwh_line'
+if not os.path.exists(output_dir): os.makedirs(output_dir)
+
 
 df_Ckwh = pd.read_csv('data_consolidated/C_kwh.csv', index_col=[0,1])
 df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
@@ -18,7 +23,6 @@ df = pd.concat([df_Ckwh, df_SMs], axis=1).reset_index('SM_type')
 
 # Bokeh plot with all tech 
 from bokeh.plotting import figure, show, save, output_file
-from bokeh.transform import factor_cmap, factor_mark
 from bokeh.models import HoverTool
 
 energy_densities_line = np.logspace(
@@ -81,7 +85,7 @@ p.add_tools(hovertool)
 p.legend.click_policy="mute"
 
 
-output_file('results/bokeh_Ckwh.html')
+output_file(pjoin(output_dir,'Ckwh_line_bokeh.html'))
 save(p)
 
 
@@ -136,7 +140,7 @@ lgd.set_bbox_to_anchor((1, 1))
 
 #https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box
 
-plt.savefig('results/C_kwh_linefig.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
+plt.savefig(pjoin(output_dir,'Ckwh_line.png'), facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
 #%%
 
 df_log = df_all[['specific_price','specific_energy']].apply(np.log10)
@@ -189,7 +193,6 @@ for etype, row in df_stats.iterrows():
     )
 
 xlim = plt.gca().get_xlim()
-print(xlim)
 
 energy_densities_line = np.logspace(
     xlim[0],
@@ -227,7 +230,7 @@ plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Material cost ($/kg)')
 # plt.xscale('log')
 
-plt.savefig('results/errorbar_agg.png', facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
+plt.savefig(pjoin(output_dir,'Ckwh_line_errorbar.png'), facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
 # plt.yscale('log')
 #%%
 
@@ -252,10 +255,6 @@ axes[0].set_ylabel('Material Cost ($/kg)')
 
 fig.tight_layout()
 
-plt.savefig('results/C_kwh_linefig_separate.png', facecolor='white', transparent=False,)
+plt.savefig(pjoin(output_dir,'Ckwh_line_separate.png'), facecolor='white', transparent=False,)
 
 #%%
-
-df_sel = df_all.where(df_all['C_kwh'] < 10).dropna(how='all')
-
-df_sel.sort_values('C_kwh').to_csv('results/downselected.csv')

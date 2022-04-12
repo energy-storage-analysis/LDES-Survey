@@ -7,6 +7,10 @@ import seaborn as sns
 import iqplot
 from bokeh.io import show, output_file, save
 
+import os
+from os.path import join as pjoin
+output_dir = 'results/Ckwh'
+if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 
 # %%
@@ -56,7 +60,7 @@ plt.xlabel('Technology')
 plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_all)))
 
 plt.tight_layout()
-plt.savefig('results/fig_C_kwh.png')
+plt.savefig(pjoin(output_dir,'Ckwh.png'))
 # %%
 #Raw entries
 
@@ -81,5 +85,5 @@ figure.yaxis.axis_label = "Energy Capital Cost ($/kWh)"
 figure.yaxis.axis_label_text_font_size = "16pt"
 figure.xaxis.major_label_text_font_size = "16pt"
 
-output_file('results/mat_cost_compare.html')
+output_file(pjoin(output_dir,'Ckwh_bokeh.html'))
 save(figure)

@@ -6,6 +6,11 @@ import re
 
 from adjustText import adjust_text
 
+import os
+from os.path import join as pjoin
+output_dir = 'results/single_tech'
+if not os.path.exists(output_dir): os.makedirs(output_dir)
+
 df_SM = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
 df_Ckwh = pd.read_csv('data_consolidated/C_kwh.csv', index_col=[0,1])
 
@@ -85,7 +90,7 @@ plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
 
 adjust_text(texts)
 
-plt.savefig('results/single_tech/latent.png')
+plt.savefig(pjoin(output_dir,'latent.png'))
 # %%
 df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
 
@@ -135,7 +140,7 @@ plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
 
 adjust_text(texts)
 
-plt.savefig('results/single_tech/sensible.png')
+plt.savefig(pjoin(output_dir,'sensible.png'))
 # %%
 
 
@@ -178,5 +183,5 @@ plt.tight_layout()
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 
-plt.savefig('results/single_tech/thermochem.png')
+plt.savefig(pjoin(output_dir,'thermochem.png'))
 # %%

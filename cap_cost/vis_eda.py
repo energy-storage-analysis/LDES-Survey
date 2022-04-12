@@ -8,6 +8,10 @@ import seaborn as sns
 
 mpl.rcParams.update({'font.size':13.5})
 
+import os
+from os.path import join as pjoin
+output_dir = 'results/eda'
+if not os.path.exists(output_dir): os.makedirs(output_dir)
 # %%
 
 
@@ -29,7 +33,7 @@ plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
 plt.tight_layout()
 
-plt.savefig('results/eda/mat_cost.png')
+plt.savefig(pjoin(output_dir,'eda_mats.png'))
 
 
 #%%
@@ -51,7 +55,6 @@ plt.savefig('results/eda/source_count.png')
 missing_idx = [idx for idx in df_SMs.index if idx not in df_all.index.values]
 len(missing_idx)
 
-df_SMs.loc[missing_idx].dropna(how='all', axis=1).info()
 #%%
 
 df_SMs = df_SMs.drop(missing_idx)
@@ -100,4 +103,4 @@ plt.ylabel('Count')
 
 plt.gca().get_legend().remove()
 
-plt.savefig('results/eda/SM_w_prices.png')
+plt.savefig(pjoin(output_dir,'SM_w_prices.png'))
