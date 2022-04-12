@@ -1,15 +1,14 @@
 echo "Consolidating Data"
 python "consolidate_data.py"
 
-
 echo "Calculating C_kWh"
 python "calc_Ckwh.py"
 
 echo "Generate visualizations"
-python "Ckwh_vis.py"
-python "separate_Ckwh_vis.py"
-python "bokeh_Ckwh.py"
-python "eda.py"
-python "downselected_vis.py"
+python "vis_Ckwh_separate_bokeh.py"
+python "vis_Ckwh_separate.py"
+python "vis_Ckwh.py"
+python "vis_eda.py"
+python "vis_singletech.py"
 
 echo "Done"

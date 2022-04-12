@@ -85,7 +85,7 @@ plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
 
 adjust_text(texts)
 
-plt.savefig('results/specific_tech/latent.png')
+plt.savefig('results/single_tech/latent.png')
 # %%
 df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
 
@@ -135,7 +135,7 @@ plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
 
 adjust_text(texts)
 
-plt.savefig('results/specific_tech/sensible.png')
+plt.savefig('results/single_tech/sensible.png')
 # %%
 
 
@@ -178,5 +178,5 @@ plt.tight_layout()
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 
-plt.savefig('results/specific_tech/thermochem.png')
+plt.savefig('results/single_tech/thermochem.png')
 # %%
