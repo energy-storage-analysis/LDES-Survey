@@ -123,7 +123,7 @@ texts = []
 for name, row in df_sens_ds.iterrows():
     x = row[x_str]
     y = row[y_str]
-    name = name[0:25]
+    name = name[0:25].replace('_','') #TODO: error when adding steinmann...
 
     txt= ax.text(x, y, "${}$".format(name))
     texts.append(txt)

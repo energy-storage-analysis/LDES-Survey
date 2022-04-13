@@ -1,0 +1,6 @@
+Transformation  ,Phase change enthalpy ∆hpc [kJ/kg],Change of density [%]
+Solid/liquid,50-700,5-20
+Solid/solid,50-350,negligible
+Liquid/gas,200-4000,104-105
+Solid/gas,250-4500,104-105
+Liquid/liquid,50-80,negligible

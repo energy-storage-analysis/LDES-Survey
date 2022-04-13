@@ -96,6 +96,7 @@ H3N,0.7,0.3905884625254771,0.56,0,2,"Liu 2016, USGS","0.33, 0.7, 1.11",H3N,17.03
 H8N2MoS4,27.39769,,,0,1,SMM,27.4,H8N2MoS4,260.268,Ammoinum Tetramolybdate,14.8869663
 HBr,3.33,,,0,1,Li 2017,3.33,HBr,80.912,HBr,4.3526261
 HCl,0.65,,,0,1,Li 2017,0.65,HCl,36.458,HCl,0.1181639
+HITEC XL,1.1,,,1,1,Steinmann 2022,1.1,,,"salt (HTS), HITEC-HTS (Coastal",
 Hf,0.9038952749579982,,,0,1,USGS,0.9,Hf,178.486,Zirconium and Hafnium Hf_unwrought,900.0
 Hg,24.228515100958262,32.36074086195119,1.34,6,2,"Kim 2013, USGS","1.35, 47.11",Hg,200.592,"Hg, Mercury EU, Mercury Global",30.2
 Hitec,0.93,,,1,1,Liu 2016,0.93,,,Hitec,
@@ -148,6 +149,7 @@ MnSO4,0.66875,0.45078057300642405,0.67,0,2,"Alibaba (Bulk), ISE","0.35, 0.99",Mn
 Mo,43.63333333333333,15.29405597440222,0.35,0,3,"ISE, SMM, USGS","25.5, 43.63, 55.9",Mo,95.95,"Brushed molybdenum strip, Molybdenum, Molybdenum Fine (second grade), Molybdenum Fines (first grade), Molybdenum strip, Molybdenum , Molybdenum Powder, Molybdenum Rod, Molybdenum bar",40.1
 MoO3,30.5,19.05477928912054,0.62,0,3,"Alibaba (Bulk), ISE, SMM","25.67, 30.5, 60.82",MoO3,143.947,"High-purity Molybdenum Trioxide, Molybdenum Oxide, FOB, China, Molybdenum ores and concentrates, roasted 45%, Molybdenum ores and concentrates, roasted 50%, Molybdenum oxides and hydroxides, Molybdenum oxides",26.7805966
 MoS2,28.185000000000002,2.5950818869546266,0.09,1,2,"ISE, Li 2017","26.35, 30.02",MoS2,160.07,"MoS2, Molybdenum Conc.",24.0740458
+Mobiltherm 605,3.0,,,1,1,Steinmann 2022,3.0,,,Mobiltherm 605,
 NCA,34.0,,,1,1,Li 2017,34.0,LiNi0.8Co0.15Al0.05O2,96.081776,NCA,
 NCM111,20.0,,,1,1,Li 2017,20.0,LiNi0.33Co0.33Mn0.33O2,95.8843302,NCM111,
 NCM622,25.0,,,1,1,Li 2017,25.0,LiNi0.6Co0.2Mn0.2O2,96.9282874,NCM622,
@@ -156,7 +158,7 @@ NH4VO3,16.913,,,0,1,ISE,16.91,NH4VO3,116.9775,Ammonium metavanadate,161.6913808
 NMO,5.0,,,1,1,Li 2017,5.0,Na0.44MnO2,97.0515415,NMO,
 NTP,10.0,,,1,1,Li 2017,10.0,NaTi2(PO4)3,403.6330553,NTP,
 NV,27.0755,,,0,1,ISE,27.08,NV,64.9485,Vanadium nitrides,291.0191533
-Na,2.5,0.7353415460754421,0.29,16,5,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM","2.0, 2.48, 2.5, 3.0, 3.94",Na,22.9897693,"Na, Sodium, Sodium (Na)",3.0
+Na,2.4896818625228065,0.7313041312404854,0.29,17,6,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022","2.0, 2.48, 2.5, 3.0, 3.94",Na,22.9897693,"Na, Sodium, Sodium (Na)",3.0
 Na2CO3,0.22107142857142856,1.1338517313278587,5.13,3,5,"Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016, USGS","0.16, 0.21, 0.23, 0.32, 3.0",Na2CO3,105.9875386,"Na2CO3, Soda Ash ",1.385026
 Na2S,0.5733333333333334,0.20741798914805393,0.36,1,2,"Alibaba (Bulk), Li 2017","0.43, 0.72",Na2S,78.0395386,Na2S,1.8055895
 Na2SO4,0.076,1.920846688312214,25.27,3,3,"Alibaba (Bulk), Alva 2018, Li 2017","0.07, 0.08, 3.4",Na2SO4,142.0355386,Na2SO4,1.0614439
@@ -199,7 +201,7 @@ Rb2CO3,1062.84,,,0,1,SMM,1062.84,Rb2CO3,230.9436,Rubidium Carbonate(Rb2CO3≥99%
 Re,1502.5,1251.1680795693812,0.83,0,3,"ISE, SMM, USGS","1268.0, 1502.5, 3542.8",Re,186.207,"Rhenium, Rhenium APR, Rhenium Metal, Rhenium NH4ReO4",3580.0
 Rh,9.36120905208348,,,0,1,USGS,9.36,Rh,102.90549,Platinum-Group Metals Rhodium,147000.0
 Ru,0.3010831068432655,,,0,1,USGS,0.3,Ru,101.07,Platinum-Group Metals Ruthenium,10500.0
-S,0.25,0.13155362483700384,0.53,7,3,"Alibaba (Bulk), Li 2017, USGS","0.06, 0.25, 0.32",S,32.06,"S, Sulfur Sulfur",0.0926
+S,0.2845,0.14299783387056395,0.5,8,4,"Alibaba (Bulk), Li 2017, Steinmann 2022, USGS","0.06, 0.25, 0.32, 0.4",S,32.06,"S, Sulfur, Sulfur Sulfur",0.0926
 Sand,0.0849999999999999,0.37712729946266155,4.44,1,3,"Alibaba (Manual Entry), Diago 2018, Liu 2016","0.05, 0.08, 0.72",SiO2,60.083,"Dune Sand, Sand",
 Sb,7.057901656000078,4.452015270700895,0.63,7,4,"Alibaba (Bulk), ISE, Kim 2013, USGS","14.78, 4.83, 5.96, 8.15",Sb,121.76,"Antimony Ingot, Antimony Metal, Sb",5.79
 Sb2O3,6.381215244986006,1.4931084907616836,0.23,0,3,"Alibaba (Bulk), Alibaba (Manual Search), ISE","4.58, 5.38, 7.38, 7.62",Sb2O3,291.517,Antimony Trioxide,4.8620572
@@ -211,12 +213,13 @@ ScI3,165400.0,,,0,1,USGS,165400.0,ScI3,425.669318,Scandium Cmpds_Iodide,396.7220
 Se,22.517040782454078,3.175306143131196,0.14,0,2,"ISE, USGS","20.27, 24.76",Se,78.971,"Selenium , Selenium Powder",21.4
 SeO2,16.35,5.1618795026617965,0.32,0,2,"Alibaba (Bulk), ISE","12.7, 20.0",SeO2,110.969,Selenium dioxides,15.2736989
 Sn,26.95644848791172,17.54797774195522,0.65,6,3,"Kim 2013, SMM, USGS","22.24, 26.96, 54.72",Sn,118.71,"SMM Tin Ingot, Sn, Tin LME, Tin NY",18.7
-Solar Salt,0.49,0.3132091952673165,0.64,1,3,"Diago 2018, Liu 2016, Olympios 2021","0.43, 0.49, 1.0",NaNO3KNO3,186.0960693,"Molten Salt, Solar Salt",
+Solar Salt,0.595,0.2574878637916746,0.43,1,4,"Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","0.43, 0.49, 0.7, 1.0",NaNO3KNO3,186.0960693,"KNO3-NaNO3 [Solar Salt, Draw salt,, Molten Salt, Solar Salt",
 Sr,5.210208333333333,2.2521940236442526,0.43,0,2,"Alibaba (Bulk), ISE","3.62, 6.8",Sr,87.62,Strontium metal,6.605
 Sr(OH)2,1.3,,,0,1,Alibaba (Manual Search),1.3,Sr(OH)2,121.634,,4.821514
 SrCO3,1.1286504545454545,0.4294265910389369,0.38,0,2,"Alibaba (Bulk), Alibaba (Manual Search)","0.82, 1.43",SrCO3,147.628,,3.9801865
 Steel,1.5090833333333333,0.642721735768777,0.43,0,2,"Alibaba (Bulk), Kale 2018","0.67, 0.88, 1.32, 1.69, 1.76, 2.43",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
 Stone,0.08163370946914295,0.09668453527787733,1.18,0,2,"Alibaba (Bulk), USGS","0.01, 0.15",Al2O5Si,162.0430768,Stone (Crushed) Average,
+Sunflower oil,0.6,,,1,1,Steinmann 2022,0.6,,,Sunflower oil,
 Syenite,0.1256713547305333,0.0174485971927697,0.14,0,2,"Alibaba (Bulk), USGS","0.11, 0.14",Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,29.4,,,0,1,Alva 2018,29.4,,,Syltherm XLT,
 Synthetic CH4 (Sabatier),0.095,,,1,1,Calculation,0.1,CH4,16.043,Synthetic CH4 (Sabatier),

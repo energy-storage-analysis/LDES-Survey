@@ -1,0 +1,11 @@
+original_name,SM_name,SM_type,materials
+"KNO3-NaNO3 [Solar Salt, Draw salt,",Solar Salt,sensible_thermal,Solar Salt
+"Partherm 430]
+NaNO2-KNO3-NaNO3 [Heat transfer",HITEC,sensible_thermal,HITEC
+"salt (HTS), HITEC-HTS (Coastal",HITEC XL,sensible_thermal,HITEC XL
+Sodium,Na,sensible_thermal,Na
+Mobiltherm 605,Mobiltherm 605,sensible_thermal,Mobiltherm 605
+"Therminol VP1
+(vapor pressure at 400 °C: 10.9 bar)",Therminol VP1,sensible_thermal,Therminol VP1
+Sulfur,S,sensible_thermal,S
+Sunflower oil,Sunflower oil,sensible_thermal,Sunflower oil

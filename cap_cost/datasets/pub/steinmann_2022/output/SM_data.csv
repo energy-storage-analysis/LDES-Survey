@@ -1,0 +1,7 @@
+SM_name,original_name,Cp,mass_density,T_low,T_high,SM_type,materials
+Solar Salt,"KNO3-NaNO3 [Solar Salt, Draw salt,",0.0004166666666666667,1840,240,560,sensible_thermal,Solar Salt
+HITEC XL,"salt (HTS), HITEC-HTS (Coastal",0.00038888888888888887,1900,130,480,sensible_thermal,HITEC XL
+Na,Sodium,0.0003611111111111111,900,98,873,sensible_thermal,Na
+Mobiltherm 605,Mobiltherm 605,0.0008055555555555556,700,10,315,sensible_thermal,Mobiltherm 605
+S,Sulfur,0.0002722222222222222,1700,115,445,sensible_thermal,S
+Sunflower oil,Sunflower oil,0.0006111111111111111,820,0,200 ,sensible_thermal,Sunflower oil

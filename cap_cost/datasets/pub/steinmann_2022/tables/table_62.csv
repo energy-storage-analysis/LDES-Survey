@@ -1,0 +1,22 @@
+PCM    ,Melting temperature  [°C] ,Heat of fusion  [kJ/kg] ,Density Solid phase  [kg/m3],Density Liquid phase at melting temperature ,Volumetric expansion  [%] 
+KNO3-NaNO2-NaNO3,142,84,2057,1977,4
+"53-%41%-6%
+(HTS)",,,,,
+"NaNO3-LiNO3
+51-49%",193,265,2185,1900,15
+"KNO3-NaNO3
+54-46%",222,100,"1951
+2192","1866
+2096",4.5
+NaOH-NaNO3-MnO2,254-309,374,1880,1805,4
+"91.8%-8%-0.2%
+(Thermkeep)",,,,,
+NaNO3,306,177,2100,1908,10.7
+KNO3,335,95,1933,1870,3.3
+"K2CO3 + Li2CO3
+65-35%",505,344,2130,2010,6
+"AL-Si
+88-12%",576,560,2250,2135,5
+"LiF-CaF2
+80-20%",769,815,2680,2100,21.6
+LiF,848,1044,2640,2035,22.9
