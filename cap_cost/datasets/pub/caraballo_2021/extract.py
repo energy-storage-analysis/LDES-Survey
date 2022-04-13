@@ -70,7 +70,7 @@ tables['table_3'] = pd.concat([
     dfs[11],
 ])
 
-tables['table_1'].columns = ['name','composition', 'phase_change_T','decomposition_T', 'ref', 'type']
+tables['table_1'].columns = ['name','composition', 'T_melt','T_max', 'ref', 'type']
 tables['table_2'].columns = ['name','mass_density', 'Cp','ref']
 tables['table_3'].columns = ['name','specific_price_orig', 'specific_energy_orig','volumetric_energy_orig','C_kwh_orig','ref']
 

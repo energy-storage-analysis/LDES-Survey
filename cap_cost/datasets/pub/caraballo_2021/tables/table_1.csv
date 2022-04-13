@@ -1,4 +1,4 @@
-name,composition,phase_change_T,decomposition_T,ref,type
+name,composition,T_melt,T_max,ref,type
 Solar Salt,60 NaNO3-40 KNO3,240,565,[19],Nitrate
 Hitec,7 NaNO3-53 KNO3-40 NaNO2,142,450,[20],Nitrate
 Hitec XL,15 NaNO3-43 KNO3-42 Ca(NO3)2,130,450,"[21,22]",Nitrate

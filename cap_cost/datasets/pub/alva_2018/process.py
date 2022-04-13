@@ -63,9 +63,8 @@ df_5 = pd.read_csv('tables/table_5.csv')
 df_6 = pd.read_csv('tables/table_6.csv')
 df_7 = pd.read_csv('tables/table_7.csv')
 
-col_sel = ['original_name','Cp', 'kth', 'specific_price', 'class']
 
-df_sens = pd.concat([df[col_sel] for df in [df_4, df_5, df_6, df_7]]).dropna(subset=['original_name'])
+df_sens = pd.concat([df_4, df_5, df_6, df_7]).dropna(subset=['original_name'])
 
 df_sens = df_sens.set_index('original_name')
 
@@ -78,7 +77,7 @@ df_sens = df_sens.set_index('original_name')
 df_sens['Cp'] = df_sens['Cp']/3600
 
 #TODO: How to have consistent naming without introducing delta T?
-df_sens['specific_energy'] = df_sens['Cp']*500
+# df_sens['specific_energy'] = df_sens['Cp']*500
 # df_sens['C_kwh'] = df_sens['specific_price']/(df_sens['Cp']*500)
 
 #%%
@@ -114,7 +113,10 @@ df_SMs = pd.merge(
 # df_SMs.index.name = 'SM_name'
 df_SMs = df_SMs.reset_index().set_index('SM_name')
 
-df_SMs = df_SMs[['materials','original_name','SM_type','Cp', 'phase_change_T','sp_latent_heat','density','kth','vol_latent_heat']]
+df_SMs = df_SMs[['materials','original_name','SM_type','Cp', 'T_melt','T_max', 'phase_change_T','sp_latent_heat','density','kth','vol_latent_heat']]
+
+df_SMs['T_melt'] = df_SMs['T_melt'].replace('e','')
+df_SMs['T_max'] = df_SMs['T_max'].replace('e','')
 
 df_SMs = df_SMs.rename({'density': 'mass_density'}, axis=1)
 df_SMs['mass_density'] = df_SMs['mass_density'].str.strip('(S)').astype(float) #kg/m3

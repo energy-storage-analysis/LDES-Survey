@@ -89,6 +89,8 @@ df_table4['class'] = 'Thermal Oils'
 df_table4 = df_table4.rename({  
     '-1 degC\n-1)\nSpeciﬁc heat capacity at 210 degC (kJ kg': 'Cp',
     'Thermal conductivity at 210 degC (W m\n-1 K\n-1)': 'kth',
+    'Max bulk temperature (degC)':'T_max',
+    'Melting point (degC)':'T_melt',
     'Cost (V$t\n-1)': 'specific_price'
     }, axis=1)
 df_table4.index.name = 'original_name'
@@ -119,6 +121,8 @@ df_table5 = df_table5.rename({
     'Salt/eutectic': 'original_name',
     'Speciﬁc heat (kJ$kg\n-1 degC\n-1)': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)': 'kth',
+    'Highest operating temperature (degC)': 'T_max',
+    'Melting point (degC)': 'T_melt',
     'Cost ($$kg\n-1)': 'specific_price'
     }, axis=1)
 
@@ -143,6 +147,8 @@ df_table6 = df_table6.rename({
     'Metal/Alloy': 'original_name',
     'Speciﬁc heat -1\nkJ$kg\n-1 degC': 'Cp',
     'Thermal conductivity (W$m\n-1 K\n-1)' : 'kth',
+    'Melting point (degC)': 'T_melt',
+    'Boiling point (degC)': 'T_max',
     'Cost ($$kg\n-1)': 'specific_price'
     }, axis=1)
 

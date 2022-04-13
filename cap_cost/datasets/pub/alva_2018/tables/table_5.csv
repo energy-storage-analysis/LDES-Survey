@@ -1,4 +1,4 @@
-original_name,Melting point (degC),Highest operating temperature (degC),Cp,"-3)
+original_name,T_melt,T_max,Cp,"-3)
 Density (kg$m (liquid)",kth,"Sensible heat storage capacity (MJ$m
 -3 degC
 -1)",specific_price,class

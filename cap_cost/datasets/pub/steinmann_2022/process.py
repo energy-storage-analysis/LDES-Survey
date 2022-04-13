@@ -31,7 +31,7 @@ df_t21['specific_price'] = df_t21['specific_price']/1000
 
 df_t21['T_range'] = df_t21['T_range'].str.replace('\n','').str.replace('°C','')
 
-df_t21[['T_low', 'T_high']] = df_t21['T_range'].str.split('-', expand=True)[[0,1]]
+df_t21[['T_melt', 'T_max']] = df_t21['T_range'].str.split('-', expand=True)[[0,1]]
 
 # df_t21['deltaT']
 
@@ -92,7 +92,7 @@ df_t23
 #%%
 
 df_liquid = pd.concat([df_t21, df_t23], axis=1)
-df_liquid = df_liquid[['Cp', 'mass_density','T_low', 'T_high', 'deltaT_max','specific_price']]
+df_liquid = df_liquid[['Cp', 'mass_density','T_melt', 'T_max', 'deltaT_max','specific_price']]
 df_liquid
 
 #%%
@@ -102,7 +102,7 @@ df_t31 = tables['table_31']
 
 df_t31 = df_t31.rename({
 'Storage Medium  ': 'original_name', 
-'Maximal Temperature [°C]': 'T_high',
+'Maximal Temperature [°C]': 'T_max',
 'Spec Heat capacity [J/kgK]': 'Cp', 
 'Density [kg/m3] ': 'mass_density',
 'Estimated Material cost\n[€/ton]': 'specific_price'
@@ -113,7 +113,7 @@ df_t31 = df_t31.dropna()
 
 df_t31['Cp'] = df_t31['Cp'].apply(average_range)
 df_t31['Cp'] = df_t31['Cp'].astype(float)/3600000
-df_t31['T_high'] = df_t31['T_high'].apply(average_range)
+df_t31['T_max'] = df_t31['T_max'].apply(average_range)
 
 df_t31['specific_price'] = df_t31['specific_price'].str.replace('<','')
 df_t31['specific_price'] = df_t31['specific_price'].apply(average_range)
@@ -203,10 +203,6 @@ df_pcm
 # df = df.rename({}, axis=1)
 
 df_all = pd.concat([df_liquid,df_solid, df_pcm])
-
-df_all['deltaT_max'] = df_all['T_high'].astype(float) - df_all['T_low'].fillna(20).astype(float) #Assume solid material delta T starting from 20 C
-
-df_all = df_all.drop(['T_high', 'T_low'], axis=1)
 
 # df_all = df_all.drop('deltaT_max', axis=1)
 

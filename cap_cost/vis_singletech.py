@@ -108,8 +108,7 @@ df_sens_ds = df_sens.where(df_sens['C_kwh'] < 10).dropna(how='all')
 # %%
 plt.figure()
 
-#TODO: LINaKCO3 appears to not have measured thermal conductivity data
-x_str='kth'
+x_str='T_max'
 y_str='C_kwh'
 
 #TODO: https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
@@ -131,7 +130,7 @@ for name, row in df_sens_ds.iterrows():
 # plt.yscale('log')
 plt.xscale('log')
 
-plt.xlabel('Thermal Conductivity (W/m/K)')
+plt.xlabel('Maximum Temperature (deg C)')
 plt.ylabel("Material capital cost ($/kWh)")
 
 plt.ylim(0,10)

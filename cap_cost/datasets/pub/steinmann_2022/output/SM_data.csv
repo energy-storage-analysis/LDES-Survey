@@ -1,24 +1,24 @@
-SM_name,original_name,Cp,mass_density,deltaT_max,kth,phase_change_T,sp_latent_heat,SM_type,materials
-Solar Salt,Solar Salt,0.0004166666666666667,1840,320.0,,,,sensible_thermal,Solar Salt
-HITEC,HITEC,0.00043611111111111113,1800,358.0,,,,sensible_thermal,HITEC
-HITEC XL,HITEC XL,0.00038888888888888887,1900,350.0,,,,sensible_thermal,HITEC XL
-Na,Sodium,0.0003611111111111111,900,775.0,,,,sensible_thermal,Na
-Mobiltherm 605,Mobiltherm 605,0.0008055555555555556,700,305.0,,,,sensible_thermal,Mobiltherm 605
-S,Sulfur,0.0002722222222222222,1700,330.0,,,,sensible_thermal,S
-Sunflower oil,Sunflower oil,0.0006111111111111111,820,200.0,,,,sensible_thermal,Sunflower oil
-Al,Aluminium,0.0002555555555555556,2700.0,640.0,250,,,sensible_thermal,Al
-Fe,Cast iron,0.00015277777777777777,7200.0,1180.0,35,,,sensible_thermal,Fe
-NaCl,NaCl,0.00023611111111111112,2150.0,780.0,3.5,,,sensible_thermal,NaCl
-Granite,Granite,0.0003083333333333333,2600.0,550.0,2.85,,,sensible_thermal,Stone
-Limestone,Limestone,0.00035,2500.0,780.0,1.25,,,sensible_thermal,Stone
-Sandstone,Sandstone,0.0005625,2200.0,780.0,2.5500000000000003,,,sensible_thermal,Stone
-Basalt,Basalt,0.00024444444444444443,2800.0,780.0,3.3499999999999996,,,sensible_thermal,Stone
-Al2O3,Al2O3,0.0003,3990.0,2030.0,8,,,sensible_thermal,Al2O3
-SiO2,SiO2,0.00020277777777777777,2200.0,1700.0,1.5,,,sensible_thermal,SiO2
-MgO,MgO,0.00031944444444444446,3570.0,2810.0,14,,,sensible_thermal,MgO
-Concrete,Concrete,0.00025416666666666665,2750.0,430.0,1.0,,,sensible_thermal,Concrete
-C6,Graphite,0.00019444444444444443,2500.0,3480.0,150,,,sensible_thermal,C6
-HITEC,KNO3-NaNO2-NaNO3,,2057,,,142,0.023333333333333334,latent_thermal,HITEC
-NaNO3,NaNO3,,2100,,,306,0.049166666666666664,latent_thermal,NaNO3
-KNO3,KNO3,,1933,,,335,0.02638888888888889,latent_thermal,KNO3
-LiF,LiF,,2640,,,848,0.29,latent_thermal,LiF
+SM_name,original_name,Cp,mass_density,T_melt,T_max,deltaT_max,kth,phase_change_T,sp_latent_heat,SM_type,materials
+Solar Salt,Solar Salt,0.0004166666666666667,1840,240,560,320.0,,,,sensible_thermal,Solar Salt
+HITEC,HITEC,0.00043611111111111113,1800,142,500,358.0,,,,sensible_thermal,HITEC
+HITEC XL,HITEC XL,0.00038888888888888887,1900,130,480,350.0,,,,sensible_thermal,HITEC XL
+Na,Sodium,0.0003611111111111111,900,98,873,775.0,,,,sensible_thermal,Na
+Mobiltherm 605,Mobiltherm 605,0.0008055555555555556,700,10,315,325.0,,,,sensible_thermal,Mobiltherm 605
+S,Sulfur,0.0002722222222222222,1700,115,445,330.0,,,,sensible_thermal,S
+Sunflower oil,Sunflower oil,0.0006111111111111111,820,0,200 ,,,,,sensible_thermal,Sunflower oil
+Al,Aluminium,0.0002555555555555556,2700.0,,660,,250,,,sensible_thermal,Al
+Fe,Cast iron,0.00015277777777777777,7200.0,,1200,,35,,,sensible_thermal,Fe
+NaCl,NaCl,0.00023611111111111112,2150.0,,800,,3.5,,,sensible_thermal,NaCl
+Granite,Granite,0.0003083333333333333,2600.0,,570,,2.85,,,sensible_thermal,Stone
+Limestone,Limestone,0.00035,2500.0,,800,,1.25,,,sensible_thermal,Stone
+Sandstone,Sandstone,0.0005625,2200.0,,800,,2.5500000000000003,,,sensible_thermal,Stone
+Basalt,Basalt,0.00024444444444444443,2800.0,,800,,3.3499999999999996,,,sensible_thermal,Stone
+Al2O3,Al2O3,0.0003,3990.0,,2050,,8,,,sensible_thermal,Al2O3
+SiO2,SiO2,0.00020277777777777777,2200.0,,1720,,1.5,,,sensible_thermal,SiO2
+MgO,MgO,0.00031944444444444446,3570.0,,2830,,14,,,sensible_thermal,MgO
+Concrete,Concrete,0.00025416666666666665,2750.0,,450.0,,1.0,,,sensible_thermal,Concrete
+C6,Graphite,0.00019444444444444443,2500.0,,3500,,150,,,sensible_thermal,C6
+HITEC,KNO3-NaNO2-NaNO3,,2057,,,,,142,0.023333333333333334,latent_thermal,HITEC
+NaNO3,NaNO3,,2100,,,,,306,0.049166666666666664,latent_thermal,NaNO3
+KNO3,KNO3,,1933,,,,,335,0.02638888888888889,latent_thermal,KNO3
+LiF,LiF,,2640,,,,,848,0.29,latent_thermal,LiF

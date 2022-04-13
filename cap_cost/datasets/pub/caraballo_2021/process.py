@@ -7,8 +7,7 @@ tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='ut
 
 df = pd.concat(tables.values(), axis=1)
 
-#TODO: Not including phase change T to not include in latent thermal calcs, because some pahse change T are below 200C. Should have latent T downselection happen after this. 
-df = df[['type','decomposition_T','mass_density','Cp','C_kwh_orig']]
+df = df[['type','T_melt','T_max','mass_density','Cp','C_kwh_orig']]
 df
 
 df.index.name = 'SM_name'
@@ -72,7 +71,7 @@ df['Cp'] = df['Cp']/3600000
 
 #%%
 
-df['decomposition_T'] = df['decomposition_T'].str.strip('>').astype(float)
+df['T_max'] = df['T_max'].str.strip('>').astype(float)
 
 # %%
 df.to_csv('output/SM_data.csv')

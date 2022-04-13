@@ -1,4 +1,4 @@
-original_name,Manufacturer,Composition,Max bulk temperature (degC),Melting point (degC),Atmospheric boiling point (degC),"Kinematic viscosity at 40 degC (mm2 s
+original_name,Manufacturer,Composition,T_max,T_melt,Atmospheric boiling point (degC),"Kinematic viscosity at 40 degC (mm2 s
 -1)","Density at 40 degC (kg m
 -3)","Density at 210 degC (kg m
 -3)",kth,Cp,"Thermal storage capacity at 210 degC (kJ m
