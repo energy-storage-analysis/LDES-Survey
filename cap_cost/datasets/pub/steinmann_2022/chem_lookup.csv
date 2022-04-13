@@ -1,11 +1,27 @@
 original_name,index
-"KNO3-NaNO3 [Solar Salt, Draw salt,",Solar Salt
-"Partherm 430]
-NaNO2-KNO3-NaNO3 [Heat transfer",HITEC
-"salt (HTS), HITEC-HTS (Coastal",HITEC XL
+Solar Salt,Solar Salt
+HITEC,HITEC
+HITEC XL,HITEC XL
 Sodium,Na
 Mobiltherm 605,Mobiltherm 605
 "Therminol VP1
 (vapor pressure at 400 °C: 10.9 bar)",Therminol VP1
 Sulfur,S
 Sunflower oil,Sunflower oil
+Aluminium,Al
+Cast iron,Fe
+NaCl,NaCl
+Granite,Stone
+Limestone,Stone
+Sandstone,Stone
+Basalt,Stone
+Al2O3,Al2O3
+SiO2,SiO2
+MgO,MgO
+Concrete,Concrete
+"Castable
+ceramic",
+Graphite,C6
+NaNO3,NaNO3
+KNO3,KNO3
+LiF,LiF

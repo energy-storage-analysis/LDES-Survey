@@ -81,7 +81,7 @@ for name, row in df_latent_ds.iterrows():
 
 
 plt.yscale('log')
-plt.ylim(0.8,10)
+plt.ylim(0.5,10)
 
 plt.xlabel('Phase Change Temperature (K)')
 plt.ylabel("Material capital cost ($/kWh)")
@@ -134,7 +134,7 @@ plt.xscale('log')
 plt.xlabel('Thermal Conductivity (W/m/K)')
 plt.ylabel("Material capital cost ($/kWh)")
 
-plt.ylim(0,5)
+plt.ylim(0,10)
 
 plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
 

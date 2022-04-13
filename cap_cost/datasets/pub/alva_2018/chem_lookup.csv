@@ -1,6 +1,6 @@
 original_name,material_name,molecular_formula,index_use
-"HITEC, NaNO3eKNO3e NaNO2",Hitec,(NaNO3)7(KNO3)53(NaNO2)40,material_name
-"HITEC XL, NaNO3e KNO3eCa(NO3)2",Hitec XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48,material_name
+"HITEC, NaNO3eKNO3e NaNO2",HITEC,(NaNO3)7(KNO3)53(NaNO2)40,material_name
+"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,(NaNO3)7(KNO3)45(Ca(NO3)2)48,material_name
 "Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,NaNO3KNO3,material_name
 Syltherm XLT,Syltherm XLT,,material_name
 Dowtherm A,Dowtherm,C24H20O,material_name

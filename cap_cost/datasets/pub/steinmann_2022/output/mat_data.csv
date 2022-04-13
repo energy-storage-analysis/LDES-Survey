@@ -1,7 +1,23 @@
 index,original_name,specific_price
-Solar Salt,"KNO3-NaNO3 [Solar Salt, Draw salt,",0.7
-HITEC XL,"salt (HTS), HITEC-HTS (Coastal",1.1
+Solar Salt,Solar Salt,0.7
+HITEC,HITEC,1.2
+HITEC XL,HITEC XL,1.1
 Na,Sodium,2.0
 Mobiltherm 605,Mobiltherm 605,3.0
 S,Sulfur,0.4
 Sunflower oil,Sunflower oil,0.6
+Al,Aluminium,1.75
+Fe,Cast iron,0.45
+NaCl,NaCl,0.05
+Stone,Granite,0.05
+Stone,Limestone,0.05
+Stone,Sandstone,0.05
+Stone,Basalt,0.05
+Al2O3,Al2O3,1.0
+SiO2,SiO2,0.6
+MgO,MgO,0.7
+Concrete,Concrete,0.05
+C6,Graphite,3.25
+NaNO3,NaNO3,0.6
+KNO3,KNO3,0.8
+LiF,LiF,5.4

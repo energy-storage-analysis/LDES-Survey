@@ -1,7 +1,7 @@
 SM_name,materials,SM_type
 Solar Salt,Solar Salt,sensible_thermal
-Hitec,HITEC,sensible_thermal
-Hitec XL,HITEC,sensible_thermal
+HITEC,HITEC,sensible_thermal
+HITEC XL,HITEC XL,sensible_thermal
 LiNaKNO3,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal
 LiNaKCaNO3,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal
 LiNaKNO3NO2,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal

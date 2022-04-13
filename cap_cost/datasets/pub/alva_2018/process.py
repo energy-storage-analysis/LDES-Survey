@@ -111,9 +111,10 @@ df_SMs = pd.merge(
 
 #%%
 
-df_SMs.index.name = 'SM_name'
+# df_SMs.index.name = 'SM_name'
+df_SMs = df_SMs.reset_index().set_index('SM_name')
 
-df_SMs = df_SMs[['materials','SM_type','Cp', 'phase_change_T','sp_latent_heat','density','kth','vol_latent_heat']]
+df_SMs = df_SMs[['materials','original_name','SM_type','Cp', 'phase_change_T','sp_latent_heat','density','kth','vol_latent_heat']]
 
 df_SMs = df_SMs.rename({'density': 'mass_density'}, axis=1)
 df_SMs['mass_density'] = df_SMs['mass_density'].str.strip('(S)').astype(float) #kg/m3
