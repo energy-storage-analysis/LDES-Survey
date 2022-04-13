@@ -10,12 +10,12 @@ mpl.rcParams.update({'font.size': 16})
 
 import os
 from os.path import join as pjoin
-output_dir = 'results/Ckwh_line'
+output_dir = 'output/Ckwh_line'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 
-df_Ckwh = pd.read_csv('data_consolidated/C_kwh.csv', index_col=[0,1])
-df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
+df_Ckwh = pd.read_csv('../data_consolidated/C_kwh.csv', index_col=[0,1])
+df_SMs = pd.read_csv('../data_consolidated/SM_data.csv', index_col=[0,1])
 df_SMs = df_SMs[['materials', 'notes']].loc[df_Ckwh.index]
 
 df = pd.concat([df_Ckwh, df_SMs], axis=1).reset_index('SM_type')

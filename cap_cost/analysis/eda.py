@@ -10,14 +10,14 @@ mpl.rcParams.update({'font.size':13.5})
 
 import os
 from os.path import join as pjoin
-output_dir = 'results/eda'
+output_dir = 'output/eda'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 # %%
 
 
-df_mat_data = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=0)
-df_all = pd.read_csv('data_consolidated/C_kWh.csv', index_col=0)
+df_mat_data = pd.read_csv('../data_consolidated/mat_data.csv', index_col=0)
+df_SMs = pd.read_csv('../data_consolidated/SM_data.csv', index_col=0)
+df_all = pd.read_csv('../data_consolidated/C_kWh.csv', index_col=0)
 # %%
 plt.figure()
 
@@ -47,7 +47,7 @@ plt.ylabel("Count")
 
 plt.tight_layout()
 
-plt.savefig('results/eda/source_count.png')
+plt.savefig('output/eda/source_count.png')
 
 #%%
 
@@ -78,7 +78,7 @@ plt.ylabel('Count')
 plt.tight_layout()
 
 
-plt.savefig('results/eda/SM_energy.png')
+plt.savefig('output/eda/SM_energy.png')
 
 #%%
 

@@ -221,4 +221,6 @@ df_out.to_csv('data_consolidated/C_kwh.csv')
 # %%
 df_sel = df_out.where(df_out['C_kwh'] < 10).dropna(how='all')
 
-df_sel.sort_values('C_kwh').to_csv('results/downselected.csv')
+df_sel = df_sel[['specific_energy','specific_price','price_sources','SM_sources','C_kwh']]
+
+df_sel.sort_values('C_kwh').to_csv('analysis/output/SM_downselected.csv')

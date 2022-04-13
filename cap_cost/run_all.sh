@@ -5,9 +5,10 @@ echo "Calculating C_kWh"
 python "calc_Ckwh.py"
 
 echo "Generate visualizations"
-python "vis_Ckwh_line.py"
-python "vis_Ckwh.py"
-python "vis_eda.py"
-python "vis_singletech.py"
+cd analysis
+python "Ckwh_line.py"
+python "Ckwh.py"
+python "eda.py"
+python "thermal.py"
 
 echo "Done"

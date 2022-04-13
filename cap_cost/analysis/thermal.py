@@ -8,11 +8,11 @@ from adjustText import adjust_text
 
 import os
 from os.path import join as pjoin
-output_dir = 'results/single_tech'
+output_dir = 'output/single_tech'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
-df_SM = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
-df_Ckwh = pd.read_csv('data_consolidated/C_kwh.csv', index_col=[0,1])
+df_SM = pd.read_csv('../data_consolidated/SM_data.csv', index_col=[0,1])
+df_Ckwh = pd.read_csv('../data_consolidated/C_kwh.csv', index_col=[0,1])
 
 common_columns = [c for c in df_SM.columns if c in df_Ckwh.columns]
 

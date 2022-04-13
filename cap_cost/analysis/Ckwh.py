@@ -9,13 +9,13 @@ from bokeh.io import show, output_file, save
 
 import os
 from os.path import join as pjoin
-output_dir = 'results/Ckwh'
+output_dir = 'output/Ckwh'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 
 # %%
 
-df_all = pd.read_csv('data_consolidated/C_kWh.csv', index_col=0)
+df_all = pd.read_csv('../data_consolidated/C_kWh.csv', index_col=0)
 df_all = df_all.dropna(subset=['C_kwh'])
 
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
