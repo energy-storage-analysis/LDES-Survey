@@ -10,5 +10,6 @@ python "Ckwh_line.py"
 python "Ckwh.py"
 python "eda.py"
 python "thermal.py"
+python "electrochem.py"
 
 echo "Done"

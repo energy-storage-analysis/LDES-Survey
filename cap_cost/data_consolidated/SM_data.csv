@@ -237,7 +237,7 @@ N-doped 3D nanoporous carbon,ELDC,,,,,,,,,,,,,,,,,,265.0,1.0,,Graphite,,Choi 201
 N-doped carbon nanosheets,ELDC,,,,,,,,,,,,,,,,,,165.0,1.0,,Graphite,,Choi 2015,,
 N-doped carbon nanospheres,ELDC,,,,,,,,,,,,,,,,,,128.0,1.0,,Graphite,,Choi 2015,,
 N-doped nanoporous carbon,ELDC,,,,,,,,,,,,,,,,,,165.0,1.0,,Graphite,,Choi 2015,,
-NTP/NMO,solid_electrode,,,,,,,,,212.4,13.0,,,,,,,,,,,"[('NTP', 0.5), ('NMO', 0.5)]",,Li 2017,Na ion (aqueous),
+NTP/NMO,solid_electrode,,,,,,,,,212.4,1.3,,,,,,,,,,,"[('NTP', 0.5), ('NMO', 0.5)]",,Li 2017,Na ion (aqueous),
 Na,sensible_thermal,0.0003611111111111,98.0,873.0,,,900.0,,,,,,,,,,,,,,775.0,Na,Sodium,Steinmann 2022,,
 Na-O2,metal_air,,,,,,,,,,2.33,,,,,,,,,,,Na,,Weinrich 2019,,
 Na/Al,liquid_metal_battery,,,,,,,,,,,,,,,,,,,,,"[('Na', 0.5), ('Al', 0.5)]",Na/Al,Kim 2013,,
