@@ -24,7 +24,7 @@ df = pd.concat([df_SM, df_Ckwh], axis=1)
 df = df.reset_index('SM_type')
 
 
-df.index = [re.sub('(\d)',r'_\1', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
+df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 #%%
 
 df['SM_type'].value_counts()
@@ -122,7 +122,7 @@ texts = []
 for name, row in df_sens_ds.iterrows():
     x = row[x_str]
     y = row[y_str]
-    name = name[0:25].replace('_','') #TODO: error when adding steinmann...
+    # name = name[0:25].replace('_','') #TODO: error when adding steinmann...
 
     txt= ax.text(x, y, "${}$".format(name))
     texts.append(txt)
