@@ -23,10 +23,10 @@ PSB,7.4,Redox flow,1.55,"[('S',0.5), ('Br2', 0.5)]",molar,flow_battery
 VRFB,124.4,Redox flow,1.55,V,,flow_battery
 Cu/Cu,53.0,Redox flow,0.6,Cu,,hybrid_flow
 AQDS/Br,57.9,Redox flow,0.92,"[('AQDS', 0.5), ('Br2', 0.5)]",molar,flow_battery
-"Aq-S/air  (Na, H+)",1.7,Flow-air,1.0,"[('Na2SO4',2.6), ('S', 5), ('NaOH', 3)]",molar,flow_battery
-"Aq-S/air  (Na, OH-)",4.0,Flow-air,1.0,"[('Na2SO4',2.6), ('Na2S', 1.25), ('S', 3.75), ('NaOH', 3)]",molar,flow_battery
-"Aq-S/air  (Li, H+)",4.6,Flow-air,1.0,"[('Li2SO4',2.6), ('S', 5), ('LiOH', 3)]",molar,flow_battery
-"Aq-S/air (Li, OH-)",13.2,Flow-air,1.0,"[('Li2SO4',2.6), ('Li2S', 1.25), ('S', 3.75), ('LiOH', 3)]",molar,flow_battery
+"Aq-S/air  (Na, H+)",1.7,Flow-air,1.35,"[('Na', 0.5), ('S', 0.5)]",molar,flow_battery
+"Aq-S/air  (Na, OH-)",4.0,Flow-air,0.65,"[('Na', 0.5), ('S', 0.5)]",molar,flow_battery
+"Aq-S/air  (Li, H+)",4.6,Flow-air,1.35,"[('Li', 0.5), ('S', 0.5)]",molar,flow_battery
+"Aq-S/air (Li, OH-)",13.2,Flow-air,0.65,"[('Li', 0.5), ('S', 0.5)]",molar,flow_battery
 C6/LMO,45.6,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('LMO', 0.5)]",molar,solid_electrode
 C6/LCO,98.3,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('LCO', 0.5)]",molar,solid_electrode
 C6/LFP,44.0,Li ion  (C6 anode),3.65,"[('Graphite', 0.5), ('LFP', 0.5)]",molar,solid_electrode

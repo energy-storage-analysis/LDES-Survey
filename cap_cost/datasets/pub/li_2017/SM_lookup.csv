@@ -23,10 +23,10 @@ PSB,1.55,"[('S',0.5), ('Br2', 0.5)]",molar,Redox flow,flow_battery,"Zhang, H. �
 VRFB,1.55,V,,Redox flow,flow_battery,https://en.wikipedia.org/wiki/Vanadium_redox_battery
 Cu/Cu,0.6,Cu,,Redox flow,hybrid_flow,"Sanz, Laura, David Lloyd, Eva Magdalena, Jesús Palma, and Kyösti Kontturi. “Description and Performance of a Novel Aqueous All-Copper Redox Flow Battery.”"
 AQDS/Br,0.92,"[('AQDS', 0.5), ('Br2', 0.5)]",molar,Redox flow,flow_battery,"Huskinson, B. et al. A metal-free organic-inorganic aqueous flow batter"
-"Aq-S/air  (Na, H+)",1,"[('Na2SO4',2.6), ('S', 5), ('NaOH', 3)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
-"Aq-S/air  (Na, OH-)",1,"[('Na2SO4',2.6), ('Na2S', 1.25), ('S', 3.75), ('NaOH', 3)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
-"Aq-S/air  (Li, H+)",1,"[('Li2SO4',2.6), ('S', 5), ('LiOH', 3)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
-"Aq-S/air (Li, OH-)",1,"[('Li2SO4',2.6), ('Li2S', 1.25), ('S', 3.75), ('LiOH', 3)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air  (Na, H+)",1.35,"[('Na', 0.5), ('S', 0.5)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air  (Na, OH-)",0.65,"[('Na', 0.5), ('S', 0.5)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air  (Li, H+)",1.35,"[('Li', 0.5), ('S', 0.5)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air (Li, OH-)",0.65,"[('Li', 0.5), ('S', 0.5)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
 C6/LMO,4.2,"[('Graphite', 0.5), ('LMO', 0.5)]",molar,Li ion  (C6 anode),solid_electrode,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
 C6/LCO,4.2,"[('Graphite', 0.5), ('LCO', 0.5)]",molar,Li ion  (C6 anode),solid_electrode,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
 C6/LFP,3.65,"[('Graphite', 0.5), ('LFP', 0.5)]",molar,Li ion  (C6 anode),solid_electrode,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
