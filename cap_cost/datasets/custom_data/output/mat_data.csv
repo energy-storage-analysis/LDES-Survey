@@ -1,9 +1,6 @@
 index,original_name,molecular_formula,specific_price,source,notes
 Iron Ore,Magnetite,Fe2O3,0.139,Olympios 2021,
 Solar Salt,Molten Salt,NaNO3KNO3,1,Olympios 2021,
-Synthetic H2,Synthetic H2,H2,0.009,Calculation,Assuming Water cost 0.001 $/kg
-Synthetic CH4 (Sabatier),Synthetic CH4 (Sabatier),CH4,0.095,Calculation,Revist: Sabbatier reaction Using previously calculated H2 cost and carbon cost
-Synthetic NH3 (Haber-Bosch),Synthetic NH3 (Haber-Bosch),NH3,0.0592,Calculation,Using elemental N2 cost and previously calculated H2 cost
 Synthetic H2 (Cavern),Synthetic H2 (Cavern),H2,0.36,Ahluwalia,"Ahluwalia, Rajesh. “System Level Analysis of Hydrogen Storage Options,” n.d., 42"
 Water Reservoir Excavation,Pumped Hydro,,0.261,Calculation/Black and Veatch,"Based on Black and Veatch 2012 resirvoir cost numbers. "
 Graphene,Graphene,C6,90,Graphene Lab,https://www.i-graphenelab.com/price/
@@ -14,3 +11,5 @@ Solar Salt,Solar Salt,NaNO3KNO3,0.43,Diago 2018,
 TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,Liu 2019,https://doi.org/10.1016/j.chempr.2019.04.021
 CuSO4,,CuSO4,1.5,Li 2017,Unsourced number used to calculate Cu-BPA
 K4Fe(CN)6,,C6FeK4N6,2,Li 2017,Unsourced number used to calculate Cu-BPA
+CO2,Cyrogenic Carbon Capture,CO2,0.04,Knighton 2020,
+N2,Liquid Nitrogen,N2,0.14,Wiki (TODO),https://en.wikipedia.org/wiki/Prices_of_chemical_elements

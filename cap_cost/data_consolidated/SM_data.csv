@@ -329,10 +329,11 @@ Stainless-Steel-455,virial,,,,,,,,,,,,,191.8814432989691,,,,,,,,Steel,,,Kale 201
 Steel-18Ni-300,virial,,,,,,,,,,,,,94.27860696517412,,,,,,,,Steel,,,Kale 2018,,
 Steel-4340,virial,,,,,,,,,,,,,59.87261146496816,,,,,,,,Steel,,,Kale 2018,,
 Sunflower oil,sensible_thermal,0.0006111111111111,0.0,200.0,,,820.0,,,,,,,,,,,,,,,Sunflower oil,,Sunflower oil,Steinmann 2022,,
-Synthetic CH4 (Sabatier),synfuel,,,,,,,,,,,,,,,,15.4,,,,,Synthetic CH4 (Sabatier),,Synthetic CH4 (Sabatier),TODO,,
-Synthetic H2,synfuel,,,,,,,,,,,,,,,,39.4,,,,,Synthetic H2,,Synthetic H2,TODO,,
-Synthetic H2 (Cavern),synfuel,,,,,,,,,,,,,,,,39.4,,,,,Synthetic H2 (Cavern),,Synthetic H2 (Cavern),TODO,,
-Synthetic NH3 (Haber-Bosch),synfuel,,,,,,,,,,,,,,,,6.25,,,,,Synthetic NH3 (Haber-Bosch),,Synthetic NH3 (Haber-Bosch),TODO,,
+Synthetic CH4 (Sabatier),synfuel,,,,,,,,,,,,,,,,15.4,,,,,"[('CO2', 2.75), ('Water', 3.375)]",molar,Synthetic CH4 (Sabatier),Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic H2,synfuel,,,,,,,,,,,,,,,,39.4,,,,,"[('Water', 9)]",mass,Synthetic H2,Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic H2 (Cavern),synfuel,,,,,,,,,,,,,,,,39.4,,,,,Synthetic H2 (Cavern),,Synthetic H2 (Cavern),Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic Methanol (DMS),synfuel,,,,,,,,,,,,,,,,6.39,,,,,"[('CO2', 1.375), ('Water', 1.6875)]",molar,Synthetic Methanol (DMS),Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic NH3 (Haber-Bosch),synfuel,,,,,,,,,,,,,,,,6.25,,,,,"[('N2', 0.5), ('Water', 1.5)]",molar,Synthetic NH3 (Haber-Bosch),Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
 T300-BSL914C,virial,,,,,,,,,,,,,769.7241821680565,,,,,,,,CFRP,,,Kale 2018,,
 T300-PR319,virial,,,,,,,,,,,,,745.1984635083227,,,,,,,,CFRP,,,Kale 2018,,
 TEMPO/Zn,hybrid_flow,,,,,,,,,,1.46,,,,,,,,,,,"[('Zn', 0.5), ('TEMPO', 0.5)]",molar,TEMPOL (organic),Diez 2020,,

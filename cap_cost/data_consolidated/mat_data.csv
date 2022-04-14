@@ -34,6 +34,7 @@ C6H12O6Sc,44200.0,,,0,1,USGS,44200.0,C6H12O6Sc,225.111908,Scandium Cmpds_Acetate
 CCoO3,14.445,,,0,1,ISE,14.45,CCoO3,118.941194,Cobalt Carbonates,16.3262666
 CFRP,31.38,,,0,1,Kale 2018,31.38,,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
 CNT,100.0,,,5,1,Alibaba (Manual Entry),100.0,C6,72.066,,
+CO2,0.04,,,2,1,Knighton 2020,0.04,CO2,44.009,Cyrogenic Carbon Capture,0.1452665
 CW,28.475,,,0,1,ISE,28.48,CW,195.851,Tungsten carbide,33.1426306
 Ca,3.773600000000001,3.087223560901893,0.82,14,3,"ISE, Kim 2013, SMM","3.49, 3.77, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
 Ca(NO3)2,0.5974999999999999,0.3288046532517445,0.55,1,2,"Alibaba (Bulk), Alibaba (Manual Search)","0.36, 0.83",Ca(NO3)2,164.086,,0.6708852
@@ -122,7 +123,7 @@ LFP,10.0,,,1,1,Li 2017,10.0,LiFePO4,157.754762,LFP,
 LMNO,20.0,,,1,1,Li 2017,20.0,LiMn1.5Ni0.5O4,182.6897645,LNMO,
 LMO,8.48425,2.143594207167019,0.25,2,2,"ISE, Li 2017","10.0, 6.97",LiMn2O4,180.812086,"LMO, Lithium manganates",
 LMP,10.0,,,1,1,Li 2017,10.0,LiMnPO4,156.847805,LMP,
-LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.072118,LRMO LMNO,
+LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.0721179,LRMO LMNO,
 LTO,12.0,,,1,1,Li 2017,12.0,Li4Ti5O12,459.083,LTO,
 La2O3,2.0,,,0,1,USGS,2.0,La2O3,325.80794,Rare Earths La2O3,4.1582001
 LaNi5,10.05,,,1,1,Li 2017,10.05,LaNi5,432.37247,LaNi5,10.9925658
@@ -151,6 +152,7 @@ Mo,43.63333333333333,15.29405597440222,0.35,0,3,"ISE, SMM, USGS","25.5, 43.63, 5
 MoO3,30.5,19.05477928912054,0.62,0,3,"Alibaba (Bulk), ISE, SMM","25.67, 30.5, 60.82",MoO3,143.947,"High-purity Molybdenum Trioxide, Molybdenum Oxide, FOB, China, Molybdenum ores and concentrates, roasted 45%, Molybdenum ores and concentrates, roasted 50%, Molybdenum oxides and hydroxides, Molybdenum oxides",26.7805966
 MoS2,28.185000000000002,2.5950818869546266,0.09,1,2,"ISE, Li 2017","26.35, 30.02",MoS2,160.07,"MoS2, Molybdenum Conc.",24.0740458
 Mobiltherm 605,3.0,,,1,1,Steinmann 2022,3.0,,,Mobiltherm 605,
+N2,0.14,,,1,1,Wiki (TODO),0.14,N2,28.014,Liquid Nitrogen,0.14
 NCA,34.0,,,1,1,Li 2017,34.0,LiNi0.8Co0.15Al0.05O2,96.081776,NCA,
 NCM111,20.0,,,1,1,Li 2017,20.0,LiNi0.33Co0.33Mn0.33O2,95.8843302,NCM111,
 NCM622,25.0,,,1,1,Li 2017,25.0,LiNi0.6Co0.2Mn0.2O2,96.9282874,NCM622,
@@ -224,10 +226,7 @@ Stone,0.05,0.04622154215284607,0.92,0,3,"Alibaba (Bulk), Steinmann 2022, USGS","
 Sunflower oil,0.6,,,1,1,Steinmann 2022,0.6,,,Sunflower oil,
 Syenite,0.1256713547305333,0.0174485971927697,0.14,0,2,"Alibaba (Bulk), USGS","0.11, 0.14",Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,29.4,,,0,1,Alva 2018,29.4,,,Syltherm XLT,
-Synthetic CH4 (Sabatier),0.095,,,1,1,Calculation,0.1,CH4,16.043,Synthetic CH4 (Sabatier),
-Synthetic H2,0.009,,,1,1,Calculation,0.01,H2,2.016,Synthetic H2,
 Synthetic H2 (Cavern),0.36,,,1,1,Ahluwalia,0.36,H2,2.016,Synthetic H2 (Cavern),
-Synthetic NH3 (Haber-Bosch),0.0592,,,1,1,Calculation,0.06,NH3,17.031,Synthetic NH3 (Haber-Bosch),
 TEMPO,5.5,,,2,1,Liu 2019,5.5,C9H18NO2,172.248,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",
 Ta,357.33833333333337,107.01589728737602,0.3,0,2,"ISE, SMM","281.67, 433.01",Ta,180.94788,"Tantalum Powders for metallurgy(Ta≥99.95%), Tantalum metal",305.0
 Ta2O5,197.93038657815163,65.40944053007873,0.33,0,3,"ISE, SMM, USGS","176.8, 197.93, 299.17",Ta2O5,441.89076,"Tantalum Conc., Tantalum pentoxide, Tantalum Pentoxide(Ta2O5≥99.5%), Tantalum Pentoxide(Ta2O5≥99.95%), Tantalum Ta2O5",249.8140627
@@ -249,7 +248,7 @@ Vegetable Oil,0.835,,,0,1,Alva 2018,0.83,C57H104O9,933.45,Vegetable oil,
 Vermiculite,0.33,,,0,1,Liu 2016,0.33,AlFeH3MgO6Si,234.2345384,Vermiculite,
 W,24.342857142857145,,,0,1,ISE,24.34,W,183.84,"Tungsten powder, Tungsten scrap, Wolfram Bar",35.3
 WO3,9.561104192038657,13.090874043702986,1.37,0,2,"ISE, USGS","0.3, 18.82",WO3,231.837,"Tungsten WO3, Tungsten oxides, Wolfram Ore",28.0237561
-Water,0.001,,,0,1,Li 2017,0.0,H2O,18.015,DI H2O,
+Water,0.001,,,4,1,Li 2017,0.0,H2O,18.015,DI H2O,
 Water Reservoir Excavation,0.261,,,0,1,Calculation/Black and Veatch,0.26,,,Pumped Hydro,
 Y,19.4,,,0,1,USGS,19.4,Y,88.90584,"Yttrium Metal, Yttrium Y2O3",31.0
 Zeolite,1.93,,,0,1,Liu 2016,1.93,Al2O5Si,162.0430768,Zeolite,
