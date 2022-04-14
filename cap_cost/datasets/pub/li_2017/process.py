@@ -52,7 +52,8 @@ SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
 df_SM = pd.merge(df, SM_lookup, on='original_name')
 
-df_SM.index.name = 'SM_name'
+# df_SM.index.name = 'SM_name'
+df_SM = df_SM.reset_index(drop=True).set_index('SM_name') #Dropping original name as it is so similar
 
 df_SM = df_SM[['C_kwh_orig','type','deltaV','materials','mat_basis','SM_type']]
 
