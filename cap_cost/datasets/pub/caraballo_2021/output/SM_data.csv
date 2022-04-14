@@ -1,15 +1,15 @@
-SM_name,type,T_melt,T_max,mass_density,Cp,C_kwh_orig,materials,SM_type
-Solar Salt,Nitrate,240,565.0,2089.364,0.0004008811111111111,2.65,Solar Salt,sensible_thermal
-LiNaKNO3,Nitrate,118,550.0,2087.388,0.0004388888888888889,1.61,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal
-LiNaKCaNO3,Nitrate,93,450.0,1992.3,0.00042166666666666665,1.29,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal
-LiNaKNO3NO2,Nitrate,97,450.0,2073.28,0.0003153808333333333,,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal
-KMgCl,Chloride,430,700.0,2124.6259999999997,0.0002775,1.29,"[('KCl', 0.625), ('MgCl2', 0.375)]",sensible_thermal
-NaKMgCl,Chloride,383,700.0,1898.7747,0.0002843888888888889,0.68,"[('NaCl', 0.205), ('KCl', 0.309), ('MgCl2', 0.486)]",sensible_thermal
-NaMgCaCl,Chloride,407,650.0,4017.8003000000003,0.00031033333333333336,0.57,"[('NaCl', 0.396), ('MgCl2', 0.39), ('CaCl2', 0.214)]",sensible_thermal
-NaKZnCl,Chloride,204,700.0,2624.514,0.0002531603611111111,1.79,"[('NaCl', 0.075), ('KCl', 0.239), ('ZnCl2', 0.686)]",sensible_thermal
-KMgZnCl,Chloride,356,700.0,2169.0074,0.00024066666666666667,3.36,"[('KCl', 0.494), ('MgCl2', 0.155), ('ZnCl2', 0.351)]",sensible_thermal
-LiNaKF,Fluoride,454,700.0,2529.27,0.00027162316666666666,5.11,"[('LiF', 0.292), ('NaF', 0.117), ('KF', 0.591)]",sensible_thermal
-NaBF,Fluoride,385,700.0,2251.389,0.00041833333333333333,10.29,"[('NaF', 0.03), ('NaBF4', 0.97)]",sensible_thermal
-KBF,Fluoride,460,700.0,2257.1974,0.00036261111111111113,11.75,"[('KF', 0.13), ('KBF4', 0.87)]",sensible_thermal
-KZrF,Fluoride,420,700.0,3040.6547,0.0002777777777777778,17.32,"[('KF', 0.325), ('ZrF4', 0.675)]",sensible_thermal
-LiNaKCO3,Carbonate,397,670.0,2269.566,0.0004472222222222222,4.15,"[('Li2CO3', 0.321), ('Na2CO3', 0.334), ('K2CO3', 0.345)]",sensible_thermal
+SM_name,type,T_melt,T_max,mass_density,Cp,C_kwh_orig,materials,SM_type,mat_basis
+Solar Salt,Nitrate,240,565.0,2089.364,0.0004008811111111111,2.65,Solar Salt,sensible_thermal,
+LiNaKNO3,Nitrate,118,550.0,2087.388,0.0004388888888888889,1.61,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal,mass
+LiNaKCaNO3,Nitrate,93,450.0,1992.3,0.00042166666666666665,1.29,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal,mass
+LiNaKNO3NO2,Nitrate,97,450.0,2073.28,0.0003153808333333333,,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal,mass
+KMgCl,Chloride,430,700.0,2124.6259999999997,0.0002775,1.29,"[('KCl', 0.625), ('MgCl2', 0.375)]",sensible_thermal,mass
+NaKMgCl,Chloride,383,700.0,1898.7747,0.0002843888888888889,0.68,"[('NaCl', 0.205), ('KCl', 0.309), ('MgCl2', 0.486)]",sensible_thermal,mass
+NaMgCaCl,Chloride,407,650.0,4017.8003000000003,0.00031033333333333336,0.57,"[('NaCl', 0.396), ('MgCl2', 0.39), ('CaCl2', 0.214)]",sensible_thermal,mass
+NaKZnCl,Chloride,204,700.0,2624.514,0.0002531603611111111,1.79,"[('NaCl', 0.075), ('KCl', 0.239), ('ZnCl2', 0.686)]",sensible_thermal,mass
+KMgZnCl,Chloride,356,700.0,2169.0074,0.00024066666666666667,3.36,"[('KCl', 0.494), ('MgCl2', 0.155), ('ZnCl2', 0.351)]",sensible_thermal,mass
+LiNaKF,Fluoride,454,700.0,2529.27,0.00027162316666666666,5.11,"[('LiF', 0.292), ('NaF', 0.117), ('KF', 0.591)]",sensible_thermal,mass
+NaBF,Fluoride,385,700.0,2251.389,0.00041833333333333333,10.29,"[('NaF', 0.03), ('NaBF4', 0.97)]",sensible_thermal,mass
+KBF,Fluoride,460,700.0,2257.1974,0.00036261111111111113,11.75,"[('KF', 0.13), ('KBF4', 0.87)]",sensible_thermal,mass
+KZrF,Fluoride,420,700.0,3040.6547,0.0002777777777777778,17.32,"[('KF', 0.325), ('ZrF4', 0.675)]",sensible_thermal,mass
+LiNaKCO3,Carbonate,397,670.0,2269.566,0.0004472222222222222,4.15,"[('Li2CO3', 0.321), ('Na2CO3', 0.334), ('K2CO3', 0.345)]",sensible_thermal,mass

@@ -73,6 +73,7 @@ df_couples = df_couples.drop(['A', 'B'], axis=1)
 df_couples = df_couples.rename({'index': 'original_name'}, axis=1)
 
 df_couples['SM_type'] = 'liquid_metal_battery'
+df_couples['mat_basis'] = 'molar'
 
 df_couples.index.name = 'SM_name'
 

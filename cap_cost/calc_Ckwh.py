@@ -43,62 +43,70 @@ import ast
 mats_comp = mats.where(mats.str.contains('[', regex=False)).dropna()
 mats_comp = mats_comp.apply(ast.literal_eval)
 mats_comp
+
 #%%
-specific_prices = []
-mu_totals = []
-price_sources = []
-for mat_list in mats_comp:
+mats_comp_basis = df_SMs['mat_basis'][mats_comp.index]
+
+df_mats_comp = pd.concat([mats_comp,mats_comp_basis], axis=1)
+
+df_mats_comp['specific_price'] = np.nan
+df_mats_comp['mu_total'] = np.nan
+df_mats_comp['price_sources'] = ''
+
+
+print("Calculating composite material data")
+
+for mat_idx, row in df_mats_comp.iterrows():
     mus = []
-    molar_prices = []
+    price_components = []
     price_sources_mat = []
-    total_mole_fractions = 0 #Used to normalize mole fractions to 1 at the end
 
-    missing_price_data = False
+    missing_prices = []
 
-    for i, (mat_index, mole_fraction) in enumerate(mat_list):
+    mat_list = row['materials']
+    mat_basis = row['mat_basis']
+
+    for i, (mat_index, fraction) in enumerate(mat_list):
         if mat_index not in df_mat_data.index:
-            print('missing: {}'.format(mat_index))
-            missing_price_data = True
+            missing_prices.append(mat_index)
             continue
 
-        total_mole_fractions += mole_fraction
+        specific_price = df_mat_data['specific_price'][mat_index]
 
-        sp = df_mat_data['specific_price'][mat_index]
         mu = df_mat_data['mu'][mat_index]
-        price_source = '{} : {}'.format(i, df_mat_data['sources'][mat_index])
-
-        #really molar prices weighted by mole fraciton
-        molar_price = mole_fraction*sp*mu*1000 #($/kg * g/mol * kg/g)
-        
         mus.append(mu)
-        molar_prices.append(molar_price)
+        price_source = '{} : {}'.format(i, df_mat_data['sources'][mat_index])
         price_sources_mat.append(price_source)
 
-    if not missing_price_data:
-        price_sources.append(", ".join(price_sources_mat))
+        if mat_basis == 'molar':
+            molar_price = specific_price*mu*1000 #($/kg * g/mol * kg/g)
+            price_components.append(molar_price*fraction)
+        elif mat_basis == 'mass':
+            price_components.append(specific_price*fraction)
+        else:
+            raise ValueError("Incorrect mat_basis for {}, must be 'molar' or 'mass'".format(mat_idx))
 
-        mu_total = sum(mus)
-        mu_totals.append(mu_total)
+    mu_total = sum(mus)
+    df_mats_comp.loc[mat_idx, 'mu_total'] = mu_total
 
-        specific_price = sum(molar_prices)/(total_mole_fractions*mu_total*1000)
-        specific_prices.append(specific_price)
+    if len(missing_prices) == 0:
+        df_mats_comp.loc[mat_idx, 'price_sources'] = ", ".join(price_sources_mat)
+
+        if mat_basis == 'molar':
+            specific_price = sum(price_components)/(mu_total*1000)
+        elif mat_basis == 'mass':
+            specific_price = sum(price_components)
+
+        df_mats_comp.loc[mat_idx, 'specific_price'] = specific_price
     else:
-        price_sources.append('missing')
-        mu_totals.append(np.nan)
-        specific_prices.append(np.nan)
+        print('missing material prices {} for {}'.format(missing_prices, mat_idx))
 
-
-
-df_comp = pd.DataFrame({
-    'specific_price': specific_prices,
-    'mu_total': mu_totals,
-    'price_sources':price_sources
-    }, index= mats_comp.index)
+df_mats_comp
 
 
 #%%
 
-df_all = pd.concat([df_single, df_comp])
+df_all = pd.concat([df_single, df_mats_comp])
 df_all
 #%%
 

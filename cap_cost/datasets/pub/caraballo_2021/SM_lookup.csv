@@ -1,17 +1,17 @@
-SM_name,materials,SM_type
-Solar Salt,Solar Salt,sensible_thermal
-HITEC,HITEC,sensible_thermal
-HITEC XL,HITEC XL,sensible_thermal
-LiNaKNO3,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal
-LiNaKCaNO3,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal
-LiNaKNO3NO2,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal
-KMgCl,"[('KCl', 0.625), ('MgCl2', 0.375)]",sensible_thermal
-NaKMgCl,"[('NaCl', 0.205), ('KCl', 0.309), ('MgCl2', 0.486)]",sensible_thermal
-NaMgCaCl,"[('NaCl', 0.396), ('MgCl2', 0.39), ('CaCl2', 0.214)]",sensible_thermal
-NaKZnCl,"[('NaCl', 0.075), ('KCl', 0.239), ('ZnCl2', 0.686)]",sensible_thermal
-KMgZnCl,"[('KCl', 0.494), ('MgCl2', 0.155), ('ZnCl2', 0.351)]",sensible_thermal
-LiNaKF,"[('LiF', 0.292), ('NaF', 0.117), ('KF', 0.591)]",sensible_thermal
-NaBF,"[('NaF', 0.03), ('NaBF4', 0.97)]",sensible_thermal
-KBF,"[('KF', 0.13), ('KBF4', 0.87)]",sensible_thermal
-KZrF,"[('KF', 0.325), ('ZrF4', 0.675)]",sensible_thermal
-LiNaKCO3,"[('Li2CO3', 0.321), ('Na2CO3', 0.334), ('K2CO3', 0.345)]",sensible_thermal
+SM_name,materials,SM_type,mat_basis
+Solar Salt,Solar Salt,sensible_thermal,
+HITEC,HITEC,sensible_thermal,
+HITEC XL,HITEC XL,sensible_thermal,
+LiNaKNO3,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal,mass
+LiNaKCaNO3,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal,mass
+LiNaKNO3NO2,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal,mass
+KMgCl,"[('KCl', 0.625), ('MgCl2', 0.375)]",sensible_thermal,mass
+NaKMgCl,"[('NaCl', 0.205), ('KCl', 0.309), ('MgCl2', 0.486)]",sensible_thermal,mass
+NaMgCaCl,"[('NaCl', 0.396), ('MgCl2', 0.39), ('CaCl2', 0.214)]",sensible_thermal,mass
+NaKZnCl,"[('NaCl', 0.075), ('KCl', 0.239), ('ZnCl2', 0.686)]",sensible_thermal,mass
+KMgZnCl,"[('KCl', 0.494), ('MgCl2', 0.155), ('ZnCl2', 0.351)]",sensible_thermal,mass
+LiNaKF,"[('LiF', 0.292), ('NaF', 0.117), ('KF', 0.591)]",sensible_thermal,mass
+NaBF,"[('NaF', 0.03), ('NaBF4', 0.97)]",sensible_thermal,mass
+KBF,"[('KF', 0.13), ('KBF4', 0.87)]",sensible_thermal,mass
+KZrF,"[('KF', 0.325), ('ZrF4', 0.675)]",sensible_thermal,mass
+LiNaKCO3,"[('Li2CO3', 0.321), ('Na2CO3', 0.334), ('K2CO3', 0.345)]",sensible_thermal,mass

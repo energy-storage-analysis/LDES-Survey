@@ -1,56 +1,56 @@
-original_name,SM_name,SM_type,materials
-NNaO3,NNaO3,latent_thermal,NNaO3
-Mg,Mg,latent_thermal,Mg
-NaNO3,NaNO3,latent_thermal,NaNO3
-KNO3,KNO3,latent_thermal,KNO3
-Mg (NO3)2,Mg (NO3)2,latent_thermal,Mg(NO3)2
-Na2CO3,Na2CO3,latent_thermal,Na2CO3
-K2CO3,K2CO3,latent_thermal,K2CO3
-CaCO3,CaCO3,latent_thermal,CaCO3
-Li2CO3,Li2CO3,latent_thermal,Li2CO3
-ZnCl2,ZnCl2,latent_thermal,ZnCl2
-NaCl,NaCl,latent_thermal,NaCl
-KCl,KCl,latent_thermal,KCl
-MgCl2,MgCl2,latent_thermal,MgCl2
-LiCl,LiCl,latent_thermal,LiCl
-CaCl2,CaCl2,latent_thermal,CaCl2
-Na2SO4,Na2SO4,latent_thermal,Na2SO4
-Li2SO4,Li2SO4,latent_thermal,Li2SO4
-K2SO4,K2SO4,latent_thermal,K2SO4
-MgSO4,MgSO4,latent_thermal,MgSO4
-CaSO4,CaSO4,latent_thermal,CaSO4
-LiF,LiF,latent_thermal,LiF
-NaF,NaF,latent_thermal,NaF
-KF,KF,latent_thermal,KF
-CaF2,CaF2,latent_thermal,CaF2
-NaOH,NaOH,latent_thermal,NaOH
-KOH,KOH,latent_thermal,KOH
-LiOH,LiOH,latent_thermal,LiOH
-Cu,Cu,sensible_thermal,Cu
-Zn,Zn,sensible_thermal,Zn
-Al,Al,sensible_thermal,Al
-Sodium (Na),Sodium (Na),sensible_thermal,Na
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,"[('Na', 0.5), ('K', 0.5)]"
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,"[('Pb', 0.445), ('Bi', 0.555)]"
-CaN2O6,CaN2O6,latent_thermal,CaN2O6
-Zn/Mg (53.7/46.3),Zn/Mg (53.7/46.3),latent_thermal,"[('Mg', 0.537), ('Zn', 0.463)]"
-Zn/Mg (52/48),Zn/Mg (52/48),latent_thermal,"[('Mg', 0.52), ('Zn', 0.48)]"
-Zn/Al (96/4),Zn/Al (96/4),latent_thermal,"[('Zn', 0.96) , ('Al', 0.04)]"
-Al/Mg/Zn (59/33/6),Al/Mg/Zn (59/33/6),latent_thermal,"[('Al', 0.59), ('Mg', 0.33), ('Zn', 0.06)]"
-Al/Mg/Zn (60/34/6),Al/Mg/Zn (60/34/6),latent_thermal,"[('Al', 0.6), ('Mg', 0.34), ('Zn', 0.06)]"
-Mg/Cu/Zn (60/25/15),Mg/Cu/Zn (60/25/15),latent_thermal,"[('Mg', 0.6), ('Cu', 0.25), ('Zn', 0.15)]"
-Mg/Ca (84/16),Mg/Ca (84/16),latent_thermal,"[('Mg', 0.84), ('Ca', 0.16)]"
-Mg/Si/Zn (47/38/15),Mg/Si/Zn (47/38/15),latent_thermal,"[('Mg', 0.47), ('Metallurgical Silicon', 0.38), ('Zn', 0.15)]"
-Cu/Si (80/20),Cu/Si (80/20),latent_thermal,"[('Cu', 0.8), ('Metallurgical Silicon', 0.2)]"
-Cu/P/Si (83/10/7),Cu/P/Si (83/10/7),latent_thermal,"[('Cu', 0.83), ('P', 0.1), ('Metallurgical Silicon', 0.07)]"
-Si/Mg/Ca (49/30/21),Si/Mg/Ca (49/30/21),latent_thermal,"[('Metallurgical Silicon', 0.49), ('Mg', 0.3), ('Ca', 0.21)]"
-Si/Mg (56/44),Si/Mg (56/44),latent_thermal,"[('Metallurgical Silicon', 0.56), ('Mg', 0.44)]"
-Dowtherm A,Dowtherm A,sensible_thermal,Dowtherm
-"HITEC, NaNO3eKNO3e NaNO2",HITEC,sensible_thermal,HITEC
-"Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,sensible_thermal,Solar Salt
-Granite,Granite,sensible_thermal,Stone
-Quartzite,Quartzite,sensible_thermal,Stone
-Marble,Marble,sensible_thermal,Stone
-Basalt,Basalt,sensible_thermal,Stone
-"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,sensible_thermal,HITEC
-Vegetable oil,Vegetable oil,sensible_thermal,Vegetable Oil
+original_name,SM_name,SM_type,materials,mat_basis
+NNaO3,NNaO3,latent_thermal,NNaO3,
+Mg,Mg,latent_thermal,Mg,
+NaNO3,NaNO3,latent_thermal,NaNO3,
+KNO3,KNO3,latent_thermal,KNO3,
+Mg (NO3)2,Mg (NO3)2,latent_thermal,Mg(NO3)2,
+Na2CO3,Na2CO3,latent_thermal,Na2CO3,
+K2CO3,K2CO3,latent_thermal,K2CO3,
+CaCO3,CaCO3,latent_thermal,CaCO3,
+Li2CO3,Li2CO3,latent_thermal,Li2CO3,
+ZnCl2,ZnCl2,latent_thermal,ZnCl2,
+NaCl,NaCl,latent_thermal,NaCl,
+KCl,KCl,latent_thermal,KCl,
+MgCl2,MgCl2,latent_thermal,MgCl2,
+LiCl,LiCl,latent_thermal,LiCl,
+CaCl2,CaCl2,latent_thermal,CaCl2,
+Na2SO4,Na2SO4,latent_thermal,Na2SO4,
+Li2SO4,Li2SO4,latent_thermal,Li2SO4,
+K2SO4,K2SO4,latent_thermal,K2SO4,
+MgSO4,MgSO4,latent_thermal,MgSO4,
+CaSO4,CaSO4,latent_thermal,CaSO4,
+LiF,LiF,latent_thermal,LiF,
+NaF,NaF,latent_thermal,NaF,
+KF,KF,latent_thermal,KF,
+CaF2,CaF2,latent_thermal,CaF2,
+NaOH,NaOH,latent_thermal,NaOH,
+KOH,KOH,latent_thermal,KOH,
+LiOH,LiOH,latent_thermal,LiOH,
+Cu,Cu,sensible_thermal,Cu,
+Zn,Zn,sensible_thermal,Zn,
+Al,Al,sensible_thermal,Al,
+Sodium (Na),Sodium (Na),sensible_thermal,Na,
+Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,"[('Na', 0.5), ('K', 0.5)]",molar
+Lead(44.5%)ebismuth(55.5%) eutectic (LBE),Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,"[('Pb', 0.445), ('Bi', 0.555)]",mass
+CaN2O6,CaN2O6,latent_thermal,CaN2O6,
+Zn/Mg (53.7/46.3),Zn/Mg (53.7/46.3),latent_thermal,"[('Mg', 0.537), ('Zn', 0.463)]",molar
+Zn/Mg (52/48),Zn/Mg (52/48),latent_thermal,"[('Mg', 0.52), ('Zn', 0.48)]",molar
+Zn/Al (96/4),Zn/Al (96/4),latent_thermal,"[('Zn', 0.96) , ('Al', 0.04)]",molar
+Al/Mg/Zn (59/33/6),Al/Mg/Zn (59/33/6),latent_thermal,"[('Al', 0.59), ('Mg', 0.33), ('Zn', 0.06)]",molar
+Al/Mg/Zn (60/34/6),Al/Mg/Zn (60/34/6),latent_thermal,"[('Al', 0.6), ('Mg', 0.34), ('Zn', 0.06)]",molar
+Mg/Cu/Zn (60/25/15),Mg/Cu/Zn (60/25/15),latent_thermal,"[('Mg', 0.6), ('Cu', 0.25), ('Zn', 0.15)]",molar
+Mg/Ca (84/16),Mg/Ca (84/16),latent_thermal,"[('Mg', 0.84), ('Ca', 0.16)]",molar
+Mg/Si/Zn (47/38/15),Mg/Si/Zn (47/38/15),latent_thermal,"[('Mg', 0.47), ('Metallurgical Silicon', 0.38), ('Zn', 0.15)]",molar
+Cu/Si (80/20),Cu/Si (80/20),latent_thermal,"[('Cu', 0.8), ('Metallurgical Silicon', 0.2)]",molar
+Cu/P/Si (83/10/7),Cu/P/Si (83/10/7),latent_thermal,"[('Cu', 0.83), ('P', 0.1), ('Metallurgical Silicon', 0.07)]",molar
+Si/Mg/Ca (49/30/21),Si/Mg/Ca (49/30/21),latent_thermal,"[('Metallurgical Silicon', 0.49), ('Mg', 0.3), ('Ca', 0.21)]",molar
+Si/Mg (56/44),Si/Mg (56/44),latent_thermal,"[('Metallurgical Silicon', 0.56), ('Mg', 0.44)]",molar
+Dowtherm A,Dowtherm A,sensible_thermal,Dowtherm,
+"HITEC, NaNO3eKNO3e NaNO2",HITEC,sensible_thermal,HITEC,
+"Solar Salt, NaNO3e KNO3 (50-50)",Solar Salt,sensible_thermal,Solar Salt,
+Granite,Granite,sensible_thermal,Stone,
+Quartzite,Quartzite,sensible_thermal,Stone,
+Marble,Marble,sensible_thermal,Stone,
+Basalt,Basalt,sensible_thermal,Stone,
+"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,sensible_thermal,HITEC,
+Vegetable oil,Vegetable oil,sensible_thermal,Vegetable Oil,

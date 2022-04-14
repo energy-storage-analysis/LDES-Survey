@@ -18,6 +18,14 @@ if not os.path.exists(output_dir): os.makedirs(output_dir)
 df_mat_data = pd.read_csv('../data_consolidated/mat_data.csv', index_col=0)
 df_SMs = pd.read_csv('../data_consolidated/SM_data.csv', index_col=0)
 df_all = pd.read_csv('../data_consolidated/C_kWh.csv', index_col=0)
+
+
+df_mat_unused = df_mat_data[df_mat_data['num_SMs'] == 0].dropna(how='all')
+df_mat_unused.to_csv('output/mat_data_unused.csv')
+
+df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0].dropna(how='all')
+df_mat_data.to_csv('output/mat_data_used.csv')
+
 # %%
 plt.figure()
 

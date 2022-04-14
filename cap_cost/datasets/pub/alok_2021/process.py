@@ -96,7 +96,7 @@ df_SMs
 #%%
 
 # df_SMs['SM_type'] = 'latent_thermal'
-df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','SM_type']]
+df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','mat_basis','SM_type']]
 # df_SMs = df_SMs.rename({'molecular_formula': 'materials'}, axis=1) #All signle materia molecular form
 
 # df_SMs.index.name = 'SM_name'

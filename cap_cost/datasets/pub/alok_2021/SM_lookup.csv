@@ -1,40 +1,40 @@
-original_name,SM_type,materials,SM_name
-LiF,latent_thermal,LiF,LiF
-NaF,latent_thermal,NaF,NaF
-KF,latent_thermal,KF,KF
-MgF2,latent_thermal,MgF2,MgF2
-CaF2,latent_thermal,CaF2,CaF2
-LiCl,latent_thermal,LiCl,LiCl
-NaCl,latent_thermal,NaCl,NaCl
-KCl,latent_thermal,KCl,KCl
-MgCl2,latent_thermal,MgCl2,MgCl2
-CaCl2,latent_thermal,CaCl2,CaCl2
-Li2CO3,latent_thermal,Li2CO3,Li2CO3
-Na2CO3,latent_thermal,Na2CO3,Na2CO3
-K2CO3,latent_thermal,K2CO3,K2CO3
-Mg2CO3,latent_thermal,Mg2CO3,Mg2CO3
-CaCO3,latent_thermal,CaCO3,CaCO3
-Copper (Cu),latent_thermal,Cu,Cu
-Nickel (Ni),latent_thermal,Ni,Ni
-Chromium (Cr),latent_thermal,Cr,Cr
-Vanadium (V),latent_thermal,V,V
-Silicon (Si),latent_thermal,Metallurgical Silicon,Si
-Boron (B),latent_thermal,B,B
-Aluminium (Al),latent_thermal,Al,Al
-Magnesium (Mg),latent_thermal,Mg,Mg
-Zinc (Zn),latent_thermal,Zn,Zn
-KF (55%)/KCl (45%),latent_thermal,"[('KF', 0.55), ('KCl', 0.45)]",KF/KCl
-LiF (60%)/NaF (40%),latent_thermal,"[('LiF', 0.6), ('NaF', 0.4)]",LiF/NaF
-NaF (65%)/CaF2 (23%)/MgF2 (12%),latent_thermal,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",NaF/CaF2/MgF2
-NaF (64%)/MgF2 (20%)/KF (16%),latent_thermal,"[('NaF', 0.64), ('MgF2', 0.2), ('KF', 0.16)]",NaF/MgF2/KF
-NaF (75%)/MgF2 (25%),latent_thermal,"[('NaF', 0.75), ('MgF2', 0.25)]",NaF/MgF2
-KCl(21%)/NaF(17%)K2CO3(62%),latent_thermal,"[('KCl', 0.21), ('NaF', 0.17), ('K2CO3', 0.62)]",KCl/NaF/K2CO3
-KCl(40%)/KF (23%)/K2CO3(37%),latent_thermal,"[('KCl', 0.4), ('KF', 0.23), ('K2CO3', 0.37)]",KCl/KF/K2CO3
-KCl (45%)/KF (55%),latent_thermal,"[('KCl', 0.45), ('KF', 0.55)]",KCl/KF
-K2CO3 (50%)/Na2CO3 (50%),latent_thermal,"[('K2CO3', 0.5), ('Na2CO3', 0.5)]",K2CO3/Na2CO3
-NaF (75%)/MgF2 (50%),latent_thermal,,
-LiF (67%)/MgF2 (33%),latent_thermal,"[('LiF', 0.67), ('MgF2', 0.33)]",LiF/MgF2
-NaF(65%)/CaF2(23%)/MgF2(12%),latent_thermal,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",NaF/CaF2/MgF2
-LiF(33.4%)/NaF2(49.9%)/MgF2(17.1%),latent_thermal,"[('LiF', 0.334), ('NaF2', 0.499), ('MgF2', 0.171)]",LiF/NaF2/MgF2
-NaCl (38.5%)/NaBr (23%)/Na2MoO4(38.5%),latent_thermal,"[('NaCl', 0.385), ('NaBr', 0.23), ('Na2MoO4', 0.385)]",NaCl/NaBr/Na2MoO4
-CaCl2(38.5%)/CaSO4(11%)/CaMoO4(4%),latent_thermal,"[('CaCl2', 0.385), ('CaSO4', 0.11), ('CaMoO4', 0.04)]",CaCl2/CaSO4/CaMoO4
+original_name,SM_type,materials,mat_basis,SM_name
+LiF,latent_thermal,LiF,,LiF
+NaF,latent_thermal,NaF,,NaF
+KF,latent_thermal,KF,,KF
+MgF2,latent_thermal,MgF2,,MgF2
+CaF2,latent_thermal,CaF2,,CaF2
+LiCl,latent_thermal,LiCl,,LiCl
+NaCl,latent_thermal,NaCl,,NaCl
+KCl,latent_thermal,KCl,,KCl
+MgCl2,latent_thermal,MgCl2,,MgCl2
+CaCl2,latent_thermal,CaCl2,,CaCl2
+Li2CO3,latent_thermal,Li2CO3,,Li2CO3
+Na2CO3,latent_thermal,Na2CO3,,Na2CO3
+K2CO3,latent_thermal,K2CO3,,K2CO3
+Mg2CO3,latent_thermal,Mg2CO3,,Mg2CO3
+CaCO3,latent_thermal,CaCO3,,CaCO3
+Copper (Cu),latent_thermal,Cu,,Cu
+Nickel (Ni),latent_thermal,Ni,,Ni
+Chromium (Cr),latent_thermal,Cr,,Cr
+Vanadium (V),latent_thermal,V,,V
+Silicon (Si),latent_thermal,Metallurgical Silicon,,Si
+Boron (B),latent_thermal,B,,B
+Aluminium (Al),latent_thermal,Al,,Al
+Magnesium (Mg),latent_thermal,Mg,,Mg
+Zinc (Zn),latent_thermal,Zn,,Zn
+KF (55%)/KCl (45%),latent_thermal,"[('KF', 0.55), ('KCl', 0.45)]",mass,KF/KCl
+LiF (60%)/NaF (40%),latent_thermal,"[('LiF', 0.6), ('NaF', 0.4)]",mass,LiF/NaF
+NaF (65%)/CaF2 (23%)/MgF2 (12%),latent_thermal,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",mass,NaF/CaF2/MgF2
+NaF (64%)/MgF2 (20%)/KF (16%),latent_thermal,"[('NaF', 0.64), ('MgF2', 0.2), ('KF', 0.16)]",mass,NaF/MgF2/KF
+NaF (75%)/MgF2 (25%),latent_thermal,"[('NaF', 0.75), ('MgF2', 0.25)]",mass,NaF/MgF2
+KCl(21%)/NaF(17%)K2CO3(62%),latent_thermal,"[('KCl', 0.21), ('NaF', 0.17), ('K2CO3', 0.62)]",mass,KCl/NaF/K2CO3
+KCl(40%)/KF (23%)/K2CO3(37%),latent_thermal,"[('KCl', 0.4), ('KF', 0.23), ('K2CO3', 0.37)]",mass,KCl/KF/K2CO3
+KCl (45%)/KF (55%),latent_thermal,"[('KCl', 0.45), ('KF', 0.55)]",mass,KCl/KF
+K2CO3 (50%)/Na2CO3 (50%),latent_thermal,"[('K2CO3', 0.5), ('Na2CO3', 0.5)]",mass,K2CO3/Na2CO3
+NaF (75%)/MgF2 (50%),latent_thermal,,mass,
+LiF (67%)/MgF2 (33%),latent_thermal,"[('LiF', 0.67), ('MgF2', 0.33)]",mass,LiF/MgF2
+NaF(65%)/CaF2(23%)/MgF2(12%),latent_thermal,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",mass,NaF/CaF2/MgF2
+LiF(33.4%)/NaF2(49.9%)/MgF2(17.1%),latent_thermal,"[('LiF', 0.334), ('NaF2', 0.499), ('MgF2', 0.171)]",mass,LiF/NaF2/MgF2
+NaCl (38.5%)/NaBr (23%)/Na2MoO4(38.5%),latent_thermal,"[('NaCl', 0.385), ('NaBr', 0.23), ('Na2MoO4', 0.385)]",mass,NaCl/NaBr/Na2MoO4
+CaCl2(38.5%)/CaSO4(11%)/CaMoO4(4%),latent_thermal,"[('CaCl2', 0.385), ('CaSO4', 0.11), ('CaMoO4', 0.04)]",mass,CaCl2/CaSO4/CaMoO4
