@@ -289,11 +289,13 @@ Au-MnO2 core-shell,pseudocapacitor,0.2911111111111111,283.902613,16733.911261533
 Carbon nanosheets,ELDC,0.33772569444444445,72.066,1.700829167386568,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,5.036126049527904
 Carbonization of carbon hydrates,ELDC,0.012444444444444447,72.066,1.700829167386568,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,136.67377237927775
 Carbonized hollow nanocarbon,ELDC,0.019293750000000002,72.066,1.700829167386568,"Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,88.15441100805016
+Co(OH)2 nanosheets,pseudocapacitor,0.06267361111111111,,,,Choi 2015,
 Co3O4 nanostructures,pseudocapacitor,0.02782222222222223,240.795582,17.18,"Alibaba (Bulk), ISE",Choi 2015,617.4920127795525
 CoAl/PEDOT nanoarrays,pseudocapacitor,0.0274,226.0707324,244888.163152581,"0 : Alibaba (Bulk), ISE, USGS, 1 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 2 : Sigma Aldrich",Choi 2015,8937524.202648941
 CoCl2 nanostructures,pseudocapacitor,0.05518125,129.833194,10.494,"Alibaba (Bulk), ISE",Choi 2015,190.17329255861364
 CoO/PPy nanowires,pseudocapacitor,0.5102222222222224,143.031194,3426.7682101933656,"0 : ISE, 1 : Sigma Aldrich",Choi 2015,6716.226892800584
 CuO nanowires,pseudocapacitor,0.00309375,79.545,17.8,Alibaba (Manual Search),Choi 2015,5753.535353535353
+Fe2O3/MnO2 nanowires,pseudocapacitor,0.03295,246.623043,0.3148261782078793,"0 : Alibaba (Bulk), Olympios 2021, USGS, 1 : Alibaba (Bulk), Alibaba (Manual Search), ISE, Li 2017",Choi 2015,9.55466398202972
 GO-activate carbon,ELDC,0.20842013888888888,102.092,400.0,Alibaba (Manual Entry),Choi 2015,1919.2003331945023
 Graphene-coated CNTs,ELDC,0.11875,144.132,47.5,"0 : Graphene Lab, 1 : Alibaba (Manual Entry)",Choi 2015,400.0
 Graphene/CNF,ELDC,0.054375,144.132,22.925207291846643,"0 : Graphene Lab, 1 : Alibaba (Bulk), Li 2017, Liu 2016, USGS",Choi 2015,421.61300766614517
@@ -330,8 +332,6 @@ Porous carbon/CNTs,ELDC,0.020362500000000002,144.132,25.425207291846643,"0 : Ali
 RGO/CNT,ELDC,0.03,174.15800000000002,137.93049989090363,"0 : Alibaba (Manual Entry), 1 : Alibaba (Manual Entry)",Choi 2015,4597.683329696788
 V2O5-PPy nanofibers,pseudocapacitor,0.2288888888888889,249.97699999999998,1963.370110327163,"0 : ISE, SMM, 1 : Sigma Aldrich",Choi 2015,8577.830579099256
 ZnCo2O4 nanorods/Ni foams,pseudocapacitor,0.16770833333333332,58.6934,,,Choi 2015,
-α-F-2O3/MnO2 nanowires,pseudocapacitor,0.03295,246.623043,0.3148261782078793,"0 : Alibaba (Bulk), Olympios 2021, USGS, 1 : Alibaba (Bulk), Alibaba (Manual Search), ISE, Li 2017",Choi 2015,9.55466398202972
-β-Co(OH)2 nanosheets,pseudocapacitor,0.06267361111111111,,,,Choi 2015,
 Al2O3,dielectric_capacitor,0.0007779535864978904,101.9600768,0.8858555555555556,"Liu 2016, SMM, Steinmann 2022, USGS",TODO,1138.6997514124294
 Block Stacking,gravitational,0.0002725,162.0430768,0.05,"Alibaba (Bulk), Steinmann 2022, USGS",,183.4862385321101
 Pumped Hydro,gravitational,0.0008175,,0.261,Calculation/Black and Veatch,,319.26605504587155

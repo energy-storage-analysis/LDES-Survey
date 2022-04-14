@@ -54,7 +54,7 @@ df_SMs = pd.merge(
     
 )
 
-df_SMs.index.name = 'SM_name'
+df_SMs = df_SMs.reset_index(drop=True).set_index('SM_name') #Dropping original name as so similar to SM name
 
 #TODO: deal with duplicate SM with different electrolytes
 df_SMs = df_SMs.groupby(level=0).first()
