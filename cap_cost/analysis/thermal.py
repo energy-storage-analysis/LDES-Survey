@@ -112,7 +112,7 @@ x_str='T_max'
 y_str='C_kwh'
 
 
-df_sens_ds.plot.scatter(y=y_str, x=x_str, c='Cp', cmap='jet', sharex=False)
+df_sens_ds.plot.scatter(y=y_str, x=x_str, c='deltaT', cmap='jet', sharex=False)
 
 
 ax = plt.gca()
@@ -133,7 +133,7 @@ plt.ylabel("Material capital cost ($/kWh)")
 
 plt.ylim(0,10)
 
-plt.gcf().axes[1].set_ylabel('Specific heat (kWh/K/kg)')
+plt.gcf().axes[1].set_ylabel('Maximum DeltaT (deg C)')
 
 adjust_text(texts)
 

@@ -74,6 +74,14 @@ for column in other_cols:
 df_grouped = df_grouped.rename({'source': 'SM_sources'}, axis=1)
 
 
+#%%
+
+#Doing this here to be able to see deltaT in SM_data
+df_grouped['T_min'] = df_grouped['T_melt'].fillna(20)
+df_grouped['deltaT'] = df_grouped['T_max'] - df_grouped['T_min']
+#%%
+
+
 df_grouped.to_csv('data_consolidated/SM_data.csv')
 
 

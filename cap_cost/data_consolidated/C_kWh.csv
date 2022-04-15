@@ -158,50 +158,44 @@ Zn/MnO2,solid_electrode,0.2639386012235976,152.31604299999998,1.0506814294973317
 Zn/NiOOH,solid_electrode,0.29499135710162017,158.0874,2.6353084098348734,"0 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba (Bulk), Alibaba (Manual Search), Li 2017",Li 2017,8.93351058053897
 Zn/Zn0.25V2O5,solid_electrode,0.1517521958619921,247.25799999999998,7.84073002273788,"0 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS, 1 : ISE, SMM",Li 2017,51.6679839668908
 Zn/air,metal_air,0.676388676455593,65.38,2.818389559771475,"Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Li 2017,4.166819548991239
-Al,sensible_thermal,0.12951388888885,26.9815384,2.2725,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",17.546380697056208
-Al2O3,sensible_thermal,0.15,101.9600768,0.8858555555555556,"Liu 2016, SMM, Steinmann 2022, USGS",Steinmann 2022,5.905703703703704
-Basalt,sensible_thermal,0.1631944444444,162.0430768,0.05,"Alibaba (Bulk), Steinmann 2022, USGS","Alva 2018, Steinmann 2022",0.3063829787234877
-C6,sensible_thermal,0.0909722222222,,3.25,Steinmann 2022,"Bauer 2012, Steinmann 2022",35.72519083970338
-Clay,sensible_thermal,0.12222222222219999,162.0430768,0.233175,"Alibaba (Bulk), USGS",Bauer 2012,1.9077954545458016
-Concrete,sensible_thermal,0.12708333333330002,,0.05,Steinmann 2022,Steinmann 2022,0.39344262295092286
-Cu,sensible_thermal,0.0581944444444,63.546,6.65,"Alibaba (Bulk), Alok 2021, SMM, USGS",Bauer 2012,114.27207637240231
-Dowtherm A,sensible_thermal,0.22638888888885,,,,Alva 2018,
-Fe,sensible_thermal,0.07048611111104999,55.845,0.180117668205045,"Alibaba (Bulk), Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",2.555363962714184
-Granite,sensible_thermal,0.13425925925920001,,,,"Alva 2018, Bauer 2012, Steinmann 2022",
-Gravel,sensible_thermal,0.25555555555555,231.339,0.0291803850227903,USGS,Bauer 2012,0.11418411530657323
-HITEC,sensible_thermal,0.21743055555555,,1.2,Steinmann 2022,"Alva 2018, Steinmann 2022",5.519003513254693
-HITEC XL,sensible_thermal,0.1977083333333,,,,"Alva 2018, Steinmann 2022",
-Iron Ore,sensible_thermal,0.125,159.687,0.122,"Alibaba (Bulk), Olympios 2021, USGS",Grosu 2017,0.976
-KBF,sensible_thermal,0.18130555555555,58.0967032,,,Caraballo 2021,
-KMgCl,sensible_thermal,0.13875,169.7533,10.697673169306729,"0 : Alok 2021, Alva 2018, USGS, 1 : Alok 2021, Alva 2018",Caraballo 2021,77.10034716617461
-KMgZnCl,sensible_thermal,0.1203333333333,306.0333,7.183201970520036,"0 : Alok 2021, Alva 2018, USGS, 1 : Alok 2021, Alva 2018, 2 : Alibaba (Bulk), Alva 2018",Caraballo 2021,59.694199201014065
-KZrF,sensible_thermal,0.13888888888884998,58.0967032,,,Caraballo 2021,
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,0.019444444444444445,416.18039999999996,7.6344699183271825,"0 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, USGS",Alva 2018,392.6298815139694
-LiNaKCO3,sensible_thermal,0.2236111111111,318.0801386,3.5915943571428577,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, ISE, Liu 2016, SMM, USGS, 1 : Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016, USGS, 2 : Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016",Caraballo 2021,16.06178842945954
-LiNaKCaNO3,sensible_thermal,0.21083333333329998,350.1820693,,,Caraballo 2021,
-LiNaKF,sensible_thermal,0.13581158333329998,126.02327880000001,66.237835,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Steinmann 2022, 1 : Alok 2021, Alva 2018, 2 : Alok 2021, Alva 2018",Caraballo 2021,487.71859788603894
-LiNaKNO3,sensible_thermal,0.2194444444444,186.0960693,,,Caraballo 2021,
-LiNaKNO3NO2,sensible_thermal,0.15769041666665,186.0960693,,,Caraballo 2021,
-Limestone,sensible_thermal,0.13888888888884998,,,,"Bauer 2012, Steinmann 2022",
-Marble,sensible_thermal,0.11805555555555,162.0430768,0.05,"Alibaba (Bulk), Steinmann 2022, USGS",Alva 2018,0.4235294117647258
-MgO,sensible_thermal,0.1597222222222,40.304,0.135,"Alibaba (Bulk), Alibaba (Manual Search), Steinmann 2022",Steinmann 2022,0.8452173913044655
-Mobiltherm 605,sensible_thermal,0.40277777777775003,,3.0,Steinmann 2022,Steinmann 2022,7.448275862069479
-Na,sensible_thermal,0.18055555555555,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Steinmann 2022,13.789007238588276
-NaBF,sensible_thermal,0.20916666666665,41.9881724,,,Caraballo 2021,
-NaCl,sensible_thermal,0.11874999999995,58.4397693,0.0976013513373986,"Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",0.8219061165258079
-NaKMgCl,sensible_thermal,0.14219444444440002,228.1930693,13.626840491929412,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alok 2021, Alva 2018",Caraballo 2021,95.832439482245
-NaKZnCl,sensible_thermal,0.12658018055555,269.2680693,5.290607956293198,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alibaba (Bulk), Alva 2018",Caraballo 2021,41.79649557358154
-NaMgCaCl,sensible_thermal,0.15516666666665002,264.6227693,10.868783706558181,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, 2 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017",Caraballo 2021,70.04586706697754
-Pb,sensible_thermal,0.018194444444444447,207.2,2.2182912821042384,"Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Bauer 2012,121.92135290954592
-Quartzite,sensible_thermal,0.11805555555555,162.0430768,0.05,"Alibaba (Bulk), Steinmann 2022, USGS",Alva 2018,0.4235294117647258
-S,sensible_thermal,0.1361111111111,32.06,0.2845,"Alibaba (Bulk), Li 2017, Steinmann 2022, USGS",Steinmann 2022,2.0902040816328236
-Sand,sensible_thermal,0.1385,60.083,0.0849999999999999,"Alibaba (Manual Entry), Diago 2018, Liu 2016",Diago 2018,0.6137184115523457
-Sandstone,sensible_thermal,0.18993055555555,,,,"Bauer 2012, Steinmann 2022",
-SiO2,sensible_thermal,0.10138888888885,,0.6,Steinmann 2022,Steinmann 2022,5.917808219180351
-Sodium (Na),sensible_thermal,0.18055555555555,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Alva 2018,13.789007238588276
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.12361111111110001,62.0880693,24.40473291742616,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022, 1 : Kim 2013, SMM",Alva 2018,197.43154719717316
-Solar Salt,sensible_thermal,0.20570240740735002,186.0960693,0.595,"Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","Alva 2018, Caraballo 2021, Steinmann 2022",2.892528130804656
-Vegetable Oil,sensible_thermal,0.32701388888885,933.45,0.7175,"Alva 2018, Steinmann 2022","Alva 2018, Steinmann 2022",2.1940964111278887
+Al,sensible_thermal,0.165777777777728,26.9815384,2.2725,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",13.708109919575161
+Al2O3,sensible_thermal,0.609,101.9600768,0.8858555555555556,"Liu 2016, SMM, Steinmann 2022, USGS",Steinmann 2022,1.454606823572341
+Basalt,sensible_thermal,0.254583333333264,162.0430768,0.05,"Alibaba (Bulk), Steinmann 2022, USGS","Alva 2018, Steinmann 2022",0.19639934533556905
+C6,sensible_thermal,0.633166666666512,,3.25,Steinmann 2022,"Bauer 2012, Steinmann 2022",5.132929718348187
+Concrete,sensible_thermal,0.109291666666638,,0.05,Steinmann 2022,Steinmann 2022,0.45749142203595683
+Dowtherm A,sensible_thermal,0.1756777777777476,,,,Alva 2018,
+Fe,sensible_thermal,0.16634722222207798,55.845,0.180117668205045,"Alibaba (Bulk), Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",1.0827813401331288
+Granite,sensible_thermal,0.14768518518512,,,,"Alva 2018, Bauer 2012, Steinmann 2022",
+HITEC,sensible_thermal,0.16329034722221805,,1.2,Steinmann 2022,"Alva 2018, Steinmann 2022",7.348872853867766
+HITEC XL,sensible_thermal,0.14432708333330901,,,,"Alva 2018, Steinmann 2022",
+Iron Ore,sensible_thermal,0.245,159.687,0.122,"Alibaba (Bulk), Olympios 2021, USGS","Grosu 2017, Molgaard 1971",0.49795918367346936
+KBF,sensible_thermal,0.087026666666664,58.0967032,,,Caraballo 2021,
+KMgCl,sensible_thermal,0.074925,169.7533,10.697673169306729,"0 : Alok 2021, Alva 2018, USGS, 1 : Alok 2021, Alva 2018",Caraballo 2021,142.77842067810113
+KMgZnCl,sensible_thermal,0.0827893333333104,306.0333,7.183201970520036,"0 : Alok 2021, Alva 2018, USGS, 1 : Alok 2021, Alva 2018, 2 : Alibaba (Bulk), Alva 2018",Caraballo 2021,86.76482442007858
+KZrF,sensible_thermal,0.07777777777775599,58.0967032,,,Caraballo 2021,
+Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,0.05475555555555556,416.18039999999996,7.6344699183271825,"0 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, USGS",Alva 2018,139.42822496944936
+LiNaKCO3,sensible_thermal,0.1220916666666606,318.0801386,3.5915943571428577,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, ISE, Liu 2016, SMM, USGS, 1 : Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016, USGS, 2 : Alibaba (Bulk), Alok 2021, Alva 2018, Liu 2016",Caraballo 2021,29.417194925750074
+LiNaKCaNO3,sensible_thermal,0.1505349999999762,350.1820693,,,Caraballo 2021,
+LiNaKF,sensible_thermal,0.0668192989999836,126.02327880000001,66.237835,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Steinmann 2022, 1 : Alok 2021, Alva 2018, 2 : Alok 2021, Alva 2018",Caraballo 2021,991.297963183006
+LiNaKNO3,sensible_thermal,0.1895999999999616,186.0960693,,,Caraballo 2021,
+LiNaKNO3NO2,sensible_thermal,0.1113294341666549,186.0960693,,,Caraballo 2021,
+Limestone,sensible_thermal,0.216666666666606,,,,"Bauer 2012, Steinmann 2022",
+MgO,sensible_thermal,0.8976388888887641,40.304,0.135,"Alibaba (Bulk), Alibaba (Manual Search), Steinmann 2022",Steinmann 2022,0.1503945536128942
+Mobiltherm 605,sensible_thermal,0.2456944444444275,,3.0,Steinmann 2022,Steinmann 2022,12.210288298474556
+Na,sensible_thermal,0.2798611111111025,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Steinmann 2022,8.896133702315016
+NaBF,sensible_thermal,0.13177499999998948,41.9881724,,,Caraballo 2021,
+NaCl,sensible_thermal,0.185249999999922,58.4397693,0.0976013513373986,"Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",0.5268628952088512
+NaKMgCl,sensible_thermal,0.0901512777777496,228.1930693,13.626840491929412,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alok 2021, Alva 2018",Caraballo 2021,151.155267322153
+NaKZnCl,sensible_thermal,0.1255675391111056,269.2680693,5.290607956293198,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alibaba (Bulk), Alva 2018",Caraballo 2021,42.13356408627172
+NaMgCaCl,sensible_thermal,0.0754109999999919,264.6227693,10.868783706558181,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, 2 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017",Caraballo 2021,144.12729849172334
+S,sensible_thermal,0.089833333333326,32.06,0.2845,"Alibaba (Bulk), Li 2017, Steinmann 2022, USGS",Steinmann 2022,3.166975881261854
+Sand,sensible_thermal,0.27146000000000003,60.083,0.0849999999999999,"Alibaba (Manual Entry), Diago 2018, Liu 2016",Diago 2018,0.31312163854711517
+Sandstone,sensible_thermal,0.29629166666665796,,,,"Bauer 2012, Steinmann 2022",
+SiO2,sensible_thermal,0.34472222222209004,,0.6,Steinmann 2022,Steinmann 2022,1.7405318291706915
+Sodium (Na),sensible_thermal,0.28347222222221347,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Alva 2018,8.782807158336482
+Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.19718444444442673,62.0880693,24.40473291742616,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022, 1 : Kim 2013, SMM",Alva 2018,123.76601504336332
+Solar Salt,sensible_thermal,0.14056331172835582,186.0960693,0.595,"Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","Alva 2018, Caraballo 2021, Steinmann 2022",4.2329679962994975
+Vegetable Oil,sensible_thermal,0.13080555555554002,933.45,0.7175,"Alva 2018, Steinmann 2022","Alva 2018, Steinmann 2022",5.485241027819722
 Al,latent_thermal,0.1102777777777777,26.9815384,2.2725,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS",Alok 2021,20.607052896725456
 Al/Mg/Zn (59/33/6),latent_thermal,0.0861111111111111,116.6665384,0.5703938492215652,"0 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Alva 2018,6.6239285716052745
 Al/Mg/Zn (60/34/6),latent_thermal,0.0914166666666666,116.6665384,0.5806660307448666,"0 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Alva 2018,6.351861776607478

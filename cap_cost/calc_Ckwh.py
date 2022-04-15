@@ -123,7 +123,7 @@ df_SMs['price_sources'] = df_all['price_sources']
 #%%
 
 
-sensible_thermal = (df_SMs['Cp']*500)
+sensible_thermal = (df_SMs['Cp']*df_SMs['deltaT'])
 sensible_thermal.name='specific_energy'
 sensible_thermal = sensible_thermal.to_frame()
 # sensible_thermal['energy_type'] = 'Thermal (Sensible)'
