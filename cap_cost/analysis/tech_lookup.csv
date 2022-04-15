@@ -1,15 +1,15 @@
-name,long_name,energy_type
-liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled)
-latent_thermal,Latent \n Thermal,Thermal
-thermochemical,Thermochemical,Chemical \n(Decoupled)
-solid_electrode,Dual Solid \nElectrode Battery,Chemical \n(Coupled)
-pseudocapacitor,Pseudocapacitor,Chemical \n(Coupled)
+name,long_name,tech_class
+liquid_metal_battery,Liquid Metal \n Battery,Electrochemical \n(Coupled)
+latent_thermal,Latent \n Thermal,Thermomechanical
+thermochemical,Thermochemical,Thermomechanical
+solid_electrode,Dual Solid \nElectrode Battery,Electrochemical \n(Coupled)
+pseudocapacitor,Pseudocapacitor,Electrochemical \n(Coupled)
 ELDC,ELDC,Electrostatic
 virial,Virial Limited,Virial Limited
-sensible_thermal,Sensible \nThermal,Thermal
-flow_battery,Flow Battery,Chemical \n(Decoupled)
-synfuel,Syn. Fuel,Chemical \n(Decoupled)
+sensible_thermal,Sensible \nThermal,Thermomechanical
+flow_battery,Flow Battery,Electrochemical \n(Decoupled)
+synfuel,Syn. Fuel,Electrochemical \n(Decoupled)
 gravitational,Gravity,Gravitational
 dielectric_capacitor,Dielectric \nCapacitor,Electrostatic
-metal_air,Metal Air,Chemical \n(Coupled)
-hybrid_flow,Hybrid Flow,Chemical \n(Coupled)
+metal_air,Metal Air,Electrochemical \n(Coupled)
+hybrid_flow,Hybrid Flow,Electrochemical \n(Coupled)

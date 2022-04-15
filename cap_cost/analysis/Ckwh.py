@@ -23,9 +23,9 @@ display_text = pd.read_csv('tech_lookup.csv', index_col=0)
 df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 
 df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
-df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
+df_all['tech_class'] = [display_text['tech_class'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 
-df_all = df_all.sort_values('C_kwh').sort_values('energy_type')
+df_all = df_all.sort_values('C_kwh').sort_values('tech_class')
 
 #%%
 cat_label = 'display_text'
@@ -38,7 +38,7 @@ df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
 fig = plt.figure(figsize = (16,8))
 # plt.violinplot(dataset=df_singlemat['C_kwh'].values)
 # sns.violinplot(data=df_singlemat, x='cat_label', y='C_kwh_log')
-sns.stripplot(data=df_all, x=cat_label, y='C_kwh_log', size=10, hue='energy_type')
+sns.stripplot(data=df_all, x=cat_label, y='C_kwh_log', size=10, hue='tech_class')
 
 plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -71,7 +71,7 @@ df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
 tips = [('index','@SM_name'),  ('SM_sources','@SM_sources'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
 
 figure = iqplot.strip(
-    data=df_vis, cats='SM_type', q='C_kwh', color_column='energy_type',
+    data=df_vis, cats='SM_type', q='C_kwh', color_column='tech_class',
     q_axis='y',y_axis_type='log' ,
     jitter=True,
     tooltips= tips,

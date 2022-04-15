@@ -74,9 +74,9 @@ plt.figure()
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
 bins = np.logspace(np.log10(1e-4), np.log10(1e2), 30)
 
-df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
+df_all['tech_class'] = [display_text['tech_class'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 
-df_all.groupby('energy_type')['specific_energy'].hist(bins=bins, legend=True, alpha=0.75)
+df_all.groupby('tech_class')['specific_energy'].hist(bins=bins, legend=True, alpha=0.75)
 
 plt.xscale('log')
 plt.locator_params(axis='y', integer=True)
@@ -102,7 +102,7 @@ plt.figure()
 
 bins = np.logspace(np.log10(1e-3), np.log10(1e6), 50)
 
-df_both.groupby('energy_type')['C_kwh'].hist(bins=bins, legend=True, alpha=0.75)
+df_both.groupby('tech_class')['C_kwh'].hist(bins=bins, legend=True, alpha=0.75)
 
 plt.xscale('log')
 plt.suptitle("{} Storage Media w/ Mat. Prices".format(len(df_both)))

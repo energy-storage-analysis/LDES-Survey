@@ -114,38 +114,25 @@ df_SMs['specific_price'] = df_all['specific_price']
 df_SMs['mu_total'] = df_all['mu_total']
 df_SMs['price_sources'] = df_all['price_sources']
 
-
-
-
-
-
-
 #%%
-
 
 sensible_thermal = (df_SMs['Cp']*df_SMs['deltaT'])
 sensible_thermal.name='specific_energy'
 sensible_thermal = sensible_thermal.to_frame()
-# sensible_thermal['energy_type'] = 'Thermal (Sensible)'
-
-# sensible_thermal.dropna()
 
 #%%
 
 latent_thermal = (df_SMs['sp_latent_heat'])
 latent_thermal.name='specific_energy'
 latent_thermal = latent_thermal.to_frame()
-# latent_thermal['energy_type'] = 'Thermal (Latent)'
 
 thermochem = (df_SMs['deltaH_thermochem'])
 thermochem.name='specific_energy'
 thermochem = thermochem.to_frame()
-# thermochem['energy_type'] = 'Chemical (Thermochemical)'
 
 chemical = (df_SMs['deltaG_chem'])
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
-# chemical['energy_type'] = 'Chemical (Syn. fuel)'
 
 
 #TODO: deltaV means battery deltaV
@@ -153,13 +140,11 @@ F = 96485 # C/mol
 electrochemical = (1/3600)*F*df_SMs['deltaV']/df_SMs['mu_total']
 electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()
-# electrochemical['energy_type'] = 'Chemical (Battery)'
 
 
 virial = (df_SMs['specific_strength']/3600) #TODO:Assuming Q=1
 virial.name='specific_energy'
 virial = virial.to_frame()
-# virial['energy_type'] = 'Viral Limited'
 
 
 epsilon_0 = 8.85e-12
@@ -176,7 +161,6 @@ electrostatic = calc_electrostatic_SE(
 )
 electrostatic.name='specific_energy'
 electrostatic = electrostatic.to_frame()
-# electrostatic['energy_type'] = 'Electrostatic (Capacitor)'
 
 
 #TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
@@ -185,14 +169,12 @@ electrostatic_edlc = electrostatic_edlc/3600
 
 electrostatic_edlc.name='specific_energy'
 electrostatic_edlc = electrostatic_edlc.to_frame()
-# electrostatic_edlc['energy_type'] = 'Electrostatic (EDLC)'
 
 
 
 gravitational = (df_SMs['delta_height']*9.81/3600000)
 gravitational.name='specific_energy'
 gravitational = gravitational.to_frame()
-# gravitational['energy_type'] = 'Gravitational'
 
 dfs = [
     chemical,
