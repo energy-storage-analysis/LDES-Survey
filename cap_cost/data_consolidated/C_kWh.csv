@@ -182,7 +182,7 @@ LiNaKNO3NO2,sensible_thermal,0.1113294341666549,186.0960693,,,Caraballo 2021,
 Limestone,sensible_thermal,0.216666666666606,,,,"Bauer 2012, Steinmann 2022",
 MgO,sensible_thermal,0.8976388888887641,40.304,0.135,"Alibaba (Bulk), Alibaba (Manual Search), Steinmann 2022",Steinmann 2022,0.1503945536128942
 Mobiltherm 605,sensible_thermal,0.2456944444444275,,3.0,Steinmann 2022,Steinmann 2022,12.210288298474556
-Na,sensible_thermal,0.2798611111111025,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Steinmann 2022,8.896133702315016
+Na,sensible_thermal,0.28166666666665796,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022","Alva 2018, Steinmann 2022",8.839107204223255
 NaBF,sensible_thermal,0.13177499999998948,41.9881724,,,Caraballo 2021,
 NaCl,sensible_thermal,0.185249999999922,58.4397693,0.0976013513373986,"Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",0.5268628952088512
 NaKMgCl,sensible_thermal,0.0901512777777496,228.1930693,13.626840491929412,"0 : Alibaba (Bulk), Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS, 1 : Alok 2021, Alva 2018, USGS, 2 : Alok 2021, Alva 2018",Caraballo 2021,151.155267322153
@@ -192,7 +192,6 @@ S,sensible_thermal,0.089833333333326,32.06,0.2845,"Alibaba (Bulk), Li 2017, Stei
 Sand,sensible_thermal,0.27146000000000003,60.083,0.0849999999999999,"Alibaba (Manual Entry), Diago 2018, Liu 2016",Diago 2018,0.31312163854711517
 Sandstone,sensible_thermal,0.29629166666665796,,,,"Bauer 2012, Steinmann 2022",
 SiO2,sensible_thermal,0.34472222222209004,,0.6,Steinmann 2022,Steinmann 2022,1.7405318291706915
-Sodium (Na),sensible_thermal,0.28347222222221347,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Alva 2018,8.782807158336482
 Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.19718444444442673,62.0880693,24.40473291742616,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022, 1 : Kim 2013, SMM",Alva 2018,123.76601504336332
 Solar Salt,sensible_thermal,0.14056331172835582,186.0960693,0.595,"Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","Alva 2018, Caraballo 2021, Steinmann 2022",4.2329679962994975
 Vegetable Oil,sensible_thermal,0.13080555555554002,933.45,0.7175,"Alva 2018, Steinmann 2022","Alva 2018, Steinmann 2022",5.485241027819722

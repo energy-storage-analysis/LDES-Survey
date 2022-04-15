@@ -236,7 +236,7 @@ N-doped carbon nanosheets,ELDC,,,,,,,,,,,,,,,,,,165.0,1.0,,Graphite,,,Choi 2015,
 N-doped carbon nanospheres,ELDC,,,,,,,,,,,,,,,,,,128.0,1.0,,Graphite,,,Choi 2015,,,20.0,
 N-doped nanoporous carbon,ELDC,,,,,,,,,,,,,,,,,,165.0,1.0,,Graphite,,,Choi 2015,,,20.0,
 NTP/NMO,solid_electrode,,,,,,,,,212.4,1.3,,,,,,,,,,,"[('NTP', 0.5), ('NMO', 0.5)]",molar,,Li 2017,Na ion (aqueous),,20.0,
-Na,sensible_thermal,0.0003611111111111,98.0,873.0,,,900.0,,,,,,,,,,,,,,775.0,Na,,Sodium,Steinmann 2022,,,98.0,775.0
+Na,sensible_thermal,0.0003611111111111,98.0,878.0,,,900.0,64.9,,,,,,,,,,,,,775.0,Na,,"Sodium, Sodium (Na)","Alva 2018, Steinmann 2022",,,98.0,780.0
 Na-O2,metal_air,,,,,,,,,,2.33,,,,,,,,,,,Na,,,Weinrich 2019,,,20.0,
 Na/Al,liquid_metal_battery,,,,,,,,,,,,,,,,,,,,,"[('Na', 0.5), ('Al', 0.5)]",molar,Na/Al,Kim 2013,,,20.0,
 Na/Bi,liquid_metal_battery,,,,,,,,,,0.605,,,,,,,,,,,"[('Na', 0.5), ('Bi', 0.5)]",molar,Na/Bi,Kim 2013,,,20.0,
@@ -320,7 +320,6 @@ Si/Li2S,solid_electrode,,,,,,,,,12.5,2.6,,,,,,,,,,,"[('Polysilicon', 0.5), ('Li2
 Si/Mg (56/44),latent_thermal,,,,946.0,0.2102777777777777,1900.0,,1438.3,,,,,,,,,,,,,"[('Metallurgical Silicon', 0.56), ('Mg', 0.44)]",molar,Si/Mg (56/44),Alva 2018,,,20.0,
 Si/Mg/Ca (49/30/21),latent_thermal,,,,865.0,0.0847222222222222,6880.0,,2098.4,,,,,,,,,,,,,"[('Metallurgical Silicon', 0.49), ('Mg', 0.3), ('Ca', 0.21)]",molar,Si/Mg/Ca (49/30/21),Alva 2018,,,20.0,
 SiO2,sensible_thermal,0.0002027777777777,,1720.0,,,2200.0,1.5,,,,,,,,,,,,,,SiO2,,SiO2,Steinmann 2022,,,20.0,1700.0
-Sodium (Na),sensible_thermal,0.0003611111111111,98.0,883.0,,,,64.9,,,,,,,,,,,,,,Na,,Sodium (Na),Alva 2018,,,98.0,785.0
 Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.0002472222222222,-12.6,785.0,,,,26.3,,,,,,,,,,,,,,"[('Na', 0.5), ('K', 0.5)]",molar,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),Alva 2018,,,-12.6,797.6
 Solar Salt,sensible_thermal,0.00041140481481476664,233.33333333333334,575.0,,,1964.682,0.55,,2.65,,,,,,,,,,,320.0,Solar Salt,,"Solar Salt, Solar Salt, NaNO3e KNO3 (50-50)","Alva 2018, Caraballo 2021, Steinmann 2022",Nitrate,,233.33333333333334,341.66666666666663
 Sr(OH)2/SrO,thermochemical,,,,,,,,,,,0.2023055555555555,755.0,,,,,,,,,Sr(OH)2,,,Andre 2016,hydroxides,,20.0,
