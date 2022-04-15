@@ -7,7 +7,7 @@ Mobiltherm 605,Mobiltherm 605,sensible_thermal,Mobiltherm 605,
 "Therminol VP1
 (vapor pressure at 400 °C: 10.9 bar)",Therminol VP1,sensible_thermal,Therminol VP1,
 Sulfur,S,sensible_thermal,S,
-Sunflower oil,Sunflower oil,sensible_thermal,Sunflower oil,
+Sunflower oil,Vegetable Oil,sensible_thermal,Vegetable Oil,
 Aluminium,Al,sensible_thermal,Al,
 Cast iron,Fe,sensible_thermal,Fe,
 NaCl,NaCl,sensible_thermal,NaCl,

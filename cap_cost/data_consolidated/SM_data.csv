@@ -127,7 +127,7 @@ I3/Zn,hybrid_flow,,,,,,,,,,1.27,,,,,,,,,,,"[('Zn', 0.5), ('I2', 0.5)]",molar,Iod
 ICB,flow_battery,,,,,,,,,28.3,1.18,,,,,,,,,,,"[('Cr', 0.5), ('Fe', 0.5)]",molar,,Li 2017,Redox flow,
 IM7-8551–7,virial,,,,,,,,,,,,,1318.2973316391358,,,,,,,,CFRP,,,Kale 2018,,
 IM7–8552,virial,,,,,,,,,,,,,1389.168765743073,,,,,,,,CFRP,,,Kale 2018,,
-Iron Ore,sensible_thermal,0.00025,,,,,,,,,,,,,,,,,,,,Iron Ore,,Magnetite,Grosu 2017,,TODO: approximate from graph average by eye
+Iron Ore,sensible_thermal,0.00025,,1000.0,,,,,,,,,,,,,,,,,,Iron Ore,,Magnetite,Grosu 2017,,TODO: approximate from graph average by eye
 K-O2,metal_air,,,,,,,,,,2.48,,,,,,,,,,,K,,,Weinrich 2019,,
 K/Al,liquid_metal_battery,,,,,,,,,,,,,,,,,,,,,"[('K', 0.5), ('Al', 0.5)]",molar,K/Al,Kim 2013,,
 K/Bi,liquid_metal_battery,,,,,,,,,,0.675,,,,,,,,,,,"[('K', 0.5), ('Bi', 0.5)]",molar,K/Bi,Kim 2013,,
@@ -310,7 +310,7 @@ S-2 Glass Epoxy,virial,,,,,,,,,,,,,743.6026091319618,,,,,,,,GRE,,,Kale 2018,,
 "S/Air(Li, Base)",flow_battery,,,,,,,,,13.2,0.65,,,,,,,,,,,"[('Li', 0.5), ('S', 0.5)]",molar,,Li 2017,Flow-air,
 "S/Air(Na, Acid)",flow_battery,,,,,,,,,1.7,1.35,,,,,,,,,,,"[('Na', 0.5), ('S', 0.5)]",molar,,Li 2017,Flow-air,
 "S/Air(Na, Base)",flow_battery,,,,,,,,,4.0,0.65,,,,,,,,,,,"[('Na', 0.5), ('S', 0.5)]",molar,,Li 2017,Flow-air,
-Sand,sensible_thermal,0.000277,,,,,,,,,,,,,,,,,,,,Sand,,Sand,Diago 2018,,https://doi.org/10.1016/j.apenergy.2018.02.106
+Sand,sensible_thermal,0.000277,,1000.0,,,,,,,,,,,,,,,,,,Sand,,Sand,Diago 2018,,https://doi.org/10.1016/j.apenergy.2018.02.106
 Sandstone,sensible_thermal,0.0003798611111111,,800.0,,,2200.0,2.1750000000000003,,,,,,,,,,,,,,"Sandstone, Stone",,Sandstone,"Bauer 2012, Steinmann 2022",,
 Sb2O5/SbO2,thermochemical,,,,,,,,,,,0.0584444444444444,325.0,,,,,,,,,Sb2O5,,,Andre 2016,oxides,
 Si,latent_thermal,,,,1410.0,0.4972222222222222,,,,,,,,,,,,,,,,Metallurgical Silicon,,,Alok 2021,,
@@ -330,7 +330,6 @@ Stainless-Steel-440C,virial,,,,,,,,,,,,,158.44155844155844,,,,,,,,Steel,,,Kale 2
 Stainless-Steel-455,virial,,,,,,,,,,,,,191.8814432989691,,,,,,,,Steel,,,Kale 2018,,
 Steel-18Ni-300,virial,,,,,,,,,,,,,94.27860696517412,,,,,,,,Steel,,,Kale 2018,,
 Steel-4340,virial,,,,,,,,,,,,,59.87261146496816,,,,,,,,Steel,,,Kale 2018,,
-Sunflower oil,sensible_thermal,0.0006111111111111,0.0,200.0,,,820.0,,,,,,,,,,,,,,,Sunflower oil,,Sunflower oil,Steinmann 2022,,
 Synthetic CH4 (Sabatier),synfuel,,,,,,,,,,,,,,,,15.4,,,,,"[('CO2', 2.75), ('Water', 3.375)]",molar,Synthetic CH4 (Sabatier),Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
 Synthetic H2,synfuel,,,,,,,,,,,,,,,,39.4,,,,,"[('Water', 9)]",mass,Synthetic H2,Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
 Synthetic H2 (Cavern),synfuel,,,,,,,,,,,,,,,,39.4,,,,,Synthetic H2 (Cavern),,Synthetic H2 (Cavern),Engineering Toolkit HHV,,Based on hypotheticical reversible electrochemical oxidation reaction
@@ -343,7 +342,7 @@ V,latent_thermal,,,,2183.0,0.125,,,,,,,,,,,,,,,,V,,,Alok 2021,,
 V2O5-PPy nanofibers,pseudocapacitor,,,,,,,,,,,,,,,,,,412.0,2.0,,"[('V2O5', 0.5), ('PPy', 0.5)]",molar,,Choi 2015,,
 V2O5/V2O4,thermochemical,,,,,,,,,,,0.2696944444444444,1710.0,,,,,,,,,V2O5,,,Andre 2016,oxides,
 VRFB,flow_battery,,,,,,,,,124.4,1.55,,,,,,,,,,,V,,,Li 2017,Redox flow,
-Vegetable oil,sensible_thermal,0.0006969444444444,,,,,,0.11,,,,,,,,,,,,,,Vegetable Oil,,Vegetable oil,Alva 2018,,
+Vegetable Oil,sensible_thermal,0.00065402777777775,0.0,200.0,,,820.0,0.11,,,,,,,,,,,,,,Vegetable Oil,,"Sunflower oil, Vegetable oil","Alva 2018, Steinmann 2022",,
 Zn,latent_thermal,,,,419.0,0.0405555555555555,,,,,,,,,,,,,,,,Zn,,,Alok 2021,,
 Zn(OH)2/ZnO,thermochemical,,,,,,,,,,,0.1386,55.0,,,,,,,,,Zn(OH)2,,,Andre 2016,hydroxides,
 Zn-air,metal_air,,,,,,,,,,1.65,,,,,,,,,,,Zn,,,Weinrich 2019,,

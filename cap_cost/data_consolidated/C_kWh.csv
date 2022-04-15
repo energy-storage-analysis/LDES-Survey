@@ -201,8 +201,7 @@ SiO2,sensible_thermal,0.10138888888885,,0.6,Steinmann 2022,Steinmann 2022,5.9178
 Sodium (Na),sensible_thermal,0.18055555555555,22.9897693,2.4896818625228065,"Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022",Alva 2018,13.789007238588276
 Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.12361111111110001,62.0880693,24.40473291742616,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022, 1 : Kim 2013, SMM",Alva 2018,197.43154719717316
 Solar Salt,sensible_thermal,0.20570240740735002,186.0960693,0.595,"Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","Alva 2018, Caraballo 2021, Steinmann 2022",2.892528130804656
-Sunflower oil,sensible_thermal,0.30555555555555003,,0.6,Steinmann 2022,Steinmann 2022,1.9636363636363992
-Vegetable oil,sensible_thermal,0.34847222222220003,933.45,0.835,Alva 2018,Alva 2018,2.3961737744122686
+Vegetable Oil,sensible_thermal,0.32701388888885,933.45,0.7175,"Alva 2018, Steinmann 2022","Alva 2018, Steinmann 2022",2.1940964111278887
 Al,latent_thermal,0.1102777777777777,26.9815384,2.2725,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS",Alok 2021,20.607052896725456
 Al/Mg/Zn (59/33/6),latent_thermal,0.0861111111111111,116.6665384,0.5703938492215652,"0 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Alva 2018,6.6239285716052745
 Al/Mg/Zn (60/34/6),latent_thermal,0.0914166666666666,116.6665384,0.5806660307448666,"0 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Alva 2018,6.351861776607478
