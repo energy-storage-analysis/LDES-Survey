@@ -127,7 +127,7 @@ I3/Zn,hybrid_flow,,,,,,,,,,1.27,,,,,,,,,,,"[('Zn', 0.5), ('I2', 0.5)]",molar,Iod
 ICB,flow_battery,,,,,,,,,28.3,1.18,,,,,,,,,,,"[('Cr', 0.5), ('Fe', 0.5)]",molar,,Li 2017,Redox flow,
 IM7-8551–7,virial,,,,,,,,,,,,,1318.2973316391358,,,,,,,,CFRP,,,Kale 2018,,
 IM7–8552,virial,,,,,,,,,,,,,1389.168765743073,,,,,,,,CFRP,,,Kale 2018,,
-Iron Ore,sensible_thermal,0.00025,,1000.0,,,,,,,,,,,,,,,,,,Iron Ore,,Magnetite,Grosu 2017,,TODO: approximate from graph average by eye
+Iron Ore,sensible_thermal,0.00025,,1000.0,,,,5.0,,,,,,,,,,,,,,Iron Ore,,Magnetite,"Grosu 2017, Molgaard 1971",,"TODO: approximate from graph average by eye, https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite"
 K-O2,metal_air,,,,,,,,,,2.48,,,,,,,,,,,K,,,Weinrich 2019,,
 K/Al,liquid_metal_battery,,,,,,,,,,,,,,,,,,,,,"[('K', 0.5), ('Al', 0.5)]",molar,K/Al,Kim 2013,,
 K/Bi,liquid_metal_battery,,,,,,,,,,0.675,,,,,,,,,,,"[('K', 0.5), ('Bi', 0.5)]",molar,K/Bi,Kim 2013,,

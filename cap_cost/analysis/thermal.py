@@ -111,8 +111,6 @@ plt.figure()
 x_str='T_max'
 y_str='C_kwh'
 
-#TODO: https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
-df_sens_ds.loc['Iron Ore','kth'] = 5
 
 df_sens_ds.plot.scatter(y=y_str, x=x_str, c='Cp', cmap='jet', sharex=False)
 
