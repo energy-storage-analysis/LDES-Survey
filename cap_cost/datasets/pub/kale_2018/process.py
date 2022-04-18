@@ -34,8 +34,12 @@ df_a2 = df_a2.rename({
 
 df_a2['specific_price'] = df_a2['relative_cost']*1 #TODO: assuming relative cost to 1$/kg
 
+df_a2['sigma_theta_T'] = df_a2['sigma_theta_T'].astype(float)
+df_a2['sigma_theta_C'] = df_a2['sigma_theta_C'].astype(float)
+
 #TODO: What is T and C? 
-df_a2['sigma_theta_avg'] = (df_a2['sigma_theta_T'].astype(float) + df_a2['sigma_theta_C'].astype(float))/2
+#Just taking the average of T and C for now. 
+df_a2['sigma_theta_avg'] = (df_a2['sigma_theta_T'] + df_a2['sigma_theta_C'])/2
 
 #TODO: from Kamf thesis it seems like the hoop stress is limiting on a simple approximation level. 
 df_a2['specific_strength'] = df_a2['sigma_theta_avg']/df_a2['density']
