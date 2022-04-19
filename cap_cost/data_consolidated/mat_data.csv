@@ -152,7 +152,7 @@ Mo,43.63333333333333,15.29405597440222,0.35,0,3,"ISE, SMM, USGS","25.5, 43.63, 5
 MoO3,30.5,19.05477928912054,0.62,0,3,"Alibaba (Bulk), ISE, SMM","25.67, 30.5, 60.82",MoO3,143.947,"High-purity Molybdenum Trioxide, Molybdenum Oxide, FOB, China, Molybdenum ores and concentrates, roasted 45%, Molybdenum ores and concentrates, roasted 50%, Molybdenum oxides and hydroxides, Molybdenum oxides",26.7805966
 MoS2,28.185000000000002,2.5950818869546266,0.09,1,2,"ISE, Li 2017","26.35, 30.02",MoS2,160.07,"MoS2, Molybdenum Conc.",24.0740458
 Mobiltherm 605,3.0,,,1,1,Steinmann 2022,3.0,,,Mobiltherm 605,
-N2,0.14,,,1,1,Wiki (TODO),0.14,N2,28.014,Liquid Nitrogen,0.14
+N2,0.14,,,0,1,Wiki (TODO),0.14,N2,28.014,Liquid Nitrogen,0.14
 NCA,34.0,,,1,1,Li 2017,34.0,LiNi0.8Co0.15Al0.05O2,96.081776,NCA,
 NCM111,20.0,,,1,1,Li 2017,20.0,LiNi0.33Co0.33Mn0.33O2,95.8843302,NCM111,
 NCM622,25.0,,,1,1,Li 2017,25.0,LiNi0.6Co0.2Mn0.2O2,96.9282874,NCM622,
@@ -247,7 +247,7 @@ Vegetable Oil,0.7175,0.1661700935788387,0.23,1,2,"Alva 2018, Steinmann 2022","0.
 Vermiculite,0.33,,,0,1,Liu 2016,0.33,AlFeH3MgO6Si,234.2345384,Vermiculite,
 W,24.342857142857145,,,0,1,ISE,24.34,W,183.84,"Tungsten powder, Tungsten scrap, Wolfram Bar",35.3
 WO3,9.561104192038657,13.090874043702986,1.37,0,2,"ISE, USGS","0.3, 18.82",WO3,231.837,"Tungsten WO3, Tungsten oxides, Wolfram Ore",28.0237561
-Water,0.001,,,4,1,Li 2017,0.0,H2O,18.015,DI H2O,
+Water,0.001,,,3,1,Li 2017,0.0,H2O,18.015,DI H2O,
 Water Reservoir Excavation,0.261,,,0,1,Calculation/Black and Veatch,0.26,,,Pumped Hydro,
 Y,19.4,,,0,1,USGS,19.4,Y,88.90584,"Yttrium Metal, Yttrium Y2O3",31.0
 Zeolite,1.93,,,0,1,Liu 2016,1.93,Al2O5Si,162.0430768,Zeolite,

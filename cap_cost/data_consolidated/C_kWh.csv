@@ -1,9 +1,8 @@
 SM_name,SM_type,specific_energy,mu_total,specific_price,price_sources,SM_sources,C_kwh
-Synthetic CH4 (Sabatier),synfuel,15.4,62.024,0.07903054664323489,"0 : Knighton 2020, 1 : Li 2017",Engineering Toolkit HHV,0.005131853678132135
-Synthetic H2,synfuel,39.4,18.015,0.009000000000000001,0 : Li 2017,Engineering Toolkit HHV,0.00022842639593908634
-Synthetic H2 (Cavern),synfuel,39.4,2.016,0.36,Ahluwalia,Engineering Toolkit HHV,0.009137055837563452
-Synthetic Methanol (DMS),synfuel,6.39,62.024,0.039515273321617445,"0 : Knighton 2020, 1 : Li 2017",Engineering Toolkit HHV,0.006183923837498818
-Synthetic NH3 (Haber-Bosch),synfuel,6.25,46.028999999999996,0.043190217037085324,"0 : Wiki (TODO), 1 : Li 2017",Engineering Toolkit HHV,0.006910434725933652
+Synthetic CH4 (Sabatier),synfuel,15.96,62.024,0.113375,"0 : Knighton 2020, 1 : Li 2017",Engineering Toolkit HHV,0.007103696741854636
+Synthetic H2,synfuel,32.8,18.015,0.009000000000000001,0 : Li 2017,Engineering Toolkit HHV,0.0002743902439024391
+Synthetic H2 (Cavern),synfuel,32.8,2.016,0.36,Ahluwalia,Engineering Toolkit HHV,0.010975609756097562
+Synthetic Methanol (DMS),synfuel,6.0,62.024,0.0566875,"0 : Knighton 2020, 1 : Li 2017",Engineering Toolkit HHV,0.009447916666666667
 Ba(OH)2/BaO,thermochemical,0.1515194444444444,171.341,0.45,"Alibaba (Bulk), Alibaba (Manual Search)",Andre 2016,2.9699158523841835
 BaCO3/BaO,thermochemical,0.2323888888888889,197.335,0.3295454545454545,Alibaba (Manual Search),Andre 2016,1.4180774998370023
 BaO2/BaO,thermochemical,0.1201666666666666,153.326,0.3,Alibaba (Manual Search),Andre 2016,2.4965325936199734

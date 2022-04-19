@@ -2,11 +2,10 @@ SM_name,materials,mat_basis,original_name,SM_type,Cp,kth,T_max,sp_latent_heat,di
 Iron Ore,Iron Ore,,Magnetite,sensible_thermal,0.00025,,1000,,,,,,,Grosu 2017,TODO: approximate from graph average by eye
 Iron Ore,Iron Ore,,Magnetite,sensible_thermal,,5,,,,,,,,Molgaard 1971,https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
 Al2O3,Al2O3,,Al2O3 Dielectric Capacitor,dielectric_capacitor,,,,,500000000,10,3950,,,TODO,"The dielectric breakdown strength is larger for thin films of Aluminum oxide than in bulk samples and is on the order of 500 MV/um.(Hanby et al., 2018; Stellanova, 2012; Talbi et al., 2010) "
-Synthetic H2,"[('Water', 9)]",mass,Synthetic H2,synfuel,,,,,,,,39.4,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
-Synthetic CH4 (Sabatier),"[('CO2', 2.75), ('Water', 3.375)]",molar,Synthetic CH4 (Sabatier),synfuel,,,,,,,,15.4,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
-Synthetic Methanol (DMS),"[('CO2', 1.375), ('Water', 1.6875)]",molar,Synthetic Methanol (DMS),synfuel,,,,,,,,6.39,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
-Synthetic NH3 (Haber-Bosch),"[('N2', 0.5), ('Water', 1.5)]",molar,Synthetic NH3 (Haber-Bosch),synfuel,,,,,,,,6.25,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
-Synthetic H2 (Cavern),Synthetic H2 (Cavern),,Synthetic H2 (Cavern),synfuel,,,,,,,,39.4,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic H2,"[('Water', 9)]",mass,Synthetic H2,synfuel,,,,,,,,32.8,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic CH4 (Sabatier),"[('CO2', 2.75), ('Water', 3.375)]",mass,Synthetic CH4 (Sabatier),synfuel,,,,,,,,15.96,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic Methanol (DMS),"[('CO2', 1.375), ('Water', 1.6875)]",mass,Synthetic Methanol (DMS),synfuel,,,,,,,,6,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
+Synthetic H2 (Cavern),Synthetic H2 (Cavern),,Synthetic H2 (Cavern),synfuel,,,,,,,,32.8,,Engineering Toolkit HHV,Based on hypotheticical reversible electrochemical oxidation reaction
 Pumped Hydro,Water Reservoir Excavation,,Pumped Hydro,gravitational,,,,,,,,,300,,
 Block Stacking,Stone,,Block Stacking,gravitational,,,,,,,,,100,,
 Sand,Sand,,Sand,sensible_thermal,0.000277,,1000,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
