@@ -130,13 +130,12 @@ thermochem = (df_SMs['deltaH_thermochem'])
 thermochem.name='specific_energy'
 thermochem = thermochem.to_frame()
 
-chemical = (df_SMs['deltaG_chem'])
+chemical = (df_SMs['deltaG_chem'])/(df_SMs['mu_total']/1000)
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
 
-
-#TODO: deltaV means battery deltaV
 F = 96485 # C/mol
+#TODO: deltaV means battery deltaV
 electrochemical = (1/3600)*F*df_SMs['deltaV']/df_SMs['mu_total']
 electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()

@@ -225,7 +225,9 @@ Steel,1.5090833333333333,0.642721735768777,0.43,0,2,"Alibaba (Bulk), Kale 2018",
 Stone,0.05,0.04622154215284607,0.92,0,3,"Alibaba (Bulk), Steinmann 2022, USGS","0.01, 0.05, 0.15",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
 Syenite,0.1256713547305333,0.0174485971927697,0.14,0,2,"Alibaba (Bulk), USGS","0.11, 0.14",Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,29.4,,,0,1,Alva 2018,29.4,,,Syltherm XLT,
-Synthetic H2 (Cavern),0.36,,,1,1,Ahluwalia,0.36,H2,2.016,Synthetic H2 (Cavern),
+Synthetic H2 (LRC),72.0,,,1,1,Ahluwalia,72.0,H2,2.016,Lined Rock Cavern H2,
+Synthetic H2 (Pipes),600.0,,,1,1,Ahluwalia,600.0,H2,2.016,Underground pipes H2,
+Synthetic H2 (Salt),36.0,,,1,1,Ahluwalia,36.0,H2,2.016,Salt Cavern H2,
 TEMPO,5.5,,,2,1,Liu 2019,5.5,C9H18NO2,172.248,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",
 Ta,357.33833333333337,107.01589728737602,0.3,0,2,"ISE, SMM","281.67, 433.01",Ta,180.94788,"Tantalum Powders for metallurgy(Ta≥99.95%), Tantalum metal",305.0
 Ta2O5,197.93038657815163,65.40944053007873,0.33,0,3,"ISE, SMM, USGS","176.8, 197.93, 299.17",Ta2O5,441.89076,"Tantalum Conc., Tantalum pentoxide, Tantalum Pentoxide(Ta2O5≥99.5%), Tantalum Pentoxide(Ta2O5≥99.95%), Tantalum Ta2O5",249.8140627
