@@ -142,17 +142,18 @@ for name, row in df_ec_coupled.iterrows():
     texts.append(txt)
 
 # plt.xscale('log')
+ax.set_title('Coupled')
 
 plt.xlabel('Couple Voltage (V)')
 plt.ylabel("Material capital cost ($/kWh)")
 
 # plt.ylim(0,10)
-plt.ylim(2e-1,20)
+plt.ylim(1e-1,20)
 plt.yscale('log')
 
 plt.xlim(0,5.5)
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.2,1))
 
 plt.savefig(pjoin(output_dir,'ec_coupled.png'))
 
@@ -177,16 +178,60 @@ for name, row in df_ec_decoupled.iterrows():
 
 # plt.xscale('log')
 
-plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material capital cost ($/kWh)")
+ax.set_title('Decoupled')
+
 
 # plt.ylim(0,10)
 plt.ylim(2e-4,20)
 plt.yscale('log')
 
+plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
+
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
+plt.xlabel('Couple Voltage (V)')
+plt.ylabel("Material capital cost ($/kWh)")
+
 plt.savefig(pjoin(output_dir,'ec_decoupled.png'))
+
+
+# %%
+
+df_nofeedstock = df_ec_decoupled.loc[['Feedstock' not in idx for idx in df_ec_decoupled.index]]
+
+plt.figure(figsize = (4,5))
+
+x_str='deltaV'
+y_str='C_kwh'
+
+sns.scatterplot(data=df_nofeedstock, y=y_str, x=x_str, hue='SM_type', legend=True)
+
+ax = plt.gca()
+texts = []
+for name, row in df_nofeedstock.iterrows():
+    x = row[x_str]
+    y = row[y_str]
+
+    txt= ax.text(x, y, "${}$".format(name))
+    texts.append(txt)
+
+# plt.xscale('log')
+
+ax.set_title('Decoupled')
+
+# plt.ylim(0,10)
+plt.ylim(1e-1,20)
+plt.yscale('log')
+
+
+plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
+
+adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+
+plt.xlabel('Couple Voltage (V)')
+plt.ylabel("Material capital cost ($/kWh)")
+
+plt.savefig(pjoin(output_dir,'ec_decoupled_nofeedstock.png'))
 
 
 # %%
