@@ -27,27 +27,28 @@ df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0].dropna(how='all')
 df_mat_data.to_csv('output/mat_data_used.csv')
 
 # %%
-plt.figure()
+plt.figure(figsize=(7,5))
 
-bins = np.logspace(np.log10(0.05), np.log10(2e3), 30)
+bins = np.logspace(np.log10(0.05), np.log10(5e2), 30)
 df_mat_data['specific_price'].hist(bins=bins)
 
 plt.xscale('log')
 
-plt.suptitle("{} Material Prices".format(len(df_mat_data)))
+plt.suptitle("{} Material Prices used in at least 1 storage medium".format(len(df_mat_data)))
 plt.xlabel('Specific Price ($/kg)')
 
 plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
 plt.tight_layout()
+plt.ylim(0,10)
 
 plt.savefig(pjoin(output_dir,'eda_mats.png'))
 
 
 #%%
 
-# plt.figure(figsize=(2,2))
-plt.figure(figsize=(5,5))
+plt.figure(figsize=(2.5,2))
+# plt.figure(figsize=(5,5))
 
 df_mat_data['num_source'].value_counts().plot.bar()
 plt.xlabel("# Sources")
@@ -69,10 +70,10 @@ df_SMs = df_SMs.drop(missing_idx)
 
 #%%
 
-plt.figure()
+plt.figure(figsize=(7,5))
 
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
-bins = np.logspace(np.log10(1e-4), np.log10(1e2), 30)
+bins = np.logspace(np.log10(5e-5), np.log10(1e2), 30)
 
 df_all['tech_class'] = [display_text['tech_class'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 

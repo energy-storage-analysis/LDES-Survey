@@ -13,7 +13,7 @@ plt.rcParams.update({
 from lcos_fns import calc_lcos
 
 CF = 0.7
-eta_RTs = [0.6, 0.8, 1.0]
+eta_RTs = [0.5,1]
 C_kWhs = [10,100,1000]
 DD = np.logspace(np.log10(1),np.log10(300), num=100),
 
@@ -29,7 +29,7 @@ from lcos_fns import calc_lcos
 combos = dict(
 DD = np.logspace(np.log10(1),np.log10(300), num=100),
 C_kWh = [10,100,1000],
-eta_RT = [0.5,0.75,1.0]
+eta_RT = eta_RTs
 )
 
 constants = dict(
@@ -79,7 +79,7 @@ from lcos_fns import calc_CkW_max
 combos = dict(
 DD = [1,10,100],
 C_kWh = np.logspace(np.log10(1), np.log10(1000), num=500),
-eta_RT = [0.5,0.75,1.0]
+eta_RT = eta_RTs
 )
 
 constants = dict(
@@ -102,7 +102,7 @@ da_CkW_stack = da_CkW.stack(temp = ['DD', 'eta_RT'])
 linestyles = ['-','--','-.']
 linestyle_dict = {eta: linestyles[i] for i, eta in enumerate(da_CkW.coords['eta_RT'].values)}
 
-colors = ['c','y','k']
+colors = ['tab:brown','tab:orange','tab:purple']
 color_dict = {eta: colors[i] for i, eta in enumerate(da_CkW.coords['DD'].values)}
 
 for DD, eta_RT in da_CkW_stack.coords['temp'].values:
