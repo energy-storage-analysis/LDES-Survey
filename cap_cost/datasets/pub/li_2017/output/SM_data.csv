@@ -1,44 +1,44 @@
 SM_name,C_kwh_orig,type,deltaV,materials,mat_basis,SM_type
 Pb acid,12.4,Pb acid,2.1,Pb,,solid_electrode
-NiCd,66.0,NiCd,1.2,"[('Cd(OH)2', 0.5), ('Ni(OH)2', 0.5)]",molar,solid_electrode
-NiMH,82.8,NiMH,1.2,"[('LaNi5', 0.5), ('Ni(OH)2', 0.5)]",molar,solid_electrode
+NiCd,66.0,NiCd,1.2,"[('Cd(OH)2', 1), ('Ni(OH)2', 1)]",molar,solid_electrode
+NiMH,82.8,NiMH,1.2,"[('LaNi5', 1), ('Ni(OH)2', 1)]",molar,solid_electrode
 Zn/air,5.8,Zn2+ based,1.65,Zn,,metal_air
-Zn/NiOOH,44.2,Zn2+ based,1.74,"[('Zn', 0.5), ('Ni(OH)2', 0.5)]",molar,solid_electrode
-Zn/MnO2,9.0,Zn2+ based,1.5,"[('Zn', 0.5), ('MnO2', 0.5)]",molar,solid_electrode
-Zn/Br2,8.0,Zn2+ based,1.85,"[('Zn', 0.5), ('Br2', 0.5)]",molar,hybrid_flow
-Zn/Fe,9.3,Zn2+ based,1.99,"[('Zn', 0.5), ('Fe', 0.5)]",molar,hybrid_flow
-Zn/Zn0.25V2O5,50.7,Zn2+ based,1.4,"[('Zn', 0.5), ('V2O5', 0.5)]",molar,solid_electrode
+Zn/NiOOH,44.2,Zn2+ based,1.74,"[('Zn', 1), ('Ni(OH)2', 1)]",molar,solid_electrode
+Zn/MnO2,9.0,Zn2+ based,1.5,"[('Zn', 1), ('MnO2', 1)]",molar,solid_electrode
+Zn/Br2,8.0,Zn2+ based,1.85,"[('Zn', 1), ('Br2', 1)]",molar,hybrid_flow
+Zn/Fe,9.3,Zn2+ based,1.99,"[('Zn', 1), ('Fe', 1)]",molar,hybrid_flow
+Zn/Zn0.25V2O5,50.7,Zn2+ based,1.4,"[('Zn', 1), ('V2O5', 1)]",molar,solid_electrode
 Mg/Ti2S4,358.7,Mg2+ based,1.7,"[('Mg', 0.25), ('TiS2', 0.75)]",molar,solid_electrode
-Li/S,13.7,Lithium metal,2.5,"[('Li', 0.5), ('S', 0.5)]",molar,solid_electrode
-Li/TiS2,192.1,Lithium metal,2.5,"[('Li', 0.5), ('TiS2', 0.5)]",molar,solid_electrode
-Li/MoS2,35.7,Lithium metal,2.5,"[('Li', 0.5), ('MoS2', 0.5)]",molar,solid_electrode
-Li/LCO,90.3,Lithium metal,4.7,"[('Li', 0.5), ('LCO', 0.5)]",molar,solid_electrode
+Li/S,13.7,Lithium metal,2.5,"[('Li', 1), ('S', 1)]",molar,solid_electrode
+Li/TiS2,192.1,Lithium metal,2.5,"[('Li', 1), ('TiS2', 1)]",molar,solid_electrode
+Li/MoS2,35.7,Lithium metal,2.5,"[('Li', 1), ('MoS2', 1)]",molar,solid_electrode
+Li/LCO,90.3,Lithium metal,4.7,"[('Li', 1), ('LCO', 1)]",molar,solid_electrode
 Li/air,45.5,Lithium metal,2.91,Li,,metal_air
-Na/S,1.6,High temperature,2.0,"[('Na', 0.5), ('S', 0.5)]",molar,liquid_metal_battery
-Na/NiCl2,6.6,High temperature,2.58,"[('Na', 0.5), ('NiCl2(H2O)6', 0.5)]",molar,liquid_metal_battery
-Li/Pb2Sb,64.1,High temperature,0.92,"[('Li', 0.25), ('Pb', 0.5), ('Sb', 0.25)]",molar,liquid_metal_battery
-ICB,28.3,Redox flow,1.18,"[('Cr', 0.5), ('Fe', 0.5)]",molar,flow_battery
+Na/S,1.6,High temperature,2.0,"[('Na', 1), ('S', 1)]",molar,liquid_metal_battery
+Na/NiCl2,6.6,High temperature,2.58,"[('Na', 1), ('NiCl2(H2O)6', 1)]",molar,liquid_metal_battery
+Li/Pb2Sb,64.1,High temperature,0.92,"[('Li', 0.25), ('Pb', 1), ('Sb', 0.25)]",molar,liquid_metal_battery
+ICB,28.3,Redox flow,1.18,"[('Cr', 1), ('Fe', 1)]",molar,flow_battery
 Fe/Fe,15.5,Redox flow,1.2,Fe,,flow_battery
-PSB,7.4,Redox flow,1.55,"[('S',0.5), ('Br2', 0.5)]",molar,flow_battery
+PSB,7.4,Redox flow,1.55,"[('S',1), ('Br2', 1)]",molar,flow_battery
 VRFB,124.4,Redox flow,1.55,V,,flow_battery
 Cu/Cu,53.0,Redox flow,0.6,Cu,,hybrid_flow
-AQDS/Br,57.9,Redox flow,0.92,"[('AQDS', 0.5), ('Br2', 0.5)]",molar,flow_battery
-"S/Air(Na, Acid)",1.7,Flow-air,1.35,"[('Na', 0.5), ('S', 0.5)]",molar,flow_battery
-"S/Air(Na, Base)",4.0,Flow-air,0.65,"[('Na', 0.5), ('S', 0.5)]",molar,flow_battery
-"S/Air(Li, Acid)",4.6,Flow-air,1.35,"[('Li', 0.5), ('S', 0.5)]",molar,flow_battery
-"S/Air(Li, Base)",13.2,Flow-air,0.65,"[('Li', 0.5), ('S', 0.5)]",molar,flow_battery
-C6/LMO,45.6,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('LMO', 0.5)]",molar,solid_electrode
-C6/LCO,98.3,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('LCO', 0.5)]",molar,solid_electrode
-C6/LFP,44.0,Li ion  (C6 anode),3.65,"[('Graphite', 0.5), ('LFP', 0.5)]",molar,solid_electrode
-C6/LMNO,51.3,Li ion  (C6 anode),4.7,"[('Graphite', 0.5), ('LMNO', 0.5)]",molar,solid_electrode
-LTO/LMO,90.1,Li ion  (C6 anode),2.7,"[('LTO', 0.5), ('LMO', 0.5)]",molar,solid_electrode
-C6/NCM111,51.3,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('NCM111', 0.5)]",molar,solid_electrode
-C6/LMP,36.3,Li ion  (C6 anode),4.0,"[('Graphite', 0.5), ('LMP', 0.5)]",molar,solid_electrode
-C6/NCA,68.3,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('NCA', 0.5)]",molar,solid_electrode
-C6/LRMO LMNO,35.6,Li ion  (C6 anode),4.95,"[('Graphite', 0.5), ('LRMO LMNO', 0.5)]",molar,solid_electrode
-C6/NCM622,47.1,Li ion  (C6 anode),4.2,"[('Graphite', 0.5), ('NCM622', 0.5)]",molar,solid_electrode
-Si/LCO,97.2,Li ion  (Si anode),4.2,"[('Polysilicon', 0.5), ('LCO', 0.5)]",molar,solid_electrode
-Si/Li2S,12.5,Li ion  (Si anode),2.6,"[('Polysilicon', 0.5), ('Li2S', 0.5)]",molar,solid_electrode
-Na/P2-NMO,38.9,Na ion (nonaqueous),1.4,"[('Na', 0.5), ('P2_NMO', 0.5)]",molar,solid_electrode
+AQDS/Br,57.9,Redox flow,0.92,"[('AQDS', 1), ('Br2', 1)]",molar,flow_battery
+"S/Air(Na, Acid)",1.7,Flow-air,1.35,"[('Na', 1), ('S', 1)]",molar,flow_battery
+"S/Air(Na, Base)",4.0,Flow-air,0.65,"[('Na', 1), ('S', 1)]",molar,flow_battery
+"S/Air(Li, Acid)",4.6,Flow-air,1.35,"[('Li', 1), ('S', 1)]",molar,flow_battery
+"S/Air(Li, Base)",13.2,Flow-air,0.65,"[('Li', 1), ('S', 1)]",molar,flow_battery
+C6/LMO,45.6,Li ion  (C6 anode),4.2,"[('Graphite', 1), ('LMO', 1)]",molar,solid_electrode
+C6/LCO,98.3,Li ion  (C6 anode),4.2,"[('Graphite', 1), ('LCO', 1)]",molar,solid_electrode
+C6/LFP,44.0,Li ion  (C6 anode),3.65,"[('Graphite', 1), ('LFP', 1)]",molar,solid_electrode
+C6/LMNO,51.3,Li ion  (C6 anode),4.7,"[('Graphite', 1), ('LMNO', 1)]",molar,solid_electrode
+LTO/LMO,90.1,Li ion  (C6 anode),2.7,"[('LTO', 1), ('LMO', 1)]",molar,solid_electrode
+C6/NCM111,51.3,Li ion  (C6 anode),4.2,"[('Graphite', 1), ('NCM111', 1)]",molar,solid_electrode
+C6/LMP,36.3,Li ion  (C6 anode),4.0,"[('Graphite', 1), ('LMP', 1)]",molar,solid_electrode
+C6/NCA,68.3,Li ion  (C6 anode),4.2,"[('Graphite', 1), ('NCA', 1)]",molar,solid_electrode
+C6/LRMO LMNO,35.6,Li ion  (C6 anode),4.95,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,solid_electrode
+C6/NCM622,47.1,Li ion  (C6 anode),4.2,"[('Graphite', 1), ('NCM622', 1)]",molar,solid_electrode
+Si/LCO,97.2,Li ion  (Si anode),4.2,"[('Polysilicon', 1), ('LCO', 1)]",molar,solid_electrode
+Si/Li2S,12.5,Li ion  (Si anode),2.6,"[('Polysilicon', 1), ('Li2S', 1)]",molar,solid_electrode
+Na/P2-NMO,38.9,Na ion (nonaqueous),1.4,"[('Na', 1), ('P2_NMO', 1)]",molar,solid_electrode
 PPy-AC/Cu-PBA,835.9,Na ion (aqueous),1.2,"[('PPy-AC', 0.33), ('K4Fe(CN)6', 0.33), ('Cu', 0.33)]",molar,solid_electrode
-NTP/NMO,212.4,Na ion (aqueous),1.3,"[('NTP', 0.5), ('NMO', 0.5)]",molar,solid_electrode
+NTP/NMO,212.4,Na ion (aqueous),1.3,"[('NTP', 1), ('NMO', 1)]",molar,solid_electrode

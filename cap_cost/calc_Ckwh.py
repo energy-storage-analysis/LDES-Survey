@@ -72,17 +72,17 @@ for mat_idx, row in df_mats_comp.iterrows():
             continue
 
         specific_price = df_mat_data['specific_price'][mat_index]
-
         mu = df_mat_data['mu'][mat_index]
-        mus.append(mu)
         price_source = '{} : {}'.format(i, df_mat_data['sources'][mat_index])
         price_sources_mat.append(price_source)
 
         if mat_basis == 'molar':
             molar_price = specific_price*mu*1000 #($/kg * g/mol * kg/g)
             price_components.append(molar_price*fraction)
+            mus.append(mu*fraction)
         elif mat_basis == 'mass':
             price_components.append(specific_price*fraction)
+            mus.append(np.nan) #TODO: how to calculate total molar mass of compoents specified by mass fraciton? IS total molar mass well defined? 
         else:
             raise ValueError("Incorrect mat_basis for {}, must be 'molar' or 'mass'".format(mat_idx))
 
