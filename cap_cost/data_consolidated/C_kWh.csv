@@ -1,10 +1,13 @@
 SM_name,SM_type,specific_energy,mu_total,specific_price,price_sources,SM_sources,C_kwh
-Synthetic CH4 (Feedstock),synfuel,4.1177608667612535,62.024,0.029543725009673675,"0 : Knighton 2020, 1 : Li 2017",Engineering Toolkit HHV,0.0071747063429913865
-Synthetic H2 (Feedstock),synfuel,3.6580627255065226,18.015,0.001,0 : Li 2017,Engineering Toolkit HHV,0.0002733687405159332
-Synthetic H2 (LRC),synfuel,32.68849206349206,2.016,72.0,Ahluwalia,Engineering Toolkit HHV,2.202610015174507
-Synthetic H2 (Pipes),synfuel,32.68849206349206,2.016,600.0,Ahluwalia,,18.355083459787558
-Synthetic H2 (Salt),synfuel,32.68849206349206,2.016,36.0,Ahluwalia,,1.1013050075872535
-Synthetic Methanol (Feedstock),synfuel,3.1004127434541466,62.024,0.029253272926609057,"0 : Knighton 2020, 1 : Li 2017",Engineering Toolkit HHV,0.009435283411336455
+CH4 (LRC),synfuel,15.919715763884563,16.043,7.387825021484375,Cavern Calculations,Cavern Calculations,0.4640676461224503
+CH4 (Pipes),synfuel,15.919715763884563,16.043,75.75,Cavern Calculations,Cavern Calculations,4.758250783085356
+CH4 (Salt),synfuel,15.919715763884563,16.043,1.970336296875,Cavern Calculations,Cavern Calculations,0.12376705250887086
+H2 (LRC),synfuel,32.68849206349206,2.016,59.10260017187501,Cavern Calculations,Cavern Calculations,1.8080552647420338
+H2 (Pipes),synfuel,32.68849206349206,2.016,606.0,Cavern Calculations,Cavern Calculations,18.53863429438543
+H2 (Salt),synfuel,32.68849206349206,2.016,15.762690375,Cavern Calculations,Cavern Calculations,0.48220916230652505
+Synthetic CH4 (Feedstock),synfuel,4.1177608667612535,62.024,0.029543725009673675,"0 : Knighton 2020, 1 : Li 2017",Standard Gibbs,0.0071747063429913865
+Synthetic H2 (Feedstock),synfuel,3.6580627255065226,18.015,0.001,0 : Li 2017,Standard Gibbs,0.0002733687405159332
+Synthetic Methanol (Feedstock),synfuel,3.1004127434541466,62.024,0.029253272926609057,"0 : Knighton 2020, 1 : Li 2017",Standard Gibbs,0.009435283411336455
 Ba(OH)2/BaO,thermochemical,0.1515194444444444,171.341,0.45,"Alibaba (Bulk), Alibaba (Manual Search)",Andre 2016,2.9699158523841835
 BaCO3/BaO,thermochemical,0.2323888888888889,197.335,0.3295454545454545,Alibaba (Manual Search),Andre 2016,1.4180774998370023
 BaO2/BaO,thermochemical,0.1201666666666666,153.326,0.3,Alibaba (Manual Search),Andre 2016,2.4965325936199734
@@ -196,6 +199,8 @@ SiO2,sensible_thermal,0.34472222222209004,,0.6,Steinmann 2022,Steinmann 2022,1.7
 Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.19718444444442673,62.0880693,24.40473291742616,"0 : Alibaba (Bulk), Alva 2018, Kim 2013, Li 2017, SMM, Steinmann 2022, 1 : Kim 2013, SMM",Alva 2018,123.76601504336332
 Solar Salt,sensible_thermal,0.14056331172835582,186.0960693,0.595,"Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","Alva 2018, Caraballo 2021, Steinmann 2022",4.2329679962994975
 Vegetable Oil,sensible_thermal,0.13080555555554002,933.45,0.7175,"Alva 2018, Steinmann 2022","Alva 2018, Steinmann 2022",5.485241027819722
+N2 (LRC 100 bar),pressure_cavern,0.027220089285714285,28.014,4.221614297991072,Cavern Calculations,Cavern Calculations,155.0918607826415
+N2 (Salt 100 bar),pressure_cavern,0.027220089285714285,28.014,1.125906455357143,Cavern Calculations,Cavern Calculations,41.36306988339101
 Al,latent_thermal,0.1102777777777777,26.9815384,2.2725,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS",Alok 2021,20.607052896725456
 Al/Mg/Zn (59/33/6),latent_thermal,0.0861111111111111,116.6665384,0.5703938492215652,"0 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Alva 2018,6.6239285716052745
 Al/Mg/Zn (60/34/6),latent_thermal,0.0914166666666666,116.6665384,0.5806660307448666,"0 : Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS, 1 : Alibaba (Bulk), ISE, Kim 2013, Li 2017, USGS, 2 : Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS",Alva 2018,6.351861776607478

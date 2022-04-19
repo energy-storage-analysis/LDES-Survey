@@ -2,6 +2,7 @@ name,long_name,tech_class
 liquid_metal_battery,Liquid Metal \n Battery,Electrochemical \n(Coupled)
 latent_thermal,Latent \n Thermal,Thermomechanical
 thermochemical,Thermochemical,Thermomechanical
+pressure_cavern,Pressure (Cavern),Thermomechanical
 solid_electrode,Dual Solid \nElectrode Battery,Electrochemical \n(Coupled)
 pseudocapacitor,Pseudocapacitor,Electrochemical \n(Coupled)
 ELDC,ELDC,Electrostatic

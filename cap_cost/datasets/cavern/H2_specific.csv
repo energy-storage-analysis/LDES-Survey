@@ -1,0 +1,5 @@
+type,H2_specific_cost,pressure,source,notes
+LRC,63.5,1.01e7,Ahluwalia,
+Salt,36.5,1.2e7,Ahluwalia,
+Pipes,600,1.01e7,Ahluwalia,
+Salt,9,9.5e6,Keissling 2021,"TODO assuming 1 EUR = 1USD "

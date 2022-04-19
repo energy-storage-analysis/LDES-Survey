@@ -1,0 +1,9 @@
+SM_name,materials,mat_basis,SM_type,deltaG_chem,n_e,pressure,mass_density,source
+H2 (LRC),H2_LRC,,synfuel,"0.0659 ",2,,,Standard Gibbs
+CH4 (LRC),CH4_LRC,,synfuel,0.2554,8,,,Standard Gibbs
+H2 (Salt),H2_Salt,,synfuel,"0.0659 ",2,,,Standard Gibbs
+CH4 (Salt),CH4_Salt,,synfuel,0.2554,8,,,Standard Gibbs
+H2 (Pipes),H2_Pipes,,synfuel,"0.0659 ",2,,,Standard Gibbs
+CH4 (Pipes),CH4_Pipes,,synfuel,0.2554,8,,,Standard Gibbs
+N2 (LRC 100 bar),N2_LRC,,pressure_cavern,,,1e7,102.04881213360375,
+N2 (Salt 100 bar),N2_Salt,,pressure_cavern,,,1e7,102.04881213360375,

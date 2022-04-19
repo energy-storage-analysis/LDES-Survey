@@ -130,6 +130,11 @@ thermochem = (df_SMs['deltaH_thermochem'])
 thermochem.name='specific_energy'
 thermochem = thermochem.to_frame()
 
+pressure = (df_SMs['pressure']/3600000)/df_SMs['mass_density']
+pressure.name='specific_energy'
+pressure = pressure.to_frame()
+
+
 chemical = (df_SMs['deltaG_chem'])/(df_SMs['mu_total']/1000)
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
@@ -180,6 +185,7 @@ dfs = [
     thermochem,
     electrochemical,
     sensible_thermal,
+    pressure,
     latent_thermal,
     virial,
     electrostatic_edlc,
