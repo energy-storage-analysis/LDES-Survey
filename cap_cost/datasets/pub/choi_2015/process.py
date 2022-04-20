@@ -56,10 +56,18 @@ df_SMs = pd.merge(
 
 df_SMs = df_SMs.reset_index(drop=True).set_index('SM_name') #Dropping original name as so similar to SM name
 
-#TODO: deal with duplicate SM with different electrolytes
-df_SMs = df_SMs.groupby(level=0).first()
 
-df_SMs.to_csv('output/SM_data.csv')
+df_SMs['specific_capacitance'] = df_SMs['specific_capacitance'].astype(float)
+
+df_out = pd.concat([
+df_SMs.groupby(level=0)['specific_capacitance'].mean(),
+df_SMs.groupby(level=0)['deltaV_electrolyte'].mean(),
+df_SMs.groupby(level=0)['SM_type'].apply(es_utils.join_col_vals),
+df_SMs.groupby(level=0)['mat_basis'].apply(es_utils.join_col_vals),
+df_SMs.groupby(level=0)['materials'].apply(es_utils.join_col_vals),
+], axis=1)
+
+df_out.to_csv('output/SM_data.csv')
 # %%
 
 

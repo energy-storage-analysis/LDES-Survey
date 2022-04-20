@@ -36,7 +36,7 @@ CFRP,31.38,,,0,1,Kale 2018,31.38,,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7�
 CH4_LRC,7.387825021484375,,,0,1,Cavern Calculations,7.39,CH4,16.043,,0.4406795
 CH4_Pipes,75.75,,,0,1,Cavern Calculations,75.75,CH4,16.043,,0.4406795
 CH4_Salt,1.970336296875,,,0,1,Cavern Calculations,1.97,CH4,16.043,,0.4406795
-CNT,100.0,,,5,1,Alibaba (Manual Entry),100.0,C6,72.066,,
+CNT,100.0,,,4,1,Alibaba (Manual Entry),100.0,C6,72.066,,
 CO2,0.04,,,2,1,Knighton 2020,0.04,CO2,44.009,Cyrogenic Carbon Capture,0.1452665
 CW,28.475,,,0,1,ISE,28.48,CW,195.851,Tungsten carbide,33.1426306
 Ca,3.773600000000001,3.087223560901893,0.82,14,3,"ISE, Kim 2013, SMM","3.49, 3.77, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
@@ -93,7 +93,7 @@ GRE,24.815,,,0,1,Kale 2018,24.82,,,"E-Glass Epoxy, S-2 Glass Epoxy",
 Ga,236.69626852115405,313.1159722380678,1.32,6,3,"ISE, Kim 2013, USGS","151.62, 236.7, 731.47",Ga,69.723,"Ga, Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import, Gallium metal",148.0
 Ge,1187.075,48.54288052845655,0.04,0,2,"ISE, USGS","1152.75, 1221.4",Ge,72.63,"Germanium Metal, Germanium metal",962.0
 GeO2,782.45,87.61053018901326,0.11,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"Germanium GeO2, Germanium dioxides",667.8421426
-Graphene,90.0,,,5,1,Graphene Lab,90.0,C6,72.066,Graphene,
+Graphene,90.0,,,4,1,Graphene Lab,90.0,C6,72.066,Graphene,
 Graphene Oxide,400.0,,,1,1,Alibaba (Manual Entry),400.0,C7H2O,102.092,,
 Graphite,1.7008291673865679,4.448542521397139,2.62,12,4,"Alibaba (Bulk), Li 2017, Liu 2016, USGS","0.35, 0.39, 1.6, 1.8, 12.0, 2.15",C6,72.066,"Expanded Natural, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
 Gravel,0.0291803850227903,,,1,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
@@ -191,9 +191,6 @@ Ni(OH)2,7.0,9.93677217879797,1.42,4,3,"Alibaba (Bulk), Alibaba (Manual Search), 
 NiCl2(H2O)6,5.1,,,1,1,Li 2017,5.1,NiCl2(H2O)6,237.6834,NiCl2 6H2O,3.5898535
 NiSO4,3.362034375,,,0,1,Alibaba (Manual Search),3.36,NiSO4,154.7494,,5.3548666
 P2-NMO,15.0,,,0,1,Li 2017,15.0,Na0.67Mn0.67Ni0.33O2,103.5784562,P2-Na2Mn2NiO6,
-PANI,18000.0,,,1,1,Sigma Aldrich,18000.0,C6H8N2,108.144,,
-PEDOT,790000.0,,,1,1,Sigma Aldrich,790000.0,C6H4O2S,140.156,,
-PPy,14360.0,,,4,1,Sigma Aldrich,14360.0,C4H6N,68.099,,
 PPy-AC,30.0,,,1,1,Li 2017,30.0,,,PPy-AC,
 Pb,2.2182912821042384,0.49052386134739623,0.22,9,5,"Alibaba (Bulk), Kim 2013, Li 2017, SMM, USGS","1.5, 1.53, 2.22, 2.43, 2.51",Pb,207.2,"Lead - Guangdong, Lead - Henan, Lead -Tianjin, SMM Lead, Lead LME, Lead North_American, Pb",2.0
 Pb2Sb,3.0,,,0,1,Li 2017,3.0,Pb2Sb,536.16,Pb2Sb,2.8606953
@@ -273,4 +270,3 @@ ZrO2,4.3555,,,0,1,ISE,4.36,ZrO2,123.222,Zirconium fused_cubic,26.9877237
 ZrSO4,428.6574376489916,,,0,1,USGS,428.66,ZrSO4,187.28,"Zirconium and Hafnium Zircon_AU, Zirconium and Hafnium Zircon_CN, Zirconium and Hafnium Zircon_import",17.7988987
 ZrSiO4,1.1221785714285715,0.7287745532671924,0.65,0,2,"Alibaba (Bulk), ISE","0.61, 1.64",ZrSiO4,183.305,"Zircon sand, Zirconium silicate",18.4291399
 kyanite,0.3952888360974855,,,0,1,USGS,0.4,Al2H6O5Si,168.0910768,Kyanite and Related Minerals FOB,
-sepiolite,75.9,,,1,1,Sigma Aldrich,75.9,H8Mg2O10Si3,300.919,,

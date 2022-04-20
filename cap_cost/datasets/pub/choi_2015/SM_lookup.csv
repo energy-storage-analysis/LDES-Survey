@@ -1,29 +1,29 @@
 original_name,SM_name,materials,SM_type,mat_basis
-Carbon nanosheets,Carbon nanosheets,Graphite,ELDC,
-N-doped carbon nanosheets,N-doped carbon nanosheets,Graphite,ELDC,
-Porous carbon nanowhiskers,Porous carbon nanowhiskers,Graphite,ELDC,
-N-doped nanoporous carbon,N-doped nanoporous carbon,Graphite,ELDC,
-Nanofibers/mesoporous carbon,Nanofibers/mesoporous carbon,Graphite,ELDC,
-N-doped carbon nanospheres,N-doped carbon nanospheres,Graphite,ELDC,
-Nanoporous carbon,Nanoporous carbon,Graphite,ELDC,
-Mesoporous carbon nanosheets,Mesoporous carbon nanosheets,Graphite,ELDC,
-GO-activate carbon,GO-activate carbon,Graphene Oxide,ELDC,
-Porous carbon/CNTs,Porous carbon/CNTs,"[('Graphite', 1), ('CNT', 1)]",ELDC,molar
-Porous CNTs,Porous CNTs,CNT,ELDC,
-Nanoporous carbon foams,Nanoporous carbon foams,Graphite,ELDC,
-Carbonization of carbon hydrates,Carbonization of carbon hydrates,Graphite,ELDC,
-Carbonized hollow nanocarbon,Carbonized hollow nanocarbon,Graphite,ELDC,
-Graphene-coated CNTs,Graphene-coated CNTs,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar
+Carbon nanosheets,Carbon based,Graphite,ELDC,
+N-doped carbon nanosheets,Carbon based,Graphite,ELDC,
+Porous carbon nanowhiskers,Carbon based,Graphite,ELDC,
+N-doped nanoporous carbon,Carbon based,Graphite,ELDC,
+Nanofibers/mesoporous carbon,Carbon based,Graphite,ELDC,
+N-doped carbon nanospheres,Carbon based,Graphite,ELDC,
+Nanoporous carbon,Carbon based,Graphite,ELDC,
+Mesoporous carbon nanosheets,Carbon based,Graphite,ELDC,
+GO-activate carbon,GO/Carbon,Graphene Oxide,ELDC,
+Porous carbon/CNTs,Carbon/CNTs,"[('Graphite', 1), ('CNT', 1)]",ELDC,molar
+Porous CNTs,CNT,CNT,ELDC,
+Nanoporous carbon foams,Carbon based,Graphite,ELDC,
+Carbonization of carbon hydrates,Carbon based,Graphite,ELDC,
+Carbonized hollow nanocarbon,Carbon based,Graphite,ELDC,
+Graphene-coated CNTs,Graphene/CNT,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar
 Graphene/CNF,Graphene/CNF,"[('Graphene', 1), ('Graphite', 1)]",ELDC,molar
-3D porous graphene-like carbon,3D porous graphene-like carbon,Graphene,ELDC,
-Mesoporous graphene nanoballs,Mesoporous graphene nanoballs,Graphene,ELDC,
-Graphene/CNT composite fibers,Graphene/CNT composite fibers,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar
-N-doped 3D nanoporous carbon,N-doped 3D nanoporous carbon,Graphite,ELDC,
+3D porous graphene-like carbon,Graphene,Graphene,ELDC,
+Mesoporous graphene nanoballs,Graphene,Graphene,ELDC,
+Graphene/CNT composite fibers,Graphene/CNT,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar
+N-doped 3D nanoporous carbon,Carbon based,Graphite,ELDC,
 Graphene/CNT,Graphene/CNT,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar
 Graphene/carbon,Graphene/carbon,"[('Graphene', 1), ('Graphite', 1)]",ELDC,molar
-RGO/CNT,RGO/CNT,"[('Graphene Oxide', 1), ('CNT', 1)]",ELDC,molar
-Halogen-containing nanoporous carbon,Halogen-containing nanoporous carbon,Graphite,ELDC,
-Oxygen-rich nanoporous carbon,Oxygen-rich nanoporous carbon,Graphite,ELDC,
+RGO/CNT,GO/CNT,"[('Graphene Oxide', 1), ('CNT', 1)]",ELDC,molar
+Halogen-containing nanoporous carbon,Carbon based,Graphite,ELDC,
+Oxygen-rich nanoporous carbon,Carbon based,Graphite,ELDC,
 CoCl2 nanostructures,CoCl2 nanostructures,CoCl2,pseudocapacitor,
 PANI nanotubes,PANI nanotubes,PANI,pseudocapacitor,
 PPy-clay core-shell nanoarrays,PPy-clay core-shell nanoarrays,PPy,pseudocapacitor,

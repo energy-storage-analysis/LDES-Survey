@@ -1,51 +1,35 @@
-SM_name,materials,SM_type,mat_basis,specific_capacitance,deltaV_electrolyte
-2D TiS2 nanocrystals,TiS2,pseudocapacitor,,395.0,1.2
-3D Co3O4 nanonetworks,Co3O4,pseudocapacitor,,797.5,1.5
-3D porous graphene-like carbon,Graphene,ELDC,,167.0,2.5
-Au-MnO2 core-shell,"[('Au', 1), ('MnO2', 1)]",pseudocapacitor,molar,524,2.0
-Carbon nanosheets,Graphite,ELDC,,198.5,3.5
-Carbonization of carbon hydrates,Graphite,ELDC,,140,0.8
-Carbonized hollow nanocarbon,Graphite,ELDC,,171.5,0.9
-Co(OH)2 nanosheets,Co(OH)2,pseudocapacitor,,1805.0,0.5
-Co3O4 nanostructures,Co3O4,pseudocapacitor,,313.0,0.8
-CoAl/PEDOT nanoarrays,"[('Co', 0.25), ('Al', 0.25), ('PEDOT', 1)]",pseudocapacitor,molar,548.0,0.6
-CoCl2 nanostructures,CoCl2,pseudocapacitor,,1962,0.45
-CoO/PPy nanowires,"[('CoO', 1), ('PPy', 1)]",pseudocapacitor,molar,1435.0,1.6
-CuO nanowires,CuO,pseudocapacitor,,110.0,0.45
-Fe2O3/MnO2 nanowires,"[('Iron Ore', 1), ('MnO2', 1)]",pseudocapacitor,molar,659.0,0.6
-GO-activate carbon,Graphene Oxide,ELDC,,122.5,3.5
-Graphene-coated CNTs,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar,95.0,3.0
-Graphene/CNF,"[('Graphene', 1), ('Graphite', 1)]",ELDC,molar,174,1.5
-Graphene/CNT,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar,199,4.0
-Graphene/CNT composite fibers,"[('Graphene', 1), ('CNT', 1)]",ELDC,molar,20.5,0.8
-Graphene/carbon,"[('Graphene', 1), ('Graphite', 1)]",ELDC,molar,175.0,3.5
-Halogen-containing nanoporous carbon,Graphite,ELDC,,211.5,1.0
-Hollow NiCo2S4 nanoplates,NiCo2S4,pseudocapacitor,,334.0,0.5
-Mesoporous carbon nanosheets,Graphite,ELDC,,115.0,2.7
-Mesoporous graphene nanoballs,Graphene,ELDC,,206,0.8
-N-doped 3D nanoporous carbon,Graphite,ELDC,,265.0,1.0
-N-doped carbon nanosheets,Graphite,ELDC,,165.0,1.0
-N-doped carbon nanospheres,Graphite,ELDC,,128.0,1.0
-N-doped nanoporous carbon,Graphite,ELDC,,165.0,1.0
-Nanofibers/mesoporous carbon,Graphite,ELDC,,85.5,0.8
-Nanoporous Ni(OH)2 films,Ni(OH)2,pseudocapacitor,,106.0,1.6
-Nanoporous carbon,Graphite,ELDC,,129.0,3.5
-Nanoporous carbon foams,Graphite,ELDC,,252.0,1.1
-Ni2(CO3)(OH)2 nanosheets,(CO3)(OH)2,pseudocapacitor,,895.0,0.4
-NiCo2(OH)6 nanotubes,NiCo2(OH)6,pseudocapacitor,,184.5,0.5
-NiCo2O4 nanosheets,NiCo2O4,pseudocapacitor,,1693.0,0.5
-NiO nanoblocks,NiO,pseudocapacitor,,1008.0,0.6
-Oxygen-rich nanoporous carbon,Graphite,ELDC,,253.5,1.0
-PANI nanofibers,PANI,pseudocapacitor,,106.0,0.8
-PANI nanotubes,PANI,pseudocapacitor,,686.5,0.5
-PPy nanofibrils,PPy,pseudocapacitor,,280,0.7
-PPy-PANI double-wall,"[('PPy', 1), ('PANI', 1)]",pseudocapacitor,molar,529.5,0.6
-PPy-clay core-shell nanoarrays,PPy,pseudocapacitor,,2046.0,1.2
-PPy-sepiolite nanocomposites,"[('PPy', 1), ('sepiolite', 1)]",pseudocapacitor,molar,165,1.0
-Polythiophene nanostructures,Polythiophene,pseudocapacitor,,162.5,4.0
-Porous CNTs,CNT,ELDC,,582.0,0.7
-Porous carbon nanowhiskers,Graphite,ELDC,,167.5,1.0
-Porous carbon/CNTs,"[('Graphite', 1), ('CNT', 1)]",ELDC,molar,181.0,0.9
-RGO/CNT,"[('Graphene Oxide', 1), ('CNT', 1)]",ELDC,molar,216.0,1.0
-V2O5-PPy nanofibers,"[('V2O5', 1), ('PPy', 1)]",pseudocapacitor,molar,412,2.0
-ZnCo2O4 nanorods/Ni foams,"[('ZnCo2O4', 1), ('Ni', 1)]",pseudocapacitor,molar,1207.5,1.0
+SM_name,specific_capacitance,deltaV_electrolyte,SM_type,mat_basis,materials
+2D TiS2 nanocrystals,395.0,1.2,pseudocapacitor,,TiS2
+3D Co3O4 nanonetworks,797.5,1.5,pseudocapacitor,,Co3O4
+Au-MnO2 core-shell,524.0,2.0,pseudocapacitor,molar,"[('Au', 1), ('MnO2', 1)]"
+CNT,582.0,0.7,ELDC,,CNT
+Carbon based,167.284375,1.38125,ELDC,,Graphite
+Carbon/CNTs,181.0,0.9,ELDC,molar,"[('Graphite', 1), ('CNT', 1)]"
+Co(OH)2 nanosheets,1805.0,0.5,pseudocapacitor,,Co(OH)2
+Co3O4 nanostructures,313.0,0.8,pseudocapacitor,,Co3O4
+CoAl/PEDOT nanoarrays,548.0,0.6,pseudocapacitor,molar,"[('Co', 0.25), ('Al', 0.25), ('PEDOT', 1)]"
+CoCl2 nanostructures,1962.0,0.45,pseudocapacitor,,CoCl2
+CoO/PPy nanowires,1435.0,1.6,pseudocapacitor,molar,"[('CoO', 1), ('PPy', 1)]"
+CuO nanowires,110.0,0.45,pseudocapacitor,,CuO
+Fe2O3/MnO2 nanowires,659.0,0.6,pseudocapacitor,molar,"[('Iron Ore', 1), ('MnO2', 1)]"
+GO/CNT,216.0,1.0,ELDC,molar,"[('Graphene Oxide', 1), ('CNT', 1)]"
+GO/Carbon,122.5,3.5,ELDC,,Graphene Oxide
+Graphene,186.5,1.65,ELDC,,Graphene
+Graphene/CNF,174.0,1.5,ELDC,molar,"[('Graphene', 1), ('Graphite', 1)]"
+Graphene/CNT,104.83333333333333,2.6,ELDC,molar,"[('Graphene', 1), ('CNT', 1)]"
+Graphene/carbon,175.0,3.5,ELDC,molar,"[('Graphene', 1), ('Graphite', 1)]"
+Hollow NiCo2S4 nanoplates,334.0,0.5,pseudocapacitor,,NiCo2S4
+Nanoporous Ni(OH)2 films,106.0,1.6,pseudocapacitor,,Ni(OH)2
+Ni2(CO3)(OH)2 nanosheets,895.0,0.4,pseudocapacitor,,(CO3)(OH)2
+NiCo2(OH)6 nanotubes,184.5,0.5,pseudocapacitor,,NiCo2(OH)6
+NiCo2O4 nanosheets,1693.0,0.5,pseudocapacitor,,NiCo2O4
+NiO nanoblocks,1008.0,0.6,pseudocapacitor,,NiO
+PANI nanofibers,106.0,0.8,pseudocapacitor,,PANI
+PANI nanotubes,686.5,0.5,pseudocapacitor,,PANI
+PPy nanofibrils,280.0,0.7,pseudocapacitor,,PPy
+PPy-PANI double-wall,529.5,0.6,pseudocapacitor,molar,"[('PPy', 1), ('PANI', 1)]"
+PPy-clay core-shell nanoarrays,2046.0,1.2,pseudocapacitor,,PPy
+PPy-sepiolite nanocomposites,165.0,1.0,pseudocapacitor,molar,"[('PPy', 1), ('sepiolite', 1)]"
+Polythiophene nanostructures,162.5,4.0,pseudocapacitor,,Polythiophene
+V2O5-PPy nanofibers,412.0,2.0,pseudocapacitor,molar,"[('V2O5', 1), ('PPy', 1)]"
+ZnCo2O4 nanorods/Ni foams,1207.5,1.0,pseudocapacitor,molar,"[('ZnCo2O4', 1), ('Ni', 1)]"
