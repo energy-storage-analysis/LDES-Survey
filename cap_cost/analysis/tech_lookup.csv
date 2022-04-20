@@ -5,7 +5,7 @@ thermochemical,Thermochemical,Thermomechanical
 pressure_cavern,Pressure (Cavern),Thermomechanical
 solid_electrode,Dual Solid \nElectrode Battery,Electrochemical \n(Coupled)
 pseudocapacitor,Pseudocapacitor,Electrochemical \n(Coupled)
-ELDC,ELDC,Electrostatic
+EDLC,EDLC,Electrostatic
 virial,Virial Limited,Virial Limited
 sensible_thermal,Sensible \nThermal,Thermomechanical
 flow_battery,Flow Battery,Electrochemical \n(Decoupled)

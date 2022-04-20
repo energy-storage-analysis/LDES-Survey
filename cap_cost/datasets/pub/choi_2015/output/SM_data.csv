@@ -2,9 +2,9 @@ SM_name,specific_capacitance,deltaV_electrolyte,SM_type,mat_basis,materials
 2D TiS2 nanocrystals,395.0,1.2,pseudocapacitor,,TiS2
 3D Co3O4 nanonetworks,797.5,1.5,pseudocapacitor,,Co3O4
 Au-MnO2 core-shell,524.0,2.0,pseudocapacitor,molar,"[('Au', 1), ('MnO2', 1)]"
-CNT,582.0,0.7,ELDC,,CNT
-Carbon based,167.284375,1.38125,ELDC,,Graphite
-Carbon/CNTs,181.0,0.9,ELDC,molar,"[('Graphite', 1), ('CNT', 1)]"
+CNT,582.0,0.7,EDLC,,CNT
+Carbon based,167.284375,1.38125,EDLC,,Graphite
+Carbon/CNTs,181.0,0.9,EDLC,molar,"[('Graphite', 1), ('CNT', 1)]"
 Co(OH)2 nanosheets,1805.0,0.5,pseudocapacitor,,Co(OH)2
 Co3O4 nanostructures,313.0,0.8,pseudocapacitor,,Co3O4
 CoAl/PEDOT nanoarrays,548.0,0.6,pseudocapacitor,molar,"[('Co', 0.25), ('Al', 0.25), ('PEDOT', 1)]"
@@ -12,12 +12,12 @@ CoCl2 nanostructures,1962.0,0.45,pseudocapacitor,,CoCl2
 CoO/PPy nanowires,1435.0,1.6,pseudocapacitor,molar,"[('CoO', 1), ('PPy', 1)]"
 CuO nanowires,110.0,0.45,pseudocapacitor,,CuO
 Fe2O3/MnO2 nanowires,659.0,0.6,pseudocapacitor,molar,"[('Iron Ore', 1), ('MnO2', 1)]"
-GO/CNT,216.0,1.0,ELDC,molar,"[('Graphene Oxide', 1), ('CNT', 1)]"
-GO/Carbon,122.5,3.5,ELDC,,Graphene Oxide
-Graphene,186.5,1.65,ELDC,,Graphene
-Graphene/CNF,174.0,1.5,ELDC,molar,"[('Graphene', 1), ('Graphite', 1)]"
-Graphene/CNT,104.83333333333333,2.6,ELDC,molar,"[('Graphene', 1), ('CNT', 1)]"
-Graphene/carbon,175.0,3.5,ELDC,molar,"[('Graphene', 1), ('Graphite', 1)]"
+GO/CNT,216.0,1.0,EDLC,molar,"[('Graphene Oxide', 1), ('CNT', 1)]"
+GO/Carbon,122.5,3.5,EDLC,,Graphene Oxide
+Graphene,186.5,1.65,EDLC,,Graphene
+Graphene/CNF,174.0,1.5,EDLC,molar,"[('Graphene', 1), ('Graphite', 1)]"
+Graphene/CNT,104.83333333333333,2.6,EDLC,molar,"[('Graphene', 1), ('CNT', 1)]"
+Graphene/carbon,175.0,3.5,EDLC,molar,"[('Graphene', 1), ('Graphite', 1)]"
 Hollow NiCo2S4 nanoplates,334.0,0.5,pseudocapacitor,,NiCo2S4
 Nanoporous Ni(OH)2 films,106.0,1.6,pseudocapacitor,,Ni(OH)2
 Ni2(CO3)(OH)2 nanosheets,895.0,0.4,pseudocapacitor,,(CO3)(OH)2
