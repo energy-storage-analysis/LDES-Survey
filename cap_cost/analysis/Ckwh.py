@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib import ticker as mticker
+plt.rcParams.update({'font.size': 20})
 
 import iqplot
 from bokeh.io import show, output_file, save
@@ -12,6 +14,14 @@ from os.path import join as pjoin
 output_dir = 'output/Ckwh'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
+palette = {
+        'Electrochemical \n(Coupled)': 'tab:blue', 
+        'Electrochemical \n(Decoupled)': 'tab:orange', 
+        'Thermomechanical': 'tab:purple',
+        'Virial Limited': 'tab:brown',
+        'Gravitational': 'tab:red',
+        'Electrostatic': 'tab:green',
+        }
 
 # %%
 
@@ -25,42 +35,123 @@ df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 df_all['tech_class'] = [display_text['tech_class'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 
-df_all = df_all.sort_values('C_kwh').sort_values('tech_class')
+df_all = df_all.sort_values('C_kwh')#.sort_values('tech_class')
+
+df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
 
 #%%
 cat_label = 'display_text'
 
-from matplotlib import ticker as mticker
-plt.rcParams.update({'font.size': 20})
-
-df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
-
-fig = plt.figure(figsize = (16,8))
-# plt.violinplot(dataset=df_singlemat['C_kwh'].values)
-# sns.violinplot(data=df_singlemat, x='cat_label', y='C_kwh_log')
-sns.stripplot(data=df_all, x=cat_label, y='C_kwh_log', size=10, hue='tech_class')
+df_plot = df_all
+fig = plt.figure(figsize = (18,8))
+sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='tech_class', palette=palette)
 
 plt.axhline(np.log10(10), linestyle='--', color='gray')
 
 fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-
-log_ticks = range(int(np.floor(df_all['C_kwh_log'].min())), int(np.ceil(df_all['C_kwh_log'].max())))
+log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
 
 fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-# plt.gca().set_xticks(np.arange(0, len(labels)), labels=labels)
-
-# plt.yscale('log')
 plt.xticks(rotation=90)
-plt.ylabel('Material Energy Cost ($/kWh)')
-
 
 plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
 
+plt.ylabel('Material Energy Cost ($/kWh)')
 plt.xlabel('Technology')
-plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_all)))
+plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 
 plt.tight_layout()
 plt.savefig(pjoin(output_dir,'Ckwh.png'))
+
+#%%
+
+elim_types = [
+    'dielectric_capacitor',
+    'EDLC',
+    'pseudocapacitor',
+    'gravitational',
+    'pressure_cavern',
+    'virial',
+    ]
+
+
+df_elim = df_all[df_all['SM_type'].isin(elim_types)]
+
+
+df_elim['SM_type'] = pd.Categorical(df_elim['SM_type'], categories=elim_types, ordered=True)
+df_elim = df_elim.sort_values('SM_type')
+
+df_elim = df_elim[df_elim['C_kwh']<1e4]#.dropna(how='all')
+
+df_plot = df_elim
+fig = plt.figure(figsize = (8,8))
+sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='tech_class', palette=palette)
+
+plt.axhline(np.log10(10), linestyle='--', color='gray')
+
+# plt.ylim(1,4)
+fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
+log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
+
+fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
+plt.xticks(rotation=45)
+
+# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
+plt.gca().get_legend().remove()
+
+plt.ylabel('Material Energy Cost ($/kWh)')
+plt.xlabel('Technology')
+plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
+
+
+plt.tight_layout()
+plt.savefig(pjoin(output_dir,'Ckwh_eliminate.png'))
+
+#%%
+
+ec_types = [
+    'solid_electrode',
+    'liquid_metal_battery',
+    'metal_air',
+    'hybrid_flow',
+    'flow_battery',
+    'synfuel'
+    ]
+
+
+df_ec = df_all[df_all['SM_type'].isin(ec_types)]
+
+
+df_ec['SM_type'] = pd.Categorical(df_ec['SM_type'], categories=ec_types, ordered=True)
+df_ec = df_ec.sort_values('SM_type')
+
+df_ec = df_ec[df_ec['C_kwh']<1e4]#.dropna(how='all')
+
+df_plot = df_ec
+fig = plt.figure(figsize = (8,8))
+sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='tech_class', palette=palette)
+
+plt.axhline(np.log10(10), linestyle='--', color='gray')
+
+# plt.ylim(1,4)
+fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
+log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
+
+fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
+plt.xticks(rotation=90)
+
+# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
+plt.gca().get_legend().remove()
+
+plt.ylabel('Material Energy Cost ($/kWh)')
+plt.xlabel('Technology')
+plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
+
+
+plt.tight_layout()
+plt.savefig(pjoin(output_dir,'Ckwh_ec.png'))
+
+
 # %%
 #Raw entries
 
