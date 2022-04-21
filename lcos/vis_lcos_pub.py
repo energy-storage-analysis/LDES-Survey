@@ -113,7 +113,7 @@ for DD, eta_RT in da_CkW_stack.coords['temp'].values:
 
     )
 
-plt.xlabel('Energy Capital Cost ($/kWh)')
+plt.xlabel('Energy Capital ($/kWh)')
 plt.ylim(1e2,1e4)
 plt.xticks([1e0,1e1,1e2,1e3])
 
@@ -122,7 +122,7 @@ plt.xscale('log')
 plt.yscale('log')
 plt.legend(bbox_to_anchor=[0,0,1.8,1])
 
-plt.ylabel('Power Capital Cost ($/kW)')
+plt.ylabel('Maximum Power Capital ($/kW)')
 plt.tight_layout()
 
 plt.savefig('output/EP_capitaltradeoff_pub.png')
