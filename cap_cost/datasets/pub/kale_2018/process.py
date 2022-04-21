@@ -93,7 +93,27 @@ df_SMs = pd.merge(
     on='original_name'
 )
 
+#From Nomura (pressure tank from Laughlin assuming thin wall)
+Qmaxs = {
+    'pressure_tank': 1,
+    'flywheel': 1.2,
+    'smes': 1.5 #Solenoid average
+}
+
+dfs = []
+
+for SM_type, Qmax in Qmaxs.items():
+    df_temp = df_SMs.copy()
+    df_temp['Qmax'] = Qmax
+    df_temp['SM_type'] = SM_type
+    dfs.append(df_temp)
+
+df_SMs = pd.concat(dfs)
+#%%
+
+
 
 
 df_SMs.index.name = 'SM_name'
 df_SMs.to_csv('output/SM_data.csv')
+# %%

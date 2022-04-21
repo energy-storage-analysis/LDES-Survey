@@ -1,0 +1,9 @@
+energy_type,color
+Chemical \n(Coupled),tab:blue
+Chemical \n(Decoupled),tab:orange
+Thermal,tab:red
+Pressure,tab:gray
+Gravitational,tab:pink
+Electrostatic,tab:green
+Kinetic,tab:brown
+Magnetic,tab:purple

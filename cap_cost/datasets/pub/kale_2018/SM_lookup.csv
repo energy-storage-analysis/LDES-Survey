@@ -1,19 +1,19 @@
-original_name,materials,SM_type
-Al-2024,Al,virial
-Al-6061-T6,Al,virial
-Al-7075-T6,Al,virial
-Steel-4340,Steel,virial
-Steel-18Ni-300,Steel,virial
-Stainless-Steel-15-7,Steel,virial
-Stainless-Steel-440C,Steel,virial
-Stainless-Steel-455,Steel,virial
-Carbon-Steel-1020,Steel,virial
-AS4-3501–6,CFRP,virial
-AS4–8552,CFRP,virial
-E-Glass Epoxy,GRE,virial
-IM7-8551–7,CFRP,virial
-IM7–8552,CFRP,virial
-Kevlar-49 Epoxy,KFRP,virial
-S-2 Glass Epoxy,GRE,virial
-T300-BSL914C,CFRP,virial
-T300-PR319,CFRP,virial
+original_name,materials
+Al-2024,Al
+Al-6061-T6,Al
+Al-7075-T6,Al
+Steel-4340,Steel
+Steel-18Ni-300,Steel
+Stainless-Steel-15-7,Steel
+Stainless-Steel-440C,Steel
+Stainless-Steel-455,Steel
+Carbon-Steel-1020,Steel
+AS4-3501–6,CFRP
+AS4–8552,CFRP
+E-Glass Epoxy,GRE
+IM7-8551–7,CFRP
+IM7–8552,CFRP
+Kevlar-49 Epoxy,KFRP
+S-2 Glass Epoxy,GRE
+T300-BSL914C,CFRP
+T300-PR319,CFRP

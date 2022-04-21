@@ -12,6 +12,11 @@ import os
 from os.path import join as pjoin
 output_dir = 'output/eda'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
+
+
+palette = pd.read_csv('energy_colors.csv', index_col=0)['color'].to_dict()
+palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
+
 # %%
 
 
@@ -73,13 +78,19 @@ df_SMs = df_SMs.drop(missing_idx)
 plt.figure(figsize=(7,5))
 
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
-bins = np.logspace(np.log10(5e-5), np.log10(1e2), 30)
+bins = np.logspace(np.log10(2e-4), np.log10(1e2), 30)
 
-df_all['tech_class'] = [display_text['tech_class'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
+df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 
-df_all.groupby('tech_class')['specific_energy'].hist(bins=bins, legend=True, alpha=0.75)
+# df_all.groupby('energy_type')['specific_energy'].hist(bins=bins, legend=True, alpha=0.75)
+
+for energy_type, color in palette.items():
+    df_sel = df_all[df_all['energy_type'] == energy_type].dropna(how='all')
+    df_sel['specific_energy'].hist(bins=bins, label=energy_type, alpha=0.75, color=color)
+
 
 plt.xscale('log')
+plt.legend()
 plt.locator_params(axis='y', integer=True)
 plt.suptitle("{} Storage Media".format(len(df_all)))
 plt.xlabel('Energy Density (kWh/kg)')
@@ -103,7 +114,7 @@ plt.figure()
 
 bins = np.logspace(np.log10(1e-3), np.log10(1e6), 50)
 
-df_both.groupby('tech_class')['C_kwh'].hist(bins=bins, legend=True, alpha=0.75)
+df_both.groupby('energy_type')['C_kwh'].hist(bins=bins, legend=True, alpha=0.75)
 
 plt.xscale('log')
 plt.suptitle("{} Storage Media w/ Mat. Prices".format(len(df_both)))

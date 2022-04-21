@@ -146,7 +146,7 @@ electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()
 
 
-virial = (df_SMs['specific_strength']/3600) #TODO:Assuming Q=1
+virial = (df_SMs['specific_strength']/3600)/df_SMs['Qmax']
 virial.name='specific_energy'
 virial = virial.to_frame()
 

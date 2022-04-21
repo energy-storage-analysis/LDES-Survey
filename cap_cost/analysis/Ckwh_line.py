@@ -43,8 +43,8 @@ else:
     color_category = 'Category20_{}'.format(len(SM_types))
 
 #TODO: Temporary override not using factor_cmap for separated scatter plot. How to specify cmap by string. 
-from bokeh.palettes import Category20_15
-color_category = Category20_15 
+from bokeh.palettes import Category20_15, Category20_17
+color_category = Category20_17
 
 #%%
 p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',plot_width=1500,plot_height=800)

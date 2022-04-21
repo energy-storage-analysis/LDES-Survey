@@ -8,7 +8,7 @@ from es_utils import join_col_vals
 dataset_folder = 'datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
 
-# col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','tech_class','source']
+# col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','energy_type','source']
 dfs_mat_data = []
 dfs_SM = []
 
