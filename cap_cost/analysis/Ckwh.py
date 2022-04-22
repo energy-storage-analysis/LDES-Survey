@@ -21,6 +21,8 @@ palette
 
 # %%
 
+#%%
+
 df_all = pd.read_csv('../data_consolidated/C_kWh.csv', index_col=0)
 df_all = df_all.dropna(subset=['C_kwh'])
 
@@ -30,10 +32,15 @@ df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 
 df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
-
-df_all = df_all.sort_values('C_kwh')#.sort_values('energy_type')
-
 df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
+
+#%%
+
+median_Ckwh = df_all.groupby('SM_type')['C_kwh'].median().to_dict()
+
+df_all['Ckwh_SMtype_median'] = df_all['SM_type'].map(median_Ckwh)
+
+df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 
 #%%
 cat_label = 'display_text'
@@ -82,7 +89,7 @@ df_elim = df_elim.sort_values('SM_type')
 df_elim = df_elim[df_elim['C_kwh']<1e4]#.dropna(how='all')
 
 df_plot = df_elim
-fig = plt.figure(figsize = (8,8))
+fig = plt.figure(figsize = (8,7))
 sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette)
 
 plt.axhline(np.log10(10), linestyle='--', color='gray')

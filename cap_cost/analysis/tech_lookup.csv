@@ -3,9 +3,9 @@ liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled)
 latent_thermal,Latent \n Thermal,Thermal
 sensible_thermal,Sensible \nThermal,Thermal
 thermochemical,Thermochemical,Thermal
-pressure_cavern,Pressure (Cavern),Pressure
-pressure_tank,Pressure (Tank),Pressure
-smes,SMES,Magnetic
+pressure_cavern,Pressure Cavern,Pressure
+pressure_tank,Pressure Tank*,Pressure
+smes,SMES*,Magnetic
 solid_electrode,Dual Solid \nElectrode Battery,Chemical \n(Coupled)
 pseudocapacitor,Pseudocapacitor,Chemical \n(Coupled)
 EDLC,EDLC,Electrostatic
@@ -15,4 +15,4 @@ gravitational,Gravity,Gravitational
 dielectric_capacitor,Dielectric \nCapacitor,Electrostatic
 metal_air,Metal Air,Chemical \n(Coupled)
 hybrid_flow,Hybrid Flow,Chemical \n(Coupled)
-flywheel,Flywheel,Kinetic
+flywheel,Flywheel*,Kinetic

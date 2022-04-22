@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import re
 import seaborn as sns
 
+import matplotlib as mpl
+mpl.rcParams.update({'font.size':12})
 from adjustText import adjust_text
 
 import os
@@ -151,7 +153,7 @@ plt.ylabel("Material capital cost ($/kWh)")
 plt.ylim(1e-1,20)
 plt.yscale('log')
 
-plt.xlim(0,5.5)
+# plt.xlim(0,5.5)
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.2,1))
 
@@ -224,7 +226,7 @@ plt.ylim(1e-1,20)
 plt.yscale('log')
 
 
-plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
+# plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
