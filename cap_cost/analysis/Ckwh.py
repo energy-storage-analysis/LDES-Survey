@@ -170,14 +170,18 @@ tips = [('index','@SM_name'),  ('SM_sources','@SM_sources'), ('price_sources', '
 figure = iqplot.strip(
     data=df_vis, cats='SM_type', q='C_kwh', color_column='energy_type',
     q_axis='y',y_axis_type='log' ,
+    show_legend=True,
     jitter=True,
     tooltips= tips,
-    plot_width = 1000,plot_height=700,
+    plot_width = 1200,plot_height=700,
     marker_kwargs={'size':10}
     )
 
+figure.legend.location = 'bottom_right'
+figure.legend.title = 'Energy Type'
+
 figure.xaxis.major_label_orientation = np.pi/4
-figure.yaxis.axis_label = "Energy Capital Cost ($/kWh)"
+figure.yaxis.axis_label = "Material Energy Cost ($/kWh)"
 # show(figure)
 figure.yaxis.axis_label_text_font_size = "16pt"
 figure.xaxis.major_label_text_font_size = "16pt"

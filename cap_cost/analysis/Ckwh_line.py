@@ -47,10 +47,12 @@ from bokeh.palettes import Category20_15, Category20_17
 color_category = Category20_17
 
 #%%
-p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',plot_width=1500,plot_height=800)
+p = figure(background_fill_color="#fafafa", y_axis_type='log',x_axis_type='log',plot_width=1200,plot_height=700)
 
 p.xaxis.axis_label = 'Energy Density (kWh/kg)'
 p.yaxis.axis_label = 'Material Cost ($/kg)'
+
+
 
 for i, SM_type in enumerate(SM_types):
     df_sel = df.where(df['SM_type'] == SM_type).dropna(subset=['SM_type'])
@@ -68,7 +70,7 @@ p.line(energy_densities_line, mat_cost_line)
 
 
 p.legend.location = "top_left"
-p.legend.title = "SM_type"
+p.legend.title = "Storage Medium Type"
 
 hovertool = HoverTool(tooltips=[
     ('SM name','@SM_name'), 
@@ -84,6 +86,8 @@ hovertool = HoverTool(tooltips=[
 p.add_tools(hovertool)
 p.legend.click_policy="mute"
 
+p.yaxis.axis_label_text_font_size = "16pt"
+p.xaxis.major_label_text_font_size = "16pt"
 
 output_file(pjoin(output_dir,'Ckwh_line_bokeh.html'))
 save(p)
