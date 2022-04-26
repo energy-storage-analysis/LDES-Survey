@@ -3,7 +3,7 @@ index,specific_price,specific_price_std,specific_price_rat,num_SMs,num_source,so
 AQDS,5.15,0.49497474683058307,0.1,6,2,"Alibaba (Manual Entry), Li 2017","4.8, 5.5",C14H8O8S2,368.33,AQDS,
 Ag,608.4850295578531,,,0,1,USGS,608.49,Ag,107.8682,Silver Bullion,521.0
 Air,0.0,,,0,1,Li 2017,0.0,O2,0.0,,
-Al,2.2725,0.6688761619130399,0.29,11,7,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS","1.75, 1.89, 2.24, 2.27, 2.39, 2.45, 3.07, 3.81",Al,26.9815384,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
+Al,2.2725,0.6688761619130399,0.29,12,7,"Alibaba (Bulk), Alok 2021, Kale 2018, Kim 2013, SMM, Steinmann 2022, USGS","1.75, 1.89, 2.24, 2.27, 2.39, 2.45, 3.07, 3.81",Al,26.9815384,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
 Al2O3,0.8858555555555556,0.3351653648780347,0.38,1,4,"Liu 2016, SMM, Steinmann 2022, USGS","0.53, 0.77, 1.0, 1.32",Al2O3,101.9600768,"Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
 AlSc,340.0,,,0,1,USGS,340.0,AlSc,71.9374464,Scandium Mtl_Alloy,2162.93108
 Ammonium Heptamolybdate,19.018,,,0,1,ISE,19.02,H50Mo7N6O28 ,1254.064,Ammonium heptamolybdate,
@@ -186,7 +186,7 @@ NaOH,2.2199999999999998,2.6587214972614186,1.2,1,2,"Alva 2018, Li 2017","0.34, 4
 Nb,61.675,57.52313664952564,0.93,0,2,"SMM, USGS","102.35, 21.0",Nb,92.90637,"Niobium, Niobium (Columbium) ",73.5
 Nb2O5,35.47264430285721,24.031130731249387,0.68,0,3,"Alibaba (Bulk), ISE, SMM","1.0, 35.47, 47.24",Nb2O5,265.80774,"Niobium Conc., Niobium pentoxides, Niobium Pentoxide 99.5%",51.426477
 Nd2O3,48.6,,,0,1,USGS,48.6,Nd2O3,336.481,Rare Earths Nd2O3,49.3199365
-Ni,7.330293619246726,14.033648620995265,1.91,2,4,"Alibaba (Bulk), Alok 2021, SMM, USGS","35.01, 6.25, 7.03, 7.63",Ni,58.6934,"Import Nickel, JinChuan Nickel, Nickel Briquettes, SMM Nickel, Nickel , Nickel (Ni)",13.9
+Ni,7.330293619246726,14.033648620995265,1.91,3,4,"Alibaba (Bulk), Alok 2021, SMM, USGS","35.01, 6.25, 7.03, 7.63",Ni,58.6934,"Import Nickel, JinChuan Nickel, Nickel Briquettes, SMM Nickel, Nickel , Nickel (Ni)",13.9
 Ni(OH)2,7.0,9.93677217879797,1.42,4,3,"Alibaba (Bulk), Alibaba (Manual Search), Li 2017","0.48, 20.0, 7.0",Ni(OH)2,92.7074,Ni(OH)2,8.8835216
 NiCl2(H2O)6,5.1,,,1,1,Li 2017,5.1,NiCl2(H2O)6,237.6834,NiCl2 6H2O,3.5898535
 NiSO4,3.362034375,,,0,1,Alibaba (Manual Search),3.36,NiSO4,154.7494,,5.3548666
