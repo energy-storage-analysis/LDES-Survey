@@ -1,0 +1,22 @@
+products:
+    css: 'div.organic-gallery-offer-outter:nth-of-type(n+2) div.organic-offer-wrapper.organic-gallery-offer-inner'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        price:
+            css: span.elements-offer-price-normal__promotion
+            xpath: null
+            type: Text
+        min_order:
+            css: span.element-offer-minorder-normal__value
+            xpath: null
+            type: Text
+        title:
+            css: p.elements-title-normal__content
+            xpath: null
+            type: Text
+        link:
+            css: a.elements-title-normal
+            xpath: null
+            type: Link
