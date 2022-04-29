@@ -21,29 +21,30 @@ class ScrapyAlibabaPipeline(object):
         self.file.close()
         self.dropfile.close()
 
-    def process_item(self, item, spider):
+    def drop_item(self, item, message):
         line = json.dumps(ItemAdapter(item).asdict()) + "\n"
+        self.dropfile.write(line)
+        raise DropItem(message)
+
+    def process_item(self, item, spider):
 
         if not item['price']: 
-            self.dropfile.write(line)
-            raise DropItem("Missing Price")
+            self.drop_item(item, "Missing Price")
 
         if item['must_contain'] == item['must_contain']:
             must_contain_strs = [s.strip().lower() for s in item['must_contain'].split(',')]
             contain_conditions = [s in item['title'].lower() for s in must_contain_strs]
             if not any(contain_conditions):
-                self.dropfile.write(line)
-                raise DropItem("Title Did not contain {}".format(item['must_contain']))
+                self.drop_item(item,"Title Did not contain {}".format(item['must_contain']))
 
         if not item['min_order']:
-            self.dropfile.write(line)
-            raise DropItem("Missing Minimum Order")
+            self.drop_item(item, "Missing Minimum Order")
 
         if 'piece' in item['min_order'].lower():
-            self.dropfile.write(line)
-            raise DropItem("'piece' found in Minimum Order ")
+            self.drop_item(item,"'piece' found in Minimum Order " )
 
         #All conditions met, write to file
+        line = json.dumps(ItemAdapter(item).asdict()) + "\n"
         self.file.write(line)
         return item
 
