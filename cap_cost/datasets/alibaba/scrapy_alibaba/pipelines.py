@@ -6,16 +6,20 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 from scrapy.exceptions import DropItem
+from itemadapter import ItemAdapter
+
 class ScrapyAlibabaPipeline(object):
 
-    # def open_spider(self, spider):
-    #     self.file = open('items.json', 'w')
+    def open_spider(self, spider):
+        self.file = open('items.jl', 'w')
 
-    # def close_spider(self, spider):
-    #     self.file.close()
+    def close_spider(self, spider):
+        self.file.close()
 
     def process_item(self, item, spider):
         if item['must_contain'].lower() in item['title'].lower():
+            line = json.dumps(ItemAdapter(item).asdict()) + "\n"
+            self.file.write(line)
             return item
         else:
             raise DropItem("Title Did not contain {}".format(item['must_contain']))

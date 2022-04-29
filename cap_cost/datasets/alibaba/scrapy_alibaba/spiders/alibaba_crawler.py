@@ -35,6 +35,7 @@ class AlibabaCrawlerSpider(scrapy.Spider):
                 search_text)
             # The meta is used to send our search text into the parser as metadata
             meta_dict = {
+            'index': idx,
             'search_text': search_text,
             'must_contain': row['must_contain']
             }
@@ -42,10 +43,11 @@ class AlibabaCrawlerSpider(scrapy.Spider):
             yield scrapy.Request(url, callback = self.parse, meta = meta_dict, cb_kwargs=meta_dict)
 
 
-    def parse(self, response, search_text, must_contain):
+    def parse(self, response, **meta_dict):
         data = self.extractor.extract(response.text,base_url=response.url)
         if data['products']:
             for product in data['products']:
-                product['search_text'] = search_text
-                product['must_contain'] = must_contain
-                yield product
+                outdict = {}
+                outdict.update(meta_dict)
+                outdict.update(product)
+                yield outdict
