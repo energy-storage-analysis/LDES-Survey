@@ -46,8 +46,6 @@ class AlibabaCrawlerSpider(scrapy.Spider):
         data = self.extractor.extract(response.text,base_url=response.url)
         if data['products']:
             for product in data['products']:
-                # print(product)
                 product['search_text'] = search_text
-
-                if must_contain.lower() in product['title'].lower():
-                    yield product
+                product['must_contain'] = must_contain
+                yield product
