@@ -29,7 +29,6 @@ Bipyridine,4.0,,,2,1,Alibaba (Manual Entry),4.0,C10H8N2,156.188,,
 Borax,0.4241,,,0,1,Alibaba (Bulk),0.42,Na2B4O7,201.2125386,,
 Br2,2.442,,,4,1,USGS,2.44,Br2,159.808,Bromine Imports,4.39
 C,16.375,19.26865978733342,1.18,0,2,"Li 2017, Liu 2016","2.75, 30.0",C,12.011,"Activated Carbon, Active carbon",0.122
-C6,3.25,,,1,1,Steinmann 2022,3.25,,,Graphite,0.122
 C6H12O6Sc,44200.0,,,0,1,USGS,44200.0,C6H12O6Sc,225.111908,Scandium Cmpds_Acetate,691.1577074
 CCoO3,14.445,,,0,1,ISE,14.45,CCoO3,118.941194,Cobalt Carbonates,16.3262666
 CFRP,31.38,,,0,1,Kale 2018,31.38,,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
@@ -95,7 +94,7 @@ Ge,1187.075,48.54288052845655,0.04,0,2,"ISE, USGS","1152.75, 1221.4",Ge,72.63,"G
 GeO2,782.45,87.61053018901326,0.11,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"Germanium GeO2, Germanium dioxides",667.8421426
 Graphene,90.0,,,4,1,Graphene Lab,90.0,C6,72.066,Graphene,
 Graphene Oxide,400.0,,,1,1,Alibaba (Manual Entry),400.0,C7H2O,102.092,,
-Graphite,1.7008291673865679,4.448542521397139,2.62,12,4,"Alibaba (Bulk), Li 2017, Liu 2016, USGS","0.35, 0.39, 1.6, 1.8, 12.0, 2.15",C6,72.066,"Expanded Natural, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
+Graphite,1.8,4.061660472186911,2.26,13,5,"Alibaba (Bulk), Li 2017, Liu 2016, Steinmann 2022, USGS","0.35, 0.39, 1.6, 1.8, 12.0, 2.15, 3.25",C6,72.066,"Expanded Natural, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
 Gravel,0.0291803850227903,,,1,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
 H2SO4,0.2475,0.067175144212722,0.27,0,2,"Alibaba (Bulk), Li 2017","0.2, 0.29",H2SO4,98.072,H2SO4,0.1593358
 H2_LRC,59.10260017187501,,,0,1,Cavern Calculations,59.1,H2,2.016,,1.39

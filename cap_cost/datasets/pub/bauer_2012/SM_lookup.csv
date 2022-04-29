@@ -6,7 +6,7 @@ Lead,sensible_thermal,Pb,Pb
 Brick (dry),sensible_thermal,,
 Concrete (aggregates),sensible_thermal,,
 Granite,sensible_thermal,Granite,Granite
-Graphite,sensible_thermal,C6,C6
+Graphite,sensible_thermal,Graphite,Graphite
 Limestone,sensible_thermal,Limestone,Limestone
 Sandstone,sensible_thermal,Sandstone,Sandstone
 Slag,sensible_thermal,,

@@ -21,7 +21,7 @@ MgO,MgO,sensible_thermal,MgO,
 Concrete,Concrete,sensible_thermal,Concrete,
 "Castable
 ceramic",Castable ceramic,sensible_thermal,,
-Graphite,C6,sensible_thermal,C6,
+Graphite,Graphite,sensible_thermal,Graphite,
 KNO3-NaNO2-NaNO3,HITEC,latent_thermal,HITEC,
 "NaNO3-LiNO3
 51-49%","NaLiNO3

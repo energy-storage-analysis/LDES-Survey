@@ -50,7 +50,6 @@ BaO2/BaO,thermochemical,,,,,,,,,,,0.1201666666666666,880.0,,,,,,,,,,,,BaO,,,Andr
 Basalt,sensible_thermal,0.00032638888888885,,800.0,,,2800.0,3.2750000000000004,,,,,,,,,,,,,,,,,Stone,,Basalt,"Alva 2018, Steinmann 2022",,,20.0,780.0
 Be(OH)2/BeO,thermochemical,,,,,,,,,,,0.3308333333333333,70.0,,,,,,,,,,,,Be(OH)2,,,Andre 2016,hydroxides,,20.0,
 Block Stacking,gravitational,,,,,,,,,,,,,,,,,,,100.0,,,,,Stone,,Block Stacking,,,,20.0,
-C6,sensible_thermal,0.0001819444444444,,3500.0,,,2350.0,152.5,,,,,,,,,,,,,,,,,C6,,Graphite,"Bauer 2012, Steinmann 2022",,,20.0,3480.0
 C6/LCO,solid_electrode,,,,,,,,,98.3,4.2,,,,,,,,,,,,,,"[('Graphite', 1), ('LCO', 1)]",molar,,Li 2017,Li ion  (C6 anode),,20.0,
 C6/LFP,solid_electrode,,,,,,,,,44.0,3.65,,,,,,,,,,,,,,"[('Graphite', 1), ('LFP', 1)]",molar,,Li 2017,Li ion  (C6 anode),,20.0,
 C6/LMNO,solid_electrode,,,,,,,,,51.3,4.7,,,,,,,,,,,,,,"[('Graphite', 1), ('LMNO', 1)]",molar,,Li 2017,Li ion  (C6 anode),,20.0,
@@ -133,6 +132,7 @@ Graphene,EDLC,,,,,,,,,,,,,,,,,,,,186.5,1.65,,,Graphene,,,Choi 2015,,,20.0,
 Graphene/CNF,EDLC,,,,,,,,,,,,,,,,,,,,174.0,1.5,,,"[('Graphene', 1), ('Graphite', 1)]",molar,,Choi 2015,,,20.0,
 Graphene/CNT,EDLC,,,,,,,,,,,,,,,,,,,,104.83333333333331,2.6,,,"[('Graphene', 1), ('CNT', 1)]",molar,,Choi 2015,,,20.0,
 Graphene/carbon,EDLC,,,,,,,,,,,,,,,,,,,,175.0,3.5,,,"[('Graphene', 1), ('Graphite', 1)]",molar,,Choi 2015,,,20.0,
+Graphite,sensible_thermal,0.0001819444444444,,3500.0,,,2350.0,152.5,,,,,,,,,,,,,,,,,Graphite,,Graphite,"Bauer 2012, Steinmann 2022",,,20.0,3480.0
 Gravel,sensible_thermal,0.0005111111111111,,,,,2040.0,0.59,,,,,,,,,,,,,,,,,Gravel,,Soil (gravelly),Bauer 2012,,,20.0,
 H2 (LRC),synfuel,,,,,,,,,,,,,,,,,0.0659,2.0,,,,,,H2_LRC,,,Cavern Calculations,,,20.0,
 H2 (Pipes),synfuel,,,,,,,,,,,,,,,,,0.0659,2.0,,,,,,H2_Pipes,,,Cavern Calculations,,,20.0,
