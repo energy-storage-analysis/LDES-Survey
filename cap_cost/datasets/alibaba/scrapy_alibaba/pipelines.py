@@ -5,14 +5,17 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
+import os
 from scrapy.exceptions import DropItem
 from itemadapter import ItemAdapter
 
 class ScrapyAlibabaPipeline(object):
 
     def open_spider(self, spider):
-        self.file = open('items.jl', 'w')
-        self.dropfile = open('items_dropped.jl', 'w')
+
+        if not os.path.exists('output'): os.mkdir('output')
+        self.file = open('output/items.jl', 'w')
+        self.dropfile = open('output/items_dropped.jl', 'w')
 
     def close_spider(self, spider):
         self.file.close()
