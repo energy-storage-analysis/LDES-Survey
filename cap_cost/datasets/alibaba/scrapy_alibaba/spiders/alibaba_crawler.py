@@ -25,7 +25,7 @@ class AlibabaCrawlerSpider(scrapy.Spider):
 
         df_search = pd.read_csv(os.path.join(RESOURCE_FOLDER, 'mat_data_searches.csv'), index_col=0)
         df_search = df_search.iloc[START_ROW:START_ROW + NUM_ROWS]
-        df_search = df_search[['search_text', 'must_contain']]
+        df_search = df_search[['search_text', 'must_contain', 'split_hydrate']]
         df_search = df_search.dropna(subset=['search_text'])
 
         for idx, row in df_search.iterrows():
@@ -37,7 +37,8 @@ class AlibabaCrawlerSpider(scrapy.Spider):
             meta_dict = {
             'index': idx,
             'search_text': search_text,
-            'must_contain': row['must_contain']
+            'must_contain': row['must_contain'],
+            'split_hydrate': row['split_hydrate']
             }
 
             yield scrapy.Request(url, callback = self.parse, meta = meta_dict, cb_kwargs=meta_dict)

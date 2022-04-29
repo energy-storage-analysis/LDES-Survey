@@ -4,6 +4,10 @@ import pandas as pd
 df = pd.read_csv('output/extracted.csv', index_col=0)
 
 
+price_use = df['scaled_anhydrous_price'].fillna(df['specific_price'])
+df['specific_price'] = price_use
+
+#%%
 df_t = df.dropna(how='all')
 
 
