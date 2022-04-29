@@ -7,46 +7,47 @@ from selectorlib import Extractor
 import re 
 import itertools
 import sys
+import pandas as pd
 
-csv_path = "../resources/keywords_allmats.csv"
-NUM_ROWS = 5#sys.maxsize
+START_ROW = 0
+NUM_ROWS = 2 #sys.maxsize
+
+RESOURCE_FOLDER = os.path.join(os.path.dirname(__file__), "../resources")
 
 class AlibabaCrawlerSpider(scrapy.Spider):
     name = 'alibaba_crawler'
     allowed_domains = ['alibaba.com']
     start_urls = ['http://alibaba.com/']
-    extractor = Extractor.from_yaml_file(os.path.join(os.path.dirname(__file__), "../resources/search_results.yml"))
-    max_pages = 1
+    extractor = Extractor.from_yaml_file(os.path.join(RESOURCE_FOLDER, "search_results.yml"))
 
     def start_requests(self):
         """Read keywords from keywords file amd construct the search URL"""
 
-        with open(os.path.join(os.path.dirname(__file__),csv_path )) as search_keywords:
-            for keyword in itertools.islice(csv.DictReader(search_keywords), NUM_ROWS):
-                search_text=keyword["search_text"]
-                print(search_text)
-                url="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={0}&viewtype=G".format(
-                    search_text)
-                # The meta is used to send our search text into the parser as metadata
-                yield scrapy.Request(url, callback = self.parse, meta = {"search_text": search_text}, cb_kwargs={'search_text': search_text})
+        df_search = pd.read_csv(os.path.join(RESOURCE_FOLDER, 'mat_data_searches.csv'), index_col=0)
+        df_search = df_search.iloc[START_ROW:START_ROW + NUM_ROWS]
+        df_search = df_search[['search_text', 'must_contain']]
+        df_search = df_search.dropna(subset=['search_text'])
+
+        for idx, row in df_search.iterrows():
+            search_text=row["search_text"]
+
+            url="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={0}&viewtype=G".format(
+                search_text)
+            # The meta is used to send our search text into the parser as metadata
+            meta_dict = {
+            'search_text': search_text,
+            'must_contain': row['must_contain']
+            }
+
+            yield scrapy.Request(url, callback = self.parse, meta = meta_dict, cb_kwargs=meta_dict)
 
 
-    def parse(self, response, search_text):
+    def parse(self, response, search_text, must_contain):
         data = self.extractor.extract(response.text,base_url=response.url)
         if data['products']:
             for product in data['products']:
                 # print(product)
                 product['search_text'] = search_text
-                yield product
-            
-            # Try paginating if there is data
-            
-                # if '&page=' not in response.url and self.max_pages>=2:
-                #     yield Request(response.request.url+"&page=2", cb_kwargs={'search_text': search_text})
-                # else:
-                #     url = response.request.url
-                #     current_page_no = re.findall('page=(\d+)',url)[0]
-                #     next_page_no = int(current_page_no)+1
-                #     url = re.sub('(^.*?&page\=)(\d+)(.*$)',rf"\g<1>{next_page_no}\g<3>",url)
-                #     if next_page_no <= self.max_pages:
-                #         yield Request(url,callback=self.parse, cb_kwargs={'search_text': search_text})
+
+                if must_contain.lower() in product['title'].lower():
+                    yield product
