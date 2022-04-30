@@ -1,3 +1,7 @@
+"""
+This is a currently old/unused script to form a keyword search list from the materials database. I decided to be more controlled in forming the list manually. 
+"""
+
 #%%
 import os
 import numpy as np
