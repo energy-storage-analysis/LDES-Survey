@@ -5,7 +5,7 @@ products:
     type: Text
     children:
         price:
-            css: span.elements-offer-price-normal__promotion
+            css: span.elements-offer-price-normal__price
             xpath: null
             type: Text
         min_order:

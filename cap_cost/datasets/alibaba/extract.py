@@ -20,10 +20,23 @@ hydrate_lookup = {
 
 df = pd.read_json('output/items.jl', lines=True).set_index('index')
 
+
+
+df[['price_low','price_high']] = df['price'].str.split('-', expand=True)
+
+#TODO: Just taking the low price for now, as that should be associated with the largest minimum order quantity. Evenyually the scraping sider should be improved to actually look at the product page and get the price as function of order quantiy
+df = df.drop('price',axis=1).rename({
+    'price_low': 'price'
+}, axis=1)
+
+# df['price']
+
+
 #%%
 df[['min_quantity','min_unit']] = df['min_order'].str.extract("(\S+) ([\S ]+)", expand=True)
 df['min_quantity'] = df['min_quantity'].astype(float)
 
+#TODO: This is effectively inducing a cutoff of > 1kg as grams are not included. This should be implemented explicitly. 
 unit_lookup = {
     'Tons': 't',
     'Ton': 't',
