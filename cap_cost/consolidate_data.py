@@ -153,8 +153,9 @@ mats_comp = mats_comp.apply(ast.literal_eval)
 num_sms = []
 for idx in df_prices_combine.index:
     n = 0 
-    if idx in mats_single.index:
-        n = n+1
+    for mat_name in mats_single.values:
+        if mat_name == idx:
+            n = n+1
     for comp_list in mats_comp:
         mats = [t[0] for t in comp_list]
         if idx in mats:
