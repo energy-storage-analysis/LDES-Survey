@@ -14,8 +14,16 @@ class ScrapyAlibabaPipeline(object):
     def open_spider(self, spider):
 
         if not os.path.exists('output'): os.mkdir('output')
-        self.file = open('output/items.jl', 'w')
-        self.dropfile = open('output/items_dropped.jl', 'w')
+
+
+        #with the -a spider_iter=<num> kwarg the file can instead be output to output/temp to be combined later. 
+        if hasattr(spider, 'spider_iter'):
+            i = spider.spider_iter
+            self.file = open('output/temp/items_{}.jl'.format(i), 'w')
+            self.dropfile = open('output/temp/items_dropped_{}.jl'.format(i), 'w')
+        else:
+            self.file = open('output/items.jl', 'w')
+            self.dropfile = open('output/items_dropped.jl', 'w')
 
     def close_spider(self, spider):
         self.file.close()
