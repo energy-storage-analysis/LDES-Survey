@@ -21,9 +21,6 @@ hydrate_lookup = {
 
 df = pd.read_json('output/items.jl', lines=True).set_index('index')
 
-#We drop duplicate titles, I believe only relevant for when items.jl is formed from multiple iterations.
-df = df.drop_duplicates(subset='title', keep='first')
-
 #%%
 df[['price_normal_low','price_normla_high']] = df['price_normal'].str.split('-', expand=True)
 
@@ -31,8 +28,18 @@ df[['price_normal_low','price_normla_high']] = df['price_normal'].str.split('-',
 #TODO: The returned type of price seems random. Need to rexamine hte 'promotion price'
 df['price'] = df['price_normal_low'].fillna(df['price_promotion'])
 
+#%%
 
+df_single_manual = pd.read_csv('single_manual.csv', index_col=0)
+df_single_manual
 
+df = pd.concat([
+    df,
+    df_single_manual,
+])
+
+#We drop duplicate titles, I believe only relevant for when items.jl is formed from multiple iterations.
+df = df.drop_duplicates(subset='title', keep='first')
 
 #%%
 df[['min_quantity','min_unit']] = df['min_order'].str.extract("(\S+) ([\S ]+)", expand=True)
