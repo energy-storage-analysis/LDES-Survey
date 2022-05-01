@@ -15,7 +15,6 @@ class ScrapyAlibabaPipeline(object):
 
         if not os.path.exists('output'): os.mkdir('output')
 
-
         #with the -a spider_iter=<num> kwarg the file can instead be output to output/temp to be combined later. 
         if hasattr(spider, 'spider_iter'):
             i = spider.spider_iter
@@ -36,7 +35,8 @@ class ScrapyAlibabaPipeline(object):
         raise DropItem(message)
 
     def process_item(self, item, spider):
-
+        
+        #TODO: figure out price_normal and price_promotion (see css selctors). I think this will be fixed if we just follow the response to the product page, vs trying to pull the price from the search results.
         if not item['price_normal'] and not item['price_promotion']: 
             self.drop_item(item, "Missing Price")
 
