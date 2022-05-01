@@ -115,4 +115,20 @@ df_combine['molecular_formula']= df.groupby('index')['molecular_formula'].apply(
 
 from es_utils import extract_df_mat
 df_price = extract_df_mat(df_combine)
+
+#%%
+
+from es_utils.chem import calc_hydrate_factor
+
+hydrate_list = [
+    ('LiOH(H2O)', 'LiOH', 1),
+]
+
+for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
+    df_price.loc[hydrate_formula,'specific_price'] = df_price.loc[hydrate_formula,'specific_price']*calc_hydrate_factor(anhydrous_formula, hydrate_count)
+    df_price = df_price.rename({hydrate_formula: anhydrous_formula})
+#%%
+
+
+
 df_price.to_csv('output/mat_data.csv')

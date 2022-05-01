@@ -18,7 +18,7 @@ LCO,LiCoO2,LCO,material_name
 LFP,LiFePO4,LFP,material_name
 Li2S,Li2S,,molecular_formula
 Li2SO4,Li2SO4,,molecular_formula
-LiOH H2O,LiOH(H2O),Lithium Hydroxide Monohydrate,material_name
+LiOH H2O,LiOH(H2O),Lithium Hydroxide Monohydrate,molecular_formula
 Lithium metal,Li,Lithium,molecular_formula
 LMO,LiMn2O4,LMO,material_name
 LMP,LiMnPO4,LMP,material_name

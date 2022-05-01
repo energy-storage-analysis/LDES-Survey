@@ -1,6 +1,7 @@
 #%%
 
 import os
+
 import numpy as np
 import pandas as pd
 import pint
@@ -20,17 +21,12 @@ hydrate_lookup = {
 
 df = pd.read_json('output/items.jl', lines=True).set_index('index')
 
-
-
 df[['price_low','price_high']] = df['price'].str.split('-', expand=True)
 
 #TODO: Just taking the low price for now, as that should be associated with the largest minimum order quantity. Evenyually the scraping sider should be improved to actually look at the product page and get the price as function of order quantiy
 df = df.drop('price',axis=1).rename({
     'price_low': 'price'
 }, axis=1)
-
-# df['price']
-
 
 #%%
 df[['min_quantity','min_unit']] = df['min_order'].str.extract("(\S+) ([\S ]+)", expand=True)
@@ -78,40 +74,32 @@ df['specific_price'] = df['price']/df['min_unit_kg']
 #%%
 
 
-from es_utils.chem import get_molecular_mass
-
-# Form hydrated formulas, no conversion. The code in the pipeline determining hydrate count should perhaps go here. 
-# df['hydrate_count'] = df['hydrate_count'].replace('not_specified', 0).astype(float)
-
+from es_utils.chem import calc_hydrate_factor
 
 scaled_prices = []
 hydrate_counts = []
-for idx, row in df.iterrows():
+for anhydrous_formula, row in df.iterrows():
     if row['split_hydrate']:
+
+        #Check title for matching hydrate strings, ideally only one. 
         matching_n = []
         for n, prefix in hydrate_lookup.items():
             if prefix in row['title'].lower():
                 matching_n.append(n)
-        if len(matching_n) == 0:
-            hydrate_count = 0 #TODO: Assume missing in title in anydrous...
-        elif len(matching_n) == 1:
+        if len(matching_n) == 1:
             hydrate_count = matching_n[0]
+        elif len(matching_n) == 0:  
+            hydrate_count = 'not_specified'
         else:
-            hydrate_count = np.nan
+            hydrate_count = 'multiple_found'
 
         hydrate_counts.append(hydrate_count)
 
-        if hydrate_count == hydrate_count:
-            hydrate_count = int(hydrate_count)
-            if hydrate_count > 0:
-                mu = get_molecular_mass(idx)
-                mu_water = get_molecular_mass('H2O')*hydrate_count
-
-                price_factor = (mu+mu_water)/mu
-                scaled_price = row['specific_price']*price_factor
-                scaled_prices.append(scaled_price)
-            else:
-                scaled_prices.append(np.nan)
+        #Price is only scaled for integer hydrate count
+        if isinstance(hydrate_count, int):
+            price_factor = calc_hydrate_factor(anhydrous_formula, hydrate_count)
+            scaled_price = row['specific_price']*price_factor
+            scaled_prices.append(scaled_price)
         else:
             scaled_prices.append(np.nan)
 
@@ -124,12 +112,8 @@ df['hydrate_count'] = hydrate_counts
 
 
 
-
-
-
 df = df[[
 'specific_price','min_quantity_kg','hydrate_count','scaled_anhydrous_price','title','link','min_quantity','min_unit','search_text',
 ]]
 
 df.to_csv('output/extracted.csv')
-

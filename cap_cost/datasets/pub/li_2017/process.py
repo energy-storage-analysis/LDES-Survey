@@ -13,9 +13,6 @@ chem_lookup = process_chem_lookup(chem_lookup)
 table_3 = pd.read_csv('tables/table_3.csv', index_col=0)
 table_3
 
-#%%
-
-
 added_rows = pd.DataFrame({
     'molecular_formula': ['O2'],
     'ref': [np.nan],
@@ -26,6 +23,27 @@ added_rows.index.name ='index'
 table_3 = pd.merge(table_3, chem_lookup, on='original_name').set_index('index')
 
 table_3 = table_3.append(added_rows)
+
+table_3
+
+#%%
+
+from es_utils.chem import calc_hydrate_factor
+
+hydrate_list = [
+    ('CrCl3(H2O)6', 'CrCl3', 6),
+    ('LiOH(H2O)', 'LiOH', 1),
+    ('NiCl2(H2O)6', 'NiCl', 6),
+    ('VOSO4(H2O)4', 'VOSO4', 4),
+    ('ZnSO4(H2O)7', 'ZnSO4', 7)
+]
+
+for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
+    table_3.loc[hydrate_formula,'specific_price'] = table_3.loc[hydrate_formula,'specific_price']*calc_hydrate_factor(anhydrous_formula, hydrate_count)
+    table_3 = table_3.rename({hydrate_formula: anhydrous_formula})
+
+
+table_3
 
 # %%
 

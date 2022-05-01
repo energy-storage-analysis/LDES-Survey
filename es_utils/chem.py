@@ -148,3 +148,13 @@ def pymatgen_process(f):
     s, gcd = normalize_formula(f)
     return s
 
+
+def calc_hydrate_factor(anhydrous_formula, hydrate_count):
+    """Calculates the mass ratio (hydrated/anhydrous) to scale specific price"""
+
+    mu_anhydrous = get_molecular_mass(anhydrous_formula)
+    # mu_water = get_molecular_mass('H2O')*hydrate_count
+    mu_hydrate = 18.015*hydrate_count
+
+    price_factor = (mu_anhydrous+mu_hydrate)/mu_anhydrous
+    return price_factor
