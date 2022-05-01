@@ -21,12 +21,15 @@ hydrate_lookup = {
 
 df = pd.read_json('output/items.jl', lines=True).set_index('index')
 
-df[['price_low','price_high']] = df['price'].str.split('-', expand=True)
+#%%
+df[['price_normal_low','price_normla_high']] = df['price_normal'].str.split('-', expand=True)
 
-#TODO: Just taking the low price for now, as that should be associated with the largest minimum order quantity. Evenyually the scraping sider should be improved to actually look at the product page and get the price as function of order quantiy
-df = df.drop('price',axis=1).rename({
-    'price_low': 'price'
-}, axis=1)
+#Take the lower normal price (as that would be the largest quantity available in the min_order unit) if exists other wise take the promotion price
+#TODO: The returned type of price seems random. Need to rexamine hte 'promotion price'
+df['price'] = df['price_normal_low'].fillna(df['price_promotion'])
+
+
+
 
 #%%
 df[['min_quantity','min_unit']] = df['min_order'].str.extract("(\S+) ([\S ]+)", expand=True)

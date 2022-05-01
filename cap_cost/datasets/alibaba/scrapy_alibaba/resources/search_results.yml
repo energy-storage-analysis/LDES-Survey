@@ -4,8 +4,12 @@ products:
     multiple: true
     type: Text
     children:
-        price:
+        price_normal:
             css: span.elements-offer-price-normal__price
+            xpath: null
+            type: Text
+        price_promotion:
+            css: span.elements-offer-price-normal__promotion
             xpath: null
             type: Text
         min_order:

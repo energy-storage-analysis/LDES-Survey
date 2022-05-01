@@ -29,7 +29,7 @@ class ScrapyAlibabaPipeline(object):
 
     def process_item(self, item, spider):
 
-        if not item['price']: 
+        if not item['price_normal'] and not item['price_promotion']: 
             self.drop_item(item, "Missing Price")
 
         if item['must_contain'] == item['must_contain']:
