@@ -22,6 +22,7 @@ class ScrapyAlibabaPipeline(object):
         self.dropfile.close()
 
     def drop_item(self, item, message):
+        item['drop_reason'] = message
         line = json.dumps(ItemAdapter(item).asdict()) + "\n"
         self.dropfile.write(line)
         raise DropItem(message)
