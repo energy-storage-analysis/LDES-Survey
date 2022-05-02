@@ -123,10 +123,12 @@ for anhydrous_formula, row in df.iterrows():
 df['scaled_anhydrous_price'] = scaled_prices
 df['hydrate_count'] = hydrate_counts
 
-
+df['keep'] = 'y' #This is to be edited for removing entries
 
 df = df[[
-'specific_price','min_quantity_kg','hydrate_count','scaled_anhydrous_price','title','link','min_quantity','min_unit','search_text',
+'specific_price','min_quantity_kg','keep','title','link','hydrate_count','scaled_anhydrous_price','min_quantity','min_unit','search_text',
 ]]
+
+df = df.sort_index()
 
 df.to_csv('output/extracted.csv')
