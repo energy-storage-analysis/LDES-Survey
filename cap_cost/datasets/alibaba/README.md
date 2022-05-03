@@ -14,6 +14,8 @@ TODO: the spider will attempt to pull prices from the main search page, but does
 
 the returned data are processed in `pipelines.py`, some conditions on the data drop those responses and around output into `output/items_dropped.jl`. The remaining items to be utilized are output into `items.jl`. 
 
+The data output by `extract.py` has a column 'keep' that can be made empty to remove an entry from the output dataset. after aquiring a reasonable dataset I look through the titles and remove any that don't match the index reasonably. 
+TODO: The intention is that a column is added to the original search csv file for 'cant_contain' words and for the next iteration of scraping words can be added on the bassis of entries that were removed during the previous scraping session, minimizing the incorrect entries. 
 
 `runner.py` will run the main scrapy command from a python file so a debugger can be used. 
 

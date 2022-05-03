@@ -3,6 +3,7 @@ import pandas as pd
 
 df = pd.read_csv('output/extracted.csv', index_col=0)
 
+df = df.dropna(subset=['keep']) #Get rid of manually dropped entries
 
 price_use = df['scaled_anhydrous_price'].fillna(df['specific_price'])
 df['specific_price'] = price_use
