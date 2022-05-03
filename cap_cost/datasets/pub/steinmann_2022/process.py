@@ -115,7 +115,7 @@ df_t31['Cp'] = df_t31['Cp'].apply(average_range)
 df_t31['Cp'] = df_t31['Cp'].astype(float)/3600000
 df_t31['T_max'] = df_t31['T_max'].apply(average_range)
 
-df_t31['specific_price'] = df_t31['specific_price'].str.replace('<','')
+df_t31['specific_price'] = df_t31['specific_price'].str.replace('< 50','0-50') #TODO: Tables just say < 50, which I will take as a range from 0-50, or an estimate price of 25$/ton. This should perhaps just be dropped but should look through text more if there is a source for this. 
 df_t31['specific_price'] = df_t31['specific_price'].apply(average_range)
 
 df_t31['specific_price'] = df_t31['specific_price'].astype(float)/1000
@@ -216,11 +216,22 @@ df_SM.to_csv('output/SM_data.csv')
 
 #%%
 
+from es_utils import join_col_vals
+
 df_mat = df_all[['specific_price']]
 
 df_mat = pd.merge(df_mat, chem_lookup, on='original_name')
 df_mat = df_mat.dropna(subset=['index'])
 df_mat = df_mat.set_index('index')
+
+#Combine the prices of different stone materialsW
+specific_prices = df_mat.groupby('index')['specific_price'].mean()
+specific_prices.name = 'specific_price'
+original_names = df_mat.groupby('index')['original_name'].apply(join_col_vals)
+original_names.name = 'original_name'
+df_mat = pd.concat([specific_prices,original_names], axis=1)
+
+
 
 df_mat.to_csv('output/mat_data.csv')
 

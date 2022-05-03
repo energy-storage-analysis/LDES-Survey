@@ -59,7 +59,7 @@ Co3O4,19.85,3.3234018715767744,0.17,3,2,"Alibaba, ISE","17.5, 22.2",Co3O4,240.79
 CoCl2,14.968003814848768,12.13395776017202,0.81,1,2,"Alibaba, ISE","23.55, 6.39",CoCl2,129.833194,Cobalt Chloride,14.9331808
 CoO,33.7175,2.9945972183250285,0.09,1,2,"Alibaba, ISE","31.6, 35.84",CoO,74.932194,Cobalt Monoxide,25.8296535
 CoSO4,13.03575,10.838886295417993,0.83,1,2,"Alibaba, ISE","20.7, 5.37",CoSO4,154.989194,Cobalt sulphates,12.5546359
-Concrete,0.05,,,1,1,Steinmann 2022,0.05,,,Concrete,
+Concrete,0.048,0.03252691193458118,0.68,2,2,"Steinmann 2022, concretenetwork.com/concrete-prices.html","0.03, 0.07",,,Concrete,
 Cr,9.28555687376311,4.536703624549056,0.49,2,4,"Alibaba, Alok 2021, ISE, USGS","10.33, 16.0, 5.25, 8.24",Cr,51.9961,"Chromium (Cr), Chromium Metal, Chromium metal",9.4
 Cr2O3,3.8,,,1,1,Alibaba,3.8,,,,6.4801856
 CrCl3,3.432542032926608,,,0,1,Li 2017,3.43,CrCl3(H2O)6,266.4361,CrCl3 6H2O,3.1417511
@@ -91,7 +91,7 @@ GeO2,782.45,87.61053018901326,0.11,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"
 Graphene,496.3,574.5949703921885,1.16,4,2,"Alibaba, Graphene Lab","90.0, 902.6",C6,72.066,Graphene,
 Graphene Oxide,200.49,,,2,1,Alibaba,200.49,,,,
 Graphite,2.15,4.581734793174147,2.13,14,5,"Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS","0.8, 1.6, 12.0, 2.15, 3.25",C6,72.066,"Expanded Natural, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
-Gravel,0.0291803850227903,,,1,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
+Gravel,0.0291803850227903,,,2,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
 H2SO4,0.2,,,0,1,Li 2017,0.2,H2SO4,98.072,H2SO4,0.1593358
 H2_LRC,59.10260017187501,,,1,1,Cavern Calculations,59.1,H2,2.016,,1.39
 H2_Pipes,606.0,,,1,1,Cavern Calculations,606.0,H2,2.016,,1.39
@@ -124,7 +124,7 @@ LFP,15.0,7.0710678118654755,0.47,1,2,"Alibaba, Li 2017","10.0, 20.0",LiFePO4,157
 LMNO,35.0,21.213203435596427,0.61,1,2,"Alibaba, Li 2017","20.0, 50.0",LiMn1.5Ni0.5O4,182.6897645,LNMO,
 LMO,10.0,2.7700025421167638,0.28,2,3,"Alibaba, ISE, Li 2017","10.0, 12.5, 6.97",LiMn2O4,180.812086,"LMO, Lithium manganates",
 LMP,10.0,,,1,1,Li 2017,10.0,LiMnPO4,156.847805,LMP,
-LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.072118,LRMO LMNO,
+LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.0721179,LRMO LMNO,
 LTO,28.5,23.33452377915607,0.82,1,2,"Alibaba, Li 2017","12.0, 45.0",Li4Ti5O12,459.083,LTO,
 La2O3,2.0,,,0,1,USGS,2.0,La2O3,325.80794,Rare Earths La2O3,4.1582001
 LaNi5,45.025,49.462119343999,1.1,1,2,"Alibaba, Li 2017","10.05, 80.0",LaNi5,432.37247,LaNi5,10.9925658
@@ -172,7 +172,7 @@ Na2SO4,0.0775,1.9204149942134903,24.78,1,3,"Alibaba, Alva 2018, Li 2017","0.07, 
 Na2WO4,14.9535,,,0,1,ISE,14.95,Na2WO4,293.8155386,Sodium Tungstate,22.5901803
 Na2Zn(OH)4,0.68,,,0,1,Li 2017,0.68,Na2Zn(OH)4,179.3875386,Na2Zn(OH)4,1.7845023
 NaBr,1.6675,0.22273863607376243,0.13,1,2,"Alibaba, Li 2017","1.51, 1.82",NaBr,102.8937693,NaBr,4.0794294
-NaCl,0.0495,1.1195363219641083,22.62,6,6,"Alibaba, Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS","0.04, 0.05, 0.11, 2.8",NaCl,58.4397693,"NaCl, Salt Brine, Salt Rock, Salt Solar, Salt Vacuum",1.2299194
+NaCl,0.04574999999999995,1.1216593474903567,24.52,6,6,"Alibaba, Alok 2021, Alva 2018, Li 2017, Steinmann 2022, USGS","0.03, 0.04, 0.05, 0.11, 2.8",NaCl,58.4397693,"NaCl, Salt Brine, Salt Rock, Salt Solar, Salt Vacuum",1.2299194
 NaF,4.6049999999999995,4.2355696193074195,0.92,8,2,"Alok 2021, Alva 2018","1.61, 7.6",NaF,41.9881724,NaF,2.5475296
 NaK,2.0,,,0,1,Alva 2018,2.0,NaK,62.0880693,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),9.2027739
 NaMo2O4,12.485,,,0,1,ISE,12.48,NaMo2O4,278.8857693,Sodium Molybdate,27.8752649
@@ -200,7 +200,7 @@ Phosphorite,0.0800895306065223,,,0,1,USGS,0.08,Ca5(PO4)3F,504.2976892,Phosphate 
 Polysilicon,10.55,20.06933013331536,1.9,2,3,"Alibaba, ISE, Li 2017","1.66, 10.55, 40.0",Si,28.085,"Si, Silicon polysilicon",
 Pt,1.0553197797396814,,,0,1,USGS,1.06,Pt,195.084,Platinum-Group Metals Platinum,27800.0
 PtO2,15.0,,,1,1,Alibaba,15.0,,,,23882.7389564
-Pumice,0.0357148864739501,,,0,1,USGS,0.04,C28FH37O7,504.5954032,Pumice and Pumicite ,
+Pumice,0.0357148864739501,,,1,1,USGS,0.04,C28FH37O7,504.5954032,Pumice and Pumicite ,
 Quartz,328.0,,,0,1,USGS,328.0,SiO2,60.083,"Quartz Crystal (Industrial) Cultured, Quartz Crystal (Industrial) Lumbered",
 Rb,125968.60921624408,,,0,1,SMM,125968.61,Rb,85.4678,Rubidium(Rb≥99.5%),15500.0
 Rb2CO3,1062.84,,,0,1,SMM,1062.84,Rb2CO3,230.9436,Rubidium Carbonate(Rb2CO3≥99%),11472.5441921
@@ -224,7 +224,7 @@ Solar Salt,0.595,0.2574878637916746,0.43,1,4,"Diago 2018, Liu 2016, Olympios 202
 Sr,6.80275,,,0,1,ISE,6.8,Sr,87.62,Strontium metal,6.605
 SrCO3,0.95,,,1,1,Alibaba,0.95,,,,3.9801865
 Steel,1.1783333333333332,0.8178868435724399,0.69,18,2,"Alibaba, Kale 2018","0.6, 1.76",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
-Stone,0.05,0.016427309648602822,0.33,4,2,"Steinmann 2022, USGS","0.01, 0.05",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
+Stone,0.019133709469142952,0.008296187629558903,0.43,4,2,"Steinmann 2022, USGS","0.01, 0.03",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
 Syenite,0.1380093761277333,,,0,1,USGS,0.14,Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,29.4,,,0,1,Alva 2018,29.4,,,Syltherm XLT,
 TEMPO,5.5,,,2,1,Liu 2019,5.5,C9H18NO2,172.248,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",

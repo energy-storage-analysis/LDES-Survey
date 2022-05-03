@@ -1,23 +1,20 @@
-index,original_name,specific_price
-Solar Salt,Solar Salt,0.7
-HITEC,HITEC,1.2
-HITEC XL,HITEC XL,1.1
-Na,Sodium,2.0
-Mobiltherm 605,Mobiltherm 605,3.0
-S,Sulfur,0.4
-Vegetable Oil,Sunflower oil,0.6
-Al,Aluminium,1.75
-Fe,Cast iron,0.45
-NaCl,NaCl,0.05
-Stone,Granite,0.05
-Stone,Limestone,0.05
-Stone,Sandstone,0.05
-Stone,Basalt,0.05
-Al2O3,Al2O3,1.0
-SiO2,SiO2,0.6
-MgO,MgO,0.7
-Concrete,Concrete,0.05
-Graphite,Graphite,3.25
-NaNO3,NaNO3,0.6
-KNO3,KNO3,0.8
-LiF,LiF,5.4
+index,specific_price,original_name
+Al,1.75,Aluminium
+Al2O3,1.0,Al2O3
+Concrete,0.025,Concrete
+Fe,0.45,Cast iron
+Graphite,3.25,Graphite
+HITEC,1.2,HITEC
+HITEC XL,1.1,HITEC XL
+KNO3,0.8,KNO3
+LiF,5.4,LiF
+MgO,0.7,MgO
+Mobiltherm 605,3.0,Mobiltherm 605
+Na,2.0,Sodium
+NaCl,0.025,NaCl
+NaNO3,0.6,NaNO3
+S,0.4,Sulfur
+SiO2,0.6,SiO2
+Solar Salt,0.7,Solar Salt
+Stone,0.025,"Basalt, Granite, Limestone, Sandstone"
+Vegetable Oil,0.6,Sunflower oil
