@@ -17,11 +17,6 @@ if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 palette = pd.read_csv('energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
-palette
-
-# %%
-
-#%%
 
 df_all = pd.read_csv('../data_consolidated/C_kWh.csv', index_col=0)
 df_all = df_all.dropna(subset=['C_kwh'])
@@ -34,35 +29,37 @@ df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s
 df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
 
-#%%
-
 median_Ckwh = df_all.groupby('SM_type')['C_kwh'].median().to_dict()
 
 df_all['Ckwh_SMtype_median'] = df_all['SM_type'].map(median_Ckwh)
-
 df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 
 #%%
-cat_label = 'display_text'
 
-df_plot = df_all
+def strip_plot(df_plot):
+
+    cat_label = 'display_text'
+    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette)
+
+    plt.axhline(np.log10(10), linestyle='--', color='gray')
+
+    fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
+    log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
+
+    fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
+    plt.xticks(rotation=70)
+
+
+    plt.ylabel('Material Energy Cost ($/kWh)')
+    plt.xlabel('Technology')
+    plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
+
+#%%
+
 fig = plt.figure(figsize = (18,8))
-sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette)
-
-plt.axhline(np.log10(10), linestyle='--', color='gray')
-
-fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
-
-fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-plt.xticks(rotation=70)
+strip_plot(df_all)
 
 plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
-
-plt.ylabel('Material Energy Cost ($/kWh)')
-plt.xlabel('Technology')
-plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
-
 plt.tight_layout()
 plt.savefig(pjoin(output_dir,'Ckwh.png'))
 
@@ -81,35 +78,14 @@ elim_types = [
 
 
 df_elim = df_all[df_all['SM_type'].isin(elim_types)]
-
-
 df_elim['SM_type'] = pd.Categorical(df_elim['SM_type'], categories=elim_types, ordered=True)
 df_elim = df_elim.sort_values('SM_type')
-
 df_elim = df_elim[df_elim['C_kwh']<1e4]#.dropna(how='all')
 
-df_plot = df_elim
 fig = plt.figure(figsize = (8,7))
-sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette)
+strip_plot(df_elim)
 
-plt.axhline(np.log10(10), linestyle='--', color='gray')
-
-# plt.ylim(1,4)
-fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-
-log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
-
-fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-plt.xticks(rotation=70)
-
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
 plt.gca().get_legend().remove()
-
-plt.ylabel('Material Energy Cost ($/kWh)')
-plt.xlabel('Technology')
-plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
-
-
 plt.tight_layout()
 plt.savefig(pjoin(output_dir,'Ckwh_eliminate.png'))
 
@@ -126,34 +102,14 @@ ec_types = [
 
 
 df_ec = df_all[df_all['SM_type'].isin(ec_types)]
-
-
 df_ec['SM_type'] = pd.Categorical(df_ec['SM_type'], categories=ec_types, ordered=True)
 df_ec = df_ec.sort_values('SM_type')
+df_ec = df_ec[df_ec['C_kwh']<1e4]
 
-df_ec = df_ec[df_ec['C_kwh']<1e4]#.dropna(how='all')
-
-df_plot = df_ec
 fig = plt.figure(figsize = (8,8))
-sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette)
+strip_plot(df_ec)
 
-plt.axhline(np.log10(10), linestyle='--', color='gray')
-
-# plt.ylim(1,4)
-fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
-
-fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-plt.xticks(rotation=70)
-
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
 plt.gca().get_legend().remove()
-
-plt.ylabel('Material Energy Cost ($/kWh)')
-plt.xlabel('Technology')
-plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
-
-
 plt.tight_layout()
 plt.savefig(pjoin(output_dir,'Ckwh_ec.png'))
 
@@ -162,9 +118,6 @@ plt.savefig(pjoin(output_dir,'Ckwh_ec.png'))
 #Raw entries
 
 df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
-#%%
-
-# tips = [('index','@index'), ('entry source','@source'), ('original name', '@original_name'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy'), ("price type",'@price_type')]
 tips = [('index','@SM_name'),  ('SM_sources','@SM_sources'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
 
 figure = iqplot.strip(
