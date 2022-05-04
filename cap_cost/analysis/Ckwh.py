@@ -55,7 +55,7 @@ fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}
 log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
 
 fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-plt.xticks(rotation=90)
+plt.xticks(rotation=70)
 
 plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
 
@@ -100,7 +100,7 @@ fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}
 log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
 
 fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-plt.xticks(rotation=90)
+plt.xticks(rotation=70)
 
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
 plt.gca().get_legend().remove()
@@ -144,7 +144,7 @@ fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}
 log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
 
 fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-plt.xticks(rotation=90)
+plt.xticks(rotation=70)
 
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.5,1])
 plt.gca().get_legend().remove()

@@ -1,6 +1,6 @@
 name,long_name,energy_type
 liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled)
-latent_thermal,Latent \n Thermal,Thermal
+latent_thermal,Latent Thermal,Thermal
 sensible_thermal,Sensible \nThermal,Thermal
 thermochemical,Thermochemical,Chemical \n(Decoupled)
 pressure_cavern,Pressure Cavern,Pressure
