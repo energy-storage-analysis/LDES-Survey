@@ -5,10 +5,10 @@ Iron,sensible_thermal,Fe,Fe
 Lead,sensible_thermal,Pb,Pb
 Brick (dry),sensible_thermal,,
 Concrete (aggregates),sensible_thermal,,
-Granite,sensible_thermal,Granite,Granite
+Granite,sensible_thermal,Granite,Stone
 Graphite,sensible_thermal,Graphite,Graphite
-Limestone,sensible_thermal,Limestone,Limestone
-Sandstone,sensible_thermal,Sandstone,Sandstone
+Limestone,sensible_thermal,Limestone,Stone
+Sandstone,sensible_thermal,Sandstone,Stone
 Slag,sensible_thermal,,
 Sodium chloride,sensible_thermal,NaCl,NaCl
 Soil (clay),sensible_thermal,Clay,Clay

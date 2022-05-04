@@ -127,7 +127,7 @@ FeCl3Zn,hybrid_flow,,,,,,,,,100.0,1.53,,,,,,,,,,,,,,"[('Zn', 1), ('FeCl2', 1)]",
 FeSO4/FeO,thermochemical,,,,,,,,,,,0.6332722222222222,1030.0,,,,,,,,,,,,FeSO4,,,Andre 2016,sulfates,,20.0,
 GO/CNT,EDLC,,,,,,,,,,,,,,,,,,,,216.0,1.0,,,"[('Graphene Oxide', 1), ('CNT', 1)]",molar,,Choi 2015,,,20.0,
 GO/Carbon,EDLC,,,,,,,,,,,,,,,,,,,,122.5,3.5,,,Graphene Oxide,,,Choi 2015,,,20.0,
-Granite,sensible_thermal,0.00026851851851846664,,570.0,,,2675.0,2.85,,,,,,,,,,,,,,,,,"Granite, Stone",,Granite,"Alva 2018, Bauer 2012, Steinmann 2022",,,20.0,550.0
+Granite,sensible_thermal,0.00026851851851846664,,570.0,,,2675.0,2.85,,,,,,,,,,,,,,,,,Stone,,Granite,"Alva 2018, Bauer 2012, Steinmann 2022",,,20.0,550.0
 Graphene,EDLC,,,,,,,,,,,,,,,,,,,,186.5,1.65,,,Graphene,,,Choi 2015,,,20.0,
 Graphene/CNF,EDLC,,,,,,,,,,,,,,,,,,,,174.0,1.5,,,"[('Graphene', 1), ('Graphite', 1)]",molar,,Choi 2015,,,20.0,
 Graphene/CNT,EDLC,,,,,,,,,,,,,,,,,,,,104.83333333333331,2.6,,,"[('Graphene', 1), ('CNT', 1)]",molar,,Choi 2015,,,20.0,
@@ -218,7 +218,7 @@ LiNaKF,sensible_thermal,0.0002716231666666,454.0,700.0,,,2529.27,,,5.11,,,,,,,,,
 LiNaKNO3,sensible_thermal,0.0004388888888888,118.0,550.0,,,2087.388,,,1.61,,,,,,,,,,,,,,,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",mass,,Caraballo 2021,Nitrate,,118.0,432.0
 LiNaKNO3NO2,sensible_thermal,0.0003153808333333,97.0,450.0,,,2073.28,,,,,,,,,,,,,,,,,,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",mass,,Caraballo 2021,Nitrate,,97.0,353.0
 LiOH,latent_thermal,,,,462.0,0.2425,1460.0,,1274.6,,,,,,,,,,,,,,,,LiOH,,LiOH,Alva 2018,,,20.0,
-Limestone,sensible_thermal,0.00027777777777774997,,800.0,,,2500.0,1.725,,,,,,,,,,,,,,,,,"Limestone, Stone",,Limestone,"Bauer 2012, Steinmann 2022",,,20.0,780.0
+Limestone,sensible_thermal,0.00027777777777774997,,800.0,,,2500.0,1.725,,,,,,,,,,,,,,,,,Stone,,Limestone,"Bauer 2012, Steinmann 2022",,,20.0,780.0
 Marble,sensible_thermal,0.0002361111111111,,,,,,7.7,,,,,,,,,,,,,,,,,Stone,,Marble,Alva 2018,,,20.0,
 Mg,latent_thermal,,,,661.0,0.1077777777777777,,,,,,,,,,,,,,,,,,,Mg,,,Alok 2021,,,20.0,
 Mg (NO3)2,latent_thermal,,,,426.0,,,,,,,,,,,,,,,,,,,,Mg(NO3)2,,Mg (NO3)2,Alva 2018,,,20.0,
@@ -328,7 +328,7 @@ S-2 Glass Epoxy,smes,,,,,,,,,,,,,743.6026091319618,1.5,,,,,,,,,,GRE,,,Kale 2018,
 "S/Air(Na, Acid)",flow_battery,,,,,,,,,1.7,1.35,,,,,,,,,,,,,,"[('Na', 1), ('S', 1)]",molar,,Li 2017,Flow-air,,20.0,
 "S/Air(Na, Base)",flow_battery,,,,,,,,,4.0,0.65,,,,,,,,,,,,,,"[('Na', 1), ('S', 1)]",molar,,Li 2017,Flow-air,,20.0,
 Sand,sensible_thermal,0.000277,,1000.0,,,,,,,,,,,,,,,,,,,,,Sand,,Sand,Diago 2018,,https://doi.org/10.1016/j.apenergy.2018.02.106,20.0,980.0
-Sandstone,sensible_thermal,0.0003798611111111,,800.0,,,2200.0,2.1750000000000003,,,,,,,,,,,,,,,,,"Sandstone, Stone",,Sandstone,"Bauer 2012, Steinmann 2022",,,20.0,780.0
+Sandstone,sensible_thermal,0.0003798611111111,,800.0,,,2200.0,2.1750000000000003,,,,,,,,,,,,,,,,,Stone,,Sandstone,"Bauer 2012, Steinmann 2022",,,20.0,780.0
 Sb2O5/SbO2,thermochemical,,,,,,,,,,,0.0584444444444444,325.0,,,,,,,,,,,,Sb2O5,,,Andre 2016,oxides,,20.0,
 Si,latent_thermal,,,,1410.0,0.4972222222222222,,,,,,,,,,,,,,,,,,,Metallurgical Silicon,,,Alok 2021,,,20.0,
 Si-air,metal_air,,,,,,,,,,2.09,,,,,,,,,,,,,,Metallurgical Silicon,,,Weinrich 2019,,,20.0,

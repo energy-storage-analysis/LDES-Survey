@@ -49,10 +49,11 @@ for name, row in df_latent_ds.iterrows():
 
 
 plt.yscale('log')
-plt.ylim(0.1,20)
+plt.ylim(0.05,20)
 # plt.ylim(0,10)
+plt.xlim(500,1500)
 
-plt.xlabel('Phase Change Temperature (K)')
+plt.xlabel('Phase Change Temperature (deg C)')
 plt.ylabel("Material capital cost ($/kWh)")
 
 plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
@@ -63,7 +64,10 @@ plt.savefig(pjoin(output_dir,'latent.png'))
 # %%
 df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
 df_sens = df_sens.dropna(axis=1, how='all')
+df_sens = df_sens.rename({'Vegetable Oil': 'Veg. Oil'})
+
 df_sens_ds = df_sens.where(df_sens['C_kwh'] < 10).dropna(how='all')
+
 
 plt.figure()
 
@@ -84,10 +88,10 @@ for name, row in df_sens_ds.iterrows():
 
 # plt.xscale('log')
 plt.yscale('log')
-plt.ylim(0.1,20)
+plt.ylim(0.05,20)
 # plt.ylim(0,10)
 
-plt.xlim(0,)
+plt.xlim(-500,3550)
 
 plt.xlabel('Maximum Temperature (deg C)')
 plt.ylabel("Material capital cost ($/kWh)")
@@ -95,7 +99,7 @@ plt.ylabel("Material capital cost ($/kWh)")
 
 plt.gcf().axes[1].set_ylabel('Maximum DeltaT (deg C)')
 
-adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(20,5))
+adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,2))
 
 plt.savefig(pjoin(output_dir,'sensible.png'))
 # %%
@@ -125,14 +129,14 @@ plt.xlim(0,2000)
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.3,1])
 
 plt.yscale('log')
-plt.ylim(0.1,20)
+plt.ylim(0.05,20)
 # plt.ylim(0,10)
 
 plt.xlabel('Reaction Temperature (C)')
 plt.ylabel("Material capital cost ($/kWh)")
 plt.tight_layout()
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.2,1))
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0,5))
 
 plt.savefig(pjoin(output_dir,'thermochem.png'))
 # %%
