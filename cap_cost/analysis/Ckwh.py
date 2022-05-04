@@ -113,6 +113,29 @@ plt.gca().get_legend().remove()
 plt.tight_layout()
 plt.savefig(pjoin(output_dir,'Ckwh_ec.png'))
 
+#%%
+
+therm_types = [
+    'sensible_thermal',
+    'latent_thermal',
+    'thermochemical'
+    ]
+
+
+df_therm = df_all[df_all['SM_type'].isin(therm_types)]
+df_therm['SM_type'] = pd.Categorical(df_therm['SM_type'], categories=therm_types, ordered=True)
+df_therm = df_therm.sort_values('SM_type')
+df_therm = df_therm[df_therm['C_kwh']<1e4]
+
+fig = plt.figure(figsize = (4,8))
+strip_plot(df_therm)
+
+plt.gca().get_legend().remove()
+plt.tight_layout()
+plt.savefig(pjoin(output_dir,'Ckwh_therm.png'))
+
+
+
 
 # %%
 #Raw entries
