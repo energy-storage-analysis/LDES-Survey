@@ -79,7 +79,7 @@ for name, row in df_ec_ds.iterrows():
 # plt.xscale('log')
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 
 # plt.ylim(0,10)
 plt.ylim(2e-1,20)
@@ -147,7 +147,7 @@ for name, row in df_ec_coupled.iterrows():
 ax.set_title('Coupled')
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 
 # plt.ylim(0,10)
 plt.ylim(1e-1,20)
@@ -192,7 +192,7 @@ plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 
 plt.savefig(pjoin(output_dir,'ec_decoupled.png'))
 
@@ -231,7 +231,7 @@ plt.yscale('log')
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 
 plt.savefig(pjoin(output_dir,'ec_decoupled_nofeedstock.png'))
 

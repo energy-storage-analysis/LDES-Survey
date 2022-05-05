@@ -54,7 +54,7 @@ plt.ylim(0.05,20)
 plt.xlim(500,1500)
 
 plt.xlabel('Phase Change Temperature (deg C)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 
 plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
 
@@ -94,7 +94,7 @@ plt.ylim(0.05,20)
 plt.xlim(-500,3550)
 
 plt.xlabel('Maximum Temperature (deg C)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 
 
 plt.gcf().axes[1].set_ylabel('Maximum DeltaT (deg C)')
@@ -133,7 +133,7 @@ plt.ylim(0.05,20)
 # plt.ylim(0,10)
 
 plt.xlabel('Reaction Temperature (C)')
-plt.ylabel("Material capital cost ($/kWh)")
+plt.ylabel("Material Energy Cost ($/kWh)")
 plt.tight_layout()
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0,5))
