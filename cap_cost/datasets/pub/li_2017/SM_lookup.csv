@@ -18,7 +18,7 @@ Na/S,Na/S,2,"[('Na', 1), ('S', 1)]",molar,High temperature,liquid_metal_battery,
 Na/NiCl2,Na/NiCl2,2.58,"[('Na', 1), ('NiCl2(H2O)6', 1)]",molar,High temperature,liquid_metal_battery,AKA ZEBRA https://www.sciencedirect.com/science/article/abs/pii/S0378775303009418
 Li/Pb2Sb,Li/Pb2Sb,0.92,"[('Li', 0.25), ('Pb', 1), ('Sb', 0.25)]",molar,High temperature,liquid_metal_battery,https://www.nature.com/articles/nature13700
 ICB,ICB,1.18,"[('Cr', 1), ('Fe', 1)]",molar,Redox flow,flow_battery,https://energystorage.org/why-energy-storage/technologies/iron-chromium-icb-flow-batteries/
-Fe/Fe,Fe/Fe,1.2,Fe,,Redox flow,flow_battery,https://dornsife.usc.edu/labs/narayan/all-iron-redox-flow-battery/
+Fe/Fe,FeCl2,1.2,FeCl2,,Redox flow,hybrid_flow,https://dornsife.usc.edu/labs/narayan/all-iron-redox-flow-battery/
 PSB,PSB,1.55,"[('S',1), ('Br2', 1)]",molar,Redox flow,flow_battery,"Zhang, H. “Chapter 9 - Polysulfide-Bromine Flow Batteries (PBBs) f"
 VRFB,VRFB,1.55,V,,Redox flow,flow_battery,https://en.wikipedia.org/wiki/Vanadium_redox_battery
 Cu/Cu,Cu/Cu,0.6,Cu,,Redox flow,hybrid_flow,"Sanz, Laura, David Lloyd, Eva Magdalena, Jesús Palma, and Kyösti Kontturi. “Description and Performance of a Novel Aqueous All-Copper Redox Flow Battery.”"

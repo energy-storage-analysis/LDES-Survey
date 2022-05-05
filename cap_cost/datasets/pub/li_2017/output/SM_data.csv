@@ -18,7 +18,7 @@ Na/S,1.6,High temperature,2.0,"[('Na', 1), ('S', 1)]",molar,liquid_metal_battery
 Na/NiCl2,6.6,High temperature,2.58,"[('Na', 1), ('NiCl2(H2O)6', 1)]",molar,liquid_metal_battery
 Li/Pb2Sb,64.1,High temperature,0.92,"[('Li', 0.25), ('Pb', 1), ('Sb', 0.25)]",molar,liquid_metal_battery
 ICB,28.3,Redox flow,1.18,"[('Cr', 1), ('Fe', 1)]",molar,flow_battery
-Fe/Fe,15.5,Redox flow,1.2,Fe,,flow_battery
+FeCl2,15.5,Redox flow,1.2,FeCl2,,hybrid_flow
 PSB,7.4,Redox flow,1.55,"[('S',1), ('Br2', 1)]",molar,flow_battery
 VRFB,124.4,Redox flow,1.55,V,,flow_battery
 Cu/Cu,53.0,Redox flow,0.6,Cu,,hybrid_flow
