@@ -14,14 +14,14 @@ BaCO3/BaO,thermochemical,BaCO3,0.2323888888888889,1555.0,carbonates
 CdCO3/CdO,thermochemical,CdCO3,0.15558333333333335,290.0,carbonates
 ZnCO3/ZnO,thermochemical,ZnCO3,0.1513611111111111,120.0,carbonates
 PbCO3/PbO,thermochemical,PbCO3,0.08722222222222223,310.0,carbonates
-Ca(OH)2/CaO,thermochemical,Ca(OH)2,0.37555555555555553,515.0,hydroxides
-Mg(OH)2/MgO,thermochemical,Mg(OH)2,0.37027777777777776,265.0,hydroxides
-Be(OH)2/BeO,thermochemical,Be(OH)2,0.3308333333333333,70.0,hydroxides
-Mn(OH)2/MnO,thermochemical,Mn(OH)2,0.20944444444444443,190.0,hydroxides
-Sr(OH)2/SrO,thermochemical,Sr(OH)2,0.20230555555555554,755.0,hydroxides
-Ba(OH)2/BaO,thermochemical,Ba(OH)2,0.15151944444444446,1005.0,hydroxides
+Ca(OH)2/CaO,thermochemical,CaO,0.37555555555555553,515.0,hydroxides
+Mg(OH)2/MgO,thermochemical,MgO,0.37027777777777776,265.0,hydroxides
+Be(OH)2/BeO,thermochemical,BeO,0.3308333333333333,70.0,hydroxides
+Mn(OH)2/MnO,thermochemical,MnO2,0.20944444444444443,190.0,hydroxides
+Sr(OH)2/SrO,thermochemical,SrO,0.20230555555555554,755.0,hydroxides
+Ba(OH)2/BaO,thermochemical,BaO,0.15151944444444446,1005.0,hydroxides
 Ni(OH)2/NiO,thermochemical,Ni(OH)2,0.14333333333333334,70.0,hydroxides
-Zn(OH)2/ZnO,thermochemical,Zn(OH)2,0.1386,55.0,hydroxides
+Zn(OH)2/ZnO,thermochemical,Zn,0.1386,55.0,hydroxides
 Cd(OH)2/CdO,thermochemical,Cd(OH)2,0.11372222222222221,125.0,hydroxides
 Rh2O3/Rh2O,thermochemical,Rh2O3,0.2728055555555556,970.0,oxides
 V2O5/V2O4,thermochemical,V2O5,0.26969444444444446,1710.0,oxides
@@ -36,4 +36,4 @@ Cr5O12/Cr2O3,thermochemical,Cr2O3,0.07752777777777778,105.0,oxides
 PtO2/PtO,thermochemical,PtO2,0.07680555555555556,420.0,oxides
 PbO2/PbO,thermochemical,PbO,0.06413888888888888,295.0,oxides
 Sb2O5/SbO2,thermochemical,Sb2O5,0.058444444444444445,325.0,oxides
-Mn2O3/Mn3O4,thermochemical,Mn2O2,0.05280555555555556,915.0,oxides
+Mn2O3/Mn3O4,thermochemical,MnO2,0.05280555555555556,915.0,oxides

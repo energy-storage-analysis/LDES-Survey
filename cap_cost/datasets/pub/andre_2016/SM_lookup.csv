@@ -14,14 +14,14 @@ BaCO3/BaO,thermochemical,BaCO3
 CdCO3/CdO,thermochemical,CdCO3
 ZnCO3/ZnO,thermochemical,ZnCO3
 PbCO3/PbO,thermochemical,PbCO3
-Ca(OH)2/CaO,thermochemical,Ca(OH)2
-Mg(OH)2/MgO,thermochemical,Mg(OH)2
-Be(OH)2/BeO,thermochemical,Be(OH)2
-Mn(OH)2/MnO,thermochemical,Mn(OH)2
-Sr(OH)2/SrO,thermochemical,Sr(OH)2
-Ba(OH)2/BaO,thermochemical,Ba(OH)2
+Ca(OH)2/CaO,thermochemical,CaO
+Mg(OH)2/MgO,thermochemical,MgO
+Be(OH)2/BeO,thermochemical,BeO
+Mn(OH)2/MnO,thermochemical,MnO2
+Sr(OH)2/SrO,thermochemical,SrO
+Ba(OH)2/BaO,thermochemical,BaO
 Ni(OH)2/NiO,thermochemical,Ni(OH)2
-Zn(OH)2/ZnO,thermochemical,Zn(OH)2
+Zn(OH)2/ZnO,thermochemical,Zn
 Cd(OH)2/CdO,thermochemical,Cd(OH)2
 Rh2O3/Rh2O,thermochemical,Rh2O3
 V2O5/V2O4,thermochemical,V2O5
@@ -36,4 +36,4 @@ Cr5O12/Cr2O3,thermochemical,Cr2O3
 PtO2/PtO,thermochemical,PtO2
 PbO2/PbO,thermochemical,PbO
 Sb2O5/SbO2,thermochemical,Sb2O5
-Mn2O3/Mn3O4,thermochemical,Mn2O2
+Mn2O3/Mn3O4,thermochemical,MnO2
