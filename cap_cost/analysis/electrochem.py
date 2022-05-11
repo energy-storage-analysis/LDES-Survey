@@ -237,3 +237,50 @@ plt.savefig(pjoin(output_dir,'ec_decoupled_nofeedstock.png'))
 
 
 # %%
+
+### Flow 
+
+df_ec_coupled = df.where(df['SM_type'].isin([
+'hybrid_flow',
+])).dropna(subset=['SM_type'])
+
+df_ec_decoupled = df.where(df['SM_type'].isin([
+'flow_battery',
+])).dropna(subset=['SM_type'])
+
+df = pd.concat([df_ec_coupled, df_ec_decoupled])
+
+# df_plot = df.where(df['C_kwh'] < 10).dropna(how='all')
+df_plot = df
+# %%
+plt.figure(figsize = (7,5))
+
+x_str='deltaV'
+y_str='C_kwh'
+
+sns.scatterplot(data=df_plot, y=y_str, x=x_str, hue='SM_type', legend=True)
+
+ax = plt.gca()
+texts = []
+for name, row in df_plot.iterrows():
+    x = row[x_str]
+    y = row[y_str]
+
+    txt= ax.text(x, y, "${}$".format(name))
+    texts.append(txt)
+
+# plt.xscale('log')
+ax.set_title('Coupled')
+
+plt.xlabel('Couple Voltage (V)')
+plt.ylabel("Material Energy Cost ($/kWh)")
+
+# plt.ylim(0,10)
+# plt.ylim(1e-1,20)
+plt.yscale('log')
+
+# plt.xlim(0,5.5)
+
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.2,1))
+
+plt.savefig(pjoin(output_dir,'ec_flow_all.png'))

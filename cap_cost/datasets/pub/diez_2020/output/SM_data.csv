@@ -14,3 +14,7 @@ FeCl3Zn,Iron-acidic (FeCl3),1.53,100,hybrid_flow,"[('Zn', 1), ('FeCl2', 1)]",mol
 Ce4/Zn,Cerium (Ce4+),2.37,,hybrid_flow,"[('Zn', 1), ('CeO2', 1)]",molar
 I3/Zn,Iodine (I3?),1.27,,hybrid_flow,"[('Zn', 1), ('I2', 1)]",molar
 TEMPO/Zn,TEMPOL (organic),1.46,,hybrid_flow,"[('Zn', 1), ('TEMPO', 1)]",molar
+V-air,,1.49,,metal_air,"[('V2O5', 2), ('Air', 1)]",molar
+Zn/Br2,,1.85,,hybrid_flow,ZnBr2,
+V/Br,,1.29,,flow_battery,"[('HBr', 7) , ('HCl', 1), ('V2O5', 1)]",molar
+H2/Br2,,1.09,,flow_battery,HBr,

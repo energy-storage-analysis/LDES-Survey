@@ -64,6 +64,13 @@ df = df.dropna(subset=['SM_name'])
 df = df.set_index('SM_name')
 
 df = df.dropna(subset=['materials'])
+
+#%%
+#Data not included in tables
+custom_data = pd.read_csv('tables/custom.csv', index_col=0)
+
+df = pd.concat([df, custom_data])
+
 # %%
 
 df.to_csv('output/SM_data.csv')
