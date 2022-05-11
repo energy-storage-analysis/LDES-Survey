@@ -15,22 +15,11 @@ output_dir = 'output/single_tech'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 df_SM = pd.read_csv('../data_consolidated/SM_data.csv', index_col=[0,1])
-df_Ckwh = pd.read_csv('../data_consolidated/C_kwh.csv', index_col=[0,1])
-
-common_columns = [c for c in df_SM.columns if c in df_Ckwh.columns]
-
-df_SM = df_SM.drop(common_columns, axis=1)
-
-df = pd.concat([df_SM, df_Ckwh], axis=1)
-
-df = df.reset_index('SM_type')
+df = df_SM.reset_index('SM_type')
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
-
-
-df.index
 #%%
 
 df['SM_type'].value_counts()

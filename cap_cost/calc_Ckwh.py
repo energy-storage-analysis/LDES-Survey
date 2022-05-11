@@ -211,7 +211,12 @@ df_out['C_kwh'] = df_out['specific_price']/df_out['specific_energy']
 
 # %%
 
-df_out.to_csv('data_consolidated/C_kwh.csv')
+#Drop columns in df_SMs so that duplicate columns don't keep getting added when rerunning this script without rerunning consolidate data. I.e. we are writing or overwriting the values.
+df_SMs = df_SMs[[col for col in df_SMs.columns if col not in df_out.columns]]
+
+df_SMs = pd.concat([df_SMs, df_out], axis=1)
+
+df_SMs.to_csv('data_consolidated/SM_data.csv')
 
 # %%
 df_sel = df_out.where(df_out['C_kwh'] < 10).dropna(how='all')

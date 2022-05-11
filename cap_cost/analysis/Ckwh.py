@@ -18,7 +18,7 @@ if not os.path.exists(output_dir): os.makedirs(output_dir)
 palette = pd.read_csv('energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
-df_all = pd.read_csv('../data_consolidated/C_kWh.csv', index_col=0)
+df_all = pd.read_csv('../data_consolidated/SM_data.csv', index_col=0)
 df_all = df_all.dropna(subset=['C_kwh'])
 
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
