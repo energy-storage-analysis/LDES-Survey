@@ -18,6 +18,14 @@ df_SMs = pd.read_csv('../data_consolidated/SM_data.csv', index_col=[0,1])
 df = df_SMs.reset_index('SM_type')
 #%%
 
+
+# df = df.where(df['SM_type'].isin([
+#     'flow_battery',
+#     'hybrid_flow'
+# ])).dropna(subset=['SM_type'])
+
+
+
 # Bokeh plot with all tech 
 from bokeh.plotting import figure, show, save, output_file
 from bokeh.models import HoverTool
