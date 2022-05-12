@@ -1,5 +1,5 @@
-SM_name,SM_type,materials,mat_basis,deltaV
-V-air,metal_air,"[('V2O5', 2), ('Air', 1)]",molar,1.49
-Zn/Br2,hybrid_flow,ZnBr2,,1.85
-V/Br,flow_battery,"[('HBr', 7) , ('HCl', 1), ('V2O5', 1)]",molar,1.29
-H2/Br2,flow_battery,HBr,,1.09
+SM_name,SM_type,materials,mat_basis,deltaV,n_e
+V-air,metal_air,"[('V2O5', 2), ('Air', 1)]",molar,1.49,4
+Zn/Br2,hybrid_flow,ZnBr2,,1.85,2
+V/Br,flow_battery,"[('HBr', 7) , ('HCl', 1), ('V2O5', 1)]",molar,1.29,2
+H2/Br2,flow_battery,HBr,,1.09,1

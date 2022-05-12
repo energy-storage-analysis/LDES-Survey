@@ -42,6 +42,8 @@ tables['table_2'].columns = ['system', 'product','voltage','specific_energy','en
 
 tables['table_2']['system'] = tables['table_2']['system'].replace('',np.nan).fillna(method='ffill')
 
+tables['table_1'].columns = ['system', 'primary_reaction','n_e','voltage','mass_density','specific_energy','vol_energy_density','mass_density_product','specific_energy_product', 'vol_energy_density_product','ref']
+tables['table_1']['system'] = tables['table_1']['system'].replace('',np.nan).fillna(method='ffill')
 #%%
 
 output_folder = 'tables'

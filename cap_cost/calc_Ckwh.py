@@ -141,7 +141,7 @@ chemical = chemical.to_frame()
 
 F = 96485 # C/mol
 #TODO: deltaV means battery deltaV
-electrochemical = (1/3600)*F*df_SMs['deltaV']/df_SMs['mu_total']
+electrochemical = (1/3600)*F*df_SMs['n_e']*df_SMs['deltaV']/df_SMs['mu_total']
 electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()
 

@@ -1,8 +1,6 @@
 #%%
 import os
-from re import I
 import pandas as pd
-from sympy import O
 
 if not os.path.exists('output'): os.mkdir('output')
 
@@ -66,7 +64,25 @@ df_couples['index'] = df_couples.index
 #This is in place of a SM lookup
 df_couples[['A','B']] = df_couples['index'].str.split('/',expand=True)
 
-df_couples['materials'] = "[('" + df_couples['A'] + "', 1), ('" + df_couples['B'] + "', 1)]"
+
+#Calculate the valence and mole fractions based on section 3.1.1 in the text
+#TODO: I'm not sure if I'm doing this right. in particular I don't understand eq. 10, and if that works with the way molar fracitons are calculated in our framework.
+valences = {
+    'Mg': 2, 
+    'Ba': 2, 
+    'Ca': 2, 
+    'K': 1, 
+    'Na': 1, 
+    'Li': 1
+}
+
+df_couples['n_e'] = [valences[A] for A in df_couples['A'].values]
+
+x_Ad = df_couples['n_e']/(1+df_couples['n_e'])
+x_Bd = 1 - x_Ad
+
+# df_couples['materials'] = "[('" + df_couples['A'] + "', 1), ('" + df_couples['B'] + "', 1)]"
+df_couples['materials'] = "[('" + df_couples['A'] + "', " + x_Ad.astype(str) +"), ('" + df_couples['B'] + "', " + x_Bd.astype(str) + ")]"
 df_couples['materials'] = df_couples['materials'].astype(str)
 
 df_couples = df_couples.drop(['A', 'B'], axis=1)
