@@ -7,7 +7,7 @@ Zn/NiOOH,44.2,Zn2+ based,1.74,2.0,"[('Zn', 1), ('Ni(OH)2', 2 )]",molar,solid_ele
 Zn/MnO2,9.0,Zn2+ based,1.5,2.0,"[('Zn', 1), ('MnO2', 1)]",molar,solid_electrode
 Zn/Fe,9.3,Zn2+ based,1.99,2.0,"[('Zn', 1), ('Fe', 2)]",molar,hybrid_flow
 Zn/Zn0.25V2O5,50.7,Zn2+ based,1.4,2.2,"[('Zn', 1.35), ('V2O5', 1)]",molar,solid_electrode
-Mg/Ti2S4,358.7,Mg2+ based,1.7,1.0,"[('Mg', 0.25), ('TiS2', 0.75)]",molar,solid_electrode
+Mg/Ti2S4,358.7,Mg2+ based,1.7,2.0,"[('Mg', 1), ('TiS2', 1)]",molar,solid_electrode
 Li/S,13.7,Lithium metal,2.5,2.0,"[('Li', 2), ('S', 1)]",molar,solid_electrode
 Li/TiS2,192.1,Lithium metal,2.5,1.0,"[('Li', 1), ('TiS2', 1)]",molar,solid_electrode
 Li/MoS2,35.7,Lithium metal,2.5,1.0,"[('Li', 1), ('MoS2', 1)]",molar,solid_electrode
@@ -20,7 +20,7 @@ ICB,28.3,Redox flow,1.18,1.0,"[('Cr', 1), ('Fe', 1)]",molar,flow_battery
 FeCl2,15.5,Redox flow,1.2,2.0,"[('FeCl2', 3)]",molar,hybrid_flow
 PSB,7.4,Redox flow,1.55,1.0,"[('Na', 1), ('S',1), ('NaBr', 1)]",molar,flow_battery
 VRFB,124.4,Redox flow,1.55,1.0,V2O5,,flow_battery
-Cu/Cu,53.0,Redox flow,0.6,1.0,Cu,,hybrid_flow
+Cu/Cu,53.0,Redox flow,0.6,1.0,"[('Cu', 2)]",molar,hybrid_flow
 ,57.9,Redox flow,0.92,,"[('AQDS', 1), ('Br2', 1)]",molar,flow_battery
 "S/Air(Na, Acid)",1.7,Flow-air,1.35,2.0,"[('Na', 1), ('S', 1)]",molar,flow_battery
 "S/Air(Na, Base)",4.0,Flow-air,0.65,2.0,"[('Na', 1), ('S', 1)]",molar,flow_battery

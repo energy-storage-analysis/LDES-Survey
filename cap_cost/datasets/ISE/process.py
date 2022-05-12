@@ -126,6 +126,8 @@ hydrate_list = [
 
 for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
     df_price.loc[hydrate_formula,'specific_price'] = df_price.loc[hydrate_formula,'specific_price']*calc_hydrate_factor(anhydrous_formula, hydrate_count)
+
+    df_price.loc[hydrate_formula,'molecular_formula'] = anhydrous_formula
     df_price = df_price.rename({hydrate_formula: anhydrous_formula})
 #%%
 

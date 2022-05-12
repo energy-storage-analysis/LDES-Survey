@@ -33,6 +33,18 @@ df_prices = df_stats[['median', 'std','ratio','count']]
 
 df_prices.to_csv('output/processed.csv')
 
-df_prices[['median']].rename({'median':'specific_price'}, axis=1).to_csv('output/mat_data.csv')
+df_mat_data = df_prices[['median']].rename({'median':'specific_price'}, axis=1)
+
+
+#%%
+search_table = pd.read_csv(r'scrapy_alibaba\resources\mat_data_searches.csv', index_col=0)
+
+search_table = search_table[~search_table.index.duplicated()]
+
+df_mat_data['molecular_formula'] = search_table.loc[df_mat_data.index]['molecular_formula']
+
+#%%
+
+df_mat_data.to_csv('output/mat_data.csv')
 
 # %%

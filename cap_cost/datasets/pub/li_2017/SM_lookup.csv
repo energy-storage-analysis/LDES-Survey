@@ -7,7 +7,7 @@ Zn/NiOOH,Zn/NiOOH,1.74,2,"[('Zn', 1), ('Ni(OH)2', 2 )]",molar,Zn2+ based,solid_e
 Zn/MnO2,Zn/MnO2,1.5,2,"[('Zn', 1), ('MnO2', 1)]",molar,Zn2+ based,solid_electrode,https://en.wikipedia.org/wiki/Alkaline_battery
 Zn/Fe,Zn/Fe,1.99,2,"[('Zn', 1), ('Fe', 2)]",molar,Zn2+ based,hybrid_flow,https://pubs.rsc.org/en/content/articlelanding/2015/ee/c5ee02315g
 Zn/Zn0.25V2O5,Zn/Zn0.25V2O5,1.4,2.2,"[('Zn', 1.35), ('V2O5', 1)]",molar,Zn2+ based,solid_electrode,"Appears to be aqueous but intercalation based operation (not flow). Delta V taken from figure 4a in Kundu et al. "
-Mg/Ti2S4,Mg/Ti2S4,1.7,1,"[('Mg', 0.25), ('TiS2', 0.75)]",molar,Mg2+ based,solid_electrode,deltaV taken from figure https://pubs.rsc.org/en/content/articlelanding/2016/ee/c6ee00724d
+Mg/Ti2S4,Mg/Ti2S4,1.7,2,"[('Mg', 1), ('TiS2', 1)]",molar,Mg2+ based,solid_electrode,A high capacity thiospinel cathode for Mg batteries
 Li/S,Li/S,2.5,2,"[('Li', 2), ('S', 1)]",molar,Lithium metal,solid_electrode,https://en.wikipedia.org/wiki/Lithium%E2%80%93sulfur_battery
 Li/TiS2,Li/TiS2,2.5,1,"[('Li', 1), ('TiS2', 1)]",molar,Lithium metal,solid_electrode,https://www.science.org/doi/10.1126/science.192.4244.1126
 Li/MoS2,Li/MoS2,2.5,1,"[('Li', 1), ('MoS2', 1)]",molar,Lithium metal,solid_electrode,https://patents.google.com/patent/US4224390A/en
@@ -20,7 +20,7 @@ ICB,ICB,1.18,1,"[('Cr', 1), ('Fe', 1)]",molar,Redox flow,flow_battery,https://en
 Fe/Fe,FeCl2,1.2,2,"[('FeCl2', 3)]",molar,Redox flow,hybrid_flow,https://dornsife.usc.edu/labs/narayan/all-iron-redox-flow-battery/
 PSB,PSB,1.55,1,"[('Na', 1), ('S',1), ('NaBr', 1)]",molar,Redox flow,flow_battery,"Zhang, H. “Chapter 9 - Polysulfide-Bromine Flow Batteries (PBBs) f"
 VRFB,VRFB,1.55,1,V2O5,,Redox flow,flow_battery,https://en.wikipedia.org/wiki/Vanadium_redox_battery
-Cu/Cu,Cu/Cu,0.6,1,Cu,,Redox flow,hybrid_flow,"Sanz, Laura, David Lloyd, Eva Magdalena, Jesús Palma, and Kyösti Kontturi. “Description and Performance of a Novel Aqueous All-Copper Redox Flow Battery.”"
+Cu/Cu,Cu/Cu,0.6,1,"[('Cu', 2)]",molar,Redox flow,hybrid_flow,"Sanz, Laura, David Lloyd, Eva Magdalena, Jesús Palma, and Kyösti Kontturi. “Description and Performance of a Novel Aqueous All-Copper Redox Flow Battery.”"
 AQDS/Br,,0.92,,"[('AQDS', 1), ('Br2', 1)]",molar,Redox flow,flow_battery,"Huskinson, B. et al. A metal-free organic-inorganic aqueous flow batter"
 "Aq-S/air  (Na, H+)","S/Air(Na, Acid)",1.35,2,"[('Na', 1), ('S', 1)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"
 "Aq-S/air  (Na, OH-)","S/Air(Na, Base)",0.65,2,"[('Na', 1), ('S', 1)]",molar,Flow-air,flow_battery,"Taken from Li 2017 Table 5, dropping some insignificant components"

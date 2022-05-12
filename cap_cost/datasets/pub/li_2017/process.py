@@ -40,6 +40,7 @@ hydrate_list = [
 
 for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
     table_3.loc[hydrate_formula,'specific_price'] = table_3.loc[hydrate_formula,'specific_price']*calc_hydrate_factor(anhydrous_formula, hydrate_count)
+    table_3.loc[hydrate_formula,'molecular_formula'] = anhydrous_formula
     table_3 = table_3.rename({hydrate_formula: anhydrous_formula})
 
 
