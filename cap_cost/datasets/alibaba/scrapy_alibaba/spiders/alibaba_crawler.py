@@ -9,7 +9,7 @@ import itertools
 import sys
 import pandas as pd
 
-START_ROW = 0
+START_ROW = 136
 NUM_ROWS = sys.maxsize
 
 RESOURCE_FOLDER = os.path.join(os.path.dirname(__file__), "../resources")

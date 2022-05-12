@@ -41,7 +41,11 @@ search_table = pd.read_csv(r'scrapy_alibaba\resources\mat_data_searches.csv', in
 
 search_table = search_table[~search_table.index.duplicated()]
 
-df_mat_data['molecular_formula'] = search_table.loc[df_mat_data.index]['molecular_formula']
+
+df_mat_data = pd.merge(df_mat_data.reset_index(), search_table[['molecular_formula']].reset_index())
+
+df_mat_data = df_mat_data.set_index('index')
+# df_mat_data['molecular_formula'] = search_table.loc[df_mat_data.index]['molecular_formula']
 
 #%%
 
