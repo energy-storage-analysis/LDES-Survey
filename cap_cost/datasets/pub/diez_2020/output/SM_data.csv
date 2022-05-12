@@ -12,7 +12,7 @@ Ni/Zn,Nickel (NiOOH),1.73,356,hybrid_flow,1.0,"[('Zn', 1), ('Ni(OH)2', 1)]",mola
 K3[Fe(CN)6]/Zn,Iron-alkaline K3[Fe(CN)6],1.61,79,hybrid_flow,1.0,"[('Zn', 1), ('K4Fe(CN)6', 1)]",molar
 FeCl3Zn,Iron-acidic (FeCl3),1.53,100,hybrid_flow,1.0,"[('Zn', 1), ('FeCl2', 1)]",molar
 Ce4/Zn,Cerium (Ce4+),2.37,,hybrid_flow,1.0,"[('Zn', 1), ('CeO2', 1)]",molar
-I3/Zn,Iodine (I3?),1.27,,hybrid_flow,1.0,"[('Zn', 1), ('I2', 1)]",molar
+I3/Zn,Iodine (I3?),1.27,,hybrid_flow,1.0,ZnI2,molar
 TEMPO/Zn,TEMPOL (organic),1.46,,hybrid_flow,1.0,"[('Zn', 1), ('TEMPO', 1)]",molar
 V-air,,1.49,,metal_air,4.0,"[('V2O5', 2), ('Air', 1)]",molar
 Zn/Br2,,1.85,,hybrid_flow,2.0,ZnBr2,
