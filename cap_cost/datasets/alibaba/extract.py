@@ -61,7 +61,7 @@ df= df.dropna(subset=['min_unit'])
 
 df['price'] = df['price'].str.extract("\$(\S+)")
 
-df['price'] = df['price'].str.replace('.00','', regex=False)
+df['price'] = df['price'].str.replace('\.00$','', regex=True)
 df['price'] = df['price'].str.replace(',','', regex=False)
 df['price'] = df['price'].astype(float)
 
