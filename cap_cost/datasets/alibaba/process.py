@@ -5,6 +5,11 @@ df = pd.read_csv('output/extracted.csv', index_col=0)
 
 df = df.dropna(subset=['keep']) #Get rid of manually dropped entries
 
+df = df[df['specific_price'] != 0.001] # Drop prices that are exactly 0.001 $/kg, vendors seem to do this for visibility
+
+len(df)
+#%%
+
 price_use = df['scaled_anhydrous_price'].fillna(df['specific_price'])
 df['specific_price'] = price_use
 
