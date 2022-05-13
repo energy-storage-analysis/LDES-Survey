@@ -54,6 +54,8 @@ T=330
 
 df_gas['mass_density'] = (df_gas['mu']*P_cavern)/(R*T)
 
+df_gas.loc['H2O', 'mass_density'] = 1000
+
 sm_names = []
 SPs = []
 mol_forms = []
