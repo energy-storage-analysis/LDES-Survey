@@ -44,6 +44,30 @@ df_SM.index.name = 'SM_name'
 
 #%%
 
+from collections import Counter
+
+def get_source_SM_counts(df):
+    counts = Counter(df)
+    counts = str(dict(counts))
+    return counts
+
+SM_source_info = df_SM.groupby('source')['SM_type'].apply(get_source_SM_counts).dropna()
+SM_source_info.name = 'SM types'
+
+price_source_info = df_mat_data.groupby('source').apply(len)
+price_source_info.name = 'num prices'
+
+source_info = pd.concat([SM_source_info, price_source_info],axis=1 )
+
+source_info = source_info.sort_index()
+
+source_info['num prices'] = source_info['num prices'].fillna(0).astype(int).astype(str).str.replace('^0$','-',regex=True)
+source_info['SM types'] = source_info['SM types'].fillna('-')
+
+source_info.to_csv('analysis/output/source_info.csv')
+
+#%%
+
 #We are going to index by both SM_name and SM_type, then average all duplicate values that are floats
 
 df_SM = df_SM.reset_index().set_index(['SM_name','SM_type'])
