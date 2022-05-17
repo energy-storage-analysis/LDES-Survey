@@ -11,7 +11,6 @@ tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='ut
 SM_lookup = pd.read_csv('SM_lookup.csv')
 chem_lookup = pd.read_csv('chem_lookup.csv')
 #%%
-
 df_t21 = tables['table_21']
 
 df_t21 = df_t21.rename({
@@ -21,9 +20,7 @@ df_t21 = df_t21.rename({
 'Estimated Material cost [€/ton]': 'specific_price'
 }, axis=1)
 
-
 df_t21.index.name = 'original_name'
-
 
 df_t21['Cp'] = df_t21['Cp']/3600000
 df_t21['specific_price'] = df_t21['specific_price'].fillna('').apply(average_range).replace('',np.nan).astype(float)
@@ -33,12 +30,7 @@ df_t21['T_range'] = df_t21['T_range'].str.replace('\n','').str.replace('°C','')
 
 df_t21[['T_melt', 'T_max']] = df_t21['T_range'].str.split('-', expand=True)[[0,1]]
 
-# df_t21['deltaT']
-
 df_t21 = df_t21.drop('T_range', axis=1)
-
-
-df_t21
 
 df_t21 = pd.concat([
 df_t21.iloc[1:4],#.assign(Type='Molten Salt'),
@@ -56,20 +48,11 @@ df_t21 = df_t21.rename({
     "salt (HTS), HITEC-HTS (Coastal": 'HITEC XL'
     })
 
-# df_t21 = pd.merge(df_t21, SM_lookup, on='original_name')
-
-df_t21
-
-
 #%%
-
 df_t23 = tables['table_23']
 
 df_t23 = df_t23.rename({
 'Maximum\nTemperature Difference ∆Tmax [K]': 'deltaT_max',
-# 'Maximum\nVolume specific capacity [kWh/m3] ∆T \n ∆Tmax\n=': ,
-# 'Maximum\nMass specific capacity [kWh/ton] ∆T \n ∆Tmax\n=',
-# 'Minimum Estimated \nCapacity specific material costs [€/kWh] ∆T \n ∆Tmax\n='
 }, axis=1)
 
 df_t23.index.name = 'original_name'
@@ -84,20 +67,13 @@ df_t23 = df_t23.rename({
     "KNO3-NaNO3-Ca(NO3)2": 'HITEC XL'
     })
 
-# df_t23 = pd.merge(df_t23, SM_lookup, on='original_name')
 
-df_t23
-
-# df_t23.loc[df_t21.index]
 #%%
-
 df_liquid = pd.concat([df_t21, df_t23], axis=1)
 df_liquid = df_liquid[['Cp', 'mass_density','T_melt', 'T_max', 'deltaT_max','specific_price']]
 df_liquid
 
 #%%
-
-
 df_t31 = tables['table_31']
 
 df_t31 = df_t31.rename({
@@ -124,7 +100,6 @@ df_t31
 
 
 #%%
-
 df_t32 = tables['table_32']
 
 df_t32 = df_t32.rename({
@@ -142,13 +117,10 @@ df_t32['kth'] = df_t32['kth'].apply(average_range)
 df_t32
 
 #%%
-
 df_solid = pd.concat([df_t31,df_t32], axis=1)
 df_solid
 
 #%%
-
-
 df_t62 = tables['table_62']
 df_t62 = df_t62.dropna(how='all')
 
@@ -171,8 +143,6 @@ df_t62 = df_t62.rename({'LiF-CaF2\n80-20%': 'LiF-CaF2'})
 df_t62
 
 #%%
-
-
 df_t63 = tables['table_63']
 df_t63 = df_t63.dropna(how='all')
 
@@ -190,21 +160,12 @@ df_t63
 
 
 #%%
-
-
-
 df_pcm = pd.concat([df_t62,df_t63], axis=1)
 df_pcm
 
-
-# df_solid.to_csv('SM_lookup_temp.csv')
 #%%
 
-# df = df.rename({}, axis=1)
-
 df_all = pd.concat([df_liquid,df_solid, df_pcm])
-
-# df_all = df_all.drop('deltaT_max', axis=1)
 
 df_SM = df_all.drop('specific_price', axis=1)
 
@@ -231,10 +192,4 @@ original_names = df_mat.groupby('index')['original_name'].apply(join_col_vals)
 original_names.name = 'original_name'
 df_mat = pd.concat([specific_prices,original_names], axis=1)
 
-
-
 df_mat.to_csv('output/mat_data.csv')
-
-# %%
-
-# %%

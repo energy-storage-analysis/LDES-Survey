@@ -3,8 +3,6 @@ import os
 import pandas as pd
 
 if not os.path.exists('output'): os.mkdir('output')
-
-
 df_table4 = pd.read_csv('tables/table_4.csv', index_col=0)
 
 #%%
@@ -29,9 +27,6 @@ df_price.to_csv('output/mat_data.csv')
 
 
 #%%
-
-import sys
-
 from es_utils.pdf import average_range
 
 import numpy as np
@@ -45,9 +40,6 @@ for column in df_table3.columns:
     df_table3[column] = df_table3[column].astype(str).apply(average_range)
 
 df_table3 = df_table3.replace('',np.nan)
-
-df_table3
-
 
 #%%
 

@@ -33,15 +33,7 @@ if not os.path.exists('output'): os.mkdir('output')
 
 df.to_csv('output/processed.csv')
 
-# %%
-
-
-
-
-
-
 #%%
-
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
@@ -68,21 +60,3 @@ df_SMs.groupby(level=0)['materials'].apply(es_utils.join_col_vals),
 ], axis=1)
 
 df_out.to_csv('output/SM_data.csv')
-# %%
-
-
-#TODO: incorporate chem lookup? Only getting molecular formulas. Going to define those along with prices in custom data anyway... 
-
-# materials = df_SMs['materials'].to_list()
-# flat_list = [item for sublist in materials for item in sublist]
-
-# #This is just to get the molecular formulas of the materials, many duplicates
-
-# chem_lookup = pd.read_csv('chem_lookup.csv')
-# chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup, mtp=None)
-# df_mat_data= pd.merge(df, chem_lookup, on='original_name').set_index('index')
-
-# df_mat_data = df_mat_data[['original_name', 'molecular_formula']]
-
-# df_mat_data.to_csv('output/mat_data.csv')
-

@@ -1,9 +1,7 @@
 #%%
 import pandas as pd
-import os
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-#TODO: process salt mixture table
 df_table12 = pd.read_csv('tables/table_12_single.csv', index_col=0)
 
 #I am not sure exatly what the other 'latent heat' entry is in the table (booiling?)
@@ -81,10 +79,6 @@ df_SMs = pd.concat([
 ])
 
 
-# df_SMs['SM_type'] = 'latent_thermal'
-# df_SMs = df_SMs
-#No SM lookup needed as SM are just just the materials
-
 df_SMs
 #%%
 df_SMs = pd.merge(df_SMs, SM_lookup, on='original_name')
@@ -95,12 +89,7 @@ df_SMs
 
 #%%
 
-# df_SMs['SM_type'] = 'latent_thermal'
 df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','mat_basis','SM_type']]
-# df_SMs = df_SMs.rename({'molecular_formula': 'materials'}, axis=1) #All signle materia molecular form
-
-# df_SMs.index.name = 'SM_name'
-
 df_SMs = df_SMs.dropna(subset=['materials'])
 
 df_SMs.to_csv('output/SM_data.csv')

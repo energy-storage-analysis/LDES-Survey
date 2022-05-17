@@ -1,5 +1,4 @@
 #%%
-from re import I
 import pandas as pd
 import os
 
@@ -21,12 +20,8 @@ df_t1.index.name = 'original_name'
 
 df_t1 = df_t1[['deltaV','C_kwh_orig']]
 
-df_t1
-
 
 #%%
-
-
 df_t2 = tables['table_2']
 df_t2.columns
 #%%
@@ -42,7 +37,6 @@ df_t2 = df_t2[['deltaV','C_kwh_orig']]
 
 df_t2
 
-# df.to_csv('SM_lookup.csv')
 #%%
 
 df = pd.concat([
@@ -55,9 +49,6 @@ df['C_kwh_orig'] = df['C_kwh_orig'].str.replace('<', '')
 df['C_kwh_orig'] = df['C_kwh_orig'].str.replace('-', '')
 df['C_kwh_orig'] = df['C_kwh_orig'].str.replace('N. A.', '', regex=False)
 
-
-# df = df.rename({}, axis=1)
-# 
 SM_lookup = pd.read_csv('SM_lookup.csv')
 df = pd.merge(df, SM_lookup, on='original_name')
 df = df.dropna(subset=['SM_name'])

@@ -1,15 +1,9 @@
 #%%
-import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import sys
-
 
 from es_utils.pdf import average_range
-
-
-# %%
 
 df = pd.read_csv('ISE.csv', encoding='ISO-8859-1')
 
@@ -27,19 +21,9 @@ df['price'] = df['price'].astype(float)
 
 df[['currency','mass_unit']] = df['Unit'].str.split(' / ', expand=True)
 df['mass_unit'] = df['mass_unit'].astype('string')
-# df = df.drop('Unit', axis=1)
-df
 
-
-#%%
-
-#%%
-df['currency'].value_counts()
 #%%
 df = df.where(df['currency'] == 'USD').dropna(subset=['currency'])
-df
-#%%
-
 
 df['mass_unit'] = df['mass_unit'].replace({
     'lb Co': 'lb',
@@ -52,7 +36,6 @@ df['mass_unit'] = df['mass_unit'].replace({
 df['mass_unit'].value_counts()
 #%%
 import pint
-import pint_pandas
 
 ureg = pint.UnitRegistry()
 ureg.load_definitions('unit_defs.txt')
@@ -86,13 +69,7 @@ df['original_name'] = df['original_name'].replace({
 df[['original_name', 'commodity_info']] = df['original_name'].str.split(' ', expand=True)
 #%%
 
-df['original_name'].value_counts()
-
-#%%
-
-# df['commodity_info'] = df['commodity_info'].replace({'Conc.': 'Concrete'})
 df['original_name'] = df['original_name'] + ' ' + df['commodity_info']
-
 
 from es_utils.chem import process_chem_lookup
 
@@ -104,8 +81,6 @@ df = pd.merge(df, chem_lookup, on='original_name')
 df.to_csv('output/processed.csv', index=False)
 
 # %%
-
-# df = df[['material_name','original_name','commodity_info','Specification','specific_price']]
 
 df_combine = df.groupby('index')[['specific_price']].mean()
 
@@ -130,7 +105,4 @@ for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
     df_price.loc[hydrate_formula,'molecular_formula'] = anhydrous_formula
     df_price = df_price.rename({hydrate_formula: anhydrous_formula})
 #%%
-
-
-
 df_price.to_csv('output/mat_data.csv')
