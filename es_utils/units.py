@@ -63,3 +63,18 @@ def read_pint_df(filepath, index_col=0):
     df = df.astype(types)
 
     return df
+
+unit_lookup = {
+    'specific_price': 'USD/kg',
+    'sp_latent_heat': 'kWh/kg',
+    'phase_change_T': 'degC',
+    'Cp': 'kWh/kg/K',
+}
+
+def convert_units(df):
+    for key, unit in unit_lookup.items():
+        if key in df.columns:
+            df[key] = df[key].pint.to(unit)
+    
+    return df
+

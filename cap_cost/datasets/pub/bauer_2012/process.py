@@ -35,12 +35,10 @@ df = df.astype({
     'kth': 'pint[W/m/K]'
     })
 
-df['Cp'] = df['Cp'].pint.to('kWh/kg/K')
+from es_utils.units import prep_df_pint_out, convert_units
 
-from es_utils.units import prep_df_pint_out
-
+df = convert_units(df)
 df = prep_df_pint_out(df)
-
 
 df.to_csv('output/SM_data.csv')
 # %%
