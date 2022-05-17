@@ -1,9 +1,7 @@
 #%%
 from os.path import join as pjoin
 import os
-from re import I
 import pandas as pd
-from sympy import O
 
 if not os.path.exists('output'): os.mkdir('output')
 
@@ -19,9 +17,6 @@ df_a1 = df_a1.rename({
 df_a1['specific_price'] = df_a1['relative_cost']*1 #TODO:assuming relative cost to 1$/kg
 
 df_a1['specific_strength'] = df_a1['yield_strength']/df_a1['density']
-
-
-
 
 
 #Table A2
@@ -51,10 +46,6 @@ df = pd.concat([
     df_a1[col_select],
     df_a2[col_select],
 ])
-
-# df = df.set_index('original_name', drop=True)
-df
-
 #%%
 mat_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
 
@@ -62,7 +53,6 @@ from es_utils.chem import process_chem_lookup
 mat_lookup = process_chem_lookup(mat_lookup)
 
 df_mat = pd.merge(df, mat_lookup, on='original_name')
-
 
 #For the mat data, we group by price index
 
@@ -76,13 +66,9 @@ df_mat_grouped['molecular_formula']= df_mat.groupby('index')['molecular_formula'
 
 df_mat_grouped.to_csv('output/mat_data.csv')
 
-
 #%%
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
-
-
-
 
 df_SMs = df[['original_name', 'specific_strength']].set_index('original_name')
 
@@ -111,9 +97,5 @@ for SM_type, Qmax in Qmaxs.items():
 df_SMs = pd.concat(dfs)
 #%%
 
-
-
-
 df_SMs.index.name = 'SM_name'
 df_SMs.to_csv('output/SM_data.csv')
-# %%

@@ -17,9 +17,6 @@ df = df.rename({
 df = df.set_index('original_name', drop=True)
 df['material_type'] = df['material_type'].ffill()
 
-
-
-df
 #%%
 from es_utils.chem import process_chem_lookup
 

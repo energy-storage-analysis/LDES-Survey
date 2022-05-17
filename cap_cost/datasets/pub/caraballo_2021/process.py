@@ -61,7 +61,6 @@ for idx, row in df_dens.iterrows():
 
 s_densities = pd.Series(densities, index=df_dens.index)
 s_densities
-# df_Cp[0].astype(float) +df_Cp[1].str.strip('T').astype(float)*500
 # %%
 
 df['Cp'] = s_Cps
