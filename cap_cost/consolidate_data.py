@@ -4,6 +4,7 @@ from os.path import join as pjoin
 import numpy as np
 import pandas as pd
 from es_utils import join_col_vals
+from es_utils.units import prep_df_pint_out, read_pint_df, ureg
 
 dataset_folder = 'datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
@@ -15,7 +16,9 @@ dfs_SM = []
 for source, row in dataset_index.iterrows():
     fp_prices = os.path.join(dataset_folder, row['folder'], 'output', 'mat_data.csv')
     if os.path.exists(fp_prices):
-        df_mat_data = pd.read_csv(fp_prices,index_col=0)
+        # df_mat_data = pd.read_csv(fp_prices, header = [0,1], index_col=0)
+        df_mat_data = read_pint_df(fp_prices)
+        
 
         #Custom data dataset already has source column
         if source != 'custom_data':
@@ -26,7 +29,8 @@ for source, row in dataset_index.iterrows():
 
     fp_SM = os.path.join(dataset_folder, row['folder'], 'output', 'SM_data.csv')
     if os.path.exists(fp_SM):
-        df_SM = pd.read_csv(fp_SM,index_col=0)
+        # df_SM = pd.read_csv(fp_SM,index_col=0)
+        df_SM = read_pint_df(fp_SM)
 
         #Custom data dataset already has source column
         if source != 'custom_data':
@@ -77,7 +81,7 @@ df_SM = df_SM.reset_index().set_index(['SM_name','SM_type'])
 float_cols = []
 for column in df_SM.columns:
     dtype = df_SM[column].dtype
-    if dtype == float:
+    if dtype == float or 'pint' in str(dtype):
         float_cols.append(column)
 
 
@@ -101,16 +105,20 @@ df_grouped = df_grouped.rename({'source': 'SM_sources'}, axis=1)
 #%%
 
 #Doing this here to be able to see deltaT in SM_data
-df_grouped['T_min'] = df_grouped['T_melt'].fillna(20)
-df_grouped['deltaT'] = df_grouped['T_max'] - df_grouped['T_min']
+# df_grouped['T_min'] = df_grouped['T_melt'].fillna(20)
+# df_grouped['deltaT'] = df_grouped['T_max'] - df_grouped['T_min']
 #%%
 
+df_grouped_out = prep_df_pint_out(df_grouped)
 
-df_grouped.to_csv('data_consolidated/SM_data.csv')
+df_grouped_out.to_csv('data_consolidated/SM_data.csv')
 
 
 #%%
-df_mat_data.to_csv('data_consolidated/mat_data_all.csv')
+
+df_mat_data_all_out = prep_df_pint_out(df_mat_data)
+
+df_mat_data_all_out.to_csv('data_consolidated/mat_data_all.csv')
 
 ## Collect prices 
 
@@ -195,6 +203,9 @@ df_prices_combine['num_SMs'] = num_sms
 df_prices_combine = df_prices_combine[[
 'specific_price', 'specific_price_std','specific_price_rat','num_SMs','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
 ]]
+
+
+df_prices_combine = prep_df_pint_out(df_prices_combine)
 
 df_prices_combine.to_csv('data_consolidated/mat_data.csv')
 

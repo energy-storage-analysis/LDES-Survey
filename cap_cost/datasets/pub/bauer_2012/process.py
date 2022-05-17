@@ -1,5 +1,6 @@
 #%%
 import pandas as pd
+import pint_pandas
 import os
 
 if not os.path.exists('output'): os.mkdir('output')
@@ -27,10 +28,21 @@ df = df.dropna(subset=['SM_name'])
 
 df = df.set_index('SM_name')
 
-df['Cp'] = df['Cp']/3600
 
-df
-# %%
+df = df.astype({
+    'mass_density': 'pint[kg/m**3]', 
+    'Cp': 'pint[kJ/K/kg]',
+    'kth': 'pint[W/m/K]'
+    })
+
+df['Cp'] = df['Cp'].pint.to('kWh/kg/K')
+
+from es_utils.units import prep_df_pint_out
+
+df = prep_df_pint_out(df)
+
 
 df.to_csv('output/SM_data.csv')
 # %%
+
+

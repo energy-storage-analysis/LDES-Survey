@@ -4,10 +4,13 @@ import os
 from os.path import join as pjoin
 import numpy as np
 import pandas as pd
+from es_utils.units import read_pint_df
 
-df_mat_data = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
+# df_mat_data = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
+# df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
 
+df_mat_data = read_pint_df('data_consolidated/mat_data.csv')
+df_SMs =  read_pint_df('data_consolidated/SM_data.csv', index_col=[0,1])
 
 #%%
 
@@ -97,7 +100,7 @@ for mat_idx, row in df_mats_comp.iterrows():
         elif mat_basis == 'mass':
             specific_price = sum(price_components)
 
-        df_mats_comp.loc[mat_idx, 'specific_price'] = specific_price
+        df_mats_comp.loc[mat_idx, 'specific_price'] = specific_price.magnitude
     else:
         print('missing material prices {} for {}'.format(missing_prices, mat_idx))
 

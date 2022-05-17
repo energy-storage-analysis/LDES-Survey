@@ -1,6 +1,10 @@
 #%%
 import pandas as pd
 import os
+import pint_pandas
+
+from es_utils.units import ureg
+
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
 #TODO: process salt mixture table
@@ -13,11 +17,18 @@ df_table12 = df_table12.rename({
     'Cost ($/tonne)': 'specific_price',
 }, axis=1)
 
-df_table12['sp_latent_heat'] = df_table12['sp_latent_heat']/3600
-
 df_table12['specific_price'] = df_table12['specific_price'].str.replace(',','.',regex=False)
 df_table12['specific_price'] = df_table12['specific_price'].astype(float)
-df_table12['specific_price'] = df_table12['specific_price']/1000
+
+df_table12 = df_table12.astype({
+    'sp_latent_heat': 'pint[J/g]', 
+    'phase_change_T': 'pint[degC]',
+    'specific_price': 'pint[USD/ton]'
+    })
+
+df_table12['sp_latent_heat'] = df_table12['sp_latent_heat'].pint.to('kWh/kg')
+df_table12['phase_change_T'] = df_table12['phase_change_T'].pint.to('degC')
+df_table12['specific_price'] = df_table12['specific_price'].pint.to('USD/kg')
 
 df_table12 = df_table12[['sp_latent_heat','specific_price']]
 
@@ -35,7 +46,20 @@ from es_utils.pdf import average_range
 
 df_table13['specific_price'] = df_table13['specific_price'].astype(str).apply(average_range).astype(float)
 
-df_table13['sp_latent_heat'] = df_table13['sp_latent_heat']/3.600
+
+df_table13 = df_table13.astype({
+    'sp_latent_heat': 'pint[MJ/kg]', 
+    'phase_change_T': 'pint[degC]',
+    'specific_price': 'pint[USD/lb]'
+    })
+
+df_table13['sp_latent_heat'] = df_table13['sp_latent_heat'].pint.to('kWh/kg')
+df_table13['phase_change_T'] = df_table13['phase_change_T'].pint.to('degC')
+df_table13['specific_price'] = df_table13['specific_price'].pint.to('USD/kg')
+
+
+
+
 
 df_table13 = df_table13[['sp_latent_heat','specific_price', 'phase_change_T']]
 
@@ -49,8 +73,13 @@ df_table12_mix = df_table12_mix.rename({
     'Melting Point (°C)': 'phase_change_T',
 }, axis=1)
 
-df_table12_mix['sp_latent_heat'] = df_table12_mix['sp_latent_heat']/3600
+df_table12_mix = df_table12_mix.astype({
+    'sp_latent_heat': 'pint[J/g]', 
+    'phase_change_T': 'pint[degC]',
+    })
 
+df_table12_mix['sp_latent_heat'] = df_table12_mix['sp_latent_heat'].pint.to('kWh/kg')
+df_table12_mix['phase_change_T'] = df_table12_mix['phase_change_T'].pint.to('degC')
 
 #%%
 df = pd.concat([
@@ -65,8 +94,15 @@ import es_utils
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
 df = pd.merge(df, chem_lookup, on='original_name')
+df = df.set_index('index')
 
-df_prices = es_utils.extract_df_mat(df.set_index('index'))
+
+df_prices = es_utils.extract_df_mat(df)
+
+from es_utils.units import prep_df_pint_out
+
+df_prices = prep_df_pint_out(df_prices)
+# df_prices = df_prices.set_index('index')
 df_prices.to_csv('output/mat_data.csv')
 
 #%%
@@ -102,6 +138,8 @@ df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','mat_basis','SM_t
 # df_SMs.index.name = 'SM_name'
 
 df_SMs = df_SMs.dropna(subset=['materials'])
+
+df_SMs = prep_df_pint_out(df_SMs)
 
 df_SMs.to_csv('output/SM_data.csv')
 
