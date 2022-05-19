@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import re
 import seaborn as sns
+from es_utils.units import read_pint_df
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -14,8 +15,7 @@ from os.path import join as pjoin
 output_dir = 'output/single_tech'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
-df_SM = pd.read_csv('../data_consolidated/SM_data.csv', index_col=[0,1])
-df = df_SM.reset_index('SM_type')
+df = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 

@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 import matplotlib as mpl
+from es_utils.units import read_pint_df
 
 mpl.rcParams.update({'font.size': 16})
 
@@ -14,8 +14,7 @@ output_dir = 'output/Ckwh_line'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 
-df_SMs = pd.read_csv('../data_consolidated/SM_data.csv', index_col=[0,1])
-df = df_SMs.reset_index('SM_type')
+df = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
 #%%
 
 

@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
+from es_utils.units import read_pint_df
 
 mpl.rcParams.update({'font.size':13.5})
 
@@ -19,10 +20,8 @@ palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
 # %%
 
-
-df_mat_data = pd.read_csv('../data_consolidated/mat_data.csv', index_col=0)
-df_SMs = pd.read_csv('../data_consolidated/SM_data.csv', index_col=0)
-
+df_SMs = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
+df_mat_data = read_pint_df('../data_consolidated/mat_data.csv', index_col=0, drop_units=True)
 
 df_mat_unused = df_mat_data[df_mat_data['num_SMs'] == 0].dropna(how='all')
 df_mat_unused.to_csv('output/mat_data_unused.csv')

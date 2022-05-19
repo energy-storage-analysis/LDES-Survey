@@ -44,7 +44,7 @@ def prep_df_pint_out(df_in):
     return df
 
 
-def read_pint_df(filepath, index_col=0):
+def read_pint_df(filepath, index_col=0, drop_units=False):
     """
     Reads a csv file saved by prep_df_pint_out to a format where columns with units are pint quantified
     """
@@ -59,6 +59,11 @@ def read_pint_df(filepath, index_col=0):
     df.columns = df.columns.droplevel(1)
 
     df = df.astype(types)
+
+    if drop_units:
+        for col in df.columns:
+            if 'pint' in str(df[col].dtype):
+                df[col] = df[col].pint.magnitude
 
     return df
 

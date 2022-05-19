@@ -20,12 +20,7 @@ from es_utils.units import read_pint_df
 palette = pd.read_csv('energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
-df_all = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1]).reset_index('SM_type')
-
-#TODO: simplify loading where units are dropped, or incorporate units in visualizaiton
-for col in df_all.columns:
-    if 'pint' in str(df_all[col].dtype):
-        df_all[col] = df_all[col].pint.magnitude
+df_all = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df_all = df_all.dropna(subset=['C_kwh'])
 
