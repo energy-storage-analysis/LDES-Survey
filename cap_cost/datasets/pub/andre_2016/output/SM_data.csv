@@ -1,4 +1,6 @@
-SM_name,SM_type,materials,deltaH_thermochem,temperature,type
+,SM_type,materials,deltaH_thermochem,temperature,type
+unit_row,N/U,N/U,kilowatt_hour / kilogram,degree_Celsius,N/U
+SM_name,,,,,
 MgSO4/MgO,thermochemical,MgSO4,0.8048611111111111,1140.0,sulfates
 MnSO4/MnO,thermochemical,MnSO4,0.65825,1065.0,sulfates
 FeSO4/FeO,thermochemical,FeSO4,0.6332722222222222,1030.0,sulfates
@@ -8,7 +10,7 @@ ZnSO4/ZnO,thermochemical,ZnSO4,0.4911666666666667,1080.0,sulfates
 CdSO4/CdO,thermochemical,CdSO4,0.4723611111111111,1095.0,sulfates
 NiSO4/NiO,thermochemical,NiSO4,0.3998333333333334,995.0,sulfates
 CaCO3/CaO,thermochemical,CaCO3,0.4602222222222222,885.0,carbonates
-SrCO3/SrO,thermochemical,SrCO3,0.38073611111111116,1220.0,carbonates
+SrCO3/SrO,thermochemical,SrCO3,0.3807361111111111,1220.0,carbonates
 MgCO3/MgO,thermochemical,MgCO3,0.32611111111111113,300.0,carbonates
 BaCO3/BaO,thermochemical,BaCO3,0.2323888888888889,1555.0,carbonates
 CdCO3/CdO,thermochemical,CdCO3,0.15558333333333335,290.0,carbonates

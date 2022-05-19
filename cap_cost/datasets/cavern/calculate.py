@@ -3,6 +3,8 @@ import pandas as pd
 import os
 if not os.path.exists('output'): os.makedirs('output')
 
+from es_utils.units import convert_units, prep_df_pint_out, ureg
+
 df_H2 = pd.read_csv('H2_specific.csv')
 
 R=8.3145
@@ -79,5 +81,13 @@ df_mat['molecular_formula'] = mol_forms
 df_mat['mass_density'] = mass_densities
 
 df_mat.index.name = 'index'
+
+
+df_mat = df_mat.astype({
+    'specific_price': 'pint[USD/kg]'
+})
+
+
+df_mat = prep_df_pint_out(df_mat)
 
 df_mat.to_csv('output/mat_data.csv')

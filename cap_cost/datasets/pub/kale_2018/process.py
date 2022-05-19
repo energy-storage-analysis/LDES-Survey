@@ -3,6 +3,8 @@ from os.path import join as pjoin
 import os
 import pandas as pd
 
+from es_utils.units import convert_units, prep_df_pint_out, ureg
+
 if not os.path.exists('output'): os.mkdir('output')
 
 #Table A1
@@ -15,6 +17,17 @@ df_a1 = df_a1.rename({
 },axis=1)
 
 df_a1['specific_price'] = df_a1['relative_cost']*1 #TODO:assuming relative cost to 1$/kg
+
+
+
+df_a1 = df_a1.astype({
+    'specific_price': 'pint[USD/kg]',
+    'yield_strength': 'pint[MPa]',
+    'density': 'pint[g/cm**3]'
+    })
+
+# df_a1['density'] = df_a1['density'].pint.to('kg/m**3')
+
 
 df_a1['specific_strength'] = df_a1['yield_strength']/df_a1['density']
 
@@ -29,12 +42,18 @@ df_a2 = df_a2.rename({
 
 df_a2['specific_price'] = df_a2['relative_cost']*1 #TODO: assuming relative cost to 1$/kg
 
-df_a2['sigma_theta_T'] = df_a2['sigma_theta_T'].astype(float)
-df_a2['sigma_theta_C'] = df_a2['sigma_theta_C'].astype(float)
+df_a2 = df_a2.astype({
+    'specific_price': 'pint[USD/kg]',
+    'sigma_theta_C': 'pint[MPa]',
+    'sigma_theta_T': 'pint[MPa]',
+    'density': 'pint[g/cm**3]'
+    })
+
+# df_a2['density'] = df_a2['density'].pint.to('kg/m**3')
 
 #TODO: What is T and C? 
 #Just taking the average of T and C for now. 
-df_a2['sigma_theta_avg'] = (df_a2['sigma_theta_T'] + df_a2['sigma_theta_C'])/2
+df_a2['sigma_theta_avg'] = (df_a2['sigma_theta_T'] + df_a2['sigma_theta_C'])/ureg.Quantity(2, 'dimensionless')
 
 #TODO: from Kamf thesis it seems like the hoop stress is limiting on a simple approximation level. 
 df_a2['specific_strength'] = df_a2['sigma_theta_avg']/df_a2['density']
@@ -64,6 +83,8 @@ from es_utils import join_col_vals
 df_mat_grouped['original_name']= df_mat.groupby('index')['original_name'].apply(join_col_vals)
 df_mat_grouped['molecular_formula']= df_mat.groupby('index')['molecular_formula'].apply(join_col_vals)
 
+df_mat_grouped = convert_units(df_mat_grouped)
+df_mat_grouped = prep_df_pint_out(df_mat_grouped)
 df_mat_grouped.to_csv('output/mat_data.csv')
 
 #%%
@@ -94,8 +115,18 @@ for SM_type, Qmax in Qmaxs.items():
     df_temp['SM_type'] = SM_type
     dfs.append(df_temp)
 
+# df_temp['Qmax'] = df_temp['Qmax'].astype('pint[dimensionless]')
+
+df_temp = df_temp.astype({'Qmax': 'pint[dimensionless]'})
+
 df_SMs = pd.concat(dfs)
 #%%
 
 df_SMs.index.name = 'SM_name'
+
+
+df_SMs = convert_units(df_SMs)
+df_SMs = prep_df_pint_out(df_SMs)
 df_SMs.to_csv('output/SM_data.csv')
+
+# %%

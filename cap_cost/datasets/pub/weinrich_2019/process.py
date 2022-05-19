@@ -1,6 +1,7 @@
 #%%
 import pandas as pd
 import os
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 if not os.path.exists('output'): os.mkdir('output')
 
@@ -32,5 +33,15 @@ SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 df = pd.merge(df, SM_lookup, on='SM_name')
 
 df['SM_type'] ='metal_air'
+
+
+
+df = df.astype({
+    'deltaV': 'pint[V]',
+    'n_e': 'pint[dimensionless]',
+    })
+
+df = convert_units(df)
+df = prep_df_pint_out(df)
 
 df.to_csv('output/SM_data.csv')

@@ -4,6 +4,8 @@ import os
 
 import es_utils
 
+from es_utils.units import convert_units, prep_df_pint_out, ureg
+
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8') for fn in os.listdir('tables')}
 
 
@@ -58,5 +60,16 @@ df_SMs.groupby(level=0)['SM_type'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['mat_basis'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['materials'].apply(es_utils.join_col_vals),
 ], axis=1)
+
+
+df_out = df_out.astype({
+    'specific_capacitance': 'pint[F/g]',
+    'deltaV_electrolyte': 'pint[V]'
+    })
+
+
+df_out = convert_units(df_out)
+df_out = prep_df_pint_out(df_out)
+
 
 df_out.to_csv('output/SM_data.csv')

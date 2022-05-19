@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from es_utils.pdf import average_range
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 df = pd.read_csv('ISE.csv', encoding='ISO-8859-1')
 
@@ -33,13 +34,6 @@ df['mass_unit'] = df['mass_unit'].replace({
     't':'metric_ton'
     })
 
-df['mass_unit'].value_counts()
-#%%
-import pint
-
-ureg = pint.UnitRegistry()
-ureg.load_definitions('unit_defs.txt')
-
 specific_price = []
 for index, row in df.iterrows():
     unit = row['mass_unit']
@@ -50,12 +44,11 @@ for index, row in df.iterrows():
     # break
 
 df['specific_price'] = specific_price
-# %%
-bins = np.logspace(np.log10(0.1), np.log10(1e6), 50)
-df['specific_price'].hist(bins=bins)
-plt.xscale('log')
-plt.xlabel('Cost ($/kg)')
-plt.ylabel('Count')
+
+
+df = df.astype({
+    'specific_price': 'pint[USD/kg]'
+})
 # %%
 
 df['original_name'] = df['original_name'].replace({
@@ -105,4 +98,8 @@ for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
     df_price.loc[hydrate_formula,'molecular_formula'] = anhydrous_formula
     df_price = df_price.rename({hydrate_formula: anhydrous_formula})
 #%%
+
+
+df_price = prep_df_pint_out(df_price)
+
 df_price.to_csv('output/mat_data.csv')

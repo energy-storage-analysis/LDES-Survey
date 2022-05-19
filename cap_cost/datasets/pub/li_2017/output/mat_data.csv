@@ -1,4 +1,6 @@
-index,original_name,molecular_formula,specific_price
+,original_name,molecular_formula,specific_price
+unit_row,N/U,N/U,USD / kilogram
+index,,,
 C,Active carbon,C,30.0
 AQDS,AQDS,C14H8O8S2,4.8
 CaCl2,CaCl2,CaCl2,0.11

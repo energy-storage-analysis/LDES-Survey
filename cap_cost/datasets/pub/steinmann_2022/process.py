@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 from es_utils.pdf import average_range
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 if not os.path.exists('output'): os.mkdir('output')
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8', index_col=0) for fn in os.listdir('tables')}
@@ -22,9 +23,7 @@ df_t21 = df_t21.rename({
 
 df_t21.index.name = 'original_name'
 
-df_t21['Cp'] = df_t21['Cp']/3600000
 df_t21['specific_price'] = df_t21['specific_price'].fillna('').apply(average_range).replace('',np.nan).astype(float)
-df_t21['specific_price'] = df_t21['specific_price']/1000
 
 df_t21['T_range'] = df_t21['T_range'].str.replace('\n','').str.replace('°C','')
 
@@ -73,6 +72,16 @@ df_liquid = pd.concat([df_t21, df_t23], axis=1)
 df_liquid = df_liquid[['Cp', 'mass_density','T_melt', 'T_max', 'deltaT_max','specific_price']]
 df_liquid
 
+
+df_liquid = df_liquid.astype({
+    'T_melt': 'pint[degC]',
+    'T_max': 'pint[degC]',
+    'deltaT_max': 'pint[delta_degC]',
+    'Cp': 'pint[J/kg/K]',
+    'mass_density': 'pint[kg/m**3]',
+    'specific_price': 'pint[EUR/metric_ton]',
+    })
+
 #%%
 df_t31 = tables['table_31']
 
@@ -88,15 +97,12 @@ df_t31 = df_t31.reset_index(drop=True).set_index('original_name')
 df_t31 = df_t31.dropna()
 
 df_t31['Cp'] = df_t31['Cp'].apply(average_range)
-df_t31['Cp'] = df_t31['Cp'].astype(float)/3600000
 df_t31['T_max'] = df_t31['T_max'].apply(average_range)
 
 df_t31['specific_price'] = df_t31['specific_price'].str.replace('< 50','0-50') #TODO: Tables just say < 50, which I will take as a range from 0-50, or an estimate price of 25$/ton. This should perhaps just be dropped but should look through text more if there is a source for this. 
 df_t31['specific_price'] = df_t31['specific_price'].apply(average_range)
 
-df_t31['specific_price'] = df_t31['specific_price'].astype(float)/1000
 
-df_t31
 
 
 #%%
@@ -120,6 +126,15 @@ df_t32
 df_solid = pd.concat([df_t31,df_t32], axis=1)
 df_solid
 
+
+df_solid = df_solid.astype({
+    'T_max': 'pint[degC]',
+    'Cp': 'pint[J/kg/K]',
+    'mass_density': 'pint[kg/m**3]',
+    'specific_price': 'pint[EUR/metric_ton]',
+    'kth': 'pint[W/m/K]',
+    })
+
 #%%
 df_t62 = tables['table_62']
 df_t62 = df_t62.dropna(how='all')
@@ -134,7 +149,6 @@ df_t62 = df_t62.rename({
 
 df_t62 = df_t62[['phase_change_T','sp_latent_heat','mass_density']]
 
-df_t62['sp_latent_heat'] = df_t62['sp_latent_heat'].astype(float)/3600
 df_t62['phase_change_T'] = df_t62['phase_change_T'].apply(average_range)
 df_t62['mass_density'] = df_t62['mass_density'].str.replace('\n','-').apply(average_range)
 
@@ -153,7 +167,6 @@ df_t63 = df_t63.rename({
 }, axis=1)
 
 df_t63 = df_t63[['specific_price']]
-df_t63['specific_price'] = df_t63['specific_price']/1000
 
 df_t63 = df_t63.rename({'KNO3-NaNO2-NaNO3\n53%-41%-6%': 'KNO3-NaNO2-NaNO3'})
 df_t63
@@ -162,6 +175,13 @@ df_t63
 #%%
 df_pcm = pd.concat([df_t62,df_t63], axis=1)
 df_pcm
+
+df_pcm = df_pcm.astype({
+    'phase_change_T': 'pint[degC]',
+    'sp_latent_heat': 'pint[kJ/kg]',
+    'mass_density': 'pint[kg/m**3]',
+    'specific_price': 'pint[EUR/metric_ton]',
+    })
 
 #%%
 
@@ -172,6 +192,10 @@ df_SM = df_all.drop('specific_price', axis=1)
 df_SM = pd.merge(df_SM, SM_lookup, on='original_name')
 df_SM = df_SM.dropna(subset=['SM_name'])
 df_SM = df_SM.set_index('SM_name')
+
+
+df_SM = convert_units(df_SM)
+df_SM = prep_df_pint_out(df_SM)
 
 df_SM.to_csv('output/SM_data.csv')
 
@@ -191,5 +215,10 @@ specific_prices.name = 'specific_price'
 original_names = df_mat.groupby('index')['original_name'].apply(join_col_vals)
 original_names.name = 'original_name'
 df_mat = pd.concat([specific_prices,original_names], axis=1)
+
+
+
+df_mat = convert_units(df_mat)
+df_mat = prep_df_pint_out(df_mat)
 
 df_mat.to_csv('output/mat_data.csv')

@@ -2,6 +2,7 @@
 import os
 import numpy as np
 import pandas as pd
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 
 df = pd.read_csv('extracted/extracted.csv')
@@ -13,11 +14,6 @@ df = df.rename({
 },axis=1)
 
 
-import pint
-
-ureg = pint.UnitRegistry()
-ureg.load_definitions('unit_defs.txt')
-
 specific_price = []
 for index, row in df.iterrows():
     unit = row['mass_unit']
@@ -25,10 +21,12 @@ for index, row in df.iterrows():
     val = ureg.Quantity(val, unit)
     val = val.to('USD/kg').magnitude
     specific_price.append(val)
-    # break
 
 df['specific_price'] = specific_price
 
+df = df.astype({
+    'specific_price': 'pint[USD/kg]'
+})
 
 if not os.path.exists('output'): os.mkdir('output')
 
@@ -52,4 +50,9 @@ df_combine['molecular_formula']= df.groupby('index')['molecular_formula'].apply(
 
 from es_utils import extract_df_mat
 df_price = extract_df_mat(df_combine)
+
+
+df_price = convert_units(df_price)
+df_price = prep_df_pint_out(df_price)
+
 df_price.to_csv('output/mat_data.csv')

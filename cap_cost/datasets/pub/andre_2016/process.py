@@ -2,6 +2,7 @@
 import pandas as pd
 import os
 import es_utils
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn)) for fn in os.listdir('tables')}
 
@@ -16,11 +17,12 @@ df = df.rename({
     'specific_energy': 'deltaH_thermochem'
 }, axis=1)
 
-df['deltaH_thermochem'] = df['deltaH_thermochem'].astype(float)
-df['deltaH_thermochem'] = df['deltaH_thermochem']/3600 #kJ to kWh
+df = df.astype({
+    'deltaH_thermochem': 'pint[kJ/kg]',
+    'temperature': 'pint[degC]'
+    })
 
-df['temperature'] = df['temperature'].astype(float)
-
+df = convert_units(df)
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
@@ -39,5 +41,8 @@ df_SMs = pd.merge(
 
 
 df_SMs.index.name = 'SM_name'
+
+df_SMs = prep_df_pint_out(df_SMs)
+
 df_SMs.to_csv('output/SM_data.csv')
 # %%

@@ -46,6 +46,7 @@ df_SM.index.name = 'SM_name'
 
 # df.index.name = 'index'
 
+
 #%%
 
 from collections import Counter
@@ -78,6 +79,11 @@ df_SM = df_SM.reset_index().set_index(['SM_name','SM_type'])
 
 #%%
 
+# Average float columns and Group together non-float columns
+#TODO: Need to implement beter check here now that units are implemented. 
+# If units are not setup properly in raw dataset then the dtype is an object and an error is thrown. 
+# You can find which entries are floats (and not pint Quantity) with e.g. df_SM[df_SM['mass_density'].apply(type) == float]
+
 float_cols = []
 for column in df_SM.columns:
     dtype = df_SM[column].dtype
@@ -105,8 +111,11 @@ df_grouped = df_grouped.rename({'source': 'SM_sources'}, axis=1)
 #%%
 
 #Doing this here to be able to see deltaT in SM_data
-# df_grouped['T_min'] = df_grouped['T_melt'].fillna(20)
-# df_grouped['deltaT'] = df_grouped['T_max'] - df_grouped['T_min']
+
+default_min_T = 20
+
+df_grouped['T_min'] = df_grouped['T_melt'].fillna(default_min_T)
+df_grouped['deltaT'] = df_grouped['T_max'] - df_grouped['T_min']
 #%%
 
 df_grouped_out = prep_df_pint_out(df_grouped)
@@ -129,7 +138,9 @@ s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals)
 s_temp.name = 'sources'
 df_prices_combine = s_temp.to_frame()
 
-df_prices_combine['specific_prices'] = df_mat_data['specific_price'].apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals)
+
+specific_price_mag = df_mat_data['specific_price'].pint.magnitude
+df_prices_combine['specific_prices'] = specific_price_mag.apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals)
 
 df_prices_combine['original_names'] = df_mat_data.groupby('index')['original_name'].apply(join_col_vals) 
 
@@ -137,8 +148,12 @@ df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').ap
 df_prices_combine['specific_price'] = df_mat_data.groupby('index')['specific_price'].median()
 df_prices_combine['specific_price_std'] = df_mat_data.groupby('index')['specific_price'].std()
 
+
+df_prices_combine['specific_price_std'] = df_prices_combine['specific_price_std'].astype(df_prices_combine['specific_price'].dtype)
+
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_std']/df_prices_combine['specific_price'] 
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].apply(lambda x:round(x,2)) 
+df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].astype('pint[dimensionless]')
 
 # df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
@@ -170,6 +185,8 @@ df_prices_combine['molecular_formula'] = df_mat_data.groupby('index')['molecular
 from es_utils.chem import get_molecular_mass
 df_prices_combine['mu'] = df_prices_combine['molecular_formula'].apply(get_molecular_mass)
 df_prices_combine['mu'] = df_prices_combine['mu'].apply(lambda x: round(x,7))
+
+df_prices_combine['mu'] = df_prices_combine['mu'].astype('pint[g/mol]')
 
 #%%
 

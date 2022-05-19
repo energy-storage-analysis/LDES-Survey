@@ -1,6 +1,7 @@
 #%%
 import os
 import pandas as pd
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 if not os.path.exists('output'): os.mkdir('output')
 df_table4 = pd.read_csv('tables/table_4.csv', index_col=0)
@@ -23,6 +24,13 @@ df_table4['original_name'] = df_table4['molecular_formula']
 
 from es_utils import extract_df_mat
 df_price = extract_df_mat(df_table4)
+
+df_price = df_price.astype({
+    'specific_price': 'pint[USD/kg]',
+    })
+df_price = convert_units(df_price)
+df_price = prep_df_pint_out(df_price)
+
 df_price.to_csv('output/mat_data.csv')
 
 
@@ -84,6 +92,14 @@ df_couples['SM_type'] = 'liquid_metal_battery'
 df_couples['mat_basis'] = 'molar'
 
 df_couples.index.name = 'SM_name'
+
+df_couples = df_couples.astype({
+    'deltaV': 'pint[V]',
+    'n_e': 'pint[dimensionless]'
+    })
+df_couples = convert_units(df_couples)
+df_couples = prep_df_pint_out(df_couples)
+
 
 df_couples.to_csv('output/SM_data.csv')
 #%%

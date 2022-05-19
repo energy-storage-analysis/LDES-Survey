@@ -1,4 +1,6 @@
-index,original_name,molecular_formula,specific_price
+,original_name,molecular_formula,specific_price
+unit_row,N/U,N/U,USD / kilogram
+index,,,
 Li,Li,Li,61.95965417867435
 Na,Na,Na,2.479363725045613
 K,K,K,130.44045393277966

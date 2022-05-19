@@ -1,5 +1,6 @@
 #%%
 import pandas as pd
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 df = pd.read_csv('output/extracted.csv', index_col=0)
 df = df.dropna(subset=['keep']) #Get rid of manually dropped entries
@@ -26,6 +27,14 @@ df_mat_data = pd.merge(df_mat_data.reset_index(), search_table[['molecular_formu
 df_mat_data = df_mat_data.set_index('index')
 
 #%%
+
+
+
+df_mat_data = df_mat_data.astype({
+    'specific_price': 'pint[USD/kg]'
+})
+
+df_mat_data = prep_df_pint_out(df_mat_data)
 
 df_mat_data.to_csv('output/mat_data.csv')
 

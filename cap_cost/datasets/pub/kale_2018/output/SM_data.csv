@@ -1,4 +1,6 @@
-SM_name,materials,specific_strength,Qmax,SM_type
+,materials,specific_strength,Qmax,SM_type
+unit_row,N/U,centimeter ** 3 * megapascal / gram,N/U,N/U
+SM_name,,,,
 Al-2024,Al,150.8303249097473,1.0,pressure_tank
 Al-6061-T6,Al,101.4760147601476,1.0,pressure_tank
 Al-7075-T6,Al,166.66666666666666,1.0,pressure_tank

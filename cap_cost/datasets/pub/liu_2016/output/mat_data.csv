@@ -1,4 +1,6 @@
-index,original_name,molecular_formula,specific_price
+,original_name,molecular_formula,specific_price
+unit_row,N/U,N/U,USD / kilogram
+index,,,
 Sand,Sand,SiO2,0.72
 Na2CO3,Na2CO3,Na2CO3,0.23
 K2CO3,K2CO3,K2CO3,1.1

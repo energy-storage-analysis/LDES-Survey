@@ -1,4 +1,6 @@
-index,original_name,molecular_formula,specific_price
+,original_name,molecular_formula,specific_price
+unit_row,N/U,N/U,USD / kilogram
+index,,,
 Ag,Silver Bullion,Ag,608.4850295578531
 Al,Aluminum Ingot,Al,2.3906927711328128
 Al2O3,Bauxite and Alumina Alumina,Al2O3,0.5335186744874038

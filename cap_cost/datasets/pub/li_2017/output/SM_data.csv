@@ -1,4 +1,6 @@
-SM_name,C_kwh_orig,type,deltaV,n_e,materials,mat_basis,SM_type
+,C_kwh_orig,type,deltaV,n_e,materials,mat_basis,SM_type
+unit_row,USD / kilowatt_hour,N/U,volt,dimensionless,N/U,N/U,N/U
+SM_name,,,,,,,
 Pb acid,12.4,Pb acid,2.1,2.0,Pb,,solid_electrode
 NiCd,66.0,NiCd,1.2,2.0,"[('Cd(OH)2', 1), ('Ni(OH)2', 1)]",molar,solid_electrode
 NiMH,82.8,NiMH,1.2,1.0,"[('LaNi5', 1), ('Ni(OH)2', 1)]",molar,solid_electrode

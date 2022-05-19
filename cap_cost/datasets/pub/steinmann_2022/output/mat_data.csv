@@ -1,20 +1,22 @@
-index,specific_price,original_name
-Al,1.75,Aluminium
-Al2O3,1.0,Al2O3
-Concrete,0.025,Concrete
-Fe,0.45,Cast iron
-Graphite,3.25,Graphite
-HITEC,1.2,HITEC
-HITEC XL,1.1,HITEC XL
-KNO3,0.8,KNO3
-LiF,5.4,LiF
-MgO,0.7,MgO
-Mobiltherm 605,3.0,Mobiltherm 605
-Na,2.0,Sodium
-NaCl,0.025,NaCl
-NaNO3,0.6,NaNO3
-S,0.4,Sulfur
-SiO2,0.6,SiO2
-Solar Salt,0.7,Solar Salt
-Stone,0.025,"Basalt, Granite, Limestone, Sandstone"
-Vegetable Oil,0.6,Sunflower oil
+,specific_price,original_name
+unit_row,USD / kilogram,N/U
+index,,
+Al,1.9477500000000005,Aluminium
+Al2O3,1.1130000000000002,Al2O3
+Concrete,0.027825000000000006,Concrete
+Fe,0.5008500000000001,Cast iron
+Graphite,3.6172500000000007,Graphite
+HITEC,1.3356000000000003,HITEC
+HITEC XL,1.2243000000000004,HITEC XL
+KNO3,0.8904000000000002,KNO3
+LiF,6.010200000000001,LiF
+MgO,0.7791000000000002,MgO
+Mobiltherm 605,3.339000000000001,Mobiltherm 605
+Na,2.2260000000000004,Sodium
+NaCl,0.027825000000000006,NaCl
+NaNO3,0.6678000000000002,NaNO3
+S,0.4452000000000001,Sulfur
+SiO2,0.6678000000000002,SiO2
+Solar Salt,0.7791000000000002,Solar Salt
+Stone,0.027825000000000006,"Basalt, Granite, Limestone, Sandstone"
+Vegetable Oil,0.6678000000000002,Sunflower oil

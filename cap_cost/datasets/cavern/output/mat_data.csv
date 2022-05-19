@@ -1,4 +1,6 @@
-index,specific_price,molecular_formula,mass_density
+,specific_price,molecular_formula,mass_density
+unit_row,USD / kilogram,N/U,N/U
+index,,,
 H2_LRC,59.102600171875004,H2,7.289200866685983
 CH4_LRC,7.3878250214843755,CH4,58.31360693348786
 N2_LRC,4.221614297991072,N2,102.04881213360375

@@ -1,4 +1,6 @@
-index,specific_price,molecular_formula
+,specific_price,molecular_formula
+unit_row,USD / kilogram,N/U
+index,,
 AQDS,9.5,
 Al,1.52,Al
 Al2O3,8.0,Al2O3

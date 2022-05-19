@@ -1,13 +1,7 @@
 #%%
-from cgitb import lookup
-import os
-from os.path import join as pjoin
 import numpy as np
 import pandas as pd
-from es_utils.units import read_pint_df
-
-# df_mat_data = pd.read_csv('data_consolidated/mat_data.csv', index_col=0)
-# df_SMs = pd.read_csv('data_consolidated/SM_data.csv', index_col=[0,1])
+from es_utils.units import prep_df_pint_out, read_pint_df, ureg
 
 df_mat_data = read_pint_df('data_consolidated/mat_data.csv')
 df_SMs =  read_pint_df('data_consolidated/SM_data.csv', index_col=[0,1])
@@ -33,10 +27,11 @@ df_single = pd.DataFrame({
     'price_sources': price_sources
     }, index= mats_single.index)
 
-
-SP_single = pd.Series(SP_single, index=mats_single.index)
-SP_single
-
+#Not exactly sure why I have to set these again. 
+df_single = df_single.astype({
+    'specific_price' : 'pint[USD/kg]',
+    'mu_total': 'pint[g/mol]'
+})
 
 #%%
 
@@ -59,6 +54,9 @@ df_mats_comp['price_sources'] = ''
 
 print("Calculating composite material data")
 
+mu_totals = [] #Having to build a list vs location indexing because of pint...
+specific_prices = []
+
 for mat_idx, row in df_mats_comp.iterrows():
     mus = []
     price_components = []
@@ -80,7 +78,7 @@ for mat_idx, row in df_mats_comp.iterrows():
         price_sources_mat.append(price_source)
 
         if mat_basis == 'molar':
-            molar_price = specific_price*mu*1000 #($/kg * g/mol * kg/g)
+            molar_price = specific_price*mu #($/kg * g/mol * kg/g)
             price_components.append(molar_price*fraction)
             mus.append(mu*fraction)
         elif mat_basis == 'mass':
@@ -90,19 +88,30 @@ for mat_idx, row in df_mats_comp.iterrows():
             raise ValueError("Incorrect mat_basis for {}, must be 'molar' or 'mass'".format(mat_idx))
 
     mu_total = sum(mus)
-    df_mats_comp.loc[mat_idx, 'mu_total'] = mu_total
+    mu_totals.append(mu_total)
 
     if len(missing_prices) == 0:
         df_mats_comp.loc[mat_idx, 'price_sources'] = ", ".join(price_sources_mat)
 
         if mat_basis == 'molar':
-            specific_price = sum(price_components)/(mu_total*1000)
+            specific_price = sum(price_components)/(mu_total)
         elif mat_basis == 'mass':
             specific_price = sum(price_components)
 
-        df_mats_comp.loc[mat_idx, 'specific_price'] = specific_price.magnitude
+        # df_mats_comp.loc[mat_idx, 'specific_price'] = specific_price.magnitude
+        specific_prices.append(specific_price)
     else:
+        specific_prices.append(specific_price)
         print('missing material prices {} for {}'.format(missing_prices, mat_idx))
+
+
+
+df_mats_comp['mu_total'] = mu_totals
+df_mats_comp['mu_total'] = df_mats_comp['mu_total'].replace(0, np.nan) #Materials with all missing prices have 0 mu_total...
+df_mats_comp['mu_total'] = df_mats_comp['mu_total'].astype('pint[g/mol]')
+df_mats_comp['specific_price'] = specific_prices
+df_mats_comp['specific_price'] = df_mats_comp['specific_price'].astype('pint[USD/kg]')
+
 
 df_mats_comp
 
@@ -119,46 +128,45 @@ df_SMs['price_sources'] = df_all['price_sources']
 
 #%%
 
-sensible_thermal = (df_SMs['Cp']*df_SMs['deltaT'])
+sensible_thermal = df_SMs['Cp']*df_SMs['deltaT']
 sensible_thermal.name='specific_energy'
 sensible_thermal = sensible_thermal.to_frame()
 
 #%%
 
-latent_thermal = (df_SMs['sp_latent_heat'])
+latent_thermal = df_SMs['sp_latent_heat']
 latent_thermal.name='specific_energy'
 latent_thermal = latent_thermal.to_frame()
 
-thermochem = (df_SMs['deltaH_thermochem'])
+thermochem = df_SMs['deltaH_thermochem']
 thermochem.name='specific_energy'
 thermochem = thermochem.to_frame()
 
-pressure = (df_SMs['pressure']/3600000)/df_SMs['mass_density']
+pressure = df_SMs['pressure']/df_SMs['mass_density']
 pressure.name='specific_energy'
 pressure = pressure.to_frame()
 
 
-chemical = (df_SMs['deltaG_chem'])/(df_SMs['mu_total']/1000)
+chemical = df_SMs['deltaG_chem']/df_SMs['mu_total']
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
 
-F = 96485 # C/mol
+F = ureg.Quantity(96485, 'C/mol') # C/mol
 #TODO: deltaV means battery deltaV
-electrochemical = (1/3600)*F*df_SMs['n_e']*df_SMs['deltaV']/df_SMs['mu_total']
+electrochemical = F*df_SMs['n_e']*df_SMs['deltaV']/df_SMs['mu_total']
 electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()
 
 
-virial = (df_SMs['specific_strength']/3600)/df_SMs['Qmax']
+virial = df_SMs['specific_strength']/df_SMs['Qmax']
 virial.name='specific_energy'
 virial = virial.to_frame()
 
 
-epsilon_0 = 8.85e-12
+epsilon_0 = ureg.Quantity(8.85e-12, 'F/m')
 def calc_electrostatic_SE(V_breakdown, dielectric_const, rho_m):
     specific_energy = 0.5*(V_breakdown**2)*dielectric_const*epsilon_0 #J/m3
     specific_energy = specific_energy/(rho_m) #J/kg
-    specific_energy = specific_energy/3600000 #kWh/kg
     return specific_energy
 
 electrostatic = calc_electrostatic_SE(
@@ -172,14 +180,13 @@ electrostatic = electrostatic.to_frame()
 
 #TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
 electrostatic_edlc = (0.5*df_SMs['specific_capacitance']*df_SMs['deltaV_electrolyte']**2) #J/g
-electrostatic_edlc = electrostatic_edlc/3600
 
 electrostatic_edlc.name='specific_energy'
 electrostatic_edlc = electrostatic_edlc.to_frame()
 
 
-
-gravitational = (df_SMs['delta_height']*9.81/3600000)
+accel_g = ureg.Quantity(9.81, 'm/s**2')
+gravitational = df_SMs['delta_height']*accel_g
 gravitational.name='specific_energy'
 gravitational = gravitational.to_frame()
 
@@ -208,9 +215,13 @@ for df in dfs:
 
 df_out = pd.concat(dfs_2).dropna(subset=['specific_energy'])
 
+df_out['specific_energy'] = df_out['specific_energy'].astype('pint[kWh/kg]')
+
 df_out['C_kwh'] = df_out['specific_price']/df_out['specific_energy']
 
-# df_out = df_out.dropna(subset=['C_kwh'])
+df_out = df_out.dropna(subset=['C_kwh'])
+df_out['C_kwh'] = df_out['C_kwh'].astype('pint[USD/kWh]')
+
 
 # %%
 
@@ -219,10 +230,15 @@ df_SMs = df_SMs[[col for col in df_SMs.columns if col not in df_out.columns]]
 
 df_SMs = pd.concat([df_SMs, df_out], axis=1)
 
+df_SMs = prep_df_pint_out(df_SMs)
+
 df_SMs.to_csv('data_consolidated/SM_data.csv')
 
 # %%
-df_sel = df_out.where(df_out['C_kwh'] < 10).dropna(how='all')
+cutoff = ureg.Quantity(10, 'USD/kWh')
+
+below_cufoff = [c < cutoff for c in df_out['C_kwh'].values]
+df_sel = df_out[below_cufoff].dropna(how='all')
 
 df_sel = df_sel[['specific_energy','specific_price','price_sources','SM_sources','C_kwh']]
 
@@ -238,3 +254,5 @@ df_sel.columns = [c.replace('_',' ') for c in df_sel.columns]
 
 
 df_sel.to_csv('analysis/output/SM_downselected.csv')
+
+# %%

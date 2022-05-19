@@ -3,9 +3,7 @@ import pint_pandas
 import pint
 
 ureg = pint.UnitRegistry()
-# ureg.load_definitions('unit_defs.txt')
 ureg.load_definitions(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\es_utils\unit_defs.txt')
-
 pint_pandas.PintType.ureg = ureg
 
 def get_unit_row(df_unit):
@@ -69,6 +67,10 @@ unit_lookup = {
     'sp_latent_heat': 'kWh/kg',
     'phase_change_T': 'degC',
     'Cp': 'kWh/kg/K',
+    'deltaH_thermochem': 'kWh/kg',
+    'specific_capacitance': 'F/g',
+    'deltaV_electrolyte': 'V',
+    # 'specific_strength': 'kWh/kg'
 }
 
 def convert_units(df):

@@ -1,6 +1,7 @@
 #%%
 import pandas as pd
 import os
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 if not os.path.exists('output'): os.mkdir('output')
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8', index_col=0) for fn in os.listdir('tables')}
@@ -65,12 +66,22 @@ s_densities
 
 df['Cp'] = s_Cps
 df['mass_density'] = s_densities
+df['T_max'] = df['T_max'].str.strip('>').astype(float)
 
-df['Cp'] = df['Cp']/3600000
+df = df.astype({
+    'Cp': 'pint[J/kg/K]',
+    'T_max': 'pint[degC]',
+    'T_melt': 'pint[degC]',
+    'mass_density': 'pint[kg/m**3]',
+    'C_kwh_orig':'pint[USD/kWh]'
+    })
+
+
+df = convert_units(df)
+df = prep_df_pint_out(df)
 
 #%%
 
-df['T_max'] = df['T_max'].str.strip('>').astype(float)
 
 # %%
 df.to_csv('output/SM_data.csv')

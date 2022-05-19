@@ -1,4 +1,6 @@
-SM_name,specific_capacitance,deltaV_electrolyte,SM_type,mat_basis,materials
+,specific_capacitance,deltaV_electrolyte,SM_type,mat_basis,materials
+unit_row,farad / gram,volt,N/U,N/U,N/U
+SM_name,,,,,
 2D TiS2 nanocrystals,395.0,1.2,pseudocapacitor,,TiS2
 3D Co3O4 nanonetworks,797.5,1.5,pseudocapacitor,,Co3O4
 Au-MnO2 core-shell,524.0,2.0,pseudocapacitor,molar,"[('Au', 1), ('MnO2', 1)]"

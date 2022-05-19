@@ -1,4 +1,6 @@
-index,original_name,molecular_formula,specific_price,source,notes
+,original_name,molecular_formula,specific_price,source,notes
+unit_row,N/U,N/U,USD/kg,N/U,N/U
+index,,,,,
 Iron Ore,Magnetite,Fe2O3,0.139,Olympios 2021,
 Solar Salt,Molten Salt,NaNO3KNO3,1,Olympios 2021,
 Water Reservoir Excavation,Pumped Hydro,,0.261,Calculation/Black and Veatch,"Based on Black and Veatch 2012 resirvoir cost numbers. "

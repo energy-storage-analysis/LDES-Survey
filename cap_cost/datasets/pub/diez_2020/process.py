@@ -2,6 +2,8 @@
 import pandas as pd
 import os
 
+from es_utils.units import convert_units, prep_df_pint_out, ureg
+
 if not os.path.exists('output'): os.mkdir('output')
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8', index_col=0) for fn in os.listdir('tables')}
 #%%
@@ -63,5 +65,19 @@ custom_data = pd.read_csv('tables/custom.csv', index_col=0)
 df = pd.concat([df, custom_data])
 
 # %%
+
+
+df['C_kwh_orig'] = df['C_kwh_orig'].str.replace('^$','nan')
+
+df = df.astype({
+    'deltaV': 'pint[V]',
+    'C_kwh_orig': 'pint[USD/kWh]',
+    'n_e': 'pint[dimensionless]',
+    })
+
+
+df = convert_units(df)
+df = prep_df_pint_out(df)
+
 
 df.to_csv('output/SM_data.csv')

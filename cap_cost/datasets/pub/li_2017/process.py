@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 from es_utils.chem import process_chem_lookup
+from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 chem_lookup = pd.read_csv('chem_lookup.csv')
 chem_lookup = process_chem_lookup(chem_lookup)
@@ -38,6 +39,14 @@ for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
 
 from es_utils import extract_df_mat
 df_price = extract_df_mat(table_3)
+
+df_price = df_price.astype({
+    'specific_price': 'pint[USD/kg]',
+    })
+df_price = convert_units(df_price)
+df_price = prep_df_pint_out(df_price)
+
+
 df_price.to_csv('output/mat_data.csv')
 
 #%%
@@ -46,7 +55,6 @@ df = df.rename({'C_kwh': 'C_kwh_orig'}, axis=1)
 df = df.dropna(how='all')
 df = df.drop('ref',axis=1)
 df = df.rename({'label':'original_name'}, axis=1).set_index('original_name')
-
 # %%
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
@@ -57,6 +65,15 @@ df_SM = pd.merge(df, SM_lookup, on='original_name')
 df_SM = df_SM.reset_index(drop=True).set_index('SM_name') #Dropping original name as it is so similar
 
 df_SM = df_SM[['C_kwh_orig','type','deltaV','n_e','materials','mat_basis','SM_type']]
+
+df_SM = df_SM.astype({
+    'deltaV': 'pint[V]',
+    'n_e': 'pint[dimensionless]',
+    'C_kwh_orig': 'pint[USD/kWh]',
+    })
+
+df_SM = convert_units(df_SM)
+df_SM = prep_df_pint_out(df_SM)
 
 df_SM.to_csv('output/SM_data.csv')
 
