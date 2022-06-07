@@ -13,7 +13,7 @@ plt.rcParams.update({
 from lcos_fns import calc_lcos
 
 CF = 0.7
-eta_RTs = [1,0.5]
+eta_RTs = [1,0.75,0.5]
 
 
 eta_linestyles = ['-','--','-.']
@@ -25,7 +25,7 @@ DD = np.logspace(np.log10(1),np.log10(300), num=100),
 
 C_Ein = 0.05
 C_kW = 100
-LT = 20
+LT = 10
 
 
 #%%
@@ -42,7 +42,7 @@ constants = dict(
 CF = 0.7,
 C_Ein = 0.05,
 C_kW = 1000,
-LT = 20,
+LT = 10,
 )
 
 da_lcos = calc_lcos.run_combos(combos, constants=constants)['lcos']
@@ -98,19 +98,20 @@ da_CkW.coords['DD'].attrs = dict(long_name='Discharge Duration', units='h')
 
 #%%
 
-plt.figure(figsize=(6,4))
+plt.figure(figsize=(15,4))
 
 da_CkW_stack = da_CkW.stack(temp = ['DD', 'eta_RT'])
 
 
-colors = ['tab:purple','tab:orange','tab:brown']
+# colors = ['tab:purple','tab:orange','tab:brown']
+colors = ['c', 'y', 'k']
 color_dict = {eta: colors[i] for i, eta in enumerate(da_CkW.coords['DD'].values)}
 
 for DD, eta_RT in da_CkW_stack.coords['temp'].values:
     da_CkW.sel(DD=DD, eta_RT=eta_RT).plot(
         linestyle=eta_linestyle_dict[eta_RT],
         color=color_dict[DD],
-        # label='$DD$: {} h, $\eta_{{RT}}$: {}'.format(DD,eta_RT)
+        label='$DD$: {} h, $\eta_{{RT}}$: {}'.format(DD,eta_RT)
 
     )
 
@@ -121,7 +122,7 @@ plt.xticks([1e0,1e1,1e2,1e3])
 plt.gca().set_title('')
 plt.xscale('log')
 plt.yscale('log')
-# plt.legend(bbox_to_anchor=[0,0,2,1])
+plt.legend(bbox_to_anchor=[0,0,1.8,1])
 
 plt.ylabel('Maximum Power Capital ($/kW)')
 plt.tight_layout()
