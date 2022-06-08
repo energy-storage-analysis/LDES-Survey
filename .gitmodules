@@ -1,0 +1,3 @@
+[submodule "seaborn"]
+	path = seaborn
+	url = https://github.com/aspitarl/seaborn
