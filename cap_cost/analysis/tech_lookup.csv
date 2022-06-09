@@ -1,18 +1,18 @@
-name,long_name,energy_type
-liquid_metal_battery,Liquid Metal \n Battery,Chemical \n(Coupled)
-latent_thermal,Latent Thermal,Thermal
-sensible_thermal,Sensible \nThermal,Thermal
-thermochemical,Thermochemical,Chemical \n(Decoupled)
-pressure_cavern,Pressure Cavern,Pressure
-pressure_tank,Pressure Tank*,Pressure
-smes,SMES*,Magnetic
-solid_electrode,Dual Solid \nElectrode Battery,Chemical \n(Coupled)
-pseudocapacitor,Pseudocapacitor,Chemical \n(Coupled)
-EDLC,EDLC,Electrostatic
-flow_battery,Flow Battery,Chemical \n(Decoupled)
-synfuel,Synthetic Fuel,Chemical \n(Decoupled)
-gravitational,Gravity,Gravitational
-dielectric_capacitor,Dielectric \nCapacitor,Electrostatic
-metal_air,Metal Air,Chemical \n(Coupled)
-hybrid_flow,Hybrid Flow,Chemical \n(Coupled)
-flywheel,Flywheel*,Kinetic
+name,long_name,energy_type,coupled
+liquid_metal_battery,Liquid Metal \n Battery,Chemical,Coupled
+latent_thermal,Latent Thermal,Thermal,Decoupled
+sensible_thermal,Sensible \nThermal,Thermal,Decoupled
+thermochemical,Thermochemical,Chemical,Decoupled
+pressure_cavern,Pressure Cavern,Pressure,Decoupled
+pressure_tank,Pressure Tank*,Pressure,Decoupled
+smes,SMES*,Magnetic,Coupled
+solid_electrode,Dual Solid \nElectrode Battery,Chemical,Coupled
+pseudocapacitor,Pseudocapacitor,Chemical,Coupled
+EDLC,EDLC,Electrostatic,Coupled
+flow_battery,Flow Battery,Chemical,Decoupled
+synfuel,Synthetic Fuel,Chemical,Decoupled
+gravitational,Gravity,Gravitational,Decoupled
+dielectric_capacitor,Dielectric \nCapacitor,Electrostatic,Coupled
+metal_air,Metal Air,Chemical,Coupled
+hybrid_flow,Hybrid Flow,Chemical,Coupled
+flywheel,Flywheel*,Kinetic,Coupled

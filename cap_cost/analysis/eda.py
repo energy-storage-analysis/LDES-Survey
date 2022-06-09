@@ -33,17 +33,17 @@ df_mat_data.to_csv('output/mat_data_used.csv')
 plt.figure(figsize=(7,5))
 
 bins = np.logspace(np.log10(0.05), np.log10(5e2), 30)
-df_mat_data['specific_price'].hist(bins=bins)
+df_mat_data['specific_price'].hist(bins=bins, color='slategray')
 
 plt.xscale('log')
 
-plt.suptitle("{} Material Prices used in at least 1 storage medium".format(len(df_mat_data)))
+plt.suptitle("{} Material Prices".format(len(df_mat_data))) #Used in at least one storage medium
 plt.xlabel('Median Specific Price ($/kg)')
 
 plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
 plt.tight_layout()
-plt.ylim(0,10)
+plt.ylim(0,11)
 
 plt.savefig(pjoin(output_dir,'eda_mats.png'))
 
@@ -53,7 +53,7 @@ plt.savefig(pjoin(output_dir,'eda_mats.png'))
 plt.figure(figsize=(2.5,2))
 # plt.figure(figsize=(5,5))
 
-df_mat_data['num_source'].value_counts().plot.bar()
+df_mat_data['num_source'].value_counts().plot.bar(color='slategray')
 plt.xlabel("# Sources")
 plt.ylabel("Count")
 
@@ -82,7 +82,7 @@ for energy_type, color in palette.items():
 
 
 plt.xscale('log')
-plt.legend()
+plt.legend(title='Energy Type')
 plt.locator_params(axis='y', integer=True)
 plt.suptitle("{} Storage Media".format(len(df_SMs)))
 plt.xlabel('Energy Density (kWh/kg)')

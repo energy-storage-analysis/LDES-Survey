@@ -160,12 +160,16 @@ df_stats = df_log.groupby('SM_type').agg({
     'specific_energy': ['mean','std'],
 })
 
-# df_stats = df_stats.apply(np.exp)
+display_text = pd.read_csv('tech_lookup.csv', index_col=0)
+long_names = [display_text['long_name'][s].replace('\\n',' ') for s in df_stats.index.values]
 
-df_stats
+df_stats.index = long_names
 
 
 #%%
+
+#TODO: The ticks on this figure only work out correctly in ipython console...
+#TODO: Need to extend the lists (automatically?) to be able to display all technologies
 
 plt.figure()
 
@@ -217,7 +221,7 @@ lgd = plt.legend()
 
 
 # lgd = plt.gca().get_legend()
-lgd.set_bbox_to_anchor((1, 1))
+lgd.set_bbox_to_anchor((1, 1.1))
 
 
 from matplotlib.ticker import FuncFormatter
@@ -234,7 +238,7 @@ plt.gca().yaxis.set_major_formatter(formatter)
 
 # plt.grid()
 plt.xlabel('Energy Density (kWh/kg)')
-plt.ylabel('Material cost ($/kg)')
+plt.ylabel('Material Price ($/kg)')
 # plt.xscale('log')
 
 plt.savefig(pjoin(output_dir,'Ckwh_line_errorbar.png'), facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')

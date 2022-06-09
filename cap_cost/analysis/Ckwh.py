@@ -30,6 +30,7 @@ df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 
 df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 df_all['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
+df_all['coupled'] = [display_text['coupled'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 df_all['C_kwh_log'] = np.log10(df_all['C_kwh'])
 
 median_Ckwh = df_all.groupby('SM_type')['C_kwh'].median().to_dict()
@@ -42,7 +43,7 @@ df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 def strip_plot(df_plot):
 
     cat_label = 'display_text'
-    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette)
+    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette, style='coupled')
 
     plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -53,7 +54,7 @@ def strip_plot(df_plot):
     plt.xticks(rotation=70)
 
 
-    plt.ylabel('Material Energy Cost ($/kWh)')
+    plt.ylabel('$C_{kWh}$ (\$/kWh)')
     plt.xlabel('Technology')
     plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 
@@ -62,7 +63,9 @@ def strip_plot(df_plot):
 fig = plt.figure(figsize = (18,8))
 strip_plot(df_all)
 
-plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
+# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
+plt.gca().get_legend().remove()
+plt.suptitle('')
 plt.tight_layout()
 plt.savefig(pjoin(output_dir,'Ckwh.png'))
 
