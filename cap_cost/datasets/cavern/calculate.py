@@ -4,6 +4,10 @@ import os
 if not os.path.exists('output'): os.makedirs('output')
 
 from es_utils.units import convert_units, prep_df_pint_out, ureg
+from es_utils import join_col_vals
+
+#%%
+# Convert hydrogen chemical to volumetric
 
 df_H2 = pd.read_csv('H2_specific.csv')
 
@@ -11,28 +15,26 @@ R=8.3145
 T=330
 
 df_H2['mass_density'] = (2/1000)*df_H2['pressure']/(R*T)
-
 df_H2['vol_cost'] = df_H2['H2_specific_cost']*df_H2['mass_density']
 
-df_H2
-
 #%%
+#Add in costs already specified in volumetric terms 
 
 df_vol = pd.read_csv('vol_data.csv')
-
-df_vol
-
-#%%
 
 df_vol_all = pd.concat([
     df_H2[['type','vol_cost','source']],
     df_vol[['type','vol_cost','source']]
 ])
 
+df_vol_all.to_csv('output/vol_cost_all.csv')
+
+
+#%%
+#Average volumetric costs between sources
+
 vol_costs = df_vol_all.groupby('type')['vol_cost'].mean()
 vol_costs.name = 'vol_cost'
-
-from es_utils import join_col_vals
 
 sources = df_vol_all.groupby('type')['source'].apply(join_col_vals)
 sources.name='sources'
@@ -42,11 +44,10 @@ vol_costs,
 sources,
 ],axis=1)
 
-df_vol_final
-
 df_vol_final.to_csv('output/vol_cost.csv')
 
 #%%
+#Calculate the specific costs for different gasses
 
 df_gas = pd.read_csv('gasses.csv', index_col=0)
 df_gas['mu'] = df_gas['mu']/1000 #kg/mol
