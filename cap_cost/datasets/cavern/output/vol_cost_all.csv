@@ -1,10 +1,10 @@
-,type,vol_cost,source
-0,LRC,467.4928975849055,Ahluwalia
-1,Salt,319.266997960846,Ahluwalia
-2,Pipes,4417.255725211706,Ahluwalia
-3,Salt,62.322667410165145,Keissling 2021
-0,Salt,55.0,Hyunder
-1,LRC,419.75,Hyunder
-2,LRC,752.0,Keissling 2021
-3,Salt,23.0,Lord 2014
-4,LRC,84.0,Lord 2014
+,type,vol_cost,year,source
+0,Pipes,4417.255725211705 USD / meter ** 3,2021,Ahluwalia
+1,LRC,467.4928975849055 USD / meter ** 3,2021,Ahluwalia
+2,Salt,266.0558316340384 USD / meter ** 3,2021,Ahluwalia
+3,Salt,69.36512882751381 USD / meter ** 3,2021,Keissling
+0,Salt,71.20382109144607 USD / meter ** 3,2013,Kruck
+1,LRC,543.4146164206271 USD / meter ** 3,2013,Kruck
+2,LRC,836.976 USD / meter ** 3,2021,Keissling
+3,Salt,26.32599182211409 USD / meter ** 3,2014,Lord
+4,LRC,96.14710056772103 USD / meter ** 3,2014,Lord
