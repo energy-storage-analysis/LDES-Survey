@@ -1,5 +1,5 @@
 ,original_name,molecular_formula,specific_price,source,specific_strength,notes,mass_density
-unit_row,N/U,N/U,USD / kilogram,N/U,centimeter ** 3 * megapascal / gram,N/U,N/U
+unit_row,N/U,N/U,USD / kilogram,N/U,centimeter ** 3 * megapascal / gram,N/U,kilogram / meter ** 3
 index,,,,,,,
 Ag,Silver Bullion,Ag,608.4850295578531,USGS,,,
 Al,Aluminum Ingot,Al,2.3906927711328128,USGS,,,
@@ -489,15 +489,15 @@ SiO2,SiO2,,0.6678000000000002,Steinmann 2022,,,
 Solar Salt,Solar Salt,,0.7791000000000002,Steinmann 2022,,,
 Stone,"Basalt, Granite, Limestone, Sandstone",,0.027825,Steinmann 2022,,,
 Vegetable Oil,Sunflower oil,,0.6678000000000002,Steinmann 2022,,,
-H2_LRC,,H2,59.10260017187501,Cavern Calculations,,,7.289200866685983
-CH4_LRC,,CH4,7.387825021484375,Cavern Calculations,,,58.31360693348786
-N2_LRC,,N2,4.221614297991072,Cavern Calculations,,,102.04881213360376
-H2O_LRC,,H2O,0.4308107243962263,Cavern Calculations,,,1000.0
-H2_Pipes,,H2,606.0,Cavern Calculations,,,7.289200866685983
-CH4_Pipes,,CH4,75.75,Cavern Calculations,,,58.31360693348786
-N2_Pipes,,N2,43.28571428571429,Cavern Calculations,,,102.04881213360376
-H2O_Pipes,,H2O,4.417255725211706,Cavern Calculations,,,1000.0
-H2_Salt,,H2,15.762690375,Cavern Calculations,,,7.289200866685983
-CH4_Salt,,CH4,1.970336296875,Cavern Calculations,,,58.31360693348786
-N2_Salt,,N2,1.125906455357143,Cavern Calculations,,,102.04881213360376
-H2O_Salt,,H2O,0.1148974163427527,Cavern Calculations,,,1000.0
+H2_LRC,,H2,50.62533076078126,Cavern Calculations,,,7.289200866685982
+CH4_LRC,,CH4,6.3281663450976575,Cavern Calculations,,,58.313606933487854
+N2_LRC,,N2,3.616095054341518,Cavern Calculations,,,102.04881213360376
+H2O_LRC,,H2O,0.3690182048577512,Cavern Calculations,,,1000.0
+H2_Pipes,,H2,606.0,Cavern Calculations,,,7.289200866685982
+CH4_Pipes,,CH4,75.75,Cavern Calculations,,,58.313606933487854
+N2_Pipes,,N2,43.28571428571428,Cavern Calculations,,,102.04881213360376
+H2O_Pipes,,H2O,4.417255725211705,Cavern Calculations,,,1000.0
+H2_Salt,,H2,8.788100296958644,Cavern Calculations,,,7.289200866685982
+CH4_Salt,,CH4,1.0985125371198303,Cavern Calculations,,,58.313606933487854
+N2_Salt,,N2,0.6277214497827602,Cavern Calculations,,,102.04881213360376
+H2O_Salt,,H2O,0.0640582283011142,Cavern Calculations,,,1000.0

@@ -1,6 +1,6 @@
 type,vol_cost,source,year,unit,notes
-Salt,55,Kruck,2013,EUR/m**3,
+Salt,55,Kruck,2013,EUR/m**3,"Exploration, drilling, leaching,first fill"
 LRC,419.75,Kruck,2013,EUR/m**3,average of 4 LRC costs
-LRC,752,Keissling,2021,EUR/m**3,
-Salt,23,Lord,2014,USD/m**3,
-LRC,84,Lord,2014,USD/m**3,
+Salt,23,Lord,2014,USD/m**3,"""Mining Costs"""
+LRC,84,Lord,2014,USD/m**3,"""Mining Costs"""
+Salt,52.9,ETI,2018,GBP/m**3,"Well, Leach, MIT, and first fill"
