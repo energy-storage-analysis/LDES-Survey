@@ -28,7 +28,8 @@ df_latent_ds = df_latent.where(df_latent['C_kwh'] < 10).dropna(how='all')
 df_latent_ds = df_latent_ds.where(df_latent['phase_change_T'] < 2000).dropna(how='all')
 
 plt.figure()
-df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
+# df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
+df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False)
 
 
 ax = plt.gca()
@@ -48,9 +49,10 @@ plt.ylim(0.05,20)
 plt.xlim(500,1500)
 
 plt.xlabel('Phase Change Temperature (deg C)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.suptitle("Latent")
 
-plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
+# plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
 
 adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,10))
 
@@ -68,7 +70,8 @@ plt.figure()
 x_str='T_max'
 y_str='C_kwh'
 
-df_sens_ds.plot.scatter(y=y_str, x=x_str, c='deltaT', cmap='jet', sharex=False)
+# df_sens_ds.plot.scatter(y=y_str, x=x_str, c='deltaT', cmap='jet', sharex=False)
+df_sens_ds.plot.scatter(y=y_str, x=x_str, sharex=False)
 
 ax = plt.gca()
 texts = []
@@ -88,10 +91,11 @@ plt.ylim(0.05,20)
 plt.xlim(-500,3550)
 
 plt.xlabel('Maximum Temperature (deg C)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.suptitle("Sensible")
 
 
-plt.gcf().axes[1].set_ylabel('Maximum DeltaT (deg C)')
+# plt.gcf().axes[1].set_ylabel('Maximum DeltaT (deg C)')
 
 adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,2))
 
@@ -127,10 +131,50 @@ plt.ylim(0.05,20)
 # plt.ylim(0,10)
 
 plt.xlabel('Reaction Temperature (C)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.suptitle("Thermochemcial")
 plt.tight_layout()
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0,5))
 
 plt.savefig(pjoin(output_dir,'thermochem.png'))
 # %%
+
+plt.figure(figsize=(10,8))
+x_str='T_oper'
+y_str='C_kwh'
+
+df_all = pd.concat([
+    df_latent.rename({'phase_change_T': 'T_oper'}, axis=1),
+    df_sens.rename({'T_max': 'T_oper'}, axis=1),
+    df_tc.rename({'temperature': 'T_oper'}, axis=1),
+])
+
+df_all = df_all.dropna(axis=1,how='all')
+df_all = df_all.where(df_all['C_kwh'] < 10).dropna(how='all')
+
+sns.scatterplot(data=df_all, y=y_str, x=x_str, hue='SM_type', legend=True)
+
+ax = plt.gca()
+texts = []
+for name, row in df_all.iterrows():
+    x = row[x_str]
+    y = row[y_str]
+    # name = row['materials']
+
+    txt = ax.text(x,y,"${}$".format(name))
+    texts.append(txt)
+
+plt.xlim(0,3500)
+# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.3,1])
+
+plt.yscale('log')
+plt.ylim(0.05,20)
+# plt.ylim(0,10)
+
+plt.xlabel('Reaction Temperature (C)')
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+# plt.tight_layout()
+
+# adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+# plt.savefig(pjoin(output_dir,'all_heat.png'))
