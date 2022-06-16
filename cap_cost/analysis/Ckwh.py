@@ -54,7 +54,7 @@ def strip_plot(df_plot):
     plt.xticks(rotation=70)
 
 
-    plt.ylabel('$C_{kWh}$ (\$/kWh)')
+    plt.ylabel('$C_{kWh,mat}$ (\$/kWh)')
     plt.xlabel('Technology')
     plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 

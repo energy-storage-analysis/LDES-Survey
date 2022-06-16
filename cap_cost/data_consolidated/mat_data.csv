@@ -87,6 +87,7 @@ FeSi2,2.260730267574827,,,0,1,USGS,2.26,FeSi2,112.015,"Silicon FeSi2_50, Silicon
 FeTiO3,0.3898153678011236,0.013460435941850743,0.03,0,2,"ISE, USGS","0.38, 0.4",FeTiO3,151.709,"Ilmenite Conc, Ilmenite Reduced, Rutile Conc, Titanium Slag, Titanium Mineral Concentrates Ilmenite, Titanium Mineral Concentrates Ilmente_Leucoxene",3.80171
 FeV,25.35074,,,0,1,SMM,25.35,FeV,106.7865,50 Ferrovanadium,177.2038112
 Feldspar,0.1067037348974807,,,0,1,USGS,0.11,AlKO8Si3,278.3268384,Feldspar and Nepheline Syenite Feldspar,
+Fossil CH4,0.164,,,1,1,EIA Henry Hub,0.16,CH4,16.043,,
 GRE,24.815,,,6,1,Kale 2018,24.82,,,"E-Glass Epoxy, S-2 Glass Epoxy",
 Ga,325.49813426057705,256.48020544060074,0.79,6,4,"Alibaba, ISE, Kim 2013, USGS","151.62, 236.7, 414.3, 731.47",Ga,69.723,"Ga, Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import, Gallium metal",148.0
 Ge,1187.075,48.54288052845655,0.04,0,2,"ISE, USGS","1152.75, 1221.4",Ge,72.63,"Germanium Metal, Germanium metal",962.0
@@ -214,6 +215,7 @@ Re,1502.5,1251.1680795693812,0.83,0,3,"ISE, SMM, USGS","1268.0, 1502.5, 3542.8",
 Rh,9.36120905208348,,,0,1,USGS,9.36,Rh,102.90549,Platinum-Group Metals Rhodium,147000.0
 Ru,0.3010831068432655,,,0,1,USGS,0.3,Ru,101.07,Platinum-Group Metals Ruthenium,10500.0
 S,0.25,0.19031235859818404,0.76,8,3,"Li 2017, Steinmann 2022, USGS","0.06, 0.25, 0.45",S,32.06,"S, Sulfur, Sulfur Sulfur",0.0926
+SMR H2,2.08,,,0,1,DOE-FE Hydrogen Strategy,2.08,H2,2.016,,
 Sand,0.0849999999999999,0.37712729946266155,4.44,1,3,"Alibaba, Diago 2018, Liu 2016","0.05, 0.08, 0.72",SiO2,60.083,"Dune Sand, Sand",
 Sb,7.0579016560000785,4.630400677483452,0.66,7,4,"Alibaba, ISE, Kim 2013, USGS","14.78, 4.2, 5.96, 8.15",Sb,121.76,"Antimony Ingot, Antimony Metal, Sb",5.79
 Sb2O3,6.439548578319339,1.4997047827786198,0.23,0,2,"Alibaba, ISE","5.38, 7.5",Sb2O3,291.517,Antimony Trioxide,4.8620572

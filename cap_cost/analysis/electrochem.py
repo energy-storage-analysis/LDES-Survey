@@ -40,11 +40,9 @@ df_ec
 
 #%%
 
-
-# df_latent.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet')
-df_ec.plot.scatter(y='C_kwh', x='deltaV')
-plt.yscale('log')
-plt.xscale('log')
+# df_ec.plot.scatter(y='C_kwh', x='deltaV')
+# plt.yscale('log')
+# plt.xscale('log')
 #%%k
 df_ec_ds = df_ec.where(df_ec['C_kwh'] < 10).dropna(how='all')
 
@@ -68,31 +66,22 @@ for name, row in df_ec_ds.iterrows():
 # plt.xscale('log')
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 
 # plt.ylim(0,10)
 plt.ylim(2e-1,20)
 plt.yscale('log')
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+# adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 plt.savefig(pjoin(output_dir,'ec.png'))
-# %%
-
-#%%
-
-df_ec_synfuel = df[df['SM_type'] == 'synfuel'].dropna(subset=['SM_type'])
-df_ec_synfuel
-
-#TODO: this molar mass is what was used in calculating deltaG, should probably just have deltaG be specified per mol and energy density caluclated with total molar mass. But have to redo how total molar mass is caluclated because the specific price for synthetic fuels is calcualted on a mass basis.
-# df_ec_synfuel['mu_product'] = [16,2,2,32]
-# df_ec_synfuel['mu_product'] = df_ec_synfuel['mu_product']/1000 #kg/mol
 
 #%%
 
 F = 96485 # C/mol
+
+df_ec_synfuel = df[df['SM_type'] == 'synfuel'].dropna(subset=['SM_type'])
 df_ec_synfuel['deltaV'] = (df_ec_synfuel['deltaG_chem']*3600000)/(F*df_ec_synfuel['n_e'])
-df_ec_synfuel['deltaV']
 
 # %%
 df_ec_coupled = df.where(df['SM_type'].isin([
@@ -111,7 +100,8 @@ df_ec_decoupled = df.where(df['SM_type'].isin([
 
 df_ec_decoupled = pd.concat([
     df_ec_decoupled,
-    df_ec_synfuel
+    df_ec_synfuel,
+    # df_ec_fossil
 ])
 
 df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < 10).dropna(how='all')
@@ -136,7 +126,7 @@ for name, row in df_ec_coupled.iterrows():
 ax.set_title('Coupled')
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 
 # plt.ylim(0,10)
 plt.ylim(1e-1,20)
@@ -151,7 +141,7 @@ plt.savefig(pjoin(output_dir,'ec_coupled.png'))
 
 #%%
 
-plt.figure(figsize = (4,5))
+plt.figure(figsize = (5,5))
 
 x_str='deltaV'
 y_str='C_kwh'
@@ -164,6 +154,7 @@ for name, row in df_ec_decoupled.iterrows():
     x = row[x_str]
     y = row[y_str]
 
+    name = name.replace(" ", r"\ ")
     txt= ax.text(x, y, "${}$".format(name))
     texts.append(txt)
 
@@ -181,7 +172,7 @@ plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 
 plt.savefig(pjoin(output_dir,'ec_decoupled.png'))
 
@@ -190,7 +181,7 @@ plt.savefig(pjoin(output_dir,'ec_decoupled.png'))
 
 df_nofeedstock = df_ec_decoupled.loc[['Feedstock' not in idx for idx in df_ec_decoupled.index]]
 
-plt.figure(figsize = (4,5))
+plt.figure(figsize = (5,5))
 
 x_str='deltaV'
 y_str='C_kwh'
@@ -203,6 +194,7 @@ for name, row in df_nofeedstock.iterrows():
     x = row[x_str]
     y = row[y_str]
 
+    name = name.replace(" ", r"\ ")
     txt= ax.text(x, y, "${}$".format(name))
     texts.append(txt)
 
@@ -211,16 +203,20 @@ for name, row in df_nofeedstock.iterrows():
 ax.set_title('Decoupled')
 
 # plt.ylim(0,10)
-plt.ylim(1e-1,20)
+plt.ylim(1e-2,20)
+plt.xlim(0.6,1.6)
 plt.yscale('log')
 
+# plt.hlines(0.01, 1,2)
 
-# plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
+plt.gca().get_legend().set_bbox_to_anchor([0,0.4,0.5,0])
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+
+plt.tight_layout()
 
 plt.savefig(pjoin(output_dir,'ec_decoupled_nofeedstock.png'))
 
@@ -262,7 +258,7 @@ for name, row in df_plot.iterrows():
 ax.set_title('Coupled')
 
 plt.xlabel('Couple Voltage (V)')
-plt.ylabel("Material Energy Cost ($/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 
 # plt.ylim(0,10)
 # plt.ylim(1e-1,20)
@@ -273,3 +269,5 @@ plt.yscale('log')
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.2,1))
 
 plt.savefig(pjoin(output_dir,'ec_flow_all.png'))
+
+# %%
