@@ -1,9 +1,15 @@
+Materials strength-to-weight ratio of metal and composite materials. 
+
+
 Kale, V., Secanell, M., 2018. A comparative study between optimal metal and composite rotors for flywheel energy storage systems. Energy Reports 4, 576–585. https://doi.org/10/gm8c9v
 
 
-# Composite materials: 
+## Development: 
 
-## CRFP: carbon fiber reinforced plastic
+TODO: the tensile strenght of two axes of composite materials is just averaged, see comment in processing script.
+
+## Determining meaning of acronyms
+### CRFP: carbon fiber reinforced plastic
 
 I think carbon fibers with an epoxy materx are CRFP, i.e. the plastic can also mean 'epoxy'. Like this
 
@@ -19,7 +25,7 @@ https://asmedigitalcollection.asme.org/materialstechnology/article-abstract/112/
 T300 is a carbon fiber
 
 https://www.rockwestcomposites.com/media/wysiwyg/T300DataSheet_1.pdf
-## GRE
+### GRE
 
 
 
@@ -28,7 +34,7 @@ Glass Reinforced Epoxy (GRE)
 https://www.corrosionpedia.com/definition/6781/glass-reinforced-epoxy-gre
 
 
- ## KFRP
+ ### KFRP
 
  Kevlar (aramid) fiber reinforced polymers
 

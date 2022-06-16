@@ -1,18 +1,11 @@
-data related to USGS price data
+Commodity price data from the U.S. Geological Survey Mineral Commodity Summaries 2022 Data Release. Data is obtained from the 'salient' dataset which contains commodity data for the last 5 years. 
 
-
-## Data extraction Instructions
-
-USGS raw data from 
-
+Data is obtained from the following website: 
 https://www.sciencebase.gov/catalog/item/6197ccbed34eb622f692ee1c
 
-1. download and extract the 'sailient' dataset into the data folder. 
+## Development
+The raw USGS data consists of a series of csv file and xml metadatafiles. The raw data is not included in the repository.
+
+1. Download and extract the 'sailient' dataset from the USGS link above into a folder called `data`, meaning that raw data files are located in `data/salient`. 
 2. run extract.py
-
-
-## HHI 
-
-Also check out this publicaiton 
-
-Theler, B., Kauwe, S.K., Sparks, T.D., 2020. Materials Abundance, Price, and Availability Data from the Years 1998 to 2015. Integr Mater Manuf Innov 9, 144–150. https://doi.org/10.1007/s40192-020-00173-5
+3. run process.py

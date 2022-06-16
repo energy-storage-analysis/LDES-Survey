@@ -1,0 +1,1 @@
+Bauer, T., Steinmann, W.-D., Laing, D., and Tamme, R. "Thermal Energy Storage Materials and Systems." Annual Review of Heat Transfer, Vol. 15, No. 15, 2012, pp. 131–177. https://doi.org/10.1615/AnnualRevHeatTransfer.2012004651.

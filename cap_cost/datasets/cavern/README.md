@@ -1,7 +1,3 @@
-collection of datasets related to cavern storage costs. This is an attempt ot tie together cavern storage costs for both chemical and pressure storage. 
+This dataset is a collection of datasets related to underground cavern storage costs. Sources are included that contain information about the volumetric capital cost ($/m3) of creating undeground caverns. This volumetric cost can then be used to determine the energy capital cost of storing different forms of energy in those undeground caverns. 
 
-Some data is presented in the literature as $/kg H2. I convert this to volumetric cost with the mass density of H2, then combine with the other volumetric costs in the literature. 
-Then this data can be used to caluclate the specific cost of both chemical and pressure storage in caverns. 
-
-
-TODO: SM data file is manually formed for now. 
+Some data is presented in the literature as $/kg H2. This data is converted to volumetric costs with the mass density of H2 at 100 bar. These volumetric costs are then combined with the other directly specified volumetric costs in the literature. 

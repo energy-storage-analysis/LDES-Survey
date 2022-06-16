@@ -1,6 +1,3 @@
-Thermochemical physical data from 
+EDLC and Pseudocapacitor physical data
 
-André, L., Abanades, S., Flamant, G., 2016. Screening of thermochemical systems based on solid-gas reversible reactions for high temperature solar thermal energy storage. Renewable and Sustainable Energy Reviews 64, 703–715. https://doi.org/10.1016/j.rser.2016.06.043
-
-
-Looked up what seemed to be the most common oxide formula for the oxides in the chem lookup
+Choi, H., and Yoon, H. "Nanostructured Electrode Materials for Electrochemical Capacitor Applications." Nanomaterials, Vol. 5, No. 2, 2015, pp. 906–936. https://doi.org/10.3390/nano5020906.

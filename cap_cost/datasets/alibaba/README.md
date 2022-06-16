@@ -1,8 +1,14 @@
-# Alibaba scraping
+This dataset is a set of prices obtained by webscraping alibaba with the `scrapy` python package. A list of search strings, The corresponding molecular formula, strings that the result title must contain, and strings that the title can not contain are determined manually. The scraper then iterates through the searchers and pulls the first page of results. Items with 'fake' prices (i.e. 0.001$/ton) prices are dropped.  
 
-This dataset contains price data obtained from webscraping alibaba based on 
+Certian materials are tagged as hydrates. In these materials the number of hydrates in the molecular formula is determined by searching the title for strings (monohydrat, dihydrat, etc.) and then the price is scaled by the ratio of the molecular weights of the hydrated and anhydrous moleucules. This means that all prices are scaled to correspond to the anhydrous molecular formula. 
+
+## Development
+The webscraper is based on
 
 https://github.com/scrapehero/alibaba-scraper
+
+The searches are defined in `resources/mat_data_searches.csv` and the CSS fiels to scrape are deterimed in `resources/search_results.yml` which is formed with the help of the selectorlib chrome extension. 
+
 
 There is also a `single_manual.csv` file for manually adding entries, which will be combined with the scraped data with a preference for scraped data. 
 
