@@ -1,4 +1,3 @@
-type,vol_cost,sources
-LRC,369.01820485775124 USD / meter ** 3,"Ahluwalia, Kruck, Lord"
-Pipes,4417.255725211705 USD / meter ** 3,Ahluwalia
-Salt,64.05822830111428 USD / meter ** 3,"Ahluwalia, ETI, Kruck, Lord"
+index,vol_cost,sources
+LRC,386.2764392982687 USD / meter ** 3,Papadias 2021
+Salt,30.424829432699717 USD / meter ** 3,"ETI 2018, Papadias 2021"

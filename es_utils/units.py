@@ -85,3 +85,17 @@ def convert_units(df):
     
     return df
 
+
+def convert_row(df, val_col, unit_col, unit_to):
+    """Converts the val_col of a dataframe to units of unit_to based on unit_col starting units"""
+    data_out = []
+    for index, row in df.iterrows():
+        unit = row[unit_col]
+        val = row[val_col]
+        val = ureg.Quantity(val, unit)
+        val = val.to(unit_to).magnitude
+        data_out.append(val)
+
+    data_out = pd.Series(data_out, index=df.index, dtype="pint[{}]".format(unit_to)) 
+
+    return data_out

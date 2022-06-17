@@ -1,9 +1,4 @@
-,type,vol_cost,year,source
-0,Pipes,4417.255725211705 USD / meter ** 3,2021,Ahluwalia
-1,LRC,467.4928975849055 USD / meter ** 3,2021,Ahluwalia
-2,Salt,81.63904970688299 USD / meter ** 3,2021,Ahluwalia
-0,Salt,71.20382109144607 USD / meter ** 3,2013,Kruck
-1,LRC,543.4146164206271 USD / meter ** 3,2013,Kruck
-2,Salt,26.32599182211409 USD / meter ** 3,2014,Lord
-3,LRC,96.14710056772103 USD / meter ** 3,2014,Lord
-4,Salt,77.064050584014 USD / meter ** 3,2018,ETI
+index,cost_H2,P,vol_cost,source
+Salt,4.5 USD / kilogram,100.0 standard_atmosphere,33.236022501763074 USD / meter ** 3,Papadias 2021
+LRC,52.3 USD / kilogram,100.0 standard_atmosphere,386.2764392982687 USD / meter ** 3,Papadias 2021
+Salt,,,27.613636363636363 USD / meter ** 3,ETI 2018

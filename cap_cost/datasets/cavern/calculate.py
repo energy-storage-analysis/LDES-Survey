@@ -3,69 +3,34 @@ import pandas as pd
 import os
 if not os.path.exists('output'): os.makedirs('output')
 
-from es_utils.units import convert_units, prep_df_pint_out, ureg
+from es_utils.units import convert_units, prep_df_pint_out, ureg, read_pint_df
 from es_utils import join_col_vals
-from es_utils.cpi_util import cpi_data
 
 #%%
-# Convert hydrogen chemical to volumetric
 
-df_H2 = pd.read_csv('H2_specific.csv')
+df_pap = read_pint_df('papadias_2021/output/vol_cost.csv')
+df_pap['source'] = 'Papadias 2021'
+df_eti = read_pint_df('ETI_2018/output/vol_cost.csv')
+df_eti['source'] = 'ETI 2018'
 
-R = ureg.Quantity(8.3145, 'J/mol/K')
-T = ureg.Quantity(330, 'K')
-mu_H2 = ureg.Quantity(2, 'g/mol')
-
-P = df_H2['pressure'].astype('pint[Pa]')
-
-mass_density = mu_H2*P/(R*T)
-mass_density
-
-
-def convert_row(df, val_col, unit_col, unit_to):
-    """Converts the val_col of a dataframe to units of unit_to based on unit_col starting units"""
-    data_out = []
-    for index, row in df.iterrows():
-        unit = row[unit_col]
-        val = row[val_col]
-        val = ureg.Quantity(val, unit)
-        val = val.to(unit_to).magnitude
-        data_out.append(val)
-
-    data_out = pd.Series(data_out, index=df.index, dtype="pint[{}]".format(unit_to)) 
-
-    return data_out
-
-specific_price = convert_row(df_H2, 'H2_specific_cost', 'unit', 'USD/kg')
-
-df_H2['vol_cost'] = specific_price*mass_density
-df_H2['vol_cost'] = df_H2['vol_cost'].pint.to('USD/m**3')
-
-#%%
-#Add in costs already specified in volumetric terms 
-
-df_vol = pd.read_csv('vol_data.csv')
-
-df_vol['vol_cost'] = convert_row(df_vol, 'vol_cost', 'unit', 'USD/m**3')
-
-df_vol_all = pd.concat([
-    df_H2[['type','vol_cost','year','source']],
-    df_vol[['type','vol_cost','year','source']]
+df_vol = pd.concat([
+    df_pap,
+    df_eti
 ])
 
-
-df_vol_all['vol_cost'] = df_vol_all['vol_cost']*cpi_data[df_vol_all['year']].values
-
-df_vol_all.to_csv('output/vol_cost_all.csv')
+df_vol.to_csv('output/vol_cost_all.csv')
 
 
 #%%
 #Average volumetric costs between sources
 
-vol_costs = df_vol_all.groupby('type')['vol_cost'].mean()
+
+R = ureg.Quantity(8.3145, 'J/mol/K')
+
+vol_costs = df_vol.groupby('index')['vol_cost'].mean()
 vol_costs.name = 'vol_cost'
 
-sources = df_vol_all.groupby('type')['source'].apply(join_col_vals)
+sources = df_vol.groupby('index')['source'].apply(join_col_vals)
 sources.name='sources'
 
 df_vol_final = pd.concat([
