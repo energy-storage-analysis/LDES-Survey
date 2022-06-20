@@ -376,6 +376,7 @@ V2O5/V2O4,thermochemical,,,,,,,,,,,,0.2696944444444444,1710.0,,,,,,,,,,,V2O5,,,o
 VRFB,flow_battery,,,,,,,,,124.4,1.55,1.0,,,,,,,,,,,,,V2O5,,,Redox flow,,20.0,,0.22840669447529546,181.878,17.306960589916155,"Alibaba, ISE, SMM",Li 2017,75.77256275116788
 Vegetable Oil,sensible_thermal,0.0006540277777777,0.0,200.0,,,820.0,0.11,,,,,,,,,,,,,,,,,Vegetable Oil,,"Sunflower oil, Vegetable oil",,,0.0,200.0,0.13080555555554002,933.45,0.7514000000000001,"Alva 2018, Steinmann 2022","Alva 2018, Steinmann 2022",5.744404332130647
 Water (LRC),gravitational,,,,,,,,,,,,,,,,,,,950.0,,,,,H2O_LRC,,,,van Berchum 2014,20.0,,0.00258875,18.015,0.3862764392982687,Cavern Calculations,Gravitational Calculations,149.21349659035008
+Water (Salt),gravitational,,,,,,,,,,,,,,,,,,,950.0,,,,,H2O_Salt,,,,van Berchum 2014,20.0,,0.00258875,18.015,0.0304248294326997,Cavern Calculations,Gravitational Calculations,11.752710548604423
 Zn,latent_thermal,,,,419.0,0.0405555555555555,,,,,,,,,,,,,,,,,,,Zn,,,,,20.0,,0.0405555555555555,65.38,2.818389559771475,"Alibaba, Kim 2013, Li 2017, SMM, USGS",Ray 2021,69.49453709025565
 Zn(OH)2/ZnO,thermochemical,,,,,,,,,,,,0.1386,55.0,,,,,,,,,,,Zn,,,hydroxides,,20.0,,0.1386,65.38,2.818389559771475,"Alibaba, Kim 2013, Li 2017, SMM, USGS",Andre 2016,20.334701008452203
 Zn-air,metal_air,,,,,,,,,,1.65,2.0,,,,,,,,,,,,,Zn,,,,,20.0,,1.3527773529111862,65.38,2.818389559771475,"Alibaba, Kim 2013, Li 2017, SMM, USGS",Weinrich 2019,2.0834097744956193
