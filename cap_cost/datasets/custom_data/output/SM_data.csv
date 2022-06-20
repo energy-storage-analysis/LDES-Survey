@@ -7,11 +7,6 @@ Al2O3,Al2O3,,Al2O3 Dielectric Capacitor,dielectric_capacitor,,,,,500000000,10,39
 Synthetic H2 (Feedstock),"[('Water', 1)]",molar,Synthetic H2,synfuel,,,,,,,,"0.0659 ",2,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
 Synthetic CH4 (Feedstock),"[('CO2', 1), ('Water', 4)]",molar,Synthetic CH4 (Sabatier),synfuel,,,,,,,,0.2554,8,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
 Synthetic Methanol (Feedstock),"[('CO2', 1), ('Water', 3)]",molar,Synthetic Methanol (DMS),synfuel,,,,,,,,0.1923,6,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
-Pumped Hydro,Water Reservoir Excavation,,Pumped Hydro,gravitational,,,,,,,,,,,300,,
-Stone,Stone,,Block Stacking,gravitational,,,,,,,,,,,100,,
-Concrete,Concrete,,Block Stacking,gravitational,,,,,,,,,,,100,,
-Gravel,Gravel,,Block Stacking,gravitational,,,,,,,,,,,100,,
-Pumice,Pumice,,Block Stacking,gravitational,,,,,,,,,,,100,,
 Sand,Sand,,Sand,sensible_thermal,0.000277,,1000,,,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
 NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,solid_electrode,,,,,,,,,,0.910,,Li 2022 PNNL,https://www.sciencedirect.com/science/article/pii/S2666386422000911?via%3Dihub
 Fossil CH4,Fossil CH4,molar,,synfuel,,,,,,,,0.2554,8,,,Standard Gibbs,

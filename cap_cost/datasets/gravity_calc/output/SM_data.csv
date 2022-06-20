@@ -1,0 +1,9 @@
+,materials,mat_basis,original_name,SM_type,delta_height,notes
+unit_row,N/U,N/U,N/U,N/U,m,N/U
+SM_name,,,,,,
+Pumped Hydro,Water Reservoir Excavation,,Pumped Hydro,gravitational,300,
+Stone,Stone,,Block Stacking,gravitational,100,
+Concrete,Concrete,,Block Stacking,gravitational,100,
+Gravel,Gravel,,Block Stacking,gravitational,100,
+Pumice,Pumice,,Block Stacking,gravitational,100,
+Water (LRC),H2O_LRC,,,gravitational,950,van Berchum 2014
