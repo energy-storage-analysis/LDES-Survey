@@ -1,0 +1,16 @@
+original_name,material_name,molecular_formula,index_use
+Oxygen,,,
+Nitrogen,,,
+N-propane,N-propane,,material_name
+Isopentane,Isopentane,,material_name
+N-pentane,N-pentane,,material_name
+Ethanol,Ethanol,,material_name
+Methanol,Methanol,,material_name
+Water,Water,,material_name
+Ethylene glycol,Ethylene glycol,,material_name
+Sunflower oil,Vegetable Oil,,material_name
+Mineral oil,,,
+Hitec XL,HITEC XL,,material_name
+Solar salt,Solar Salt,,material_name
+Sodium,Na,Na,molecular_formula
+Eutectic Na-K,NaK,NaK,molecular_formula

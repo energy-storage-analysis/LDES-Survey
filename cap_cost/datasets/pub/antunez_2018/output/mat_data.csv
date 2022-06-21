@@ -1,0 +1,15 @@
+,original_name,specific_price,material_name,molecular_formula,index_use,molecular_formula_norm
+unit_row,N/U,USD / kilogram,N/U,N/U,N/U,N/U
+index,,,,,,
+N-propane,N-propane,0.5,N-propane,,material_name,
+Isopentane,Isopentane,1.2,Isopentane,,material_name,
+N-pentane,N-pentane,1.4,N-pentane,,material_name,
+Ethanol,Ethanol,0.5,Ethanol,,material_name,
+Methanol,Methanol,0.3,Methanol,,material_name,
+Water,Water,0.002,Water,,material_name,
+Ethylene glycol,Ethylene glycol,0.8,Ethylene glycol,,material_name,
+Vegetable Oil,Sunflower oil,0.3,Vegetable Oil,,material_name,
+HITEC XL,Hitec XL,0.5,HITEC XL,,material_name,
+Solar Salt,Solar salt,0.5,Solar Salt,,material_name,
+Na,Sodium,2.0,Na,Na,molecular_formula,Na
+NaK,Eutectic Na-K,2.0,NaK,NaK,molecular_formula,KNa
