@@ -27,8 +27,8 @@ NaOH,NaOH,,NaOH,latent_thermal,,,,318.0,0.04583333333333333,2100.0,,346.5
 KOH,KOH,,KOH,latent_thermal,,,,380.0,0.041666666666666664,2040.0,,306.0
 LiOH,LiOH,,LiOH,latent_thermal,,,,462.0,0.2425,1460.0,,1274.6
 Na,Na,,Sodium (Na),sensible_thermal,0.00036111111111111115,98.0,883.0,,,,64.9,
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),"[('Na', 0.5), ('K', 0.5)]",molar,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.00024722222222222224,-12.6,785.0,,,,26.3,
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),"[('Pb', 0.445), ('Bi', 0.555)]",mass,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,3.888888888888889e-05,125.0,1533.0,,,,14.9,
+NaK,"[('Na', 0.5), ('K', 0.5)]",molar,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),sensible_thermal,0.00024722222222222224,-12.6,785.0,,,,26.3,
+LBE,"[('Pb', 0.445), ('Bi', 0.555)]",mass,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),sensible_thermal,3.888888888888889e-05,125.0,1533.0,,,,14.9,
 Zn/Mg (53.7/46.3),"[('Mg', 0.537), ('Zn', 0.463)]",molar,Zn/Mg (53.7/46.3),latent_thermal,,,,340.0,0.05138888888888889,4600.0,,851.0
 Zn/Mg (52/48),"[('Mg', 0.52), ('Zn', 0.48)]",molar,Zn/Mg (52/48),latent_thermal,,,,340.0,0.05,,,
 Zn/Al (96/4),"[('Zn', 0.96) , ('Al', 0.04)]",molar,Zn/Al (96/4),latent_thermal,,,,381.0,0.03833333333333333,6630.0,,914.9

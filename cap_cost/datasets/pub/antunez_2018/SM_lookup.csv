@@ -13,4 +13,4 @@ Mineral oil,,sensible_thermal,,mass
 Hitec XL,HITEC XL,sensible_thermal,HITEC XL,mass
 Solar salt,Solar Salt,sensible_thermal,Solar Salt,mass
 Sodium,Na,sensible_thermal,Na,mass
-Eutectic Na-K,NaK,sensible_thermal,NaK,mass
+Eutectic Na-K,NaK,sensible_thermal,"[('Na', 0.5), ('K', 0.5)]",molar
