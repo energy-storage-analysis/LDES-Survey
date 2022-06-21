@@ -105,16 +105,14 @@ save(p)
 
 
 df_all = df.where(~df['SM_type'].isin([
-    'gravitational',
-    'EDLC',
-    'synfuel',
-    'dielectric_capacitor',
-    'pseudocapacitor'
+    # 'gravitational',
+    # 'EDLC',
+    # 'synfuel',
+    # 'dielectric_capacitor',
+    # 'pseudocapacitor'
 ])).dropna(subset=['SM_type'])
 
-#%%
 
-df_all
 # %%
 
 
@@ -158,25 +156,61 @@ df_log['SM_type'] = df_all['SM_type']
 df_stats = df_log.groupby('SM_type').agg({
     'specific_price': ['mean','std'],
     'specific_energy': ['mean','std'],
-})
+}).sort_values(('specific_energy','mean'),ascending=False)
 
 display_text = pd.read_csv('tech_lookup.csv', index_col=0)
-long_names = [display_text['long_name'][s].replace('\\n',' ') for s in df_stats.index.values]
+long_names = [display_text['long_name'][s].replace('\\n','') for s in df_stats.index.values]
 
 df_stats.index = long_names
 
+df_stats
 
 #%%
 
-#TODO: The ticks on this figure only work out correctly in ipython console...
-#TODO: Need to extend the lists (automatically?) to be able to display all technologies
+palette = pd.read_csv('energy_colors.csv', index_col=0)#['color'].to_dict()
+# palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
-plt.figure()
+display_text = pd.read_csv('tech_lookup.csv')
+
+df_colors = pd.merge(palette, display_text, on='energy_type')
+df_colors= df_colors.set_index('long_name')
+df_colors.index = [s.replace('\\n','') for s in df_colors.index.values]
+
+color_dict = df_colors['color'].to_dict()
+
+colors = [color_dict[n] for n in df_stats.index]
+
+
+
+# #TODO: Improve automatical marker handling
+markers = [
+            '^','>','<','o','s','x','v',
+            'o','x',
+            'o',
+            'o',
+            'P',
+            'o',
+            'o',
+            'x',
+            'x',
+            'o'
+            ]
+
+## Attempt at allowing for different number of SM types automatically
+# marker_set = ['o','x','s','^','v','<','>']
+# markers = []
+# for i in range(len(colors)):
+#     markers.append(marker_set[i%len(marker_set)])
+#%%
+
+#TODO: The ticks on this figure sometimes only work out correctly in ipython console...
+
+# plt.figure()
+
+fig = plt.figure(figsize=(8,6))
 
 #https://stackoverflow.com/questions/26290493/matplotlib-errorbar-plot-using-a-custom-colormap
 
-colors = ["g","g","g","y","y","k","r","r","b","r","g","b"]
-markers = ["o", "^", "s", "o", "^", "o", "o", "^","o","x","x","x"]
 
 cdict = {etype: colors[i] for i, etype in enumerate(df_stats.index)}
 mdict = {etype: markers[i] for i, etype in enumerate(df_stats.index)}
@@ -206,8 +240,8 @@ for etype, row in df_stats.iterrows():
 xlim = plt.gca().get_xlim()
 
 energy_densities_line = np.logspace(
-    xlim[0],
-    xlim[1],
+    xlim[0] - 1,
+    xlim[1] + 1,
     )
 
 
@@ -221,7 +255,10 @@ lgd = plt.legend()
 
 
 # lgd = plt.gca().get_legend()
-lgd.set_bbox_to_anchor((1, 1.1))
+lgd.set_bbox_to_anchor((1.08, 1.05))
+
+plt.ylim(-2.5,3.1)
+plt.xlim(-3.8,1.8)
 
 
 from matplotlib.ticker import FuncFormatter
@@ -238,7 +275,7 @@ plt.gca().yaxis.set_major_formatter(formatter)
 
 # plt.grid()
 plt.xlabel('Energy Density (kWh/kg)')
-plt.ylabel('Material Price ($/kg)')
+plt.ylabel('Specific Price ($/kg)')
 # plt.xscale('log')
 
 plt.savefig(pjoin(output_dir,'Ckwh_line_errorbar.png'), facecolor='white', transparent=False, bbox_extra_artists=(lgd,), bbox_inches='tight')
@@ -246,26 +283,27 @@ plt.savefig(pjoin(output_dir,'Ckwh_line_errorbar.png'), facecolor='white', trans
 #%%
 
 
-plt.figure()
-SM_types = df_all['SM_type'].value_counts().index
-SM_types
+# plt.figure()
+# SM_types = df_all['SM_type'].value_counts().index
+# SM_types
 
-fig, axes = plt.subplots(1, len(SM_types), figsize=(20,4), sharex=True, sharey=True)
+# fig, axes = plt.subplots(1, len(SM_types), figsize=(20,4), sharex=True, sharey=True)
 
-for i, SM_type in enumerate(SM_types):
-    df_sel = df_all.where(df_all['SM_type'] == SM_type).dropna(how='all')
-    axes[i].scatter(df_sel['specific_energy'], df_sel['specific_price'])
-    axes[i].set_xscale('log')
-    axes[i].set_yscale('log')
-    axes[i].set_title(SM_type)
-    axes[i].set_xlabel('Energy Density \n(kWh/kg)')
+# for i, SM_type in enumerate(SM_types):
+#     df_sel = df_all.where(df_all['SM_type'] == SM_type).dropna(how='all')
+#     axes[i].scatter(df_sel['specific_energy'], df_sel['specific_price'])
+#     axes[i].set_xscale('log')
+#     axes[i].set_yscale('log')
+#     axes[i].set_title(SM_type)
+#     axes[i].set_xlabel('Energy Density \n(kWh/kg)')
 
-    axes[i].plot(energy_densities_line, mat_cost_line, color='gray')
+#     axes[i].plot(energy_densities_line, mat_cost_line, color='gray')
 
-axes[0].set_ylabel('Material Cost ($/kg)')
+# axes[0].set_ylabel('Material Cost ($/kg)')
 
-fig.tight_layout()
+# fig.tight_layout()
 
-plt.savefig(pjoin(output_dir,'Ckwh_line_separate.png'), facecolor='white', transparent=False,)
+# plt.savefig(pjoin(output_dir,'Ckwh_line_separate.png'), facecolor='white', transparent=False,)
 
 #%%
+
