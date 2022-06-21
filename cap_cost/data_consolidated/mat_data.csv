@@ -135,7 +135,7 @@ LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.0721179,LR
 LTO,28.5,23.33452377915607,0.82,1,2,"Alibaba, Li 2017","12.0, 45.0",Li4Ti5O12,459.083,LTO,
 La2O3,2.0,,,0,1,USGS,2.0,La2O3,325.80794,Rare Earths La2O3,4.1582001
 LaNi5,45.025,49.462119343999,1.1,1,2,"Alibaba, Li 2017","10.05, 80.0",LaNi5,432.37247,LaNi5,10.9925658
-Li,61.95965417867435,201.26300493392094,3.25,21,5,"Alibaba, ISE, Kim 2013, Li 2017, SMM","0.5, 100.17, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium Metal, Lithium metal",83.5
+Li,61.95965417867435,201.26300493392094,3.25,22,5,"Alibaba, ISE, Kim 2013, Li 2017, SMM","0.5, 100.17, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium Metal, Lithium metal",83.5
 Li2CO3,15.366219674285968,41.35117307141246,2.69,2,7,"Alibaba, Alva 2018, ISE, Liu 2016, Ray 2021, SMM, USGS","11.24, 111.0, 15.37, 51.3, 7.0, 7.77, 79.12",Li2CO3,73.888,"Li2CO3, Lithium , Lithium Carbonate (99.5% Battery Grade), Lithium Carbonates",15.8055013
 Li2O,100.0,,,1,1,Alibaba,100.0,Li2O,29.879,,38.8715769
 Li2S,1200.935,1695.7339851668953,1.41,1,2,"Alibaba, Li 2017","1.87, 2400.0",Li2S,45.94,Li2S,25.2927461
@@ -234,7 +234,7 @@ Solar Salt,0.5,0.2424606401047395,0.48,1,5,"Antunez 2018, Diago 2018, Liu 2016, 
 Sr,6.80275,,,0,1,ISE,6.8,Sr,87.62,Strontium metal,6.605
 SrCO3,0.95,,,1,1,Alibaba,0.95,SrCO3,147.628,,3.9801865
 Steel,1.1783333333333335,0.8178868435724401,0.69,18,2,"Alibaba, Kale 2018","0.6, 1.76",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
-Stone,0.02054620946914295,0.010293764286410899,0.5,7,2,"Steinmann 2022, USGS","0.01, 0.03",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
+Stone,0.02054620946914295,0.010293764286410899,0.5,8,2,"Steinmann 2022, USGS","0.01, 0.03",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
 Syenite,0.1380093761277333,,,0,1,USGS,0.14,Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,29.4,,,0,1,Alva 2018,29.4,,,Syltherm XLT,
 TEMPO,5.5,,,2,1,Liu 2019,5.5,C9H18NO2,172.248,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",
@@ -258,7 +258,7 @@ Vegetable Oil,0.6678000000000002,0.2736962062823183,0.41,1,3,"Alva 2018, Antunez
 Vermiculite,0.33,,,0,1,Liu 2016,0.33,AlFeH3MgO6Si,234.2345384,Vermiculite,
 W,24.34285714285715,,,0,1,ISE,24.34,W,183.84,"Tungsten powder, Tungsten scrap, Wolfram Bar",35.3
 WO3,9.561104192038657,13.090874043702986,1.37,0,2,"ISE, USGS","0.3, 18.82",WO3,231.837,"Tungsten WO3, Tungsten oxides, Wolfram Ore",28.0237561
-Water,0.0015,0.0007071067811865475,0.47,4,2,"Antunez 2018, Li 2017",0.0,H2O,18.015,"DI H2O, Water",
+Water,0.0015,0.0007071067811865475,0.47,5,2,"Antunez 2018, Li 2017",0.0,H2O,18.015,"DI H2O, Water",
 Water Reservoir Excavation,0.261,,,1,1,Calculation/Black and Veatch,0.26,,,Pumped Hydro,
 Y,19.4,,,0,1,USGS,19.4,Y,88.90584,"Yttrium Metal, Yttrium Y2O3",31.0
 Zeolite,1.93,,,0,1,Liu 2016,1.93,Al2O5Si,162.0430768,Zeolite,

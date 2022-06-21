@@ -1,0 +1,10 @@
+ Materialsa ,"◦ Temperature range (
+C) ", Isobaric specific heat (kJ/kg.K), Density (kg/m3) , Thermal conductivity (W/m.K) ," Cost factor ($"">$/kg) "
+Propane (U),-188--43,1.8-2.3,650,0.16,0.26
+Propane (10 bar),-188-28,1.8-2.3,650,0.16,-
+Methanol (U),-160-37,2.2-2.6,860,0.24,0.52
+Ethanol,-110-75,1.8-2.6,850,0.17,-
+R218 (U),-183-28,1.1,1601,0.1,-
+R213,185-293,0.9-1.0,1477-1727,,-
+n-hexane (U),-93-100,1.8-2.5,720,0.11,-
+Isopentane,-160--36,1.9,750,0.12,-
