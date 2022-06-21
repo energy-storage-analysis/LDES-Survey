@@ -22,6 +22,7 @@ df = df.rename({
 
 }, axis=1)
 
+df.index.name = 'original_name'
 # df = df.drop([], axis=1)
 
 df
@@ -31,7 +32,6 @@ df
 
 # Create these files, delete columns other than original_name, then add lookup columns as describd in readme
 
-df.index.name = 'original_name'
 
 # df.to_csv('SM_lookup.csv')
 # df.to_csv('mat_lookup.csv')

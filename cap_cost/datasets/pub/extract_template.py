@@ -7,11 +7,13 @@ import os
 import pandas as pd
 import json
 import es_utils
+from dotenv import load_dotenv
+load_dotenv()
+
 
 #PDF location info
-#TODO: make an environment variable
-pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
-pdf_fn =  r"Caraballo et al_2021_Molten Salts for Sensible Thermal Energy Storage.pdf"
+pdf_folder = os.getenv('PDF_FOLDER_PATH')
+pdf_fn =  r""
 pdf_path = os.path.join(pdf_folder,pdf_fn)
 
 #This is the default 'flavor' for the table extraction (lattice = table has lines, stream = opposite)
@@ -21,7 +23,12 @@ template_path = 'tabula_template.json'
 with open(template_path, 'r') as f:
     templates= json.load(f)
 
-#TODO: automatically generate blank extract_settings.json if it doesn't exist, for now just copy, rename, and delete the dictionary entries of tabula_template.json
+#If extraction settings don't exist make a blank dictionary
+if not os.path.exists('extract_settings.json'):
+    dummy_settings = [{}]*len(templates)
+    with open('extract_settings.json', 'w') as f:
+        json.dump(dummy_settings,f)
+
 template_path = 'extract_settings.json'
 with open(template_path, 'r') as f:
     extract_settings= json.load(f)
