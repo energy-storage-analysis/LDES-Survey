@@ -29,4 +29,6 @@ had to press ctrl-C in the prompt to get the web page to unfreeze
 
 1. load in the data using processing template
 2. output the table as SM_lookup.csv or mat_lookup.csv to form lookup tables to conform names to standard SM or mat indexes
+    * SM_lookup.csv columns : original_name, SM_name, SM_type, materials, mat_basis
+    * mat_lookup.csv columns: orignal_name, material_name, molecular_formula, index_use
 3. add the dataset to the dataset index
