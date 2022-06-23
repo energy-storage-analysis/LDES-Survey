@@ -511,3 +511,7 @@ HITEC XL,Hitec XL,,0.5,Antunez 2018,,,,HITEC XL,material_name,
 Solar Salt,Solar salt,,0.5,Antunez 2018,,,,Solar Salt,material_name,
 Na,Sodium,Na,2.0,Antunez 2018,,,,Na,molecular_formula,Na
 NaK,Eutectic Na-K,NaK,2.0,Antunez 2018,,,,NaK,molecular_formula,KNa
+Toluene,Toluene,C7H6,0.32,Southhall 2022,,,,,,
+Naphthalene,Naphthalene,C10H18,0.64,Southhall 2022,,,,,,
+DBT,dibenzyltoluene,C21H20,4.229,Southhall 2022,,,,,,
+NEC,N-ethylcarbazole,C14H25N,42.29,Southhall 2022,,,,,,

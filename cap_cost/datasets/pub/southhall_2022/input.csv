@@ -1,0 +1,5 @@
+SM_name,materials,mat_basis,N_H2,deltaH
+Toluene (LOHC),Toluene,molar,3,68.3
+Naphthalene (LOHC),Naphthalene,molar,5,69.3
+DBT (LOHC),DBT,molar,9,65.4
+NEC (LOHC),NEC,molar,6,50

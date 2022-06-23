@@ -1,0 +1,7 @@
+,materials,mat_basis,SM_type,deltaG_chem,n_e
+unit_row,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless
+SM_name,,,,,
+Toluene (LOHC),Toluene,molar,synfuel,0.1977,6.0
+Naphthalene (LOHC),Naphthalene,molar,synfuel,0.3295,10.0
+DBT (LOHC),DBT,molar,synfuel,0.5931,18.0
+NEC (LOHC),NEC,molar,synfuel,0.3954,12.0
