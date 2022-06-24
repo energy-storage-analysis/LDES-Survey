@@ -6,7 +6,21 @@ import matplotlib.pyplot as plt
 from es_utils.pdf import average_range
 from es_utils.units import convert_units, prep_df_pint_out, ureg
 
-df = pd.read_csv('ISE.csv', encoding='ISO-8859-1')
+df_SM = pd.read_csv('ISE_SM.csv', encoding='ISO-8859-1')
+
+df_SM =df_SM.drop([47,79,81,124]).reset_index(drop=True) # Seems to be a typo for cobalt entry
+
+df_RE = pd.read_csv('ISE_RE.csv', encoding='ISO-8859-1')
+
+df_RE = df_RE[df_RE['original_name'].str.contains('Lanthanum metal')]
+
+
+df_RE
+#%%
+
+
+df = pd.concat([df_SM, df_RE]).reset_index(drop=True)
+
 
 df = df.rename({
     'Price in USD': 'price',
@@ -15,7 +29,6 @@ df = df.rename({
 
 df.columns = [c.strip() for c in df.columns]
 
-df =df.drop([47,79,81,124]).reset_index(drop=True) # Seems to be a typo for cobalt entry
 
 df['price'] = df['price'].apply(average_range)
 df['price'] = df['price'].astype(float)
