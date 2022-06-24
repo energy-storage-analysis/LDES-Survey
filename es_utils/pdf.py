@@ -41,6 +41,19 @@ def get_pdf_size(pdf_path, page, page_rotate):
         
     return pdf_width, pdf_height
 
+
+#TODO: handle other angles and consolidate with page rotation. It seems that the camelot and page rotation is confusing things. This is sort of a hotfix and I don't really know what is going on. 
+def rotate_table(t):
+    """Manually rotate the tabula template before processing. """
+    
+    x2 = float(t['x2'])
+    y2 = float(t['y2'])
+
+    t['y2'] = x2
+    t['x2'] = y2
+
+    return t
+
 def extract_table_area(t, pdf_height):
     """extracts tabula template dict to data suitable for camelot"""
     
@@ -65,6 +78,10 @@ def extract_dfs(pdf_path, table_settings):
 
         pdf_width, pdf_height = get_pdf_size(pdf_path, page + 1, page_rotate) #assumes all heights are same as page 1
 
+        #Hotfix to rotate table, see comment above funciton. 
+        table_rotate = setting['table_rotate'] if 'table_rotate' in setting else None
+        if table_rotate != None:
+            template = rotate_table(template)
 
         table_area = extract_table_area(template, pdf_height)
         camelot_kwargs = setting['camelot_kwargs']
