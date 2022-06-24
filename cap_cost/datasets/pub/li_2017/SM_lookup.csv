@@ -1,4 +1,4 @@
-original_name,SM_name,deltaV,n_e,materials,mat_basis,type_orig,SM_type,notes
+original_name,SM_name,deltaV,n_e,materials,mat_basis,sub_type,SM_type,notes
 Pb acid,Pb acid,2.1,2,Pb,,Pb acid,solid_electrode,
 NiCd,NiCd,1.2,2,"[('Cd(OH)2', 1), ('Ni(OH)2', 1)]",molar,NiCd,solid_electrode,
 NiMH,NiMH,1.2,1,"[('LaNi5', 1), ('Ni(OH)2', 1)]",molar,NiMH,solid_electrode,

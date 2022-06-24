@@ -30,7 +30,7 @@ df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df_SMs = df[['original_name','deltaH_thermochem','temperature','type']].set_index('original_name')
+df_SMs = df[['original_name','deltaH_thermochem','temperature','sub_type']].set_index('original_name')
 
 df_SMs = pd.merge(
     SM_lookup,

@@ -111,7 +111,7 @@ plt.figure()
 x_str='temperature'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='type', legend=True)
+sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True)
 
 ax = plt.gca()
 texts = []

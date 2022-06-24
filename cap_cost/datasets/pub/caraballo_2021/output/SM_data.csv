@@ -1,4 +1,4 @@
-,type,T_melt,T_max,mass_density,Cp,C_kwh_orig,materials,SM_type,mat_basis
+,sub_type,T_melt,T_max,mass_density,Cp,C_kwh_orig,materials,SM_type,mat_basis
 unit_row,N/U,degree_Celsius,degree_Celsius,kilogram / meter ** 3,kilowatt_hour / kelvin / kilogram,USD / kilowatt_hour,N/U,N/U,N/U
 SM_name,,,,,,,,,
 Solar Salt,Nitrate,240.0,565.0,2089.364,0.00040088111111111116,2.65,Solar Salt,sensible_thermal,

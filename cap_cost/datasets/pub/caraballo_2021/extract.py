@@ -36,16 +36,16 @@ tables = {}
 
 # tables = {'table_{}'.format(i+1): dfs[i] for i in range(len(dfs))}
 
-dfs[0]['type'] = 'Nitrate'
+dfs[0]['sub_type'] = 'Nitrate'
 # dfs[4]['type'] = 'Nitrate'
 # dfs[8]['type'] = 'Nitrate'
-dfs[1]['type'] = 'Chloride'
+dfs[1]['sub_type'] = 'Chloride'
 # dfs[5]['type'] = 'Chloride'
 # dfs[9]['type'] = 'Chloride'
-dfs[2]['type'] = 'Fluoride'
+dfs[2]['sub_type'] = 'Fluoride'
 # dfs[6]['type'] = 'Fluroide'
 # dfs[10]['type'] = 'Fluoride'
-dfs[3]['type'] = 'Carbonate'
+dfs[3]['sub_type'] = 'Carbonate'
 # dfs[7]['type'] = 'Carbonate'
 # dfs[11]['type'] = 'Carbonate'
 
@@ -70,7 +70,7 @@ tables['table_3'] = pd.concat([
     dfs[11],
 ])
 
-tables['table_1'].columns = ['name','composition', 'T_melt','T_max', 'ref', 'type']
+tables['table_1'].columns = ['name','composition', 'T_melt','T_max', 'ref', 'sub_type']
 tables['table_2'].columns = ['name','mass_density', 'Cp','ref']
 tables['table_3'].columns = ['name','specific_price_orig', 'specific_energy_orig','volumetric_energy_orig','C_kwh_orig','ref']
 

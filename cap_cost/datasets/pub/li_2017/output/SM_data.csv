@@ -1,4 +1,4 @@
-,C_kwh_orig,type,deltaV,n_e,materials,mat_basis,SM_type
+,C_kwh_orig,sub_type,deltaV,n_e,materials,mat_basis,SM_type
 unit_row,USD / kilowatt_hour,N/U,volt,dimensionless,N/U,N/U,N/U
 SM_name,,,,,,,
 Pb acid,12.4,Pb acid,2.1,2.0,Pb,,solid_electrode

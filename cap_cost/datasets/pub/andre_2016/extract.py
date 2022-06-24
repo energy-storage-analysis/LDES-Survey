@@ -70,7 +70,7 @@ columns = ['temperature','enthalpy','specific_energy']
 for table in tables:
     # tables[table] = tables[table].iloc[1:] #remove the extra column information
     tables[table].columns = columns
-    tables[table]['type'] = types[table]
+    tables[table]['sub_type'] = types[table]
 
 #%%
 

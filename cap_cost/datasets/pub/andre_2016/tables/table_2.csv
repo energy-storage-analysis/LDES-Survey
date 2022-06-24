@@ -1,4 +1,4 @@
-original_name,temperature,enthalpy,specific_energy,type
+original_name,temperature,enthalpy,specific_energy,sub_type
 MgSO4/MgO,1140,348.766,2897.5,sulfates
 MnSO4/MnO,1065,357.827,2369.7,sulfates
 FeSO4/FeO,1030,346.318,2279.78,sulfates

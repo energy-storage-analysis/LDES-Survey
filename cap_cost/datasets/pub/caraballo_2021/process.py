@@ -8,7 +8,7 @@ tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='ut
 
 df = pd.concat(tables.values(), axis=1)
 
-df = df[['type','T_melt','T_max','mass_density','Cp','C_kwh_orig']]
+df = df[['sub_type','T_melt','T_max','mass_density','Cp','C_kwh_orig']]
 df
 
 df.index.name = 'SM_name'
