@@ -1,0 +1,11 @@
+[
+    {
+    "column_rows": 2,
+    "camelot_kwargs":{
+        "row_tol": 10,
+        "columns":["84,115,142,166,214,249"]
+    }
+    }, 
+    {
+    }
+]

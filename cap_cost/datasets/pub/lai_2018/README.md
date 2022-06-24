@@ -1,0 +1,1 @@
+Lai, Q., Aguey-Zinsou, K.-F., Lai, Q., and Aguey-Zinsou, K.-F. “Borohydrides as Solid-State Hydrogen Storage Materials: Past, Current Approaches and Future Perspectives.” General Chemistry, Vol. 4, No. 4, 2018, p. 180017. https://doi.org/10.21127/yaoyigc20180017.

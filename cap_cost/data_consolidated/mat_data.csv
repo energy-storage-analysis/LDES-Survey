@@ -5,7 +5,7 @@ index,,,,,,,,,,,
 AQDS,7.15,3.323401871576773,0.46,5,2,"Alibaba, Li 2017","4.8, 9.5",C14H8O8S2,368.33,AQDS,
 Ag,608.4850295578531,,,0,1,USGS,608.49,Ag,107.8682,Silver Bullion,521.0
 Air,0.0,,,1,1,Li 2017,0.0,O2,0.0,,
-Al,2.4461170086580384,0.8961408231790979,0.37,29,7,"Alibaba, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.39, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
+Al,2.4461170086580384,0.8961408231790979,0.37,30,7,"Alibaba, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.39, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
 Al2O3,1.1130000000000002,3.1742771427183505,2.85,2,5,"Alibaba, Liu 2016, SMM, Steinmann 2022, USGS","0.53, 0.77, 1.11, 1.32, 8.0",Al2O3,101.9600768,"Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
 AlSc,340.0,,,0,1,USGS,340.0,AlSc,71.9374464,Scandium Mtl_Alloy,2162.93108
 Ammonium Heptamolybdate,19.018,,,0,1,ISE,19.02,H50Mo7N6O28 ,1254.064,Ammonium heptamolybdate,
@@ -16,7 +16,7 @@ As,1.44074,0.20628650594096878,0.14,0,3,"ISE, SMM, USGS","1.15, 1.44, 1.54",As,7
 As2O3,0.5195,0.12657211383239197,0.24,0,2,"ISE, USGS","0.43, 0.61",As2O3,197.84019,"Arsenic Triox-CN, Arsenic Triox-MA, Arsenic trioxide",0.9117738
 Asbestos,2.0326620573445715,,,0,1,USGS,2.03,Mg3Si2O5(OH)4,277.108,Asbestos Customs,
 Au,48238.98015156943,,,1,1,USGS,48238.98,Au,196.96657,Gold ,44800.0
-B,49.60400899159745,115.22819263611453,2.32,1,3,"Alibaba, Ray 2021, USGS","0.43, 220.0, 49.6",B,10.81,"Boron (B), Boron CIF",3.68
+B,49.60400899159745,115.22819263611453,2.32,10,3,"Alibaba, Ray 2021, USGS","0.43, 220.0, 49.6",B,10.81,"Boron (B), Boron CIF",3.68
 Ba,47.48557457746838,58.71026346667063,1.24,12,2,"Alibaba, Kim 2013","5.97, 89.0",Ba,137.327,Ba,0.2605
 Ba(OH)2,0.4676,,,0,1,Alibaba,0.47,Ba(OH)2,171.341,,0.2539008
 BaCO3,0.4105,,,1,1,Alibaba,0.41,BaCO3,197.335,,0.2261665
@@ -37,7 +37,7 @@ CH4_Salt,0.52174494140625,,,1,1,Cavern Calculations,0.52,CH4,16.043,,0.4406795
 CNT,100.0,,,4,1,Alibaba,100.0,,,,
 CO2,0.04,,,2,1,Knighton 2020,0.04,CO2,44.009,Cyrogenic Carbon Capture,0.1452665
 CW,28.475,,,0,1,ISE,28.48,CW,195.851,Tungsten carbide,33.1426306
-Ca,4.136800000000001,2.5617960406185287,0.62,15,4,"Alibaba, ISE, Kim 2013, SMM","3.49, 3.77, 4.5, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
+Ca,4.136800000000001,2.5617960406185287,0.62,16,4,"Alibaba, ISE, Kim 2013, SMM","3.49, 3.77, 4.5, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
 Ca(OH)2 ,0.08,,,0,1,Alibaba,0.08,Ca(OH)2 ,74.092,,1.3376312
 CaCO3,1.1524999999999999,3.584940585281714,3.11,2,4,"Alibaba, Alva 2018, Chem Central, Echemi","0.35, 0.88, 1.43, 8.0",CaCO3,100.086,"CALCIUM CARBONATE Technical Grade 50 LB BAG, CaCO3, Calcium Carbonate 99% Powder SAA6532 SAA",1.0014859
 CaCl2,0.18023113109243877,2.57201250186326,14.27,3,4,"Alibaba, Alva 2018, Li 2017, Ray 2021","0.11, 0.14, 0.22, 5.3",CaCl2,110.978,CaCl2,0.8757739
@@ -119,7 +119,7 @@ Ir,2.36356048052572,,,0,1,USGS,2.36,Ir,192.217,Platinum-Group Metals Iridium,558
 Iron Ore,0.11907645120882435,0.028176152911082705,0.24,3,2,"Olympios 2021, USGS","0.1, 0.14",Fe2O3,159.687,"Iron Ore , Magnetite",
 Iron Oxide Pigment,1.03,,,0,1,USGS,1.03,Fe2O3,159.687,Iron Oxide Pigments ,
 Isopentane,1.2,,,1,1,Antunez 2018,1.2,,,Isopentane,
-K,76.04546196638984,76.92613536404406,1.01,16,2,"Kim 2013, SMM","130.44, 21.65",K,39.0983,"K, Potassium",12.85
+K,76.04546196638984,76.92613536404406,1.01,17,2,"Kim 2013, SMM","130.44, 21.65",K,39.0983,"K, Potassium",12.85
 K2CO3,1.1562712210084134,2.988255802610407,2.58,5,4,"Alibaba, Alva 2018, Liu 2016, Ray 2021","0.79, 1.1, 1.21, 7.0",K2CO3,138.2046,K2CO3,7.3346559
 K2O,0.9193276333109396,,,0,1,USGS,0.92,K2O,94.1956,Potash All,10.6936009
 K2SO4,4.3,5.586143571373725,1.3,1,2,"Alibaba, Alva 2018","0.35, 8.25",K2SO4,174.2526,K2SO4,5.8400876
@@ -138,7 +138,7 @@ LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.0721179,LR
 LTO,28.5,23.33452377915607,0.82,1,2,"Alibaba, Li 2017","12.0, 45.0",Li4Ti5O12,459.083,LTO,
 La2O3,2.0,,,0,1,USGS,2.0,La2O3,325.80794,Rare Earths La2O3,4.1582001
 LaNi5,45.025,49.462119343999,1.1,1,2,"Alibaba, Li 2017","10.05, 80.0",LaNi5,432.37247,LaNi5,10.9925658
-Li,61.95965417867435,201.26300493392094,3.25,24,5,"Alibaba, ISE, Kim 2013, Li 2017, SMM","0.5, 100.17, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium Metal, Lithium metal",83.5
+Li,61.95965417867435,201.26300493392094,3.25,25,5,"Alibaba, ISE, Kim 2013, Li 2017, SMM","0.5, 100.17, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium Metal, Lithium metal",83.5
 Li2CO3,15.366219674285968,41.35117307141246,2.69,2,7,"Alibaba, Alva 2018, ISE, Liu 2016, Ray 2021, SMM, USGS","11.24, 111.0, 15.37, 51.3, 7.0, 7.77, 79.12",Li2CO3,73.888,"Li2CO3, Lithium , Lithium Carbonate (99.5% Battery Grade), Lithium Carbonates",15.8055013
 Li2O,100.0,,,1,1,Alibaba,100.0,Li2O,29.879,,38.8715769
 Li2S,1200.935,1695.7339851668953,1.41,1,2,"Alibaba, Li 2017","1.87, 2400.0",Li2S,45.94,Li2S,25.2927461
@@ -148,7 +148,7 @@ LiF,13.0051,105.98971989212879,8.15,5,4,"Alibaba, Alva 2018, Ray 2021, Steinmann
 LiOH,14.571355754374245,77.71520314439434,5.33,1,4,"Alibaba, Alva 2018, ISE, Li 2017","165.0, 2.66, 23.1, 6.05",LiOH,23.947,"LiOH, LiOH H2O, Lithium hydroxides_monohydrates",24.3602525
 Metallurgical Silicon,2.190725734411788,0.7493200308040902,0.34,7,4,"Alibaba, ISE, Ray 2021, USGS","1.35, 1.77, 2.62, 2.98",Si,28.085,"Silicon (Si), Silicon Si, Silicon metal",
 Methanol,0.3,,,1,1,Antunez 2018,0.3,,,Methanol,
-Mg,2.8389220325036004,2.5831372105267616,0.91,28,5,"Alibaba, ISE, Kim 2013, Li 2017, USGS","1.67, 2.43, 2.84, 6.8, 7.12",Mg,24.305,"Magnesium Ingot, Magnesium Powder, Manganese flakes, Mercury metal, Magnesium Metal European, Magnesium Metal US_spot, Mg",2.32
+Mg,2.8389220325036004,2.5831372105267616,0.91,29,5,"Alibaba, ISE, Kim 2013, Li 2017, USGS","1.67, 2.43, 2.84, 6.8, 7.12",Mg,24.305,"Magnesium Ingot, Magnesium Powder, Manganese flakes, Mercury metal, Magnesium Metal European, Magnesium Metal US_spot, Mg",2.32
 Mg(NO3)2,113.11,159.6505690562987,1.41,1,2,"Alibaba, Alva 2018","0.22, 226.0",Mg(NO3)2,148.313,Mg (NO3)2,0.5063119
 Mg(OH)2,0.3,,,0,1,Alibaba,0.3,Mg(OH)2,58.319,,1.0994278
 MgCO3,0.5,,,1,1,Alibaba,0.5,MgCO3,84.313,,0.7738365
@@ -178,7 +178,7 @@ NH4VO3,16.913,,,0,1,ISE,16.91,NH4VO3,116.9775,Ammonium metavanadate,161.6913808
 NMO,5.0,,,1,1,Li 2017,5.0,Na0.44MnO2,97.0515415,NMO,
 NTP,10.0,,,1,1,Li 2017,10.0,NaTi2(PO4)3,403.6330553,NTP,
 NV,27.0755,,,0,1,ISE,27.08,NV,64.9485,Vanadium nitrides,291.0191533
-Na,2.479363725045613,0.7015033962125543,0.28,24,7,"Alibaba, Alva 2018, Antunez 2018, Kim 2013, Li 2017, SMM, Steinmann 2022","2.0, 2.23, 2.48, 3.0, 3.94",Na,22.9897693,"Na, Sodium, Sodium (Na)",3.0
+Na,2.479363725045613,0.7015033962125543,0.28,25,7,"Alibaba, Alva 2018, Antunez 2018, Kim 2013, Li 2017, SMM, Steinmann 2022","2.0, 2.23, 2.48, 3.0, 3.94",Na,22.9897693,"Na, Sodium, Sodium (Na)",3.0
 Na2CO3,0.245,1.2330711092179996,5.03,3,5,"Alibaba, Alva 2018, Liu 2016, Ray 2021, USGS","0.16, 0.23, 0.24, 0.36, 3.0",Na2CO3,105.9875386,"Na2CO3, Soda Ash ",1.385026
 Na2S,0.72,,,0,1,Li 2017,0.72,Na2S,78.0395386,Na2S,1.8055895
 Na2SO4,0.0775,1.9204149942134903,24.78,1,3,"Alibaba, Alva 2018, Li 2017","0.07, 0.08, 3.4",Na2SO4,142.0355386,Na2SO4,1.0614439
@@ -226,7 +226,7 @@ SMR H2,2.08,,,0,1,DOE-FE Hydrogen Strategy,2.08,H2,2.016,,
 Sand,0.0849999999999999,0.37712729946266155,4.44,1,3,"Alibaba, Diago 2018, Liu 2016","0.05, 0.08, 0.72",SiO2,60.083,"Dune Sand, Sand",
 Sb,7.0579016560000785,4.630400677483452,0.66,7,4,"Alibaba, ISE, Kim 2013, USGS","14.78, 4.2, 5.96, 8.15",Sb,121.76,"Antimony Ingot, Antimony Metal, Sb",5.79
 Sb2O3,6.439548578319339,1.4997047827786198,0.23,0,2,"Alibaba, ISE","5.38, 7.5",Sb2O3,291.517,Antimony Trioxide,4.8620572
-Sc,182500.0,,,0,1,USGS,182500.0,Sc,44.955908,"Scandium Mtl_Dendritic, Scandium Mtl_Ingot",3460.0
+Sc,182500.0,,,1,1,USGS,182500.0,Sc,44.955908,"Scandium Mtl_Dendritic, Scandium Mtl_Ingot",3460.0
 Sc2O3,3820.0,,,0,1,USGS,3820.0,Sc2O3,137.908816,Scandium Cmpds_Oxide,2255.8548751
 ScCl3,129600.0,,,0,1,USGS,129600.0,ScCl3,151.305908,Scandium Cmpds_Chloride,1028.0904721
 ScF3,224400.0,,,0,1,USGS,224400.0,ScF3,101.9511175,Scandium Cmpds_Fluoride,1526.8241872
@@ -268,14 +268,14 @@ Water,0.0015,0.0007071067811865475,0.47,5,2,"Antunez 2018, Li 2017",0.0,H2O,18.0
 Water Reservoir Excavation,0.261,,,1,1,Calculation/Black and Veatch,0.26,,,Pumped Hydro,
 Y,19.4,,,0,1,USGS,19.4,Y,88.90584,"Yttrium Metal, Yttrium Y2O3",31.0
 Zeolite,1.93,,,0,1,Liu 2016,1.93,Al2O5Si,162.0430768,Zeolite,
-Zn,2.818389559771475,2.842485390227123,1.01,25,5,"Alibaba, Kim 2013, Li 2017, SMM, USGS","0.51, 2.29, 2.82, 3.0, 8.12",Zn,65.38,"Zinc , Zinc LME, Zinc-HX, Zinc-Ibis, Zinc-Nanhua, Zinc-Qilin (Guangdong), Zinc-Shuangyan, Zinc-Torch, Zirconium Sponge, Zn",2.55
+Zn,2.818389559771475,2.842485390227123,1.01,26,5,"Alibaba, Kim 2013, Li 2017, SMM, USGS","0.51, 2.29, 2.82, 3.0, 8.12",Zn,65.38,"Zinc , Zinc LME, Zinc-HX, Zinc-Ibis, Zinc-Nanhua, Zinc-Qilin (Guangdong), Zinc-Shuangyan, Zinc-Torch, Zirconium Sponge, Zn",2.55
 Zn0.25V2O5,10.0,,,0,1,Li 2017,10.0,Zn0.25V2O5,198.223,Zn0.25V2O5,190.9596363
 ZnBr2,2.0300000000000002,0.6646803743153545,0.33,1,2,"Alibaba, Li 2017","1.56, 2.5",ZnBr2,225.188,ZnBr2,3.8557833
 ZnCO3,1.95,,,1,1,Alibaba,1.95,ZnCO3,125.388,,1.4002606
 ZnCl2,7.475,9.227743494484445,1.23,3,2,"Alibaba, Alva 2018","0.95, 14.0",ZnCl2,136.28,ZnCl2,1.266017
 ZnI2,26.715,23.638579695066284,0.88,1,2,"Alibaba, Indiamart","10.0, 43.43",ZnI2,319.18894,Zinc Iodide,28.3532127
 ZnSO4,0.6768352783765702,0.07556760238205643,0.11,1,2,"Alibaba, Li 2017","0.62, 0.73",ZnSO4,161.436,ZnSO4 7H2O,1.112163
-Zr,23.225,17.854446224960324,0.77,2,2,"ISE, USGS","10.6, 35.85",Zr,91.224,"Zirconium Sponge, Zirconium and Hafnium Zr_CN",36.4
+Zr,23.225,17.854446224960324,0.77,3,2,"ISE, USGS","10.6, 35.85",Zr,91.224,"Zirconium Sponge, Zirconium and Hafnium Zr_CN",36.4
 Zr(CO3)2,3.3825000000000003,,,0,1,ISE,3.38,Zr(CO3)2,211.24,Zirconium Carbonates,15.8031971
 ZrCl2H2O,2.272,,,0,1,ISE,2.27,ZrCl2H2O,180.139,Zirconium Oxychloride,18.4947928
 ZrO2,4.3555,,,0,1,ISE,4.36,ZrO2,123.222,Zirconium fused_cubic,26.9877237
