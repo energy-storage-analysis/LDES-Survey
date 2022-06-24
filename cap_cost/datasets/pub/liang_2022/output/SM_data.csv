@@ -24,5 +24,5 @@ Methanol,Methanol (U),0.0006666666666666668,860.0,0.24,-160.0,37.0,sensible_ther
 Ethanol,Ethanol,0.0006111111111111112,850.0,0.17,-110.0,75.0,sensible_thermal,cold,Ethanol,
 R218,R218 (U),0.0003055555555555556,1601.0,0.1,-183.0,28.0,sensible_thermal,cold,R218,
 R213,R213,0.00026388888888888886,1602.0,,185.0,293.0,sensible_thermal,cold,R213,
-n-hexane,n-hexane (U),0.0005972222222222222,720.0,0.11,-93.0,100.0,sensible_thermal,cold,n-hexane,
+N-hexane,n-hexane (U),0.0005972222222222222,720.0,0.11,-93.0,100.0,sensible_thermal,cold,N-hexane,
 Isopentane,Isopentane,0.0005277777777777777,750.0,0.12,-160.0,36.0,sensible_thermal,cold,Isopentane,

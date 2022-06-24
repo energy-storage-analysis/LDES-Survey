@@ -56,7 +56,7 @@ C6/LFP,solid_electrode,,,,,,,,,44.0,3.65,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('LF
 C6/LMNO,solid_electrode,,,,,,,,,51.3,4.7,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('LMNO', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.4944599704152241,254.7557645,25.707303111879142,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Alibaba, Li 2017",Li 2017,51.99066587795037
 C6/LMO,solid_electrode,,,,,,,,,45.6,4.2,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('LMO', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.4451387429962332,252.878086,7.762882071165313,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Alibaba, ISE, Li 2017",Li 2017,17.43924156974807
 C6/LMP,solid_electrode,,,,,,,,,36.3,4.0,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('LMP', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.4683228062875263,228.913805,7.528685087384747,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Li 2017",Li 2017,16.075845520029016
-C6/LRMO LMNO,solid_electrode,,,,,,,,,35.6,4.95,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.7618485636567227,174.1381179,12.612886164655164,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Li 2017",Li 2017,16.555634238011553
+C6/LRMO LMNO,solid_electrode,,,,,,,,,35.6,4.95,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.7618485632192258,174.13811800000002,12.612886168897264,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Li 2017",Li 2017,16.55563425308691
 C6/NCA,solid_electrode,,,,,,,,,68.3,4.2,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('NCA', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.6694458648881169,168.14777600000002,33.4919870245563,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Alibaba, Li 2017",Li 2017,50.02941803241065
 C6/NCM111,solid_electrode,,,,,,,,,51.3,4.2,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('NCM111', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.6702328789665777,167.9503302,23.473445620531443,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Alibaba, Li 2017",Li 2017,35.02282021246825
 C6/NCM622,solid_electrode,,,,,,,,,47.1,4.2,1.0,,,,,,,,,,,,,"[('Graphite', 1), ('NCM622', 1)]",molar,,Li ion  (C6 anode),,20.0,,0.6660925352281071,168.99428740000002,25.293127834450097,"0 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS, 1 : Alibaba, Li 2017",Li 2017,37.97239346900701
@@ -123,7 +123,7 @@ Dowtherm G ,sensible_thermal,0.0006111111111111,10.0,260.0,,,867.0,,,,,,,,,,,,,,
 E-Glass Epoxy,flywheel,,,,,,,,,,,,,,398.60308285163774,1.2,,,,,,,,,GRE,,,,,20.0,,0.09226923214158285,,24.815,Kale 2018,Kale 2018,268.94122151057394
 E-Glass Epoxy,pressure_tank,,,,,,,,,,,,,,398.60308285163774,1.0,,,,,,,,,GRE,,,,,20.0,,0.11072307856989941,,24.815,Kale 2018,Kale 2018,224.11768459214497
 E-Glass Epoxy,smes,,,,,,,,,,,,,,398.60308285163774,1.5,,,,,,,,,GRE,,,,,20.0,,0.07381538571326628,,24.815,Kale 2018,Kale 2018,336.17652688821744
-Ethanol,sensible_thermal,0.0005847222222222,-112.0,45.0,,,850.0,0.175,,21.7,,,,,,,,,,,,,,,Ethanol,mass,Ethanol,cold,,-112.0,157.0,0.09180138888888541,,0.5,Antunez 2018,"Antunez 2018, Liang 2022",5.4465406901979465
+Ethanol,sensible_thermal,0.0005847222222222,-112.0,45.0,,,850.0,0.175,,21.7,,,,,,,,,,,,,,,Ethanol,mass,Ethanol,cold,,-112.0,157.0,0.09180138888888541,46.069,0.66125,"Antunez 2018, ChemAnalyst","Antunez 2018, Liang 2022",7.203050062786784
 Ethylene glycol,sensible_thermal,0.0007805555555555,15.0,197.0,,,,0.22,,25.0,,,,,,,,,,,,,,,Ethylene glycol,mass,Ethylene glycol,cold,,15.0,182.0,0.142061111111101,,0.8,Antunez 2018,Antunez 2018,5.631379296860125
 Fe,sensible_thermal,0.0001409722222221,,1200.0,,,7525.0,47.15,,,,,,,,,,,,,,,,,Fe,,"Cast iron, Iron",both,,20.0,1180.0,0.16634722222207798,55.845,0.5008500000000001,"Alibaba, Steinmann 2022, USGS","Bauer 2012, Steinmann 2022",3.010870835771168
 Fe-air,metal_air,,,,,,,,,,1.28,2.0,,,,,,,,,,,,,Fe,,,,,20.0,,1.2286069577501222,55.845,0.5008500000000001,"Alibaba, Steinmann 2022, USGS",Weinrich 2019,0.40765681558338085
@@ -238,7 +238,7 @@ LiNaKNO3NO2,sensible_thermal,0.0003153808333333,97.0,450.0,,,2073.28,,,,,,,,,,,,
 LiOH,latent_thermal,,,,462.0,0.2425,1460.0,,1274.6,,,,,,,,,,,,,,,,LiOH,,LiOH,hot,,20.0,,0.2425,23.947,14.571355754374244,"Alibaba, Alva 2018, ISE, Li 2017",Alva 2018,60.08806496649173
 Limestone,sensible_thermal,0.000248148148148,-200.0,825.0,,,2565.6666666666665,1.9533333333333331,,,,,,,,,,,,,,,,,Stone,,Limestone,both,,-200.0,1025.0,0.2543518518517,162.0430768,0.0205462094691429,"Steinmann 2022, USGS","Bauer 2012, Liang 2022, Steinmann 2022",0.08077869030465082
 Marble,sensible_thermal,0.0002361111111111,,,,,,7.7,,,,,,,,,,,,,,,,,Stone,,Marble,both,,20.0,,,,,,,
-Methanol,sensible_thermal,0.0006472222222221,-129.0,26.0,,,860.0,0.24,,15.8,,,,,,,,,,,,,,,Methanol,mass,"Methanol, Methanol (U)",cold,,-129.0,155.0,0.1003194444444255,,0.3,Antunez 2018,"Antunez 2018, Liang 2022",2.990447182611668
+Methanol,sensible_thermal,0.0006472222222221,-129.0,26.0,,,860.0,0.24,,15.8,,,,,,,,,,,,,,,Methanol,mass,"Methanol, Methanol (U)",cold,,-129.0,155.0,0.1003194444444255,32.042,0.469,"Antunez 2018, ChemAnalyst","Antunez 2018, Liang 2022",4.675065762149574
 Mg,latent_thermal,,,,661.0,0.1077777777777777,,,,,,,,,,,,,,,,,,,Mg,,,hot,,20.0,,0.1077777777777777,24.305,2.8389220325036004,"Alibaba, ISE, Kim 2013, Li 2017, USGS",Ray 2021,26.340513703641673
 Mg (NO3)2,latent_thermal,,,,426.0,,,,,,,,,,,,,,,,,,,,Mg(NO3)2,,Mg (NO3)2,hot,,20.0,,,,,,,
 Mg(BH4)2,synfuel,,,,,,,,,,,8.328934428962901,,,,,,,0.2744383894343276,,,,,,"[('Mg', 1), ('B',2)]",molar,Mg(BH4)2,metal_hydride,,20.0,,5.975795088390367,45.925,24.85440771689357,"0 : Alibaba, ISE, Kim 2013, Li 2017, USGS, 1 : Alibaba, Ray 2021, USGS",Lai 2018,4.159180050396996
@@ -276,6 +276,7 @@ Mn2O3/Mn3O4,thermochemical,,,,,,,,,,,,0.0528055555555555,915.0,,,,,,,,,,,MnO2,,,
 Mn3O4/MnO,thermochemical,,,,,,,,,,,,0.2362777777777777,1700.0,,,,,,,,,,,MnO2,,,oxides,,20.0,,0.2362777777777777,86.936043,1.52,"Alibaba, ISE, Li 2017",Andre 2016,6.433106042793325
 MnSO4/MnO,thermochemical,,,,,,,,,,,,0.65825,1065.0,,,,,,,,,,,MnSO4,,,sulfates,,20.0,,0.65825,150.994043,0.6937500000000001,"Alibaba, ISE",Andre 2016,1.053930877326244
 Mobiltherm 605,sensible_thermal,0.0008055555555555,10.0,315.0,,,700.0,,,,,,,,,,,,,,,,325.0,,Mobiltherm 605,,Mobiltherm 605,hot,,10.0,305.0,0.2456944444444275,,3.339000000000001,Steinmann 2022,Steinmann 2022,13.590050876202184
+N-hexane,sensible_thermal,0.0005972222222222,-93.0,100.0,,,720.0,0.11,,,,,,,,,,,,,,,,,N-hexane,,n-hexane (U),cold,,-93.0,193.0,0.11526388888888459,86.178,1.734,ChemAnalyst,Liang 2022,15.043740209664376
 N-pentane,sensible_thermal,0.0005666666666666,-130.0,15.0,,,,0.14,,45.2,,,,,,,,,,,,,,,N-pentane,mass,N-pentane,cold,,-130.0,145.0,0.082166666666657,,1.4,Antunez 2018,Antunez 2018,17.03853955375454
 N-propane,sensible_thermal,0.0005611111111111,-188.0,-42.0,,,,0.17,,6.4,,,,,,,,,,,,,,,N-propane,mass,N-propane,cold,,-188.0,146.0,0.0819222222222206,,0.5,Antunez 2018,Antunez 2018,6.103350061033621
 N2 (LRC 100 bar),pressure_cavern,,,,,,102.04881213360376,,,,,,,,,,,,,,,,,10000000.0,N2_LRC,,,,,20.0,,0.027220089285714292,28.014,3.785212500000001,Cavern Calculations,Cavern Calculations,139.0595181473767
@@ -346,7 +347,7 @@ PbCO3/PbO,thermochemical,,,,,,,,,,,,0.0872222222222222,310.0,,,,,,,,,,,PbCO3,,,c
 PbO2/PbO,thermochemical,,,,,,,,,,,,0.0641388888888888,295.0,,,,,,,,,,,PbO,,,oxides,,20.0,,0.0641388888888888,223.199,1.945,Alibaba,Andre 2016,30.324815937635382
 Polythiophene nanostructures,pseudocapacitor,,,,,,,,,,,,,,,,,,,,162.5,4.0,,,Polythiophene,,,,,20.0,,,,,,,
 Pressurized Water,sensible_thermal,0.0011638888888888,0.0,200.0,,,1000.0,0.6,,,,,,,,,,,,,,,,,Water,,Pressurized water(U),hot,,0.0,200.0,0.23277777777776001,18.015,0.0015,"Antunez 2018, Li 2017",Liang 2022,0.006443914081146076
-Propane,sensible_thermal,0.0005694444444444,-188.0,43.0,,,650.0,0.16,,,,,,,,,,,,,,,,,Propane,,Propane (U),cold,,-188.0,231.0,,,,,,
+Propane,sensible_thermal,0.0005694444444444,-188.0,43.0,,,650.0,0.16,,,,,,,,,,,,,,,,,Propane,,Propane (U),cold,,-188.0,231.0,0.1315416666666564,44.097,0.97,ChemAnalyst,Liang 2022,7.374089325309413
 PtO2/PtO,thermochemical,,,,,,,,,,,,0.0768055555555555,420.0,,,,,,,,,,,PtO2,,,oxides,,20.0,,0.0768055555555555,227.082,15.0,Alibaba,Andre 2016,195.29837251356253
 Pumice,gravitational,,,,,,,,,,,,,,,,,,,100.0,,,,,Pumice,,Block Stacking,,,20.0,,0.00027249999999999996,504.5954032,0.0357148864739501,USGS,Gravitational Calculations,131.06380357412883
 Pumped Hydro,gravitational,,,,,,,,,,,,,,,,,,,300.0,,,,,Water Reservoir Excavation,,Pumped Hydro,,,20.0,,0.0008175,,0.261,Calculation/Black and Veatch,Gravitational Calculations,319.26605504587155
@@ -439,4 +440,3 @@ ZnSO4/ZnO,thermochemical,,,,,,,,,,,,0.4911666666666667,1080.0,,,,,,,,,,,ZnSO4,,,
 Zr(BH4)4,synfuel,,,,,,,,,,,16.466268592103653,,,,,,,0.5425635501098154,,,,,,"[('Zr', 1), ('B',4)]",molar,Zr(BH4)4,metal_hydride,,20.0,,4.035009743201269,134.464,31.707778652997636,"0 : ISE, USGS, 1 : Alibaba, Ray 2021, USGS",Lai 2018,7.858166564882079
 ZrMn2H3.6,synfuel,,,,,,,,,,,3.595564009460809,,,,,,,0.1184738341117336,,,,,,"[('Zr',1), ('Mn',2)]",molar,ZrMn2H3.6,metal_hydride,,20.0,,0.589128709331997,201.100086,11.084898129345385,"0 : ISE, USGS, 1 : ISE, USGS",Bowman 2002,18.815749349432252
 ZrNiH3,synfuel,,,,,,,,,,,2.97392804505113,,,,,,,0.0979909290844347,,,,,,"[('Zr',1), ('Ni',1)]",molar,ZrNiH3,metal_hydride,,20.0,,0.6536327943549896,149.9174,23.68088622037075,"0 : ISE, USGS, 1 : Alibaba, Ray 2021, SMM, USGS",Bowman 2002,36.22964824422442
-n-hexane,sensible_thermal,0.0005972222222222,-93.0,100.0,,,720.0,0.11,,,,,,,,,,,,,,,,,n-hexane,,n-hexane (U),cold,,-93.0,193.0,,,,,,

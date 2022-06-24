@@ -71,7 +71,8 @@ x_str='T_max'
 y_str='C_kwh'
 
 # df_sens_ds.plot.scatter(y=y_str, x=x_str, c='deltaT', cmap='jet', sharex=False)
-df_sens_ds.plot.scatter(y=y_str, x=x_str, sharex=False)
+# df_sens_ds.plot.scatter(y=y_str, x=x_str, sharex=False)
+sns.scatterplot(data=df_sens_ds, y=y_str, x=x_str, hue='sub_type', legend=True)
 
 ax = plt.gca()
 texts = []
