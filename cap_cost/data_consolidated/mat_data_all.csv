@@ -308,6 +308,7 @@ Concrete,,,0.071,concretenetwork.com/concrete-prices.html,,Calcuated using a den
 ZnI2,Zinc Iodide,ZnI2,43.43,Indiamart,,https://dir.indiamart.com/impcat/zinc-iodide.html,,,,
 Fossil CH4,,CH4,0.164,EIA Henry Hub,,Average over last 5 years,,,,
 SMR H2,,H2,2.08,DOE-FE Hydrogen Strategy,,,,,,
+Cryogenic H2 Tank,,H2,32.27,Kiessling 2021,,Converted into specific costs by hand with 70.85 kg/m3 liquid hydrogen density,,,,
 LiF,LiF,LiF,0.0358251176050426,Ray 2021,,,,,,
 NaF,NaF,NaF,1.7747212105882646,Ray 2021,,,,,,
 KF,KF,KF,5.842249947899256,Ray 2021,,,,,,
