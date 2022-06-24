@@ -107,7 +107,7 @@ df_SMs = pd.merge(df_SMs, SM_lookup, on='original_name')
 
 df_SMs = df_SMs.set_index('SM_name')
 
-df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','mat_basis','SM_type']]
+df_SMs = df_SMs[['sp_latent_heat','phase_change_T','materials','mat_basis','SM_type','sub_type']]
 df_SMs = df_SMs.dropna(subset=['materials'])
 
 df_SMs = prep_df_pint_out(df_SMs)

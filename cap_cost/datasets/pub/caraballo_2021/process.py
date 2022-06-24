@@ -8,7 +8,8 @@ tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='ut
 
 df = pd.concat(tables.values(), axis=1)
 
-df = df[['sub_type','T_melt','T_max','mass_density','Cp','C_kwh_orig']]
+#TODO: re-add material type. temporarily just want to have 'hot' and 'cold' as sub_type and punting on how to deal with 'material types' in addition to 'storage medium subtypes'
+df = df[['T_melt','T_max','mass_density','Cp','C_kwh_orig']]
 df
 
 df.index.name = 'SM_name'

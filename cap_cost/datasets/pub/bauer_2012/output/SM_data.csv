@@ -1,14 +1,14 @@
-,original_name,mass_density,Cp,kth,SM_type,materials
-unit_row,N/U,kilogram / meter ** 3,kilowatt_hour / kelvin / kilogram,watt / kelvin / meter,N/U,N/U
-SM_name,,,,,,
-Al,Aluminum 99.99 %,2700.0,0.0002625,238.4,sensible_thermal,Al
-Cu,Copper (commercial),8300.0,0.00011638888888888888,372.0,sensible_thermal,Cu
-Fe,Iron,7850.0,0.00012916666666666667,59.3,sensible_thermal,Fe
-Pb,Lead,11340.0,3.638888888888889e-05,35.25,sensible_thermal,Pb
-Granite,Granite,2750.0,0.00024722222222222224,2.9,sensible_thermal,Stone
-Graphite,Graphite,2200.0,0.00016944444444444445,155.0,sensible_thermal,Graphite
-Limestone,Limestone,2500.0,0.00020555555555555556,2.2,sensible_thermal,Stone
-Sandstone,Sandstone,2200.0,0.00019722222222222222,1.8,sensible_thermal,Stone
-NaCl,Sodium chloride,2165.0,0.00023888888888888888,6.5,sensible_thermal,NaCl
-Clay,Soil (clay),1450.0,0.00024444444444444443,1.28,sensible_thermal,Clay
-Gravel,Soil (gravelly),2040.0,0.0005111111111111112,0.59,sensible_thermal,Gravel
+,original_name,mass_density,Cp,kth,SM_type,sub_type,materials
+unit_row,N/U,kilogram / meter ** 3,kilowatt_hour / kelvin / kilogram,watt / kelvin / meter,N/U,N/U,N/U
+SM_name,,,,,,,
+Al,Aluminum 99.99 %,2700.0,0.0002625,238.4,sensible_thermal,both,Al
+Cu,Copper (commercial),8300.0,0.00011638888888888888,372.0,sensible_thermal,both,Cu
+Fe,Iron,7850.0,0.00012916666666666667,59.3,sensible_thermal,both,Fe
+Pb,Lead,11340.0,3.638888888888889e-05,35.25,sensible_thermal,both,Pb
+Granite,Granite,2750.0,0.00024722222222222224,2.9,sensible_thermal,both,Stone
+Graphite,Graphite,2200.0,0.00016944444444444445,155.0,sensible_thermal,both,Graphite
+Limestone,Limestone,2500.0,0.00020555555555555556,2.2,sensible_thermal,both,Stone
+Sandstone,Sandstone,2200.0,0.00019722222222222222,1.8,sensible_thermal,both,Stone
+NaCl,Sodium chloride,2165.0,0.00023888888888888888,6.5,sensible_thermal,hot,NaCl
+Clay,Soil (clay),1450.0,0.00024444444444444443,1.28,sensible_thermal,both,Clay
+Gravel,Soil (gravelly),2040.0,0.0005111111111111112,0.59,sensible_thermal,both,Gravel

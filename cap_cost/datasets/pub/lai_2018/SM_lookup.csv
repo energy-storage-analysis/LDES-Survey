@@ -1,10 +1,10 @@
-original_name,MF_host,SM_name,SM_type,materials,mat_basis
-LiBH4,LiBH,LiBH4,synfuel,"[('Li', 1), ('B',1)]",molar
-NaBH4,NaBH,NaBH4,synfuel,"[('Na', 1), ('B',1)]",molar
-KBH4,KBH,KBH4,synfuel,"[('K', 1), ('B',1)]",molar
-Mg(BH4)2,MgB2H2,Mg(BH4)2,synfuel,"[('Mg', 1), ('B',2)]",molar
-Ca(BH4)2,CaB2H2,Ca(BH4)2,synfuel,"[('Ca', 1), ('B',2)]",molar
-Zn(BH4)2,ZnB2H2,Zn(BH4)2,synfuel,"[('Zn', 1), ('B',2)]",molar
-Sc(BH4)3,ScB3H3,Sc(BH4)3,synfuel,"[('Sc', 1), ('B',3)]",molar
-Al(BH4)3,AlB3H3,Al(BH4)3,synfuel,"[('Al', 1), ('B',3)]",molar
-Zr(BH4)4,ZrB4H4,Zr(BH4)4,synfuel,"[('Zr', 1), ('B',4)]",molar
+original_name,MF_host,SM_name,SM_type,sub_type,materials,mat_basis
+LiBH4,LiBH,LiBH4,synfuel,metal_hydride,"[('Li', 1), ('B',1)]",molar
+NaBH4,NaBH,NaBH4,synfuel,metal_hydride,"[('Na', 1), ('B',1)]",molar
+KBH4,KBH,KBH4,synfuel,metal_hydride,"[('K', 1), ('B',1)]",molar
+Mg(BH4)2,MgB2H2,Mg(BH4)2,synfuel,metal_hydride,"[('Mg', 1), ('B',2)]",molar
+Ca(BH4)2,CaB2H2,Ca(BH4)2,synfuel,metal_hydride,"[('Ca', 1), ('B',2)]",molar
+Zn(BH4)2,ZnB2H2,Zn(BH4)2,synfuel,metal_hydride,"[('Zn', 1), ('B',2)]",molar
+Sc(BH4)3,ScB3H3,Sc(BH4)3,synfuel,metal_hydride,"[('Sc', 1), ('B',3)]",molar
+Al(BH4)3,AlB3H3,Al(BH4)3,synfuel,metal_hydride,"[('Al', 1), ('B',3)]",molar
+Zr(BH4)4,ZrB4H4,Zr(BH4)4,synfuel,metal_hydride,"[('Zr', 1), ('B',4)]",molar

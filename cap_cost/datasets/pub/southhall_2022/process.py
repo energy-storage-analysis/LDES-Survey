@@ -7,6 +7,7 @@ from es_utils.units import prep_df_pint_out
 
 df = pd.read_csv('input.csv', index_col=0)
 df['SM_type'] = 'synfuel'
+df['sub_type'] = 'LOHC'
 
 df
 # %%
@@ -23,7 +24,7 @@ df['n_e'] = 2*df['N_H2']
 df
 # %%
 
-df_SM = df[['materials','mat_basis','SM_type','deltaG_chem','n_e']]
+df_SM = df[['materials','mat_basis','SM_type','sub_type','deltaG_chem','n_e']]
 
 
 df_SM['deltaG_chem'] = df_SM['deltaG_chem'].astype('pint[kWh/mol]')

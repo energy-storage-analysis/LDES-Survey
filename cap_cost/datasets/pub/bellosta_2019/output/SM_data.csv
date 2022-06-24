@@ -1,11 +1,11 @@
-,original_name,SM_type,materials,mat_basis,deltaG_chem,n_e
-unit_row,N/U,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless
-SM_name,,,,,,
-NaAlH2,NaAlH44 1/3Na3AlH6  2/3Al   H2(g),synfuel,"[('Na', 1), ('Al',1)]",molar,0.0658561369180461,1.9986687987267402
-Na3AlH3,Na3AlH64 3NaH   Al   3/2H2(g),synfuel,"[('Na',3), ('Al',1)]",molar,0.0987067434550457,2.995652305160719
-Na2LiAlH3,Na2LiAlH64 2NaH   LiH   Al   3/2H2(g),synfuel,"[('Na',2), ('Li',1), ('Al',1)]",molar,0.09891731441407767,3.0020429260721597
-K2LiAlH3,K2LiAlH64 2 KH   LiH   Al   3/2H2(g),synfuel,"[('K',2), ('Li',1), ('Al',1)]",molar,0.09890495410751801,3.0016678029595756
-KClLiAlH,KAlH4 LiCl4KCl   LiH   Al 3/2H2(g) [69],synfuel,"[('K',2), ('Al',1)]",molar,0.09894687581661317,3.0029400854814314
-Li2Mg(NH2)2,Mg(NH2)2  2LiH 4 Li2Mg(NH)2  2H2(g),synfuel,"[('Mg',1), ('N2',1)]",molar,0.1357000850998307,4.118363735958443
-Ti12Mn18H30,Ti1.2Mn1.8H3,synfuel,"[('Ti',12), ('Mn',18)]",molar,1.0090799298223094,30.62458057123853
-Ti10Fe10H,TiFeH2.04TiFeH1.044TiFeH0.1 [51],synfuel,"[('Ti',10), ('Fe',10)]",molar,0.6256670508580783,18.98837787126186
+,original_name,SM_type,sub_type,materials,mat_basis,deltaG_chem,n_e
+unit_row,N/U,N/U,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless
+SM_name,,,,,,,
+NaAlH2,NaAlH44 1/3Na3AlH6  2/3Al   H2(g),synfuel,metal_hydride,"[('Na', 1), ('Al',1)]",molar,0.0658561369180461,1.9986687987267402
+Na3AlH3,Na3AlH64 3NaH   Al   3/2H2(g),synfuel,metal_hydride,"[('Na',3), ('Al',1)]",molar,0.0987067434550457,2.995652305160719
+Na2LiAlH3,Na2LiAlH64 2NaH   LiH   Al   3/2H2(g),synfuel,metal_hydride,"[('Na',2), ('Li',1), ('Al',1)]",molar,0.09891731441407767,3.0020429260721597
+K2LiAlH3,K2LiAlH64 2 KH   LiH   Al   3/2H2(g),synfuel,metal_hydride,"[('K',2), ('Li',1), ('Al',1)]",molar,0.09890495410751801,3.0016678029595756
+KClLiAlH,KAlH4 LiCl4KCl   LiH   Al 3/2H2(g) [69],synfuel,metal_hydride,"[('K',2), ('Al',1)]",molar,0.09894687581661317,3.0029400854814314
+Li2Mg(NH2)2,Mg(NH2)2  2LiH 4 Li2Mg(NH)2  2H2(g),synfuel,metal_hydride,"[('Mg',1), ('N2',1)]",molar,0.1357000850998307,4.118363735958443
+Ti12Mn18H30,Ti1.2Mn1.8H3,synfuel,metal_hydride,"[('Ti',12), ('Mn',18)]",molar,1.0090799298223094,30.62458057123853
+Ti10Fe10H,TiFeH2.04TiFeH1.044TiFeH0.1 [51],synfuel,metal_hydride,"[('Ti',10), ('Fe',10)]",molar,0.6256670508580783,18.98837787126186

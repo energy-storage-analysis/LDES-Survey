@@ -63,7 +63,7 @@ deltaG_H2 = 0.0659 #kWh/molH2
 df_SM['deltaG_chem'] = df_SM['r_H2'] * deltaG_H2
 df_SM['n_e'] = df_SM['r_H2']*2
 
-df_SM = df_SM[['original_name','SM_type','materials','mat_basis','deltaG_chem','n_e']]
+df_SM = df_SM[['original_name','SM_type','sub_type','materials','mat_basis','deltaG_chem','n_e']]
 
 df_SM['deltaG_chem'] = df_SM['deltaG_chem'].astype('pint[kWh/mol]')
 df_SM['n_e'] = df_SM['n_e'].astype('pint[dimensionless]')

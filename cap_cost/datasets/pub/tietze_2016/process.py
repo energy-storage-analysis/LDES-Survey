@@ -87,6 +87,7 @@ SM_dict = {
     'n_e': [2],
     'materials': ["H2 Spherical Pressure (2-20 bar)"],
     'SM_type': ['synfuel'],
+    'sub_type': ['spherical_pressure'],
     'mat_basis': ['molar'],
 }
 

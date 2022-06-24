@@ -1,15 +1,15 @@
-original_name,SM_type,SM_name,materials
-Aluminum 99.99 %,sensible_thermal,Al,Al
-Copper (commercial),sensible_thermal,Cu,Cu
-Iron,sensible_thermal,Fe,Fe
-Lead,sensible_thermal,Pb,Pb
-Brick (dry),sensible_thermal,,
-Concrete (aggregates),sensible_thermal,,
-Granite,sensible_thermal,Granite,Stone
-Graphite,sensible_thermal,Graphite,Graphite
-Limestone,sensible_thermal,Limestone,Stone
-Sandstone,sensible_thermal,Sandstone,Stone
-Slag,sensible_thermal,,
-Sodium chloride,sensible_thermal,NaCl,NaCl
-Soil (clay),sensible_thermal,Clay,Clay
-Soil (gravelly),sensible_thermal,Gravel,Gravel
+original_name,SM_type,sub_type,SM_name,materials
+Aluminum 99.99 %,sensible_thermal,both,Al,Al
+Copper (commercial),sensible_thermal,both,Cu,Cu
+Iron,sensible_thermal,both,Fe,Fe
+Lead,sensible_thermal,both,Pb,Pb
+Brick (dry),sensible_thermal,both,,
+Concrete (aggregates),sensible_thermal,both,,
+Granite,sensible_thermal,both,Granite,Stone
+Graphite,sensible_thermal,both,Graphite,Graphite
+Limestone,sensible_thermal,both,Limestone,Stone
+Sandstone,sensible_thermal,both,Sandstone,Stone
+Slag,sensible_thermal,,,
+Sodium chloride,sensible_thermal,hot,NaCl,NaCl
+Soil (clay),sensible_thermal,both,Clay,Clay
+Soil (gravelly),sensible_thermal,both,Gravel,Gravel

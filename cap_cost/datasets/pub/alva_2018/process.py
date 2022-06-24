@@ -108,7 +108,7 @@ df_SMs = pd.merge(
 # df_SMs.index.name = 'SM_name'
 df_SMs = df_SMs.reset_index().set_index('SM_name')
 
-df_SMs = df_SMs[['materials','mat_basis','original_name','SM_type','Cp', 'T_melt','T_max', 'phase_change_T','sp_latent_heat','mass_density','kth','vol_latent_heat']]
+df_SMs = df_SMs[['materials','mat_basis','original_name','SM_type','sub_type','Cp', 'T_melt','T_max', 'phase_change_T','sp_latent_heat','mass_density','kth','vol_latent_heat']]
 
 
 df_SMs = prep_df_pint_out(df_SMs)
