@@ -142,6 +142,7 @@ Gravel,gravitational,,,,,,,,,,,,,,,,,,,100.0,,,,,Gravel,,Block Stacking,,,20.0,,
 Gravel,sensible_thermal,0.0003416666666666,-160.0,973.0,,,2329.0,2.32,,,,,,,,,,,,,,,,,Gravel,,"Gravel, quartz (U), Soil (gravelly)",,,-160.0,1133.0,0.3871083333332578,231.339,0.0291803850227903,USGS,"Bauer 2012, Liang 2022",0.07538041036608012
 H2 (LRC),synfuel,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,H2_LRC,,,,,20.0,,32.68849206349206,2.016,52.99297500000002,Cavern Calculations,Cavern Calculations,1.6211507981790598
 H2 (Salt),synfuel,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,H2_Salt,,,,,20.0,,32.68849206349206,2.016,4.17395953125,Cavern Calculations,Cavern Calculations,0.12768895925644919
+H2 Spherical Pressure (2-20 bar),synfuel,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,H2 Spherical Pressure (2-20 bar),molar,,,,20.0,,32.68849206349206,2.016,682.656311794504,Tietze 2016,Tietze 2016,20.883689295564796
 H2/Br2,flow_battery,,,,,,,,,,1.09,1.0,,,,,,,,,,,,,HBr,,,,,20.0,,0.36105292031946923,80.912,2.565,"Alibaba, Li 2017",Diez 2020,7.104221723869231
 HITEC,latent_thermal,,,,142.0,0.0233333333333333,2057.0,,,,,,,,,,,,,,,,,,HITEC,,KNO3-NaNO2-NaNO3,,,20.0,,0.0233333333333333,,1.3356000000000003,Steinmann 2022,Steinmann 2022,57.240000000000094
 HITEC,sensible_thermal,0.0004348611111111,142.0,517.5,,,1800.0,0.6,,,,,,,,,,,,,,,358.0,,HITEC,,"HITEC, HITEC, NaNO3eKNO3e NaNO2",,,142.0,375.5,0.16329034722221805,,1.3356000000000003,Steinmann 2022,"Alva 2018, Steinmann 2022",8.179295486354826
