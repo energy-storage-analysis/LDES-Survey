@@ -1,0 +1,14 @@
+[
+    {
+        "page_rotate": 90,
+        "column_rows": 3
+    },
+    {
+        "page_rotate": 90,
+        "table_rotate": 90,
+        "column_rows": 3
+    },
+    {
+        "column_rows": 3
+    }
+]

@@ -11,7 +11,7 @@ df['SM_type'] = 'synfuel'
 df
 # %%
 
-deltaG_H2 = 0.0659
+deltaG_H2 = 0.0659 #kWh/molH2
 
 total_deltaG = deltaG_H2*df['N_H2']
 
