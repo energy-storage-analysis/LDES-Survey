@@ -13,8 +13,11 @@ from os.path import join as pjoin
 output_dir = 'output/Ckwh_line'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
 
-df = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
+df = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 #%%
 
 
@@ -158,7 +161,7 @@ df_stats = df_log.groupby('SM_type').agg({
     'specific_energy': ['mean','std'],
 }).sort_values(('specific_energy','mean'),ascending=False)
 
-display_text = pd.read_csv('tech_lookup.csv', index_col=0)
+display_text = pd.read_csv('../tech_lookup.csv', index_col=0)
 long_names = [display_text['long_name'][s].replace('\\n','') for s in df_stats.index.values]
 
 df_stats.index = long_names
@@ -167,10 +170,10 @@ df_stats
 
 #%%
 
-palette = pd.read_csv('energy_colors.csv', index_col=0)#['color'].to_dict()
+palette = pd.read_csv('../energy_colors.csv', index_col=0)#['color'].to_dict()
 # palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
-display_text = pd.read_csv('tech_lookup.csv')
+display_text = pd.read_csv('../tech_lookup.csv')
 
 df_colors = pd.merge(palette, display_text, on='energy_type')
 df_colors= df_colors.set_index('long_name')

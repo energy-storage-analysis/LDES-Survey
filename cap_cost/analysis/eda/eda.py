@@ -11,17 +11,20 @@ mpl.rcParams.update({'font.size':13.5})
 
 import os
 from os.path import join as pjoin
-output_dir = 'output/eda'
+output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
 
-palette = pd.read_csv('energy_colors.csv', index_col=0)['color'].to_dict()
+palette = pd.read_csv('../energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
 # %%
 
-df_SMs = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
-df_mat_data = read_pint_df('../data_consolidated/mat_data.csv', index_col=0, drop_units=True)
+df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
+df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
 
 df_mat_unused = df_mat_data[df_mat_data['num_SMs'] == 0].dropna(how='all')
 df_mat_unused.to_csv('output/mat_data_unused.csv')
@@ -59,7 +62,7 @@ plt.ylabel("Count")
 
 plt.tight_layout()
 
-plt.savefig('output/eda/source_count.png')
+plt.savefig(pjoin(output_dir,'source_count.png'))
 
 #%%
 
@@ -69,7 +72,7 @@ df_SMs = df_SMs.dropna(subset=['C_kwh'])
 
 plt.figure(figsize=(7,5))
 
-display_text = pd.read_csv('tech_lookup.csv', index_col=0)
+display_text = pd.read_csv('../tech_lookup.csv', index_col=0)
 bins = np.logspace(np.log10(2e-4), np.log10(1e2), 30)
 
 df_SMs['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_SMs['SM_type'].values]
@@ -90,7 +93,7 @@ plt.ylabel('Count')
 plt.tight_layout()
 
 
-plt.savefig('output/eda/SM_energy.png')
+plt.savefig(pjoin(output_dir,'SM_energy.png'))
 
 #%%
 

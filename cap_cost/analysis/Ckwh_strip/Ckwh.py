@@ -11,20 +11,23 @@ from bokeh.io import show, output_file, save
 
 import os
 from os.path import join as pjoin
-output_dir = 'output/Ckwh'
+output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 from es_utils.units import read_pint_df
 
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
 
-palette = pd.read_csv('energy_colors.csv', index_col=0)['color'].to_dict()
+palette = pd.read_csv('../energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
-df_all = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
+df_all = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df_all = df_all.dropna(subset=['C_kwh'])
 
-display_text = pd.read_csv('tech_lookup.csv', index_col=0)
+display_text = pd.read_csv('../tech_lookup.csv', index_col=0)
 
 df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
 

@@ -1,6 +1,7 @@
 #%%
+import os
+from os.path import join as pjoin
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import re
 import seaborn as sns
@@ -10,19 +11,18 @@ import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
 from adjustText import adjust_text
 
-import os
-from os.path import join as pjoin
-output_dir = 'output/single_tech'
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
+output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
-df = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
+df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
-#%%
-
-df['SM_type'].value_counts()
 
 # %%
 df_ec = df.where(df['SM_type'].isin([
@@ -35,15 +35,6 @@ df_ec = df.where(df['SM_type'].isin([
 # 'synfuel', #Doesn't have delta V....
 ])).dropna(subset=['SM_type'])
 
-df_ec
-
-
-#%%
-
-# df_ec.plot.scatter(y='C_kwh', x='deltaV')
-# plt.yscale('log')
-# plt.xscale('log')
-#%%k
 df_ec_ds = df_ec.where(df_ec['C_kwh'] < 10).dropna(how='all')
 
 # %%

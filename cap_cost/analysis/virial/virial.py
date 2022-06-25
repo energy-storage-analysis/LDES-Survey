@@ -12,10 +12,14 @@ from adjustText import adjust_text
 
 import os
 from os.path import join as pjoin
-output_dir = 'output/single_tech'
+output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
-df = read_pint_df('../data_consolidated/SM_data.csv', index_col=[0,1], drop_units=True).reset_index('SM_type')
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
+df = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 
 
