@@ -6,8 +6,8 @@ Isopentane,Isopentane,sensible_thermal,cold,Isopentane,mass
 N-pentane,N-pentane,sensible_thermal,cold,N-pentane,mass
 Ethanol,Ethanol,sensible_thermal,cold,Ethanol,mass
 Methanol,Methanol,sensible_thermal,cold,Methanol,mass
-Water,Water,sensible_thermal,cold,Water,mass
-Ethylene glycol,Ethylene glycol,sensible_thermal,cold,Ethylene glycol,mass
+Water,Water,sensible_thermal,hot,Water,mass
+Ethylene glycol,Ethylene glycol,sensible_thermal,hot,Ethylene glycol,mass
 Sunflower oil,Vegetable Oil,sensible_thermal,hot,Vegetable Oil,mass
 Mineral oil,,sensible_thermal,hot,,mass
 Hitec XL,HITEC XL,sensible_thermal,hot,HITEC XL,mass

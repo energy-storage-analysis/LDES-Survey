@@ -58,8 +58,10 @@ df_all = pd.concat([df_a2, df_a3])
 #TODO: Need to figure out what this means
 df_all = df_all.drop('cost_factor', axis=1)
 
+df_all['T_range'] = df_all['T_range'].str.replace('--', ' -')
+
 df_all
-df_all['T_range'] = df_all['T_range'].str.replace('--', ' ')
+#%%
 df_all['T_range'] = df_all['T_range'].str.replace('(\d)-(\d)',r'\1 \2', regex=True)
 
 #:TODO manual for Alumina and Magnetite. Need to find a consistent minimum temperature for solid materials...
