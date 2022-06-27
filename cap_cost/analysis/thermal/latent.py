@@ -1,9 +1,11 @@
 #%%
 import matplotlib.pyplot as plt
 import seaborn as sns
-from es_utils.units import read_pint_df
 import os
 from os.path import join as pjoin
+
+from es_utils.units import read_pint_df
+from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -34,15 +36,8 @@ fig, ax = plt.subplots(1,1,figsize=(7,8))
 df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False, ax=ax)
 
 
-
-texts = []
-for name, row in df_latent_ds.iterrows():
-    x = row['phase_change_T']
-    y = row['C_kwh']
-    name = name.split(' ')[0]
-
-    txt = ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
+df_latent_ds['display_text'] = [s.split(' ')[0] for s in df_latent_ds.index]
+texts = annotate_points(df_latent_ds, 'phase_change_T', 'C_kwh', 'display_text')
 
 
 plt.yscale('log')

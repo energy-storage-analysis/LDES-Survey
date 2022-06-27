@@ -2,9 +2,11 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import re
-from es_utils.units import read_pint_df
 import os
 from os.path import join as pjoin
+
+from es_utils.units import read_pint_df
+from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -38,14 +40,8 @@ sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True)
 
 
 ax = plt.gca()
-texts = []
-for name, row in df_tc.iterrows():
-    x = row[x_str]
-    y = row[y_str]
-    # name = row['materials']
 
-    txt = ax.text(x,y,"${}$".format(name))
-    texts.append(txt)
+texts = annotate_points(df_tc, x_str,y_str, ax=ax)
 
 plt.xlim(0,2000)
 leg = plt.gca().get_legend()

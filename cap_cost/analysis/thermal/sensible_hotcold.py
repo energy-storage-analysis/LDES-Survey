@@ -1,11 +1,12 @@
 
 #%%
 import re
-from tracemalloc import get_object_traceback
 import seaborn as sns
-from es_utils.units import read_pint_df
 import os
 from os.path import join as pjoin
+
+from es_utils.units import read_pint_df
+from es_utils.plot import annotate_points
 
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -42,16 +43,6 @@ df_hot
 
 #%%
 
-def annotate_points(df, x_col, y_col, ax):
-    texts = []
-    for name, row in df.iterrows():
-        x = row[x_col]
-        y = row[y_col]
-
-        txt= ax.text(x, y, "${}$".format(name))
-        texts.append(txt)
-
-    return texts
 
 def adjust_text_after(ax, text_alter, x,y):
     text_obj = texts_cold[text_alter]
@@ -76,7 +67,7 @@ y_str='C_kwh'
 
 ax_cold = fig.add_subplot(spec[0,0])
 sns.scatterplot(data=df_cold, y=y_str, x=x_str, legend=True, ax=ax_cold)
-texts_cold =annotate_points(df_cold, x_str,y_str,ax_cold)
+texts_cold =annotate_points(df_cold, x_str,y_str,ax=ax_cold)
 
 ax_cold.set_yscale('log')
 ax_cold.set_ylim(0.005,200)
@@ -94,7 +85,7 @@ y_str='C_kwh'
 #https://stackoverflow.com/questions/22511550/gridspec-with-shared-axes-in-python
 ax_hot = fig.add_subplot(spec[1:], sharey=ax_cold)
 sns.scatterplot(data=df_hot, y=y_str, x=x_str, legend=True,ax=ax_hot)
-texts_hot =annotate_points(df_hot, x_str,y_str,ax_hot)
+texts_hot =annotate_points(df_hot, x_str,y_str,ax=ax_hot)
 
 
 ax_hot.set_yscale('log')

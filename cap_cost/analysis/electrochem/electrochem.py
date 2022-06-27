@@ -5,7 +5,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import re
 import seaborn as sns
+
 from es_utils.units import read_pint_df
+from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -46,14 +48,8 @@ y_str='C_kwh'
 sns.scatterplot(data=df_ec_ds, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
-texts = []
-for name, row in df_ec_ds.iterrows():
-    x = row[x_str]
-    y = row[y_str]
 
-    txt= ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
-
+texts = annotate_points(df_ec_ds, x_str, y_str, ax=ax)
 # plt.xscale('log')
 
 plt.xlabel('Couple Voltage (V)')
@@ -105,13 +101,9 @@ y_str='C_kwh'
 sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
-texts = []
-for name, row in df_ec_coupled.iterrows():
-    x = row[x_str]
-    y = row[y_str]
 
-    txt= ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
+
+texts = annotate_points(df_ec_coupled, x_str, y_str, ax=ax)
 
 # plt.xscale('log')
 ax.set_title('Coupled')
@@ -140,16 +132,9 @@ y_str='C_kwh'
 sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
-texts = []
-for name, row in df_ec_decoupled.iterrows():
-    x = row[x_str]
-    y = row[y_str]
 
-    name = name.replace(" ", r"\ ")
-    txt= ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
-
-# plt.xscale('log')
+df_ec_decoupled['display_text'] = [s.replace(" ", r"\ ") for s in df_ec_decoupled.index]
+texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
 ax.set_title('Decoupled')
 
@@ -180,16 +165,9 @@ y_str='C_kwh'
 sns.scatterplot(data=df_nofeedstock, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
-texts = []
-for name, row in df_nofeedstock.iterrows():
-    x = row[x_str]
-    y = row[y_str]
 
-    name = name.replace(" ", r"\ ")
-    txt= ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
-
-# plt.xscale('log')
+df_nofeedstock['display_text'] = [s.replace(" ", r"\ ") for s in df_nofeedstock.index]
+texts = annotate_points(df_nofeedstock, x_str, y_str, 'display_text', ax=ax)
 
 ax.set_title('Decoupled')
 
@@ -237,15 +215,9 @@ y_str='C_kwh'
 sns.scatterplot(data=df_plot, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
-texts = []
-for name, row in df_plot.iterrows():
-    x = row[x_str]
-    y = row[y_str]
 
-    txt= ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
+texts = annotate_points(df_plot, x_str,y_str,ax=ax)
 
-# plt.xscale('log')
 ax.set_title('Coupled')
 
 plt.xlabel('Couple Voltage (V)')

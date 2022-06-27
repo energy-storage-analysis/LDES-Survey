@@ -4,7 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import re
 import seaborn as sns
+
 from es_utils.units import read_pint_df
+from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -54,14 +56,8 @@ plt.figure()
 sns.scatterplot(data=df_virial_mat, y='specific_price', x='specific_strength', hue='materials')
 
 ax = plt.gca()
-texts = []
-for name, row in df_virial_mat.iterrows():
-    x = row['specific_strength']
-    y = row['specific_price']
-    name = name.split(' ')[0]
 
-    txt = ax.text(x, y, "${}$".format(name))
-    texts.append(txt)
+texts = annotate_points(df_virial_mat, 'specific_strength','specific_price')
 
 plt.plot(energy_densities_line, mat_cost_line)
 
