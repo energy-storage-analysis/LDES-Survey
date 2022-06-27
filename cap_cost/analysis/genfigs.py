@@ -8,7 +8,7 @@ import os
 
 svg_paths =[
     r'thermal\fig_thermal.svg',
-    r'electrochem\fig_ec.svg'
+    r'electrochem\fig_ec_rhoE.svg'
 ]
 
 #Directory needs to be changed into each folder, so we get the root analysis folder first
