@@ -24,12 +24,15 @@ df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), inde
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
+Ckwh_cutoff = 50
+y_lim = (0.005, 100)
+
 # %%
 df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
 df_sens = df_sens.dropna(axis=1, how='all')
 df_sens = df_sens.rename({'Vegetable Oil': 'Veg. Oil'})
 
-df_sens_ds = df_sens.where(df_sens['C_kwh'] < 100).dropna(how='all')
+df_sens_ds = df_sens.where(df_sens['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 
 
 
@@ -70,7 +73,7 @@ sns.scatterplot(data=df_cold, y=y_str, x=x_str, legend=True, ax=ax_cold)
 texts_cold =annotate_points(df_cold, x_str,y_str,ax=ax_cold)
 
 ax_cold.set_yscale('log')
-ax_cold.set_ylim(0.005,200)
+ax_cold.set_ylim(y_lim)
 ax_cold.set_xlim(-200,0)
 
 ax_cold.set_xlabel('Min Temperature (deg C)')
@@ -110,12 +113,12 @@ ax=ax_cold
 
 
 alter_dict = {
-    "Ethanol": (-80,8),
-    "Isopentane": (-190,3),
+    "Ethanol": (-80,5),
+    "Isopentane": (-190,70),
     "N-propane": (-180,0.5),
     'Methanol': (-100,1),
     'N-pentane': (None,30),
-    'N-hexane': (-100,20)
+    'N-hexane': (-80,30)
 }
 
 text_strings = [t.get_text().strip("$") for t in texts_cold]

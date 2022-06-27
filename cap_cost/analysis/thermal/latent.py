@@ -18,11 +18,15 @@ REPO_DIR = os.getenv('REPO_DIR')
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
+
+Ckwh_cutoff = 50
+y_lim = (0.1, 100)
+
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 # %%
 df_latent = df.where(df['SM_type'] == 'latent_thermal').dropna(subset=['SM_type'])
 df_latent = df_latent.dropna(axis=1, how='all')
-df_latent_ds = df_latent.where(df_latent['C_kwh'] < 100).dropna(how='all')
+df_latent_ds = df_latent.where(df_latent['C_kwh'] <Ckwh_cutoff).dropna(how='all')
 
 #This drops Boron, with phase change > 2000
 df_latent_ds = df_latent_ds.where(df_latent['phase_change_T'] < 2000).dropna(how='all')
@@ -41,7 +45,7 @@ texts = annotate_points(df_latent_ds, 'phase_change_T', 'C_kwh', 'display_text')
 
 
 plt.yscale('log')
-plt.ylim(0.1,200)
+plt.ylim(y_lim)
 plt.xlim(0,1600)
 
 ax.hlines(10,0,1600, linestyle='--', color='gray')

@@ -23,12 +23,14 @@ df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), inde
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
+Ckwh_cutoff = 50
+y_lim = (0.1, 100)
 # %%
 
 
 df_tc = df.where(df['SM_type'] == 'thermochemical').dropna(subset=['SM_type'])
 df_tc = df_tc.dropna(axis=1,how='all')
-df_tc = df_tc.where(df_tc['C_kwh'] < 100).dropna(how='all')
+df_tc = df_tc.where(df_tc['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 
 plt.figure(figsize=(7,8))
 x_str='temperature'
@@ -49,7 +51,7 @@ leg.set_bbox_to_anchor([0,0,0.3,0.2])
 leg.set_title('')
 
 plt.yscale('log')
-plt.ylim(0.1,200)
+plt.ylim(y_lim)
 # plt.ylim(0,10)
 
 ax.hlines(10,0,2000, linestyle='--', color='gray')
