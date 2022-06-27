@@ -1,29 +1,29 @@
-source,folder,processing_script
-USGS,usgs,y
-ISE,ISE,y
-Alva 2018,pub/alva_2018,y
-Li 2017,pub/li_2017,y
-Andre 2016,pub/andre_2016,y
-Liu 2016,pub/liu_2016,y
-Kale 2018,pub/kale_2018,y
-Kim 2013,pub/kim_2013,y
-custom_data,custom_data,
-Ray 2021,pub/ray_2021,y
-Alibaba,alibaba,y
-Choi 2015,pub/choi_2015,y
-Weinrich 2019,pub/weinrich_2019,y
-SMM,SMM,y
-Caraballo 2021,pub/caraballo_2021,y
-Bauer 2012,pub/bauer_2012,y
-Diez 2020,pub/diez_2020,y
-Steinmann 2022,pub/steinmann_2022,y
-Cavern Calculations,cavern,
-Gravitational Calculations,gravity_calc,
-Antunez 2018,pub/antunez_2018,y
-Liang 2022,pub/liang_2022,y
-Southhall 2022,pub/southhall_2022,y
-Bellosta 2019,pub/bellosta_2019,y
-Tietze 2016,pub/tietze_2016,y
-Bowman 2002,pub/bowman_2002,y
-Lai 2018,pub/lai_2018,y
-ChemAnalyst,chemanalyst,y
+source,folder,processing_script,extract_script
+USGS,usgs,y,
+ISE,ISE,y,
+Alva 2018,pub/alva_2018,y,y
+Li 2017,pub/li_2017,y,y
+Andre 2016,pub/andre_2016,y,y
+Liu 2016,pub/liu_2016,y,y
+Kale 2018,pub/kale_2018,y,
+Kim 2013,pub/kim_2013,y,y
+custom_data,custom_data,,
+Ray 2021,pub/ray_2021,y,y
+Alibaba,alibaba,y,y
+Choi 2015,pub/choi_2015,y,y
+Weinrich 2019,pub/weinrich_2019,y,y
+SMM,SMM,y,
+Caraballo 2021,pub/caraballo_2021,y,y
+Bauer 2012,pub/bauer_2012,y,y
+Diez 2020,pub/diez_2020,y,
+Steinmann 2022,pub/steinmann_2022,y,y
+Cavern Calculations,cavern,,
+Gravitational Calculations,gravity_calc,,
+Antunez 2018,pub/antunez_2018,y,y
+Liang 2022,pub/liang_2022,y,y
+Southhall 2022,pub/southhall_2022,y,
+Bellosta 2019,pub/bellosta_2019,y,y
+Tietze 2016,pub/tietze_2016,y,y
+Bowman 2002,pub/bowman_2002,y,y
+Lai 2018,pub/lai_2018,y,y
+ChemAnalyst,chemanalyst,y,
