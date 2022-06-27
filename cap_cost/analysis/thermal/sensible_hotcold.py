@@ -59,7 +59,7 @@ def adjust_text_after(ax, text_alter, x,y):
     arrow.set_y(cy)
 #%%
 # fig, axes = plt.subplots(1,2)
-fig = plt.figure(figsize=(12,5), constrained_layout=True)
+fig = plt.figure(figsize=(13.5,5), constrained_layout=True)
 spec = fig.add_gridspec(1,4)
 
 x_str='T_min'
