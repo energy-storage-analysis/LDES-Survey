@@ -26,13 +26,16 @@ df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple wa
 
 df_tc = df.where(df['SM_type'] == 'thermochemical').dropna(subset=['SM_type'])
 df_tc = df_tc.dropna(axis=1,how='all')
-df_tc = df_tc.where(df_tc['C_kwh'] < 10).dropna(how='all')
+df_tc = df_tc.where(df_tc['C_kwh'] < 100).dropna(how='all')
 
-plt.figure()
+plt.figure(figsize=(7,8))
 x_str='temperature'
 y_str='C_kwh'
 
 sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True)
+
+# df_tc.plot.scatter(y='C_kwh', x=x_str, sharex=False)
+
 
 ax = plt.gca()
 texts = []
@@ -45,11 +48,15 @@ for name, row in df_tc.iterrows():
     texts.append(txt)
 
 plt.xlim(0,2000)
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.3,1])
+leg = plt.gca().get_legend()
+leg.set_bbox_to_anchor([0,0,0.3,0.2])
+leg.set_title('')
 
 plt.yscale('log')
-plt.ylim(0.05,20)
+plt.ylim(0.1,200)
 # plt.ylim(0,10)
+
+ax.hlines(10,0,2000, linestyle='--', color='gray')
 
 plt.xlabel('Reaction Temperature (C)')
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")

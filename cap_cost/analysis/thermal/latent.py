@@ -20,17 +20,21 @@ df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), inde
 # %%
 df_latent = df.where(df['SM_type'] == 'latent_thermal').dropna(subset=['SM_type'])
 df_latent = df_latent.dropna(axis=1, how='all')
-df_latent_ds = df_latent.where(df_latent['C_kwh'] < 10).dropna(how='all')
+df_latent_ds = df_latent.where(df_latent['C_kwh'] < 100).dropna(how='all')
 
 #This drops Boron, with phase change > 2000
 df_latent_ds = df_latent_ds.where(df_latent['phase_change_T'] < 2000).dropna(how='all')
 
-plt.figure()
+#%%
+
+fig, ax = plt.subplots(1,1,figsize=(7,8))
+
+
 # df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
-df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False)
+df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False, ax=ax)
 
 
-ax = plt.gca()
+
 texts = []
 for name, row in df_latent_ds.iterrows():
     x = row['phase_change_T']
@@ -42,16 +46,20 @@ for name, row in df_latent_ds.iterrows():
 
 
 plt.yscale('log')
-plt.ylim(0.05,20)
-# plt.ylim(0,10)
-plt.xlim(500,1500)
+plt.ylim(0.1,200)
+plt.xlim(0,1600)
+
+ax.hlines(10,0,1600, linestyle='--', color='gray')
 
 plt.xlabel('Phase Change Temperature (deg C)')
+
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 plt.suptitle("Latent")
 
-# plt.gcf().axes[1].set_ylabel('Specific Latent Heat (kWh/kg)')
-
 adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,10))
 
+
+plt.tight_layout()
+
 plt.savefig(pjoin(output_dir,'latent.png'))
+# %%
