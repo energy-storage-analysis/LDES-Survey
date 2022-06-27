@@ -26,49 +26,12 @@ df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple wa
 
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
 
-# %%
-df_ec = df.where(df['SM_type'].isin([
-'liquid_metal',
-'solid_electrode',
-# 'pseudocapacitor', #Doesn't have delta V...
-'flow_battery',
-'metal_air',
-'hybrid_flow',
-# 'synfuel', #Doesn't have delta V....
-])).dropna(subset=['SM_type'])
-
-df_ec_ds = df_ec.where(df_ec['C_kwh'] < 10).dropna(how='all')
-
-# %%
-plt.figure(figsize = (8,5))
-
-x_str='deltaV'
-y_str='C_kwh'
-
-sns.scatterplot(data=df_ec_ds, y=y_str, x=x_str, hue='SM_type', legend=True)
-
-ax = plt.gca()
-
-texts = annotate_points(df_ec_ds, x_str, y_str, ax=ax)
-# plt.xscale('log')
-
-plt.xlabel('Couple Voltage (V)')
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
-
-# plt.ylim(0,10)
-plt.ylim(2e-1,20)
-plt.yscale('log')
-
-# adjust_text(texts, arrowprops = dict(arrowstyle='->'))
-
-plt.savefig(pjoin(output_dir,'ec.png'))
-
-#%%
-
+#Calculate deltaV for synfuels
 F = 96485 # C/mol
-
 df_ec_synfuel = df[df['SM_type'] == 'synfuel'].dropna(subset=['SM_type'])
-df_ec_synfuel['deltaV'] = (df_ec_synfuel['deltaG_chem']*3600000)/(F*df_ec_synfuel['n_e'])
+deltaV_synfuel = (df_ec_synfuel['deltaG_chem']*3600000)/(F*df_ec_synfuel['n_e'])
+df.loc[deltaV_synfuel.index,'deltaV'] = deltaV_synfuel
+
 
 # %%
 df_ec_coupled = df.where(df['SM_type'].isin([
@@ -83,13 +46,8 @@ df_ec_coupled = df_ec_coupled.where(df_ec_coupled['C_kwh'] < 10).dropna(how='all
 
 df_ec_decoupled = df.where(df['SM_type'].isin([
 'flow_battery',
+'synfuel'
 ])).dropna(subset=['SM_type'])
-
-df_ec_decoupled = pd.concat([
-    df_ec_decoupled,
-    df_ec_synfuel,
-    # df_ec_fossil
-])
 
 df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < 10).dropna(how='all')
 # %%
@@ -126,9 +84,6 @@ plt.savefig(pjoin(output_dir,'ec_coupled.png'))
 
 plt.figure(figsize = (5,5))
 
-x_str='deltaV'
-y_str='C_kwh'
-
 sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
@@ -159,9 +114,6 @@ df_nofeedstock = df_ec_decoupled.loc[['Feedstock' not in idx for idx in df_ec_de
 
 plt.figure(figsize = (5,5))
 
-x_str='deltaV'
-y_str='C_kwh'
-
 sns.scatterplot(data=df_nofeedstock, y=y_str, x=x_str, hue='SM_type', legend=True)
 
 ax = plt.gca()
@@ -188,49 +140,3 @@ plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 plt.tight_layout()
 
 plt.savefig(pjoin(output_dir,'ec_decoupled_nofeedstock.png'))
-
-
-# %%
-
-### Flow 
-
-df_ec_coupled = df.where(df['SM_type'].isin([
-'hybrid_flow',
-])).dropna(subset=['SM_type'])
-
-df_ec_decoupled = df.where(df['SM_type'].isin([
-'flow_battery',
-])).dropna(subset=['SM_type'])
-
-df = pd.concat([df_ec_coupled, df_ec_decoupled])
-
-# df_plot = df.where(df['C_kwh'] < 10).dropna(how='all')
-df_plot = df
-# %%
-plt.figure(figsize = (7,5))
-
-x_str='deltaV'
-y_str='C_kwh'
-
-sns.scatterplot(data=df_plot, y=y_str, x=x_str, hue='SM_type', legend=True)
-
-ax = plt.gca()
-
-texts = annotate_points(df_plot, x_str,y_str,ax=ax)
-
-ax.set_title('Coupled')
-
-plt.xlabel('Couple Voltage (V)')
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
-
-# plt.ylim(0,10)
-# plt.ylim(1e-1,20)
-plt.yscale('log')
-
-# plt.xlim(0,5.5)
-
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.2,1))
-
-plt.savefig(pjoin(output_dir,'ec_flow_all.png'))
-
-# %%
