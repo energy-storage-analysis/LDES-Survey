@@ -1,3 +1,3 @@
 ,deltaG_chem,n_e,materials,SM_type,sub_type,mat_basis
 unit_row,kilowatt_hour / mole,dimensionless,N/U,N/U,N/U,N/U
-H2 Spherical Pressure (2-20 bar),0.0659,2.0,H2 Spherical Pressure (2-20 bar),synfuel,spherical_pressure,molar
+H2 Spherical Pressure (2-20 bar),0.0659,2.0,H2 Spherical Pressure (2-20 bar),synfuel,tank,molar

@@ -37,8 +37,9 @@ fig, ax = plt.subplots(1,1,figsize=(7,8))
 
 
 # df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
-df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False, ax=ax)
+# df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False, ax=ax)
 
+sns.scatterplot(data=df_latent_ds, y='C_kwh', x='phase_change_T', hue='sub_type',legend=True)
 
 df_latent_ds['display_text'] = [s.split(' ')[0] for s in df_latent_ds.index]
 texts = annotate_points(df_latent_ds, 'phase_change_T', 'C_kwh', 'display_text')
@@ -57,6 +58,10 @@ plt.suptitle("Latent")
 
 adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,10))
 
+
+leg = ax.get_legend()
+leg.set_title('')
+leg.set_bbox_to_anchor([0,0,0.3,0.2])
 
 plt.tight_layout()
 

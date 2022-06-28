@@ -39,8 +39,8 @@ df_sens_ds = df_sens.where(df_sens['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 #%%
 
 
-df_cold = df_sens_ds.where(df_sens_ds['sub_type'] == 'cold').dropna(how='all')
-df_hot = df_sens_ds.where(df_sens_ds['sub_type'].isin(['hot','both'])).dropna(how='all')
+df_cold = df_sens_ds[df_sens_ds['sub_type'] == 'cold']
+df_hot = df_sens_ds[~(df_sens_ds['sub_type'] == 'cold')]
 
 df_hot
 
@@ -69,7 +69,7 @@ x_str='T_min'
 y_str='C_kwh'
 
 ax_cold = fig.add_subplot(spec[0,0])
-sns.scatterplot(data=df_cold, y=y_str, x=x_str, legend=True, ax=ax_cold)
+sns.scatterplot(data=df_cold, y=y_str, x=x_str, color='gray',legend=True, ax=ax_cold)
 texts_cold =annotate_points(df_cold, x_str,y_str,ax=ax_cold)
 
 ax_cold.set_yscale('log')
@@ -87,7 +87,7 @@ y_str='C_kwh'
 
 #https://stackoverflow.com/questions/22511550/gridspec-with-shared-axes-in-python
 ax_hot = fig.add_subplot(spec[1:], sharey=ax_cold)
-sns.scatterplot(data=df_hot, y=y_str, x=x_str, legend=True,ax=ax_hot)
+sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='sub_type',legend=True,ax=ax_hot)
 texts_hot =annotate_points(df_hot, x_str,y_str,ax=ax_hot)
 
 
@@ -139,6 +139,8 @@ adjust_text(texts_hot,  arrowprops = dict(arrowstyle='->'), force_points=(1,1))
 # for alter_name, (x,y) in alter_dict.items():
 #     text_index = text_strings.index(alter_name)
 #     adjust_text_after(ax_cold, text_index, x,y)
+
+ax_hot.get_legend().set_title('')
 
 ax_hot.hlines(10,0,2400, linestyle='--', color='gray')
 # fig.tight_layout()

@@ -29,6 +29,24 @@ df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
 Ckwh_cutoff = 50
 y_max = 100
 
+#%%
+
+df_ec_synfuel = df.where(df['SM_type'].isin([
+'synfuel'
+])).dropna(subset=['SM_type'])
+
+df_ec_synfuel['SM_type'] = df_ec_synfuel['SM_type'] + "\n(" + df_ec_synfuel['sub_type'] + ")"
+
+
+df_ec_decoupled = df.where(df['SM_type'].isin([
+'flow_battery',
+])).dropna(subset=['SM_type'])
+
+df_ec_decoupled = pd.concat([
+df_ec_synfuel,
+df_ec_decoupled
+])
+
 
 # %%
 df_ec_coupled = df.where(df['SM_type'].isin([
@@ -41,10 +59,6 @@ df_ec_coupled = df.where(df['SM_type'].isin([
 df_ec_coupled = df_ec_coupled.where(df_ec_coupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 
 
-df_ec_decoupled = df.where(df['SM_type'].isin([
-'flow_battery',
-'synfuel'
-])).dropna(subset=['SM_type'])
 
 df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 # %%
@@ -102,5 +116,11 @@ plt.xlabel('Specific Energy (kWh/kg)')
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+leg = ax.get_legend()
+leg.set_title('')
+leg.set_bbox_to_anchor([0,0,0.6,0.45])
+
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
+
+# %%
