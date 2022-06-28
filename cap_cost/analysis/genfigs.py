@@ -1,5 +1,7 @@
 """
 Script to generate png files from svg files in each figure's folder
+
+#TODO: this script is broken due to cairo seemingly needing to be in the same folder as the component png files...
 """
 #%%
 
@@ -7,8 +9,9 @@ from cairosvg import svg2png
 import os
 
 svg_paths =[
-    r'thermal\fig_thermal.svg',
-    r'electrochem\fig_ec_rhoE.svg'
+    r'figures\thermal.svg',
+    r'figures\ec_rhoE.svg'
+    r'figures\eda_Ckwh.svg'
 ]
 
 #Directory needs to be changed into each folder, so we get the root analysis folder first

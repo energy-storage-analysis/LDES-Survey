@@ -4,10 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import ticker as mticker
-plt.rcParams.update({'font.size': 20})
+plt.rcParams.update({'font.size':12})
 
-import iqplot
-from bokeh.io import show, output_file, save
+# sns.set(font_scale=1)
 
 import os
 from os.path import join as pjoin
@@ -46,7 +45,7 @@ df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 def strip_plot(df_plot):
 
     cat_label = 'display_text'
-    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette, style='coupled')
+    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=7, hue='energy_type', palette=palette, style='coupled')
 
     plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -61,9 +60,10 @@ def strip_plot(df_plot):
     plt.xlabel('Technology')
     plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 
+
 #%%
 
-fig = plt.figure(figsize = (18,8))
+fig = plt.figure(figsize = (10,5))
 strip_plot(df_all)
 
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])

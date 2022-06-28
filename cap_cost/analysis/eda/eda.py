@@ -7,7 +7,7 @@ import matplotlib as mpl
 import seaborn as sns
 from es_utils.units import read_pint_df
 
-mpl.rcParams.update({'font.size':13.5})
+mpl.rcParams.update({'font.size':16})
 
 import os
 from os.path import join as pjoin
@@ -35,7 +35,7 @@ df_mat_data.to_csv('output/mat_data_used.csv')
 # %%
 plt.figure(figsize=(7,5))
 
-bins = np.logspace(np.log10(0.05), np.log10(5e2), 30)
+bins = np.logspace(np.log10(0.05), np.log10(2e3), 30)
 df_mat_data['specific_price'].hist(bins=bins, color='slategray')
 
 plt.xscale('log')
@@ -46,7 +46,7 @@ plt.xlabel('Median Specific Price ($/kg)')
 plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
 plt.tight_layout()
-plt.ylim(0,11)
+plt.ylim(0,14)
 
 plt.savefig(pjoin(output_dir,'eda_mats.png'))
 
@@ -56,13 +56,14 @@ plt.savefig(pjoin(output_dir,'eda_mats.png'))
 plt.figure(figsize=(2.5,2))
 # plt.figure(figsize=(5,5))
 
-df_mat_data['num_source'].value_counts().plot.bar(color='slategray')
+df_mat_data['num_source'].value_counts().sort_index().plot.bar(color='slategray')
 plt.xlabel("# Sources")
 plt.ylabel("Count")
 
 plt.tight_layout()
 
 plt.savefig(pjoin(output_dir,'source_count.png'))
+# plt.savefig(pjoin(output_dir,'source_count.png'), transparent=True)
 
 #%%
 
@@ -85,37 +86,13 @@ for energy_type, color in palette.items():
 
 
 plt.xscale('log')
-plt.legend(title='Energy Type')
 plt.locator_params(axis='y', integer=True)
 plt.suptitle("{} Storage Media".format(len(df_SMs)))
 plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Count')
+leg= plt.legend(title='Energy Type', loc='upper left')
 plt.tight_layout()
 
 
 plt.savefig(pjoin(output_dir,'SM_energy.png'))
 
-#%%
-
-# df_SMs = df_SMs.dropna(subset=['C_kwh'])
-
-#%%
-#Has both price and energy data
-
-
-df_both = df_SMs.dropna(subset = ['C_kwh'])
-
-plt.figure()
-
-bins = np.logspace(np.log10(1e-3), np.log10(1e6), 50)
-
-df_both.groupby('energy_type')['C_kwh'].hist(bins=bins, legend=True, alpha=0.75)
-
-plt.xscale('log')
-plt.suptitle("{} Storage Media w/ Mat. Prices".format(len(df_both)))
-plt.xlabel('Material Captial Cost ($/kWh)')
-plt.ylabel('Count')
-
-plt.gca().get_legend().remove()
-
-plt.savefig(pjoin(output_dir,'SM_w_prices.png'))
