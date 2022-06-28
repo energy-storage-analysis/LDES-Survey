@@ -9,6 +9,7 @@ from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
+label_fontsize = 14
 from adjustText import adjust_text
 
 from dotenv import load_dotenv
@@ -51,9 +52,9 @@ plt.xlim(0,1600)
 
 ax.hlines(10,0,1600, linestyle='--', color='gray')
 
-plt.xlabel('Phase Change Temperature (deg C)')
+plt.xlabel('Phase Change Temperature (deg C)', fontsize=label_fontsize)
 
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Latent")
 
 adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,10))

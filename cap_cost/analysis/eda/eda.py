@@ -74,7 +74,7 @@ df_SMs = df_SMs.dropna(subset=['C_kwh'])
 plt.figure(figsize=(7,5))
 
 display_text = pd.read_csv('../tech_lookup.csv', index_col=0)
-bins = np.logspace(np.log10(2e-4), np.log10(1e2), 30)
+bins = np.logspace(np.log10(2e-4), np.log10(5e1), 30)
 
 df_SMs['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_SMs['SM_type'].values]
 
@@ -90,6 +90,7 @@ plt.locator_params(axis='y', integer=True)
 plt.suptitle("{} Storage Media".format(len(df_SMs)))
 plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Count')
+plt.ylim(top=39)
 leg= plt.legend(title='Energy Type', loc='upper left')
 plt.tight_layout()
 

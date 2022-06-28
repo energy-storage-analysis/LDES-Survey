@@ -11,6 +11,9 @@ from es_utils.plot import annotate_points
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
+label_fontsize = 14
+
+
 from adjustText import adjust_text, get_bboxes, get_midpoint
 
 from dotenv import load_dotenv
@@ -76,8 +79,8 @@ ax_cold.set_yscale('log')
 ax_cold.set_ylim(y_lim)
 ax_cold.set_xlim(-200,0)
 
-ax_cold.set_xlabel('Min Temperature (deg C)')
-ax_cold.set_ylabel("$C_{kWh,mat}$ (\$/kWh)")
+ax_cold.set_xlabel('Min Temperature (deg C)', fontsize=label_fontsize)
+ax_cold.set_ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 ax_cold.set_title("Cold Sensible")
 
 
@@ -95,7 +98,7 @@ ax_hot.set_yscale('log')
 # ax_hot.set_ylim(0.05,110)
 ax_hot.set_xlim(0,2400)
 
-ax_hot.set_xlabel('Maximum Temperature (deg C)')
+ax_hot.set_xlabel('Maximum Temperature (deg C)', fontsize=label_fontsize)
 # ax_hot.set_ylabel("$C_{kWh,mat}$ (\$/kWh)")
 # ax_hot.xticks.remove()
 ax_hot.set_title("Hot Sensible")

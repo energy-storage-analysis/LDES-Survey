@@ -10,8 +10,9 @@ from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
-from adjustText import adjust_text
+label_fontsize = 14
 
+from adjustText import adjust_text
 from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
@@ -56,8 +57,8 @@ plt.ylim(y_lim)
 
 ax.hlines(10,0,2000, linestyle='--', color='gray')
 
-plt.xlabel('Reaction Temperature (C)')
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.xlabel('Reaction Temperature (C)', fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Thermochemcial")
 plt.tight_layout()
 

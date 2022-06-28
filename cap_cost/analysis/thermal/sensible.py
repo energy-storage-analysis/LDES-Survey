@@ -9,6 +9,8 @@ from os.path import join as pjoin
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
+label_fontsize = 14
+
 from adjustText import adjust_text
 
 from dotenv import load_dotenv
@@ -56,8 +58,8 @@ plt.ylim(0.05,20)
 
 plt.xlim(-500,3550)
 
-plt.xlabel('Maximum Temperature (deg C)')
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.xlabel('Maximum Temperature (deg C)', fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Sensible")
 
 

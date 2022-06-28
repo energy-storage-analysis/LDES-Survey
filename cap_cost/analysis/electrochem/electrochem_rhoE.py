@@ -11,6 +11,8 @@ from es_utils.plot import annotate_points
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
+label_fontsize = 14
+
 from adjustText import adjust_text
 
 from dotenv import load_dotenv
@@ -77,19 +79,21 @@ ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.1, linestyle='--', color='gray'
 texts = annotate_points(df_ec_coupled, x_str, y_str, ax=ax)
 
 ax.set_title('Coupled')
-plt.xlabel('Specific Energy (kWh/kg)')
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 
 plt.yscale('log')
 plt.xscale('log')
 plt.ylim(top=y_max)
 
 
-ax.get_legend().set_bbox_to_anchor([0,0.3,0.4,0])
+leg = ax.get_legend()
+leg.set_title('')
+leg.set_bbox_to_anchor([0,0.3,0.4,0])
 
-# adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 
-# plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
+plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 
 
 #%%
@@ -112,8 +116,8 @@ plt.ylim(bottom=5e-3, top=y_max)
 # plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 
 ax.set_title('Decoupled')
-plt.xlabel('Specific Energy (kWh/kg)')
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)")
+plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'))
 leg = ax.get_legend()
