@@ -4,10 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import ticker as mticker
-plt.rcParams.update({'font.size': 20})
-
-import iqplot
-from bokeh.io import show, output_file, save
+plt.rcParams.update({'font.size': 12})
 
 import os
 from os.path import join as pjoin
@@ -46,7 +43,7 @@ df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 def strip_plot(df_plot):
 
     cat_label = 'display_text'
-    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette, style='coupled')
+    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=5, hue='energy_type', palette=palette, style='coupled')
 
     plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -62,12 +59,74 @@ def strip_plot(df_plot):
     plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 
 #%%
+elim_types = [
+    'dielectric_capacitor',
+    'EDLC',
+    'pseudocapacitor',
+    'gravitational',
+    'pressure_cavern',
+    'pressure_tank',
+    'smes',
+    'flywheel'
+    ]
 
-fig = plt.figure(figsize = (18,8))
-strip_plot(df_all)
 
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
+df_elim = df_all[df_all['SM_type'].isin(elim_types)]
+df_elim['SM_type'] = pd.Categorical(df_elim['SM_type'], categories=elim_types, ordered=True)
+df_elim = df_elim.sort_values('SM_type')
+df_elim = df_elim[df_elim['C_kwh']<1e4]#.dropna(how='all')
+
+fig = plt.figure(figsize = (8,7))
+strip_plot(df_elim)
+
 plt.gca().get_legend().remove()
-plt.suptitle('')
 plt.tight_layout()
-plt.savefig(pjoin(output_dir,'Ckwh.png'))
+plt.savefig(pjoin(output_dir,'Ckwh_eliminate.png'))
+
+#%%
+
+ec_types = [
+    'solid_electrode',
+    'liquid_metal_battery',
+    'metal_air',
+    'hybrid_flow',
+    'flow_battery',
+    'synfuel'
+    ]
+
+
+df_ec = df_all[df_all['SM_type'].isin(ec_types)]
+df_ec['SM_type'] = pd.Categorical(df_ec['SM_type'], categories=ec_types, ordered=True)
+df_ec = df_ec.sort_values('SM_type')
+df_ec = df_ec[df_ec['C_kwh']<1e4]
+
+fig = plt.figure(figsize = (8,8))
+strip_plot(df_ec)
+
+plt.gca().get_legend().remove()
+plt.tight_layout()
+plt.savefig(pjoin(output_dir,'Ckwh_ec.png'))
+
+#%%
+
+therm_types = [
+    'sensible_thermal',
+    'latent_thermal',
+    'thermochemical'
+    ]
+
+
+df_therm = df_all[df_all['SM_type'].isin(therm_types)]
+df_therm['SM_type'] = pd.Categorical(df_therm['SM_type'], categories=therm_types, ordered=True)
+df_therm = df_therm.sort_values('SM_type')
+df_therm = df_therm[df_therm['C_kwh']<1e4]
+
+fig = plt.figure(figsize = (4,8))
+strip_plot(df_therm)
+
+plt.gca().get_legend().remove()
+plt.tight_layout()
+plt.savefig(pjoin(output_dir,'Ckwh_therm.png'))
+
+
+

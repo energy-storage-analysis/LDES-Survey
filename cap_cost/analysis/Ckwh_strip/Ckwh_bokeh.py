@@ -2,9 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-from matplotlib import ticker as mticker
-plt.rcParams.update({'font.size': 20})
+plt.rcParams.update({'font.size': 12})
 
 import iqplot
 from bokeh.io import show, output_file, save
@@ -41,33 +39,30 @@ median_Ckwh = df_all.groupby('SM_type')['C_kwh'].median().to_dict()
 df_all['Ckwh_SMtype_median'] = df_all['SM_type'].map(median_Ckwh)
 df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 
-#%%
+# %%
+#Raw entries
 
-def strip_plot(df_plot):
+df_vis = df_all.reset_index().dropna(subset= ['C_kwh'])
+tips = [('index','@SM_name'),  ('SM_sources','@SM_sources'), ('price_sources', '@price_sources'), ('specific price ($/kg)', '@specific_price'), ('specific energy (kWh/kg)','@specific_energy') ]
 
-    cat_label = 'display_text'
-    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=10, hue='energy_type', palette=palette, style='coupled')
+figure = iqplot.strip(
+    data=df_vis, cats='SM_type', q='C_kwh', color_column='energy_type',
+    q_axis='y',y_axis_type='log' ,
+    show_legend=True,
+    jitter=True,
+    tooltips= tips,
+    plot_width = 1200,plot_height=700,
+    marker_kwargs={'size':10}
+    )
 
-    plt.axhline(np.log10(10), linestyle='--', color='gray')
+figure.legend.location = 'bottom_right'
+figure.legend.title = 'Energy Type'
 
-    fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-    log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
+figure.xaxis.major_label_orientation = np.pi/4
+figure.yaxis.axis_label = "Material Energy Cost ($/kWh)"
+# show(figure)
+figure.yaxis.axis_label_text_font_size = "16pt"
+figure.xaxis.major_label_text_font_size = "16pt"
 
-    fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
-    plt.xticks(rotation=70)
-
-
-    plt.ylabel('$C_{kWh,mat}$ (\$/kWh)')
-    plt.xlabel('Technology')
-    plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
-
-#%%
-
-fig = plt.figure(figsize = (18,8))
-strip_plot(df_all)
-
-# plt.gca().get_legend().set_bbox_to_anchor([0,0,1.35,1])
-plt.gca().get_legend().remove()
-plt.suptitle('')
-plt.tight_layout()
-plt.savefig(pjoin(output_dir,'Ckwh.png'))
+output_file(pjoin(output_dir,'Ckwh_bokeh.html'))
+save(figure)
