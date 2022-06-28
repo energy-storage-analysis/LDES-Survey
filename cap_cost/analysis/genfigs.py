@@ -10,12 +10,9 @@ import os
 
 svg_paths =[
     r'figures\thermal.svg',
-    r'figures\ec_rhoE.svg'
+    r'figures\ec_rhoE.svg',
     r'figures\eda_Ckwh.svg'
 ]
-
-#Directory needs to be changed into each folder, so we get the root analysis folder first
-analysis_folder = os.getcwd()
 
 #%%
 
@@ -23,9 +20,5 @@ for fp in svg_paths:
     folder, fn = os.path.split(fp)
     fn_base, ext = os.path.splitext(fn)
 
-    os.chdir(os.path.join(analysis_folder, folder))
-
-    svg_code = open(fn, 'r').read()
-    
-    fp_out = os.path.join('output',fn_base +'.png')
-    svg2png(bytestring=svg_code, write_to=fp_out, dpi=600)
+    fp_out = os.path.join('figures','output',fn_base +'.png')
+    svg2png(file_obj=open(fp, 'rb'), write_to=fp_out, dpi=600)
