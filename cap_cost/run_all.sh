@@ -6,10 +6,6 @@ python "calc_Ckwh.py"
 
 echo "Generate visualizations"
 cd analysis
-python "Ckwh_line.py"
-python "Ckwh.py"
-python "eda.py"
-python "thermal.py"
-python "electrochem.py"
+./genvis_all.sh
 
 echo "Done"
