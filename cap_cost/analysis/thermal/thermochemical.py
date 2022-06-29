@@ -20,12 +20,14 @@ REPO_DIR = os.getenv('REPO_DIR')
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
+MARKER_SIZE=80
+Ckwh_cutoff = 50
+y_lim = (0.1, 100)
+
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
-Ckwh_cutoff = 50
-y_lim = (0.1, 100)
 # %%
 
 
@@ -41,7 +43,7 @@ plt.figure(figsize=(7,8))
 x_str='temperature'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True)
+sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True, s=MARKER_SIZE)
 
 # df_tc.plot.scatter(y='C_kwh', x=x_str, sharex=False)
 

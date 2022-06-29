@@ -68,7 +68,7 @@ mat_dict = {
     'molecular_formula': ['H2']
 }
 
-df_mat = pd.DataFrame(mat_dict, index = ['H2 Spherical Pressure (2-20 bar)'])
+df_mat = pd.DataFrame(mat_dict, index = ['H2 Spherical Pressure'])
 df_mat['specific_price'] = df_mat['specific_price'].astype('pint[USD/kg]')
 df_mat.index.name = 'index'
 
@@ -85,13 +85,13 @@ deltaG_H2 = 0.0659 #kWh/molH2
 SM_dict = {
     'deltaG_chem': [deltaG_H2],
     'n_e': [2],
-    'materials': ["H2 Spherical Pressure (2-20 bar)"],
+    'materials': ["H2 Spherical Pressure"],
     'SM_type': ['synfuel'],
     'sub_type': ['tank'],
     'mat_basis': ['molar'],
 }
 
-df_SM = pd.DataFrame(SM_dict,index = ['H2 Spherical Pressure (2-20 bar)'])
+df_SM = pd.DataFrame(SM_dict,index = ['H2 Spherical Pressure'])
 
 df_SM = df_SM.astype({
     'deltaG_chem': 'pint[kWh/mol]',

@@ -23,12 +23,15 @@ REPO_DIR = os.getenv('REPO_DIR')
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
+MARKER_SIZE=80
+Ckwh_cutoff = 50
+y_lim = (0.005, 100)
+
+
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
-Ckwh_cutoff = 50
-y_lim = (0.005, 100)
 
 # %%
 df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
@@ -72,7 +75,7 @@ x_str='T_min'
 y_str='C_kwh'
 
 ax_cold = fig.add_subplot(spec[0,0])
-sns.scatterplot(data=df_cold, y=y_str, x=x_str, color='gray',legend=True, ax=ax_cold)
+sns.scatterplot(data=df_cold, y=y_str, x=x_str, color='gray',legend=True, ax=ax_cold, s=MARKER_SIZE)
 texts_cold =annotate_points(df_cold, x_str,y_str,ax=ax_cold)
 
 ax_cold.set_yscale('log')
@@ -88,9 +91,9 @@ x_str='T_max'
 y_str='C_kwh'
 
 
-#https://stackoverflow.com/questions/22511550/gridspec-with-shared-axes-in-python
+#https://stackoverflow.com/questions/225115MARKER_SIZE/gridspec-with-shared-axes-in-python
 ax_hot = fig.add_subplot(spec[1:], sharey=ax_cold)
-sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='sub_type',legend=True,ax=ax_hot)
+sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='sub_type',legend=True,ax=ax_hot, s=MARKER_SIZE)
 texts_hot =annotate_points(df_hot, x_str,y_str,ax=ax_hot)
 
 

@@ -12,6 +12,7 @@ from es_utils.plot import annotate_points
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
 label_fontsize = 14
+ADJUST_TEXT_LIM = 5
 
 from adjustText import adjust_text
 
@@ -48,8 +49,8 @@ df['display_text'] = formula_strings
 
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
 
-Ckwh_cutoff = 50
-y_max = 100
+Ckwh_cutoff = 30
+y_max = Ckwh_cutoff*1.15
 
 #%%
 
@@ -94,12 +95,12 @@ plt.figure(figsize = (7,8))
 x_str='specific_energy'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='SM_type', legend=True)
+sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
 
 ax = plt.gca()
 ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.1, linestyle='--', color='gray')
 
-texts = annotate_points(df_ec_coupled, x_str, y_str, ax=ax)
+texts = annotate_points(df_ec_coupled, x_str, y_str, text_col='display_text', ax=ax)
 
 ax.set_title('Coupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
@@ -108,13 +109,14 @@ plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.yscale('log')
 plt.xscale('log')
 plt.ylim(top=y_max)
+plt.xlim(2e-2,2e1)
 
 
 leg = ax.get_legend()
 leg.set_title('')
 leg.set_bbox_to_anchor([0,0.3,0.4,0])
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(10,0.5), lim=ADJUST_TEXT_LIM)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 
@@ -124,12 +126,11 @@ plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 print("Decoupled")
 plt.figure(figsize = (7,8))
 
-sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True)
+sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
 
 ax = plt.gca()
 ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.1, linestyle='--', color='gray')
 
-df_ec_decoupled['display_text'] = [s.replace(" ", r"\ ") for s in df_ec_decoupled.index]
 texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
 plt.yscale('log')
@@ -142,7 +143,7 @@ ax.set_title('Decoupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'))
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(1,1), lim=ADJUST_TEXT_LIM)
 leg = ax.get_legend()
 leg.set_title('')
 leg.set_bbox_to_anchor([0,0,0.6,0.45])
