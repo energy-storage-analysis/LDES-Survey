@@ -79,10 +79,13 @@ df_ec_coupled = df.where(df['SM_type'].isin([
 ])).dropna(subset=['SM_type'])
 
 df_ec_coupled = df_ec_coupled.where(df_ec_coupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
-
-
-
 df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
+
+df_ec_coupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_coupled_ds.csv'))
+df_ec_decoupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_decoupled_ds.csv'))
+
+
+
 # %%
 print("Coupled")
 

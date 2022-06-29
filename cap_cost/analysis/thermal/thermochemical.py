@@ -33,6 +33,10 @@ df_tc = df.where(df['SM_type'] == 'thermochemical').dropna(subset=['SM_type'])
 df_tc = df_tc.dropna(axis=1,how='all')
 df_tc = df_tc.where(df_tc['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 
+df_tc.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'tc_ds.csv'))
+
+#%%
+
 plt.figure(figsize=(7,8))
 x_str='temperature'
 y_str='C_kwh'

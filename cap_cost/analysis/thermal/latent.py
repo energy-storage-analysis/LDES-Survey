@@ -32,6 +32,8 @@ df_latent_ds = df_latent.where(df_latent['C_kwh'] <Ckwh_cutoff).dropna(how='all'
 #This drops Boron, with phase change > 2000
 df_latent_ds = df_latent_ds.where(df_latent['phase_change_T'] < 2000).dropna(how='all')
 
+df_latent.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'latent_ds.csv'))
+
 #%%
 
 fig, ax = plt.subplots(1,1,figsize=(7,8))

@@ -37,7 +37,7 @@ df_sens = df_sens.rename({'Vegetable Oil': 'Veg. Oil'})
 
 df_sens_ds = df_sens.where(df_sens['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 
-
+df_sens_ds.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'sens_ds.csv'))
 
 #%%
 
