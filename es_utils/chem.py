@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import re
 
 def get_top_formula(formula_dict):
     """
@@ -158,3 +159,22 @@ def calc_hydrate_factor(anhydrous_formula, hydrate_count):
 
     price_factor = (mu_anhydrous+mu_hydrate)/mu_anhydrous
     return price_factor
+
+
+
+def format_chem_formula(s):
+    """
+    This function is a set of sequential regex replacements to try and format the chemical formula style names in the material index
+    In general this is hacky and probably could be simplified. The names are pftem not just simply chemical formulas which means pyvalem cannot be used. 
+    """
+    s = re.sub(r'([a-zA-Z)])(\d\.\d+)(\D|$)',r'\1_{\2}\3', s, count=5)
+
+    #TODO: I cannot seem to get the end of line character to behave correctly in a regex OR statement
+    s = re.sub(r'([a-zA-Z)](?!_))(\d\d?)(\D)',r'\1_{\2}\3', s, count=5)
+    s = re.sub(r'([a-zA-Z)](?!_))(\d\d?)$',r'\1_{\2}', s, count=5)
+
+    #TODO: there are some remaining formula segments (e.g. V_2O5) that don't seem to get caught and I don't know why 
+    s  = re.sub(r'(\d)([a-zA-Z])(\d)', r'\1\2_\3',s)
+
+    s = s.replace(" ", "\ ", -1)
+    return s

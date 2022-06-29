@@ -7,6 +7,7 @@ from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
 from es_utils.plot import annotate_points
+from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -26,7 +27,6 @@ y_lim = (0.1, 100)
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
-df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
 # %%
 
@@ -34,6 +34,11 @@ df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple wa
 df_tc = df.where(df['SM_type'] == 'thermochemical').dropna(subset=['SM_type'])
 df_tc = df_tc.dropna(axis=1,how='all')
 df_tc = df_tc.where(df_tc['C_kwh'] < Ckwh_cutoff).dropna(how='all')
+
+
+formula_strings = [format_chem_formula(s) for s in df_tc.index]
+df_tc['display_text'] = formula_strings
+
 
 df_tc.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'tc_ds.csv'))
 
@@ -50,7 +55,7 @@ sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True, s=MAR
 
 ax = plt.gca()
 
-texts = annotate_points(df_tc, x_str,y_str, ax=ax)
+texts = annotate_points(df_tc, x_str,y_str,text_col='display_text', ax=ax)
 
 plt.xlim(0,2000)
 leg = plt.gca().get_legend()

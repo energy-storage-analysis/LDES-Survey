@@ -7,6 +7,7 @@ from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
 from es_utils.plot import annotate_points
+from es_utils.chem import format_chem_formula
 
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -30,7 +31,6 @@ y_lim = (0.005, 100)
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
-df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
 
 # %%
@@ -39,6 +39,10 @@ df_sens = df_sens.dropna(axis=1, how='all')
 df_sens = df_sens.rename({'Vegetable Oil': 'Veg. Oil'})
 
 df_sens_ds = df_sens.where(df_sens['C_kwh'] < Ckwh_cutoff).dropna(how='all')
+
+
+formula_strings = [format_chem_formula(s) for s in df_sens_ds.index]
+df_sens_ds['display_text'] = formula_strings
 
 df_sens_ds.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'sens_ds.csv'))
 
@@ -76,7 +80,7 @@ y_str='C_kwh'
 
 ax_cold = fig.add_subplot(spec[0,0])
 sns.scatterplot(data=df_cold, y=y_str, x=x_str, color='gray',legend=True, ax=ax_cold, s=MARKER_SIZE)
-texts_cold =annotate_points(df_cold, x_str,y_str,ax=ax_cold)
+texts_cold =annotate_points(df_cold, x_str,y_str,text_col='display_text',ax=ax_cold)
 
 ax_cold.set_yscale('log')
 ax_cold.set_ylim(y_lim)
@@ -94,7 +98,7 @@ y_str='C_kwh'
 #https://stackoverflow.com/questions/225115MARKER_SIZE/gridspec-with-shared-axes-in-python
 ax_hot = fig.add_subplot(spec[1:], sharey=ax_cold)
 sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='sub_type',legend=True,ax=ax_hot, s=MARKER_SIZE)
-texts_hot =annotate_points(df_hot, x_str,y_str,ax=ax_hot)
+texts_hot =annotate_points(df_hot, x_str,y_str,text_col='display_text',ax=ax_hot)
 
 
 ax_hot.set_yscale('log')

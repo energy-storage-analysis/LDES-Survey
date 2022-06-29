@@ -6,6 +6,7 @@ from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
 from es_utils.plot import annotate_points
+from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
 mpl.rcParams.update({'font.size':12})
@@ -32,6 +33,11 @@ df_latent_ds = df_latent.where(df_latent['C_kwh'] <Ckwh_cutoff).dropna(how='all'
 #This drops Boron, with phase change > 2000
 df_latent_ds = df_latent_ds.where(df_latent['phase_change_T'] < 2000).dropna(how='all')
 
+
+display_text = [s.split(' ')[0] for s in df_latent_ds.index]
+display_text = [format_chem_formula(s) for s in display_text]
+df_latent_ds['display_text'] = display_text
+
 df_latent.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'latent_ds.csv'))
 
 #%%
@@ -44,7 +50,6 @@ fig, ax = plt.subplots(1,1,figsize=(7,8))
 
 sns.scatterplot(data=df_latent_ds, y='C_kwh', x='phase_change_T', hue='sub_type',legend=True, s=MARKER_SIZE)
 
-df_latent_ds['display_text'] = [s.split(' ')[0] for s in df_latent_ds.index]
 texts = annotate_points(df_latent_ds, 'phase_change_T', 'C_kwh', 'display_text')
 
 
