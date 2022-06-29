@@ -6,7 +6,7 @@ import os
 from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points
+from es_utils.plot import annotate_points, adjust_text_after
 from es_utils.chem import format_chem_formula
 
 import matplotlib.pyplot as plt
@@ -57,19 +57,6 @@ df_hot
 #%%
 
 
-def adjust_text_after(ax, text_alter, x,y):
-    text_obj = texts_cold[text_alter]
-    
-    if x != None: text_obj.set_x(x)
-    if y != None: text_obj.set_y(y)
-    r = fig.canvas.renderer
-    bbox = get_bboxes([text_obj] , r, (1, 1), ax)[0]
-    cx, cy = get_midpoint(bbox)
-
-    child_slot_alter = len(texts_cold)+1+text_alter
-    arrow = ax_cold.get_children()[child_slot_alter]
-    arrow.set_x(cx)
-    arrow.set_y(cy)
 #%%
 # fig, axes = plt.subplots(1,2)
 fig = plt.figure(figsize=(13.5,5), constrained_layout=True)
@@ -131,11 +118,9 @@ alter_dict = {
     'N-hexane': (-80,30)
 }
 
-text_strings = [t.get_text().strip("$") for t in texts_cold]
 
 for alter_name, (x,y) in alter_dict.items():
-    text_index = text_strings.index(alter_name)
-    adjust_text_after(ax_cold, text_index, x,y)
+    adjust_text_after(fig, ax_cold, alter_name, texts_cold, x,y)
 
 ax_cold.hlines(10,-200,0, linestyle='--', color='gray')
 
