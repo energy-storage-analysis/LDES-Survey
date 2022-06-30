@@ -35,7 +35,7 @@ def get_source_SM_counts(df):
 with open('README_combined.md', 'w', encoding='utf-8') as f:
     for source, row in dataset_index.iterrows():
 
-        f.write("## {}\n".format(source))
+        f.write("\n\n## {}\n".format(source))
 
         fp= os.path.join(row['folder'], 'README.md')
         if os.path.exists(fp):
@@ -74,4 +74,6 @@ with open('README_combined.md', 'w', encoding='utf-8') as f:
             
 
         f.write("\n")
-           
+
+
+os.system("pandoc -o README_combined.docx -f markdown -t docx README_combined.md")
