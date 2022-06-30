@@ -32,14 +32,14 @@ def get_source_SM_counts(df):
 # source_info['SM types'] = source_info['SM types'].fillna('-')
 
 
-with open('README_combined.md', 'w') as f:
+with open('README_combined.md', 'w', encoding='utf-8') as f:
     for source, row in dataset_index.iterrows():
 
         f.write("## {}\n".format(source))
 
         fp= os.path.join(row['folder'], 'README.md')
         if os.path.exists(fp):
-            with open(fp,'r') as f_read:
+            with open(fp,'r', encoding='utf-8') as f_read:
                 r_text = f_read.read()
             
             #Remove any text after the 'Development' header
