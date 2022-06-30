@@ -7,7 +7,7 @@ import re
 import seaborn as sns
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points
+from es_utils.plot import annotate_points, adjust_text_after
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
@@ -74,7 +74,7 @@ df_ec_decoupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_decoupled_
 # %%
 print("Coupled")
 
-plt.figure(figsize = (7,8))
+fig = plt.figure(figsize = (7,8))
 
 x_str='specific_energy'
 y_str='C_kwh'
@@ -82,7 +82,7 @@ y_str='C_kwh'
 sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
 
 ax = plt.gca()
-ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.1, linestyle='--', color='gray')
+ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.5, linestyle='--', color='gray')
 
 texts = annotate_points(df_ec_coupled, x_str, y_str, text_col='display_text', ax=ax)
 
@@ -102,13 +102,22 @@ leg.set_bbox_to_anchor([0,0.3,0.4,0])
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(10,0.5), lim=ADJUST_TEXT_LIM)
 
+alter_dict = {
+    "Na/NiCl_{2}": (3,14),
+    "C_{6}/LRMO\ LMNO": (3,20),
+}
+
+for alter_name, (x,y) in alter_dict.items():
+    adjust_text_after(fig, ax, alter_name, texts, x,y)
+
+
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 
 
 #%%
 
 print("Decoupled")
-plt.figure(figsize = (7,8))
+fig = plt.figure(figsize = (7,8))
 
 sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
 
@@ -132,6 +141,13 @@ leg = ax.get_legend()
 leg.set_title('')
 leg.set_bbox_to_anchor([0,0,0.6,0.45])
 
+
+alter_dict = {
+    "CH_{4}\ (Feedstock)": (7,1e-2),
+}
+
+for alter_name, (x,y) in alter_dict.items():
+    adjust_text_after(fig, ax, alter_name, texts, x,y)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 

@@ -35,7 +35,7 @@ CFRP,31.38000000000001,,,18,1,Kale 2018,31.38,,,"AS4-3501–6, AS4–8552, IM7-8
 CH4_LRC,6.624121875000003,,,1,1,Cavern Calculations,6.62,CH4,16.043,,0.4406795
 CH4_Salt,0.52174494140625,,,1,1,Cavern Calculations,0.52,CH4,16.043,,0.4406795
 CNT,100.0,,,4,1,Alibaba,100.0,,,,
-CO2,0.04,,,2,1,SynFuel Feedstock Calculations,0.04,CO2,44.009,Cyrogenic Carbon Capture,0.1452665
+CO2,0.11750000000000001,0.10960155108391488,0.93,2,1,SynFuel Feedstock Calculations,"0.04, 0.2",CO2,44.009,"Cyrogenic Carbon Capture, DAC Carbon Capture",0.1452665
 CW,28.475,,,0,1,ISE,28.48,CW,195.851,Tungsten carbide,33.1426306
 Ca,4.136800000000001,2.5617960406185287,0.62,16,4,"Alibaba, ISE, Kim 2013, SMM","3.49, 3.77, 4.5, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
 Ca(OH)2 ,0.08,,,0,1,Alibaba,0.08,Ca(OH)2 ,74.092,,1.3376312
@@ -169,7 +169,7 @@ N-Propane,0.97,,,0,1,ChemAnalyst,0.97,C3H8,44.097,,
 N-hexane,1.734,,,1,1,ChemAnalyst,1.73,C6H14,86.178,,
 N-pentane,1.4,,,1,1,Antunez 2018,1.4,,,N-pentane,
 N-propane,0.5,,,1,1,Antunez 2018,0.5,,,N-propane,
-N2,0.14,,,1,1,SynFuel Feedstock Calculations,0.14,N2,28.014,Liquid Nitrogen,0.14
+N2,0.14,,,2,1,SynFuel Feedstock Calculations,0.14,N2,28.014,Liquid Nitrogen,0.14
 N2_LRC,3.785212500000001,,,1,1,Cavern Calculations,3.79,N2,28.014,,0.14
 N2_Salt,0.2981399665178571,,,1,1,Cavern Calculations,0.3,N2,28.014,,0.14
 NCA,57.0,32.526911934581186,0.57,1,2,"Alibaba, Li 2017","34.0, 80.0",LiNi0.8Co0.15Al0.05O2,96.081776,NCA,
@@ -267,7 +267,7 @@ Vegetable Oil,0.6678000000000002,0.2736962062823183,0.41,1,3,"Alva 2018, Antunez
 Vermiculite,0.33,,,0,1,Liu 2016,0.33,AlFeH3MgO6Si,234.2345384,Vermiculite,
 W,24.34285714285715,,,0,1,ISE,24.34,W,183.84,"Tungsten powder, Tungsten scrap, Wolfram Bar",35.3
 WO3,9.561104192038657,13.090874043702986,1.37,0,2,"ISE, USGS","0.3, 18.82",WO3,231.837,"Tungsten WO3, Tungsten oxides, Wolfram Ore",28.0237561
-Water,0.0015,0.0007071067811865475,0.47,5,2,"Antunez 2018, Li 2017",0.0,H2O,18.015,"DI H2O, Water",
+Water,0.0015,0.0007071067811865475,0.47,6,2,"Antunez 2018, Li 2017",0.0,H2O,18.015,"DI H2O, Water",
 Water Reservoir Excavation,0.261,,,1,1,Calculation/Black and Veatch,0.26,,,Pumped Hydro,
 Y,19.4,,,0,1,USGS,19.4,Y,88.90584,"Yttrium Metal, Yttrium Y2O3",31.0
 Zeolite,1.93,,,0,1,Liu 2016,1.93,Al2O5Si,162.0430768,Zeolite,
