@@ -6,7 +6,7 @@ import os
 from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points
+from es_utils.plot import annotate_points, adjust_text_after
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
@@ -44,7 +44,7 @@ df_tc.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'tc_ds.csv'))
 
 #%%
 
-plt.figure(figsize=(7,8))
+fig = plt.figure(figsize=(7,8))
 x_str='temperature'
 y_str='C_kwh'
 
@@ -73,7 +73,15 @@ plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Thermochemcial")
 plt.tight_layout()
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0,5))
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.5,3))
+
+alter_dict = {
+    "NiSO_{4}/NiO": (1100,9),
+    "MgSO_{4}/MgO": (1500,10.3),
+}
+
+for alter_name, (x,y) in alter_dict.items():
+    adjust_text_after(fig, ax, alter_name, texts, x,y)
 
 plt.savefig(pjoin(output_dir,'thermochem.png'))
 # %%
