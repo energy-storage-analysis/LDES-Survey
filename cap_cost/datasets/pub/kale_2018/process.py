@@ -91,7 +91,7 @@ df_mat_grouped.to_csv('output/mat_data.csv')
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df_SMs = df[['original_name', 'specific_strength']].set_index('original_name')
+df_SMs = df[['original_name', 'specific_strength']]#.set_index('original_name')
 
 #No SM lookup needed as SM are just just the materials
 df_SMs = pd.merge(
@@ -99,6 +99,8 @@ df_SMs = pd.merge(
     df_SMs,
     on='original_name'
 )
+
+df_SMs = df_SMs.set_index('SM_name')
 
 #From Nomura (pressure tank from Laughlin assuming thin wall)
 Qmaxs = {
