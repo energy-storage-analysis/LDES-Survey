@@ -23,8 +23,12 @@ def annotate_points(df, x_col, y_col, text_col=None, ax=None):
 
 
 from adjustText import  get_bboxes, get_midpoint
+from matplotlib.text import Text
 
 def adjust_text_after(fig, ax, alter_name, texts, x, y):
+    """
+    This function can be called after automatically setting text labels with adjustText package to manually set a given labels postion
+    """
     text_strings = [t.get_text().strip("$") for t in texts]
     text_pos = text_strings.index(alter_name)
 
@@ -36,7 +40,9 @@ def adjust_text_after(fig, ax, alter_name, texts, x, y):
     bbox = get_bboxes([text_obj] , r, (1, 1), ax)[0]
     cx, cy = get_midpoint(bbox)
 
-    child_slot_alter = len(texts)+1+text_pos
-    arrow = ax.get_children()[child_slot_alter]
+    #TODO: This is a hacky way to try and find the corresponding arrow to the text box 
+    child_slot_alter = len(texts)+text_pos
+    children_text_only = [c for c in ax.get_children() if isinstance(c, Text)]
+    arrow = children_text_only[child_slot_alter]
     arrow.set_x(cx)
     arrow.set_y(cy)
