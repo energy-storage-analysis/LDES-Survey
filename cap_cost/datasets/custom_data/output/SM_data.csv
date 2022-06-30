@@ -4,9 +4,6 @@ SM_name,,,,,,,,,,,,,,,,,,
 Iron Ore,Iron Ore,,Magnetite,sensible_thermal,other_solid,0.00025,,1000,,,,,,,,,Grosu 2017,TODO: approximate from graph average by eye
 Iron Ore,Iron Ore,,Magnetite,sensible_thermal,other_solid,,5,,,,,,,,,,Molgaard 1971,https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
 Al2O3,Al2O3,,Al2O3 Dielectric Capacitor,dielectric_capacitor,,,,,,500000000,10,3950,,,,,TODO,"The dielectric breakdown strength is larger for thin films of Aluminum oxide than in bulk samples and is on the order of 500 MV/um.(Hanby et al., 2018; Stellanova, 2012; Talbi et al., 2010) "
-H2 (Feedstock),"[('Water', 1)]",molar,Synthetic H2,synfuel,other,,,,,,,,"0.0659 ",2,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
-CH4 (Feedstock),"[('CO2', 1), ('Water', 4)]",molar,Synthetic CH4 (Sabatier),synfuel,other,,,,,,,,0.2554,8,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
-Methanol (Feedstock),"[('CO2', 1), ('Water', 3)]",molar,Synthetic Methanol (DMS),synfuel,other,,,,,,,,0.1923,6,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
 Sand,Sand,,Sand,sensible_thermal,rock,0.000277,,1000,,,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
 NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,https://www.sciencedirect.com/science/article/pii/S2666386422000911?via%3Dihub
 Fossil CH4,Fossil CH4,molar,,synfuel,other,,,,,,,,0.2554,8,,,Standard Gibbs,

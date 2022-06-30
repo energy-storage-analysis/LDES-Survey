@@ -1,0 +1,1 @@
+Caclulations of specific energy and price based on the feedstocks of electrochemically synthesized synthetic fuels
