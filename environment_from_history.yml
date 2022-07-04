@@ -1,0 +1,33 @@
+name: energystorage
+channels:
+  - choderalab
+  - ngsolve
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - scipy
+  - ipykernel
+  - pint
+  - bokeh
+  - matplotlib
+  - pandas
+  - pint-pandas
+  - pylint
+  - pycrypto
+  - xarray
+  - pubchempy
+  - chemspipy
+  - python-dotenv
+  - tqdm
+  - unidecode
+  - monty
+  - regex
+  - pymatgen
+  - requests
+  - gensim
+  - xyzpy
+  - adjusttext
+  - numpy-financial
+  - cairosvg
+prefix: C:\Users\aspit\anaconda3\envs\energystorage
