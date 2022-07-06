@@ -1,9 +1,14 @@
 import pandas as pd
 import pint_pandas
 import pint
+import os
+
+cwd = os.path.dirname(os.path.abspath(__file__))
+fp_definitions = os.path.join(cwd,'unit_defs.txt')
+
 
 ureg = pint.UnitRegistry()
-ureg.load_definitions(r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\es_utils\unit_defs.txt')
+ureg.load_definitions(fp_definitions)
 pint_pandas.PintType.ureg = ureg
 
 def get_unit_row(df_unit):

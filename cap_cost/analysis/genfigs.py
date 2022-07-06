@@ -16,6 +16,8 @@ svg_paths =[
 
 #%%
 
+if not os.path.exists('figures/output'): os.mkdir('figures/output')
+
 for fp in svg_paths:
     folder, fn = os.path.split(fp)
     fn_base, ext = os.path.splitext(fn)

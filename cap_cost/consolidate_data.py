@@ -69,6 +69,7 @@ source_info = source_info.sort_index()
 source_info['num prices'] = source_info['num prices'].fillna(0).astype(int).astype(str).str.replace('^0$','-',regex=True)
 source_info['SM types'] = source_info['SM types'].fillna('-')
 
+if not os.path.exists('analysis/output') : os.makedirs('analysis/output')
 source_info.to_csv('analysis/output/source_info.csv')
 
 #%%
