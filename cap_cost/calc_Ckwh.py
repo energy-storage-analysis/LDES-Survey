@@ -235,24 +235,3 @@ df_SMs = prep_df_pint_out(df_SMs)
 df_SMs.to_csv('data_consolidated/SM_data.csv')
 
 # %%
-cutoff = ureg.Quantity(10, 'USD/kWh')
-
-below_cufoff = [c < cutoff for c in df_out['C_kwh'].values]
-df_sel = df_out[below_cufoff].dropna(how='all')
-
-df_sel = df_sel[['specific_energy','specific_price','price_sources','SM_sources','C_kwh']]
-
-df_sel = df_sel.round(3)
-df_sel = df_sel.sort_values('C_kwh')
-
-df_sel = df_sel.reset_index('SM_type')
-df_sel['SM_type'] = df_sel['SM_type'].str.replace('_', ' ')
-df_sel['SM_type'] = df_sel['SM_type'].str.replace('thermochemical', 'thermo-chemical')
-
-#TODO: come up with some sort of long name (and units) system for displayed tables
-df_sel.columns = [c.replace('_',' ') for c in df_sel.columns]
-
-
-df_sel.to_csv('analysis/output/SM_downselected.csv')
-
-# %%

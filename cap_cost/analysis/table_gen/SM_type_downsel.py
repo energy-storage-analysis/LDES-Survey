@@ -1,7 +1,6 @@
 """Simple script to output a table dealing with a specific technology"""
 
 #%%
-import pandas as pd
 import os
 from os.path import join as pjoin
 from es_utils.units import read_pint_df
