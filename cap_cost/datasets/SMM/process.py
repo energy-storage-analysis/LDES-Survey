@@ -30,11 +30,11 @@ df = df.astype({
 
 if not os.path.exists('output'): os.mkdir('output')
 
-from es_utils.chem import process_chem_lookup
+from es_utils.chem import process_mat_lookup
 
-chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = process_chem_lookup(chem_lookup)
-df = pd.merge(df, chem_lookup, on='original_name')
+mat_lookup = pd.read_csv('mat_lookup.csv')
+mat_lookup = process_mat_lookup(mat_lookup)
+df = pd.merge(df, mat_lookup, on='original_name')
 
 
 df.to_csv('output/processed.csv', index=False)

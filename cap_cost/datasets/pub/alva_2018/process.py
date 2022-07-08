@@ -8,8 +8,8 @@ import pint
 
 from es_utils.units import ureg
 
-chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
+mat_lookup = pd.read_csv('mat_lookup.csv')
+mat_lookup = es_utils.chem.process_mat_lookup(mat_lookup)
 
 # Alva Thermal
 df_latent = pd.read_csv('tables/table_8.csv')
@@ -77,7 +77,7 @@ df = pd.concat([
     df_sens
 ])
 
-df_mat = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+df_mat = pd.merge(df, mat_lookup, on='original_name').set_index('index')
 
 
 

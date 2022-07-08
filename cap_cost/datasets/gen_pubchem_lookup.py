@@ -18,9 +18,9 @@ for source, row in dataset_index.iterrows():
     #TODO: add source forlder in index
     output_folder = os.path.split(fp)[0]
     source_folder = os.path.split(output_folder)[0]
-    fp_chem_lookup = os.path.join(source_folder,'chem_lookup.csv')
-    if os.path.exists(fp_chem_lookup):
-        mat_names_source = pd.read_csv(fp_chem_lookup)['material_name'].dropna().values
+    fp_mat_lookup = os.path.join(source_folder,'mat_lookup.csv')
+    if os.path.exists(fp_mat_lookup):
+        mat_names_source = pd.read_csv(fp_mat_lookup)['material_name'].dropna().values
         mat_names.extend(mat_names_source)
 
 

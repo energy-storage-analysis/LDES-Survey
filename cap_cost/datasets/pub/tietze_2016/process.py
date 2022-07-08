@@ -6,7 +6,7 @@ Processing script template. This template is designed to work on extracted data 
 import pandas as pd
 import os
 from es_utils.units import prep_df_pint_out, convert_units
-from es_utils.chem import process_chem_lookup
+from es_utils.chem import process_mat_lookup
 from es_utils.units import ureg
 from es_utils.chem import get_molecular_mass
 

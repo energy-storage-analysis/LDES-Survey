@@ -14,7 +14,7 @@ In general there are the following steps for each individual dataset:
     * pdf extraction
     * cleaning, removing bad characters, dashes, etc.
 2. Data processing: Conversion to get datasets in to consistent output structure to be compared/combined
-    * convert material names to a consistent set of names using `chem_lookup.csv`
+    * convert material names to a consistent set of names using `mat_lookup.csv`
     * convert storage media names to desired names using `SM_lookup.csv`
     * Unit conversion (e.g to $/kg)
     * Define storage medium type/technology

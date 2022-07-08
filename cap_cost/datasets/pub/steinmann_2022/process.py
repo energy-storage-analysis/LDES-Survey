@@ -10,7 +10,7 @@ tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='ut
 #%%
 
 SM_lookup = pd.read_csv('SM_lookup.csv')
-chem_lookup = pd.read_csv('chem_lookup.csv')
+mat_lookup = pd.read_csv('mat_lookup.csv')
 #%%
 df_t21 = tables['table_21']
 
@@ -205,7 +205,7 @@ from es_utils import join_col_vals
 
 df_mat = df_all[['specific_price']]
 
-df_mat = pd.merge(df_mat, chem_lookup, on='original_name')
+df_mat = pd.merge(df_mat, mat_lookup, on='original_name')
 df_mat = df_mat.dropna(subset=['index'])
 df_mat = df_mat.set_index('index')
 

@@ -6,7 +6,7 @@ Processing script template. This template is designed to work on extracted data 
 import pandas as pd
 import os
 from es_utils.units import prep_df_pint_out, convert_units
-from es_utils.chem import process_chem_lookup
+from es_utils.chem import process_mat_lookup
 
 if not os.path.exists('output'): os.mkdir('output')
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8', index_col=0) for fn in os.listdir('tables')}
@@ -70,7 +70,7 @@ df_SM.to_csv('output/SM_data.csv')
 df.index.name = 'original_name'
 
 mat_lookup = pd.read_csv('mat_lookup.csv')
-mat_lookup = process_chem_lookup(mat_lookup)
+mat_lookup = process_mat_lookup(mat_lookup)
 
 
 df_mat = df[['specific_price']]

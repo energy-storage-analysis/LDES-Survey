@@ -17,13 +17,13 @@ def get_top_formula(formula_dict):
 
 
 
-def process_chem_lookup(chem_lookup):
+def process_mat_lookup(mat_lookup):
 
-    chem_lookup['molecular_formula_norm'] = chem_lookup['molecular_formula'].apply(pymatgen_process)
+    mat_lookup['molecular_formula_norm'] = mat_lookup['molecular_formula'].apply(pymatgen_process)
 
     index_values = []
 
-    for i, row in chem_lookup.iterrows(): 
+    for i, row in mat_lookup.iterrows(): 
         index_use = row['index_use']
         if index_use == index_use:
             index_val = row[index_use]
@@ -33,10 +33,10 @@ def process_chem_lookup(chem_lookup):
         index_values.append(index_val)
 
 
-    chem_lookup['index'] = index_values
+    mat_lookup['index'] = index_values
 
-    chem_lookup = chem_lookup.dropna(subset=['index'])
-    return chem_lookup
+    mat_lookup = mat_lookup.dropna(subset=['index'])
+    return mat_lookup
 
 
 from pyvalem.formula import Formula

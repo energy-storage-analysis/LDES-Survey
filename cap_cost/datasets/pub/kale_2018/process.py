@@ -66,10 +66,10 @@ df = pd.concat([
     df_a2[col_select],
 ])
 #%%
-mat_lookup = pd.read_csv('chem_lookup.csv', index_col=0)
+mat_lookup = pd.read_csv('mat_lookup.csv', index_col=0)
 
-from es_utils.chem import process_chem_lookup
-mat_lookup = process_chem_lookup(mat_lookup)
+from es_utils.chem import process_mat_lookup
+mat_lookup = process_mat_lookup(mat_lookup)
 
 df_mat = pd.merge(df, mat_lookup, on='original_name')
 

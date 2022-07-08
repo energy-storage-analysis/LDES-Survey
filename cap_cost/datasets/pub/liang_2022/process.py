@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import os
 from es_utils.units import prep_df_pint_out, convert_units
-from es_utils.chem import process_chem_lookup
+from es_utils.chem import process_mat_lookup
 from es_utils.pdf import average_range
 
 if not os.path.exists('output'): os.mkdir('output')

@@ -89,7 +89,7 @@ df_SM.to_csv('output/SM_data.csv')
 df.index.name = 'original_name'
 
 mat_lookup = pd.read_csv('mat_lookup.csv')
-mat_lookup = es_utils.chem.process_chem_lookup(mat_lookup)
+mat_lookup = es_utils.chem.process_mat_lookup(mat_lookup)
 
 
 df_mat = df[['specific_price']]

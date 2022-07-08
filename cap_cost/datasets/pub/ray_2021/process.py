@@ -77,9 +77,9 @@ df = pd.concat([
 ])
 
 import es_utils
-chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
-df = pd.merge(df, chem_lookup, on='original_name')
+mat_lookup = pd.read_csv('mat_lookup.csv')
+mat_lookup = es_utils.chem.process_mat_lookup(mat_lookup)
+df = pd.merge(df, mat_lookup, on='original_name')
 df = df.set_index('index')
 
 

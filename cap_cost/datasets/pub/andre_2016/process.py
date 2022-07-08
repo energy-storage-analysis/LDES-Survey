@@ -24,9 +24,9 @@ df = df.astype({
 
 df = convert_units(df)
 
-chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = es_utils.chem.process_chem_lookup(chem_lookup)
-df = pd.merge(df, chem_lookup, on='original_name').set_index('index')
+mat_lookup = pd.read_csv('mat_lookup.csv')
+mat_lookup = es_utils.chem.process_mat_lookup(mat_lookup)
+df = pd.merge(df, mat_lookup, on='original_name').set_index('index')
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 

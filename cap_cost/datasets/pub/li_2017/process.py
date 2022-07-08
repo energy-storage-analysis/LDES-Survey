@@ -1,11 +1,11 @@
 #%%
 import numpy as np
 import pandas as pd
-from es_utils.chem import process_chem_lookup
+from es_utils.chem import process_mat_lookup
 from es_utils.units import convert_units, prep_df_pint_out, ureg
 
-chem_lookup = pd.read_csv('chem_lookup.csv')
-chem_lookup = process_chem_lookup(chem_lookup)
+mat_lookup = pd.read_csv('mat_lookup.csv')
+mat_lookup = process_mat_lookup(mat_lookup)
 # %%
 table_3 = pd.read_csv('tables/table_3.csv', index_col=0)
 
@@ -16,7 +16,7 @@ added_rows = pd.DataFrame({
 }, index = ['Air'])
 added_rows.index.name ='index'
 
-table_3 = pd.merge(table_3, chem_lookup, on='original_name').set_index('index')
+table_3 = pd.merge(table_3, mat_lookup, on='original_name').set_index('index')
 table_3 = table_3.append(added_rows)
 #%%
 
