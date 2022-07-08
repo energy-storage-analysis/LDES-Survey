@@ -4,6 +4,7 @@
 import os
 from os.path import join as pjoin
 from es_utils.units import prep_df_pint_out, read_pint_df
+from es_utils import join_col_vals
 import pandas as pd
 
 output_dir = 'output/individual'
@@ -45,4 +46,16 @@ for SM_type in set(df_SMs['SM_type'].values):
 
 df_SM_source_info = pd.concat(dfs)
 
-df_SM_source_info.to_csv(pjoin('output','SM_source_info.csv'))
+
+#%%
+SM_source_info = df_SM_source_info['SM_sources'] + ': ' + df_SM_source_info['source_counts'].astype(str)
+
+SM_source_info = SM_source_info.groupby(['SM_type','sub_type']).apply(join_col_vals)
+
+SM_source_info
+
+#%%
+
+SM_source_info.to_csv(pjoin('output','SM_source_info.csv'))
+
+# %%
