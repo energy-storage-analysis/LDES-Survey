@@ -26,11 +26,6 @@ palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
 
-df_mat_unused = df_mat_data[df_mat_data['num_SMs'] == 0].dropna(how='all')
-df_mat_unused.to_csv('output/mat_data_unused.csv')
-
-df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0].dropna(how='all')
-df_mat_data.to_csv('output/mat_data_used.csv')
 
 # %%
 plt.figure(figsize=(7,5))
@@ -78,11 +73,9 @@ bins = np.logspace(np.log10(2e-4), np.log10(5e1), 30)
 
 df_SMs['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for s in df_SMs['SM_type'].values]
 
-# df_SMs.groupby('energy_type')['specific_energy'].hist(bins=bins, legend=True, alpha=0.75)
-
 for energy_type, color in palette.items():
     df_sel = df_SMs[df_SMs['energy_type'] == energy_type].dropna(how='all')
-    df_sel['specific_energy'].hist(bins=bins, label=energy_type, alpha=0.75, color=color)
+    df_sel['specific_energy'].hist(bins=bins, label=energy_type, alpha=1, color=color)
 
 
 plt.xscale('log')

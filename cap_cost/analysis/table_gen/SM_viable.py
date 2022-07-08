@@ -40,6 +40,6 @@ df_sel['SM_type'] = df_sel['SM_type'].str.replace('thermochemical', 'thermo-chem
 df_sel.columns = [c.replace('_',' ') for c in df_sel.columns]
 
 
-df_sel.to_csv('output/SM_downselected.csv')
+df_sel.to_csv('output/SM_viable.csv')
 
 # %%
