@@ -4,13 +4,19 @@ import numpy as np
 import os
 from es_utils.pdf import average_range
 from es_utils.units import convert_units, prep_df_pint_out, ureg
+from es_utils.chem import process_mat_lookup
 
 if not os.path.exists('output'): os.mkdir('output')
 tables = {fn.strip('.csv') : pd.read_csv(os.path.join('tables',fn), encoding='utf-8', index_col=0) for fn in os.listdir('tables')}
 #%%
 
 SM_lookup = pd.read_csv('SM_lookup.csv')
+
 mat_lookup = pd.read_csv('mat_lookup.csv')
+mat_lookup = process_mat_lookup(mat_lookup)
+
+
+
 #%%
 df_t21 = tables['table_21']
 

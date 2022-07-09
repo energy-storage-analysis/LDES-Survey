@@ -1,27 +1,27 @@
-original_name,index
-Solar Salt,Solar Salt
-HITEC,HITEC
-HITEC XL,HITEC XL
-Sodium,Na
-Mobiltherm 605,Mobiltherm 605
+original_name,material_name,molecular_formula,index_use
+Solar Salt,Solar Salt,,material_name
+HITEC,HITEC,,material_name
+HITEC XL,HITEC XL,,material_name
+Sodium,,Na,molecular_formula
+Mobiltherm 605,Mobiltherm 605,,material_name
 "Therminol VP1
-(vapor pressure at 400 °C: 10.9 bar)",Therminol VP1
-Sulfur,S
-Sunflower oil,Vegetable Oil
-Aluminium,Al
-Cast iron,Fe
-NaCl,NaCl
-Granite,Stone
-Limestone,Stone
-Sandstone,Stone
-Basalt,Stone
-Al2O3,Al2O3
-SiO2,SiO2
-MgO,MgO
-Concrete,Concrete
+(vapor pressure at 400 °C: 10.9 bar)",Therminol VP1,,material_name
+Sulfur,,S,molecular_formula
+Sunflower oil,Vegetable Oil,,material_name
+Aluminium,,Al,molecular_formula
+Cast iron,,Fe,molecular_formula
+NaCl,,NaCl,molecular_formula
+Granite,Stone,,material_name
+Limestone,Stone,,material_name
+Sandstone,Stone,,material_name
+Basalt,Stone,,material_name
+Al2O3,,Al2O3,molecular_formula
+SiO2,,SiO2,molecular_formula
+MgO,,MgO,molecular_formula
+Concrete,Concrete,,material_name
 "Castable
-ceramic",
-Graphite,Graphite
-NaNO3,NaNO3
-KNO3,KNO3
-LiF,LiF
+ceramic",,,
+Graphite,Graphite,,material_name
+NaNO3,,NaNO3,molecular_formula
+KNO3,,KNO3,molecular_formula
+LiF,,LiF,molecular_formula

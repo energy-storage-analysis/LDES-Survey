@@ -1,90 +1,90 @@
-,original_name,material_name,molecular_formula,molecular_formula_norm,index_use
-0,Antimony Ingot,Antimony,Sb,Sb,molecular_formula
-1,Antimony Trioxide,Antimony Trioxide,Sb2O3,O3Sb2,molecular_formula
-2,Antimony ethelyene_glycol,Antimony Ethylene Glycoxide,,,material_name
-3,Arsenic metal,Arsenic,As,As,molecular_formula
-4,Arsenic trioxide,Arsenic Trioxide,As2O3,As2O3,molecular_formula
-5,Bismuth ingot,Bismuth,Bi,Bi,molecular_formula
-6,Bismuth oxides,Bismuth Oxide,Bi2O3,Bi2O3,molecular_formula
-7,Cadmium Ingot,Cadmium,Cd,Cd,molecular_formula
-8,Calcium Ingot,Calcium,Ca,Ca,molecular_formula
-9,Calcium Granule,Calcium,Ca,Ca,molecular_formula
-10,Chrome Conc.,Chromite,CrFeO4,CrFeO4,molecular_formula
-11,Chrome lump,Chromite,CrFeO4,CrFeO4,molecular_formula
-12,Chromium metal,Chromium,Cr,Cr,molecular_formula
-13,Cobalt Conc.,Cobalt,Co,Co,molecular_formula
-14,Cobalt Intermediate,Cobalt,Co,Co,molecular_formula
-15,Cobalt metal,Cobalt,Co,Co,molecular_formula
-16,Cobalt Carbonates,Cobalt Carbonate,CCoO3,CCoO3,molecular_formula
-17,Cobalt Chloride,Cobalt Chloride,CoCl2,Cl2Co,molecular_formula
-18,Cobalt Monoxide,Cobalt Monoxide,CoO,CoO,molecular_formula
-19,Cobalt oxides,Cobalt Tetraoxide,Co3O4,Co3O4,molecular_formula
-20,Cobalt Powder,Cobalt,Co,Co,molecular_formula
-21,Cobalt sulphates,Cobalt Sulphate,CoSO4,CoO4S,molecular_formula
-22,Cobalt Tetroxide,Cobalt Tetroxide,Co3O4,Co3O4,molecular_formula
-23,Gallium metal,Gallium,Ga,Ga,molecular_formula
-24,Germanium metal,Germanium,Ge,Ge,molecular_formula
-25,Germanium dioxides,Germanium Dioxide,GeO2,GeO2,molecular_formula
-26,Indium ingot,Indium,In,In,molecular_formula
-27,Lithium metal,Lithium,Li,Li,molecular_formula
-28,Lithium Carbonates,Lithium Carbonate,Li2CO3,CLi2O3,molecular_formula
-29,Lithium Cobaltate,LCO,LiCoO2,LiCoO2,material_name
-30,Lithium manganates,LMO,LiMn2O4,LiMn2O4,material_name
-31,Lithium hydroxides_monohydrates,Lithium Hydroxide Monohydrate,LiOH(H2O),LiOH(H2O),molecular_formula
-32,Lithium chlorides,Lithium Chloride,ClLi,ClLi,molecular_formula
-33,Magnesium Ingot,Magnesium,Mg,Mg,molecular_formula
-34,Magnesium Powder,Magnesium,Mg,Mg,molecular_formula
-35,Magnesium Alloy AZ91D,Magnesium,Mg,Mg,molecular_formula
-36,Manganese flakes,Magnesium,Mg,Mg,molecular_formula
-37,Manganese Lump,Manganese,Mn,Mn,molecular_formula
-38,Manganese Briquette,Manganese,Mn,Mn,molecular_formula
-39,Manganese dioxides,Manganese dioxide,MnO2,MnO2,molecular_formula
-40,Manganese sulphates,Manganese sulphate,MnSO4,MnO4S,molecular_formula
-41,Mercury metal,Magnesium,Mg,Mg,molecular_formula
-42,Molybdenum Conc.,"Molybdenite ",MoS2,MoS2,molecular_formula
-43,Molybdenum oxides,Molybdenum Oxide,MoO3,MoO3,molecular_formula
-44,Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,H10MoN2S4,H10MoN2S4,material_name
-45,Ammonium heptamolybdate,Ammonium Heptamolybdate,"H50Mo7N6O28 ","H50Mo7N6O28 ",material_name
-46,Sodium Molybdate,Sodium Molybdate,NaMo2O4,MoNa2O4,molecular_formula
-47,Molybdenum Powder,Molybdenum,Mo,Mo,molecular_formula
-48,Molybdenum bar,Molybdenum,Mo,Mo,molecular_formula
-49,Molybdenum Rod,Molybdenum,Mo,Mo,molecular_formula
-50,Niobium Conc.,Niobium Pentoxide,Nb2O5,Nb2O5,molecular_formula
-51,Niobium pentoxides,Niobium Pentoxide,Nb2O5,Nb2O5,molecular_formula
-52,Rhenium APR,Rhenium,Re,Re,molecular_formula
-53,Selenium Powder,Selenium,Se,Se,molecular_formula
-54,Selenium dioxides,Selenium Dioxide,SeO2,O2Se,molecular_formula
-55,Silicon metal,Metallurgical Silicon,,,material_name
-56,Silicon polysilicon,Polysilicon,,,material_name
-57,Strontium metal,Strontium,Sr,Sr,molecular_formula
-58,Tantalum Conc.,Tantalum Oxide,Ta2O5,O5Ta2,molecular_formula
-59,Tantalum metal,Tantalum,Ta,Ta,molecular_formula
-60,Tantalum pentoxide,Tantalum Pentoxide,Ta2O5,O5Ta2,molecular_formula
-61,Tellurium metal,Tellurium,Te,Te,molecular_formula
-62,Ilmenite Conc,Ilmenite,FeTiO3,,molecular_formula
-63,Ilmenite Reduced,Ilmenite,FeTiO3,,molecular_formula
-64,Rutile Conc,Ilmenite,FeTiO3,,molecular_formula
-65,Titanium Slag,Ilmenite,FeTiO3,,molecular_formula
-66,Titanium tetrachloride,Titanium Tetrachloride,TiCl4,Cl4Ti,molecular_formula
-67,Titan Sponge,Titanium,Ti,Ti,molecular_formula
-68,Titanium plate,Titanium,Ti,Ti,molecular_formula
-69,Titanium pipe,Titanium,Ti,Ti,molecular_formula
-70,Titanium Dioxide,Titanium Dioxide,TiO2,O2Ti,molecular_formula
-71,Wolfram Ore,Tungsten Trioxide,WO3,O3W,molecular_formula
-72,Tungsten APT,Ammonium Paratungstate,(NH4)10(H2W12O42)(H2O)4,H8N2O4W,material_name
-73,Sodium Tungstate,Sodium Tungstate,Na2WO4,Na2O4W,molecular_formula
-74,Tungsten oxides,Tungsten Oxide,WO3,O3W,molecular_formula
-75,Tungsten powder,Tungsten,W,W,molecular_formula
-76,Wolfram Bar,Wolfram,W,W,molecular_formula
-77,Tungsten carbide,Tungsten Carbide,CW,CW,molecular_formula
-78,Tungsten scrap,Tungsten,W,W,molecular_formula
-79,Ammonium metavanadate,Ammonium Metavanadate,NH4VO3,H4NO3V,molecular_formula
-80,Vanadium nitrides,Vanadium Nitride,NV,NV,molecular_formula
-81,Vanadium pentoxides,Vanadium Pentoxide,V2O5,O5V2,molecular_formula
-82,Zircon sand,Zirconium Silicate,ZrSiO4,O4SiZr,molecular_formula
-83,Zirconium fused_cubic,Zirconium Oxide,ZrO2,O2Zr,molecular_formula
-84,Zirconium Sponge,Zirconium,Zr,Zr,molecular_formula
-85,Zirconium silicate,Zirconium Silicate,ZrSiO4,O4SiZr,molecular_formula
-86,Zirconium Oxychloride,Zirconium Oxychloride,ZrCl2H2O,Cl2H2OZr,molecular_formula
-87,Zirconium Carbonates,Zirconium Carbonate,Zr(CO3)2,C2O6Zr,molecular_formula
-88,Lanthanum metal,Lanthanum metal,La,La,molecular_formula
+original_name,material_name,molecular_formula,index_use
+Antimony Ingot,Antimony,Sb,molecular_formula
+Antimony Trioxide,Antimony Trioxide,Sb2O3,molecular_formula
+Antimony ethelyene_glycol,Antimony Ethylene Glycoxide,,material_name
+Arsenic metal,Arsenic,As,molecular_formula
+Arsenic trioxide,Arsenic Trioxide,As2O3,molecular_formula
+Bismuth ingot,Bismuth,Bi,molecular_formula
+Bismuth oxides,Bismuth Oxide,Bi2O3,molecular_formula
+Cadmium Ingot,Cadmium,Cd,molecular_formula
+Calcium Ingot,Calcium,Ca,molecular_formula
+Calcium Granule,Calcium,Ca,molecular_formula
+Chrome Conc.,Chromite,CrFeO4,molecular_formula
+Chrome lump,Chromite,CrFeO4,molecular_formula
+Chromium metal,Chromium,Cr,molecular_formula
+Cobalt Conc.,Cobalt,Co,molecular_formula
+Cobalt Intermediate,Cobalt,Co,molecular_formula
+Cobalt metal,Cobalt,Co,molecular_formula
+Cobalt Carbonates,Cobalt Carbonate,CCoO3,molecular_formula
+Cobalt Chloride,Cobalt Chloride,CoCl2,molecular_formula
+Cobalt Monoxide,Cobalt Monoxide,CoO,molecular_formula
+Cobalt oxides,Cobalt Tetraoxide,Co3O4,molecular_formula
+Cobalt Powder,Cobalt,Co,molecular_formula
+Cobalt sulphates,Cobalt Sulphate,CoSO4,molecular_formula
+Cobalt Tetroxide,Cobalt Tetroxide,Co3O4,molecular_formula
+Gallium metal,Gallium,Ga,molecular_formula
+Germanium metal,Germanium,Ge,molecular_formula
+Germanium dioxides,Germanium Dioxide,GeO2,molecular_formula
+Indium ingot,Indium,In,molecular_formula
+Lithium metal,Lithium,Li,molecular_formula
+Lithium Carbonates,Lithium Carbonate,Li2CO3,molecular_formula
+Lithium Cobaltate,LCO,LiCoO2,material_name
+Lithium manganates,LMO,LiMn2O4,material_name
+Lithium hydroxides_monohydrates,Lithium Hydroxide Monohydrate,LiOH(H2O),molecular_formula
+Lithium chlorides,Lithium Chloride,ClLi,molecular_formula
+Magnesium Ingot,Magnesium,Mg,molecular_formula
+Magnesium Powder,Magnesium,Mg,molecular_formula
+Magnesium Alloy AZ91D,Magnesium,Mg,molecular_formula
+Manganese flakes,Magnesium,Mg,molecular_formula
+Manganese Lump,Manganese,Mn,molecular_formula
+Manganese Briquette,Manganese,Mn,molecular_formula
+Manganese dioxides,Manganese dioxide,MnO2,molecular_formula
+Manganese sulphates,Manganese sulphate,MnSO4,molecular_formula
+Mercury metal,Magnesium,Mg,molecular_formula
+Molybdenum Conc.,"Molybdenite ",MoS2,molecular_formula
+Molybdenum oxides,Molybdenum Oxide,MoO3,molecular_formula
+Ammonium Tetrathiomolybdate,Ammonium Tetrathiomolybdate,H10MoN2S4,material_name
+Ammonium heptamolybdate,Ammonium Heptamolybdate,"H50Mo7N6O28 ",material_name
+Sodium Molybdate,Sodium Molybdate,NaMo2O4,molecular_formula
+Molybdenum Powder,Molybdenum,Mo,molecular_formula
+Molybdenum bar,Molybdenum,Mo,molecular_formula
+Molybdenum Rod,Molybdenum,Mo,molecular_formula
+Niobium Conc.,Niobium Pentoxide,Nb2O5,molecular_formula
+Niobium pentoxides,Niobium Pentoxide,Nb2O5,molecular_formula
+Rhenium APR,Rhenium,Re,molecular_formula
+Selenium Powder,Selenium,Se,molecular_formula
+Selenium dioxides,Selenium Dioxide,SeO2,molecular_formula
+Silicon metal,Metallurgical Silicon,,material_name
+Silicon polysilicon,Polysilicon,,material_name
+Strontium metal,Strontium,Sr,molecular_formula
+Tantalum Conc.,Tantalum Oxide,Ta2O5,molecular_formula
+Tantalum metal,Tantalum,Ta,molecular_formula
+Tantalum pentoxide,Tantalum Pentoxide,Ta2O5,molecular_formula
+Tellurium metal,Tellurium,Te,molecular_formula
+Ilmenite Conc,Ilmenite,FeTiO3,molecular_formula
+Ilmenite Reduced,Ilmenite,FeTiO3,molecular_formula
+Rutile Conc,Ilmenite,FeTiO3,molecular_formula
+Titanium Slag,Ilmenite,FeTiO3,molecular_formula
+Titanium tetrachloride,Titanium Tetrachloride,TiCl4,molecular_formula
+Titan Sponge,Titanium,Ti,molecular_formula
+Titanium plate,Titanium,Ti,molecular_formula
+Titanium pipe,Titanium,Ti,molecular_formula
+Titanium Dioxide,Titanium Dioxide,TiO2,molecular_formula
+Wolfram Ore,Tungsten Trioxide,WO3,molecular_formula
+Tungsten APT,Ammonium Paratungstate,(NH4)10(H2W12O42)(H2O)4,material_name
+Sodium Tungstate,Sodium Tungstate,Na2WO4,molecular_formula
+Tungsten oxides,Tungsten Oxide,WO3,molecular_formula
+Tungsten powder,Tungsten,W,molecular_formula
+Wolfram Bar,Wolfram,W,molecular_formula
+Tungsten carbide,Tungsten Carbide,CW,molecular_formula
+Tungsten scrap,Tungsten,W,molecular_formula
+Ammonium metavanadate,Ammonium Metavanadate,NH4VO3,molecular_formula
+Vanadium nitrides,Vanadium Nitride,NV,molecular_formula
+Vanadium pentoxides,Vanadium Pentoxide,V2O5,molecular_formula
+Zircon sand,Zirconium Silicate,ZrSiO4,molecular_formula
+Zirconium fused_cubic,Zirconium Oxide,ZrO2,molecular_formula
+Zirconium Sponge,Zirconium,Zr,molecular_formula
+Zirconium silicate,Zirconium Silicate,ZrSiO4,molecular_formula
+Zirconium Oxychloride,Zirconium Oxychloride,ZrCl2H2O,molecular_formula
+Zirconium Carbonates,Zirconium Carbonate,Zr(CO3)2,molecular_formula
+Lanthanum metal,Lanthanum metal,La,molecular_formula
