@@ -1,14 +1,14 @@
-,deltaV,n_e,materials,SM_type
-unit_row,volt,dimensionless,N/U,N/U
-SM_name,,,,
-Al-O2,2.1,3.0,Al,metal_air
-Al-air,2.71,3.0,Al,metal_air
-Ca-O2,3.38,2.0,Ca,metal_air
-Fe-air,1.28,2.0,Fe,metal_air
-K-O2,2.48,1.0,K,metal_air
-Li-O2,2.96,1.0,Li,metal_air
-Mg-Air,2.77,2.0,Mg,metal_air
-Mg-O2,2.95,2.0,Mg,metal_air
-Na-O2,2.33,1.0,Na,metal_air
-Si-air,2.09,4.0,Metallurgical Silicon,metal_air
-Zn-air,1.65,2.0,Zn,metal_air
+,original_name,deltaV,n_e,materials,SM_type
+unit_row,N/U,volt,dimensionless,N/U,N/U
+SM_name,,,,,
+Al-O2,Al-O2,2.1,3.0,Al,metal_air
+Al-air,Al-air,2.71,3.0,Al,metal_air
+Ca-O2,Ca-O2,3.38,2.0,Ca,metal_air
+Fe-air,Fe-air,1.28,2.0,Fe,metal_air
+K-O2,K-O2,2.48,1.0,K,metal_air
+Li-O2,Li-O2,2.96,1.0,Li,metal_air
+Mg-Air,Mg-Air,2.77,2.0,Mg,metal_air
+Mg-O2,Mg-O2,2.95,2.0,Mg,metal_air
+Na-O2,Na-O2,2.33,1.0,Na,metal_air
+Si-air,Si-air,2.09,4.0,Metallurgical Silicon,metal_air
+Zn-air,Zn-air,1.65,2.0,Zn,metal_air

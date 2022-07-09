@@ -12,11 +12,12 @@ df = pd.concat(tables.values(), axis=1)
 df = df[['T_melt','T_max','mass_density','Cp','C_kwh_orig']]
 df
 
-df.index.name = 'SM_name'
+df.index.name = 'original_name'
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df = pd.merge(df, SM_lookup, on='SM_name')
+df = pd.merge(df, SM_lookup, on='original_name')
+df = df.reset_index().set_index('SM_name')
 
 df['SM_type'] ='sensible_thermal'
 
