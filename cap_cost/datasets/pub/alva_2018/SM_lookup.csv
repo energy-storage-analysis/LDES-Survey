@@ -1,6 +1,5 @@
 original_name,SM_name,SM_type,sub_type,materials,mat_basis
 NNaO3,NNaO3,latent_thermal,molten_salt,NNaO3,
-Mg,Mg,latent_thermal,molten_salt,Mg,
 NaNO3,NaNO3,latent_thermal,molten_salt,NaNO3,
 KNO3,KNO3,latent_thermal,molten_salt,KNO3,
 Mg (NO3)2,Mg (NO3)2,latent_thermal,molten_salt,Mg(NO3)2,
@@ -52,5 +51,5 @@ Granite,Granite,sensible_thermal,rock,Stone,
 Quartzite,Quartzite,sensible_thermal,rock,Stone,
 Marble,Marble,sensible_thermal,rock,Stone,
 Basalt,Basalt,sensible_thermal,rock,Stone,
-"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,sensible_thermal,molten_salt,HITEC,
+"HITEC XL, NaNO3e KNO3eCa(NO3)2",HITEC XL,sensible_thermal,molten_salt,HITEC XL,
 Vegetable oil,Vegetable Oil,sensible_thermal,oil,Vegetable Oil,
