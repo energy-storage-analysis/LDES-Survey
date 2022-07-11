@@ -66,16 +66,34 @@ for column in df_SM.columns:
         float_cols.append(column)
 
 
-float_cols
 other_cols = [c for c in df_SM.columns if c not in float_cols]
-
-other_cols
 
 df_grouped = df_SM[float_cols].groupby(level=[0,1]).mean()
 
+
+#List of columns that must have a single value, meaning an error is thrown if different sources have different values
+#TODO: this needs to be applied to the SM_type in the index as well. 
+single_value_cols = ['sub_type','mat_type', 'materials']
+
 #TODO: the join col vals function should be able to work over multiple columns
 for column in other_cols:
-    df_grouped[column] = df_SM[other_cols].groupby(level=[0,1])[column].apply(join_col_vals)
+    if column in single_value_cols:
+
+        #For columns that should be single-valued we check that the length of a set of the values is one. 
+        #TODO: an alternative approach would be to have a second lookup table mapping storage medium index to these values, but keeping all lookup happening in individual sources for now.
+        df_grouped[column] = df_SM[other_cols].groupby(level=[0,1])[column].apply(set)
+        n_vals = df_grouped[column].apply(len)
+        
+        multiple_vals = n_vals[n_vals > 1].dropna()
+        if len(multiple_vals):
+            val_info = df_SM[['source',column]].loc[multiple_vals.index]
+            raise ValueError("Got multiple values for single-valued column: {}\n\nprinting data: {}".format(column, val_info))
+
+        # Finally if there are no errors then take first item of the set, which should be the only one
+        df_grouped[column] = df_grouped[column].apply(lambda x: list(x)[0])
+            
+    else:
+        df_grouped[column] = df_SM[other_cols].groupby(level=[0,1])[column].apply(join_col_vals)
 
 
 #TODO: rename others to indicate multiple sources
