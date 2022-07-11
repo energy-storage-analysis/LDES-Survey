@@ -1,12 +1,12 @@
-,original_name,SM_type,sub_type,materials,mat_basis,deltaG_chem,n_e
-unit_row,N/U,N/U,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless
-SM_name,,,,,,,
-MgH2,MgH2,synfuel,metal_hydride,Mg,molar,0.06591975578359706,2.000599568546193
-VH2,VH2,synfuel,metal_hydride,V,molar,0.06597020668095437,2.0021307035191005
-Mg2NiH4,Mg2NiH4,synfuel,metal_hydride,"[('Mg',2), ('Ni',1)]",molar,0.13063721515586785,3.9647106268852155
-TiFeH2,TiFeH2,synfuel,metal_hydride,"[('Ti',1), ('Fe',1)]",molar,0.06532186905646303,1.98245429609903
-ZrNiH3,ZrNiH3,synfuel,metal_hydride,"[('Zr',1), ('Ni',1)]",molar,0.09799092908443473,2.97392804505113
-TiMn1.4V0.62H3.4,TiMn1.4V0.62H3.4,synfuel,metal_hydride,"[('Ti',1), ('Mn',1.4), ('V',0.62)]",molar,0.11232991735230148,3.409102195820986
-ZrMn2H3.6,ZrMn2H3.6,synfuel,metal_hydride,"[('Zr',1), ('Mn',2)]",molar,0.11847383411173364,3.5955640094608086
-LaNi5H6.5,LaNi5H6.5,synfuel,metal_hydride,"[('La',1), ('Ni',5)]",molar,0.21381838652606713,6.4891771328093215
-LaNi4.8Sn0.2H6.0,LaNi4.8Sn0.2H6.0,synfuel,metal_hydride,"[('La',1), ('Ni',4.8), ('Sn',0.2)]",molar,0.2062920899811088,6.260761456179326
+,SM_type,sub_type,mat_type,original_name,materials,mat_basis,deltaG_chem,n_e
+unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless
+SM_name,,,,,,,,
+MgH2,synfuel,chemical,metal_hydride,MgH2,Mg,molar,0.06591975578359706,2.000599568546193
+VH2,synfuel,chemical,metal_hydride,VH2,V,molar,0.06597020668095437,2.0021307035191005
+Mg2NiH4,synfuel,chemical,metal_hydride,Mg2NiH4,"[('Mg',2), ('Ni',1)]",molar,0.13063721515586785,3.9647106268852155
+TiFeH2,synfuel,chemical,metal_hydride,TiFeH2,"[('Ti',1), ('Fe',1)]",molar,0.06532186905646303,1.98245429609903
+ZrNiH3,synfuel,chemical,metal_hydride,ZrNiH3,"[('Zr',1), ('Ni',1)]",molar,0.09799092908443473,2.97392804505113
+TiMn1.4V0.62H3.4,synfuel,chemical,metal_hydride,TiMn1.4V0.62H3.4,"[('Ti',1), ('Mn',1.4), ('V',0.62)]",molar,0.11232991735230148,3.409102195820986
+ZrMn2H3.6,synfuel,chemical,metal_hydride,ZrMn2H3.6,"[('Zr',1), ('Mn',2)]",molar,0.11847383411173364,3.5955640094608086
+LaNi5H6.5,synfuel,chemical,metal_hydride,LaNi5H6.5,"[('La',1), ('Ni',5)]",molar,0.21381838652606713,6.4891771328093215
+LaNi4.8Sn0.2H6.0,synfuel,chemical,metal_hydride,LaNi4.8Sn0.2H6.0,"[('La',1), ('Ni',4.8), ('Sn',0.2)]",molar,0.2062920899811088,6.260761456179326

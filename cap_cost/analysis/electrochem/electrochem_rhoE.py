@@ -57,10 +57,7 @@ df_ec_decoupled
 
 # %%
 df_ec_coupled = df.where(df['SM_type'].isin([
-'liquid_metal',
-'solid_electrode',
-'metal_air',
-'hybrid_flow',
+'coupled_battery',
 ])).dropna(subset=['SM_type'])
 
 df_ec_coupled = df_ec_coupled.where(df_ec_coupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
@@ -79,7 +76,7 @@ fig = plt.figure(figsize = (7,8))
 x_str='specific_energy'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
+sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', legend=True, s=50)
 
 ax = plt.gca()
 ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.5, linestyle='--', color='gray')

@@ -33,9 +33,6 @@ SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 df = pd.merge(df, SM_lookup, on='original_name')
 df = df.reset_index().set_index('SM_name')
 
-df['SM_type'] ='metal_air'
-
-
 
 df = df.astype({
     'deltaV': 'pint[V]',

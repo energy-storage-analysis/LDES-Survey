@@ -1,43 +1,43 @@
 original_name,SM_name,SM_type,sub_type,mat_type,materials,mat_basis,deltaV,n_e,notes
-Pb acid,Pb acid,solid_electrode,Pb acid,,Pb,,2.1,2,
-NiCd,NiCd,solid_electrode,NiCd,,"[('Cd(OH)2', 1), ('Ni(OH)2', 1)]",molar,1.2,2,
-NiMH,NiMH,solid_electrode,NiMH,,"[('LaNi5', 1), ('Ni(OH)2', 1)]",molar,1.2,1,
-Zn/air,,metal_air,Zn2+ based,,Zn,,1.65,,Already in Weinrich 2019
-Zn/NiOOH,Zn/NiOOH,solid_electrode,Zn2+ based,,"[('Zn', 1), ('Ni(OH)2', 2 )]",molar,1.74,2,https://www.sunergybattery.com/nickelzinc-chemistry
-Zn/MnO2,Zn/MnO2,solid_electrode,Zn2+ based,,"[('Zn', 1), ('MnO2', 1)]",molar,1.5,2,https://en.wikipedia.org/wiki/Alkaline_battery
-Zn/Fe,Zn/Fe,hybrid_flow,Zn2+ based,,"[('Zn', 1), ('Fe', 2)]",molar,1.99,2,https://pubs.rsc.org/en/content/articlelanding/2015/ee/c5ee02315g
-Zn/Zn0.25V2O5,Zn/Zn0.25V2O5,solid_electrode,Zn2+ based,,"[('Zn', 1.35), ('V2O5', 1)]",molar,1.4,2.2,"Appears to be aqueous but intercalation based operation (not flow). Delta V taken from figure 4a in Kundu et al. "
-Mg/Ti2S4,Mg/Ti2S4,solid_electrode,Mg2+ based,,"[('Mg', 1), ('TiS2', 1)]",molar,1.7,2,A high capacity thiospinel cathode for Mg batteries
-Li/S,Li/S,solid_electrode,Lithium metal,,"[('Li', 2), ('S', 1)]",molar,2.5,2,https://en.wikipedia.org/wiki/Lithium%E2%80%93sulfur_battery
-Li/TiS2,Li/TiS2,solid_electrode,Lithium metal,,"[('Li', 1), ('TiS2', 1)]",molar,2.5,1,https://www.science.org/doi/10.1126/science.192.4244.1126
-Li/MoS2,Li/MoS2,solid_electrode,Lithium metal,,"[('Li', 1), ('MoS2', 1)]",molar,2.5,1,https://patents.google.com/patent/US4224390A/en
-Li/LCO,Li/LCO,solid_electrode,Lithium metal,,"[('Li', 1), ('LCO', 1)]",molar,4.7,1,https://www.sciencedirect.com/science/article/abs/pii/0025540880900124
-Li/air,Li/air,metal_air,Lithium metal,,Li,,2.91,1,Voltage from Weinrich 2019
-Na/S,Na/S,liquid_metal_battery,High temperature,,"[('Na', 1), ('S', 2)]",molar,2,1,https://en.wikipedia.org/wiki/Sodium%E2%80%93sulfur_battery
-Na/NiCl2,Na/NiCl2,liquid_metal_battery,High temperature,,"[('Na', 2), ('NiCl2', 1)]",molar,2.58,2,https://www.sciencedirect.com/topics/engineering/sodium-nickel-chloride
-Li/Pb2Sb,Li/Pb2Sb,liquid_metal_battery,High temperature,,"[('Li', 1), ('Pb', 1), ('Sb', 1)]",molar,0.92,1,https://www.nature.com/articles/nature13700
-ICB,ICB,flow_battery,Redox flow,,"[('Cr', 1), ('Fe', 1)]",molar,1.18,1,https://energystorage.org/why-energy-storage/technologies/iron-chromium-icb-flow-batteries/
-Fe/Fe,FeCl2,hybrid_flow,Redox flow,,"[('FeCl2', 3)]",molar,1.2,2,https://dornsife.usc.edu/labs/narayan/all-iron-redox-flow-battery/
-PSB,PSB,flow_battery,Redox flow,,"[('Na', 1), ('S',1), ('NaBr', 1)]",molar,1.55,1,"Zhang, H. “Chapter 9 - Polysulfide-Bromine Flow Batteries (PBBs) f"
-VRFB,VRFB,flow_battery,Redox flow,,V2O5,,1.55,1,https://en.wikipedia.org/wiki/Vanadium_redox_battery
-Cu/Cu,Cu/Cu,hybrid_flow,Redox flow,,"[('Cu', 2)]",molar,0.6,1,"Sanz, Laura, David Lloyd, Eva Magdalena, Jesús Palma, and Kyösti Kontturi. “Description and Performance of a Novel Aqueous All-Copper Redox Flow Battery.”"
-AQDS/Br,,flow_battery,Redox flow,,"[('AQDS', 1), ('Br2', 1)]",molar,0.92,,"Huskinson, B. et al. A metal-free organic-inorganic aqueous flow batter"
-"Aq-S/air  (Na, H+)","S/Air(Na, Acid)",flow_battery,Flow-air,,"[('Na', 1), ('S', 1)]",molar,1.35,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
-"Aq-S/air  (Na, OH-)","S/Air(Na, Base)",flow_battery,Flow-air,,"[('Na', 1), ('S', 1)]",molar,0.65,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
-"Aq-S/air  (Li, H+)","S/Air(Li, Acid)",flow_battery,Flow-air,,"[('Li', 1), ('S', 1)]",molar,1.35,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
-"Aq-S/air (Li, OH-)","S/Air(Li, Base)",flow_battery,Flow-air,,"[('Li', 1), ('S', 1)]",molar,0.65,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
-C6/LMO,C6/LMO,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('LMO', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
-C6/LCO,C6/LCO,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('LCO', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
-C6/LFP,C6/LFP,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('LFP', 1)]",molar,3.65,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
-C6/LMNO,C6/LMNO,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('LMNO', 1)]",molar,4.7,1,https://www.sciencedirect.com/science/article/abs/pii/S0378775396025906
-LTO/LMO,LTO/LMO,solid_electrode,Li ion  (C6 anode),,"[('LTO', 1), ('LMO', 1)]",molar,2.7,1,https://www.energy.gov/sites/prod/files/2014/03/f11/merit08_ota.pdf
-C6/NCM111,C6/NCM111,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('NCM111', 1)]",molar,4.2,1,https://www.nanoshel.com/product/lithium-nickel-cobalt-manganese-oxide-ncm111
-C6/LMP,C6/LMP,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('LMP', 1)]",molar,4,1,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.957.7169&rep=rep1&type=pdf
-C6/NCA,C6/NCA,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('NCA', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
-C6/LRMO LMNO,C6/LRMO LMNO,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,4.95,1,https://patents.google.com/patent/US7303840B2/en
-C6/NCM622,C6/NCM622,solid_electrode,Li ion  (C6 anode),,"[('Graphite', 1), ('NCM622', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
-Si/LCO,Si/LCO,solid_electrode,Li ion  (Si anode),,"[('Polysilicon', 1), ('LCO', 4)]",molar,4.2,4,https://www.nature.com/articles/s41467-021-25334-8
-Si/Li2S,Si/Li2S,solid_electrode,Li ion  (Si anode),,"[('Polysilicon', 1), ('Li2S', 1)]",molar,2.6,2,https://pubmed.ncbi.nlm.nih.gov/20184382/
-Na/P2-NMO,Na/P2-NMO,solid_electrode,Na ion (nonaqueous),,"[('Na', 1), ('P2_NMO', 1)]",molar,1.4,1,https://www.nature.com/articles/ncomms2139.pdf
-NTP/NMO,NTP/NMO,solid_electrode,Na ion (aqueous),,"[('NTP', 1), ('NMO', 1)]",molar,1.3,1,https://onlinelibrary.wiley.com/doi/abs/10.1002/aenm.201200598
-PPy-AC/Cu-PBA,PPy-AC/Cu-PBA,solid_electrode,Na ion (aqueous),,"[('PPy-AC', 0.33), ('K4Fe(CN)6', 0.33), ('Cu', 0.33)]",molar,1.2,,https://onlinelibrary.wiley.com/doi/full/10.1002/sstr.202000054
+Pb acid,Pb acid,coupled_battery,solid_electrode,other,Pb,,2.1,2,
+NiCd,NiCd,coupled_battery,solid_electrode,Ni based,"[('Cd(OH)2', 1), ('Ni(OH)2', 1)]",molar,1.2,2,
+NiMH,NiMH,coupled_battery,solid_electrode,Ni based,"[('LaNi5', 1), ('Ni(OH)2', 1)]",molar,1.2,1,
+Zn/air,,coupled_battery,metal_air,Zn based,Zn,,1.65,,Already in Weinrich 2019
+Zn/NiOOH,Zn/NiOOH,coupled_battery,solid_electrode,Zn based,"[('Zn', 1), ('Ni(OH)2', 2 )]",molar,1.74,2,https://www.sunergybattery.com/nickelzinc-chemistry
+Zn/MnO2,Zn/MnO2,coupled_battery,solid_electrode,Zn based,"[('Zn', 1), ('MnO2', 1)]",molar,1.5,2,https://en.wikipedia.org/wiki/Alkaline_battery
+Zn/Fe,Zn/Fe,coupled_battery,hybrid_flow,Zn based,"[('Zn', 1), ('Fe', 2)]",molar,1.99,2,https://pubs.rsc.org/en/content/articlelanding/2015/ee/c5ee02315g
+Zn/Zn0.25V2O5,Zn/Zn0.25V2O5,coupled_battery,solid_electrode,Zn based,"[('Zn', 1.35), ('V2O5', 1)]",molar,1.4,2.2,"Appears to be aqueous but intercalation based operation (not flow). Delta V taken from figure 4a in Kundu et al. "
+Mg/Ti2S4,Mg/Ti2S4,coupled_battery,solid_electrode,other,"[('Mg', 1), ('TiS2', 1)]",molar,1.7,2,A high capacity thiospinel cathode for Mg batteries
+Li/S,Li/S,coupled_battery,solid_electrode,Lithium metal,"[('Li', 2), ('S', 1)]",molar,2.5,2,https://en.wikipedia.org/wiki/Lithium%E2%80%93sulfur_battery
+Li/TiS2,Li/TiS2,coupled_battery,solid_electrode,Lithium metal,"[('Li', 1), ('TiS2', 1)]",molar,2.5,1,https://www.science.org/doi/10.1126/science.192.4244.1126
+Li/MoS2,Li/MoS2,coupled_battery,solid_electrode,Lithium metal,"[('Li', 1), ('MoS2', 1)]",molar,2.5,1,https://patents.google.com/patent/US4224390A/en
+Li/LCO,Li/LCO,coupled_battery,solid_electrode,Lithium metal,"[('Li', 1), ('LCO', 1)]",molar,4.7,1,https://www.sciencedirect.com/science/article/abs/pii/0025540880900124
+Li/air,Li/air,coupled_battery,metal_air,Lithium metal,Li,,2.91,1,Voltage from Weinrich 2019
+Na/S,Na/S,coupled_battery,liquid_metal_battery,,"[('Na', 1), ('S', 2)]",molar,2,1,https://en.wikipedia.org/wiki/Sodium%E2%80%93sulfur_battery
+Na/NiCl2,Na/NiCl2,coupled_battery,liquid_metal_battery,,"[('Na', 2), ('NiCl2', 1)]",molar,2.58,2,https://www.sciencedirect.com/topics/engineering/sodium-nickel-chloride
+Li/Pb2Sb,Li/Pb2Sb,coupled_battery,liquid_metal_battery,,"[('Li', 1), ('Pb', 1), ('Sb', 1)]",molar,0.92,1,https://www.nature.com/articles/nature13700
+ICB,ICB,flow_battery,,inorganic,"[('Cr', 1), ('Fe', 1)]",molar,1.18,1,https://energystorage.org/why-energy-storage/technologies/iron-chromium-icb-flow-batteries/
+Fe/Fe,FeCl2,flow_battery,,inorganic,"[('FeCl2', 3)]",molar,1.2,2,https://dornsife.usc.edu/labs/narayan/all-iron-redox-flow-battery/
+PSB,PSB,flow_battery,,inorganic,"[('Na', 1), ('S',1), ('NaBr', 1)]",molar,1.55,1,"Zhang, H. “Chapter 9 - Polysulfide-Bromine Flow Batteries (PBBs) f"
+VRFB,VRFB,flow_battery,,inorganic,V2O5,,1.55,1,https://en.wikipedia.org/wiki/Vanadium_redox_battery
+Cu/Cu,Cu/Cu,flow_battery,,inorganic,"[('Cu', 2)]",molar,0.6,1,"Sanz, Laura, David Lloyd, Eva Magdalena, Jesús Palma, and Kyösti Kontturi. “Description and Performance of a Novel Aqueous All-Copper Redox Flow Battery.”"
+AQDS/Br,,flow_battery,,organic,"[('AQDS', 1), ('Br2', 1)]",molar,0.92,,"Huskinson, B. et al. A metal-free organic-inorganic aqueous flow batter"
+"Aq-S/air  (Na, H+)","S/Air(Na, Acid)",flow_battery,,inorganic,"[('Na', 1), ('S', 1)]",molar,1.35,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air  (Na, OH-)","S/Air(Na, Base)",flow_battery,,inorganic,"[('Na', 1), ('S', 1)]",molar,0.65,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air  (Li, H+)","S/Air(Li, Acid)",flow_battery,,inorganic,"[('Li', 1), ('S', 1)]",molar,1.35,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
+"Aq-S/air (Li, OH-)","S/Air(Li, Base)",flow_battery,,inorganic,"[('Li', 1), ('S', 1)]",molar,0.65,2,"Taken from Li 2017 Table 5, dropping some insignificant components"
+C6/LMO,C6/LMO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMO', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
+C6/LCO,C6/LCO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LCO', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
+C6/LFP,C6/LFP,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LFP', 1)]",molar,3.65,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
+C6/LMNO,C6/LMNO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMNO', 1)]",molar,4.7,1,https://www.sciencedirect.com/science/article/abs/pii/S0378775396025906
+LTO/LMO,LTO/LMO,coupled_battery,solid_electrode,Li ion,"[('LTO', 1), ('LMO', 1)]",molar,2.7,1,https://www.energy.gov/sites/prod/files/2014/03/f11/merit08_ota.pdf
+C6/NCM111,C6/NCM111,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCM111', 1)]",molar,4.2,1,https://www.nanoshel.com/product/lithium-nickel-cobalt-manganese-oxide-ncm111
+C6/LMP,C6/LMP,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMP', 1)]",molar,4,1,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.957.7169&rep=rep1&type=pdf
+C6/NCA,C6/NCA,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCA', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
+C6/LRMO LMNO,C6/LRMO LMNO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,4.95,1,https://patents.google.com/patent/US7303840B2/en
+C6/NCM622,C6/NCM622,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCM622', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
+Si/LCO,Si/LCO,coupled_battery,solid_electrode,Li ion,"[('Polysilicon', 1), ('LCO', 4)]",molar,4.2,4,https://www.nature.com/articles/s41467-021-25334-8
+Si/Li2S,Si/Li2S,coupled_battery,solid_electrode,Li ion,"[('Polysilicon', 1), ('Li2S', 1)]",molar,2.6,2,https://pubmed.ncbi.nlm.nih.gov/20184382/
+Na/P2-NMO,Na/P2-NMO,coupled_battery,solid_electrode,Na ion,"[('Na', 1), ('P2_NMO', 1)]",molar,1.4,1,https://www.nature.com/articles/ncomms2139.pdf
+NTP/NMO,NTP/NMO,coupled_battery,solid_electrode,Na ion,"[('NTP', 1), ('NMO', 1)]",molar,1.3,1,https://onlinelibrary.wiley.com/doi/abs/10.1002/aenm.201200598
+PPy-AC/Cu-PBA,PPy-AC/Cu-PBA,coupled_battery,solid_electrode,Na ion,"[('PPy-AC', 0.33), ('K4Fe(CN)6', 0.33), ('Cu', 0.33)]",molar,1.2,,https://onlinelibrary.wiley.com/doi/full/10.1002/sstr.202000054

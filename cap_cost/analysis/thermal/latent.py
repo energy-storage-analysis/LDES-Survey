@@ -48,7 +48,7 @@ fig, ax = plt.subplots(1,1,figsize=(7,8))
 # df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
 # df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False, ax=ax)
 
-sns.scatterplot(data=df_latent_ds, y='C_kwh', x='phase_change_T', hue='sub_type',legend=True, s=MARKER_SIZE)
+sns.scatterplot(data=df_latent_ds, y='C_kwh', x='phase_change_T', hue='mat_type',legend=True, s=MARKER_SIZE)
 
 texts = annotate_points(df_latent_ds, 'phase_change_T', 'C_kwh', 'display_text')
 

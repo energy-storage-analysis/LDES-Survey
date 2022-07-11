@@ -1,16 +1,16 @@
 original_name,SM_name,SM_type,sub_type,mat_type,materials,mat_basis
-Oxygen,,sensible_thermal,cold,,,
-Nitrogen,,sensible_thermal,cold,,,
-N-propane,N-propane,sensible_thermal,cold,,N-propane,mass
-Isopentane,Isopentane,sensible_thermal,cold,,Isopentane,mass
-N-pentane,N-pentane,sensible_thermal,cold,,N-pentane,mass
-Ethanol,Ethanol,sensible_thermal,cold,,Ethanol,mass
-Methanol,Methanol,sensible_thermal,cold,,Methanol,mass
-Water,Water,sensible_thermal,other_fluid,,Water,mass
-Ethylene glycol,Ethylene glycol,sensible_thermal,other_fluid,,Ethylene glycol,mass
-Sunflower oil,Vegetable Oil,sensible_thermal,oil,,Vegetable Oil,mass
-Mineral oil,,sensible_thermal,oil,,,mass
-Hitec XL,HITEC XL,sensible_thermal,molten_salt,,HITEC XL,mass
-Solar salt,Solar Salt,sensible_thermal,molten_salt,,Solar Salt,mass
-Sodium,Na,sensible_thermal,metal,,Na,mass
-Eutectic Na-K,NaK,sensible_thermal,metal,,"[('Na', 0.5), ('K', 0.5)]",molar
+Oxygen,,sensible_thermal,cold,hydrocarbon,,
+Nitrogen,,sensible_thermal,cold,hydrocarbon,,
+N-propane,N-propane,sensible_thermal,cold,hydrocarbon,N-propane,mass
+Isopentane,Isopentane,sensible_thermal,cold,hydrocarbon,Isopentane,mass
+N-pentane,N-pentane,sensible_thermal,cold,hydrocarbon,N-pentane,mass
+Ethanol,Ethanol,sensible_thermal,cold,hydrocarbon,Ethanol,mass
+Methanol,Methanol,sensible_thermal,cold,hydrocarbon,Methanol,mass
+Water,Water,sensible_thermal,hot,other_fluid,Water,mass
+Ethylene glycol,Ethylene glycol,sensible_thermal,hot,other_fluid,Ethylene glycol,mass
+Sunflower oil,Vegetable Oil,sensible_thermal,hot,oil,Vegetable Oil,mass
+Mineral oil,,sensible_thermal,hot,oil,,mass
+Hitec XL,HITEC XL,sensible_thermal,hot,molten_salt,HITEC XL,mass
+Solar salt,Solar Salt,sensible_thermal,hot,molten_salt,Solar Salt,mass
+Sodium,Na,sensible_thermal,hot,metal,Na,mass
+Eutectic Na-K,NaK,sensible_thermal,hot,metal,"[('Na', 0.5), ('K', 0.5)]",molar

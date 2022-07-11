@@ -25,8 +25,10 @@ df = df.rename({
 'Max. pressure (MPa)':'P_max', 
 'Min. pressure (MPa)': 'P_min',
 'Volume capacity (m3\n(STP))': 'vol_cap', 
+'Volume capacity (m3\r\n(STP))': 'vol_cap', #TODO: new line character seems to keep switching...
 'Investment (€) ': 'total_cost',
-'Spec. investment (€ m − 3\n(STP))':'vol_cost'
+'Spec. investment (€ m − 3\n(STP))':'vol_cost',
+'Spec. investment (€ m − 3\r\n(STP))':'vol_cost'
 }, axis=1)
 
 # df.index.name = 'original_name'

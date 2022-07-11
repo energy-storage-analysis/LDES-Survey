@@ -53,10 +53,13 @@ df_SMs = df_SMs.reset_index(drop=True).set_index('SM_name') #Dropping original n
 
 df_SMs['specific_capacitance'] = df_SMs['specific_capacitance'].astype(float)
 
+#TODO: is this even necessary anymore? 
 df_out = pd.concat([
+df_SMs.groupby(level=0)['SM_type'].apply(es_utils.join_col_vals),
+df_SMs.groupby(level=0)['sub_type'].apply(es_utils.join_col_vals),
+df_SMs.groupby(level=0)['mat_type'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['specific_capacitance'].mean(),
 df_SMs.groupby(level=0)['deltaV_electrolyte'].mean(),
-df_SMs.groupby(level=0)['SM_type'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['mat_basis'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['materials'].apply(es_utils.join_col_vals),
 ], axis=1)

@@ -1,41 +1,41 @@
 original_name,SM_name,SM_type,sub_type,mat_type,materials,mat_basis
-Solar Salt,Solar Salt,sensible_thermal,molten_salt,,Solar Salt,
-HITEC,HITEC,sensible_thermal,molten_salt,,HITEC,
-HITEC XL,HITEC XL,sensible_thermal,molten_salt,,HITEC XL,
-Sodium,Na,sensible_thermal,metal,,Na,
-Mobiltherm 605,Mobiltherm 605,sensible_thermal,oil,,Mobiltherm 605,
+Solar Salt,Solar Salt,sensible_thermal,hot,molten_salt,Solar Salt,
+HITEC,HITEC,sensible_thermal,hot,molten_salt,HITEC,
+HITEC XL,HITEC XL,sensible_thermal,hot,molten_salt,HITEC XL,
+Sodium,Na,sensible_thermal,hot,metal,Na,
+Mobiltherm 605,Mobiltherm 605,sensible_thermal,hot,oil,Mobiltherm 605,
 "Therminol VP1
-(vapor pressure at 400 °C: 10.9 bar)",Therminol VP1,sensible_thermal,oil,,Therminol VP1,
-Sulfur,S,sensible_thermal,other_solid,,S,
-Sunflower oil,Vegetable Oil,sensible_thermal,oil,,Vegetable Oil,
-Aluminium,Al,sensible_thermal,metal,,Al,
-Cast iron,Fe,sensible_thermal,metal,,Fe,
-NaCl,NaCl,sensible_thermal,molten_salt,,NaCl,
-Granite,Granite,sensible_thermal,rock,,Stone,
-Limestone,Limestone,sensible_thermal,rock,,Stone,
-Sandstone,Sandstone,sensible_thermal,rock,,Stone,
-Basalt,Basalt,sensible_thermal,rock,,Stone,
-Al2O3,Al2O3,sensible_thermal,other_solid,,Al2O3,
-SiO2,SiO2,sensible_thermal,other_solid,,SiO2,
-MgO,MgO,sensible_thermal,other_solid,,MgO,
-Concrete,Concrete,sensible_thermal,other_solid,,Concrete,
+(vapor pressure at 400 °C: 10.9 bar)",Therminol VP1,sensible_thermal,hot,oil,Therminol VP1,
+Sulfur,S,sensible_thermal,hot,other_solid,S,
+Sunflower oil,Vegetable Oil,sensible_thermal,hot,oil,Vegetable Oil,
+Aluminium,Al,sensible_thermal,hot,metal,Al,
+Cast iron,Fe,sensible_thermal,hot,metal,Fe,
+NaCl,NaCl,sensible_thermal,hot,molten_salt,NaCl,
+Granite,Granite,sensible_thermal,both,rock,Stone,
+Limestone,Limestone,sensible_thermal,both,rock,Stone,
+Sandstone,Sandstone,sensible_thermal,both,rock,Stone,
+Basalt,Basalt,sensible_thermal,both,rock,Stone,
+Al2O3,Al2O3,sensible_thermal,hot,other_solid,Al2O3,
+SiO2,SiO2,sensible_thermal,hot,other_solid,SiO2,
+MgO,MgO,sensible_thermal,hot,other_solid,MgO,
+Concrete,Concrete,sensible_thermal,both,other_solid,Concrete,
 "Castable
 ceramic",Castable ceramic,sensible_thermal,,,,
-Graphite,Graphite,sensible_thermal,other_solid,,Graphite,
-KNO3-NaNO2-NaNO3,HITEC,latent_thermal,molten_salt,,HITEC,
+Graphite,Graphite,sensible_thermal,hot,other_solid,Graphite,
+KNO3-NaNO2-NaNO3,HITEC,latent_thermal,hot,molten_salt,HITEC,
 "NaNO3-LiNO3
 51-49%","NaLiNO3
-",latent_thermal,molten_salt,,"[('LiNO3', 0.49), ('NaNO3', 0.51)]",mass
+",latent_thermal,hot,molten_salt,"[('LiNO3', 0.49), ('NaNO3', 0.51)]",mass
 "KNO3-NaNO3
 54-46%","NaKNO3
-",latent_thermal,molten_salt,,"[('KNO3', 0.54), ('NaNO3', 0.46)]",mass
-NaOH-NaNO3-MnO2,,latent_thermal,molten_salt,,"[('NaOH', 0.918), ('NaNO3', 0.08), ('MnO2', 0.002)]",mass
-NaNO3,NaNO3,latent_thermal,molten_salt,,NaNO3,
-KNO3,KNO3,latent_thermal,molten_salt,,KNO3,
+",latent_thermal,hot,molten_salt,"[('KNO3', 0.54), ('NaNO3', 0.46)]",mass
+NaOH-NaNO3-MnO2,,latent_thermal,hot,molten_salt,"[('NaOH', 0.918), ('NaNO3', 0.08), ('MnO2', 0.002)]",mass
+NaNO3,NaNO3,latent_thermal,hot,molten_salt,NaNO3,
+KNO3,KNO3,latent_thermal,hot,molten_salt,KNO3,
 "K2CO3 + Li2CO3
-65-35%",KLiCO3,latent_thermal,molten_salt,,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass
+65-35%",KLiCO3,latent_thermal,hot,molten_salt,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass
 "AL-Si
-88-12%",Al/Si,latent_thermal,molten_salt,,"[('Al', 0.88), ('Si', 0.12)]",mass
+88-12%",Al/Si,latent_thermal,hot,molten_salt,"[('Al', 0.88), ('Si', 0.12)]",mass
 "LiF-CaF2
-80-20%",LiCaF,latent_thermal,molten_salt,,"[('LiF', 0.8), ('CaF2', 0.2)]",mass
-LiF,LiF,latent_thermal,molten_salt,,LiF,
+80-20%",LiCaF,latent_thermal,hot,molten_salt,"[('LiF', 0.8), ('CaF2', 0.2)]",mass
+LiF,LiF,latent_thermal,hot,molten_salt,LiF,

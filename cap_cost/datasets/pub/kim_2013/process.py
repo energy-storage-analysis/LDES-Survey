@@ -81,17 +81,21 @@ df_couples['n_e'] = [valences[A] for A in df_couples['A'].values]
 x_Ad = df_couples['n_e']/(1+df_couples['n_e'])
 x_Bd = 1 - x_Ad
 
-# df_couples['materials'] = "[('" + df_couples['A'] + "', 1), ('" + df_couples['B'] + "', 1)]"
+##Now being handled by lookup table
 df_couples['materials'] = "[('" + df_couples['A'] + "', " + x_Ad.astype(str) +"), ('" + df_couples['B'] + "', " + x_Bd.astype(str) + ")]"
 df_couples['materials'] = df_couples['materials'].astype(str)
 
 df_couples = df_couples.drop(['A', 'B'], axis=1)
 df_couples = df_couples.rename({'index': 'original_name'}, axis=1)
 
-df_couples['SM_type'] = 'liquid_metal_battery'
 df_couples['mat_basis'] = 'molar'
 
-df_couples.index.name = 'SM_name'
+SM_lookup = pd.read_csv('SM_lookup.csv')
+df_couples= pd.merge(df_couples, SM_lookup, on='original_name')
+df_couples = df_couples.dropna(subset=['SM_name'])
+df_couples = df_couples.set_index('SM_name')
+
+# df_couples.index.name = 'SM_name'
 
 df_couples = df_couples.astype({
     'deltaV': 'pint[V]',

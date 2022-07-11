@@ -1,15 +1,15 @@
 ,original_name,T_melt,T_max,Cp,kth,C_kwh_orig,SM_type,sub_type,mat_type,materials,mat_basis
 unit_row,N/U,degree_Celsius,degree_Celsius,kilowatt_hour / kelvin / kilogram,watt / kelvin / meter,USD / kilowatt_hour,N/U,N/U,N/U,N/U,N/U
 SM_name,,,,,,,,,,,
-N-propane,N-propane,-188.0,-42.0,0.0005611111111111111,0.17,6.4,sensible_thermal,cold,,N-propane,mass
-Isopentane,Isopentane,-160.0,15.0,0.0005138888888888889,0.14,25.5,sensible_thermal,cold,,Isopentane,mass
-N-pentane,N-pentane,-130.0,15.0,0.0005666666666666667,0.14,45.2,sensible_thermal,cold,,N-pentane,mass
-Ethanol,Ethanol,-114.0,15.0,0.0005583333333333333,0.18,21.7,sensible_thermal,cold,,Ethanol,mass
-Methanol,Methanol,-98.0,15.0,0.0006277777777777777,,15.8,sensible_thermal,cold,,Methanol,mass
-Water,Water,15.0,100.0,0.001161111111111111,0.65,0.2,sensible_thermal,other_fluid,,Water,mass
-Ethylene glycol,Ethylene glycol,15.0,197.0,0.0007805555555555556,0.22,25.0,sensible_thermal,other_fluid,,Ethylene glycol,mass
-Vegetable Oil,Sunflower oil,15.0,250.0,0.0007,0.16,6.8,sensible_thermal,oil,,Vegetable Oil,mass
-HITEC XL,Hitec XL,120.0,500.0,0.0004027777777777778,0.2,6.7,sensible_thermal,molten_salt,,HITEC XL,mass
-Solar Salt,Solar salt,230.0,600.0,0.00043055555555555555,0.55,5.5,sensible_thermal,molten_salt,,Solar Salt,mass
-Na,Sodium,98.0,600.0,0.00034722222222222224,46.0,22.5,sensible_thermal,metal,,Na,mass
-NaK,Eutectic Na-K,15.0,600.0,0.00024166666666666667,26.2,31.1,sensible_thermal,metal,,"[('Na', 0.5), ('K', 0.5)]",molar
+N-propane,N-propane,-188.0,-42.0,0.0005611111111111111,0.17,6.4,sensible_thermal,cold,hydrocarbon,N-propane,mass
+Isopentane,Isopentane,-160.0,15.0,0.0005138888888888889,0.14,25.5,sensible_thermal,cold,hydrocarbon,Isopentane,mass
+N-pentane,N-pentane,-130.0,15.0,0.0005666666666666667,0.14,45.2,sensible_thermal,cold,hydrocarbon,N-pentane,mass
+Ethanol,Ethanol,-114.0,15.0,0.0005583333333333333,0.18,21.7,sensible_thermal,cold,hydrocarbon,Ethanol,mass
+Methanol,Methanol,-98.0,15.0,0.0006277777777777777,,15.8,sensible_thermal,cold,hydrocarbon,Methanol,mass
+Water,Water,15.0,100.0,0.001161111111111111,0.65,0.2,sensible_thermal,hot,other_fluid,Water,mass
+Ethylene glycol,Ethylene glycol,15.0,197.0,0.0007805555555555556,0.22,25.0,sensible_thermal,hot,other_fluid,Ethylene glycol,mass
+Vegetable Oil,Sunflower oil,15.0,250.0,0.0007,0.16,6.8,sensible_thermal,hot,oil,Vegetable Oil,mass
+HITEC XL,Hitec XL,120.0,500.0,0.0004027777777777778,0.2,6.7,sensible_thermal,hot,molten_salt,HITEC XL,mass
+Solar Salt,Solar salt,230.0,600.0,0.00043055555555555555,0.55,5.5,sensible_thermal,hot,molten_salt,Solar Salt,mass
+Na,Sodium,98.0,600.0,0.00034722222222222224,46.0,22.5,sensible_thermal,hot,metal,Na,mass
+NaK,Eutectic Na-K,15.0,600.0,0.00024166666666666667,26.2,31.1,sensible_thermal,hot,metal,"[('Na', 0.5), ('K', 0.5)]",molar

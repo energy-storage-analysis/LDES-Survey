@@ -1,10 +1,10 @@
-,materials,mat_basis,original_name,SM_type,sub_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,delta_height,source,notes
-unit_row,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,m,N/U,N/U
-SM_name,,,,,,,,,,,,,,,,,,
-Iron Ore,Iron Ore,,Magnetite,sensible_thermal,other_solid,0.00025,,1000,,,,,,,,,Grosu 2017,TODO: approximate from graph average by eye
-Iron Ore,Iron Ore,,Magnetite,sensible_thermal,other_solid,,5,,,,,,,,,,Molgaard 1971,https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
-Al2O3,Al2O3,,Al2O3 Dielectric Capacitor,dielectric_capacitor,,,,,,500000000,10,3950,,,,,TODO,"The dielectric breakdown strength is larger for thin films of Aluminum oxide than in bulk samples and is on the order of 500 MV/um.(Hanby et al., 2018; Stellanova, 2012; Talbi et al., 2010) "
-Sand,Sand,,Sand,sensible_thermal,rock,0.000277,,1000,,,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
-NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,https://www.sciencedirect.com/science/article/pii/S2666386422000911?via%3Dihub
-Fossil CH4,Fossil CH4,molar,,synfuel,other,,,,,,,,0.2554,8,,,Standard Gibbs,
-Cryogenic H2 Tank,Cryogenic H2 Tank,,,synfuel,tank,,,,,,,,"0.0659 ",2,,,Standard Gibbs,
+,materials,mat_basis,original_name,SM_type,sub_type,mat_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,delta_height,source,notes
+unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,m,N/U,N/U
+SM_name,,,,,,,,,,,,,,,,,,,
+Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,0.00025,,1000,,,,,,,,,Grosu 2017,TODO: approximate from graph average by eye
+Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,,5,,,,,,,,,,Molgaard 1971,https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
+Al2O3,Al2O3,,Al2O3 Dielectric Capacitor,dielectric_capacitor,,,,,,,500000000,10,3950,,,,,TODO,"The dielectric breakdown strength is larger for thin films of Aluminum oxide than in bulk samples and is on the order of 500 MV/um.(Hanby et al., 2018; Stellanova, 2012; Talbi et al., 2010) "
+Sand,Sand,,Sand,sensible_thermal,hot,rock,0.000277,,1000,,,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
+NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,coupled_battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,https://www.sciencedirect.com/science/article/pii/S2666386422000911?via%3Dihub
+Fossil CH4,Fossil CH4,molar,,synfuel,feedstock,,,,,,,,,0.2554,8,,,Standard Gibbs,
+Cryogenic H2 Tank,Cryogenic H2 Tank,,,synfuel,tank,,,,,,,,,"0.0659 ",2,,,Standard Gibbs,

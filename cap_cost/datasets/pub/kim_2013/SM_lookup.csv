@@ -1,73 +1,73 @@
-original_name,SM_name,deltaV,SM_type,sub_type,mat_type,materials,mat_basis
-Li/Zn,Li/Zn,0.19,liquid_metal_battery,,,"[('Li', 1), ('Zn', 1)]",molar
-Na/Zn,Na/Zn,,liquid_metal_battery,,,"[('Na', 1), ('Zn', 1)]",molar
-K/Zn,K/Zn,,liquid_metal_battery,,,"[('K', 1), ('Zn', 1)]",molar
-Mg/Zn,Mg/Zn,0.145,liquid_metal_battery,,,"[('Mg', 1), ('Zn', 1)]",molar
-Ca/Zn,Ca/Zn,0.305,liquid_metal_battery,,,"[('Ca', 1), ('Zn', 1)]",molar
-Ba/Zn,Ba/Zn,,liquid_metal_battery,,,"[('Ba', 1), ('Zn', 1)]",molar
-Li/Cd,Li/Cd,0.465,liquid_metal_battery,,,"[('Li', 1), ('Cd', 1)]",molar
-Na/Cd,Na/Cd,0.12,liquid_metal_battery,,,"[('Na', 1), ('Cd', 1)]",molar
-K/Cd,K/Cd,,liquid_metal_battery,,,"[('K', 1), ('Cd', 1)]",molar
-Mg/Cd,Mg/Cd,0.15,liquid_metal_battery,,,"[('Mg', 1), ('Cd', 1)]",molar
-Ca/Cd,Ca/Cd,,liquid_metal_battery,,,"[('Ca', 1), ('Cd', 1)]",molar
-Ba/Cd,Ba/Cd,,liquid_metal_battery,,,"[('Ba', 1), ('Cd', 1)]",molar
-Li/Hg,Li/Hg,,liquid_metal_battery,,,"[('Li', 1), ('Hg', 1)]",molar
-Na/Hg,Na/Hg,0.4,liquid_metal_battery,,,"[('Na', 1), ('Hg', 1)]",molar
-K/Hg,K/Hg,0.395,liquid_metal_battery,,,"[('K', 1), ('Hg', 1)]",molar
-Mg/Hg,Mg/Hg,,liquid_metal_battery,,,"[('Mg', 1), ('Hg', 1)]",molar
-Ca/Hg,Ca/Hg,,liquid_metal_battery,,,"[('Ca', 1), ('Hg', 1)]",molar
-Ba/Hg,Ba/Hg,,liquid_metal_battery,,,"[('Ba', 1), ('Hg', 1)]",molar
-Li/Al,Li/Al,0.3,liquid_metal_battery,,,"[('Li', 1), ('Al', 1)]",molar
-Na/Al,Na/Al,,liquid_metal_battery,,,"[('Na', 1), ('Al', 1)]",molar
-K/Al,K/Al,,liquid_metal_battery,,,"[('K', 1), ('Al', 1)]",molar
-Mg/Al,Mg/Al,0.135,liquid_metal_battery,,,"[('Mg', 1), ('Al', 1)]",molar
-Ca/Al,Ca/Al,0.425,liquid_metal_battery,,,"[('Ca', 1), ('Al', 1)]",molar
-Ba/Al,Ba/Al,0.34,liquid_metal_battery,,,"[('Ba', 1), ('Al', 1)]",molar
-Li/Ga,Li/Ga,0.58,liquid_metal_battery,,,"[('Li', 1), ('Ga', 1)]",molar
-Na/Ga,Na/Ga,0.10500000000000001,liquid_metal_battery,,,"[('Na', 1), ('Ga', 1)]",molar
-K/Ga,K/Ga,,liquid_metal_battery,,,"[('K', 1), ('Ga', 1)]",molar
-Mg/Ga,Mg/Ga,0.195,liquid_metal_battery,,,"[('Mg', 1), ('Ga', 1)]",molar
-Ca/Ga,Ca/Ga,,liquid_metal_battery,,,"[('Ca', 1), ('Ga', 1)]",molar
-Ba/Ga,Ba/Ga,,liquid_metal_battery,,,"[('Ba', 1), ('Ga', 1)]",molar
-Li/In,Li/In,0.525,liquid_metal_battery,,,"[('Li', 1), ('In', 1)]",molar
-Na/In,Na/In,0.18,liquid_metal_battery,,,"[('Na', 1), ('In', 1)]",molar
-K/In,K/In,0.13,liquid_metal_battery,,,"[('K', 1), ('In', 1)]",molar
-Mg/In,Mg/In,0.175,liquid_metal_battery,,,"[('Mg', 1), ('In', 1)]",molar
-Ca/In,Ca/In,0.48,liquid_metal_battery,,,"[('Ca', 1), ('In', 1)]",molar
-Ba/In,Ba/In,,liquid_metal_battery,,,"[('Ba', 1), ('In', 1)]",molar
-Li/Tl,Li/Tl,,liquid_metal_battery,,,"[('Li', 1), ('Tl', 1)]",molar
-Na/Tl,Na/Tl,0.265,liquid_metal_battery,,,"[('Na', 1), ('Tl', 1)]",molar
-K/Tl,K/Tl,0.255,liquid_metal_battery,,,"[('K', 1), ('Tl', 1)]",molar
-Mg/Tl,Mg/Tl,0.175,liquid_metal_battery,,,"[('Mg', 1), ('Tl', 1)]",molar
-Ca/Tl,Ca/Tl,,liquid_metal_battery,,,"[('Ca', 1), ('Tl', 1)]",molar
-Ba/Tl,Ba/Tl,,liquid_metal_battery,,,"[('Ba', 1), ('Tl', 1)]",molar
-Li/Sn,Li/Sn,0.635,liquid_metal_battery,,,"[('Li', 1), ('Sn', 1)]",molar
-Na/Sn,Na/Sn,0.335,liquid_metal_battery,,,"[('Na', 1), ('Sn', 1)]",molar
-K/Sn,K/Sn,,liquid_metal_battery,,,"[('K', 1), ('Sn', 1)]",molar
-Mg/Sn,Mg/Sn,0.27,liquid_metal_battery,,,"[('Mg', 1), ('Sn', 1)]",molar
-Ca/Sn,Ca/Sn,0.64,liquid_metal_battery,,,"[('Ca', 1), ('Sn', 1)]",molar
-Ba/Sn,Ba/Sn,0.895,liquid_metal_battery,,,"[('Ba', 1), ('Sn', 1)]",molar
-Li/Pb,Li/Pb,0.55,liquid_metal_battery,,,"[('Li', 1), ('Pb', 1)]",molar
-Na/Pb,Na/Pb,0.33499999999999996,liquid_metal_battery,,,"[('Na', 1), ('Pb', 1)]",molar
-K/Pb,K/Pb,0.33,liquid_metal_battery,,,"[('K', 1), ('Pb', 1)]",molar
-Mg/Pb,Mg/Pb,0.16999999999999998,liquid_metal_battery,,,"[('Mg', 1), ('Pb', 1)]",molar
-Ca/Pb,Ca/Pb,0.595,liquid_metal_battery,,,"[('Ca', 1), ('Pb', 1)]",molar
-Ba/Pb,Ba/Pb,0.8400000000000001,liquid_metal_battery,,,"[('Ba', 1), ('Pb', 1)]",molar
-Li/Sb,Li/Sb,0.92,liquid_metal_battery,,,"[('Li', 1), ('Sb', 1)]",molar
-Na/Sb,Na/Sb,0.735,liquid_metal_battery,,,"[('Na', 1), ('Sb', 1)]",molar
-K/Sb,K/Sb,0.775,liquid_metal_battery,,,"[('K', 1), ('Sb', 1)]",molar
-Mg/Sb,Mg/Sb,0.45,liquid_metal_battery,,,"[('Mg', 1), ('Sb', 1)]",molar
-Ca/Sb,Ca/Sb,0.99,liquid_metal_battery,,,"[('Ca', 1), ('Sb', 1)]",molar
-Ba/Sb,Ba/Sb,1.275,liquid_metal_battery,,,"[('Ba', 1), ('Sb', 1)]",molar
-Li/Bi,Li/Bi,0.815,liquid_metal_battery,,,"[('Li', 1), ('Bi', 1)]",molar
-Na/Bi,Na/Bi,0.605,liquid_metal_battery,,,"[('Na', 1), ('Bi', 1)]",molar
-K/Bi,K/Bi,0.675,liquid_metal_battery,,,"[('K', 1), ('Bi', 1)]",molar
-Mg/Bi,Mg/Bi,0.325,liquid_metal_battery,,,"[('Mg', 1), ('Bi', 1)]",molar
-Ca/Bi,Ca/Bi,0.845,liquid_metal_battery,,,"[('Ca', 1), ('Bi', 1)]",molar
-Ba/Bi,Ba/Bi,1.135,liquid_metal_battery,,,"[('Ba', 1), ('Bi', 1)]",molar
-Li/Te,Li/Te,1.73,liquid_metal_battery,,,"[('Li', 1), ('Te', 1)]",molar
-Na/Te,Na/Te,1.595,liquid_metal_battery,,,"[('Na', 1), ('Te', 1)]",molar
-K/Te,K/Te,1.7850000000000001,liquid_metal_battery,,,"[('K', 1), ('Te', 1)]",molar
-Mg/Te,Mg/Te,,liquid_metal_battery,,,"[('Mg', 1), ('Te', 1)]",molar
-Ca/Te,Ca/Te,,liquid_metal_battery,,,"[('Ca', 1), ('Te', 1)]",molar
-Ba/Te,Ba/Te,,liquid_metal_battery,,,"[('Ba', 1), ('Te', 1)]",molar
+original_name,SM_name,SM_type,sub_type,mat_type
+Li/Zn,Li/Zn,coupled_battery,liquid_metal_battery,
+Na/Zn,Na/Zn,coupled_battery,liquid_metal_battery,
+K/Zn,K/Zn,coupled_battery,liquid_metal_battery,
+Mg/Zn,Mg/Zn,coupled_battery,liquid_metal_battery,
+Ca/Zn,Ca/Zn,coupled_battery,liquid_metal_battery,
+Ba/Zn,Ba/Zn,coupled_battery,liquid_metal_battery,
+Li/Cd,Li/Cd,coupled_battery,liquid_metal_battery,
+Na/Cd,Na/Cd,coupled_battery,liquid_metal_battery,
+K/Cd,K/Cd,coupled_battery,liquid_metal_battery,
+Mg/Cd,Mg/Cd,coupled_battery,liquid_metal_battery,
+Ca/Cd,Ca/Cd,coupled_battery,liquid_metal_battery,
+Ba/Cd,Ba/Cd,coupled_battery,liquid_metal_battery,
+Li/Hg,Li/Hg,coupled_battery,liquid_metal_battery,
+Na/Hg,Na/Hg,coupled_battery,liquid_metal_battery,
+K/Hg,K/Hg,coupled_battery,liquid_metal_battery,
+Mg/Hg,Mg/Hg,coupled_battery,liquid_metal_battery,
+Ca/Hg,Ca/Hg,coupled_battery,liquid_metal_battery,
+Ba/Hg,Ba/Hg,coupled_battery,liquid_metal_battery,
+Li/Al,Li/Al,coupled_battery,liquid_metal_battery,
+Na/Al,Na/Al,coupled_battery,liquid_metal_battery,
+K/Al,K/Al,coupled_battery,liquid_metal_battery,
+Mg/Al,Mg/Al,coupled_battery,liquid_metal_battery,
+Ca/Al,Ca/Al,coupled_battery,liquid_metal_battery,
+Ba/Al,Ba/Al,coupled_battery,liquid_metal_battery,
+Li/Ga,Li/Ga,coupled_battery,liquid_metal_battery,
+Na/Ga,Na/Ga,coupled_battery,liquid_metal_battery,
+K/Ga,K/Ga,coupled_battery,liquid_metal_battery,
+Mg/Ga,Mg/Ga,coupled_battery,liquid_metal_battery,
+Ca/Ga,Ca/Ga,coupled_battery,liquid_metal_battery,
+Ba/Ga,Ba/Ga,coupled_battery,liquid_metal_battery,
+Li/In,Li/In,coupled_battery,liquid_metal_battery,
+Na/In,Na/In,coupled_battery,liquid_metal_battery,
+K/In,K/In,coupled_battery,liquid_metal_battery,
+Mg/In,Mg/In,coupled_battery,liquid_metal_battery,
+Ca/In,Ca/In,coupled_battery,liquid_metal_battery,
+Ba/In,Ba/In,coupled_battery,liquid_metal_battery,
+Li/Tl,Li/Tl,coupled_battery,liquid_metal_battery,
+Na/Tl,Na/Tl,coupled_battery,liquid_metal_battery,
+K/Tl,K/Tl,coupled_battery,liquid_metal_battery,
+Mg/Tl,Mg/Tl,coupled_battery,liquid_metal_battery,
+Ca/Tl,Ca/Tl,coupled_battery,liquid_metal_battery,
+Ba/Tl,Ba/Tl,coupled_battery,liquid_metal_battery,
+Li/Sn,Li/Sn,coupled_battery,liquid_metal_battery,
+Na/Sn,Na/Sn,coupled_battery,liquid_metal_battery,
+K/Sn,K/Sn,coupled_battery,liquid_metal_battery,
+Mg/Sn,Mg/Sn,coupled_battery,liquid_metal_battery,
+Ca/Sn,Ca/Sn,coupled_battery,liquid_metal_battery,
+Ba/Sn,Ba/Sn,coupled_battery,liquid_metal_battery,
+Li/Pb,Li/Pb,coupled_battery,liquid_metal_battery,
+Na/Pb,Na/Pb,coupled_battery,liquid_metal_battery,
+K/Pb,K/Pb,coupled_battery,liquid_metal_battery,
+Mg/Pb,Mg/Pb,coupled_battery,liquid_metal_battery,
+Ca/Pb,Ca/Pb,coupled_battery,liquid_metal_battery,
+Ba/Pb,Ba/Pb,coupled_battery,liquid_metal_battery,
+Li/Sb,Li/Sb,coupled_battery,liquid_metal_battery,
+Na/Sb,Na/Sb,coupled_battery,liquid_metal_battery,
+K/Sb,K/Sb,coupled_battery,liquid_metal_battery,
+Mg/Sb,Mg/Sb,coupled_battery,liquid_metal_battery,
+Ca/Sb,Ca/Sb,coupled_battery,liquid_metal_battery,
+Ba/Sb,Ba/Sb,coupled_battery,liquid_metal_battery,
+Li/Bi,Li/Bi,coupled_battery,liquid_metal_battery,
+Na/Bi,Na/Bi,coupled_battery,liquid_metal_battery,
+K/Bi,K/Bi,coupled_battery,liquid_metal_battery,
+Mg/Bi,Mg/Bi,coupled_battery,liquid_metal_battery,
+Ca/Bi,Ca/Bi,coupled_battery,liquid_metal_battery,
+Ba/Bi,Ba/Bi,coupled_battery,liquid_metal_battery,
+Li/Te,Li/Te,coupled_battery,liquid_metal_battery,
+Na/Te,Na/Te,coupled_battery,liquid_metal_battery,
+K/Te,K/Te,coupled_battery,liquid_metal_battery,
+Mg/Te,Mg/Te,coupled_battery,liquid_metal_battery,
+Ca/Te,Ca/Te,coupled_battery,liquid_metal_battery,
+Ba/Te,Ba/Te,coupled_battery,liquid_metal_battery,

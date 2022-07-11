@@ -1,13 +1,13 @@
 original_name,MF_host,SM_name,SM_type,sub_type,mat_type,materials,mat_basis
-NaAlH44 1/3Na3AlH6  2/3Al   H2(g),NaAlH2,NaAlH2,synfuel,metal_hydride,,"[('Na', 1), ('Al',1)]",molar
-Na3AlH64 3NaH   Al   3/2H2(g),Na3AlH3,Na3AlH3,synfuel,metal_hydride,,"[('Na',3), ('Al',1)]",molar
-NaAlH44Na3AlH64 NaH   Al   3/2H2(g),,,synfuel,metal_hydride,,,molar
-Na2LiAlH64 2NaH   LiH   Al   3/2H2(g),Na2LiAlH3,Na2LiAlH3,synfuel,metal_hydride,,"[('Na',2), ('Li',1), ('Al',1)]",molar
-K2LiAlH64 2 KH   LiH   Al   3/2H2(g),K2LiAlH3,K2LiAlH3,synfuel,metal_hydride,,"[('K',2), ('Li',1), ('Al',1)]",molar
-KAlH4 LiCl4KCl   LiH   Al 3/2H2(g) [69],KClLiAlH,KClLiAlH,synfuel,metal_hydride,,"[('K',2), ('Al',1)]",molar
-Mg(NH2)2  2LiH 4 Li2Mg(NH)2  2H2(g),Li2Mg(NH2)2,Li2Mg(NH2)2,synfuel,metal_hydride,,"[('Mg',1), ('N2',1)]",molar
-AB2 type - Hydralloy C5:,,,synfuel,metal_hydride,,,molar
-Ti1.2Mn1.8H3,Ti12Mn18H30,Ti12Mn18H30,synfuel,metal_hydride,,"[('Ti',12), ('Mn',18)]",molar
-[51]TiFeH2.04 TiFeH1.04,,,synfuel,metal_hydride,,,molar
-TiFeH1.044 TiFeH0.1 [51],,,synfuel,metal_hydride,,,molar
-TiFeH2.04TiFeH1.044TiFeH0.1 [51],Ti10Fe10H,Ti10Fe10H,synfuel,metal_hydride,,"[('Ti',10), ('Fe',10)]",molar
+NaAlH44 1/3Na3AlH6  2/3Al   H2(g),NaAlH2,NaAlH2,synfuel,chemical,metal_hydride,"[('Na', 1), ('Al',1)]",molar
+Na3AlH64 3NaH   Al   3/2H2(g),Na3AlH3,Na3AlH3,synfuel,chemical,metal_hydride,"[('Na',3), ('Al',1)]",molar
+NaAlH44Na3AlH64 NaH   Al   3/2H2(g),,,synfuel,chemical,metal_hydride,,molar
+Na2LiAlH64 2NaH   LiH   Al   3/2H2(g),Na2LiAlH3,Na2LiAlH3,synfuel,chemical,metal_hydride,"[('Na',2), ('Li',1), ('Al',1)]",molar
+K2LiAlH64 2 KH   LiH   Al   3/2H2(g),K2LiAlH3,K2LiAlH3,synfuel,chemical,metal_hydride,"[('K',2), ('Li',1), ('Al',1)]",molar
+KAlH4 LiCl4KCl   LiH   Al 3/2H2(g) [69],KClLiAlH,KClLiAlH,synfuel,chemical,metal_hydride,"[('K',2), ('Al',1)]",molar
+Mg(NH2)2  2LiH 4 Li2Mg(NH)2  2H2(g),Li2Mg(NH2)2,Li2Mg(NH2)2,synfuel,chemical,metal_hydride,"[('Mg',1), ('N2',1)]",molar
+AB2 type - Hydralloy C5:,,,synfuel,chemical,metal_hydride,,molar
+Ti1.2Mn1.8H3,Ti12Mn18H30,Ti12Mn18H30,synfuel,chemical,metal_hydride,"[('Ti',12), ('Mn',18)]",molar
+[51]TiFeH2.04 TiFeH1.04,,,synfuel,chemical,metal_hydride,,molar
+TiFeH1.044 TiFeH0.1 [51],,,synfuel,chemical,metal_hydride,,molar
+TiFeH2.04TiFeH1.044TiFeH0.1 [51],Ti10Fe10H,Ti10Fe10H,synfuel,chemical,metal_hydride,"[('Ti',10), ('Fe',10)]",molar

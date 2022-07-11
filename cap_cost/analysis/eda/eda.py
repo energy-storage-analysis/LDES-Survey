@@ -26,6 +26,7 @@ palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
 
+df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0] 
 
 # %%
 plt.figure(figsize=(7,5))

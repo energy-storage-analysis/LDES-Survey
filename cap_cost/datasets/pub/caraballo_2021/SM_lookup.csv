@@ -1,17 +1,17 @@
 original_name,SM_name,materials,SM_type,sub_type,mat_type,mat_basis
-Solar Salt,Solar Salt,Solar Salt,sensible_thermal,molten_salt,,
-HITEC,HITEC,HITEC,sensible_thermal,molten_salt,,
-HITEC XL,HITEC XL,HITEC XL,sensible_thermal,molten_salt,,
-LiNaKNO3,LiNaKNO3,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal,molten_salt,,mass
-LiNaKCaNO3,LiNaKCaNO3,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal,molten_salt,,mass
-LiNaKNO3NO2,LiNaKNO3NO2,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal,molten_salt,,mass
-KMgCl,KMgCl,"[('KCl', 0.625), ('MgCl2', 0.375)]",sensible_thermal,molten_salt,,mass
-NaKMgCl,NaKMgCl,"[('NaCl', 0.205), ('KCl', 0.309), ('MgCl2', 0.486)]",sensible_thermal,molten_salt,,mass
-NaMgCaCl,NaMgCaCl,"[('NaCl', 0.396), ('MgCl2', 0.39), ('CaCl2', 0.214)]",sensible_thermal,molten_salt,,mass
-NaKZnCl,NaKZnCl,"[('NaCl', 0.075), ('KCl', 0.239), ('ZnCl2', 0.686)]",sensible_thermal,molten_salt,,mass
-KMgZnCl,KMgZnCl,"[('KCl', 0.494), ('MgCl2', 0.155), ('ZnCl2', 0.351)]",sensible_thermal,molten_salt,,mass
-LiNaKF,LiNaKF,"[('LiF', 0.292), ('NaF', 0.117), ('KF', 0.591)]",sensible_thermal,molten_salt,,mass
-NaBF,NaBF,"[('NaF', 0.03), ('NaBF4', 0.97)]",sensible_thermal,molten_salt,,mass
-KBF,KBF,"[('KF', 0.13), ('KBF4', 0.87)]",sensible_thermal,molten_salt,,mass
-KZrF,KZrF,"[('KF', 0.325), ('ZrF4', 0.675)]",sensible_thermal,molten_salt,,mass
-LiNaKCO3,LiNaKCO3,"[('Li2CO3', 0.321), ('Na2CO3', 0.334), ('K2CO3', 0.345)]",sensible_thermal,molten_salt,,mass
+Solar Salt,Solar Salt,Solar Salt,sensible_thermal,hot,molten_salt,
+HITEC,HITEC,HITEC,sensible_thermal,hot,molten_salt,
+HITEC XL,HITEC XL,HITEC XL,sensible_thermal,hot,molten_salt,
+LiNaKNO3,LiNaKNO3,"[('LiNO3', 0.3), ('NaNO3', 0.18), ('KNO3', 0.52)]",sensible_thermal,hot,molten_salt,mass
+LiNaKCaNO3,LiNaKCaNO3,"[('LiNO3', 0.155), ('NaNO3', 0.082), ('KNO3', .543), ('Ca(NO3)2', 0.22)]",sensible_thermal,hot,molten_salt,mass
+LiNaKNO3NO2,LiNaKNO3NO2,"[('LiNO3', 0.09), ('NaNO3', 0.423), ('KNO3', 0.336), ('KNO2', 0.151)]",sensible_thermal,hot,molten_salt,mass
+KMgCl,KMgCl,"[('KCl', 0.625), ('MgCl2', 0.375)]",sensible_thermal,hot,molten_salt,mass
+NaKMgCl,NaKMgCl,"[('NaCl', 0.205), ('KCl', 0.309), ('MgCl2', 0.486)]",sensible_thermal,hot,molten_salt,mass
+NaMgCaCl,NaMgCaCl,"[('NaCl', 0.396), ('MgCl2', 0.39), ('CaCl2', 0.214)]",sensible_thermal,hot,molten_salt,mass
+NaKZnCl,NaKZnCl,"[('NaCl', 0.075), ('KCl', 0.239), ('ZnCl2', 0.686)]",sensible_thermal,hot,molten_salt,mass
+KMgZnCl,KMgZnCl,"[('KCl', 0.494), ('MgCl2', 0.155), ('ZnCl2', 0.351)]",sensible_thermal,hot,molten_salt,mass
+LiNaKF,LiNaKF,"[('LiF', 0.292), ('NaF', 0.117), ('KF', 0.591)]",sensible_thermal,hot,molten_salt,mass
+NaBF,NaBF,"[('NaF', 0.03), ('NaBF4', 0.97)]",sensible_thermal,hot,molten_salt,mass
+KBF,KBF,"[('KF', 0.13), ('KBF4', 0.87)]",sensible_thermal,hot,molten_salt,mass
+KZrF,KZrF,"[('KF', 0.325), ('ZrF4', 0.675)]",sensible_thermal,hot,molten_salt,mass
+LiNaKCO3,LiNaKCO3,"[('Li2CO3', 0.321), ('Na2CO3', 0.334), ('K2CO3', 0.345)]",sensible_thermal,hot,molten_salt,mass
