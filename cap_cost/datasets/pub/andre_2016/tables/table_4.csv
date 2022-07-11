@@ -1,4 +1,4 @@
-original_name,temperature,enthalpy,specific_energy,sub_type
+original_name,temperature,enthalpy,specific_energy,mat_type
 Ca(OH)2/CaO,515,100.177,1352,hydroxides
 Mg(OH)2/MgO,265,77.745,1333,hydroxides
 Be(OH)2/BeO,70,51.276,1191,hydroxides

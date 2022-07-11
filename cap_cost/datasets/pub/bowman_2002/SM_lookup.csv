@@ -1,10 +1,10 @@
-original_name,SM_name,MF_host,SM_type,sub_type,materials,mat_basis
-MgH2,MgH2,Mg,synfuel,metal_hydride,Mg,molar
-VH2,VH2,V,synfuel,metal_hydride,V,molar
-Mg2NiH4,Mg2NiH4,Mg2Ni,synfuel,metal_hydride,"[('Mg',2), ('Ni',1)]",molar
-TiFeH2,TiFeH2,TiFe,synfuel,metal_hydride,"[('Ti',1), ('Fe',1)]",molar
-ZrNiH3,ZrNiH3,ZrNi,synfuel,metal_hydride,"[('Zr',1), ('Ni',1)]",molar
-TiMn1.4V0.62H3.4,TiMn1.4V0.62H3.4,TiMn1.4V0.62,synfuel,metal_hydride,"[('Ti',1), ('Mn',1.4), ('V',0.62)]",molar
-ZrMn2H3.6,ZrMn2H3.6,ZrMn2,synfuel,metal_hydride,"[('Zr',1), ('Mn',2)]",molar
-LaNi5H6.5,LaNi5H6.5,LaNi5,synfuel,metal_hydride,"[('La',1), ('Ni',5)]",molar
-LaNi4.8Sn0.2H6.0,LaNi4.8Sn0.2H6.0,LaNi4.8Sn0.2,synfuel,metal_hydride,"[('La',1), ('Ni',4.8), ('Sn',0.2)]",molar
+original_name,SM_name,MF_host,SM_type,sub_type,mat_type,materials,mat_basis
+MgH2,MgH2,Mg,synfuel,metal_hydride,,Mg,molar
+VH2,VH2,V,synfuel,metal_hydride,,V,molar
+Mg2NiH4,Mg2NiH4,Mg2Ni,synfuel,metal_hydride,,"[('Mg',2), ('Ni',1)]",molar
+TiFeH2,TiFeH2,TiFe,synfuel,metal_hydride,,"[('Ti',1), ('Fe',1)]",molar
+ZrNiH3,ZrNiH3,ZrNi,synfuel,metal_hydride,,"[('Zr',1), ('Ni',1)]",molar
+TiMn1.4V0.62H3.4,TiMn1.4V0.62H3.4,TiMn1.4V0.62,synfuel,metal_hydride,,"[('Ti',1), ('Mn',1.4), ('V',0.62)]",molar
+ZrMn2H3.6,ZrMn2H3.6,ZrMn2,synfuel,metal_hydride,,"[('Zr',1), ('Mn',2)]",molar
+LaNi5H6.5,LaNi5H6.5,LaNi5,synfuel,metal_hydride,,"[('La',1), ('Ni',5)]",molar
+LaNi4.8Sn0.2H6.0,LaNi4.8Sn0.2H6.0,LaNi4.8Sn0.2,synfuel,metal_hydride,,"[('La',1), ('Ni',4.8), ('Sn',0.2)]",molar

@@ -1,4 +1,4 @@
-original_name,temperature,enthalpy,specific_energy,sub_type
+original_name,temperature,enthalpy,specific_energy,mat_type
 CaCO3/CaO,885,165.832,1656.8,carbonates
 SrCO3/SrO,1220,202.349,1370.65,carbonates
 MgCO3/MgO,300,98.984,1174,carbonates

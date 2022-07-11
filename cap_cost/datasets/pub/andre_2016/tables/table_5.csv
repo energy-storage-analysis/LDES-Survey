@@ -1,4 +1,4 @@
-original_name,temperature,enthalpy,specific_energy,sub_type
+original_name,temperature,enthalpy,specific_energy,mat_type
 Rh2O3/Rh2O,970,249.276,982.1,oxides
 V2O5/V2O4,1710,176.594,970.9,oxides
 Co3O4/CoO,935,196.532,816.1,oxides

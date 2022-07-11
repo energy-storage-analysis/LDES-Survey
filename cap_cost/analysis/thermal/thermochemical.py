@@ -48,7 +48,7 @@ fig = plt.figure(figsize=(7,8))
 x_str='temperature'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='sub_type', legend=True, s=MARKER_SIZE)
+sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='mat_type', legend=True, s=MARKER_SIZE)
 
 # df_tc.plot.scatter(y='C_kwh', x=x_str, sharex=False)
 
