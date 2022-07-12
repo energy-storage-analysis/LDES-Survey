@@ -29,14 +29,18 @@ for SM_type in set(df_SMs['SM_type'].values):
     if 'sub_type' not in df_sel.columns:
         df_sel['sub_type'] = ''
 
-    df_sel['sub_type'] = df_sel['sub_type'].fillna('None')
+    if 'mat_type' not in df_sel.columns:
+        df_sel['mat_type'] = ''
 
-    df_SM_source_info = df_sel.groupby('sub_type')['SM_sources'].value_counts()
+    df_sel['sub_type'] = df_sel['sub_type'].fillna('None')
+    df_sel['mat_type'] = df_sel['mat_type'].fillna('None')
+
+    df_SM_source_info = df_sel.groupby(['sub_type', 'mat_type'])['SM_sources'].value_counts()
     df_SM_source_info.name = 'source_counts'
 
     df_SM_source_info = df_SM_source_info.reset_index()
     df_SM_source_info['SM_type'] = SM_type
-    df_SM_source_info  = df_SM_source_info.set_index(['SM_type','sub_type'])
+    df_SM_source_info  = df_SM_source_info.set_index(['SM_type','sub_type','mat_type'])
     dfs.append(df_SM_source_info)
 
     df_sel = prep_df_pint_out(df_sel)
@@ -50,7 +54,7 @@ df_SM_source_info = pd.concat(dfs)
 #%%
 SM_source_info = df_SM_source_info['SM_sources'] + ': ' + df_SM_source_info['source_counts'].astype(str)
 
-SM_source_info = SM_source_info.groupby(['SM_type','sub_type']).apply(join_col_vals)
+SM_source_info = SM_source_info.groupby(['SM_type','sub_type','mat_type']).apply(join_col_vals)
 
 SM_source_info
 
