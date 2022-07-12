@@ -1,7 +1,4 @@
-Commodity price data from the U.S. Geological Survey Mineral Commodity Summaries 2022 Data Release. Data is obtained from the 'salient' dataset which contains commodity data for the last 5 years. 
-
-Data is obtained from the following website: 
-https://www.sciencebase.gov/catalog/item/6197ccbed34eb622f692ee1c
+Commodity price data was obtained from the [U.S. Geological Survey Mineral Commodity Summaries 2022 Data Release](https://www.sciencebase.gov/catalog/item/6197ccbed34eb622f692ee1c). The 'salient' dataset was used which contains commodity data for the last five years. During the data processing the price is averaged over these last five years and the units are converted to `USD/kg`.
 
 ## Development
 The raw USGS data consists of a series of csv file and xml metadatafiles. The raw data is not included in the repository.

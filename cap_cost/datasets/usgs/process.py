@@ -54,10 +54,12 @@ mat_lookup = pd.read_csv('mat_lookup.csv')
 mat_lookup = process_mat_lookup(mat_lookup)
 df = pd.merge(df, mat_lookup, on='original_name')
 
-#Grouping by the orignal name above, can keep a lot of the original data (this basically averages over years)
+
 df.to_csv('output/processed_orig.csv', index=False)
 
 #%%
+
+#Grouping by the orignal name above, can keep a lot of the original data (this basically averages over years)
 df_combine = df.groupby('index')[['specific_price']].mean()
 
 from es_utils import join_col_vals

@@ -1,1 +1,1 @@
-Data from various sources added manually
+This dataset are `SM_data.csv` and `mat_data.csv` where individual storage media or material prices can be defined individually.

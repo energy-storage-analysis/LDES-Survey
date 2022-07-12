@@ -1,7 +1,7 @@
-Materials strength-to-weight ratio of metal and composite materials. 
+[Kale, V., et al. 2018. A comparative study between optimal metal and composite rotors for flywheel energy storage systems. Energy Reports 4, 576–585.](https://doi.org/10/gm8c9v)
 
 
-Kale, V., Secanell, M., 2018. A comparative study between optimal metal and composite rotors for flywheel energy storage systems. Energy Reports 4, 576–585. https://doi.org/10/gm8c9v
+This publication conatains the materials strength-to-weight ratio of metal and composite materials. This data is the primary source of the materials define the virial-limited storage media (pressure tanks, SMES, and Flywheels). These different storage media are created during data processing as near-duplicates except for different $Q_{max}$ which depends on the geometry of the system. The $Q_{max}$ for the different types are determined from [Nomura, et al. “Structural Limitations of Energy Storage Systems Based on the Virial Theorem.” IEEE Transactions on Applied Superconductivity, Vol. 27, No. 4, 2017](https://doi.org/10/gjg4k7).
 
 
 ## Development: 
