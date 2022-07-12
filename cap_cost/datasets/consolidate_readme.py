@@ -75,5 +75,3 @@ with open('README_combined.md', 'w', encoding='utf-8') as f:
 
         f.write("\n")
 
-
-os.system("pandoc -o README_combined.docx -f markdown -t docx README_combined.md")

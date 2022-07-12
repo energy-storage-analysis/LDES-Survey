@@ -73,7 +73,7 @@ for SM_type in set(df_SMs['SM_type'].values):
     tables_text = tables_text + "\n\n"
 
 
-with open(os.path.join(output_dir,'SM_type_tables.md'.format(SM_type)), 'w', encoding='utf-8') as f:
+with open(os.path.join('output','SM_type_tables.md'.format(SM_type)), 'w', encoding='utf-8') as f:
     f.write(tables_text)
 
 df_SM_source_info = pd.concat(dfs)
@@ -92,5 +92,9 @@ SM_source_info.to_csv(pjoin('output','SM_source_info.csv'))
 
 # %%
 
+writer = MarkdownTableWriter(dataframe=SM_source_info.reset_index())
 
+
+with open(os.path.join('output','source_info.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
 
