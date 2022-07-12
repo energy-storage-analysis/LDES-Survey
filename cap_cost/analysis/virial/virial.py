@@ -35,11 +35,7 @@ df_virial['SM_name'] = [s.replace('StainlessSteel','S.S.') for s in df_virial['S
 df_virial['SM_name'] = [s.replace('CarbonSteel','C.S.') for s in df_virial['SM_name'].values]
 df_virial['SM_name'] = [s.replace(' ','\ ') for s in df_virial['SM_name'].values]
 
-print(df_virial['SM_name'].value_counts())
-
 df_virial = df_virial.set_index('SM_name')
-
-df_virial
 
 # %%
 df_virial_mat = df_virial.groupby('SM_name').first().drop(['SM_type', 'T_min', 'mu_total', 'Qmax', 'specific_energy', 'C_kwh'], axis=1)

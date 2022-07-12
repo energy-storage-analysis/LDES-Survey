@@ -1,57 +1,57 @@
 ,original_name,SM_type,sub_type,mat_type,materials,specific_strength,Qmax
 unit_row,N/U,N/U,N/U,N/U,N/U,centimeter ** 3 * megapascal / gram,N/U
 SM_name,,,,,,,
-Al 2024,Al-2024,pressure_tank,,Al,Al,150.8303249097473,1.0
-Al 6061,Al-6061-T6,pressure_tank,,Al,Al,101.4760147601476,1.0
-Al 7075,Al-7075-T6,pressure_tank,,Al,Al,166.66666666666666,1.0
-Steel 4340,Steel-4340,pressure_tank,,Steel,Steel,59.87261146496816,1.0
-Steel 18Ni-300,Steel-18Ni-300,pressure_tank,,Steel,Steel,94.27860696517413,1.0
-Steel 15-7,Stainless-Steel-15-7,pressure_tank,,Steel,Steel,97.13168187744459,1.0
-Steel 440C,Stainless-Steel-440C,pressure_tank,,Steel,Steel,158.44155844155844,1.0
-Steel 455,Stainless-Steel-455,pressure_tank,,Steel,Steel,191.8814432989691,1.0
-Steel 1020,Carbon-Steel-1020,pressure_tank,,Steel,Steel,54.79591836734694,1.0
-AS4/3501-6,AS4-3501–6,pressure_tank,,CFRP,CFRP,1077.9384035197988,1.0
-AS4/8552,AS4–8552,pressure_tank,,CFRP,CFRP,1184.844641724794,1.0
-E-Glass,E-Glass Epoxy,pressure_tank,,GRE,GRE,398.60308285163774,1.0
-IM7/8551-7,IM7-8551–7,pressure_tank,,CFRP,CFRP,1318.2973316391358,1.0
-IM7/8552,IM7–8552,pressure_tank,,CFRP,CFRP,1389.168765743073,1.0
-Kevlar,Kevlar-49 Epoxy,pressure_tank,,KFRP,KFRP,597.1820809248555,1.0
-S-2 Glass,S-2 Glass Epoxy,pressure_tank,,GRE,GRE,743.6026091319618,1.0
-T300-BSL914C,T300-BSL914C,pressure_tank,,CFRP,CFRP,769.7241821680565,1.0
-T300-PR319,T300-PR319,pressure_tank,,CFRP,CFRP,745.1984635083227,1.0
-Al 2024,Al-2024,flywheel,,Al,Al,150.8303249097473,1.2
-Al 6061,Al-6061-T6,flywheel,,Al,Al,101.4760147601476,1.2
-Al 7075,Al-7075-T6,flywheel,,Al,Al,166.66666666666666,1.2
-Steel 4340,Steel-4340,flywheel,,Steel,Steel,59.87261146496816,1.2
-Steel 18Ni-300,Steel-18Ni-300,flywheel,,Steel,Steel,94.27860696517413,1.2
-Steel 15-7,Stainless-Steel-15-7,flywheel,,Steel,Steel,97.13168187744459,1.2
-Steel 440C,Stainless-Steel-440C,flywheel,,Steel,Steel,158.44155844155844,1.2
-Steel 455,Stainless-Steel-455,flywheel,,Steel,Steel,191.8814432989691,1.2
-Steel 1020,Carbon-Steel-1020,flywheel,,Steel,Steel,54.79591836734694,1.2
-AS4/3501-6,AS4-3501–6,flywheel,,CFRP,CFRP,1077.9384035197988,1.2
-AS4/8552,AS4–8552,flywheel,,CFRP,CFRP,1184.844641724794,1.2
-E-Glass,E-Glass Epoxy,flywheel,,GRE,GRE,398.60308285163774,1.2
-IM7/8551-7,IM7-8551–7,flywheel,,CFRP,CFRP,1318.2973316391358,1.2
-IM7/8552,IM7–8552,flywheel,,CFRP,CFRP,1389.168765743073,1.2
-Kevlar,Kevlar-49 Epoxy,flywheel,,KFRP,KFRP,597.1820809248555,1.2
-S-2 Glass,S-2 Glass Epoxy,flywheel,,GRE,GRE,743.6026091319618,1.2
-T300-BSL914C,T300-BSL914C,flywheel,,CFRP,CFRP,769.7241821680565,1.2
-T300-PR319,T300-PR319,flywheel,,CFRP,CFRP,745.1984635083227,1.2
-Al 2024,Al-2024,smes,,Al,Al,150.8303249097473,1.5
-Al 6061,Al-6061-T6,smes,,Al,Al,101.4760147601476,1.5
-Al 7075,Al-7075-T6,smes,,Al,Al,166.66666666666666,1.5
-Steel 4340,Steel-4340,smes,,Steel,Steel,59.87261146496816,1.5
-Steel 18Ni-300,Steel-18Ni-300,smes,,Steel,Steel,94.27860696517413,1.5
-Steel 15-7,Stainless-Steel-15-7,smes,,Steel,Steel,97.13168187744459,1.5
-Steel 440C,Stainless-Steel-440C,smes,,Steel,Steel,158.44155844155844,1.5
-Steel 455,Stainless-Steel-455,smes,,Steel,Steel,191.8814432989691,1.5
-Steel 1020,Carbon-Steel-1020,smes,,Steel,Steel,54.79591836734694,1.5
-AS4/3501-6,AS4-3501–6,smes,,CFRP,CFRP,1077.9384035197988,1.5
-AS4/8552,AS4–8552,smes,,CFRP,CFRP,1184.844641724794,1.5
-E-Glass,E-Glass Epoxy,smes,,GRE,GRE,398.60308285163774,1.5
-IM7/8551-7,IM7-8551–7,smes,,CFRP,CFRP,1318.2973316391358,1.5
-IM7/8552,IM7–8552,smes,,CFRP,CFRP,1389.168765743073,1.5
-Kevlar,Kevlar-49 Epoxy,smes,,KFRP,KFRP,597.1820809248555,1.5
-S-2 Glass,S-2 Glass Epoxy,smes,,GRE,GRE,743.6026091319618,1.5
-T300-BSL914C,T300-BSL914C,smes,,CFRP,CFRP,769.7241821680565,1.5
-T300-PR319,T300-PR319,smes,,CFRP,CFRP,745.1984635083227,1.5
+Al 2024,Al-2024,pressure_tank,,metal,Al,150.8303249097473,1.0
+Al 6061,Al-6061-T6,pressure_tank,,metal,Al,101.4760147601476,1.0
+Al 7075,Al-7075-T6,pressure_tank,,metal,Al,166.66666666666666,1.0
+Steel 4340,Steel-4340,pressure_tank,,metal,Steel,59.87261146496816,1.0
+Steel 18Ni-300,Steel-18Ni-300,pressure_tank,,metal,Steel,94.27860696517413,1.0
+Steel 15-7,Stainless-Steel-15-7,pressure_tank,,metal,Steel,97.13168187744459,1.0
+Steel 440C,Stainless-Steel-440C,pressure_tank,,metal,Steel,158.44155844155844,1.0
+Steel 455,Stainless-Steel-455,pressure_tank,,metal,Steel,191.8814432989691,1.0
+Steel 1020,Carbon-Steel-1020,pressure_tank,,metal,Steel,54.79591836734694,1.0
+AS4/3501-6,AS4-3501–6,pressure_tank,,composite,CFRP,1077.9384035197988,1.0
+AS4/8552,AS4–8552,pressure_tank,,composite,CFRP,1184.844641724794,1.0
+E-Glass,E-Glass Epoxy,pressure_tank,,composite,GRE,398.60308285163774,1.0
+IM7/8551-7,IM7-8551–7,pressure_tank,,composite,CFRP,1318.2973316391358,1.0
+IM7/8552,IM7–8552,pressure_tank,,composite,CFRP,1389.168765743073,1.0
+Kevlar,Kevlar-49 Epoxy,pressure_tank,,composite,KFRP,597.1820809248555,1.0
+S-2 Glass,S-2 Glass Epoxy,pressure_tank,,composite,GRE,743.6026091319618,1.0
+T300-BSL914C,T300-BSL914C,pressure_tank,,composite,CFRP,769.7241821680565,1.0
+T300-PR319,T300-PR319,pressure_tank,,composite,CFRP,745.1984635083227,1.0
+Al 2024,Al-2024,flywheel,,metal,Al,150.8303249097473,1.2
+Al 6061,Al-6061-T6,flywheel,,metal,Al,101.4760147601476,1.2
+Al 7075,Al-7075-T6,flywheel,,metal,Al,166.66666666666666,1.2
+Steel 4340,Steel-4340,flywheel,,metal,Steel,59.87261146496816,1.2
+Steel 18Ni-300,Steel-18Ni-300,flywheel,,metal,Steel,94.27860696517413,1.2
+Steel 15-7,Stainless-Steel-15-7,flywheel,,metal,Steel,97.13168187744459,1.2
+Steel 440C,Stainless-Steel-440C,flywheel,,metal,Steel,158.44155844155844,1.2
+Steel 455,Stainless-Steel-455,flywheel,,metal,Steel,191.8814432989691,1.2
+Steel 1020,Carbon-Steel-1020,flywheel,,metal,Steel,54.79591836734694,1.2
+AS4/3501-6,AS4-3501–6,flywheel,,composite,CFRP,1077.9384035197988,1.2
+AS4/8552,AS4–8552,flywheel,,composite,CFRP,1184.844641724794,1.2
+E-Glass,E-Glass Epoxy,flywheel,,composite,GRE,398.60308285163774,1.2
+IM7/8551-7,IM7-8551–7,flywheel,,composite,CFRP,1318.2973316391358,1.2
+IM7/8552,IM7–8552,flywheel,,composite,CFRP,1389.168765743073,1.2
+Kevlar,Kevlar-49 Epoxy,flywheel,,composite,KFRP,597.1820809248555,1.2
+S-2 Glass,S-2 Glass Epoxy,flywheel,,composite,GRE,743.6026091319618,1.2
+T300-BSL914C,T300-BSL914C,flywheel,,composite,CFRP,769.7241821680565,1.2
+T300-PR319,T300-PR319,flywheel,,composite,CFRP,745.1984635083227,1.2
+Al 2024,Al-2024,smes,,metal,Al,150.8303249097473,1.5
+Al 6061,Al-6061-T6,smes,,metal,Al,101.4760147601476,1.5
+Al 7075,Al-7075-T6,smes,,metal,Al,166.66666666666666,1.5
+Steel 4340,Steel-4340,smes,,metal,Steel,59.87261146496816,1.5
+Steel 18Ni-300,Steel-18Ni-300,smes,,metal,Steel,94.27860696517413,1.5
+Steel 15-7,Stainless-Steel-15-7,smes,,metal,Steel,97.13168187744459,1.5
+Steel 440C,Stainless-Steel-440C,smes,,metal,Steel,158.44155844155844,1.5
+Steel 455,Stainless-Steel-455,smes,,metal,Steel,191.8814432989691,1.5
+Steel 1020,Carbon-Steel-1020,smes,,metal,Steel,54.79591836734694,1.5
+AS4/3501-6,AS4-3501–6,smes,,composite,CFRP,1077.9384035197988,1.5
+AS4/8552,AS4–8552,smes,,composite,CFRP,1184.844641724794,1.5
+E-Glass,E-Glass Epoxy,smes,,composite,GRE,398.60308285163774,1.5
+IM7/8551-7,IM7-8551–7,smes,,composite,CFRP,1318.2973316391358,1.5
+IM7/8552,IM7–8552,smes,,composite,CFRP,1389.168765743073,1.5
+Kevlar,Kevlar-49 Epoxy,smes,,composite,KFRP,597.1820809248555,1.5
+S-2 Glass,S-2 Glass Epoxy,smes,,composite,GRE,743.6026091319618,1.5
+T300-BSL914C,T300-BSL914C,smes,,composite,CFRP,769.7241821680565,1.5
+T300-PR319,T300-PR319,smes,,composite,CFRP,745.1984635083227,1.5

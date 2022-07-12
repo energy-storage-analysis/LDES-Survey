@@ -1,19 +1,19 @@
 original_name,SM_name,SM_type,sub_type,mat_type,materials
-Al-2024,Al 2024,virial_limited,,Al,Al
-Al-6061-T6,Al 6061,virial_limited,,Al,Al
-Al-7075-T6,Al 7075,virial_limited,,Al,Al
-Steel-4340,Steel 4340,virial_limited,,Steel,Steel
-Steel-18Ni-300,Steel 18Ni-300,virial_limited,,Steel,Steel
-Stainless-Steel-15-7,Steel 15-7,virial_limited,,Steel,Steel
-Stainless-Steel-440C,Steel 440C,virial_limited,,Steel,Steel
-Stainless-Steel-455,Steel 455,virial_limited,,Steel,Steel
-Carbon-Steel-1020,Steel 1020,virial_limited,,Steel,Steel
-AS4-3501–6,AS4/3501-6,virial_limited,,CFRP,CFRP
-AS4–8552,AS4/8552,virial_limited,,CFRP,CFRP
-E-Glass Epoxy,E-Glass,virial_limited,,GRE,GRE
-IM7-8551–7,IM7/8551-7,virial_limited,,CFRP,CFRP
-IM7–8552,IM7/8552,virial_limited,,CFRP,CFRP
-Kevlar-49 Epoxy,Kevlar,virial_limited,,KFRP,KFRP
-S-2 Glass Epoxy,S-2 Glass,virial_limited,,GRE,GRE
-T300-BSL914C,T300-BSL914C,virial_limited,,CFRP,CFRP
-T300-PR319,T300-PR319,virial_limited,,CFRP,CFRP
+Al-2024,Al 2024,virial_limited,,metal,Al
+Al-6061-T6,Al 6061,virial_limited,,metal,Al
+Al-7075-T6,Al 7075,virial_limited,,metal,Al
+Steel-4340,Steel 4340,virial_limited,,metal,Steel
+Steel-18Ni-300,Steel 18Ni-300,virial_limited,,metal,Steel
+Stainless-Steel-15-7,Steel 15-7,virial_limited,,metal,Steel
+Stainless-Steel-440C,Steel 440C,virial_limited,,metal,Steel
+Stainless-Steel-455,Steel 455,virial_limited,,metal,Steel
+Carbon-Steel-1020,Steel 1020,virial_limited,,metal,Steel
+AS4-3501–6,AS4/3501-6,virial_limited,,composite,CFRP
+AS4–8552,AS4/8552,virial_limited,,composite,CFRP
+E-Glass Epoxy,E-Glass,virial_limited,,composite,GRE
+IM7-8551–7,IM7/8551-7,virial_limited,,composite,CFRP
+IM7–8552,IM7/8552,virial_limited,,composite,CFRP
+Kevlar-49 Epoxy,Kevlar,virial_limited,,composite,KFRP
+S-2 Glass Epoxy,S-2 Glass,virial_limited,,composite,GRE
+T300-BSL914C,T300-BSL914C,virial_limited,,composite,CFRP
+T300-PR319,T300-PR319,virial_limited,,composite,CFRP
