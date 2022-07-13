@@ -11,27 +11,28 @@ from pytablewriter import MarkdownTableWriter
 
 from es_utils.units import read_pint_df
 
+
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
 dataset_index = pd.read_csv('dataset_index.csv', index_col=0)
 
+#For checking which storage media ended up in the final dataset (have enough physprop to calculate Ckwh)
+df_final = read_pint_df(os.path.join(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True)
+df_final = df_final.dropna(subset=['C_kwh'])
 
 def get_source_SM_counts(df):
     counts = Counter(df)
     counts = str(dict(counts))
     return counts
 
-# SM_source_info = df_SM.groupby('source')['SM_type'].apply(get_source_SM_counts).dropna()
-# SM_source_info.name = 'SM types'
-
-# price_source_info = df_mat_data.groupby('source').apply(len)
-# price_source_info.name = 'num prices'
-
-# source_info = pd.concat([SM_source_info, price_source_info],axis=1 )
-
-# source_info = source_info.sort_index()
-
-# source_info['num prices'] = source_info['num prices'].fillna(0).astype(int).astype(str).str.replace('^0$','-',regex=True)
-# source_info['SM types'] = source_info['SM types'].fillna('-')
-
+physical_properties = [
+'Cp','T_melt','T_max','phase_change_T','sp_latent_heat','mass_density','kth',
+'vol_latent_heat','deltaV','n_e','deltaH_thermochem','temperature','specific_strength',
+'Qmax','dielectric_breakdown','dielectric_constant','deltaG_chem','delta_height',
+'specific_capacitance','deltaV_electrolyte','deltaT_max','pressure','T_min','deltaT'
+]
 
 with open('README_combined.md', 'w', encoding='utf-8') as f:
     for source, row in dataset_index.iterrows():
@@ -59,7 +60,7 @@ with open('README_combined.md', 'w', encoding='utf-8') as f:
 
         writer = MarkdownTableWriter() 
         # writer.table_name = 'Source Data'
-        writer.headers = ["Number Material Prices", "Storage media"]
+        writer.headers = ["Number Material Prices", "Storage media", "Physical Properties"]
 
         fp_mat_data = os.path.join(row['folder'], 'output','mat_data.csv')
         if os.path.exists(fp_mat_data):
@@ -72,19 +73,34 @@ with open('README_combined.md', 'w', encoding='utf-8') as f:
         fp_SM_data = os.path.join(row['folder'], 'output','SM_data.csv')
         if os.path.exists(fp_SM_data):
             df_SM_data = read_pint_df(fp_SM_data)
-
-            count_dict = dict(Counter(df_SM_data['SM_type']))
+            df_SM_data = df_SM_data.set_index('SM_type', append=True) #Source SM data only is indexed by SM_name... 
+            
+            # For the storage media counts we are only including those that make it in the final dataset (can calculate Ckwh)
+            df_SM_data_final = df_SM_data[df_SM_data.index.isin(df_final.index)]
+            df_SM_data_final = df_SM_data_final.reset_index()
+            count_dict = dict(Counter(df_SM_data_final['SM_type']))
 
             num_SM_string = "" 
             # f.write("\n\n Types of storage media - ")
             for key, val in count_dict.items():
                 key = key.replace("_"," ").capitalize()
                 num_SM_string = num_SM_string + "{}: {}, ".format(key, val)
+
+            # For physical properties we include all data
+            present_physprop = [prop for prop in physical_properties if prop in df_SM_data.columns]
+            physprop_str = ""
+            for prop in present_physprop:
+                s_prop = df_SM_data[prop].dropna()
+                if len(s_prop):
+                    physprop_str = physprop_str + "{}: {}, ".format(prop, len(s_prop))
+
+
         else:
             num_SM_string = 'None'
+            physprop_str = "None"
             
         writer.value_matrix = [
-            [n_prices_string,num_SM_string]
+            [n_prices_string,num_SM_string, physprop_str]
         ] 
         writer.stream = f
         writer.write_table()
