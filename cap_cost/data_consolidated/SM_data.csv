@@ -100,7 +100,7 @@ CoAl/PEDOT nanoarrays,pseudocapacitor,,,89.27434338168023,0.027400000000000004,2
 CoCl2 nanostructures,pseudocapacitor,,,293.6678928816241,0.055181250000000015,16.204961414074123,CoCl2,,Choi 2015,"Alibaba, ISE",,,,,,,,,,,,,,,,,,,,1962.0,0.45,,,,,20.0,,129.833194
 CoO/PPy nanowires,pseudocapacitor,,,66.08395034843203,0.5102222222222225,33.7175,"[('CoO', 1), ('PPy', 1)]",molar,Choi 2015,,,,,,,,,,,,,,,,,,,,,1435.0,1.6,,,,,20.0,,74.932194
 CoSO4/CoO,thermochemical,,sulfates,22.07059210835724,0.5906388888888889,13.03575,CoSO4,,Andre 2016,"Alibaba, ISE",,,,,,,,,,,,0.5906388888888889,1005.0,,,,,,,,,,,CoSO4/CoO,,20.0,,154.989194
-Concrete,gravitational,,,181.33027522935782,0.00027249999999999996,0.0494125,Concrete,,Gravitational Calculations,"Steinmann 2022, concretenetwork.com/concrete-prices.html",,,,,,,,,,,,,,,,,,,100.0,,,,,Block Stacking,,20.0,,
+Concrete,gravitational,block_stacking,,181.33027522935782,0.00027249999999999996,0.0494125,Concrete,,Gravitational Calculations,"Steinmann 2022, concretenetwork.com/concrete-prices.html",,,,,,,,,,,,,,,,,,,100.0,,,,,,,20.0,,
 Concrete,sensible_thermal,both,other_solid,0.24698103056294282,0.200065972222135,0.0494125,Concrete,,"Liang 2022, Steinmann 2022","Steinmann 2022, concretenetwork.com/concrete-prices.html",0.000254861111111,-160.0,625.0,,,2525.0,1.15,,,,,,,,,,,,,,,,,"Concrete, Concrete (U)",,-160.0,785.0,
 Cr,latent_thermal,hot,metal,98.55622130504533,0.1111111111111111,10.950691256116146,Cr,,Ray 2021,"Alibaba, ISE, Ray 2021, USGS",,,,2180.0,0.1111111111111111,,,,,,,,,,,,,,,,,,,,,20.0,,51.9961
 Cr5O12/Cr2O3,thermochemical,,oxides,49.0146900752419,0.0775277777777777,3.8,Cr2O3,,Andre 2016,Alibaba,,,,,,,,,,,,0.0775277777777777,105.0,,,,,,,,,,,Cr5O12/Cr2O3,,20.0,,151.9892
@@ -140,7 +140,7 @@ Graphene/CNF,EDLC,,,4583.448275862068,0.054375000000000014,249.22500000000002,"[
 Graphene/CNT,EDLC,,,,,,"[('Graphene', 1), ('CNT', 1)]",molar,,,,,,,,,,,,,,,,,,,,,,104.83333333333331,2.6,,,,,20.0,,
 Graphene/carbon,EDLC,,,837.0472303206996,0.29774305555555564,249.22500000000002,"[('Graphene', 1), ('Graphite', 1)]",molar,Choi 2015,"0 : Alibaba, Graphene Lab, 1 : Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS",,,,,,,,,,,,,,,,,,,,175.0,3.5,,,,,20.0,,144.132
 Graphite,sensible_thermal,hot,other_solid,5.33940397351227,0.4026666666664905,2.15,Graphite,,"Bauer 2012, Liang 2022, Steinmann 2022","Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS",0.0001777777777777,-240.0,2025.0,,,2300.0,153.33333333333334,,,,,,,,,,,,,,,,,Graphite,,-240.0,2265.0,72.066
-Gravel,gravitational,,,107.0839817350103,0.00027249999999999996,0.0291803850227903,Gravel,,Gravitational Calculations,USGS,,,,,,,,,,,,,,,,,,,100.0,,,,,Block Stacking,,20.0,,231.339
+Gravel,gravitational,block_stacking,,107.0839817350103,0.00027249999999999996,0.0291803850227903,Gravel,,Gravitational Calculations,USGS,,,,,,,,,,,,,,,,,,,100.0,,,,,,,20.0,,231.339
 Gravel,sensible_thermal,both,rock,0.07538041036608012,0.3871083333332578,0.0291803850227903,Gravel,,"Bauer 2012, Liang 2022",USGS,0.0003416666666666,-160.0,973.0,,,2329.0,2.32,,,,,,,,,,,,,,,,,"Gravel, quartz (U), Soil (gravelly)",,-160.0,1133.0,231.339
 H2 (Feedstock),synfuel,feedstock,,0.0004100531107738999,3.658062725506522,0.0015,"[('Water', 1)]",molar,SynFuel Feedstock Calculations,"0 : Antunez 2018, Li 2017",,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,Synthetic H2,Based on hypotheticical reversible electrochemical oxidation reaction,20.0,,18.015
 H2 (LRC),synfuel,underground,,1.6211507981790598,32.68849206349206,52.99297500000002,H2_LRC,,Cavern Calculations,Cavern Calculations,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
@@ -349,8 +349,8 @@ PbO2/PbO,thermochemical,,oxides,30.324815937635382,0.0641388888888888,1.945,PbO,
 Polythiophene nanostructures,pseudocapacitor,,,,,,Polythiophene,,,,,,,,,,,,,,,,,,,,,,,162.5,4.0,,,,,20.0,,
 Pressurized Water,sensible_thermal,hot,other_fluid,0.006443914081146076,0.23277777777776001,0.0015,Water,,Liang 2022,"Antunez 2018, Li 2017",0.0011638888888888,0.0,200.0,,,1000.0,0.6,,,,,,,,,,,,,,,,,Pressurized water(U),,0.0,200.0,18.015
 PtO2/PtO,thermochemical,,oxides,195.29837251356253,0.0768055555555555,15.0,PtO2,,Andre 2016,Alibaba,,,,,,,,,,,,0.0768055555555555,420.0,,,,,,,,,,,PtO2/PtO,,20.0,,227.082
-Pumice,gravitational,,,131.06380357412883,0.00027249999999999996,0.0357148864739501,Pumice,,Gravitational Calculations,USGS,,,,,,,,,,,,,,,,,,,100.0,,,,,Block Stacking,,20.0,,504.5954032
-Pumped Hydro,gravitational,,,319.26605504587155,0.0008175,0.261,Water Reservoir Excavation,,Gravitational Calculations,Calculation/Black and Veatch,,,,,,,,,,,,,,,,,,,300.0,,,,,Pumped Hydro,,20.0,,
+Pumice,gravitational,block_stacking,,131.06380357412883,0.00027249999999999996,0.0357148864739501,Pumice,,Gravitational Calculations,USGS,,,,,,,,,,,,,,,,,,,100.0,,,,,,,20.0,,504.5954032
+Pumped Hydro,gravitational,pumped_hydro,,319.26605504587155,0.0008175,0.261,Water Reservoir Excavation,,Gravitational Calculations,Calculation/Black and Veatch,,,,,,,,,,,,,,,,,,,300.0,,,,,,,20.0,,
 Quartzite,sensible_thermal,both,rock,,,,Stone,,,,0.0002361111111111,,,,,,2.0,,,,,,,,,,,,,,,,,Quartzite,,20.0,,
 R213,sensible_thermal,cold,hydrocarbon,,,,R213,,,,0.0002638888888888,185.0,293.0,,,1602.0,,,,,,,,,,,,,,,,,,R213,,185.0,108.0,
 R218,sensible_thermal,cold,hydrocarbon,,,,R218,,,,0.0003055555555555,-183.0,28.0,,,1601.0,0.1,,,,,,,,,,,,,,,,,R218 (U),,-183.0,211.0,
@@ -397,7 +397,7 @@ Steel 440C,smes,,metal,40.159918032786884,0.02934102934102935,1.1783333333333337
 Steel 455,flywheel,,metal,26.528881128274005,0.044417000763650266,1.1783333333333337,Steel,,Kale 2018,"Alibaba, Kale 2018",,,,,,,,,,,,,,191.8814432989691,1.2,,,,,,,,,Stainless-Steel-455,,20.0,,55.845
 Steel 455,pressure_tank,,metal,22.107400940228338,0.053300400916380324,1.1783333333333337,Steel,,Kale 2018,"Alibaba, Kale 2018",,,,,,,,,,,,,,191.8814432989691,1.0,,,,,,,,,Stainless-Steel-455,,20.0,,55.845
 Steel 455,smes,,metal,33.1611014103425,0.035533600610920216,1.1783333333333337,Steel,,Kale 2018,"Alibaba, Kale 2018",,,,,,,,,,,,,,191.8814432989691,1.5,,,,,,,,,Stainless-Steel-455,,20.0,,55.845
-Stone,gravitational,,,75.39893383171707,0.00027249999999999996,0.0205462094691429,Stone,,Gravitational Calculations,"Steinmann 2022, USGS",,,,,,,,,,,,,,,,,,,100.0,,,,,Block Stacking,,20.0,,162.0430768
+Stone,gravitational,block_stacking,,75.39893383171707,0.00027249999999999996,0.0205462094691429,Stone,,Gravitational Calculations,"Steinmann 2022, USGS",,,,,,,,,,,,,,,,,,,100.0,,,,,,,20.0,,162.0430768
 T300-BSL914C,flywheel,,composite,176.11711199999996,0.17817689402038353,31.38000000000001,CFRP,,Kale 2018,Kale 2018,,,,,,,,,,,,,,769.7241821680565,1.2,,,,,,,,,T300-BSL914C,,20.0,,
 T300-BSL914C,pressure_tank,,composite,146.76425999999998,0.21381227282446022,31.38000000000001,CFRP,,Kale 2018,Kale 2018,,,,,,,,,,,,,,769.7241821680565,1.0,,,,,,,,,T300-BSL914C,,20.0,,
 T300-BSL914C,smes,,composite,220.14638999999997,0.1425415152163068,31.38000000000001,CFRP,,Kale 2018,Kale 2018,,,,,,,,,,,,,,769.7241821680565,1.5,,,,,,,,,T300-BSL914C,,20.0,,
@@ -420,8 +420,8 @@ VH2,synfuel,chemical,metal_hydride,303.9646693389733,1.295018927219542,393.64,V,
 VRFB,flow_battery,,inorganic,75.77256275116788,0.22840669447529546,17.306960589916155,V2O5,,Li 2017,"Alibaba, ISE, SMM",,,,,,,,,124.4,1.55,1.0,,,,,,,,,,,,,,,20.0,,181.878
 Vegetable Oil,sensible_thermal,hot,oil,4.587041656928152,0.1455840277777665,0.6678000000000002,Vegetable Oil,mass,"Alva 2018, Antunez 2018, Steinmann 2022","Alva 2018, Antunez 2018, Steinmann 2022",0.0006693518518518,7.5,225.0,,,820.0,0.135,,6.8,,,,,,,,,,,,,,,"Sunflower oil, Vegetable oil",,7.5,217.5,933.45
 Water,sensible_thermal,hot,other_fluid,0.015198423867154663,0.0986944444444435,0.0015,Water,mass,Antunez 2018,"Antunez 2018, Li 2017",0.0011611111111111,15.0,100.0,,,,0.65,,0.2,,,,,,,,,,,,,,,Water,,15.0,85.0,18.015
-Water (LRC),gravitational,,,149.21349659035008,0.00258875,0.3862764392982687,H2O_LRC,,Gravitational Calculations,Cavern Calculations,,,,,,,,,,,,,,,,,,,950.0,,,,,,van Berchum 2014,20.0,,18.015
-Water (Salt),gravitational,,,11.752710548604423,0.00258875,0.0304248294326997,H2O_Salt,,Gravitational Calculations,Cavern Calculations,,,,,,,,,,,,,,,,,,,950.0,,,,,,van Berchum 2014,20.0,,18.015
+Water (LRC),gravitational,pumped_hydro,,149.21349659035008,0.00258875,0.3862764392982687,H2O_LRC,,Gravitational Calculations,Cavern Calculations,,,,,,,,,,,,,,,,,,,950.0,,,,,,van Berchum 2014,20.0,,18.015
+Water (Salt),gravitational,pumped_hydro,,11.752710548604423,0.00258875,0.0304248294326997,H2O_Salt,,Gravitational Calculations,Cavern Calculations,,,,,,,,,,,,,,,,,,,950.0,,,,,,van Berchum 2014,20.0,,18.015
 Zn,latent_thermal,hot,metal,69.49453709025565,0.0405555555555555,2.818389559771475,Zn,,Ray 2021,"Alibaba, Kim 2013, Li 2017, SMM, USGS",,,,419.0,0.0405555555555555,,,,,,,,,,,,,,,,,,,,,20.0,,65.38
 Zn(BH4)2,synfuel,chemical,metal_hydride,4.7086930982863375,3.0677057455087784,14.44488487145053,"[('Zn', 1), ('B',2)]",molar,Lai 2018,"0 : Alibaba, Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba, Ray 2021, USGS",,,,,,,,,,,8.09986039026597,,,,,,,0.2668903998592637,,,,,,Zn(BH4)2,,20.0,,87.0
 Zn(OH)2/ZnO,thermochemical,,hydroxides,20.334701008452203,0.1386,2.818389559771475,Zn,,Andre 2016,"Alibaba, Kim 2013, Li 2017, SMM, USGS",,,,,,,,,,,,0.1386,55.0,,,,,,,,,,,Zn(OH)2/ZnO,,20.0,,65.38
