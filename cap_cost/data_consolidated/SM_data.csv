@@ -64,6 +64,7 @@ C6/NCM622,coupled_battery,solid_electrode,Li ion,37.97239346900701,0.66609253522
 CH4 (Feedstock),synfuel,feedstock,,0.020670115505090052,2.2004152702271926,0.04548283779476001,"[('CO2', 1), ('Water', 4)]",molar,SynFuel Feedstock Calculations,"0 : SynFuel Feedstock Calculations, 1 : Antunez 2018, Li 2017",,,,,,,,,,,8.0,,,,,,,0.2554,,,,,,Synthetic CH4 (Sabatier),Based on hypotheticical reversible electrochemical oxidation reaction,20.0,,116.069
 CH4 (LRC),synfuel,underground,,0.41609548645507066,15.919715763884561,6.624121875000003,CH4_LRC,,Cavern Calculations,Cavern Calculations,,,,,,,,,,,8.0,,,,,,,0.2554,,,,,,,,20.0,,16.043
 CH4 (Salt),synfuel,underground,,0.032773508594285315,15.919715763884561,0.52174494140625,CH4_Salt,,Cavern Calculations,Cavern Calculations,,,,,,,,,,,8.0,,,,,,,0.2554,,,,,,,,20.0,,16.043
+CH4 Spherical Pressure,synfuel,tank,,5.388547864438997,15.919715763884561,85.78415038195598,CH4 Spherical Pressure,molar,Tietze 2016,Tietze 2016,,,,,,0.7157557628840852,,,,,8.0,,,,,,,0.2554,,,,,,,,20.0,,16.043
 CNT,EDLC,,,2524.7212286976646,0.039608333333333336,100.0,CNT,,Choi 2015,Alibaba,,,,,,,,,,,,,,,,,,,,582.0,0.7,,,,,20.0,,
 Ca(BH4)2,synfuel,chemical,metal_hydride,4.574377368238495,4.3873210876375905,20.069262290484893,"[('Ca', 1), ('B',2)]",molar,Lai 2018,"0 : Alibaba, ISE, Kim 2013, SMM, 1 : Alibaba, Ray 2021, USGS",,,,,,,,,,,8.215142229592233,,,,,,,0.2706889364650641,,,,,,Ca(BH4)2,,20.0,,61.69800000000001
 Ca(OH)2/CaO,thermochemical,,hydroxides,0.41564637356805406,0.3755555555555555,0.1560983047400025,CaO,,Andre 2016,USGS,,,,,,,,,,,,0.3755555555555555,515.0,,,,,,,,,,,Ca(OH)2/CaO,,20.0,,56.077
@@ -104,7 +105,8 @@ Concrete,gravitational,block_stacking,,181.33027522935782,0.00027249999999999996
 Concrete,sensible_thermal,both,other_solid,0.24698103056294282,0.200065972222135,0.0494125,Concrete,,"Liang 2022, Steinmann 2022","Steinmann 2022, concretenetwork.com/concrete-prices.html",0.000254861111111,-160.0,625.0,,,2525.0,1.15,,,,,,,,,,,,,,,,,"Concrete, Concrete (U)",,-160.0,785.0,
 Cr,latent_thermal,hot,metal,98.55622130504533,0.1111111111111111,10.950691256116146,Cr,,Ray 2021,"Alibaba, ISE, Ray 2021, USGS",,,,2180.0,0.1111111111111111,,,,,,,,,,,,,,,,,,,,,20.0,,51.9961
 Cr5O12/Cr2O3,thermochemical,,oxides,49.0146900752419,0.0775277777777777,3.8,Cr2O3,,Andre 2016,Alibaba,,,,,,,,,,,,0.0775277777777777,105.0,,,,,,,,,,,Cr5O12/Cr2O3,,20.0,,151.9892
-Cryogenic H2 Tank,synfuel,tank,,0.9871975720789076,32.68849206349206,32.27,Cryogenic H2 Tank,,Standard Gibbs,Kiessling 2021,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
+Cryogenic CH4,synfuel,tank,,0.3072416664056382,15.919715763884561,4.8912,Cryogenic CH4 Tank,,Standard Gibbs,Kiessling 2021,,,,,,420.0,,,,,8.0,,,,,,,0.2554,,,,,,,,20.0,,16.043
+Cryogenic H2,synfuel,tank,,0.887006349013657,32.68849206349206,28.9949,Cryogenic H2 Tank,,Standard Gibbs,Kiessling 2021,,,,,,70.85,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
 Cu,latent_thermal,hot,metal,130.88330474734923,0.0536111111111111,7.016799393399555,Cu,,Ray 2021,"Alibaba, Ray 2021, SMM, USGS",,,,1356.0,0.0536111111111111,,,,,,,,,,,,,,,,,,,,,20.0,,63.546
 Cu,sensible_thermal,hot,metal,51.17787483388311,0.1371061111110064,7.016799393399555,Cu,,"Bauer 2012, Liang 2022","Alibaba, Ray 2021, SMM, USGS",0.0001163888888888,-253.0,925.0,,,8300.0,372.0,,,,,,,,,,,,,,,,,"Copper, Copper (commercial)",,-253.0,1178.0,63.546
 Cu/Cu,flow_battery,,inorganic,55.45602333042045,0.12652907604989563,7.016799393399555,"[('Cu', 2)]",molar,Li 2017,"0 : Alibaba, Ray 2021, SMM, USGS",,,,,,,,,53.0,0.6,1.0,,,,,,,,,,,,,,,20.0,,127.092
@@ -131,7 +133,7 @@ Fe2O3/MnO2 nanowires,pseudocapacitor,,,18.60121609426082,0.03295000000000001,0.6
 FeCl2,flow_battery,,inorganic,13.041088381613724,0.16916731319666348,2.206125882677818,"[('FeCl2', 3)]",molar,Li 2017,"0 : Alibaba, Li 2017",,,,,,,,,15.5,1.2,2.0,,,,,,,,,,,,,,,20.0,,380.235
 FeCl3Zn,coupled_battery,hybrid_flow,Zn based,11.312498667402956,0.21343461288223814,2.4144787738079847,"[('Zn', 1), ('FeCl2', 1)]",molar,Diez 2020,"0 : Alibaba, Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba, Li 2017",,,,,,,,,100.0,1.53,1.0,,,,,,,,,,,,,Iron-acidic (FeCl3),,20.0,,192.125
 FeSO4/FeO,thermochemical,,sulfates,0.1421189763924589,0.6332722222222222,0.09,FeSO4,,Andre 2016,Alibaba,,,,,,,,,,,,0.6332722222222222,1030.0,,,,,,,,,,,FeSO4/FeO,,20.0,,151.901
-Fossil CH4,synfuel,feedstock,,0.010301691464369616,15.919715763884561,0.164,Fossil CH4,molar,Standard Gibbs,EIA Henry Hub,,,,,,,,,,,8.0,,,,,,,0.2554,,,,,,,,20.0,,16.043
+Fossil CH4,synfuel,feedstock,,0.010301691464369616,15.919715763884561,0.164,Fossil CH4,molar,Standard Gibbs,EIA Henry Hub,,,,,,420.0,,,,,8.0,,,,,,,0.2554,,,,,,,,20.0,,16.043
 GO/CNT,EDLC,,,,,,"[('Graphene Oxide', 1), ('CNT', 1)]",molar,,,,,,,,,,,,,,,,,,,,,,216.0,1.0,,,,,20.0,,
 GO/Carbon,EDLC,,,961.9511870054142,0.20842013888888894,200.49,Graphene Oxide,,Choi 2015,Alibaba,,,,,,,,,,,,,,,,,,,,122.5,3.5,,,,,20.0,,
 Granite,sensible_thermal,both,rock,0.07354018869546242,0.2793874999998558,0.0205462094691429,Stone,,"Alva 2018, Bauer 2012, Liang 2022, Steinmann 2022","Steinmann 2022, USGS",0.0002583333333332,-160.0,921.5,,,2663.333333333333,2.8625,,,,,,,,,,,,,,,,,"Granite, Granite (U)",,-160.0,1081.5,162.0430768
@@ -145,7 +147,7 @@ Gravel,sensible_thermal,both,rock,0.07538041036608012,0.3871083333332578,0.02918
 H2 (Feedstock),synfuel,feedstock,,0.0004100531107738999,3.658062725506522,0.0015,"[('Water', 1)]",molar,SynFuel Feedstock Calculations,"0 : Antunez 2018, Li 2017",,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,Synthetic H2,Based on hypotheticical reversible electrochemical oxidation reaction,20.0,,18.015
 H2 (LRC),synfuel,underground,,1.6211507981790598,32.68849206349206,52.99297500000002,H2_LRC,,Cavern Calculations,Cavern Calculations,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
 H2 (Salt),synfuel,underground,,0.12768895925644919,32.68849206349206,4.17395953125,H2_Salt,,Cavern Calculations,Cavern Calculations,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
-H2 Spherical Pressure,synfuel,tank,,20.883689295564796,32.68849206349206,682.656311794504,H2 Spherical Pressure,molar,Tietze 2016,Tietze 2016,,,,,,,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
+H2 Spherical Pressure,synfuel,tank,,20.883689295564796,32.68849206349206,682.656311794504,H2 Spherical Pressure,molar,Tietze 2016,Tietze 2016,,,,,,0.0899435029591919,,,,,2.0,,,,,,,0.0659,,,,,,,,20.0,,2.016
 H2/Br2,flow_battery,,inorganic,7.104221723869231,0.36105292031946923,2.565,HBr,,Diez 2020,"Alibaba, Li 2017",,,,,,,,,,1.09,1.0,,,,,,,,,,,,,,,20.0,,80.912
 HITEC,latent_thermal,hot,molten_salt,57.240000000000094,0.0233333333333333,1.3356000000000003,HITEC,,Steinmann 2022,Steinmann 2022,,,,142.0,0.0233333333333333,2057.0,,,,,,,,,,,,,,,,,,KNO3-NaNO2-NaNO3,,20.0,,
 HITEC,sensible_thermal,hot,molten_salt,8.179295486354826,0.16329034722221805,1.3356000000000003,HITEC,,"Alva 2018, Steinmann 2022",Steinmann 2022,0.0004348611111111,142.0,517.5,,,1800.0,0.6,,,,,,,,,,,,,,,358.0,,"HITEC, HITEC, NaNO3eKNO3e NaNO2",,142.0,375.5,

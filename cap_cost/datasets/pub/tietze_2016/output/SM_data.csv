@@ -1,3 +1,4 @@
-,deltaG_chem,n_e,materials,SM_type,sub_type,mat_basis
-unit_row,kilowatt_hour / mole,dimensionless,N/U,N/U,N/U,N/U
-H2 Spherical Pressure,0.0659,2.0,H2 Spherical Pressure,synfuel,tank,molar
+,SM_type,sub_type,materials,mat_basis,deltaG_chem,n_e,mass_density
+unit_row,N/U,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless,kilogram / meter ** 3
+H2 Spherical Pressure,synfuel,tank,H2 Spherical Pressure,molar,0.0659,2.0,0.0899435029591919
+CH4 Spherical Pressure,synfuel,tank,CH4 Spherical Pressure,molar,0.2554,8.0,0.7157557628840852

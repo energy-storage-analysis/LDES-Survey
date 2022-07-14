@@ -42,7 +42,17 @@ df_ec_synfuel = df.where(df['SM_type'].isin([
 'synfuel'
 ])).dropna(subset=['SM_type'])
 
-df_ec_synfuel['SM_type'] = df_ec_synfuel['SM_type'] + "\n(" + df_ec_synfuel['sub_type'] + ")"
+
+SM_type_display = []
+for idx, row in df_ec_synfuel.iterrows():
+    if row['sub_type'] == 'chemical':
+        t = row['SM_type'] + "\n(" + row['sub_type'] + ',\n' + row['mat_type']+ ")"
+    else:
+        t = row['SM_type'] + "\n(" + row['sub_type'] + ")"
+
+    SM_type_display.append(t)
+
+df_ec_synfuel['SM_type'] = SM_type_display
 
 
 df_ec_decoupled = df.where(df['SM_type'].isin([
@@ -94,8 +104,8 @@ plt.xlim(2e-2,2e1)
 
 
 leg = ax.get_legend()
-leg.set_title('')
-leg.set_bbox_to_anchor([0,0.3,0.4,0])
+leg.set_title('Sub Type')
+leg.set_bbox_to_anchor([0,0.3,0.5,0])
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(10,0.5), lim=ADJUST_TEXT_LIM)
 
@@ -133,16 +143,22 @@ ax.set_title('Decoupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(2,1), lim=ADJUST_TEXT_LIM)
 leg = ax.get_legend()
-leg.set_title('')
-leg.set_bbox_to_anchor([0,0,0.6,0.45])
+leg.set_title('Sub Type')
+leg.set_bbox_to_anchor([0,0,1,0.52])
+
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(2,1), lim=ADJUST_TEXT_LIM)
 
 
 alter_dict = {
-    "H_{2}\ (Feedstock)": (1,1e-2),
-    "LiBH_{4}": (10,5),
+    "CH_{4}\ (Feedstock)": (10,5e-2),
+    "H_{2}\ (Feedstock)": (2,1e-2),
+    "Naphthalene": (2,6e-1),
+    # "LiBH_{4}": (10,5),
     "Zr(BH_{4})_{4}": (10,10),
+    "Ca(BH_{4})_{2}": (10,4),
+    "Ti_{12}Mn_{18}H_{30}": (0.25,3),
+    "CH_{4}\ Spherical\ Pressure": (15,15),
 }
 
 for alter_name, (x,y) in alter_dict.items():
