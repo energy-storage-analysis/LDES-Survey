@@ -125,7 +125,7 @@ texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
 plt.yscale('log')
 plt.xscale('log')
-plt.ylim(bottom=5e-3, top=y_max)
+plt.ylim(bottom=9e-3, top=y_max)
 
 # plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 
@@ -133,14 +133,16 @@ ax.set_title('Decoupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(1,1), lim=ADJUST_TEXT_LIM)
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(2,1), lim=ADJUST_TEXT_LIM)
 leg = ax.get_legend()
 leg.set_title('')
 leg.set_bbox_to_anchor([0,0,0.6,0.45])
 
 
 alter_dict = {
-    "CH_{4}\ (Feedstock)": (7,1e-2),
+    "H_{2}\ (Feedstock)": (1,1e-2),
+    "LiBH_{4}": (10,5),
+    "Zr(BH_{4})_{4}": (10,10),
 }
 
 for alter_name, (x,y) in alter_dict.items():

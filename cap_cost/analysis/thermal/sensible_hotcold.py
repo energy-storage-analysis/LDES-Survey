@@ -126,14 +126,15 @@ ax_cold.hlines(10,-200,0, linestyle='--', color='gray')
 
 adjust_text(texts_hot,  arrowprops = dict(arrowstyle='->'), force_points=(1,1))
 
-# alter_dict = {
+alter_dict = {
+"NaKMgCl": (900, 2),
+"Solar\ Salt": (800, 0.8),
+"LiNaKCaNO_{3}": (700, 0.5),
+"KMgCl": (900, 5),
+}
 
-# }
-# text_strings = [t.get_text().strip("$") for t in texts_cold]
-
-# for alter_name, (x,y) in alter_dict.items():
-#     text_index = text_strings.index(alter_name)
-#     adjust_text_after(ax_cold, text_index, x,y)
+for alter_name, (x,y) in alter_dict.items():
+    adjust_text_after(fig, ax_hot, alter_name, texts_hot, x,y)
 
 ax_hot.get_legend().set_title('')
 

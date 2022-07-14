@@ -64,8 +64,20 @@ plt.xlabel('Phase Change Temperature (deg C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Latent")
 
-adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(5,10))
+adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(1,-2))
 
+from es_utils.plot import adjust_text_after
+
+alter_dict = {
+    "NaCl/NaBr/Na_{2}MoO_{4}": (500,40),
+    "K_{2}CO_{3}": (1400, 15),
+    "LiF/NaF": (600, 50),
+    "Mg": (600, 30),
+    "KOH": (250, 25)
+}
+
+for alter_name, (x,y) in alter_dict.items():
+    adjust_text_after(fig, ax, alter_name, texts, x,y)
 
 leg = ax.get_legend()
 leg.set_title('')
