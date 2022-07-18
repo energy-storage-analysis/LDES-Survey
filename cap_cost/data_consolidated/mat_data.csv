@@ -102,8 +102,8 @@ Graphene Oxide,200.49,,,2,1,Alibaba,200.49,,,,
 Graphite,2.15,4.570430349008504,2.13,14,5,"Alibaba, Li 2017, Liu 2016, Steinmann 2022, USGS","0.8, 1.6, 12.0, 2.15, 3.62",C6,72.066,"Expanded Natural, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
 Gravel,0.0291803850227903,,,2,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
 H2 Spherical Pressure,682.656311794504,,,1,1,Tietze 2016,682.66,H2,2.016,,1.39
-H2O_LRC,0.3862764392982687,,,1,1,Cavern Calculations,0.39,H2O,18.015,,0.2923167
-H2O_Salt,0.0304248294326997,,,1,1,Cavern Calculations,0.03,H2O,18.015,,0.2923167
+H2O_LRC,0.3862764392982687,,,0,1,Cavern Calculations,0.39,H2O,18.015,,0.2923167
+H2O_Salt,0.0304248294326997,,,0,1,Cavern Calculations,0.03,H2O,18.015,,0.2923167
 H2SO4,0.2,,,0,1,Li 2017,0.2,H2SO4,98.072,H2SO4,0.1593358
 H2_LRC,52.99297500000002,,,1,1,Cavern Calculations,52.99,H2,2.016,,1.39
 H2_Salt,4.17395953125,,,1,1,Cavern Calculations,4.17,H2,2.016,,1.39

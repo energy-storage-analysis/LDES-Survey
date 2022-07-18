@@ -6,5 +6,3 @@ Stone,gravitational,block_stacking,Stone,,,100,
 Concrete,gravitational,block_stacking,Concrete,,,100,
 Gravel,gravitational,block_stacking,Gravel,,,100,
 Pumice,gravitational,block_stacking,Pumice,,,100,
-Water (LRC),gravitational,pumped_hydro,H2O_LRC,,,950,van Berchum 2014
-Water (Salt),gravitational,pumped_hydro,H2O_Salt,,,950,van Berchum 2014
