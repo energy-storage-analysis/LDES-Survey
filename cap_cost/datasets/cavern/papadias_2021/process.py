@@ -15,7 +15,7 @@ for col in df_2.columns:
     df_2[col] = df_2[col].str.replace(',','', regex=False)
     df_2[col] = df_2[col].astype(float)
 
-df_2['cavern_cost'] = df_2['Dome ($/kg)'] + df_2['Liner ($/kg)'] + df_2['Concrete ($/kg)']
+df_2['cavern_cost'] = df_2['Dome ($/kg)'] #+ df_2['Liner ($/kg)'] + df_2['Concrete ($/kg)']
 
 df_2
 

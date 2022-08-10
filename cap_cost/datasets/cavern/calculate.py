@@ -51,6 +51,10 @@ T = ureg.Quantity(330, 'K')
 
 df_gas['mass_density'] = (df_gas['mu']*P_cavern)/(R*T)
 df_gas['mass_density'] = df_gas['mass_density'].pint.to('kg/m**3')
+
+print(df_gas['mass_density'])
+
+
 df_gas.loc['H2O', 'mass_density'] = 1000
 
 sm_names = []
@@ -87,3 +91,4 @@ df_mat = df_mat.astype({
 df_mat = prep_df_pint_out(df_mat)
 
 df_mat.to_csv('output/mat_data.csv')
+# %%
