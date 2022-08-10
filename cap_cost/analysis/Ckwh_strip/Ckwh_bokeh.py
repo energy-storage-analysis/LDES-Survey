@@ -59,7 +59,7 @@ figure.legend.location = 'bottom_right'
 figure.legend.title = 'Energy Type'
 
 figure.xaxis.major_label_orientation = np.pi/4
-figure.yaxis.axis_label = "Material Energy Cost ($/kWh)"
+figure.yaxis.axis_label = "Material Energy Capital Cost ($/kWh)"
 # show(figure)
 figure.yaxis.axis_label_text_font_size = "16pt"
 figure.xaxis.major_label_text_font_size = "16pt"

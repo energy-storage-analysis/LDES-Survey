@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import ticker as mticker
-plt.rcParams.update({'font.size': 12})
+plt.rcParams.update({'font.size': 16})
 
 import os
 from os.path import join as pjoin
@@ -43,7 +43,7 @@ df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 def strip_plot(df_plot):
 
     cat_label = 'display_text'
-    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=5, hue='energy_type', palette=palette, style='coupled')
+    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=7, hue='energy_type', palette=palette, style='coupled')
 
     plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -76,7 +76,7 @@ df_elim['SM_type'] = pd.Categorical(df_elim['SM_type'], categories=elim_types, o
 df_elim = df_elim.sort_values('SM_type')
 df_elim = df_elim[df_elim['C_kwh']<1e4]#.dropna(how='all')
 
-fig = plt.figure(figsize = (8,7))
+fig = plt.figure(figsize = (7,6))
 strip_plot(df_elim)
 
 plt.gca().get_legend().remove()

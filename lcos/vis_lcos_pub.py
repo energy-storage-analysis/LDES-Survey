@@ -73,7 +73,7 @@ LT = 10,
 )
 
 da_lcos = calc_lcos.run_combos(combos, constants=constants)['lcos']
-da_lcos.attrs = dict(long_name='LCOS', units='$/kWh')
+da_lcos.attrs = dict(long_name='LCOS', units='USD/kWh')
 da_lcos.coords['DD'].attrs = dict(long_name='Discharge Duration', units='h')
 
 da_lcos
@@ -96,7 +96,7 @@ for C_kWh, eta_RT in da_lcos_stack.coords['temp'].values:
     da_lcos.sel(C_kWh=C_kWh, eta_RT=eta_RT).plot(
         linestyle=eta_linestyle_dict[eta_RT],
         color=color_dict[C_kWh],
-        label='$C_{{kWh}}$: {} \$/kWh, $\eta_{{RT}}$: {}'.format(C_kWh,eta_RT)
+        label='$C_{{kWh}}$: {} USD/kWh, $\eta_{{RT}}$: {}'.format(C_kWh,eta_RT)
     )
 
 
@@ -155,7 +155,7 @@ for DD, eta_RT in da_CkW_stack.coords['temp'].values:
 
     )
 
-plt.xlabel('Energy Capital ($/kWh)')
+plt.xlabel('$C_{kWh}$ (USD/kWh)')
 plt.ylim(1e2,1e4)
 plt.xticks([1e0,1e1,1e2,1e3])
 
@@ -164,7 +164,7 @@ plt.xscale('log')
 plt.yscale('log')
 # plt.legend(bbox_to_anchor=[0,0,1.8,1])
 
-plt.ylabel('Maximum Power Capital ($/kW)')
+plt.ylabel('Maximum $C_{kW}$ (USD/kW)')
 plt.tight_layout()
 
 plt.savefig('output/EP_capitaltradeoff_pub.png')
