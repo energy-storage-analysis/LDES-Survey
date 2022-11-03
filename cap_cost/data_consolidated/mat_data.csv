@@ -1,16 +1,15 @@
 ,specific_price,specific_price_std,specific_price_rat,num_SMs,num_source,sources,specific_prices,molecular_formula,mu,original_names,specific_price_element
 unit_row,USD / kilogram,USD / kilogram,dimensionless,N/U,N/U,N/U,N/U,N/U,gram / mole,N/U,N/U
 index,,,,,,,,,,,
-(NH4)6Mo7O24,27.79134,,,0,1,SMM,27.79,(NH4)6Mo7O24,1163.86,Hexaammonium molybdate,23.2310502
 AQDS,7.15,3.323401871576773,0.46,5,2,"Alibaba, Li 2017","4.8, 9.5",C14H8O8S2,368.33,AQDS,
 Ag,608.4850295578531,,,0,1,USGS,608.49,Ag,107.8682,Silver Bullion,521.0
 Air,0.0,,,1,1,Li 2017,0.0,O2,0.0,,
 Al,2.4461170086580384,0.8961408231790979,0.37,30,7,"Alibaba, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.39, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
 Al2O3,1.1130000000000002,3.1742771427183505,2.85,2,5,"Alibaba, Liu 2016, SMM, Steinmann 2022, USGS","0.53, 0.77, 1.11, 1.32, 8.0",Al2O3,101.9600768,"Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
 AlSc,340.0,,,0,1,USGS,340.0,AlSc,71.9374464,Scandium Mtl_Alloy,2162.93108
-Ammonium Heptamolybdate,19.018,,,0,1,ISE,19.02,H50Mo7N6O28 ,1254.064,Ammonium heptamolybdate,
+Ammonium Heptamolybdate,23.404670000000003,6.203688207655184,0.27,0,2,"ISE, SMM","19.02, 27.79","(NH4)6Mo7O24, H50Mo7N6O28 ",1163.86,"Ammonium heptamolybdate, Hexaammonium molybdate",
 Ammonium Paratungstate,20.13233333333333,,,0,1,ISE,20.13,(NH4)10(H2W12O42)(H2O)4,3132.504,Tungsten APT,
-Ammonium Tetrathiomolybdate,18.728,,,0,1,ISE,18.73,H10MoN2S4,262.284,Ammonium Tetrathiomolybdate,
+Ammonium Tetrathiomolybdate,23.062845000000003,6.130396589785198,0.27,0,2,"ISE, SMM","18.73, 27.4","H10MoN2S4, H8N2MoS4",262.284,"Ammoinum Tetramolybdate, Ammonium Tetrathiomolybdate",
 Antimony Ethylene Glycoxide,5.299,,,0,1,ISE,5.3,,,Antimony ethelyene_glycol,
 As,1.44074,0.20628650594096878,0.14,0,3,"ISE, SMM, USGS","1.15, 1.44, 1.54",As,74.921595,"Arsenic Metal, Arsenic Mtl-CN, Arsenic metal",1.1545
 As2O3,0.5195,0.12657211383239197,0.24,0,2,"ISE, USGS","0.43, 0.61",As2O3,197.84019,"Arsenic Triox-CN, Arsenic Triox-MA, Arsenic trioxide",0.9117738
@@ -108,7 +107,6 @@ H2SO4,0.2,,,0,1,Li 2017,0.2,H2SO4,98.072,H2SO4,0.1593358
 H2_LRC,38.90880000000001,,,1,1,Cavern Calculations,38.91,H2,2.016,,1.39
 H2_Salt,4.17395953125,,,1,1,Cavern Calculations,4.17,H2,2.016,,1.39
 H3N,0.7,0.3905884625254771,0.56,0,2,"Liu 2016, USGS","0.33, 0.7, 1.11",H3N,17.031,"Anhydrous, Nitrogen (Fixed)--Ammonia , Silica Gel",0.3619482
-H8N2MoS4,27.39769,,,0,1,SMM,27.4,H8N2MoS4,260.268,Ammoinum Tetramolybdate,14.8869663
 HBr,2.565,1.0818733752154177,0.42,2,2,"Alibaba, Li 2017","1.8, 3.33",HBr,80.912,HBr,4.3526261
 HCl,0.65,,,1,1,Li 2017,0.65,HCl,36.458,HCl,0.1181639
 HITEC,1.3356000000000003,,,2,1,Steinmann 2022,1.34,,,HITEC,
