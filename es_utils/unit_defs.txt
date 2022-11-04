@@ -3,6 +3,7 @@ EUR = 1.113 USD
 GBP = 1.35 USD
 RUB = 0.012 USD
 INR = 0.013 USD
+CNY = 0.14 USD
 
 
 cents = 0.01 * USD
