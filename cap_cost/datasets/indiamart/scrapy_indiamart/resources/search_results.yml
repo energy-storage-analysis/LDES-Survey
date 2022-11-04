@@ -1,0 +1,22 @@
+products:
+    css: 'section.lst_cl:nth-of-type(n+4)'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        price:
+            css: 'div.prd-top-item.slrPrd span.prc'
+            xpath: null
+            type: Text
+        price_amount:
+            css: span.quan
+            xpath: null
+            type: Text
+        link:
+            css: a.prd-name
+            xpath: null
+            type: Link
+        title:
+            css: a.prd-name
+            xpath: null
+            type: Text

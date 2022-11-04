@@ -1,0 +1,140 @@
+index,molecular_formula,search_text,must_contain,split_hydrate,original_names
+AQDS,,853-67-8,ANTHRAQUINONE,,AQDS
+Al,Al,aluminum ingot,aluminum,,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi"
+Al2O3,Al2O3,Al2O3,"Al2O3, Alumina, Aluminum Oxide",,"Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina"
+Au,Au,,,,"Gold "
+B,B,7440-42-8,,,"Boron (B), Boron CIF"
+Ba,Ba,barium metal,barium metal,,Ba
+Bi,Bi,bismuth metal,bismuth metal,,"Bi, Bismuth , Bismuth ingot"
+Bipyridine,(C5H4N)2,366-18-7,Bipyridine,,
+Br2,Br2,,,,Bromine Imports
+Graphite,,graphite powder,graphite powder,,Graphite
+CNT,,carbon nanotube,carbon nanotube,,
+CO2,CO2,,,,Cyrogenic Carbon Capture
+Ca,Ca,calcium metal,calcium metal,,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot"
+Ca(NO3)2,Ca(NO3)2,Ca(NO3)2,Ca(NO3)2,,
+CaCO3,CaCO3,CaCO3,CaCO3,,"CALCIUM CARBONATE Technical Grade 50 LB BAG, CaCO3, Calcium Carbonate 99% Powder SAA6532 SAA"
+CaCl2,CaCl2,CaCl2,CaCl2,y,CaCl2
+CaF2,CaF2,CaF2,CaF2,,"CaF2, Fluorspar Acid, Fluorspar Metallurgical"
+CaSO4,CaSO4,CaSO4,CaSO4,y,"CaSO4, Gypsum Mine, Gypsum Plant"
+Cd,Cd,Cadmium metal,"Cadmium metal, Cadmium ingot",,"Cadmium Ingot, Cadmium Metal, Cd"
+Cd(OH)2,Cd(OH)2,cadmium hydroxide,cadmium hydroxide,,Cd(OH)2
+CeO2,CeO2,CeO2,CeO2,,Rare Earths CeO2
+Clay,,Clay,Clay,,"Clays Ball, Clays Bentonite, Clays Common, Clays Fire, Clays Fullers, Clays Kaolin"
+Co,Co,cobalt metal,cobalt metal,,"Cobalt Conc., Cobalt Intermediate, Cobalt Powder, Cobalt metal, Cobalt LME, Cobalt Spot"
+CoO,CoO,cobalt oxide,CoO,,Cobalt Monoxide
+Concrete,,,,,Concrete
+Cr,Cr,chromium metal,,,"Chromium (Cr), Chromium Metal, Chromium metal"
+Cu,Cu,copper metal,,,"Copper (Cu), Copper COMEX, Copper LME, Copper US, Guixi Copper, High-Grade Copper, Low-Quality Copper, SMM Copper Cathode, SMM bonded copper spot price, Standard-Grade Copper"
+Fe,Fe,iron metal,,,"Cast iron, Iron and Steel Scrap , Iron and Steel Slag "
+FeCl2,FeCl2,FeCl2,FeCl2,y,FeCl2
+FeSO4,FeSO4,FeSO4,FeSO4,y,
+Ga,Ga,Gallium metal,Gallium metal,,"Ga, Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import, Gallium metal"
+Graphene,,Graphene powder,Graphene powder,,Graphene
+Graphene Oxide,,Graphene Oxide,Graphene Oxide,,
+Gravel,,,,,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) "
+HITEC,,,,,HITEC
+HITEC XL,,,,,"HITEC XL, HITEC XL, NaNO3e KNO3eCa(NO3)2"
+Hg,Hg,,,,"Hg, Mercury EU, Mercury Global"
+I2,I2,,,,Iodine Crude_CIF
+In,In,indium metal,indium metal,,"In, Indium FOB, Indium NY, Indium Rotterdam, Indium ingot"
+Iron Ore,,,,,"Iron Ore , Magnetite"
+K,K,,,,"K, Potassium"
+K2CO3,K2CO3,K2CO3,K2CO3,,K2CO3
+K2SO4,K2SO4,K2SO4,K2SO4,,K2SO4
+K4Fe(CN)6,C6FeK4N6,,,,
+KCl,KCl,KCl,KCl,,"KCl, Potash Muriate"
+KF,KF,,,,KF
+KNO3,KNO3,KNO3,KNO3,,KNO3
+KOH,KOH,koh potassium hydroxide,"koh, potassium hydroxide",,KOH
+LCO,,,,,"LCO, Lithium Cobaltate"
+LFP,,lifepo4 raw,lifepo4,,LFP
+LMNO,,LiNiMnCoO2 raw,LiNiMnCoO2,,LNMO
+LMO,,LiMn2O4 raw,"LiMn2O4 ",,"LMO, Lithium manganates"
+LMP,,,,,LMP
+LRMO LMNO,,,,,LRMO LMNO
+LTO,,lithium titanate raw,lithium titanate,,LTO
+LaNi5,LaNi5,LaNi5,LaNi5,,LaNi5
+Li,Li,lithium metal,"foil, ingot",,"Li, Lithium Metal, Lithium metal"
+Li2CO3,Li2CO3,Li2CO3,Li2CO3,,"Li2CO3, Lithium , Lithium Carbonate (99.5% Battery Grade), Lithium Carbonates"
+Li2S,Li2S,Li2S,Li2S,,Li2S
+Li2SO4,Li2SO4,Li2SO4,Li2SO4,,Li2SO4
+LiCl,LiCl,LiCl,LiCl,,LiCl
+LiF,LiF,7789-24-4,LiF,,LiF
+LiOH,LiOH,LiOH,LiOH,y,LiOH
+Metallurgical Silicon,Si,Metallurgical Silicon,Silicon,,"Silicon (Si), Silicon Si, Silicon metal"
+Mg,Mg,magnesium metal,magnesium,,"Magnesium Ingot, Magnesium Powder, Manganese flakes, Mercury metal, Magnesium Metal European, Magnesium Metal US_spot, Mg"
+MgCl2,MgCl2,MgCl2,MgCl2,y,MgCl2
+MgF2,MgF2,MgF2,MgF2,,MgF2
+MgO,MgO,MgO magnesium oxide,"MgO, magnesium oxide",,MgO
+MgSO4,MgSO4,MgSO4 magnesium sulphate,MgSO4,y,MgSO4
+MnO2,MnO2,MnO2,MnO2,,"Manganese dioxides, MnO2"
+MoS2,MoS2,MoS2,MoS2,,"MoS2, Molybdenum Conc."
+Mobiltherm 605,,,,,Mobiltherm 605
+NCA,,NCA raw cathode,NCA,,NCA
+NCM111,,Lithium Nickel Cobalt Manganese Oxide material,,,NCM111
+NCM622,,NCM622,NCM622,,NCM622
+NMO,,,,,NMO
+NTP,,,,,NTP
+Na,Na,sodium metal,sodium metal,,"Na, Sodium, Sodium (Na)"
+Na2CO3,Na2CO3,Na2CO3,Na2CO3,,"Na2CO3, Soda Ash "
+Na2SO4,Na2SO4,Na2SO4,Na2SO4,,Na2SO4
+NaBr,NaBr,NaBr,NaBr,,NaBr
+NaCl,NaCl,NaCl,NaCl,,"NaCl, Salt Brine, Salt Rock, Salt Solar, Salt Vacuum"
+NaF,NaF,,,,NaF
+NaNO3,NaNO3,,,,NaNO3
+NaOH,NaOH,NaOH,NaOH,,NaOH
+Ni,Ni,nickel metal,nickel metal,,"Import Nickel, JinChuan Nickel, Nickel Briquettes, SMM Nickel, Nickel , Nickel (Ni)"
+Ni(OH)2,Ni(OH)2,Ni(OH)2,Ni(OH)2,,Ni(OH)2
+NiCl2,NiCl2,NiCl2,NiCl2,y,NiCl2 6H2O
+PPy-AC,,,,,PPy-AC
+Pb,Pb,lead metal,lead metal,,"Lead - Guangdong, Lead - Henan, Lead -Tianjin, SMM Lead, Lead LME, Lead North_American, Pb"
+Polysilicon,Si,Polysilicon,Polysilicon,,"Si, Silicon polysilicon"
+S,S,,,,"S, Sulfur, Sulfur Sulfur"
+Sand,SiO2,,,,"Dune Sand, Sand"
+Sb,Sb,antimony metal,"antimony ",,"Antimony Ingot, Antimony Metal, Sb"
+SiO2,SiO2,SiO2,SiO2,,SiO2
+Sn,Sn,tin metal Sn,tin metal,,"SMM Tin Ingot, Sn, Tin LME, Tin NY"
+Solar Salt,,,,,"Molten Salt, Solar Salt"
+TEMPO,,,,,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)"
+Te,Te,tellurium metal,tellurium metal,,"Te, Tellurium , Tellurium metal"
+TiS2,TiS2,,,,TiS2
+Tl,Tl,,,,"Thallium Metal, Tl"
+V,V,vanadium metal,vanadium metal,,"Vanadium, Vanadium (V)"
+V2O5,V2O5,V2O5,V2O5,,"Vanadium pentoxide( Flake V2O5>=98%), Vanadium pentoxides"
+Vegetable Oil,,,,,"Sunflower oil, Vegetable oil"
+Water,H2O,,,,DI H2O
+Zn,Zn,zinc metal,zinc metal,,"Zinc , Zinc LME, Zinc-HX, Zinc-Ibis, Zinc-Nanhua, Zinc-Qilin (Guangdong), Zinc-Shuangyan, Zinc-Torch, Zirconium Sponge, Zn"
+ZnCl2,ZnCl2,ZnCl2,ZnCl2,,ZnCl2
+CuSO4,CuSO4,Copper Sulfate CuSO4,CuSO4,y,
+"CdSO4 ","CdSO4 ",CdSO4 cadmium sulphate,cadmium,,
+ZnSO4,ZnSO4,ZnSO4 zinc sulphate,zinc,y,
+NiSO4,NiSO4,NiSO4 nickel sulphate,nickel,,
+SrCO3,SrCO3,SrCO3 strontium carbonate,strontium,,
+MgCO3,MgCO3,MgCO3 magnesium carbonate,magnesium,,
+BaCO3,BaCO3,BaCO3 barium carbonate,barium,,
+ZnCO3,ZnCO3,ZnCO3 zinc carbonate,zinc,,
+PbCO3,PbCO3,PbCO3 lead carbonate,lead,,
+"Ca(OH)2 ","Ca(OH)2 ",Ca(OH)2 calcium hydroxide,calcium,,
+Mg(OH)2,Mg(OH)2,Mg(OH)2 magnesium hydroxide,magnesium,,
+Ba(OH)2,Ba(OH)2,Ba(OH)2 barium,barium,,
+Sr(OH)2,Sr(OH)2,Sr(OH)2,Sr(OH)2,,
+Rh2O3,Rh2O3,Rh2O3 rhodium oxide,rhodium,,
+CuO,CuO,Copper Oxide CuO,CuO,,
+Li2O,Li2O,Li2O,Li2O,,
+MgO,MgO,MgO magnesium oxide,magnesium oxide,,
+Cr2O3,Cr2O3,Cr2O3 chromium oxide,"Cr2O3, chromium oxide, chromic oxide",,
+PtO2,PtO2,PtO2,PtO2,,
+PbO,PbO,PbO lead oxide,PbO,,
+Sb2O3,Sb2O3,Sb2O3 antimony oxide,Sb2O3,,
+BaO,BaO,1304-28-5,barium oxide,,
+CoCl2,CoCl2,7791-13-1,cobalt,y,
+CoSO4,CoSO4,CoSO4 cobalt,cobalt,y,
+CdCO3,CdCO3,CdCO3 cadmium carbonate,cadmium,,
+Mg(NO3)2,Mg(NO3)2,Mg(NO3)2 magnesium nitrate,magnesium nitrate,,
+Co3O4,Co3O4,Co3O4 cobalt oxide,Co3O4,,
+MnSO4,MnSO4,MnSO4 manganese sulphate,MnSO4,y,
+Steel,Fe,steel,steel,,
+HBr,HBr,hbr Hydrobromic acid,hbr,,
+ZnBr2,ZnBr2,ZnBr2,ZnBr2,,
+ZnI2,ZnI2,10139-47-6,Zinc,,
