@@ -48,9 +48,15 @@ class ScrapyIndiamartPipeline(object):
 
         # if not item['min_order']:
         #     self.drop_item(item, "Missing Minimum Order")
+        if not item['price_amount']:
+            self.drop_item(item, "Missing Price Amount")
 
-        # if 'piece' in item['min_order'].lower():
-        #     self.drop_item(item,"'piece' found in Minimum Order " )
+        for s in ['piece','unit']:
+            if s in item['price_amount'].lower():
+                self.drop_item(item,"{} found in price amount".format(s))
+
+        if 'ask price' in item['price'].lower():
+            self.drop_item(item,"Ask Price" )
 
         #All conditions met, write to file
         line = json.dumps(ItemAdapter(item).asdict()) + "\n"
