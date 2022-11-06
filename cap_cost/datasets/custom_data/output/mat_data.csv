@@ -18,3 +18,6 @@ Fossil CH4,,CH4,0.164,EIA Henry Hub,Average over last 5 years
 SMR H2,,H2,2.08,DOE-FE Hydrogen Strategy,
 Cryogenic H2 Tank,,H2,28.9949,Kiessling 2021,Converted into specific costs by hand with 70.85 kg/m3 liquid hydrogen density
 Cryogenic CH4 Tank,,CH4,4.8912,Kiessling 2021,Converted into specific costs by hand with 420 kg/m3 liquid methane density
+CFRP,,,15,Singh Gill 2022,
+Steel,,,1.5,Singh Gill 2022,
+CFRP,,,10,Rao 2018,

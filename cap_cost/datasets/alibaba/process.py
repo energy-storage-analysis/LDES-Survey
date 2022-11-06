@@ -20,11 +20,14 @@ df_prices.to_csv('output/processed.csv')
 df_mat_data = df_prices[['median']].rename({'median':'specific_price'}, axis=1)
 
 #%%
+#Merge with the original search table to get the molecular formulas. Probably a better way to do this. 
+
 search_table = pd.read_csv(r'scrapy_alibaba\resources\mat_data_searches.csv', index_col=0)
 search_table = search_table[~search_table.index.duplicated()]
 
-df_mat_data = pd.merge(df_mat_data.reset_index(), search_table[['molecular_formula']].reset_index())
+df_mat_data = pd.merge(df_mat_data.reset_index(), search_table[['molecular_formula']].reset_index(), how='outer')
 df_mat_data = df_mat_data.set_index('index')
+df_mat_data = df_mat_data.dropna(subset=['specific_price'])
 
 #%%
 

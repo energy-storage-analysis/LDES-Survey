@@ -20,6 +20,7 @@ Ba,47.48557457746838,58.71026346667063,1.24,12,2,"Alibaba, Kim 2013","5.97, 89.0
 Ba(OH)2,0.7668,0.42313269786203006,0.55,0,2,"Alibaba, Indiamart","0.47, 1.07",Ba(OH)2,171.341,,0.2539008
 BaCO3,0.48,1.5521622284198688,3.23,1,3,"Alibaba, EChemi, Indiamart","0.41, 0.48, 3.13",BaCO3,197.335,,0.2261665
 BaO,2.0,,,2,1,Alibaba,2.0,BaO,153.326,,0.2493871
+BaO2,10.0,,,0,1,Alibaba,10.0,,,,0.2403743
 Barite,0.2913773245899176,0.13240245731059258,0.45,0,2,"EChemi, USGS","0.2, 0.39",BaSO4,233.383,Barite ,
 Bauxite,0.0907376319260506,0.08093172006909616,0.89,0,2,"SMM, USGS","0.03, 0.15",AlHO2,59.9875384,"Australia Bauxite CIF, Bauxite(4.5≤Al/Si<5.5)Henan, Bauxite(4.5≤Al/Si<5.5)Shanxi, Bauxite(5.5≤Al/Si<6.5)Guangxi, Bauxite(5.5≤Al/Si<6.5)Guizhou, Bauxite(6.0≤Al/Si<7.0)Henan, Bauxite(6.0≤Al/Si<7.0)Shanxi, Bauxite(6.5≤Al/Si<7.5)Guangxi, Bauxite(6.5≤Al/Si<7.5)Guizhou, Guinea Bauxite CIF, Indonesia Bauxite CIF, Malaysia Bauxite CIF, Bauxite and Alumina Bauxite",
 Be,780.375,232.4613543150775,0.3,0,2,"SMM, USGS","616.0, 944.75",Be,9.0121831,"Beryllium, Beryllium Alloy",857.0
@@ -30,7 +31,7 @@ Br2,4.6605115,3.1374490515806785,0.67,1,2,"EChemi, USGS","2.44, 6.88",Br2,159.80
 C,2.75,16.09723275972716,5.85,0,3,"EChemi, Li 2017, Liu 2016","1.53, 2.75, 30.0",C,12.011,"Activated Carbon, Active carbon",0.122
 C6H12O6Sc,44200.0,,,0,1,USGS,44200.0,C6H12O6Sc,225.111908,Scandium Cmpds_Acetate,691.1577074
 CCoO3,14.445,,,0,1,ISE,14.45,CCoO3,118.941194,Cobalt Carbonates,16.3262666
-CFRP,31.38000000000001,,,18,1,Kale 2018,31.38,,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
+CFRP,23.190000000000005,21.48412915919951,0.93,18,4,"Indiamart, Kale 2018, Rao 2018, Singh Gill 2022","10.0, 15.0, 31.38, 57.69",,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
 CH4 Spherical Pressure,85.78415038195598,,,1,1,Tietze 2016,85.78,CH4,16.043,,0.4406795
 CH4_LRC,4.863600000000001,,,1,1,Cavern Calculations,4.86,CH4,16.043,,0.4406795
 CH4_Salt,0.52174494140625,,,1,1,Cavern Calculations,0.52,CH4,16.043,,0.4406795
@@ -93,7 +94,7 @@ FeTiO3,0.3898153678011236,0.013460435941850743,0.03,0,2,"ISE, USGS","0.38, 0.4",
 FeV,25.35074,,,0,1,SMM,25.35,FeV,106.7865,50 Ferrovanadium,177.2038112
 Feldspar,0.1067037348974807,,,0,1,USGS,0.11,AlKO8Si3,278.3268384,Feldspar and Nepheline Syenite Feldspar,
 Fossil CH4,0.164,,,1,1,EIA Henry Hub,0.16,CH4,16.043,,
-GRE,24.815,,,6,1,Kale 2018,24.82,,,"E-Glass Epoxy, S-2 Glass Epoxy",
+GRE,19.6575,7.293806447939238,0.37,6,2,"Alibaba, Kale 2018","14.5, 24.82",,,"E-Glass Epoxy, S-2 Glass Epoxy",
 Ga,236.69626852115405,279.111198975028,1.18,6,5,"Alibaba, ISE, Indiamart, Kim 2013, USGS","151.62, 236.7, 414.3, 5.59, 731.47",Ga,69.723,"Ga, Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import, Gallium metal",148.0
 Ge,1187.075,48.54288052845655,0.04,0,2,"ISE, USGS","1152.75, 1221.4",Ge,72.63,"Germanium Metal, Germanium metal",962.0
 GeO2,782.45,87.61053018901326,0.11,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"Germanium GeO2, Germanium dioxides",667.8421426
@@ -135,7 +136,7 @@ LFP,15.0,7.0710678118654755,0.47,1,2,"Alibaba, Li 2017","10.0, 20.0",LiFePO4,157
 LMNO,35.0,21.213203435596427,0.61,1,2,"Alibaba, Li 2017","20.0, 50.0",LiMn1.5Ni0.5O4,182.6897645,LNMO,
 LMO,10.0,2.7700025421167638,0.28,2,3,"Alibaba, ISE, Li 2017","10.0, 12.5, 6.97",LiMn2O4,180.812086,"LMO, Lithium manganates",
 LMP,10.0,,,1,1,Li 2017,10.0,LiMnPO4,156.847805,LMP,
-LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.072118,LRMO LMNO,
+LRMO LMNO,20.0,,,1,1,Li 2017,20.0,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,102.0721179,LRMO LMNO,
 LTO,28.5,23.33452377915607,0.82,1,2,"Alibaba, Li 2017","12.0, 45.0",Li4Ti5O12,459.083,LTO,
 La,5.143,,,2,1,ISE,5.14,La,138.90547,Lanthanum metal,4.85
 La2O3,2.0,,,0,1,USGS,2.0,La2O3,325.80794,Rare Earths La2O3,4.1582001
@@ -245,7 +246,7 @@ Sn,26.95644848791172,14.973845002731451,0.56,7,5,"Alibaba, Indiamart, Kim 2013, 
 Solar Salt,0.5,0.2424606401047395,0.48,1,5,"Antunez 2018, Diago 2018, Liu 2016, Olympios 2021, Steinmann 2022","0.43, 0.49, 0.5, 0.78, 1.0",NaNO3KNO3,186.0960693,"Molten Salt, Solar Salt, Solar salt",
 Sr,6.80275,,,0,1,ISE,6.8,Sr,87.62,Strontium metal,6.605
 SrCO3,2.815,2.6375082938258223,0.94,1,2,"Alibaba, Indiamart","0.95, 4.68",SrCO3,147.628,,3.9801865
-Steel,1.7566666666666668,2.9422262609069296,1.67,18,3,"Alibaba, Indiamart, Kale 2018","0.6, 1.76, 6.18",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
+Steel,1.6283333333333334,2.4945219147831383,1.53,18,4,"Alibaba, Indiamart, Kale 2018, Singh Gill 2022","0.6, 1.5, 1.76, 6.18",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
 Stone,0.02054620946914295,0.010293764286410899,0.5,8,2,"Steinmann 2022, USGS","0.01, 0.03",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
 Syenite,0.1380093761277333,,,0,1,USGS,0.14,Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,29.4,,,0,1,Alva 2018,29.4,,,Syltherm XLT,

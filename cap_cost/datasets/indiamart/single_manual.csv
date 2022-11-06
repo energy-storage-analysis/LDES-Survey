@@ -1,2 +1,5 @@
-index,search_text,price,price_amount,title,link
-Mobiltherm 605,Mobiltherm 605,₹185.112,Kg,Mobiltherm 605,https://www.indiamart.com/proddetail/mobiltherm-605-20657355491.html?pos=3&kwd=mobiltherm%20605&tags=A||||8038.904|Price|product
+index,search_text,price,price_amount,title,link,notes
+Mobiltherm 605,Mobiltherm 605,₹185.112,Kg,Mobiltherm 605,https://www.indiamart.com/proddetail/mobiltherm-605-20657355491.html?pos=3&kwd=mobiltherm%20605&tags=A||||8038.904|Price|product,Price converted from volumetric to mass with listed density of 0.857 kg/L
+CFRP,carbon fiber reinforced polymer,₹6875,Kg,Black Carbon Fiber Fabric,https://www.indiamart.com/proddetail/carbon-fiber-fabric-21840310955.html?pos=5&kwd=carbon%20fiber%20reinforced%20polymer&tags=A||||7616.5063|Price|proxy,"Price converted with quoted area mass density of 	
+160 g/m2"
+CFRP,carbon fiber reinforced polymer,₹2000,Kg,"FRP Solution Carbon Fiber Sheet, Thickness: 0.5-12 Mm",https://www.indiamart.com/proddetail/carbon-fiber-sheet-14931575188.html?pos=22&kwd=carbon%20fiber%20reinforced%20polymer&tags=||||7650.5557|Price|product,
