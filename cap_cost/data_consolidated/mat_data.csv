@@ -2,7 +2,7 @@
 unit_row,USD / kilogram,USD / kilogram,dimensionless,N/U,N/U,N/U,N/U,N/U,gram / mole,N/U,N/U
 index,,,,,,,,,,,
 AQDS,7.15,3.323401871576773,0.46,5,2,"Alibaba, Li 2017","4.8, 9.5",C14H8O8S2,368.33,AQDS,
-Ag,608.4850295578531,,,0,1,USGS,608.49,Ag,107.8682,Silver Bullion,521.0
+Ag,652.9975147789265,62.95016029457405,0.1,0,2,"Kitco, USGS","608.49, 697.51",Ag,107.8682,Silver Bullion,521.0
 Air,0.0,,,1,1,Li 2017,0.0,O2,0.0,,
 Al,2.425558504329019,0.8371019743714517,0.35,30,8,"Alibaba, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.39, 2.4, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
 Al2O3,1.005073,2.7083567583021173,2.69,2,7,"Alibaba, EChemi, Indiamart, Liu 2016, SMM, Steinmann 2022, USGS","0.52, 0.53, 0.77, 1.01, 1.11, 1.32, 8.0",Al2O3,101.9600768,"Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
@@ -14,7 +14,7 @@ Antimony Ethylene Glycoxide,5.299,,,0,1,ISE,5.3,,,Antimony ethelyene_glycol,
 As,1.44074,0.20628650594096878,0.14,0,3,"ISE, SMM, USGS","1.15, 1.44, 1.54",As,74.921595,"Arsenic Metal, Arsenic Mtl-CN, Arsenic metal",1.1545
 As2O3,0.5195,0.12657211383239197,0.24,0,2,"ISE, USGS","0.43, 0.61",As2O3,197.84019,"Arsenic Triox-CN, Arsenic Triox-MA, Arsenic trioxide",0.9117738
 Asbestos,2.0326620573445715,,,0,1,USGS,2.03,Mg3Si2O5(OH)4,277.108,Asbestos Customs,
-Au,48238.98015156943,,,1,1,USGS,48238.98,Au,196.96657,Gold ,44800.0
+Au,52593.80007578472,6158.645398517831,0.12,1,2,"Kitco, USGS","48238.98, 56948.62",Au,196.96657,Gold ,44800.0
 B,49.60400899159745,115.22819263611453,2.32,10,3,"Alibaba, Ray 2021, USGS","0.43, 220.0, 49.6",B,10.81,"Boron (B), Boron CIF",3.68
 Ba,47.48557457746838,58.71026346667063,1.24,12,2,"Alibaba, Kim 2013","5.97, 89.0",Ba,137.327,Ba,0.2605
 Ba(OH)2,0.7668,0.42313269786203006,0.55,0,2,"Alibaba, Indiamart","0.47, 1.07",Ba(OH)2,171.341,,0.2539008
@@ -215,19 +215,19 @@ Pb2Sb,3.0,,,0,1,Li 2017,3.0,Pb2Sb,536.16,Pb2Sb,2.8606953
 PbBi,13.0,,,0,1,Alva 2018,13.0,PbBi,416.1804,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),4.1893259
 PbCO3,4.5,,,1,1,Alibaba,4.5,PbCO3,267.208,,1.5839978
 PbO,1.945,,,1,1,Alibaba,1.95,PbO,223.199,,1.8676779
-Pd,1.821086628948366,,,0,1,USGS,1.82,Pd,106.42,Platinum-Group Metals Palladium,49500.0
+Pd,31862.300543314475,45057.522151354045,1.41,0,2,"Kitco, USGS","1.82, 63722.78",Pd,106.42,Platinum-Group Metals Palladium,49500.0
 Peat,0.0281662586167399,,,0,1,USGS,0.03,K,39.0983,Peat ,
 Perlite,0.0723116219966398,,,0,1,USGS,0.07,Al2CaFe2K2MgNa2O12Si,574.2852154,Perlite FOB,
 Phosphorite,0.0800895306065223,,,0,1,USGS,0.08,Ca5(PO4)3F,504.2976892,Phosphate Rock ,
 Polysilicon,10.55,20.125912351990404,1.91,2,3,"Alibaba, ISE, Li 2017","1.51, 10.55, 40.0",Si,28.085,"Si, Silicon polysilicon",
-Pt,1.0553197797396814,,,0,1,USGS,1.06,Pt,195.084,Platinum-Group Metals Platinum,27800.0
+Pt,16509.93765988987,23347.08530500543,1.41,0,2,"Kitco, USGS","1.06, 33018.82",Pt,195.084,Platinum-Group Metals Platinum,27800.0
 PtO2,15.0,,,1,1,Alibaba,15.0,PtO2,227.082,,23882.7389564
 Pumice,0.0357148864739501,,,1,1,USGS,0.04,C28FH37O7,504.5954032,Pumice and Pumicite ,
 Quartz,328.0,,,0,1,USGS,328.0,SiO2,60.083,"Quartz Crystal (Industrial) Cultured, Quartz Crystal (Industrial) Lumbered",
 Rb,125968.60921624408,,,0,1,SMM,125968.61,Rb,85.4678,Rubidium(Rb≥99.5%),15500.0
 Rb2CO3,1062.84,,,0,1,SMM,1062.84,Rb2CO3,230.9436,Rubidium Carbonate(Rb2CO3≥99%),11472.5441921
 Re,1502.5,1251.1680795693812,0.83,0,3,"ISE, SMM, USGS","1268.0, 1502.5, 3542.8",Re,186.207,"Rhenium, Rhenium APR, Rhenium Metal, Rhenium NH4ReO4",3580.0
-Rh,9.36120905208348,,,0,1,USGS,9.36,Rh,102.90549,Platinum-Group Metals Rhodium,147000.0
+Rh,200143.07560452604,283031.81318618276,1.41,0,2,"Kitco, USGS","400276.79, 9.36",Rh,102.90549,Platinum-Group Metals Rhodium,147000.0
 Ru,0.3010831068432655,,,0,1,USGS,0.3,Ru,101.07,Platinum-Group Metals Ruthenium,10500.0
 S,0.25,0.17353652892932592,0.69,8,5,"EChemi, Indiamart, Li 2017, Steinmann 2022, USGS","0.06, 0.18, 0.25, 0.45, 0.47",S,32.06,"S, Sulfur, Sulfur Sulfur",0.0926
 SMR H2,2.08,,,0,1,DOE-FE Hydrogen Strategy,2.08,H2,2.016,,
