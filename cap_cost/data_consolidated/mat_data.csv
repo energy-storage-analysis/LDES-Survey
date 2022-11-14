@@ -36,7 +36,7 @@ CH4 Spherical Pressure,85.78415038195598,,,1,1,Tietze 2016,85.78,CH4,16.043,,0.4
 CH4_LRC,4.863600000000001,,,1,1,Cavern Calculations,4.86,CH4,16.043,,0.4406795
 CH4_Salt,0.52174494140625,,,1,1,Cavern Calculations,0.52,CH4,16.043,,0.4406795
 CNT,100.0,,,4,1,Alibaba,100.0,,,,
-CO2,0.11750000000000001,0.10960155108391488,0.93,2,1,SynFuel Feedstock Calculations,"0.04, 0.2",CO2,44.009,"Cyrogenic Carbon Capture, DAC Carbon Capture",0.1452665
+CO2,0.11750000000000001,0.10960155108391488,0.93,2,2,"Knighton 2020, Zhao 2019","0.04, 0.2",CO2,44.009,"Cyrogenic Carbon Capture, DAC Carbon Capture",0.1452665
 CW,28.475,,,0,1,ISE,28.48,CW,195.851,Tungsten carbide,33.1426306
 Ca,4.5,2.413907146966732,0.54,16,5,"Alibaba, ISE, Indiamart, Kim 2013, SMM","3.49, 3.77, 4.5, 7.31, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
 Ca(NO3)2,0.325,,,1,1,Indiamart,0.33,Ca(NO3)2,164.086,,0.6708852
@@ -173,7 +173,7 @@ N-Propanol,1.15733338,,,0,1,EChemi,1.16,C3H8,44.097,,
 N-hexane,1.734,,,1,1,ChemAnalyst,1.73,C6H14,86.178,,
 N-pentane,1.4,,,1,1,Antunez 2018,1.4,,,N-pentane,
 N-propane,0.5,,,1,1,Antunez 2018,0.5,,,N-propane,
-N2,0.14,,,2,1,SynFuel Feedstock Calculations,0.14,N2,28.014,Liquid Nitrogen,0.14
+N2,0.15065,0.014919953083036157,0.1,2,2,"Rutherford & Titan, Salerno 2002","0.14, 0.16",N2,28.014,Liquid Nitrogen,0.14
 N2_LRC,2.7792,,,1,1,Cavern Calculations,2.78,N2,28.014,,0.14
 N2_Salt,0.2981399665178571,,,1,1,Cavern Calculations,0.3,N2,28.014,,0.14
 NCA,57.0,32.526911934581186,0.57,1,2,"Alibaba, Li 2017","34.0, 80.0",LiNi0.8Co0.15Al0.05O2,96.081776,NCA,

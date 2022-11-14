@@ -1,7 +1,7 @@
-,materials,mat_basis,original_name,SM_type,sub_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,delta_height,source,notes
-unit_row,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,m,N/U,N/U
-SM_name,,,,,,,,,,,,,,,,,,
-H2 (Feedstock),"[('Water', 1)]",molar,Synthetic H2,synfuel,feedstock,,,,,,,,"0.0659 ",2,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
-CH4 (Feedstock),"[('CO2', 1), ('Water', 4)]",molar,Synthetic CH4 (Sabatier),synfuel,feedstock,,,,,,,,0.2554,8,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
-Methanol (Feedstock),"[('CO2', 1), ('Water', 3)]",molar,Synthetic Methanol (DMS),synfuel,feedstock,,,,,,,,0.1923,6,,,Standard Gibbs,Based on hypotheticical reversible electrochemical oxidation reaction
-Ammonia (Feedstock),"[('N2', 0.5), ('Water', 1.5)]",molar,Synthetic NH3,synfuel,feedstock,,,,,,,,0.1033,3,,,Standard Gibbs,
+,materials,mat_basis,original_name,SM_type,sub_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,delta_height,notes
+unit_row,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,m,N/U
+SM_name,,,,,,,,,,,,,,,,,
+H2 (Feedstock),"[('Water', 1)]",molar,Synthetic H2,synfuel,feedstock,,,,,,,,"0.0659 ",2,,,Based on hypotheticical reversible electrochemical oxidation reaction
+CH4 (Feedstock),"[('CO2', 1), ('Water', 4)]",molar,Synthetic CH4 (Sabatier),synfuel,feedstock,,,,,,,,0.2554,8,,,Based on hypotheticical reversible electrochemical oxidation reaction
+Methanol (Feedstock),"[('CO2', 1), ('Water', 3)]",molar,Synthetic Methanol (DMS),synfuel,feedstock,,,,,,,,0.1923,6,,,Based on hypotheticical reversible electrochemical oxidation reaction
+Ammonia (Feedstock),"[('N2', 0.5), ('Water', 1.5)]",molar,Synthetic NH3,synfuel,feedstock,,,,,,,,0.1033,3,,,

@@ -21,7 +21,7 @@ for source, row in dataset_index.iterrows():
         
 
         #Custom data dataset already has source column
-        if source != 'custom_data':
+        if 'source' not in df_mat_data.columns:
             df_mat_data['source'] = source
 
         dfs_mat_data.append(df_mat_data)
@@ -33,7 +33,7 @@ for source, row in dataset_index.iterrows():
         df_SM = read_pint_df(fp_SM)
 
         #Custom data dataset already has source column
-        if source != 'custom_data':
+        if 'source' not in df_SM.columns:
             df_SM['source'] = source
 
         dfs_SM.append(df_SM)
