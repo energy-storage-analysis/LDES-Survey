@@ -29,7 +29,7 @@ for col in df_3.columns:
 
 df_3
 
-
+df_3.to_csv('output/table_3_processed.csv')
 
 #%%
 
@@ -41,7 +41,12 @@ df_3
 df_out = pd.DataFrame(columns=['cost_H2', 'P'])
 df_out.index.name = 'index'
 
-df_out.loc['Salt', 'cost_H2'] = float(df_3.loc['2000']['Leaching ($/kg)'])
+leaching_cost = float(df_3.loc['2000']['Leaching ($/kg)'])
+
+#This is the fraction of leaching costs calculated from lord 2014 data (see Readme)
+leaching_cost = leaching_cost *  0.5715509854327335
+
+df_out.loc['Salt', 'cost_H2'] = leaching_cost
 df_out.loc['Salt', 'P'] = 100
 
 df_out.loc['LRC', 'cost_H2'] = df_2.loc['100']['cavern_cost']
@@ -68,6 +73,9 @@ mass_density
 
 df_out['vol_cost'] = df_out['cost_H2']*mass_density
 df_out['vol_cost'] = df_out['vol_cost'].pint.to('USD/m**3')
+
+
+
 
 df_out
 

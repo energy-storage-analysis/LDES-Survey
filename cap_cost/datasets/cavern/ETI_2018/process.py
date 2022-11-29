@@ -62,6 +62,9 @@ df_out['vol_cost'] = df_out['vol_cost'].astype("pint[GBP/m**3]")
 
 df_out['vol_cost'] = df_out['vol_cost'].pint.to("USD/m**3")
 
+#This is the fraction of leaching costs calculated from lord 2014 data (see Readme)
+df_out['vol_cost'] = df_out['vol_cost'] *  0.5715509854327335
+
 df_out
 
 
