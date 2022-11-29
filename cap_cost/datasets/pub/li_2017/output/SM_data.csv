@@ -36,7 +36,7 @@ LTO/LMO,coupled_battery,solid_electrode,Li ion,"[('LTO', 1), ('LMO', 1)]",molar,
 C6/NCM111,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCM111', 1)]",molar,51.3,4.2,1.0
 C6/LMP,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMP', 1)]",molar,36.3,4.0,1.0
 C6/NCA,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCA', 1)]",molar,68.3,4.2,1.0
-C6/LRMO LMNO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,35.6,4.95,1.0
+C6/LRMO LMNO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMNO', 0.7), ('LMO', 0.15), ('Li', 0.45)]",molar,35.6,4.95,1.0
 C6/NCM622,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCM622', 1)]",molar,47.1,4.2,1.0
 Si/LCO,coupled_battery,solid_electrode,Li ion,"[('Polysilicon', 1), ('LCO', 4)]",molar,97.2,4.2,4.0
 Si/Li2S,coupled_battery,solid_electrode,Li ion,"[('Polysilicon', 1), ('Li2S', 1)]",molar,12.5,2.6,2.0

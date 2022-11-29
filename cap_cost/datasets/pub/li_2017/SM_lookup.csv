@@ -34,7 +34,7 @@ LTO/LMO,LTO/LMO,coupled_battery,solid_electrode,Li ion,"[('LTO', 1), ('LMO', 1)]
 C6/NCM111,C6/NCM111,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCM111', 1)]",molar,4.2,1,https://www.nanoshel.com/product/lithium-nickel-cobalt-manganese-oxide-ncm111
 C6/LMP,C6/LMP,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMP', 1)]",molar,4,1,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.957.7169&rep=rep1&type=pdf
 C6/NCA,C6/NCA,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCA', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
-C6/LRMO LMNO,C6/LRMO LMNO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LRMO LMNO', 1)]",molar,4.95,1,https://patents.google.com/patent/US7303840B2/en
+C6/LRMO LMNO,C6/LRMO LMNO,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('LMNO', 0.7), ('LMO', 0.15), ('Li', 0.45)]",molar,4.95,1,https://patents.google.com/patent/US7303840B2/en
 C6/NCM622,C6/NCM622,coupled_battery,solid_electrode,Li ion,"[('Graphite', 1), ('NCM622', 1)]",molar,4.2,1,https://batteryuniversity.com/article/bu-205-types-of-lithium-ion
 Si/LCO,Si/LCO,coupled_battery,solid_electrode,Li ion,"[('Polysilicon', 1), ('LCO', 4)]",molar,4.2,4,https://www.nature.com/articles/s41467-021-25334-8
 Si/Li2S,Si/Li2S,coupled_battery,solid_electrode,Li ion,"[('Polysilicon', 1), ('Li2S', 1)]",molar,2.6,2,https://pubmed.ncbi.nlm.nih.gov/20184382/

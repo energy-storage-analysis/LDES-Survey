@@ -23,7 +23,7 @@ Lithium metal,Li,Lithium,molecular_formula
 LMO,LiMn2O4,LMO,material_name
 LMP,LiMnPO4,LMP,material_name
 LNMO,LiMn1.5Ni0.5O4,LMNO,material_name
-LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,LRMO LMNO,material_name
+LRMO LMNO,(Li2MnO3)0.3(LiMn0.5Ni0.5O2)0.7,LRMO LMNO,
 LTO,Li4Ti5O12,LTO,material_name
 Mg,Mg,,molecular_formula
 MnO2,MnO2,,molecular_formula
