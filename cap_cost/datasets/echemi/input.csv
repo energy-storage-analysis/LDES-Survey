@@ -15,8 +15,8 @@ Li2CO3,Lithium carbonate,Li2CO3,564000.0,CNY/metric_ton,2022-11-01,https://www.e
 KOH,Potassium hydroxide,KOH,9974.074,CNY/metric_ton,2022-11-02,https://www.echemi.com/productsInformation/pd20150901020-potassium-hydroxide.html
 Ethanol,Ethanol,C2H6O,6762.5,CNY/metric_ton,2022-11-01,https://www.echemi.com/productsInformation/pid_Rock6661-etanol.html
 Methanol,Methanol,CH3OH,2621.55,CNY/metric_ton,2022-11-01,https://www.echemi.com/productsInformation/pd20150901274-methanol-reagent.html
-N-Propanol,1-Propanol,C3H8,8266.667,CNY/metric_ton,2022-11-02,https://www.echemi.com/productsInformation/pd20170111160501595-1-propanol.html
-N-Hexane,Hexane,C6H14,"10200.0 ",CNY/metric_ton,2022-11-02,https://www.echemi.com/productsInformation/pid_Seven3640-hexane.html
+N-propanol,1-Propanol,C3H80,8266.667,CNY/metric_ton,2022-11-02,https://www.echemi.com/productsInformation/pd20170111160501595-1-propanol.html
+N-hexane,Hexane,C6H14,"10200.0 ",CNY/metric_ton,2022-11-02,https://www.echemi.com/productsInformation/pid_Seven3640-hexane.html
 Br2,Bromine,Br2,6879.023,USD/metric_ton,2022-10-31,https://www.echemi.com/productsInformation/pid_Rock20656-bromine.html
 NaOH,Sodium hydroxide,NaOH,1945.8,CNY/metric_ton,2022-11-01,https://www.echemi.com/productsInformation/pd20150901041-caustic-soda-pearls.html
 Metallurgical Silicon,Silicon,Si,21470.0,CNY/metric_ton,2022-11-01,https://www.echemi.com/productsInformation/pid_Rock21081-silicon.html
@@ -26,3 +26,6 @@ K2SO4,Potassium sulfate,K2SO4,3983.33,CNY/metric_ton,2022-11-01,https://www.eche
 K2CO3,Potassium carbonate,K2CO3,9250.0,CNY/metric_ton,2022-11-01,https://www.echemi.com/productsInformation/pd20160225194205669-potassium-carbonate.html
 KCl,Potassium chloride,KCl,3833.33,CNY/metric_ton,2022-11-01,https://www.echemi.com/productsInformation/pd20150901015-potassium-chloride.html
 Bipyridine,Bipyridine,(C5H4N)2,44933.375,USD/metric_ton,2021-06-22,https://www.echemi.com/productsInformation/pid_Seven21112-22-dipyridyl.html
+Toluene,Toluene,C7H8,7177.5,CNY/metric_ton,2022-11-25,https://www.echemi.com/productsInformation/temppid160704000607-toluene.html
+Ethylene glycol,Ethylene glycol,C2H6O2,3930.0,CNY/metric_ton,2022-11-28,https://www.echemi.com/productsInformation/pid_Seven2471-ethylene-glycol-eg.html
+Isopentane,Isopentane,C5H12,484.551,USD/metric_ton,2020-03-13,https://www.echemi.com/productsInformation/pid_Rock14848-isopentane.html

@@ -83,7 +83,7 @@ Dy,338.18,,,0,1,Preismonitor,338.18,,,Dysprosium (metal),307.0
 Dy2O3,252.41,1.117228714274734,0.0,0,2,"Preismonitor, USGS","251.62, 253.2",Dy2O3,372.997,"Dysprosium (oxide), Rare Earths Dy2O3",267.5152656
 Er2O3,26.61,,,0,1,Preismonitor,26.61,,,Erbium (oxide),23.1067193
 Ethanol,0.8225,0.23058977824988977,0.28,1,3,"Antunez 2018, ChemAnalyst, EChemi","0.5, 0.82, 0.95",C2H6O,46.069,Ethanol,
-Ethylene glycol,0.8,,,1,1,Antunez 2018,0.8,,,Ethylene glycol,
+Ethylene glycol,0.8,0.1673424034726405,0.21,1,3,"Antunez 2018, ChemAnalyst, EChemi","0.55, 0.8, 0.87",C2H6O2,62.068,Ethylene glycol,
 Eu2O3,44.9,0.7071067811865476,0.02,0,2,"Preismonitor, USGS","44.4, 45.4",Eu2O3,351.925,"Europium (oxide), Rare Earths Eu2O3",27.1385401
 Fe,0.5008500000000001,0.20350916257408275,0.41,6,3,"Alibaba, Steinmann 2022, USGS","0.18, 0.5, 0.56",Fe,55.845,"Cast iron, Iron and Steel Scrap , Iron and Steel Slag ",0.424
 FeCl2,1.8822517653556352,1.2054474477125774,0.64,2,3,"Alibaba, Indiamart, Li 2017","0.19, 1.88, 2.53",FeCl2,126.745,FeCl2,0.2326883
@@ -125,7 +125,7 @@ In,265.9166666666667,189.19933558344198,0.71,6,5,"Alibaba, ISE, Indiamart, Kim 2
 Ir,2.36356048052572,,,0,1,USGS,2.36,Ir,192.217,Platinum-Group Metals Iridium,55850.0
 Iron Ore,0.10118,0.02244345751121324,0.22,3,3,"Olympios 2021, Preismonitor, USGS","0.1, 0.14",Fe2O3,159.687,"EISENERZ, Iron Ore , Magnetite",
 Iron Oxide Pigment,1.03,,,0,1,USGS,1.03,Fe2O3,159.687,Iron Oxide Pigments ,
-Isopentane,1.2,,,1,1,Antunez 2018,1.2,,,Isopentane,
+Isopentane,0.8422755,0.5058988394931342,0.6,1,2,"Antunez 2018, EChemi","0.48, 1.2",C5H12,72.151,Isopentane,
 K,76.04546196638984,76.92613536404406,1.01,17,2,"Kim 2013, SMM","130.44, 21.65",K,39.0983,"K, Potassium",12.85
 K2CO3,1.2537712210084133,2.4000050067679313,1.91,5,6,"Alibaba, Alva 2018, EChemi, Indiamart, Liu 2016, Ray 2021","0.79, 1.1, 1.21, 1.3, 7.0",K2CO3,138.2046,K2CO3,7.3346559
 K2O,0.9193276333109396,,,0,1,USGS,0.92,K2O,94.1956,Potash All,10.6936009
@@ -172,12 +172,11 @@ Mo,43.63333333333333,15.29405597440222,0.35,0,3,"ISE, SMM, USGS","25.5, 43.63, 5
 MoO3,43.24423674655519,24.857437130150046,0.57,0,2,"ISE, SMM","25.67, 60.82",MoO3,143.947,"High-purity Molybdenum Trioxide, Molybdenum Oxide, FOB, China, Molybdenum ores and concentrates, roasted 45%, Molybdenum ores and concentrates, roasted 50%, Molybdenum oxides and hydroxides, Molybdenum oxides",26.7805966
 MoS2,32.235,4.737920605779148,0.15,1,4,"Alibaba, ISE, Indiamart, Li 2017","26.35, 30.02, 34.45, 37.05",MoS2,160.07,"MoS2, Molybdenum Conc.",24.0740458
 Mobiltherm 605,2.8727280000000004,0.6594081861548284,0.23,1,2,"Indiamart, Steinmann 2022","2.41, 3.34",,,Mobiltherm 605,
-N-Hexane,1.4280000000000002,,,0,1,EChemi,1.43,C6H14,86.178,,
 N-Propane,0.97,,,0,1,ChemAnalyst,0.97,C3H8,44.097,,
-N-Propanol,1.15733338,,,0,1,EChemi,1.16,C3H8,44.097,,
-N-hexane,1.734,,,1,1,ChemAnalyst,1.73,C6H14,86.178,,
+N-hexane,1.581,0.21637467504308336,0.14,1,2,"ChemAnalyst, EChemi","1.43, 1.73",C6H14,86.178,,
 N-pentane,1.4,,,1,1,Antunez 2018,1.4,,,N-pentane,
 N-propane,0.5,,,1,1,Antunez 2018,0.5,,,N-propane,
+N-propanol,1.15733338,,,0,1,EChemi,1.16,C3H80,116.673,,
 N2,0.15065,0.014919953083036157,0.1,2,2,"Rutherford & Titan, Salerno 2002","0.14, 0.16",N2,28.014,Liquid Nitrogen,0.14
 N2_LRC,2.7792,,,1,1,Cavern Calculations,2.78,N2,28.014,,0.14
 N2_Salt,0.2981399665178571,,,1,1,Cavern Calculations,0.3,N2,28.014,,0.14
@@ -204,7 +203,7 @@ NaK,2.0,0.0,0.0,0,2,"Alva 2018, Antunez 2018",2.0,NaK,62.0880693,"Eutectic Na-K,
 NaMo2O4,12.485,,,0,1,ISE,12.48,NaMo2O4,278.8857693,Sodium Molybdate,27.8752649
 NaNO3,1.105,2.9604201751328025,2.68,4,3,"Alva 2018, Indiamart, Steinmann 2022","0.67, 1.1, 6.0",NaNO3,84.9937693,NaNO3,0.9215008
 NaOH,0.64,1.6236617781880558,2.54,1,5,"Alibaba, Alva 2018, EChemi, Indiamart, Li 2017","0.27, 0.34, 0.64, 0.73, 4.1",NaOH,39.9967693,NaOH,1.8210039
-Naphthalene,0.64,,,1,1,Southhall 2022,0.64,C10H18,138.254,Naphthalene,
+Naphthalene,0.9735,0.4716402230514271,0.48,1,2,"ChemAnalyst, Southhall 2022","0.64, 1.31","C10H18, C10H8",138.254,Naphthalene,
 Nb,61.675,57.52313664952564,0.93,0,2,"SMM, USGS","102.35, 21.0",Nb,92.90637,"Niobium, Niobium (Columbium) ",73.5
 Nb2O5,34.9463221514286,8.5834707524187,0.25,0,3,"ISE, Preismonitor, SMM","26.41, 34.42, 35.47, 47.24",Nb2O5,265.80774,"NIOB, Niobium Conc., Niobium pentoxides, Niobium Pentoxide 99.5%",51.426477
 Nd,73.39,,,0,1,Preismonitor,73.39,,,Neodymium (metal),57.5
@@ -275,7 +274,7 @@ TiCl4,1.233765,0.09229864814827991,0.07,0,2,"ISE, SMM","1.17, 1.3",TiCl4,189.667
 TiO2,1.702908,0.7628060423706695,0.45,0,4,"ISE, Preismonitor, SMM, USGS","1.32, 1.68, 1.7, 1.98, 3.29",TiO2,79.865,"Anatase Titanium Dioxide, High Titanium Slag(TiO2≥90%), Rutile Titanium Dioxide, Titanium Concentrate(TiO2≥46%), Titanium Concentrate(TiO2≥47%), TITAN, Titanium Dioxide, Titanium Mineral Concentrates Rutile, Titanium Mineral Concentrates Slag, Titanium and Titanium Dioxide Dioxide",6.8942777
 TiS2,80.0,,,3,1,Li 2017,80.0,TiS2,111.987,TiS2,4.925762
 Tl,6969.0413282447735,1552.276640000601,0.22,6,2,"Kim 2013, USGS","5871.42, 8066.67",Tl,204.38,"Thallium Metal, Tl",4200.0
-Toluene,0.32,,,1,1,Southhall 2022,0.32,C7H6,90.125,Toluene,
+Toluene,1.00485,0.44920389672545513,0.45,1,3,"ChemAnalyst, EChemi, Southhall 2022","0.32, 1.0, 1.17","C7H6, C7H8",90.125,Toluene,
 V,290.0,197.41569724681435,0.68,3,5,"Alibaba, Indiamart, Preismonitor, Ray 2021, SMM","25.84, 290.0, 393.64, 42.51, 451.95",V,50.9415,"VANADIUM, Vanadium, Vanadium (V)",371.0
 V2O5,17.103480294958075,7.666134942597936,0.45,6,4,"Alibaba, ISE, Indiamart, SMM","16.9, 17.31, 23.3, 5.0",V2O5,181.878,"Vanadium pentoxide( Flake V2O5>=98%), Vanadium pentoxides",207.8916209
 VN,34.87695,,,0,1,SMM,34.88,VN,64.9485,Vanadium nitrogen alloy,291.0191533
