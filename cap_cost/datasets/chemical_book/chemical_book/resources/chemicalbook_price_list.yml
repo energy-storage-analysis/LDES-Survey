@@ -1,0 +1,48 @@
+manufacturer:
+    css: td.brandimg
+    xpath: null
+    multiple: true
+    type: Text
+product_number:
+    css: 'table.table_2 td:nth-of-type(2)'
+    xpath: null
+    multiple: true
+    type: Text
+product_description:
+    css: 'table.table_2 td:nth-of-type(3)'
+    xpath: null
+    type: Text
+packaging:
+    css: 'table.table_2 td:nth-of-type(4)'
+    xpath: null
+    multiple: true
+    type: Text
+price:
+    css: 'table.table_2 td:nth-of-type(5)'
+    xpath: null
+    multiple: true
+    type: Text
+updated_date:
+    css: 'table.table_2 td:nth-of-type(6)'
+    xpath: null
+    type: Text
+package_selector_list:
+    css: 'div.Sel_c ul'
+    xpath: null
+    type: Text
+product_name:
+    css: 'div.product_base li:nth-of-type(2)'
+    xpath: null
+    type: Text
+CAS:
+    css: 'div.product_base li:nth-of-type(3)'
+    xpath: null
+    type: Text
+molecular_formula:
+    css: 'div.product_base li:nth-of-type(4)'
+    xpath: null
+    type: Text
+EINECS:
+    css: 'div.product_base li:nth-of-type(6)'
+    xpath: null
+    type: Text
