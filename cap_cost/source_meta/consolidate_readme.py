@@ -15,8 +15,9 @@ from es_utils.units import read_pint_df
 from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
+dataset_folder = os.path.join(REPO_DIR, 'cap_cost','datasets')
 
-dataset_index = pd.read_csv('dataset_index.csv', index_col=0)
+dataset_index = pd.read_csv(os.path.join(dataset_folder, 'dataset_index.csv'), index_col=0)
 
 #For checking which storage media ended up in the final dataset (have enough physprop to calculate Ckwh)
 df_final = read_pint_df(os.path.join(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True)
@@ -34,12 +35,12 @@ physical_properties = [
 'specific_capacitance','deltaV_electrolyte','deltaT_max','pressure','T_min','deltaT'
 ]
 
-with open('README_combined.md', 'w', encoding='utf-8') as f:
+with open(os.path.join('output','README_combined.md'), 'w', encoding='utf-8') as f:
     for source, row in dataset_index.iterrows():
 
         f.write("\n\n## {}\n".format(source))
 
-        fp= os.path.join(row['folder'], 'README.md')
+        fp= os.path.join(dataset_folder, row['folder'], 'README.md')
         if os.path.exists(fp):
             with open(fp,'r', encoding='utf-8') as f_read:
                 r_text = f_read.read()
@@ -62,7 +63,7 @@ with open('README_combined.md', 'w', encoding='utf-8') as f:
         # writer.table_name = 'Source Data'
         writer.headers = ["Number Material Prices", "Storage media", "Physical Properties"]
 
-        fp_mat_data = os.path.join(row['folder'], 'output','mat_data.csv')
+        fp_mat_data = os.path.join(dataset_folder, row['folder'], 'output','mat_data.csv')
         if os.path.exists(fp_mat_data):
             df_mat_data = read_pint_df(fp_mat_data)
             n_prices_string = str(len(df_mat_data))
@@ -70,7 +71,7 @@ with open('README_combined.md', 'w', encoding='utf-8') as f:
             n_prices_string = "None" 
 
             
-        fp_SM_data = os.path.join(row['folder'], 'output','SM_data.csv')
+        fp_SM_data = os.path.join(dataset_folder, row['folder'], 'output','SM_data.csv')
         if os.path.exists(fp_SM_data):
             df_SM_data = read_pint_df(fp_SM_data)
             df_SM_data = df_SM_data.set_index('SM_type', append=True) #Source SM data only is indexed by SM_name... 

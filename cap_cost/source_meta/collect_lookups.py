@@ -15,7 +15,12 @@ def list_fps(filepath, search_term):
 
 # %%
 
-folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\cap_cost\datasets'
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
+folder = os.path.join(REPO_DIR, 'cap_cost', 'datasets')
+
 fps = list_fps(folder, 'mat_lookup.csv')
 
 dfs = []
@@ -37,7 +42,7 @@ df_out
 
 # %%
 
-folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\cap_cost\datasets'
+# folder = r'C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis\cap_cost\datasets'
 fps = list_fps(folder, 'SM_lookup.csv')
 
 dfs = []

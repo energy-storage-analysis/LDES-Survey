@@ -9,18 +9,18 @@ from cairosvg import svg2png
 import os
 
 svg_paths =[
-    r'figures\thermal.svg',
-    r'figures\ec_rhoE.svg',
-    r'figures\eda_Ckwh.svg'
+    r'final\thermal.svg',
+    r'final\ec_rhoE.svg',
+    r'final\eda_Ckwh.svg'
 ]
 
 #%%
 
-if not os.path.exists('figures/output'): os.mkdir('figures/output')
+if not os.path.exists('final/output'): os.mkdir('final/output')
 
 for fp in svg_paths:
     folder, fn = os.path.split(fp)
     fn_base, ext = os.path.splitext(fn)
 
-    fp_out = os.path.join('figures','output',fn_base +'.png')
+    fp_out = os.path.join('final','output',fn_base +'.png')
     svg2png(file_obj=open(fp, 'rb'), write_to=fp_out, dpi=600)
