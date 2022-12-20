@@ -6,7 +6,7 @@ from es_utils.units import read_pint_df, ureg
 
 import os
 from os.path import join as pjoin
-output_dir = 'output'
+output_dir = 'tables'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 from dotenv import load_dotenv
@@ -40,6 +40,6 @@ df_sel['SM_type'] = df_sel['SM_type'].str.replace('thermochemical', 'thermo-chem
 df_sel.columns = [c.replace('_',' ') for c in df_sel.columns]
 
 
-df_sel.to_csv('output/SM_viable.csv')
+df_sel.to_csv('tables/SM_viable.csv')
 
 # %%

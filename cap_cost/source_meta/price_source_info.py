@@ -4,8 +4,6 @@ from es_utils.units import read_pint_df
 
 import os
 from os.path import join as pjoin
-output_dir = 'output'
-if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 # %%
 
@@ -51,7 +49,7 @@ df_count = df_count.rename({0: 'count'}, axis=1)
 
 df_count = df_count.sort_values(['index_source', 'count'])
 
-df_count.to_csv('output/price_source_counts.csv')
+df_count.to_csv('tables/price_source_counts.csv')
 
 
 # %%
@@ -62,7 +60,7 @@ df_count
 import pandas as pd
 
 #Manually specified types of sources
-df = pd.read_csv('output/price_source_counts_edit.csv', index_col=0)
+df = pd.read_csv('tables/price_source_counts_edit.csv', index_col=0)
 
 df
 
@@ -80,7 +78,7 @@ df.groupby('type')['count'].sum().plot.bar(ax=axes[1])
 axes[1].set_title('Price Entry Counts')
 
 plt.tight_layout()
-plt.savefig('output/price_source_counts.png')
+plt.savefig('figures/price_source_counts.png')
 
 
 #%%
@@ -117,5 +115,5 @@ axes[1].set_title('Price Entry Counts')
 
 
 plt.tight_layout()
-plt.savefig('output/publication_source_methods.png')
+plt.savefig('figures/publication_source_methods.png')
 

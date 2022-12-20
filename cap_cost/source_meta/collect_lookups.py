@@ -56,7 +56,7 @@ for fp in fps:
     dfs.append(df)
 
 df_out = pd.concat(dfs)
-df_out.to_csv('output/SM_lookup_all.csv')
+df_out.to_csv('tables/SM_lookup_all.csv')
 # %%
 df_out
 

@@ -35,7 +35,9 @@ physical_properties = [
 'specific_capacitance','deltaV_electrolyte','deltaT_max','pressure','T_min','deltaT'
 ]
 
-with open(os.path.join('output','README_combined.md'), 'w', encoding='utf-8') as f:
+output_folder = 'docs'
+
+with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8') as f:
     for source, row in dataset_index.iterrows():
 
         f.write("\n\n## {}\n".format(source))
@@ -110,3 +112,4 @@ with open(os.path.join('output','README_combined.md'), 'w', encoding='utf-8') as
 
         f.write("\n")
 
+# Convert to word document. 

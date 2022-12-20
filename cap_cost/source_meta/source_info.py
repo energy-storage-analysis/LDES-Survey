@@ -7,8 +7,6 @@ from es_utils.units import read_pint_df
 
 import os
 from os.path import join as pjoin
-output_dir = 'output'
-if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -20,10 +18,10 @@ df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.
 #%%
 
 df_mat_unused = df_mat_data[df_mat_data['num_SMs'] == 0].dropna(how='all')
-df_mat_unused.to_csv('output/mat_data_unused.csv')
+df_mat_unused.to_csv('tables/mat_data_unused.csv')
 
 df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0].dropna(how='all')
-df_mat_data.to_csv('output/mat_data_used.csv')
+df_mat_data.to_csv('tables/mat_data_used.csv')
 
 from collections import Counter
 
@@ -45,4 +43,4 @@ source_info = source_info.sort_index()
 source_info['num prices'] = source_info['num prices'].fillna(0).astype(int).astype(str).str.replace('^0$','-',regex=True)
 source_info['SM types'] = source_info['SM types'].fillna('-')
 
-source_info.to_csv('output/source_info.csv')
+source_info.to_csv('tables/source_combo_counts.csv')

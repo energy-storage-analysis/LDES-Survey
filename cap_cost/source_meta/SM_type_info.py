@@ -1,4 +1,8 @@
-"""Simple script to output a table dealing with a specific technology"""
+"""
+Outputs markdown tables of information related to specific technology classes
+SM_type_tables.md: detailed entries for each type 
+source_info.md: tech type counts for each source
+"""
 
 #%%
 import os
@@ -9,7 +13,7 @@ from es_utils.units import prep_df_pint_out, read_pint_df
 from es_utils import join_col_vals
 import pandas as pd
 
-output_dir = 'output/individual'
+output_dir = 'tables/individual'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 from dotenv import load_dotenv
@@ -21,9 +25,6 @@ df_SMs = df_SMs.reset_index('SM_type')
 
 #%%
 
-from pytablewriter import MarkdownTableWriter
-
-tables_text = ""
 
 dfs = []
 
@@ -61,20 +62,6 @@ for SM_type in set(df_SMs['SM_type'].values):
 
     df_sel.to_csv(os.path.join(output_dir,'{}.csv'.format(SM_type)))
 
-    for col in df_sel.columns:
-        if col[1] != 'N/U':
-            df_sel[col] = df_sel[col].round(2)
-
-    writer = MarkdownTableWriter(dataframe=df_sel.reset_index())
-
-
-    tables_text = tables_text + "## {}".format(SM_type) + '\n\n'
-    tables_text = tables_text + writer.dumps()
-    tables_text = tables_text + "\n\n"
-
-
-with open(os.path.join('output','SM_type_tables.md'.format(SM_type)), 'w', encoding='utf-8') as f:
-    f.write(tables_text)
 
 df_SM_source_info = pd.concat(dfs)
 
@@ -88,13 +75,7 @@ SM_source_info
 
 #%%
 
-SM_source_info.to_csv(pjoin('output','SM_source_info.csv'))
+SM_source_info.to_csv(pjoin('tables','SM_type_source_counts.csv'))
 
 # %%
-
-writer = MarkdownTableWriter(dataframe=SM_source_info.reset_index())
-
-
-with open(os.path.join('output','source_info.md'), 'w', encoding='utf-8') as f:
-    f.write(writer.dumps())
 
