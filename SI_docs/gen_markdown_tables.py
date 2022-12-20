@@ -65,3 +65,13 @@ with open(os.path.join(output_folder,'SM_type_source_counts.md'), 'w', encoding=
 
 
 
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\SM_viable.csv')
+df = pd.read_csv(fp, index_col=0)
+
+writer = MarkdownTableWriter(dataframe=df.reset_index())
+
+with open(os.path.join(output_folder,'SM_viable.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
