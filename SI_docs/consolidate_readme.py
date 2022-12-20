@@ -35,7 +35,8 @@ physical_properties = [
 'specific_capacitance','deltaV_electrolyte','deltaT_max','pressure','T_min','deltaT'
 ]
 
-output_folder = 'docs'
+output_folder = 'md_generated'
+if not os.path.exists(output_folder): os.mkdir(output_folder)
 
 with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8') as f:
     for source, row in dataset_index.iterrows():

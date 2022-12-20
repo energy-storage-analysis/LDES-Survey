@@ -9,8 +9,8 @@ REPO_DIR = os.getenv('REPO_DIR')
 
 sections = {
     'Dataset collection overview': r'cap_cost\datasets\README.md',
-    'Source information': r'cap_cost\analysis\table_gen\output\source_info.md',
-    'Dataset information': r'cap_cost\datasets\README_combined.md',
+    'Storage medium type source counts': r'SI_docs\md_generated\SM_type_source_counts.md',
+    'Dataset information': r'SI_docs\md_generated\README_combined.md',
     # 'Raw SM data': r'cap_cost\analysis\table_gen\output\individual\SM_type_tables.md'
 }
 
@@ -32,8 +32,15 @@ for section, fp in sections.items():
     #     pjoin('output',fn)
     # )
 
+if not os.path.exists('output'): os.mkdir('output')
+
 with open('output/SI.md', 'w', encoding='utf-8') as f:
     f.write(SI_text)
 
 # os.system("cd output")
-os.system("pandoc -o output/SI.docx -f markdown -t docx output/SI.md")
+# os.system("pandoc -o output/SI.docx -f markdown -t docx output/SI.md")
+
+
+output_folder = 'output'
+import os
+os.system('pandoc -o {}/SI.docx -f markdown -t docx {}/SI.md --reference-doc reference_doc.docx'.format(output_folder,output_folder))

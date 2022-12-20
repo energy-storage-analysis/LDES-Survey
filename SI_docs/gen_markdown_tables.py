@@ -9,19 +9,28 @@ from os.path import join as pjoin
 import pandas as pd
 from es_utils.units import prep_df_pint_out, read_pint_df
 
+from pytablewriter import MarkdownTableWriter
+
+output_folder = 'md_generated'
+if not os.path.exists(output_folder): os.mkdir(output_folder)
+
+
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+input_dir = os.path.join(REPO_DIR, 'cap_cost','source_meta','tables')
 
 #%%
 
-input_dir = 'tables/individual'
-fns = os.listdir(input_dir)
 
-from pytablewriter import MarkdownTableWriter
+individual_tables_dir = os.path.join(input_dir, 'individual')
+fns = os.listdir(individual_tables_dir)
 
 tables_text = ""
 
 for fn in fns:
 
-    df_sel = read_pint_df(os.path.join(input_dir, fn), index_col=[0,1])
+    df_sel = read_pint_df(os.path.join(individual_tables_dir, fn), index_col=[0,1])
 
     # df_sel = df_sel.pint.dequantify()
 
@@ -42,18 +51,16 @@ for fn in fns:
     tables_text = tables_text + "\n\n"
 
 
-with open(os.path.join('docs','SM_type_tables.md'.format(SM_type)), 'w', encoding='utf-8') as f:
+with open(os.path.join(output_folder,'SM_type_tables.md'.format(SM_type)), 'w', encoding='utf-8') as f:
     f.write(tables_text)
 
 
 
-
-
-SM_source_info = pd.read_csv(pjoin('tables','SM_type_source_counts.csv'), index_col=0)
+SM_source_info = pd.read_csv(pjoin(input_dir,'SM_type_source_counts.csv'), index_col=0)
 
 writer = MarkdownTableWriter(dataframe=SM_source_info.reset_index())
 
-with open(os.path.join('docs','SM_type_source_counts.md'), 'w', encoding='utf-8') as f:
+with open(os.path.join(output_folder,'SM_type_source_counts.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
 
 
