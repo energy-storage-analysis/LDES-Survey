@@ -1,7 +1,0 @@
-,original_name,molecular_formula,specific_price,source,notes
-unit_row,N/U,N/U,USD/kg,N/U,N/U
-index,,,,,
-CO2,Cyrogenic Carbon Capture,CO2,0.04,Knighton 2020,
-CO2,DAC Carbon Capture,CO2,0.195,Zhao 2019,
-N2,Liquid Nitrogen,N2,0.1612,Rutherford & Titan,Converted to mass with density 0.8064 g/ml
-N2,Liquid Nitrogen,N2,0.1401,Salerno 2002,Converted to mass with density 0.8064 g/ml

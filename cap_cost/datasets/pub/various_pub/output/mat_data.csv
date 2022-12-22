@@ -11,3 +11,6 @@ Cryogenic Tank,,,,2054,Kiessling 2021,TODO: EUR to USD
 CFRP,,,15,,Singh Gill 2022,
 Steel,,,1.5,,Singh Gill 2022,
 CFRP,,,10,,Rao 2018,
+CO2,Cyrogenic Carbon Capture,CO2,0.04,,Knighton 2020,
+CO2,DAC Carbon Capture,CO2,0.195,,Zhao 2019,
+N2,Liquid Nitrogen,N2,0.1401,,Salerno 2002,TODO: Converted to mass with density 0.8064 g/ml
