@@ -38,11 +38,16 @@ for hydrate_formula, anhydrous_formula, hydrate_count in hydrate_list:
 # %%
 
 from es_utils import extract_df_mat
+from es_utils.units import read_pint_df
 df_price = extract_df_mat(table_3)
 
 df_price = df_price.astype({
     'specific_price': 'pint[USD/kg]',
     })
+
+df_price_manual = read_pint_df('manual.csv')[['original_name','specific_price','molecular_formula']]
+df_price = pd.concat([df_price, df_price_manual])
+
 df_price = convert_units(df_price)
 df_price = prep_df_pint_out(df_price)
 

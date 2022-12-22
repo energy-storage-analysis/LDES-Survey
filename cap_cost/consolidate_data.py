@@ -154,7 +154,7 @@ df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'
 import chemparse
 
 element_prices = pd.read_csv(
-    os.path.join(dataset_folder, r'wiki_element_cost\output\process.csv')
+    os.path.join(dataset_folder, r'unused\wiki_element_cost\output\process.csv')
     , index_col=1)
 
 
