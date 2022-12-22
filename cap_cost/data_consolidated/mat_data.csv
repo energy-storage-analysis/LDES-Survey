@@ -38,7 +38,7 @@ CW,28.475,,,,0,1,ISE,28.48,CW,195.851,Tungsten carbide,33.1426306
 Ca,4.5,2.4139071469667326,0.54,,16,5,"Alibaba, ISE, Indiamart, Kim 2013, SMM","3.49, 3.77, 4.5, 7.31, 8.98",Ca,40.078,"Ca, Calcium 98.5%, Calcium 99%, Calcium Granule, Calcium Ingot",2.28
 Ca(NO3)2,0.325,,,,1,1,Indiamart,0.33,Ca(NO3)2,164.086,,0.6708852
 Ca(OH)2 ,0.08224999999999995,0.003181980515339388,0.04,,0,2,"Alibaba, Indiamart",0.08,Ca(OH)2 ,74.092,,1.3376312
-CaCO3,0.349,3.3587164918784382,9.62,,2,5,"Alibaba, Alva 2018, Chem Central, Echemi, Indiamart","0.2, 0.31, 0.35, 1.43, 8.0",CaCO3,100.086,"CALCIUM CARBONATE Technical Grade 50 LB BAG, CaCO3",1.0014859
+CaCO3,0.349,3.358716491878438,9.62,,2,5,"Alibaba, Alva 2018, Chem Central, Echemi, Indiamart","0.2, 0.31, 0.35, 1.43, 8.0",CaCO3,100.086,"CALCIUM CARBONATE Technical Grade 50 LB BAG, CaCO3",1.0014859
 CaCl2,0.125,2.1095361637770145,16.88,,3,6,"Alibaba, Alva 2018, Echemi, Indiamart, Li 2017, Ray 2021","0.1, 0.11, 0.14, 0.22, 5.3",CaCl2,110.978,CaCl2,0.8757739
 CaF2,0.40262,4.146712123700262,10.3,,2,6,"Alibaba, Alva 2018, DERA, Indiamart, Ray 2021, USGS","0.13, 0.25, 0.28, 0.4, 0.43, 11.4, 2.86",CaF2,78.0748063,"CaF2, FLUSSSPAT, Fluorspar Acid, Fluorspar Metallurgical",2.1437319
 CaO,0.1560983047400025,,,,1,1,USGS,0.16,CaO,56.077,"Lime Hydrated, Lime Quicklime",1.6734434
@@ -60,7 +60,7 @@ Co3O4,19.85,3.3234018715767717,0.17,,3,2,"Alibaba, ISE","17.5, 22.2",Co3O4,240.7
 CoCl2,23.4,10.659686900799397,0.46,,1,3,"Alibaba, ISE, Indiamart","23.4, 26.02, 6.39",CoCl2,129.833194,Cobalt Chloride,14.9331808
 CoO,35.835,5.362057285532608,0.15,,1,3,"Alibaba, ISE, Indiamart","31.6, 35.84, 42.25",CoO,74.932194,Cobalt Monoxide,25.8296535
 CoSO4,7.93,8.211594795369127,1.04,,1,3,"Alibaba, ISE, Indiamart","20.7, 5.37, 7.93",CoSO4,154.989194,Cobalt sulphates,12.5546359
-Concrete,0.0494125,0.030529335277729185,0.62,,2,2,"Steinmann 2022, concretenetwork.com/concrete-prices.html","0.03, 0.07",,,Concrete,
+Concrete,0.0494125,0.03052933527772918,0.62,,2,2,"Steinmann 2022, concretenetwork.com/concrete-prices.html","0.03, 0.07",,,Concrete,
 Cr,10.4,2.883593899158764,0.28,,2,5,"Alibaba, ISE, Indiamart, Ray 2021, USGS","10.33, 10.4, 11.57, 16.0, 8.24",Cr,51.9961,"Chromium (Cr), Chromium Metal, Chromium metal",9.4
 Cr2O3,5.33525,2.171171371633294,0.41,,1,2,"Alibaba, Indiamart","3.8, 6.87",Cr2O3,151.9892,,6.4801856
 CrCl3,3.432542032926608,,,,0,1,Li 2017,3.43,CrCl3,158.3461,CrCl3 6H2O,3.1417511
@@ -99,7 +99,7 @@ GRE,19.6575,7.293806447939238,0.37,,6,2,"Alibaba, Kale 2018","14.5, 24.82",,,"E-
 Ga,215.69313426057704,253.88948544820747,1.18,,6,6,"Alibaba, DERA, ISE, Indiamart, Kim 2013, USGS","151.62, 194.69, 236.7, 414.3, 5.59, 731.47",Ga,69.723,"GALLIUM, Ga, Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import, Gallium metal",148.0
 Ge,1187.075,48.54288052845655,0.04,,0,2,"ISE, USGS","1152.75, 1221.4",Ge,72.63,"Germanium Metal, Germanium metal",962.0
 GeO2,782.45,87.61053018901326,0.11,,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"Germanium GeO2, Germanium dioxides",667.8421426
-Graphene,676.3,421.7870987437462,0.62,,4,4,"Alibaba, Cheaptubes, Graphene Lab, Graphene supermarket","1000.0, 450.0, 90.0, 902.6",C6,72.066,"Electrically Conductive Granulated Graphene: 100 Grams, Graphene",
+Graphene,676.3,421.7870987437461,0.62,,4,4,"Alibaba, Cheaptubes, Graphene Lab, Graphene supermarket","1000.0, 450.0, 90.0, 902.6",C6,72.066,"Electrically Conductive Granulated Graphene: 100 Grams, Graphene",
 Graphene Oxide,162500.0,103833.49561793647,0.64,,2,3,"Alibaba, Cheaptubes, Graphene supermarket","162500.0, 193548.0, 200.49",,,Ultra Highly Concentrated Single-Layer Graphene Oxide,
 Graphite,1.601658334773136,3.995100920031152,2.49,,14,7,"Alibaba, DERA, Indiamart, Li 2017, Liu 2016, Steinmann 2022, USGS","0.8, 0.81, 1.46, 1.6, 12.0, 2.15, 3.62",C6,72.066,"Expanded Natural, GRAPHIT, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
 Gravel,0.0291803850227903,,,,2,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
@@ -114,7 +114,7 @@ Hg,24.228515100958262,32.36074086195119,1.34,,6,2,"Kim 2013, USGS","1.35, 47.11"
 I2,26.392000000000003,,,,0,1,USGS,26.39,I2,253.80894,Iodine Crude_CIF,35.0
 In,265.9166666666667,189.19933558344198,0.71,,6,5,"Alibaba, ISE, Indiamart, Kim 2013, USGS","168.75, 210.0, 265.92, 325.0, 644.5",In,114.818,"In, Indium FOB, Indium NY, Indium Rotterdam, Indium ingot",167.0
 Ir,2.36356048052572,,,,0,1,USGS,2.36,Ir,192.217,Platinum-Group Metals Iridium,55850.0
-Iron Ore,0.10118,0.02244345751121323,0.22,,3,3,"DERA, Olympios 2021, USGS","0.1, 0.14",Fe2O3,159.687,"EISENERZ, Iron Ore , Magnetite",
+Iron Ore,0.10118,0.022443457511213235,0.22,,3,3,"DERA, Olympios 2021, USGS","0.1, 0.14",Fe2O3,159.687,"EISENERZ, Iron Ore , Magnetite",
 Iron Oxide Pigment,1.03,,,,0,1,USGS,1.03,Fe2O3,159.687,Iron Oxide Pigments ,
 Isopentane,0.8422755,0.5058988394931342,0.6,,1,2,"Antunez 2018, Echemi","0.48, 1.2",C5H12,72.151,Isopentane,
 K,76.04546196638984,76.92613536404406,1.01,,17,2,"Kim 2013, SMM","130.44, 21.65",K,39.0983,"K, Potassium",12.85
@@ -226,7 +226,6 @@ Re,1502.5,1251.1680795693812,0.83,,0,3,"ISE, SMM, USGS","1268.0, 1502.5, 3542.8"
 Rh,200143.07560452604,283031.81318618276,1.41,,0,2,"Kitco, USGS","400276.79, 9.36",Rh,102.90549,Platinum-Group Metals Rhodium,147000.0
 Ru,0.3010831068432655,,,,0,1,USGS,0.3,Ru,101.07,Platinum-Group Metals Ruthenium,10500.0
 S,0.25,0.17353652892932592,0.69,,8,5,"Echemi, Indiamart, Li 2017, Steinmann 2022, USGS","0.06, 0.18, 0.25, 0.45, 0.47",S,32.06,"S, Sulfur, Sulfur Sulfur",0.0926
-SMR H2,2.08,,,,0,1,DOE-FE Hydrogen Strategy,2.08,H2,2.016,,
 Salt Cavern,,,,18.99608141274719,3,3,"ETI 2018, Lord 2014, Papadias 2021",nan,,,,
 Sand,0.06749999999999995,0.3332951682318042,4.94,,1,4,"Alibaba, Diago 2018, Indiamart, Liu 2016","0.03, 0.05, 0.08, 0.72",SiO2,60.083,"Dune Sand, Sand",
 Sb,8.152694455596773,4.2152767618127625,0.52,,7,5,"Alibaba, ISE, Indiamart, Kim 2013, USGS","11.18, 14.78, 4.2, 5.96, 8.15",Sb,121.76,"Antimony Ingot, Antimony Metal, Sb",5.79

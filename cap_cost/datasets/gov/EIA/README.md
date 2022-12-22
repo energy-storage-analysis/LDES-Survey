@@ -1,0 +1,1 @@
+Prices pulled from EIA.gov

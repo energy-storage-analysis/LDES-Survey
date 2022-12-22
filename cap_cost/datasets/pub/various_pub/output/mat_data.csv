@@ -4,14 +4,9 @@ index,,,,,,
 Iron Ore,Magnetite,Fe2O3,0.139,,Olympios 2021,
 Solar Salt,Molten Salt,NaNO3KNO3,1,,Olympios 2021,
 Water Reservoir Excavation,Pumped Hydro,,,261.590124,Black and Veatch 2012,"Based on Black and Veatch 2012 resirvoir cost numbers. "
-Graphene,Graphene,C6,90,,Graphene Lab,https://www.i-graphenelab.com/price/
-CaCO3,CALCIUM CARBONATE Technical Grade 50 LB BAG,CaCO3,1.43,,Chem Central,https://www.chemcentral.com/organic-acid/calcium-carbonate-tech-technical-grade-50-lb-bag-16147443.html
 Sand,Dune Sand,SiO2,0.05,,Diago 2018,
 Solar Salt,Solar Salt,NaNO3KNO3,0.43,,Diago 2018,
 TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,,Liu 2019,https://doi.org/10.1016/j.chempr.2019.04.021
-Concrete,,,0.071,,concretenetwork.com/concrete-prices.html,Calcuated using a density of 2300 kg/m3
-Fossil CH4,,CH4,0.164,,EIA Henry Hub,Average over last 5 years
-SMR H2,,H2,2.08,,DOE-FE Hydrogen Strategy,
 Cryogenic Tank,,,,2054,Kiessling 2021,TODO: EUR to USD
 CFRP,,,15,,Singh Gill 2022,
 Steel,,,1.5,,Singh Gill 2022,

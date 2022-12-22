@@ -1,0 +1,1 @@
+Manually entered data from various publications
