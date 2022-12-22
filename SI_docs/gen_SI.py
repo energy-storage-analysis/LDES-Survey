@@ -18,6 +18,13 @@ if not os.path.exists('output'): os.mkdir('output')
 
 with open('output/SI.md', 'w', encoding='utf-8') as f_out:
 
+    fp =  r'SI_docs\md_written\data_flow_desc.md'
+    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
+        SI_text = f.read()
+
+    SI_text = SI_text.replace(r'../../', r'../')
+    f_out.write(SI_text)
+    f_out.write("\n\n")
 
     f_out.write('# Source Information\n\n')
 
