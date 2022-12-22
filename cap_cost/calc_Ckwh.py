@@ -20,9 +20,12 @@ SP_single = [df_mat_data['specific_price'][m] if m in df_mat_data.index else np.
 mu_totals_single = [df_mat_data['mu'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 price_sources = [df_mat_data['sources'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 
+#Assuming all volumetric storage media are based on a signle volumetric price 
+vol_single = [df_mat_data['vol_price'][m] if m in df_mat_data.index else np.nan for m in mats_single]
 
 df_single = pd.DataFrame({
     'specific_price': SP_single,
+    'vol_price': vol_single,
     'mu_total': mu_totals_single,
     'price_sources': price_sources
     }, index= mats_single.index)
@@ -30,6 +33,7 @@ df_single = pd.DataFrame({
 #Not exactly sure why I have to set these again. 
 df_single = df_single.astype({
     'specific_price' : 'pint[USD/kg]',
+    'vol_price': 'pint[USD/m**3]',
     'mu_total': 'pint[g/mol]'
 })
 
@@ -123,8 +127,24 @@ df_all
 #%%
 
 df_SMs['specific_price'] = df_all['specific_price']
-df_SMs['mu_total'] = df_all['mu_total']
+df_SMs['vol_price'] = df_all['vol_price']
+
+#We allow mu_total to be defined up front, so only replace if it doesn't exist already
+#TODO: This is needed because we are forcing volumetric calculations into the mass calculation pipeline. 
+df_SMs['mu_total'].loc[df_all['mu_total'].dropna().index] = df_all['mu_total'].dropna()
+
 df_SMs['price_sources'] = df_all['price_sources']
+#%%
+
+#Calculate the specific price of the storage media with volumetric costs, needs to be done here to have the mass density of the storage medium. 
+specific_price_vol = df_SMs['vol_price']/df_SMs['mass_density']
+specific_price_vol = specific_price_vol.dropna()
+
+df_SMs['specific_price'].loc[specific_price_vol.index] = specific_price_vol
+df_SMs['mat_basis'].loc[specific_price_vol.index] = 'volumetric'
+
+df_SMs = df_SMs.drop('vol_price', axis=1)
+
 
 #%%
 

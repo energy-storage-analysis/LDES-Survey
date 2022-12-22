@@ -36,32 +36,14 @@ df = df.rename({
 vol_cost = ureg.Quantity(df['vol_cost'].mean(),'EUR/m**3')
 vol_cost = vol_cost.to('USD/m**3')
 
-P_tank = ureg.Quantity(1, 'atm')
-T = ureg.Quantity(273.15, 'K')
-R = ureg.Quantity(8.3145, 'J/mol/K')
-#%%
 
-mu_H2 = get_molecular_mass('H2')
-mu_H2 = ureg.Quantity(mu_H2, 'g/mol')
-mass_density_H2_STP = (mu_H2*P_tank)/(R*T)
-mass_density_H2_STP = mass_density_H2_STP.to('kg/m**3')
-mass_cost_H2 = vol_cost/mass_density_H2_STP
-mass_cost_H2 = mass_cost_H2.to('USD/kg').magnitude
-
-mu_CH4 = get_molecular_mass('CH4')
-mu_CH4 = ureg.Quantity(mu_CH4, 'g/mol')
-mass_density_CH4_STP = (mu_CH4*P_tank)/(R*T)
-mass_density_CH4_STP = mass_density_CH4_STP.to('kg/m**3')
-mass_cost_CH4 = vol_cost/mass_density_CH4_STP
-mass_cost_CH4 = mass_cost_CH4.to('USD/kg').magnitude
 #%%
 mat_dict = {
-    'specific_price': [mass_cost_H2, mass_cost_CH4],
-    'molecular_formula': ['H2','CH4']
+    'vol_price': [vol_cost],
 }
 
-df_mat = pd.DataFrame(mat_dict, index = ['H2 Spherical Pressure', 'CH4 Spherical Pressure'])
-df_mat['specific_price'] = df_mat['specific_price'].astype('pint[USD/kg]')
+df_mat = pd.DataFrame(mat_dict, index = ['Spherical Pressure'])
+df_mat['vol_price'] = df_mat['vol_price'].astype('pint[USD/m**3]')
 df_mat.index.name = 'index'
 
 df_mat
@@ -70,8 +52,30 @@ df_mat = prep_df_pint_out(df_mat)
 
 df_mat.to_csv('output/mat_data.csv')
 
+
 #%%
 
+
+
+#%%
+
+P_tank = ureg.Quantity(1, 'atm')
+T = ureg.Quantity(273.15, 'K')
+R = ureg.Quantity(8.3145, 'J/mol/K')
+
+mu_H2 = get_molecular_mass('H2')
+mu_H2 = ureg.Quantity(mu_H2, 'g/mol')
+mass_density_H2_STP = (mu_H2*P_tank)/(R*T)
+mass_density_H2_STP = mass_density_H2_STP.to('kg/m**3')
+# mass_cost_H2 = vol_cost/mass_density_H2_STP
+# mass_cost_H2 = mass_cost_H2.to('USD/kg').magnitude
+
+mu_CH4 = get_molecular_mass('CH4')
+mu_CH4 = ureg.Quantity(mu_CH4, 'g/mol')
+mass_density_CH4_STP = (mu_CH4*P_tank)/(R*T)
+mass_density_CH4_STP = mass_density_CH4_STP.to('kg/m**3')
+# mass_cost_CH4 = vol_cost/mass_density_CH4_STP
+# mass_cost_CH4 = mass_cost_CH4.to('USD/kg').magnitude
 #TODO: handle with lookup table...Can we use a consistent deltaG for all snythetic fuel calculations (including feedstock for example) vs copying it into the code like this
 
 deltaG_H2 = 0.0659 #kWh/molH2
@@ -80,11 +84,12 @@ deltaG_CH4 =  0.2554 #kWh/molCH4 #TODO: Check
 SM_dict = {
     'SM_type': ['synfuel', 'synfuel'],
     'sub_type': ['tank', 'tank'],
-    'materials': ["H2 Spherical Pressure", "CH4 Spherical Pressure"],
-    'mat_basis': ['molar', 'molar'],
+    'materials': ["Spherical Pressure", "Spherical Pressure"],
+    'mat_basis': ['', ''],
     'deltaG_chem': [deltaG_H2, deltaG_CH4],
     'n_e': [2, 8],
     'mass_density': [mass_density_H2_STP, mass_density_CH4_STP],
+    'mu_total': [mu_H2, mu_CH4]
 }
 
 df_SM = pd.DataFrame(SM_dict,index = ['H2 Spherical Pressure', 'CH4 Spherical Pressure'])
@@ -92,7 +97,8 @@ df_SM = pd.DataFrame(SM_dict,index = ['H2 Spherical Pressure', 'CH4 Spherical Pr
 df_SM = df_SM.astype({
     'deltaG_chem': 'pint[kWh/mol]',
     'n_e': 'pint[dimensionless]',
-    'mass_density': 'pint[kg/m**3]'
+    'mass_density': 'pint[kg/m**3]',
+    'mu_total': 'pint[g/mol]'
 })
 
 df_SM = convert_units(df_SM)

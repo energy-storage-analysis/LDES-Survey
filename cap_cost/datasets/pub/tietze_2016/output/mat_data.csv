@@ -1,5 +1,4 @@
-,specific_price,molecular_formula
-unit_row,USD / kilogram,N/U
-index,,
-H2 Spherical Pressure,682.656311794504,H2
-CH4 Spherical Pressure,85.78415038195598,CH4
+,vol_price
+unit_row,USD / meter ** 3
+index,
+Spherical Pressure,61.400499999999994

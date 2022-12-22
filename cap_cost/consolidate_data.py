@@ -131,23 +131,22 @@ s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals)
 s_temp.name = 'sources'
 df_prices_combine = s_temp.to_frame()
 
+df_prices_combine['original_names'] = df_mat_data.groupby('index')['original_name'].apply(join_col_vals) 
+df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
 
 specific_price_mag = df_mat_data['specific_price'].pint.magnitude
+df_prices_combine['specific_price'] = df_mat_data.groupby('index')['specific_price'].median()
+
 df_prices_combine['specific_prices'] = specific_price_mag.apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals)
 
-df_prices_combine['original_names'] = df_mat_data.groupby('index')['original_name'].apply(join_col_vals) 
-
-df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
-df_prices_combine['specific_price'] = df_mat_data.groupby('index')['specific_price'].median()
 df_prices_combine['specific_price_std'] = df_mat_data.groupby('index')['specific_price'].std()
-
-
 df_prices_combine['specific_price_std'] = df_prices_combine['specific_price_std'].astype(df_prices_combine['specific_price'].dtype)
-
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_std']/df_prices_combine['specific_price'] 
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].apply(lambda x:round(x,2)) 
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].astype('pint[dimensionless]')
 
+vol_price_mag = df_mat_data['vol_price'].pint.magnitude
+df_prices_combine['vol_price'] = df_mat_data.groupby('index')['vol_price'].median()
 # df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
 #%%
@@ -207,7 +206,7 @@ df_prices_combine['num_SMs'] = num_sms
 
 
 df_prices_combine = df_prices_combine[[
-'specific_price', 'specific_price_std','specific_price_rat','num_SMs','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
+'specific_price', 'specific_price_std','specific_price_rat', 'vol_price','num_SMs','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
 ]]
 
 
