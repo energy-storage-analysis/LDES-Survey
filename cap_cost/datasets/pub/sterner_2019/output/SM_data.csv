@@ -1,0 +1,8 @@
+,SM_type,sub_type,materials,mat_basis,original_name,delta_height,mass_density,notes
+unit_row,N/U,N/U,N/U,N/U,N/U,m,kg/m**3,N/U
+SM_name,,,,,,,,
+Pumped Hydro,gravitational,pumped_hydro,Water Reservoir Excavation,,,200,1000,
+Stone,gravitational,block_stacking,Stone,,,200,,
+Concrete,gravitational,block_stacking,Concrete,,,200,,
+Gravel,gravitational,block_stacking,Gravel,,,200,,
+Pumice,gravitational,block_stacking,Pumice,,,200,,
