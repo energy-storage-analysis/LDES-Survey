@@ -37,7 +37,7 @@ df = df.set_index('component')
 
 df['cost'] = df['cost'].str.replace("£","").str.replace(",","").astype(int)
 
-df['vol_cost'] = df['cost']/df['volume']
+df['vol_price'] = df['cost']/df['volume']
 
 df
 
@@ -48,29 +48,29 @@ df_leach = df.loc[[c for c in df.index if 'Leach' in c]]
 
 
 
-leech_cost = df_leach['vol_cost'].mean()
+leech_cost = df_leach['vol_price'].mean()
 
 
 
-df_out = pd.DataFrame(columns=['vol_cost'])
+df_out = pd.DataFrame(columns=['vol_price'])
 df_out.index.name = 'index'
 
-df_out.loc['Salt', 'vol_cost'] = leech_cost
+df_out.loc['Salt Cavern', 'vol_price'] = leech_cost
 
-# df_out = df_out.pint.quantify({"vol_cost": "GDP/m**3"}) 
-df_out['vol_cost'] = df_out['vol_cost'].astype("pint[GBP/m**3]")
+# df_out = df_out.pint.quantify({"vol_price": "GDP/m**3"}) 
+df_out['vol_price'] = df_out['vol_price'].astype("pint[GBP/m**3]")
 
-df_out['vol_cost'] = df_out['vol_cost'].pint.to("USD/m**3")
+df_out['vol_price'] = df_out['vol_price'].pint.to("USD/m**3")
 
 #This is the fraction of leaching costs calculated from lord 2014 data (see Readme)
-df_out['vol_cost'] = df_out['vol_cost'] *  0.5715509854327335
+df_out['vol_price'] = df_out['vol_price'] *  0.5715509854327335
 
 df_out
 
 
 df_out = prep_df_pint_out(df_out)
 
-df_out.to_csv('output/vol_cost.csv')
+df_out.to_csv('output/mat_data.csv')
 
 
 # df.to_csv('SM_lookup.csv')

@@ -1,1 +1,0 @@
-Tables extracted manually

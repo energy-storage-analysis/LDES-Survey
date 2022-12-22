@@ -7,100 +7,44 @@ from es_utils.units import convert_units, prep_df_pint_out, ureg, read_pint_df
 from es_utils import join_col_vals
 
 #%%
-
-df_pap = read_pint_df('papadias_2021/output/vol_cost.csv')
-df_pap['source'] = 'Papadias 2021'
-df_eti = read_pint_df('ETI_2018/output/vol_cost.csv')
-df_eti['source'] = 'ETI 2018'
-df_lord = read_pint_df('lord_2014/output/vol_cost.csv')
-df_lord['source'] = 'Lord 2018'
-
-df_vol = pd.concat([
-    df_pap,
-    df_eti,
-    df_lord
-])
-
-
-
-#%%
-# Previous method of Average volumetric costs between sources
-
-
-# df_vol.to_csv('output/vol_cost_all.csv')
-
-# vol_costs = df_vol.groupby('index')['vol_cost'].mean()
-# vol_costs.name = 'vol_cost'
-
-# sources = df_vol.groupby('index')['source'].apply(join_col_vals)
-# sources.name='sources'
-
-# df_vol_final = pd.concat([
-# vol_costs,
-# sources,
-# ],axis=1)
-
-
-# don't average between sources, as sources will be combined during data consolidation
-
-df_vol_final = df_vol
-
-df_vol_final.to_csv('output/vol_cost.csv')
-
-#%%
 #Calculate the specific costs for different gasses
+
+df = read_pint_df('SM_def.csv')
+
+from es_utils.chem import get_molecular_mass
+
+
+df['mu_total'] = df['molecular_formula'].apply(get_molecular_mass)
+df['mu_total'] = df['mu_total'].astype('pint[g/mol]')
+df
+
+#%%
 
 
 R = ureg.Quantity(8.3145, 'J/mol/K')
-df_gas = pd.read_csv('gasses.csv', index_col=0)
-df_gas['mu'] = df_gas['mu'].astype('pint[g/mol]')
+# df_gas = pd.read_csv('gasses.csv', index_col=0)
+# df_gas['mu'] = df_gas['mu'].astype('pint[g/mol]')
 
-P_cavern = ureg.Quantity(1e7, 'Pa')
+# P_cavern = ureg.Quantity(1e7, 'Pa')
 T = ureg.Quantity(330, 'K')
 
-df_gas['mass_density'] = (df_gas['mu']*P_cavern)/(R*T)
-df_gas['mass_density'] = df_gas['mass_density'].pint.to('kg/m**3')
+mass_densities_gas = (df['mu_total']*df['pressure'])/(R*T)
+mass_densities_gas = mass_densities_gas.pint.to('kg/m**3')
+mass_densities_gas = mass_densities_gas.dropna()
 
-print(df_gas['mass_density'])
+df['mass_density'].loc[mass_densities_gas.index] = mass_densities_gas
 
-
-df_gas.loc['H2O', 'mass_density'] = 1000
-
-sm_names = []
-SPs = []
-mol_forms = []
-mass_densities = []
-sources = []
-for sm_type, row in df_vol_final.iterrows():
-    vol_cost = row['vol_cost']
-    for gas in df_gas.index:
-        rho_m = df_gas['mass_density'][gas]
-        specific_price = vol_cost/rho_m
-
-        sm_names.append("{}_{}".format(gas,sm_type))
-        SPs.append(specific_price)
-        mol_forms.append(gas)
-        mass_densities.append(df_gas['mass_density'][gas])
-        sources.append(row['source'])
-
-df_mat = pd.Series(SPs, index=sm_names)
-df_mat.name = 'specific_price'
-df_mat = df_mat.to_frame()
-
-df_mat['molecular_formula'] = mol_forms
-df_mat['mass_density'] = mass_densities
-df_mat['source'] = sources
-
-df_mat.index.name = 'index'
-
-
-df_mat = df_mat.astype({
-    'specific_price': 'pint[USD/kg]',
-    'mass_density': 'pint[kg/m**3]'
-})
-
-
-df_mat = prep_df_pint_out(df_mat)
-
-df_mat.to_csv('output/mat_data.csv')
 # %%
+
+#TODO: this is a quick fix to remove pressures from synfuel storage media, other wise calc_Ckwh tries to calculate pressure energy and ends up with a duplicated index. Need to allow for multiple energy types.
+import numpy as np
+synfuel_idx = df[df['SM_type'] == 'synfuel'].index
+df['pressure'].loc[synfuel_idx] = np.nan
+#%%
+
+
+df_out = prep_df_pint_out(df)
+
+df_out = df_out.drop('molecular_formula', axis=1)
+
+df_out.to_csv('output/SM_data.csv')

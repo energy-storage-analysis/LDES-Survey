@@ -22,7 +22,7 @@ df = df.rename({
 }, axis=1)
 
 df = df.rename({
-'Salt Cavern': 'Salt',
+# 'Salt Cavern': 'Salt',
 'Hard Rock': 'LRC', 
 }, axis=0)
 
@@ -38,7 +38,7 @@ df['leaching_plant'] = df['leaching_plant'].fillna(0)
 
 df['leaching_plant_vol'] = df['leaching_plant']/df['volume']
 
-df['vol_cost'] = df['mining_costs'] #+ df['leaching_plant_vol']
+df['vol_price'] = df['mining_costs'] #+ df['leaching_plant_vol']
 
 #%%
 
@@ -46,7 +46,7 @@ frac_mining = df['mining_costs']/(df['mining_costs'] + df['leaching_plant_vol'])
 
 with open('output/frac_mining.txt', 'w') as f:
 
-    f.write('Fraction of mining costs: {}'.format(frac_mining.loc['Salt']))
+    f.write('Fraction of mining costs: {}'.format(frac_mining.loc['Salt Cavern']))
 
 
 #%%
@@ -56,10 +56,10 @@ df.columns.name = ''
 
 from es_utils.units import prep_df_pint_out
 
-df_out = df[['vol_cost']]
-df_out['vol_cost'] = df_out['vol_cost'].astype('pint[USD/m**3]')
+df_out = df[['vol_price']]
+df_out['vol_price'] = df_out['vol_price'].astype('pint[USD/m**3]')
 df_out
 
 df_out = prep_df_pint_out(df_out)
 
-df_out.to_csv('output/vol_cost.csv')
+df_out.to_csv('output/mat_data.csv')

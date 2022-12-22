@@ -1,9 +1,11 @@
-,materials,mat_basis,SM_type,sub_type,deltaG_chem,n_e,pressure,mass_density,delta_height
-unit_row,N/U,N/U,N/U,N/U,kWh/mol,dimensionless,Pa,kg/m**3,m
-SM_name,,,,,,,,,
-H2 (LRC),H2_LRC,,synfuel,underground,0.0659,2,,,
-CH4 (LRC),CH4_LRC,,synfuel,underground,0.2554,8,,,
-H2 (Salt),H2_Salt,,synfuel,underground,0.0659,2,,,
-CH4 (Salt),CH4_Salt,,synfuel,underground,0.2554,8,,,
-N2 (LRC 100 bar),N2_LRC,,pressure_cavern,,,,1e7,102.04881213360375,
-N2 (Salt 100 bar),N2_Salt,,pressure_cavern,,,,1e7,102.04881213360375,
+,materials,SM_type,sub_type,mass_density,deltaG_chem,n_e,pressure,mu_total
+unit_row,N/U,N/U,N/U,kilogram / meter ** 3,kilowatt_hour / mole,dimensionless,pascal,gram / mole
+SM_name,,,,,,,,
+Cryogenic H2,Cryogenic Tank,synfuel,tank,70.85,0.0659,2.0,,2.016
+Cryogenic CH4,Cryogenic Tank,synfuel,tank,420.0,0.2554,8.0,,16.043
+H2 (LRC),LRC,synfuel,underground,7.34751447361947,0.0659,2.0,,2.016
+CH4 (LRC),LRC,synfuel,underground,58.470324752121606,0.2554,8.0,,16.043
+H2 (Salt),Salt Cavern,synfuel,underground,7.34751447361947,0.0659,2.0,,2.016
+CH4 (Salt),Salt Cavern,synfuel,underground,58.470324752121606,0.2554,8.0,,16.043
+N2 (LRC 100 bar),LRC,pressure_cavern,,102.09983653967055,,,10000000.0,28.014
+N2 (Salt 100 bar),Salt Cavern,pressure_cavern,,102.09983653967055,,,10000000.0,28.014

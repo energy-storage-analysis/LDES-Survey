@@ -1,0 +1,11 @@
+,materials,SM_type,sub_type,mass_density,deltaG_chem,n_e,pressure,molecular_formula
+unit_row,N/U,N/U,N/U,kg/m**3,kWh/mol,dimensionless,Pa,N/U
+SM_name,,,,,,,,
+Cryogenic H2,Cryogenic Tank,synfuel,tank,70.85,0.0659,2,,H2
+Cryogenic CH4,Cryogenic Tank,synfuel,tank,420,0.2554,8,,CH4
+H2 (LRC),LRC,synfuel,underground,,0.0659,2,1e7,H2
+CH4 (LRC),LRC,synfuel,underground,,0.2554,8,1e7,CH4
+H2 (Salt),Salt Cavern,synfuel,underground,,0.0659,2,1e7,H2
+CH4 (Salt),Salt Cavern,synfuel,underground,,0.2554,8,1e7,CH4
+N2 (LRC 100 bar),LRC,pressure_cavern,,,,,1e7,N2
+N2 (Salt 100 bar),Salt Cavern,pressure_cavern,,,,,1e7,N2

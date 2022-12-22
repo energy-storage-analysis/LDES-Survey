@@ -7,5 +7,3 @@ Al2O3,Al2O3,,Al2O3 Dielectric Capacitor,dielectric_capacitor,,,,,,,500000000,10,
 Sand,Sand,,Sand,sensible_thermal,hot,rock,0.000277,,1000,,,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
 NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,coupled_battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,https://www.sciencedirect.com/science/article/pii/S2666386422000911?via%3Dihub
 Fossil CH4,Fossil CH4,molar,,synfuel,feedstock,,,,,,,,420,0.2554,8,,,Standard Gibbs,
-Cryogenic H2,Cryogenic H2 Tank,,,synfuel,tank,,,,,,,,70.85,"0.0659 ",2,,,Standard Gibbs,
-Cryogenic CH4,Cryogenic CH4 Tank,,,synfuel,tank,,,,,,,,420,0.2554,8,,,Standard Gibbs,

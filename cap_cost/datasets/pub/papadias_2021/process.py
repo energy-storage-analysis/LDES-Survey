@@ -46,8 +46,8 @@ leaching_cost = float(df_3.loc['2000']['Leaching ($/kg)'])
 #This is the fraction of leaching costs calculated from lord 2014 data (see Readme)
 leaching_cost = leaching_cost *  0.5715509854327335
 
-df_out.loc['Salt', 'cost_H2'] = leaching_cost
-df_out.loc['Salt', 'P'] = 100
+df_out.loc['Salt Cavern', 'cost_H2'] = leaching_cost
+df_out.loc['Salt Cavern', 'P'] = 100
 
 df_out.loc['LRC', 'cost_H2'] = df_2.loc['100']['cavern_cost']
 df_out.loc['LRC', 'P'] = 100
@@ -71,11 +71,11 @@ mass_density = mu_H2*P/(R*T)
 mass_density
 
 
-df_out['vol_cost'] = df_out['cost_H2']*mass_density
-df_out['vol_cost'] = df_out['vol_cost'].pint.to('USD/m**3')
+df_out['vol_price'] = df_out['cost_H2']*mass_density
+df_out['vol_price'] = df_out['vol_price'].pint.to('USD/m**3')
 
 
-
+df_out = df_out[['vol_price']]
 
 df_out
 
@@ -84,7 +84,7 @@ df_out
 
 df_out = prep_df_pint_out(df_out)
 
-df_out.to_csv('output/vol_cost.csv')
+df_out.to_csv('output/mat_data.csv')
 
 
 # df.to_csv('SM_lookup.csv')

@@ -111,7 +111,7 @@ adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(10,0.5), li
 
 alter_dict = {
     "Na/NiCl_{2}": (3,14),
-    "C_{6}/LRMO\ LMNO": (3,20),
+    # "C_{6}/LRMO\ LMNO": (3,20),
 }
 
 for alter_name, (x,y) in alter_dict.items():
