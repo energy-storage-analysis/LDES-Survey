@@ -40,8 +40,7 @@ group_name_map = {
     'pub': 'Publications',
     'gov': 'Government Sources',
     'web': 'Web Sources',
-    'cavern': 'Cavern Storage',
-    'synfuel_feedstock': 'Synthetic Fuel Feedstock Calculations'
+    'manual': 'Manually Defined/Calculated',
 }
 
 output_folder = 'md_generated'
