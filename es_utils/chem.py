@@ -178,3 +178,17 @@ def format_chem_formula(s):
 
     s = s.replace(" ", "\ ", -1)
     return s
+
+
+def calc_rH2_deltaG_hydrogen_carrier(wt_pct, mu_host):
+    """Calculates the molar ratio and molar Gibbs free energy for hydrogen carriers"""
+    mu_H2 = 2*1.0078
+    # mu_H2 = get_molecular_mass('H2')
+
+    r_H2 = wt_pct*mu_host/((1-wt_pct)*mu_H2 )
+
+    deltaG_H2 = 0.0659 #kWh/molH2 #TODO: implement pint
+
+    deltaG_chem = r_H2 * deltaG_H2
+
+    return r_H2, deltaG_chem

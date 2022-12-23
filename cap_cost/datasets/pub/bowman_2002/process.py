@@ -41,18 +41,12 @@ df_SM = pd.merge(df, SM_lookup, on='original_name')
 df_SM = df_SM.dropna(subset=['SM_name'])
 df_SM = df_SM.set_index('SM_name')
 
-from es_utils.chem import get_molecular_mass
+from es_utils.chem import get_molecular_mass, calc_rH2_deltaG_hydrogen_carrier
 
 df_SM['mu_host'] = df_SM['MF_host'].apply(get_molecular_mass)
 
-mu_H = 1.0078
 
-
-df_SM['r_H2'] = (df_SM['wt_pct']*df_SM['mu_host'])/((1-df_SM['wt_pct'])*mu_H )/2
-
-deltaG_H2 = 0.0659 #kWh/molH2
-
-df_SM['deltaG_chem'] = df_SM['r_H2'] * deltaG_H2
+df_SM['r_H2'], df_SM['deltaG_chem'] = calc_rH2_deltaG_hydrogen_carrier(df_SM['wt_pct'], df_SM['mu_host'])
 df_SM['n_e'] = df_SM['r_H2']*2
 
 df_SM = df_SM[['SM_type','sub_type','mat_type','original_name','materials','mat_basis','deltaG_chem','n_e']]

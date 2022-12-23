@@ -26,6 +26,14 @@ with open('output/SI.md', 'w', encoding='utf-8') as f_out:
     f_out.write(SI_text)
     f_out.write("\n\n")
 
+    fp =  r'SI_docs\md_written\calculation_methods.md'
+    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
+        SI_text = f.read()
+
+    SI_text = SI_text.replace(r'../../', r'../')
+    f_out.write(SI_text)
+    f_out.write("\n\n")
+
     f_out.write('# Source Information\n\n')
 
     fp =  r'SI_docs\md_written\source_info_desc.md'

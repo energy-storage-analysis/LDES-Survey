@@ -2,7 +2,7 @@
 
 import pandas as pd
 from sympy import O
-from es_utils.chem import get_molecular_mass
+from es_utils.chem import get_molecular_mass, calc_rH2_deltaG_hydrogen_carrier
 from es_utils.units import prep_df_pint_out
 
 df_SM = pd.read_csv('input.csv', index_col=0)
@@ -14,14 +14,8 @@ df_SM['wt_pct'] = df_SM['wt_pct']/100
 
 df_SM['mu_host'] = df_SM['MF_host'].apply(get_molecular_mass)
 
-mu_H = 1.0078
+df_SM['r_H2'], df_SM['deltaG_chem'] = calc_rH2_deltaG_hydrogen_carrier(df_SM['wt_pct'], df_SM['mu_host'])
 
-
-df_SM['r_H2'] = (df_SM['wt_pct']*df_SM['mu_host'])/((1-df_SM['wt_pct'])*mu_H )/2
-
-deltaG_H2 = 0.0659 #kWh/molH2
-
-df_SM['deltaG_chem'] = df_SM['r_H2'] * deltaG_H2
 df_SM['n_e'] = df_SM['r_H2']*2
 
 # df_SM = df_SM[['original_name','SM_type','sub_type','materials','mat_basis','deltaG_chem','n_e']]
