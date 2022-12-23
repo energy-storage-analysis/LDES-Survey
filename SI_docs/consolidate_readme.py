@@ -53,11 +53,11 @@ with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8
         if group_name in group_name_map:
             group_name = group_name_map[group_name]
 
-        f.write("## {}\n".format(group_name))
+        f.write("# {}\n".format(group_name))
 
         for source, row in df_subset.iterrows():
 
-            f.write("\n\n### {}\n".format(source))
+            # f.write("\n\n### {}\n".format(source))
 
             fp= os.path.join(dataset_folder, row['folder'], 'README.md')
             if os.path.exists(fp):
@@ -67,7 +67,7 @@ with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8
                 #Remove any text after the 'Development' header
                 r_text = re.sub(r"## Development[\S\n\t\v ]*", '', r_text)
 
-                r_text = re.sub(r"#",r"##", r_text)
+                r_text = re.sub(r'(#+)', r'\1#', r_text)
 
                 f.write(r_text)
 
