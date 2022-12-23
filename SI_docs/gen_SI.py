@@ -13,79 +13,40 @@ sections = {
     # 'Raw SM data': r'cap_cost\analysis\table_gen\output\individual\SM_type_tables.md'
 }
 
-
 if not os.path.exists('output'): os.mkdir('output')
+
+def read_and_write_md(f_out, fp):
+    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
+        SI_text = f.read()
+
+    SI_text = SI_text.replace(r'../../', r'../')
+    f_out.write(SI_text)
+    f_out.write("\n\n")
 
 with open('output/SI.md', 'w', encoding='utf-8') as f_out:
 
-    fp =  r'SI_docs\md_written\data_flow_desc.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-
-    SI_text = SI_text.replace(r'../../', r'../')
-    f_out.write(SI_text)
-    f_out.write("\n\n")
-
-    fp =  r'SI_docs\md_written\calculation_methods.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-
-    SI_text = SI_text.replace(r'../../', r'../')
-    f_out.write(SI_text)
-    f_out.write("\n\n")
+    read_and_write_md(f_out, r'SI_docs\md_written\data_flow_desc.md')
+    read_and_write_md(f_out, r'SI_docs\md_written\calculation_methods.md')
 
     f_out.write('# Source Information\n\n')
-
-    fp =  r'SI_docs\md_written\source_info_desc.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-
-    f_out.write(SI_text)
-    f_out.write("\n")
-
+    read_and_write_md(f_out, r'SI_docs\md_written\source_info_desc.md')
 
     f_out.write("## Storage medium type source counts\n\n")
-    fp =  r'SI_docs\md_generated\SM_type_source_counts.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-    f_out.write(SI_text)
+    read_and_write_md(f_out, r'SI_docs\md_generated\SM_type_source_counts.md')
 
     f_out.write("## Specific source detailed info\n\n")
-    fp =  r'SI_docs\md_generated\README_combined.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-    f_out.write(SI_text)
+    read_and_write_md(f_out, r'SI_docs\md_generated\README_combined.md')
 
-    
     f_out.write("# Viable Storage media\n\n")
-    
+    read_and_write_md(f_out, r'SI_docs\md_written\viable_SM_desc.md')
 
-    fp =  r'SI_docs\md_written\viable_SM_desc.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
+    read_and_write_md(f_out, r'SI_docs\md_generated\SM_viable.md')
 
-    f_out.write(SI_text)
-    f_out.write("\n\n")
-
-    fp =  r'SI_docs\md_generated\SM_viable.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-    f_out.write(SI_text)
-    f_out.write("\n\n")
-
-    fp =  r'SI_docs\md_written\supp_figures.md'
-    with open(pjoin(REPO_DIR,fp), 'r', encoding='utf-8') as f:
-        SI_text = f.read()
-
-    SI_text = SI_text.replace(r'../../', r'../')
-    f_out.write(SI_text)
-    f_out.write("\n\n")
-
+    read_and_write_md(f_out,     fp =  r'SI_docs\md_written\supp_figures.md')
 
 
 # os.system("cd output")
 # os.system("pandoc -o output/SI.docx -f markdown -t docx output/SI.md")
-
 
 output_folder = 'output'
 import os
