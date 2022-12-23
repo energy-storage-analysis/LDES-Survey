@@ -253,7 +253,8 @@ df_SMs = pd.concat([df_SMs, df_out], axis=1)
 
 # Column order 
 first_columns = ['sub_type','mat_type','C_kwh','specific_energy','specific_price','materials','mat_basis', 'SM_sources','price_sources']
-columns = [*first_columns, *[col for col in df_SMs.columns if col not in first_columns]]
+other_cols = sorted([col for col in df_SMs.columns if col not in first_columns])
+columns = [*first_columns, *other_cols]
 df_SMs = df_SMs[columns]
 
 df_SMs = prep_df_pint_out(df_SMs)
