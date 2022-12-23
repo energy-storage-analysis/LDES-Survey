@@ -30,9 +30,9 @@ T = ureg.Quantity(330, 'K')
 
 mass_densities_gas = (df['mu_total']*df['pressure'])/(R*T)
 mass_densities_gas = mass_densities_gas.pint.to('kg/m**3')
-mass_densities_gas = mass_densities_gas.dropna()
+# mass_densities_gas = mass_densities_gas.dropna()
 
-df['mass_density'].loc[mass_densities_gas.index] = mass_densities_gas
+df['mass_density'] = mass_densities_gas
 
 # %%
 

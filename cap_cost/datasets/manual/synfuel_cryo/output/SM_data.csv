@@ -1,0 +1,5 @@
+,materials,SM_type,sub_type,mass_density,deltaG_chem,n_e,mu_total
+unit_row,N/U,N/U,N/U,kilogram / meter ** 3,kilowatt_hour / mole,dimensionless,gram / mole
+SM_name,,,,,,,
+Cryogenic H2,Cryogenic Tank,synfuel,tank,70.85,0.0659,2.0,2.016
+Cryogenic CH4,Cryogenic Tank,synfuel,tank,420.0,0.2554,8.0,16.043
