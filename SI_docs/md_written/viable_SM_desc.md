@@ -1,1 +1,1 @@
-The table below collects storage media in the dataset with calculated material energy capital cost less than 10 USD/kWh. The full dataset of all storage media can be found on the associated GitHub repository. 
+The table below collects storage media in the dataset with calculated material energy capital cost less than 10 USD/kWh. The full dataset of all storage media and other information including the sources that went into the price and/or physical properties of the storage media can be found on the associated GitHub repository.  

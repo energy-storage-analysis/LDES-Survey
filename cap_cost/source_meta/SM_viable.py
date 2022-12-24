@@ -13,8 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 
-df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
-df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
+df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1]).reset_index('SM_type')
 
 # %%
 
@@ -28,17 +27,15 @@ df_sel = df_SMs[below_cufoff].dropna(how='all')
 
 df_sel = df_sel[['SM_type','specific_energy','specific_price','price_sources','SM_sources','C_kwh']]
 
-df_sel = df_sel.round(3)
+# df_sel = df_sel.round(3)
 df_sel = df_sel.sort_values('C_kwh')
 
 # df_sel = df_sel.reset_index('SM_type')
-df_sel['SM_type'] = df_sel['SM_type'].str.replace('_', ' ')
-df_sel['SM_type'] = df_sel['SM_type'].str.replace('thermochemical', 'thermo-chemical')
 
 
-#TODO: come up with some sort of long name (and units) system for displayed tables
-df_sel.columns = [c.replace('_',' ') for c in df_sel.columns]
+from es_utils.units import prep_df_pint_out
 
+df_sel = prep_df_pint_out(df_sel)
 
 df_sel.to_csv('tables/SM_viable.csv')
 

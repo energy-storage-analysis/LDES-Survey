@@ -56,22 +56,53 @@ with open(os.path.join(output_folder,'SM_type_tables.md'.format(SM_type)), 'w', 
 
 
 
-SM_source_info = pd.read_csv(pjoin(input_dir,'SM_type_source_counts.csv'), index_col=0)
+df = pd.read_csv(pjoin(input_dir,'SM_type_source_counts.csv'))
 
-writer = MarkdownTableWriter(dataframe=SM_source_info.reset_index())
+#TODO: come up with some sort of long name (and units) system for displayed tables
+df['SM_type'] = df['SM_type'].str.replace('_', ' ')
+df['SM_type'] = df['SM_type'].str.replace('thermochemical', 'thermo-chemical')
+df['sub_type'] = df['sub_type'].str.replace('_', ' ')
+df.columns = [c.replace('_',' ') for c in df.columns]
+
+df = df.rename({'0': 'Source Counts'})
+
+writer = MarkdownTableWriter(dataframe=df)
 
 with open(os.path.join(output_folder,'SM_type_source_counts.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
-
+    f.write(": Counts of each source's contribution to storage media of each type, sub-type, and material type.")
 
 
 from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\SM_viable.csv')
-df = pd.read_csv(fp, index_col=0)
 
-writer = MarkdownTableWriter(dataframe=df.reset_index())
+df = read_pint_df(fp)
+
+#TODO: come up with some sort of long name (and units) system for displayed tables
+df['SM_type'] = df['SM_type'].str.replace('_', ' ')
+df['SM_type'] = df['SM_type'].str.replace('thermochemical', 'thermo-chemical')
+df.columns = [c.replace('_',' ') for c in df.columns]
+
+df = df.drop('price sources', axis=1)
+df = df.drop('SM sources', axis=1)
+
+df = prep_df_pint_out(df)
+df = df.reset_index()
+
+df['C kwh'] = df['C kwh'].round(5)
+df['specific price'] = df['specific price'].round(5)
+df['specific energy'] = df['specific energy'].round(5)
+
+# split out unit row 
+new_cols = df.columns.droplevel(1)
+df_col_row = pd.DataFrame(df.columns.droplevel().values.reshape(-1,len(df.columns)), columns = new_cols)
+df.columns = new_cols
+df = pd.concat([df_col_row, df])
+
+writer = MarkdownTableWriter(dataframe=df)
 
 with open(os.path.join(output_folder,'SM_viable.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
+    f.write(": Storage Media with $C_{kWh}$ < 10 USD/kWh, sorted by $C_{kWh}$")

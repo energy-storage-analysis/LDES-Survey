@@ -33,7 +33,6 @@ with open('output/SI.md', 'w', encoding='utf-8') as f_out:
     SI_text = read_md(f_out, r'SI_docs\md_written\source_info_desc.md')
     f_out.write(SI_text)
 
-    f_out.write("## Storage medium type source counts\n\n")
     SI_text = read_md(f_out, r'SI_docs\md_generated\SM_type_source_counts.md')
     f_out.write(SI_text)
 
