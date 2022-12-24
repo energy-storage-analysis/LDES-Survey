@@ -106,3 +106,75 @@ writer = MarkdownTableWriter(dataframe=df)
 with open(os.path.join(output_folder,'SM_viable.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
     f.write(": Storage Media with $C_{kWh}$ < 10 USD/kWh, sorted by $C_{kWh}$")
+
+
+
+#%%
+
+# Various publicaiton material data
+
+REPO_DIR = os.getenv('REPO_DIR')
+fp = os.path.join(REPO_DIR, r'cap_cost\datasets\pub\various_pub\output\mat_data.csv')
+
+df = read_pint_df(fp)
+
+df = prep_df_pint_out(df)
+df = df.reset_index()
+
+df = df[['index','original_name','source','notes']]
+
+df.columns = df.columns.droplevel(1) # No units needed
+
+writer = MarkdownTableWriter(dataframe=df)
+
+with open(os.path.join(output_folder,'various_pub_mat_data.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
+    f.write(": Various publicaiton material data sources")
+
+
+#%%
+
+
+# Various publicaiton Storage medium data
+
+REPO_DIR = os.getenv('REPO_DIR')
+fp = os.path.join(REPO_DIR, r'cap_cost\datasets\pub\various_pub\output\SM_data.csv')
+
+df = read_pint_df(fp)
+
+df = prep_df_pint_out(df)
+df = df.reset_index()
+
+df = df[['SM_name','SM_type','sub_type','source','notes']]
+
+df.columns = df.columns.droplevel(1) # No units needed
+
+writer = MarkdownTableWriter(dataframe=df)
+
+with open(os.path.join(output_folder,'various_pub_SM_data.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
+    f.write(": Various publicaiton storage media")
+
+
+#%%
+
+
+# Various website material data
+
+REPO_DIR = os.getenv('REPO_DIR')
+fp = os.path.join(REPO_DIR, r'cap_cost\datasets\web\various_web\output\mat_data.csv')
+
+df = read_pint_df(fp)
+
+df = prep_df_pint_out(df)
+df = df.reset_index()
+
+df = df[['index','original_name','source','notes']]
+
+df.columns = df.columns.droplevel(1) # No units needed
+
+writer = MarkdownTableWriter(dataframe=df)
+
+with open(os.path.join(output_folder,'various_web_mat_data.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
+    f.write(": Various website material data sources")

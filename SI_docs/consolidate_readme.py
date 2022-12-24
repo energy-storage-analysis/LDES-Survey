@@ -69,6 +69,8 @@ with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8
 
                 r_text = re.sub(r'(#+)', r'\1#', r_text)
 
+
+
                 f.write(r_text)
 
             else:
@@ -129,4 +131,26 @@ with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8
 
             f.write("\n")
 
+
+
+            if source == 'Various pub':
+                with open('md_generated/various_pub_mat_data.md') as f_read:
+                    text = f_read.read()
+                f.write("\n")
+                f.write(text)
+                f.write("\n\n")
+
+                with open('md_generated/various_pub_SM_data.md') as f_read:
+                    text = f_read.read()
+
+                f.write(text)
+                f.write("\n\n")
+
+            if source == 'Various web':
+                with open('md_generated/various_web_mat_data.md') as f_read:
+                    text = f_read.read()
+
+                f.write("\n")
+                f.write(text)
+                f.write("\n\n")
     # Convert to word document. 
