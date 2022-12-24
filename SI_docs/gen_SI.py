@@ -8,12 +8,6 @@ from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 
-sections = {
-    'Storage medium type source counts': r'SI_docs\md_generated\SM_type_source_counts.md',
-    'Dataset information': r'SI_docs\md_generated\README_combined.md',
-    # 'Raw SM data': r'cap_cost\analysis\table_gen\output\individual\SM_type_tables.md'
-}
-
 if not os.path.exists('output'): os.mkdir('output')
 
 def read_md(f_out, fp):
@@ -25,6 +19,9 @@ def read_md(f_out, fp):
     return SI_text 
 
 with open('output/SI.md', 'w', encoding='utf-8') as f_out:
+
+    SI_text = read_md(f_out, r'SI_docs\md_written\intro.md')
+    f_out.write(SI_text)
 
     SI_text = read_md(f_out, r'SI_docs\md_written\data_flow_desc.md')
     f_out.write(SI_text)
