@@ -1,4 +1,5 @@
 # Kitco
 
-https://www.kitco.com/market/
+Precious metal prices manually obtained from [Kitco](https://www.kitco.com/market/).
+
 

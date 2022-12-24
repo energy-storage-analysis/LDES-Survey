@@ -1,7 +1,6 @@
 # DERA
 
-Data manually pulled from October 2022 Preismonitor PDF published by the German Mineral Resources Agency (DERA)
+Data manually pulled from October 2022 [Preismonitor PDF](https://www.deutsche-rohstoffagentur.de/DERA/DE/Produkte/Rohstoffpreise/Preismonitor/preismonitor_node.html) published by the German Mineral Resources Agency (DERA)
 
-https://www.deutsche-rohstoffagentur.de/DERA/DE/Produkte/Rohstoffpreise/Preismonitor/preismonitor_node.html
 
-the average from 2017-2021 was used where available. 
+The average prices from 2017-2021 were used where available. 
