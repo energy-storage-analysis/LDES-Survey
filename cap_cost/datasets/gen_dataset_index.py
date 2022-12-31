@@ -22,8 +22,8 @@ for dirpath, dirnames, filenames in os.walk('.'):
     folder_name = dirpath.removeprefix('.\\')
     dataset_index['folder'].append(folder_name)
 
-    dataset_index['processing_script'] = 'y' if 'process.py' in filenames else ''
-    dataset_index['extract_script'] = 'y' if 'extract.py' in filenames else ''
+    dataset_index['processing_script'].append('y') if 'process.py' in filenames else dataset_index['processing_script'].append('')
+    dataset_index['extract_script'].append('y') if 'extract.py' in filenames else dataset_index['extract_script'].append('')
 
 
 df = pd.DataFrame(dataset_index)

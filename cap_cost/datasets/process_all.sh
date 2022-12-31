@@ -12,7 +12,7 @@ run_extract=false
 run_processing=true
 
 i=1
-while read source folder processing_script extract_script
+while read  -r source folder processing_script extract_script
 do
     test $i -eq 1 && ((i=i+1)) && continue
     extract_script=$(echo $extract_script|tr -d '\r')

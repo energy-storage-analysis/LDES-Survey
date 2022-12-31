@@ -67,7 +67,7 @@ df = pd.concat([df, custom_data])
 # %%
 
 
-df['C_kwh_orig'] = df['C_kwh_orig'].str.replace('^$','nan')
+df['C_kwh_orig'] = df['C_kwh_orig'].str.replace('^$','nan', regex=True)
 
 df = df.astype({
     'deltaV': 'pint[V]',

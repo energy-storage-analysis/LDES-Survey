@@ -1,6 +1,7 @@
 #%%
 
 import pandas as pd
+from es_utils.units import ureg
 
 df = pd.read_csv('input.csv', index_col=0)
 df['price'] = df['price'].str.replace("$",'')

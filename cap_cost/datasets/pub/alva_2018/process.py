@@ -17,12 +17,12 @@ df_latent = pd.read_csv('tables/table_8.csv')
 df_latent = df_latent.set_index('original_name')
 
 df_latent = df_latent.rename({'density': 'mass_density'}, axis=1)
-df_latent['mass_density'] = df_latent['mass_density'].str.replace("\d+\ ?\(L.*\)", 'nan') 
-df_latent['mass_density'] = df_latent['mass_density'].str.replace("(\d+) ?\(S.*\).?", r'\1')
+df_latent['mass_density'] = df_latent['mass_density'].str.replace("\d+\ ?\(L.*\)", 'nan',regex=True) 
+df_latent['mass_density'] = df_latent['mass_density'].str.replace("(\d+) ?\(S.*\).?", r'\1', regex=True)
 df_latent['mass_density'] = df_latent['mass_density'].astype(float) #kg/m3
 
-df_latent['kth'] = df_latent['kth'].str.replace('\(S.*\)','')
-df_latent['kth'] = df_latent['kth'].str.replace('\S+ ?\(L.*\)','nan').astype(float)
+df_latent['kth'] = df_latent['kth'].str.replace('\(S.*\)','', regex=True)
+df_latent['kth'] = df_latent['kth'].str.replace('\S+ ?\(L.*\)','nan', regex=True).astype(float)
 
 #%%
 
