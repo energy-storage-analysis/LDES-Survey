@@ -1,1 +1,4 @@
-output
+*.jl
+temp
+extracted.csv
+processed.csv
