@@ -5,7 +5,7 @@ AQDS,7.15,3.323401871576773,0.46,,5,2,"Alibaba, Li 2017","4.8, 9.5",C14H8O8S2,36
 Ag,609.8996624068727,50.995126893825805,0.08,,0,3,"DERA, Kitco, USGS","608.49, 609.9, 697.51",Ag,107.8682,"SILBER, Silver Bullion",521.0
 Air,0.0,,,,1,1,Li 2017,0.0,O2,0.0,,
 Al,2.405,0.8143695435050449,0.34,,30,9,"Alibaba, DERA, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.01, 2.39, 2.4, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"ALUMINIUM, Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
-Al2O3,0.9243857600000001,2.5348376226805804,2.74,,2,8,"Alibaba, DERA, Echemi, Indiamart, Liu 2016, SMM, Steinmann 2022, USGS","0.52, 0.53, 0.77, 0.84, 1.01, 1.11, 1.32, 8.0",Al2O3,101.9600768,"ALUMINIUMOXID, Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
+Al2O3,0.9243857600000001,2.5348376226805804,2.74,,3,8,"Alibaba, DERA, Echemi, Indiamart, Liu 2016, SMM, Steinmann 2022, USGS","0.52, 0.53, 0.77, 0.84, 1.01, 1.11, 1.32, 8.0",Al2O3,101.9600768,"ALUMINIUMOXID, Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
 AlSc,340.0,,,,0,1,USGS,340.0,AlSc,71.9374464,Scandium Mtl_Alloy,2162.93108
 Ammonium Heptamolybdate,23.404670000000003,6.203688207655184,0.27,,0,2,"ISE, SMM","19.02, 27.79","(NH4)6Mo7O24, H50Mo7N6O28 ",1163.86,"Ammonium heptamolybdate, Hexaammonium molybdate",
 Ammonium Paratungstate,20.13233333333333,,,,0,1,ISE,20.13,(NH4)10(H2W12O42)(H2O)4,3132.504,Tungsten APT,
@@ -185,7 +185,7 @@ Na2SO4,0.091,1.4809542291006834,16.27,,1,5,"Alibaba, Alva 2018, Echemi, Indiamar
 Na2WO4,14.9535,,,,0,1,ISE,14.95,Na2WO4,293.8155386,Sodium Tungstate,22.5901803
 Na2Zn(OH)4,0.68,,,,0,1,Li 2017,0.68,Na2Zn(OH)4,179.3875386,Na2Zn(OH)4,1.7845023
 NaBr,1.825,0.9271326765894945,0.51,,2,3,"Alibaba, Indiamart, Li 2017","1.51, 1.82, 3.25",NaBr,102.8937693,NaBr,4.0794294
-NaCl,0.045,1.0393890080569395,23.1,,6,7,"Alibaba, Alva 2018, Indiamart, Li 2017, Ray 2021, Steinmann 2022, USGS","0.03, 0.04, 0.05, 0.11, 2.8",NaCl,58.4397693,"NaCl, Salt Brine, Salt Rock, Salt Solar, Salt Vacuum",1.2299194
+NaCl,0.045,1.0393890080569395,23.1,,7,7,"Alibaba, Alva 2018, Indiamart, Li 2017, Ray 2021, Steinmann 2022, USGS","0.03, 0.04, 0.05, 0.11, 2.8",NaCl,58.4397693,"NaCl, Salt Brine, Salt Rock, Salt Solar, Salt Vacuum",1.2299194
 NaF,2.405,3.1968512979376174,1.33,,8,3,"Alva 2018, Indiamart, Ray 2021","1.77, 2.4, 7.6",NaF,41.9881724,NaF,2.5475296
 NaHCO3,0.364,,,,0,1,Echemi,0.36,NaHCO3,84.0057693,,0.9431175
 NaK,2.0,0.0,0.0,,0,2,"Alva 2018, Antunez 2018",2.0,NaK,62.0880693,"Eutectic Na-K, Sodium(22.2%)epotassium (77.8%) eutectic (NaK)",9.2027739
@@ -237,7 +237,7 @@ ScF3,224400.0,,,,0,1,USGS,224400.0,ScF3,101.9511175,Scandium Cmpds_Fluoride,1526
 ScI3,165400.0,,,,0,1,USGS,165400.0,ScI3,425.669318,Scandium Cmpds_Iodide,396.7220654
 Se,22.517040782454078,3.175306143131196,0.14,,0,2,"ISE, USGS","20.27, 24.76",Se,78.971,"Selenium , Selenium Powder",21.4
 SeO2,12.7,,,,0,1,ISE,12.7,SeO2,110.969,Selenium dioxides,15.2736989
-SiO2,0.6678000000000002,3.3733152709908394,5.05,,2,3,"Alibaba, Indiamart, Steinmann 2022","0.65, 0.67, 6.5",SiO2,60.083,SiO2,0.8766572
+SiO2,0.6678000000000002,3.3733152709908394,5.05,,3,3,"Alibaba, Indiamart, Steinmann 2022","0.65, 0.67, 6.5",SiO2,60.083,SiO2,0.8766572
 Sm,14.11,,,,0,1,DERA,14.11,,,Samarium (metal),13.9
 Sm2O3,2.0,,,,0,1,DERA,2.0,,,Samarium (oxide),12.0080166
 Sn,24.849974243955863,14.390673154218392,0.58,,7,6,"Alibaba, DERA, Indiamart, Kim 2013, SMM, USGS","21.73, 22.24, 22.74, 26.96, 46.45, 54.72",Sn,118.71,"SMM Tin Ingot, Sn, Tin LME, Tin NY, ZINN",18.7
@@ -288,7 +288,7 @@ ZnSO4,0.730269642458931,0.14483494192170432,0.2,,1,3,"Alibaba, Indiamart, Li 201
 Zr,10.6,17.848690262328308,1.68,,3,3,"DERA, ISE, USGS","1.37, 10.6, 35.85",Zr,91.224,"ZIRKON, Zirconium Sponge, Zirconium and Hafnium Zr_CN",36.4
 Zr(CO3)2,3.3825000000000003,,,,0,1,ISE,3.38,Zr(CO3)2,211.24,Zirconium Carbonates,15.8031971
 ZrCl2H2O,2.272,,,,0,1,ISE,2.27,ZrCl2H2O,180.139,Zirconium Oxychloride,18.4947928
-ZrO2,4.3555,,,,0,1,ISE,4.36,ZrO2,123.222,Zirconium fused_cubic,26.9877237
+ZrO2,4.3555,,,,1,1,ISE,4.36,ZrO2,123.222,Zirconium fused_cubic,26.9877237
 ZrSO4,428.6574376489916,,,,0,1,USGS,428.66,ZrSO4,187.28,"Zirconium and Hafnium Zircon_AU, Zirconium and Hafnium Zircon_CN, Zirconium and Hafnium Zircon_import",17.7988987
 ZrSiO4,1.6375,,,,0,1,ISE,1.64,ZrSiO4,183.305,"Zircon sand, Zirconium silicate",18.4291399
 kyanite,0.3952888360974855,,,,0,1,USGS,0.4,Al2H6O5Si,168.0910768,Kyanite and Related Minerals FOB,

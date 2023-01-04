@@ -1,0 +1,8 @@
+,materials,mat_basis,original_name,SM_type,sub_type,mat_type,dielectric_breakdown,dielectric_constant,mass_density
+unit_row,N/U,N/U,N/U,N/U,N/U,N/U,V/m,dimensionless,kg/m**3
+SM_name,,,,,,,,,
+Al2O3,Al2O3,,,dielectric_capacitor,bulk,,13400000,10,3990
+SiO2,SiO2,,,dielectric_capacitor,bulk,,570000000,4.47,2648
+ZrO2,ZrO2,,,dielectric_capacitor,bulk,,11400000,12.5,5680
+NaCl,NaCl,,,dielectric_capacitor,bulk,,150000000,5.9,2170
+KBr,KBr,,,dielectric_capacitor,bulk,,80000000,4.88,2740
