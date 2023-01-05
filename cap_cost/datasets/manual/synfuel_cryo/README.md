@@ -1,3 +1,3 @@
-# Cryogenic Fuel Storage
+# Cryogenic Liquid Storage
 
-Storage medium definitions of liquid methane (LNG) and liquid hydrogen (LH2) stored in cryogenic tanks. 
+Storage medium definitions of synthetic fuel and liquid air stored in cryogentic tanks. liquid methane (LNG) and liquid hydrogen (LH2) stored in cryogenic tanks. The latent heat and sensible heat components of liquid air storage are included with a LNG tank with the specific cost for both components calcualted based on the liquid density. Therefore the storage cost of the sensible thermal energy (after evaporation) is determined based on the tank required to store the liquid air before evaporation. The physical properties are obtained from the [Engineering Toolbox Website](www.engineeringtoolbox.com)

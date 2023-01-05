@@ -1,5 +1,7 @@
-,materials,SM_type,sub_type,mass_density,deltaG_chem,n_e,mu_total
-unit_row,N/U,N/U,N/U,kilogram / meter ** 3,kilowatt_hour / mole,dimensionless,gram / mole
-SM_name,,,,,,,
-LH2 Tank,LH2 Tank,synfuel,tank,70.85,0.0659,2.0,2.016
-LNG Tank,LNG Tank,synfuel,tank,420.0,0.2554,8.0,16.043
+,materials,SM_type,sub_type,mat_type,mass_density,deltaG_chem,n_e,mu_total,phase_change_T,sp_latent_heat,Cp,T_melt,T_max
+unit_row,N/U,N/U,N/U,N/U,kilogram / meter ** 3,kilowatt_hour / mole,dimensionless,gram / mole,degree_Celsius,kilowatt_hour / kilogram,kilowatt_hour / kelvin / kilogram,degree_Celsius,degree_Celsius
+SM_name,,,,,,,,,,,,,
+LH2 Tank,LH2 Tank,synfuel,tank,,70.85,0.0659,2.0,2.016,,,,,
+LNG Tank,LNG Tank,synfuel,tank,,420.0,0.2554,8.0,16.043,,,,,
+LAES,LNG Tank,sensible_thermal,cold,other,870,,,,,,0.00028861111,-195.8,0
+LAES,LNG Tank,latent_thermal,other,other,870,,,,-195.8,0.0552778,,,

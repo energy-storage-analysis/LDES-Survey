@@ -111,11 +111,12 @@ ax=ax_cold
 
 alter_dict = {
     "Ethanol": (-80,5),
-    "Isopentane": (-190,70),
+    "Isopentane": (-190,90),
     "N-propane": (-180,0.5),
     'Methanol': (-100,1),
     'N-pentane': (None,30),
-    'N-hexane': (-80,30)
+    'N-hexane': (-80,30),
+    'LAES': (-190,30),
 }
 
 

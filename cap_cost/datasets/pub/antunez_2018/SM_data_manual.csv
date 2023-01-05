@@ -1,4 +1,4 @@
 ,SM_type,sub_type,mat_type,materials,mat_basis,phase_change_T,sp_latent_heat,mass_density,vol_latent_heat
 unit_row,N/U,N/U,N/U,N/U,N/U,degree_Celsius,kilowatt_hour / kilogram,kilogram / meter ** 3,megajoule / meter ** 3
 SM_name,,,,,,,,,
-Liquid Air,latent_thermal,other,other,LNG Tank,,78.8,0.195,870,169.824
+LAES,combination,,,LNG Tank,,78.8,0.195,870,169.824
