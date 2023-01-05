@@ -33,3 +33,5 @@ Papadias 2021 indicates the dome constructions costs, which are used. Lord 2014 
 ## Development
 
 TODO: Perhaps a similar fraction based analysis could be used from the ETI data, to include the salt cavern data from Kruck, which includes "Exploration, drilling, leaching,first fill". ETI also includes data for "MIT's, Run completions & 1st Gas fills ", which is ignored for now. 
+
+HDSAM contains a geologic cavern cost scaling relationship that could be included here. 

@@ -7,10 +7,13 @@ Water Reservoir Excavation,Pumped Hydro,,,261.590124,Black and Veatch 2012,"Base
 Sand,Dune Sand,SiO2,0.05,,Diago 2018,
 Solar Salt,Solar Salt,NaNO3KNO3,0.43,,Diago 2018,
 TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,,Liu 2019,https://doi.org/10.1016/j.chempr.2019.04.021
-Cryogenic Tank,,,,2054,Kiessling 2021,TODO: EUR to USD
 CFRP,,,15,,Singh Gill 2022,
 Steel,,,1.5,,Singh Gill 2022,
 CFRP,,,10,,Rao 2018,
 CO2,Cyrogenic Carbon Capture,CO2,0.04,,Knighton 2020,
 CO2,DAC Carbon Capture,CO2,0.195,,Zhao 2019,
-N2,Liquid Nitrogen,N2,0.1401,,Salerno 2002,TODO: Converted to mass with density 0.8064 g/ml
+N2,Liquid Nitrogen,N2,0.1401,,Salerno 2002,Converted to mass with density 0.8064 g/ml
+LH2 Tank,,,,2064.6,HDSAM 2015,The linear component of the LH2 Storage cost scaling relationship
+LH2 Tank,,,,1684,Hurskainen 2019,Manually converted to USD with conversion factor 1.113 EUR/USD
+LNG Tank,,,,594,Hurskainen 2019,Manually converted to USD with conversion factor 1.113 EUR/USD
+LNG Tank,,,,1150,Fikri 2018,
