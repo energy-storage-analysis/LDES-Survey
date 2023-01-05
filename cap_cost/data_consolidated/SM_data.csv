@@ -198,7 +198,6 @@ KZrF,sensible_thermal,hot,molten_salt,1342.5573210940145,0.07777777777775599,104
 Kevlar,flywheel,,composite,196.0407114337567,0.13823659280667958,27.1,KFRP,,Kale 2018,Kale 2018,,,1.2,,,20.0,,,,,,,,,,,,,,,Kevlar-49 Epoxy,,,,,597.1820809248555,,
 Kevlar,pressure_tank,,composite,163.3672595281306,0.1658839113680155,27.1,KFRP,,Kale 2018,Kale 2018,,,1.0,,,20.0,,,,,,,,,,,,,,,Kevlar-49 Epoxy,,,,,597.1820809248555,,
 Kevlar,smes,,composite,245.0508892921959,0.11058927424534366,27.1,KFRP,,Kale 2018,Kale 2018,,,1.5,,,20.0,,,,,,,,,,,,,,,Kevlar-49 Epoxy,,,,,597.1820809248555,,
-LAES,combination,,,5.139994105511346,0.195,1.0022988505747126,LNG Tank,volumetric,Antunez 2018,"Fikri 2018, Hurskainen 2019",,,,,,20.0,,,,,,,,,,,870.0,,,,,78.8,,0.195,,,,169.824
 LAES,latent_thermal,other,other,18.132032218625064,0.0552778,1.0022988505747126,LNG Tank,volumetric,Synfuel cryo,"Fikri 2018, Hurskainen 2019",,,,,,20.0,,,,,,,,,,,870.0,,,,,-195.8,,0.0552778,,,,
 LAES,sensible_thermal,cold,other,17.73664606377973,0.056510055338000006,1.0022988505747126,LNG Tank,volumetric,Synfuel cryo,"Fikri 2018, Hurskainen 2019",,0.00028861111,,0.0,-195.8,-195.8,,,195.8,,,,,,,,870.0,,,,,,,,,,,
 LBE,sensible_thermal,hot,metal,103.3896923093786,0.05475555555555556,5.661160041117975,"[('Pb', 0.445), ('Bi', 0.555)]",mass,Alva 2018,"0 : Alibaba, DERA, Indiamart, Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba, ISE, Indiamart, Kim 2013, USGS",,3.888888888888889e-05,,1533.0,125.0,125.0,,,1408.0,,,,,,,14.9,,,,,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),,,,,,,

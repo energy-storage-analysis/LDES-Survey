@@ -79,9 +79,10 @@ df_SM = pd.merge(df_SM, SM_lookup, on='original_name')
 df_SM = df_SM.dropna(subset=['SM_name'])
 df_SM = df_SM.set_index('SM_name')
 
-df_SM_manual = read_pint_df('SM_data_manual.csv')
-
-df_SM = pd.concat([df_SM, df_SM_manual])
+## Removed for now and going with split sensible and latent
+#TODO: figure out how to add extra data into database that insn't included in final figures/metadata but is useful to cite.
+# df_SM_manual = read_pint_df('SM_data_manual.csv')
+# df_SM = pd.concat([df_SM, df_SM_manual])
 
 
 df_SM = convert_units(df_SM)
