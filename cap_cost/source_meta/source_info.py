@@ -20,8 +20,11 @@ df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.
 df_mat_unused = df_mat_data[df_mat_data['num_SMs'] == 0].dropna(how='all')
 df_mat_unused.to_csv('tables/mat_data_unused.csv')
 
-df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0].dropna(how='all')
-df_mat_data.to_csv('tables/mat_data_used.csv')
+df_mat_used = df_mat_data[df_mat_data['num_SMs'] > 0].dropna(how='all')
+df_mat_used.to_csv('tables/mat_data_used.csv')
+
+df_mat_vol = df_mat_data.dropna(subset=['vol_price']).dropna(how='all',axis=1)
+df_mat_vol.to_csv('tables/mat_data_vol.csv')
 
 from collections import Counter
 

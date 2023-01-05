@@ -73,9 +73,6 @@ with open(os.path.join(output_folder,'SM_type_source_counts.md'), 'w', encoding=
     f.write(": Counts of each source's contribution to storage media of each type, sub-type, and material type.")
 
 
-from dotenv import load_dotenv
-load_dotenv()
-REPO_DIR = os.getenv('REPO_DIR')
 fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\SM_viable.csv')
 
 df = read_pint_df(fp)
@@ -113,7 +110,6 @@ with open(os.path.join(output_folder,'SM_viable.md'), 'w', encoding='utf-8') as 
 
 # Various publicaiton material data
 
-REPO_DIR = os.getenv('REPO_DIR')
 fp = os.path.join(REPO_DIR, r'cap_cost\datasets\pub\various_pub\output\mat_data.csv')
 
 df = read_pint_df(fp)
@@ -137,7 +133,6 @@ with open(os.path.join(output_folder,'various_pub_mat_data.md'), 'w', encoding='
 
 # Various publicaiton Storage medium data
 
-REPO_DIR = os.getenv('REPO_DIR')
 fp = os.path.join(REPO_DIR, r'cap_cost\datasets\pub\various_pub\output\SM_data.csv')
 
 df = read_pint_df(fp)
@@ -161,7 +156,6 @@ with open(os.path.join(output_folder,'various_pub_SM_data.md'), 'w', encoding='u
 
 # Various website material data
 
-REPO_DIR = os.getenv('REPO_DIR')
 fp = os.path.join(REPO_DIR, r'cap_cost\datasets\web\various_web\output\mat_data.csv')
 
 df = read_pint_df(fp)
@@ -178,3 +172,19 @@ writer = MarkdownTableWriter(dataframe=df)
 with open(os.path.join(output_folder,'various_web_mat_data.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
     f.write(": Various website material data sources")
+
+
+#%%
+
+fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\mat_data_vol.csv')
+df = pd.read_csv(fp)
+
+df = df[['index','vol_price', 'sources']]
+
+df = df.rename({'vol_price': 'Volumetric Price $(USD/m^3)$'}, axis=1)
+
+writer = MarkdownTableWriter(dataframe=df)
+
+with open(os.path.join(output_folder,'mat_data_vol.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
+    f.write(": Volumetric Material cost datapoints")

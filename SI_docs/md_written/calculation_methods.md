@@ -1,6 +1,4 @@
-# Calculation methods
-
-## Hydrogen carrier energy density calculation method
+# Hydrogen carrier energy density calculation method
 
 We calculate the specific energy density of hydrogen carriers from the theoretical weight percentage of molecular hydrogen in the host material, $C_{wt.\%}$:
 

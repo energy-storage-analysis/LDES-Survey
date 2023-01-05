@@ -1,6 +1,6 @@
 # Underground Cavern Storage 
 
-This dataset defines storage media that store energy through a pressurized gas in undergound caverns. This includes storage of pressure energy in the form of compressed air as well as the storage of chemical energy as a pressurized methane or hydrogen gas. For both of these types of storage media the same volumetric cavern costs are used to calculate the specific energy density. 
+This dataset defines storage media that store energy through a pressurized gas in undergound caverns. This includes storage of pressure energy in the form of compressed air as well as the storage of chemical energy as a pressurized methane or hydrogen gas. For both of these types of storage media the same volumetric cavern costs are used to calculate the specific energy density. To remain consistent with the approach of costs based on the ‘material cost floor’ we use volumetric costs from sources that split out constructions costs for components of the construction process that scale with the size of the cavern as much as possible.
 
 Here, the mass density of each gas ($\rho_m$) is calculated assuming a cavern pressure of $P$ through the equation 
 
