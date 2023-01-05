@@ -18,7 +18,7 @@ def read_md(f_out, fp):
     SI_text = SI_text + "\n\n"
     return SI_text 
 
-with open('output/SI.md', 'w', encoding='utf-8') as f_out:
+with open('output/SI_md.md', 'w', encoding='utf-8') as f_out:
 
     SI_text = read_md(f_out, r'SI_docs\md_written\intro.md')
     f_out.write(SI_text)
@@ -63,5 +63,5 @@ with open('output/SI.md', 'w', encoding='utf-8') as f_out:
 
 output_folder = 'output'
 import os
-os.system('pandoc -o {}/SI.docx -f markdown -t docx {}/SI.md --reference-doc reference_doc.docx'.format(output_folder,output_folder))
+os.system('pandoc -o {}/SI_md.docx -f markdown -t docx {}/SI_md.md --reference-doc reference_doc.docx'.format(output_folder,output_folder))
 
