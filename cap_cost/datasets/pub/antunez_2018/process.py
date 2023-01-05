@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import numpy as np
 from sympy import O
-from es_utils.units import prep_df_pint_out, convert_units
+from es_utils.units import prep_df_pint_out, convert_units, read_pint_df
 import es_utils
 
 if not os.path.exists('output'): os.mkdir('output')
@@ -78,6 +78,10 @@ df_SM = df.drop('specific_price', axis=1)
 df_SM = pd.merge(df_SM, SM_lookup, on='original_name')
 df_SM = df_SM.dropna(subset=['SM_name'])
 df_SM = df_SM.set_index('SM_name')
+
+df_SM_manual = read_pint_df('SM_data_manual.csv')
+
+df_SM = pd.concat([df_SM, df_SM_manual])
 
 
 df_SM = convert_units(df_SM)

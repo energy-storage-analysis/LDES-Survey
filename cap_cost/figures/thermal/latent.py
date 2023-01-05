@@ -38,6 +38,8 @@ display_text = [s.split(' ')[0] for s in df_latent_ds.index]
 display_text = [format_chem_formula(s) for s in display_text]
 df_latent_ds['display_text'] = display_text
 
+df_latent_ds.loc['Liquid Air','display_text'] = 'Liquid\ Air\ (LNG\ Tank)'
+
 df_latent.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'latent_ds.csv'))
 
 #%%
