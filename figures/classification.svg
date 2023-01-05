@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    xml:space="preserve"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="classification.svg"
    inkscape:export-filename="output/classification.png"
    inkscape:export-xdpi="96"
@@ -28,11 +28,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.166942"
-     inkscape:cx="398.90587"
-     inkscape:cy="291.35982"
+     inkscape:cx="341.91931"
+     inkscape:cy="292.21675"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -219,9 +219,9 @@
        ry="2"
        rx="2"
        transform="matrix(0.89778651,0,0,0.77660784,-74.616393,29.074857)" /><rect
-       style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.338637;paint-order:stroke fill markers"
+       style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.344405;paint-order:stroke fill markers"
        id="rect15614"
-       width="66"
+       width="68.267319"
        height="29.465412"
        x="110.46158"
        y="51.030849" /><rect
@@ -321,22 +321,22 @@
        transform="translate(61.327722,32.296704)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4029">• Sensible
+         id="tspan40139">• Sensible
 </tspan><tspan
          x="52.941959"
          y="75.414899"
-         id="tspan4031">			Hot Storage
+         id="tspan40141">			Hot Storage
 </tspan><tspan
          x="52.941959"
          y="80.706563"
-         id="tspan4033">			Cold Storage
+         id="tspan40143">			Cold Storage
 </tspan><tspan
          x="52.941959"
          y="85.998227"
-         id="tspan4035">• Latent</tspan></text><rect
-       style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.289663;paint-order:stroke fill markers"
+         id="tspan40145">• Latent</tspan></text><rect
+       style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.287666;paint-order:stroke fill markers"
        id="rect15614-3-6"
-       width="66"
+       width="65.093071"
        height="14.471596"
        x="113.25534"
        y="137.11264" /><text
@@ -348,11 +348,11 @@
        transform="translate(63.974626,73.067309)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4037">• Underground Storage
+         id="tspan40147">• Underground Storage
 </tspan><tspan
          x="52.941959"
          y="75.414899"
-         id="tspan4039">• Tank Storage*</tspan></text><text
+         id="tspan40149">• Tank Storage</tspan></text><text
        xml:space="preserve"
        style="font-size:6.35px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="48.191002"
@@ -378,7 +378,7 @@
        transform="translate(-20.296542,84.839495)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4041">• Superconducting Magnetic*</tspan></text><text
+         id="tspan40151">• Superconducting Magnetic</tspan></text><text
        xml:space="preserve"
        style="font-size:6.35px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="125.82249"
@@ -389,9 +389,9 @@
          x="125.82249"
          y="166.28275"
          style="font-size:6.35px;fill:#000000;fill-opacity:1;stroke-width:0.265">Gravitational</tspan></text><rect
-       style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.324475;paint-order:stroke fill markers"
+       style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.323358;paint-order:stroke fill markers"
        id="rect15614-3-6-9"
-       width="66"
+       width="65.546539"
        height="18.159044"
        x="112.54763"
        y="168.21533" /><text
@@ -403,15 +403,15 @@
        transform="translate(63.266919,104.36124)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4043">• Gravitational
+         id="tspan40153">• Gravitational
 </tspan><tspan
          x="52.941959"
          y="75.414899"
-         id="tspan4045">			Pumped Hydro	
+         id="tspan40155">			Pumped Hydro	
 </tspan><tspan
          x="52.941959"
          y="80.706563"
-         id="tspan4047">			Block Stacking</tspan></text><text
+         id="tspan40157">			Block Stacking</tspan></text><text
        xml:space="preserve"
        style="font-size:6.35px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="42.721931"
@@ -436,11 +436,11 @@
        transform="translate(-19.870578,107.97107)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4049">• Electric Double Layer
+         id="tspan40159">• Electric Double Layer
 </tspan><tspan
          x="52.941959"
          y="75.414899"
-         id="tspan4051">• Dielectric </tspan></text><g
+         id="tspan40161">• Dielectric </tspan></text><g
        id="g1325"
        transform="translate(-104.07009,-143.29476)"><rect
          style="opacity:0.729814;mix-blend-mode:normal;fill:#8c8c8c;fill-opacity:1;fill-rule:evenodd;stroke-width:0.472048;paint-order:stroke fill markers;filter:url(#filter1248-8)"
@@ -476,11 +476,11 @@
          transform="translate(83.942357,115.44928)"><tspan
            x="52.941959"
            y="70.123238"
-           id="tspan4053">• Storage Medium Type
+           id="tspan40163">• Storage Medium Type
 </tspan><tspan
            x="52.941959"
            y="75.414899"
-           id="tspan4055">			Sub Type</tspan></text></g><text
+           id="tspan40165">			Sub Type</tspan></text></g><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:71.0078;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -489,7 +489,7 @@
        transform="translate(-20.570262,61.399804)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4057">• Flywheel*</tspan></text><text
+         id="tspan40167">• Flywheel</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:79.9859;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -498,27 +498,27 @@
        transform="translate(58.425467,-13.210459)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4063">• Synthetic Fuel (H<tspan
+         id="tspan40173">• Synthetic Fuel (H<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan4059">2</tspan>, CH<tspan
+   id="tspan40169">2</tspan>, CH<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan4061">4</tspan>, ...)
+   id="tspan40171">4</tspan>, ...)
 </tspan><tspan
          x="52.941959"
          y="75.414899"
-         id="tspan4065">			Chemical (Hydrides, LOHC)
+         id="tspan40175">			Chemical (Hydrides, LOHC)
 </tspan><tspan
          x="52.941959"
          y="80.706563"
-         id="tspan4067">			Physical (Cavern, Tanks)
+         id="tspan40177">			Physical (Cavern, Tanks)
 </tspan><tspan
          x="52.941959"
          y="85.998227"
-         id="tspan4069">• Flow Battery
+         id="tspan40179">• Flow Battery
 </tspan><tspan
          x="52.941959"
          y="91.289891"
-         id="tspan4071">• Thermochemical</tspan></text><text
+         id="tspan40181">• Thermochemical</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:71.8845;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -527,27 +527,27 @@
        transform="translate(-17.862337,12.413093)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan4073">• Coupled Battery
+         id="tspan40183">• Coupled Battery
 </tspan><tspan
          x="52.941959"
          y="75.414899"
-         id="tspan4075">			Dual Solid Electrode
+         id="tspan40185">			Dual Solid Electrode
 </tspan><tspan
          x="52.941959"
          y="80.706563"
-         id="tspan4077">			Metal Air
+         id="tspan40187">			Metal Air
 </tspan><tspan
          x="52.941959"
          y="85.998227"
-         id="tspan4079">			Liquid Metal
+         id="tspan40189">			Liquid Metal
 </tspan><tspan
          x="52.941959"
          y="91.289891"
-         id="tspan4081">			Hybrid Flow
+         id="tspan40191">			Hybrid Flow
 </tspan><tspan
          x="52.941959"
          y="96.581555"
-         id="tspan4083">• Pseudocapacitor
+         id="tspan40193">• Pseudocapacitor
 </tspan></text><text
        xml:space="preserve"
        transform="scale(0.26458333)"
