@@ -71,7 +71,7 @@ SM_source_info = df_SM_source_info['SM_sources'] + ': ' + df_SM_source_info['sou
 
 SM_source_info = SM_source_info.groupby(['SM_type','sub_type','mat_type']).apply(join_col_vals)
 
-SM_source_info
+SM_source_info.name = 'SM Sources'
 
 #%%
 

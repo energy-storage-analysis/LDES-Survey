@@ -4,12 +4,12 @@ latent_thermal,Latent Thermal,Thermal,Decoupled
 sensible_thermal,Sensible \nThermal,Thermal,Decoupled
 thermochemical,Thermochemical,Chemical,Decoupled
 pressure_cavern,Pressure Cavern,Pressure,Decoupled
-pressure_tank,Pressure Tank*,Pressure,Decoupled
-smes,SMES*,Magnetic,Coupled
+pressure_tank,Pressure Tank,Pressure,Decoupled
+smes,SMES,Magnetic,Coupled
 pseudocapacitor,Pseudocapacitor,Chemical,Coupled
 EDLC,EDLC,Electrostatic,Coupled
 flow_battery,Flow Battery,Chemical,Decoupled
 synfuel,Synthetic Fuel,Chemical,Decoupled
 gravitational,Gravity,Gravitational,Decoupled
 dielectric_capacitor,Dielectric \nCapacitor,Electrostatic,Coupled
-flywheel,Flywheel*,Kinetic,Coupled
+flywheel,Flywheel,Kinetic,Coupled

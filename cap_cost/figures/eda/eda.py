@@ -49,16 +49,20 @@ plt.savefig(pjoin(output_dir,'eda_mats.png'))
 
 #%%
 
-plt.figure(figsize=(2.5,2))
+plt.figure(figsize=(3.2,2))
 # plt.figure(figsize=(5,5))
 
-df_mat_data['num_source'].value_counts().sort_index().plot.bar(color='slategray')
+df_plot = df_mat_data['num_source'].value_counts().sort_index()
+df_plot.plot.bar(color='slategray')
 plt.xlabel("# Sources")
 plt.ylabel("Count")
 
 plt.tight_layout()
 
-plt.savefig(pjoin(output_dir,'source_count.png'))
+#TODO: Cannot figure out how to have axes patch white but axis transparent without ipython. Going to manually put white background in svg...
+# plt.gca().patch.set_alpha(0)
+# plt.gcf().set_alpha(0)
+plt.savefig(pjoin(output_dir,'source_count.png'), facecolor='none')
 # plt.savefig(pjoin(output_dir,'source_count.png'), transparent=True)
 
 #%%
