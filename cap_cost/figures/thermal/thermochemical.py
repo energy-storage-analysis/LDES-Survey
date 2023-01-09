@@ -48,6 +48,8 @@ fig = plt.figure(figsize=(7,8))
 x_str='temperature'
 y_str='C_kwh'
 
+xlim = (0,2000)
+
 sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='mat_type', legend=True, s=MARKER_SIZE)
 
 # df_tc.plot.scatter(y='C_kwh', x=x_str, sharex=False)
@@ -57,7 +59,7 @@ ax = plt.gca()
 
 texts = annotate_points(df_tc, x_str,y_str,text_col='display_text', ax=ax)
 
-plt.xlim(0,2000)
+plt.xlim(*xlim)
 leg = plt.gca().get_legend()
 leg.set_bbox_to_anchor([0,0,0.3,0.2])
 leg.set_title('')
@@ -66,7 +68,7 @@ plt.yscale('log')
 plt.ylim(y_lim)
 # plt.ylim(0,10)
 
-ax.hlines(10,0,2000, linestyle='--', color='gray')
+ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
 plt.xlabel('Reaction Temperature (C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
@@ -76,8 +78,8 @@ plt.tight_layout()
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.5,3))
 
 alter_dict = {
-    "NiSO_{4}/NiO": (1100,9),
-    "MgSO_{4}/MgO": (1500,10.3),
+    "Ba(OH)_{2}/BaO": (1300, 14),
+    # "MgSO_{4}/MgO": (1500,10.3),
 }
 
 for alter_name, (x,y) in alter_dict.items():

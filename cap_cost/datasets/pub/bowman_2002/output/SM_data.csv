@@ -9,4 +9,4 @@ ZrNiH3,synfuel,chemical,metal_hydride,ZrNiH3,"[('Zr',1), ('Ni',1)]",molar,0.0979
 TiMn1.4V0.62H3.4,synfuel,chemical,metal_hydride,TiMn1.4V0.62H3.4,"[('Ti',1), ('Mn',1.4), ('V',0.62)]",molar,0.11232991735230148,3.409102195820986
 ZrMn2H3.6,synfuel,chemical,metal_hydride,ZrMn2H3.6,"[('Zr',1), ('Mn',2)]",molar,0.11847383411173364,3.5955640094608086
 LaNi5H6.5,synfuel,chemical,metal_hydride,LaNi5H6.5,"[('La',1), ('Ni',5)]",molar,0.21381838652606713,6.4891771328093215
-LaNi4.8Sn0.2H6.0,synfuel,chemical,metal_hydride,LaNi4.8Sn0.2H6.0,"[('La',1), ('Ni',4.8), ('Sn',0.2)]",molar,0.2062920899811088,6.260761456179326
+LaNi4.8Sn0.2H6,synfuel,chemical,metal_hydride,LaNi4.8Sn0.2H6.0,"[('La',1), ('Ni',4.8), ('Sn',0.2)]",molar,0.2062920899811088,6.260761456179326

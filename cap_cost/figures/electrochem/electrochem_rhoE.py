@@ -34,7 +34,7 @@ df['display_text'] = formula_strings
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
 
 Ckwh_cutoff = 30
-y_max = Ckwh_cutoff*1.15
+y_max = Ckwh_cutoff*1.3
 
 #%%
 
@@ -83,13 +83,15 @@ print("Coupled")
 
 fig = plt.figure(figsize = (7,8))
 
+xlim=(2e-2,2e1)
+
 x_str='specific_energy'
 y_str='C_kwh'
 
 sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', legend=True, s=50)
 
 ax = plt.gca()
-ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.5, linestyle='--', color='gray')
+ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
 texts = annotate_points(df_ec_coupled, x_str, y_str, text_col='display_text', ax=ax)
 
@@ -100,18 +102,22 @@ plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.yscale('log')
 plt.xscale('log')
 plt.ylim(top=y_max)
-plt.xlim(2e-2,2e1)
+plt.xlim(*xlim)
 
 
 leg = ax.get_legend()
 leg.set_title('Sub Type')
 leg.set_bbox_to_anchor([0,0.3,0.5,0])
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(10,0.5), lim=ADJUST_TEXT_LIM)
+adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(5,2), lim=ADJUST_TEXT_LIM)
 
 alter_dict = {
-    "Na/NiCl_{2}": (3,14),
-    # "C_{6}/LRMO\ LMNO": (3,20),
+    # "Na/NiCl_{2}": (3,14),
+    "C_{6}/LMP": (2,20),
+    "Ce_{4}/Zn": (0.2,5),
+    "Mg/Al": (0.1,8),
+    "Mg/Sb": (0.3,18),
+    "Mg/Zn": (0.05,15),
 }
 
 for alter_name, (x,y) in alter_dict.items():
@@ -124,18 +130,22 @@ plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 #%%
 
 print("Decoupled")
+
+xlim = (0.1, 60)
+
 fig = plt.figure(figsize = (7,8))
 
 sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
 
 ax = plt.gca()
-ax.hlines(10,ax.get_xlim()[0],ax.get_xlim()[1]*1.1, linestyle='--', color='gray')
-
-texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
 plt.yscale('log')
 plt.xscale('log')
 plt.ylim(bottom=9e-3, top=y_max)
+plt.xlim(*xlim)
+
+texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
+
 
 # plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 
@@ -149,20 +159,34 @@ leg.set_bbox_to_anchor([0,0,1,0.52])
 
 adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(2,1), lim=ADJUST_TEXT_LIM)
 
+ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
 alter_dict = {
     "CH_{4}\ (Feedstock)": (10,5e-2),
+    "Methanol\ (Feedstock)": (5,3e-2),
     "H_{2}\ (Feedstock)": (2,1e-2),
-    "Naphthalene": (2,6e-1),
-    # "LiBH_{4}": (10,5),
-    "Zr(BH_{4})_{4}": (10,10),
-    "Ca(BH_{4})_{2}": (10,4),
-    "Ti_{12}Mn_{18}H_{30}": (0.25,3),
     "CH_{4}\ Spherical\ Pressure": (15,15),
+
+    # "LiBH_{4}": (10,5),
+    "Zr(BH_{4})_{4}": (8,5),
+    "NaBH_{4}": (8,2),
+    "Zn(BH_{4})_{2}": (4,3.5),
+    "Mg(BH_{4})_{2}": (15,3),
+    "Ca(BH_{4})_{2}": (20,4),
+    "Al(BH_{4})_{3}": (20,3),
+
+    "S/Air(Li,\ Acid)": (1.5,3.8),
+    "Na_{2}LiAlH_{3}": (1,5),
+    "Na_{3}AlH_{3}": (0.5,2),
+    "NaAlH_{2}": (1,1.8),
+    # "Ti_{12}Mn_{18}H_{30}": (0.5,7),
+
 }
+
 
 for alter_name, (x,y) in alter_dict.items():
     adjust_text_after(fig, ax, alter_name, texts, x,y)
+
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 

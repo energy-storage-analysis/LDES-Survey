@@ -123,15 +123,19 @@ alter_dict = {
 for alter_name, (x,y) in alter_dict.items():
     adjust_text_after(fig, ax_cold, alter_name, texts_cold, x,y)
 
-ax_cold.hlines(10,-200,0, linestyle='--', color='gray')
+ax_cold.hlines(10,-200,0, linestyle='--', color='gray', alpha=0.5)
 
-adjust_text(texts_hot,  arrowprops = dict(arrowstyle='->'), force_points=(1,1))
+adjust_text(texts_hot,  arrowprops = dict(arrowstyle='->'), force_points=(0.2,1), expand_points=(1.5,1.5), expand_text=(1.1,1.4))
 
 alter_dict = {
-"NaKMgCl": (900, 2),
-"Solar\ Salt": (800, 0.8),
-"LiNaKCaNO_{3}": (700, 0.5),
-"KMgCl": (900, 5),
+# "NaKMgCl": (900, 2),
+"Basalt": (1000, 0.02),
+"LiNaKNO_{3}NO_{2}": (550, 60),
+"Al": (800, 60),
+"HITEC\ XL": (570, 20),
+"Veg.\ Oil": (200, 20),
+"NaKMgCl": (1100, 1),
+# "KMgCl": (900, 5),
 }
 
 for alter_name, (x,y) in alter_dict.items():
@@ -139,7 +143,7 @@ for alter_name, (x,y) in alter_dict.items():
 
 ax_hot.get_legend().set_title('')
 
-ax_hot.hlines(10,0,2400, linestyle='--', color='gray')
+ax_hot.hlines(10,0,2400, linestyle='--', color='gray', alpha=0.5)
 # fig.tight_layout()
 
 plt.savefig('output/sensible_hotcold.png')
