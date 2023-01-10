@@ -132,7 +132,7 @@ Fe2O3/MnO2 nanowires,pseudocapacitor,,,12.55274368625353,0.03295000000000001,0.4
 FeCl2,flow_battery,,inorganic,11.126568896719697,0.16916731319666348,1.8822517653556352,"[('FeCl2', 3)]",molar,Li 2017,"0 : Alibaba, Indiamart, Li 2017",15.5,,,,,20.0,,,,,1.2,,,,,,,380.235,2.0,,,,,,,,,
 FeCl3Zn,coupled_battery,hybrid_flow,Zn based,10.311442727589087,0.21343461288223814,2.2008187868203466,"[('Zn', 1), ('FeCl2', 1)]",molar,Sanchez-diez 2020,"0 : Alibaba, DERA, Indiamart, Kim 2013, Li 2017, SMM, USGS, 1 : Alibaba, Indiamart, Li 2017",100.0,,,,,20.0,,,,,1.53,,,,,,,192.125,1.0,,Iron-acidic (FeCl3),,,,,,,
 FeSO4/FeO,thermochemical,,sulfates,0.2352858609164042,0.6332722222222222,0.149,FeSO4,,Andre 2016,"Alibaba, Indiamart",,,,,,20.0,,0.6332722222222222,,,,,,,,,,151.901,,,FeSO4/FeO,,,,,,1030.0,
-Fossil CH4,synfuel,feedstock,,0.010301691464369616,15.919715763884561,0.164,Fossil CH4,molar,Standard Gibbs,EIA Henry Hub,,,,,,20.0,0.2554,,,,,,,,,,,16.043,8.0,,,,,,,,,
+Fossil CH4*,synfuel,feedstock,,0.013549905493962372,15.919715763884561,0.2157106440913788,Fossil CH4,molar,Standard Gibbs,EIA Henry Hub,,,,,,20.0,0.2554,,,,,,,,,,,16.043,8.0,,,,,,,,,
 GO/CNT,EDLC,,,,,,"[('Graphene Oxide', 1), ('CNT', 1)]",molar,,,,,,,,20.0,,,,,,1.0,,,,,,,,,,,,,216.0,,,
 GO/Carbon,EDLC,,,779675.1353602663,0.20842013888888894,162500.0,Graphene Oxide,,Choi 2015,"Alibaba, Cheaptubes, Graphene supermarket",,,,,,20.0,,,,,,3.5,,,,,,,,,,,,,122.5,,,
 Granite,sensible_thermal,both,rock,0.07354018869546242,0.2793874999998558,0.0205462094691429,Stone,,"Alva 2018, Bauer 2012, Liang 2022, Steinmann 2022","Steinmann 2022, USGS",,0.0002583333333332,,921.5,-160.0,-160.0,,,1081.5,,,,,,,2.8625,2663.333333333333,162.0430768,,,"Granite, Granite (U)",,,,,,,

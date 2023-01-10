@@ -1,4 +1,4 @@
-,original_name,molecular_formula,specific_price,source,notes
-unit_row,N/U,N/U,USD/kg,N/U,N/U
-index,,,,,
-Fossil CH4,,CH4,0.164,EIA Henry Hub,Average over last 5 years
+,molecular_formula,source,notes,specific_price
+unit_row,N/U,N/U,N/U,USD / kilogram
+index,,,,
+Fossil CH4,CH4,EIA Henry Hub,Average over last 5 years,0.21571064409137886
