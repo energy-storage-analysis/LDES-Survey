@@ -1,6 +1,6 @@
 # Publication datasets
 
-This folder contains datasets from typically peer reviewed publicaitons, usually in the form of pdfs. Most often, the data is extracted directly from pdfs. 
+This folder contains datasets from typically peer reviewed publications, usually in the form of pdfs. Most often, the data is extracted directly from pdfs. 
 
 
 ## pdf table scraping instructions
@@ -11,7 +11,7 @@ The first step is to copy the `extract_template.py` and `process_template.py` fi
 
 PDFs are extracted using tabula web interface to find the table region, then those regions are used with the camelot package for actual extraction. I couldn't get the camelot web interface to work. 
 
-I had to run tablula with a different port as described here
+I had to run tabula with a different port as described here
 https://github.com/tabulapdf/tabula#known-issues
 
 This the command to run in a command prompt. 

@@ -2,7 +2,7 @@
 
 # Combination Storage Media
 
-This section derives some basic forumulas for the overall energy capital cost, $C_{kWh}$ of a energy storage system using multiple storage media or multiple forms of energy from one storage media. This is not intended to be a comprehensive list of all possiblities of types of energy storage systems but provide some formulas that can be used with the data presented in the paper to estimate the energy capital of some simple classes of composite storage media. Beyond this level of complexity, a more complete analysis taking into account the efficiency and power conversion system would likely be needed for any valubale insight. 
+This section derives some basic formulas for the overall energy capital cost, $C_{kWh}$ of a energy storage system using multiple storage media or multiple forms of energy from one storage media. This is not intended to be a comprehensive list of all possibilities of types of energy storage systems but provide some formulas that can be used with the data presented in the paper to estimate the energy capital of some simple classes of composite storage media. Beyond this level of complexity, a more complete analysis taking into account the efficiency and power conversion system would likely be needed for any valuable insight. 
 
 In any case, $C_{kWh}$ can be calculated from 
 
@@ -46,7 +46,7 @@ Therefore, the overall energy capital cost is an energy-weighted harmonic mean o
 ## Matched Sensible Thermal storage
 
 
-In the case of pumped thermal storage both a hot and cold storage media are required, which are generally required to have matched energy capacities as heat is transfered between the two to charge and discharge the energy. 
+In the case of pumped thermal storage both a hot and cold storage media are required, which are generally required to have matched energy capacities as heat is transferred between the two to charge and discharge the energy. 
 
 ![Figure 3: An energy storage system comprised energy-matched hot and cold sensible thermal storage media](../../SI_docs/figures/output/composite_SM_thermal.png)
 
@@ -57,6 +57,6 @@ $$ C_{kWh} = \frac{C_{mat,H}M_H + C_{mat,C}M_C }{Q}$$
 $$ C_{kWh} = \frac{C_{mat,H}}{C_{P,H}\Delta T_H} + \frac{C_{mat,C}}{C_{P,C}\Delta T_C} $$
 $$ C_{kWh} = C_{kWh,H} + C_{kWh,C}$$
 
-Therefore the fact that more of a storage medium with smaller $\Delta T$ is needed is already taken into account when adding togher the energy capital costs of each storage medium. 
+Therefore the fact that more of a storage medium with smaller $\Delta T$ is needed is already taken into account when adding together the energy capital costs of each storage medium. 
 
 
