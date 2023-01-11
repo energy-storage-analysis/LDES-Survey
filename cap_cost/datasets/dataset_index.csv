@@ -1,9 +1,9 @@
 source,folder,processing_script,extract_script
 DERA,gov\DERA,y,y
-EIA,gov\EIA,,
+EIA,gov\EIA,y,
 USGS,gov\USGS,y,y
 Cavern,manual\cavern,y,
-Synfuel cryo,manual\synfuel_cryo,,
+Cryo tank,manual\cryo_tank,,
 Synfuel feedstock,manual\synfuel_feedstock,,
 Alva 2018,pub\alva_2018,y,y
 Andre 2016,pub\andre_2016,y,y

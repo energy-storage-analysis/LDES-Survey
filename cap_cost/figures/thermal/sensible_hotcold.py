@@ -116,7 +116,7 @@ alter_dict = {
     'Methanol': (-100,1),
     'N-pentane': (None,30),
     'N-hexane': (-80,30),
-    'LAES': (-190,30),
+    'LN_{2}': (-190,30),
 }
 
 

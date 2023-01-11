@@ -3,5 +3,5 @@ unit_row,N/U,N/U,N/U,N/U,kilogram / meter ** 3,kilowatt_hour / mole,dimensionles
 SM_name,,,,,,,,,,,,,
 LH2 Tank,LH2 Tank,synfuel,tank,,70.85,0.0659,2.0,2.016,,,,,
 LNG Tank,LNG Tank,synfuel,tank,,420.0,0.2554,8.0,16.043,,,,,
-LAES,LNG Tank,sensible_thermal,cold,other,870,,,,,,0.00028861111,-195.8,0
-LAES,LNG Tank,latent_thermal,other,other,870,,,,-195.8,0.0552778,,,
+LN2,LNG Tank,sensible_thermal,cold,other,870,,,,,,0.00028861111,-195.8,0
+LN2,LNG Tank,latent_thermal,other,other,870,,,,-195.8,0.0552778,,,
