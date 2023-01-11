@@ -57,7 +57,7 @@ ax = plt.gca()
 
 texts = annotate_points(df_virial_mat, 'specific_strength','specific_price')
 
-plt.plot(energy_densities_line, mat_cost_line)
+plt.plot(energy_densities_line, mat_cost_line, linestyle='--', color='gray', alpha=0.5)
 
 plt.yscale('log')
 plt.xscale('log')
@@ -66,19 +66,22 @@ plt.xlabel('Specific Strength (kWh/kg)')
 plt.ylabel('Specific Price ($/kg)')
 
 plt.ylim(0.5,100)
-plt.xlim(5e-3,2)
+plt.xlim(3e-3,2)
 
 lgd = plt.gca().get_legend()
 lgd.set_bbox_to_anchor((1, 0.5))
 
-adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(0.2,3))
+adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(1,1), expand_points=(1.5,1.5), expand_text=(1.5,1.5))
 
 from es_utils.plot import adjust_text_after
 
-adjust_text_after(fig, ax, "Steel\\ 455", texts, 0.5,1)
-adjust_text_after(fig, ax, "Steel\\ 440C", texts, 0.3,0.7)
-adjust_text_after(fig, ax, "IM7/8552", texts, 0.7,30)
+adjust_text_after(fig, ax, "Kevlar", texts, 0.02,30)
+adjust_text_after(fig, ax, "T300PR319", texts, 0.02,20)
+adjust_text_after(fig, ax, "AS4/8552", texts, 0.5,10)
+adjust_text_after(fig, ax, "IM7/85517", texts, 0.6,25)
+adjust_text_after(fig, ax, "AS4/8552", texts, 0.45,15)
 
+adjust_text_after(fig, ax, "Steel\ 157", texts, 0.02,0.8)
 
 plt.tight_layout()
 
