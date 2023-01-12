@@ -8,7 +8,9 @@ The codes in this folder collect and analyze data to estimate the energy capital
     * a set of physical properties, used to calculate the specific energy (kWh/kg)
 
 
-The data are extracted and processed from the primary sources in the `datsets` folder, there is a readme file in there for more information. The `consolidate_data.py` script collects data from each source's folder in the `datasets` folder, and consolidates them into a set of main csv files in the `data_consolidated` folder. This script is followed by `calc_Ckwh.py` which calculates the energy capital cost (AKA C_kwh ~ $/kWh). 
+The data are extracted and processed from the primary sources in the `datasets` folder, there is a readme file in each source's folder that contains more information about that specific source and the processing steps used. See the README file in the `datasets` folder for more information. 
+
+The `consolidate_data.py` script collects data from each source's folder in the `datasets` folder, and consolidates them into a set of main csv files in the `data_consolidated` folder. This script is followed by `calc_Ckwh.py` which calculates the energy capital cost (AKA C_kwh ~ $/kWh). 
 
 The `data_consolidated` folder contains two important csv files that comprise the main dataset of this work.
 
@@ -22,6 +24,7 @@ The `data_consolidated` folder contains two important csv files that comprise th
     * The total specific price, energy, and C_kwh
     * The material specification, either a single material, or a combination of materials in the format [(name 1, fraction 1), (name 2, fraction 2), ...] on a mass or molar fraction basis (specified in a separate column)
 
-Finally, the `analysis` folder contains various scripts that generate the visualizations of the data. These visualizations are output into the `output` folder, which is not version controlled (so figures do not show on GitHub)
+The `figures` folder contains various scripts that generate the visualizations of the data. 
+The `source_meta` folder contains scripts that generate metadata about the datasets in the form of tables. 
 
 The `run_all.sh` shell script can be used to run the above scripts and visualzations scripts in sequence (also describing the process to arrive at final figures). 
