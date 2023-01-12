@@ -162,8 +162,8 @@ adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(2,1), lim=A
 ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
 alter_dict = {
-    "CH_{4}\ (Feedstock)": (10,5e-2),
-    "Methanol\ (Feedstock)": (5,3e-2),
+    "CH_{4}\ (Feedstock)": (5,5e-2),
+    "Methanol\ (Feedstock)": (40,3e-2),
     "H_{2}\ (Feedstock)": (2,1e-2),
     "CH_{4}\ Spherical\ Pressure": (15,15),
 

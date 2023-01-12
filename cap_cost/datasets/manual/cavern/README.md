@@ -6,7 +6,7 @@ Here, the mass density of each gas ($\rho_m$) is calculated assuming a cavern pr
 
 $$ \rho_m = \frac{\mu P}{RT}$$
 
-Where $\mu$ is the molar mass of the gas, $R$ the ideal gas constant,  and $T = 330K$. 
+Where $\mu$ is the molar mass of the gas, $R$ the ideal gas constant,  and $T = 293.15 K$. 
 
 $\rho_m$ is used with a volumetric costs ($USD/m^3$) determined for underground salt caverns and lined rock caverns (LRC) through three datasets, Papadias 2021, Lord 2014, and ETI 2018.The datasets are limited to those that provide marginal volumetric construction costs as much as possible. This is difficult as the exact definition of the cost components in the sources is not always clear and some amount of fixed capital costs are included in their volumetric cost components (e.g salt leeching plant capital costs). The methodology for determining the volumetric costs for Salt Caverns and Lined Rock Caverns is outlined below, and some source-specific processing steps are outlined in the source's individual readme files. 
 

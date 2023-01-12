@@ -1,9 +1,9 @@
 ,materials,SM_type,sub_type,deltaG_chem,n_e,pressure,mu_total,mass_density
 unit_row,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless,pascal,gram / mole,kilogram / meter ** 3
 SM_name,,,,,,,,
-H2 (LRC),LRC,synfuel,underground,0.0659,2.0,,2.016,7.34751447361947
-CH4 (LRC),LRC,synfuel,underground,0.2554,8.0,,16.043,58.470324752121606
-H2 (Salt),Salt Cavern,synfuel,underground,0.0659,2.0,,2.016,7.34751447361947
-CH4 (Salt),Salt Cavern,synfuel,underground,0.2554,8.0,,16.043,58.470324752121606
-N2 (LRC 100 bar),LRC,pressure_cavern,,,,10000000.0,28.014,102.09983653967055
-N2 (Salt 100 bar),Salt Cavern,pressure_cavern,,,,10000000.0,28.014,102.09983653967055
+H2 (LRC),LRC,synfuel,underground,0.0659,2.0,,2.016,8.271123234843682
+CH4 (LRC),LRC,synfuel,underground,0.2554,8.0,,16.043,65.82025300426449
+H2 (Salt),Salt Cavern,synfuel,underground,0.0659,2.0,,2.016,8.271123234843682
+CH4 (Salt),Salt Cavern,synfuel,underground,0.2554,8.0,,16.043,65.82025300426449
+N2 (LRC 100 bar),LRC,pressure_cavern,,,,10000000.0,28.014,114.93414995084866
+N2 (Salt 100 bar),Salt Cavern,pressure_cavern,,,,10000000.0,28.014,114.93414995084866

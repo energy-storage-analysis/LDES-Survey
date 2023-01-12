@@ -26,7 +26,7 @@ R = ureg.Quantity(8.3145, 'J/mol/K')
 # df_gas['mu'] = df_gas['mu'].astype('pint[g/mol]')
 
 # P_cavern = ureg.Quantity(1e7, 'Pa')
-T = ureg.Quantity(330, 'K')
+T = ureg.Quantity(293.15, 'K')
 
 mass_densities_gas = (df['mu_total']*df['pressure'])/(R*T)
 mass_densities_gas = mass_densities_gas.pint.to('kg/m**3')
