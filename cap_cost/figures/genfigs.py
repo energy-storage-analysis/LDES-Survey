@@ -11,7 +11,8 @@ import os
 svg_paths =[
     r'final\thermal.svg',
     r'final\ec_rhoE.svg',
-    r'final\eda_Ckwh.svg'
+    r'final\eda_Ckwh.svg',
+    r'final\summary.svg'
 ]
 
 #%%

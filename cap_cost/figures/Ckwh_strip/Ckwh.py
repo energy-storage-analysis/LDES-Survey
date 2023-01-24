@@ -42,10 +42,22 @@ df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 
 #%%
 
+np.random.seed(48)
+
 def strip_plot(df_plot):
 
     cat_label = 'display_text'
-    sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=7, hue='energy_type', palette=palette, style='coupled')
+    sns.stripplot(
+        data=df_plot, 
+        x=cat_label, 
+        y='C_kwh_log', 
+        size=6, 
+        hue='energy_type', 
+        palette=palette, 
+        style='coupled', 
+        markers={'Coupled': 'X', 'Decoupled':'o'},
+        jitter=0.15,
+                 )
 
     plt.axhline(np.log10(10), linestyle='--', color='gray')
 
@@ -56,7 +68,7 @@ def strip_plot(df_plot):
     plt.xticks(rotation=70)
 
 
-    plt.ylabel('$C_{kWh,mat}$ (\$/kWh)')
+    plt.ylabel('$C_{kWh,mat}$ (USD/kWh)')
     plt.xlabel('Technology')
     plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 

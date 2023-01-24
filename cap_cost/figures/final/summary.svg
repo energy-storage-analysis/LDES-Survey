@@ -29,7 +29,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.5385886"
-     inkscape:cx="684.19569"
+     inkscape:cx="558.86812"
      inkscape:cy="245.08502"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
@@ -134,17 +134,7 @@
        y="27.242434"
        inkscape:label="image136"
        clip-path="url(#clipPath418)"
-       transform="translate(368.43985,137.05962)" /><text
-       xml:space="preserve"
-       style="font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;text-anchor:middle;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:0;paint-order:stroke fill markers"
-       x="77.897987"
-       y="183.19449"
-       id="text476"><tspan
-         sodipodi:role="line"
-         id="tspan474"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5"
-         x="79.074142"
-         y="183.19449">389 Storage Media and 162 Material Prices </tspan></text></g><g
+       transform="translate(368.43985,137.05962)" /></g><g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Subfig"
