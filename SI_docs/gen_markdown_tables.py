@@ -188,3 +188,21 @@ writer = MarkdownTableWriter(dataframe=df)
 with open(os.path.join(output_folder,'mat_data_vol.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
     f.write(": Volumetric Material cost datapoints")
+
+fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\source_list.csv')
+df = pd.read_csv(fp)
+
+writer = MarkdownTableWriter(dataframe=df)
+
+with open(os.path.join(output_folder,'source_list.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
+    f.write(": List of the {} sources used in to form the dataset of this work".format(len(df)))
+
+fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\dataset_counts.csv')
+df = pd.read_csv(fp)
+
+writer = MarkdownTableWriter(dataframe=df)
+
+with open(os.path.join(output_folder,'dataset_counts.md'), 'w', encoding='utf-8') as f:
+    f.write(writer.dumps())
+    f.write(": Information of the resulting dataset".format(len(df)))
