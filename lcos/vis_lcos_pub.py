@@ -119,7 +119,7 @@ eta_RT = eta_RTs
 )
 
 constants = dict(
-LCOS_set = 0.1,
+LCOS_set = 0.05,
 C_Ein = 0.05,
 LT = 10,
 CF = 0.7 #Albertus says '70% of max cycles'

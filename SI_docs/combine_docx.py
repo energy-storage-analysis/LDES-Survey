@@ -8,10 +8,10 @@ composer = Composer(master)
 SI_md = Document("output/SI_md.docx")
 composer.append(SI_md)
 
-doc1 = Document("docx_written/LCOS.docx")
-composer.append(doc1)
+# doc1 = Document("docx_written/LCOS.docx")
+# composer.append(doc1)
 
-doc2 = Document("docx_written/EnergyForms.docx")
-composer.append(doc2)
+# doc2 = Document("docx_written/EnergyForms.docx")
+# composer.append(doc2)
 
-composer.save("output/SI_all.docx")
+composer.save("output/SI Automated.docx")

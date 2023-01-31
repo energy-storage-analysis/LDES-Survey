@@ -23,15 +23,6 @@ with open('output/SI_md.md', 'w', encoding='utf-8') as f_out:
     SI_text = read_md(f_out, r'SI_docs\md_written\intro.md')
     f_out.write(SI_text)
 
-    SI_text = read_md(f_out, r'SI_docs\md_written\data_flow_desc.md')
-    f_out.write(SI_text)
-
-    SI_text = read_md(f_out, r'SI_docs\md_written\calculation_methods.md')
-    f_out.write(SI_text)
-
-    SI_text = read_md(f_out, r'SI_docs\md_written\combination_SM.md')
-    f_out.write(SI_text)
-
     SI_text = read_md(f_out, r'SI_docs\md_written\volumetric_costs.md')
     f_out.write(SI_text)
 
@@ -61,9 +52,6 @@ with open('output/SI_md.md', 'w', encoding='utf-8') as f_out:
     f_out.write(SI_text)
 
     SI_text = read_md(f_out, r'SI_docs\md_generated\SM_viable.md')
-    f_out.write(SI_text)
-
-    SI_text = read_md(f_out,     fp =  r'SI_docs\md_written\supp_figures.md')
     f_out.write(SI_text)
 
 
