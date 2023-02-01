@@ -9,7 +9,7 @@ from es_utils.plot import annotate_points
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
-mpl.rcParams.update({'font.size':12})
+plt.rcParams.update({'font.size':12, 'savefig.dpi': 600})
 label_fontsize = 14
 from adjustText import adjust_text
 

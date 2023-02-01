@@ -6,8 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
 from es_utils.units import read_pint_df
-
-mpl.rcParams.update({'font.size':16})
+plt.rcParams.update({'font.size':16, 'savefig.dpi': 600})
 
 import os
 from os.path import join as pjoin

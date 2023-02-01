@@ -8,7 +8,7 @@ from os.path import join as pjoin
 
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-mpl.rcParams.update({'font.size':12})
+plt.rcParams.update({'font.size':12, 'savefig.dpi': 600})
 label_fontsize = 14
 
 from adjustText import adjust_text

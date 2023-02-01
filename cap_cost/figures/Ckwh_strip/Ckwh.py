@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import ticker as mticker
-plt.rcParams.update({'font.size':12})
+plt.rcParams.update({'font.size':12, 'savefig.dpi': 600})
 
 # sns.set(font_scale=1)
 
