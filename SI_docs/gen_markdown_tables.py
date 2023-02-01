@@ -108,7 +108,7 @@ with open(os.path.join(output_folder,'SM_viable.md'), 'w', encoding='utf-8') as 
 
 #%%
 
-# Various publicaiton material data
+# Various publication material data
 
 fp = os.path.join(REPO_DIR, r'cap_cost\datasets\pub\various_pub\output\mat_data.csv')
 
@@ -125,7 +125,7 @@ writer = MarkdownTableWriter(dataframe=df)
 
 with open(os.path.join(output_folder,'various_pub_mat_data.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
-    f.write(": Various publicaiton material data sources")
+    f.write(": Various publication material data sources")
 
 
 #%%
