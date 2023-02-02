@@ -8,7 +8,7 @@ python "calc_Ckwh.py"
 
 if [ "$1" == "vis" ]; then
     echo "Generate visualizations"
-    cd figures
+    cd figure_panels
     ./genvis_all.sh
 fi
 

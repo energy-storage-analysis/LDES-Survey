@@ -59,14 +59,14 @@
        width="177.8"
        height="203.2"
        preserveAspectRatio="none"
-       xlink:href="../electrochem/output/ec_rhoE_coupled.png"
+       xlink:href="../cap_cost/figure_panels/electrochem/output/ec_rhoE_coupled.png"
        id="image451"
        x="-79.226898"
        y="71.56514" /><image
        width="177.8"
        height="203.2"
        preserveAspectRatio="none"
-       xlink:href="../electrochem/output/ec_rhoE_decoupled.png"
+       xlink:href="../cap_cost/figure_panels/electrochem/output/ec_rhoE_decoupled.png"
        id="image475"
        x="89.514954"
        y="71.923401" /><text
