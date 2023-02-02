@@ -162,7 +162,7 @@ thermochem = df_SMs['deltaH_thermochem']
 thermochem.name='specific_energy'
 thermochem = thermochem.to_frame()
 
-pressure = df_SMs['pressure']/df_SMs['mass_density']
+pressure = df_SMs['P_cavern']/df_SMs['mass_density']
 pressure.name='specific_energy'
 pressure = pressure.to_frame()
 
@@ -199,7 +199,7 @@ electrostatic = electrostatic.to_frame()
 
 
 #TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
-electrostatic_edlc = (0.5*df_SMs['specific_capacitance']*df_SMs['deltaV_electrolyte']**2) #J/g
+electrostatic_edlc = (0.5*df_SMs['specific_capacitance']*df_SMs['deltaV_cap']**2) #J/g
 
 electrostatic_edlc.name='specific_energy'
 electrostatic_edlc = electrostatic_edlc.to_frame()

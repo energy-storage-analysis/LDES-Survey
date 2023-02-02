@@ -1,4 +1,4 @@
-,SM_type,sub_type,mat_type,specific_capacitance,deltaV_electrolyte,mat_basis,materials
+,SM_type,sub_type,mat_type,specific_capacitance,deltaV_cap,mat_basis,materials
 unit_row,N/U,N/U,N/U,farad / gram,volt,N/U,N/U
 SM_name,,,,,,,
 2D TiS2 nanocrystals,pseudocapacitor,,,395.0,1.2,,TiS2

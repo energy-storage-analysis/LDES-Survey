@@ -16,7 +16,7 @@ df = df.rename({
     'Materials': 'original_name',
     'Electrode System (1,2)': 'num_electrodes',
     'Specific Capacitance (F·g-1)': 'specific_capacitance',
-    'Potential Range (V)': 'deltaV_electrolyte'
+    'Potential Range (V)': 'deltaV_cap'
 }, axis=1)
 
 df = df.dropna(subset=['specific_capacitance'])
@@ -39,7 +39,7 @@ df.to_csv('output/processed.csv')
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df_SMs = df[['specific_capacitance', 'deltaV_electrolyte']]
+df_SMs = df[['specific_capacitance', 'deltaV_cap']]
 
 df_SMs = pd.merge(
     SM_lookup,
@@ -59,7 +59,7 @@ df_SMs.groupby(level=0)['SM_type'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['sub_type'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['mat_type'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['specific_capacitance'].mean(),
-df_SMs.groupby(level=0)['deltaV_electrolyte'].mean(),
+df_SMs.groupby(level=0)['deltaV_cap'].mean(),
 df_SMs.groupby(level=0)['mat_basis'].apply(es_utils.join_col_vals),
 df_SMs.groupby(level=0)['materials'].apply(es_utils.join_col_vals),
 ], axis=1)
@@ -67,7 +67,7 @@ df_SMs.groupby(level=0)['materials'].apply(es_utils.join_col_vals),
 
 df_out = df_out.astype({
     'specific_capacitance': 'pint[F/g]',
-    'deltaV_electrolyte': 'pint[V]'
+    'deltaV_cap': 'pint[V]'
     })
 
 

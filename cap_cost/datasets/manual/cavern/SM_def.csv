@@ -1,4 +1,4 @@
-,materials,SM_type,sub_type,deltaG_chem,n_e,pressure,molecular_formula
+,materials,SM_type,sub_type,deltaG_chem,n_e,P_cavern,molecular_formula
 unit_row,N/U,N/U,N/U,kWh/mol,dimensionless,Pa,N/U
 SM_name,,,,,,,
 H2 (LRC),LRC,synfuel,underground,0.0659,2,1e7,H2

@@ -1,4 +1,4 @@
-,materials,SM_type,sub_type,deltaG_chem,n_e,pressure,mu_total,mass_density
+,materials,SM_type,sub_type,deltaG_chem,n_e,P_cavern,mu_total,mass_density
 unit_row,N/U,N/U,N/U,kilowatt_hour / mole,dimensionless,pascal,gram / mole,kilogram / meter ** 3
 SM_name,,,,,,,,
 H2 (LRC),LRC,synfuel,underground,0.0659,2.0,,2.016,8.271123234843682

@@ -28,7 +28,7 @@ R = ureg.Quantity(8.3145, 'J/mol/K')
 # P_cavern = ureg.Quantity(1e7, 'Pa')
 T = ureg.Quantity(293.15, 'K')
 
-mass_densities_gas = (df['mu_total']*df['pressure'])/(R*T)
+mass_densities_gas = (df['mu_total']*df['P_cavern'])/(R*T)
 mass_densities_gas = mass_densities_gas.pint.to('kg/m**3')
 # mass_densities_gas = mass_densities_gas.dropna()
 
@@ -39,7 +39,7 @@ df['mass_density'] = mass_densities_gas
 #TODO: this is a quick fix to remove pressures from synfuel storage media, other wise calc_Ckwh tries to calculate pressure energy and ends up with a duplicated index. Need to allow for multiple energy types.
 import numpy as np
 synfuel_idx = df[df['SM_type'] == 'synfuel'].index
-df['pressure'].loc[synfuel_idx] = np.nan
+df['P_cavern'].loc[synfuel_idx] = np.nan
 #%%
 
 

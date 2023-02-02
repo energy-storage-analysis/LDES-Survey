@@ -79,7 +79,7 @@ unit_lookup = {
     'Cp': 'kWh/kg/K',
     'deltaH_thermochem': 'kWh/kg',
     'specific_capacitance': 'F/g',
-    'deltaV_electrolyte': 'V',
+    'deltaV_cap': 'V',
     # 'specific_strength': 'kWh/kg'
 }
 
