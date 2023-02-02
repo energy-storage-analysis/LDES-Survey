@@ -14,12 +14,13 @@ df[['reactant','product']] = df['original_name'].str.split('/', expand=True)
 df = df.drop('enthalpy', axis=1) #TODO: the enthalpy data is molar, and pretty sure specific_energy just calculated using molar mass, but this should be done manually
 
 df = df.rename({
-    'specific_energy': 'deltaH_thermochem'
+    'specific_energy': 'deltaH_thermochem',
+    'temperature': 'T_turning'
 }, axis=1)
 
 df = df.astype({
     'deltaH_thermochem': 'pint[kJ/kg]',
-    'temperature': 'pint[degC]'
+    'T_turning': 'pint[degC]'
     })
 
 df = convert_units(df)
@@ -30,7 +31,7 @@ df = pd.merge(df, mat_lookup, on='original_name').set_index('index')
 
 SM_lookup = pd.read_csv('SM_lookup.csv', index_col=0)
 
-df_SMs = df[['original_name','deltaH_thermochem','temperature','mat_type']].set_index('original_name')
+df_SMs = df[['original_name','deltaH_thermochem','T_turning','mat_type']].set_index('original_name')
 
 df_SMs = pd.merge(
     SM_lookup,

@@ -1,4 +1,4 @@
-,original_name,SM_type,sub_type,materials,mat_basis,deltaH_thermochem,temperature,mat_type
+,original_name,SM_type,sub_type,materials,mat_basis,deltaH_thermochem,T_turning,mat_type
 unit_row,N/U,N/U,N/U,N/U,N/U,kilowatt_hour / kilogram,degree_Celsius,N/U
 SM_name,,,,,,,,
 MgSO4/MgO,MgSO4/MgO,thermochemical,,MgSO4,,0.8048611111111111,1140.0,sulfates

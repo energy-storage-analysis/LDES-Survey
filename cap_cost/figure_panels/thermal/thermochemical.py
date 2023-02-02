@@ -45,7 +45,7 @@ df_tc.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'tc_ds.csv'))
 #%%
 
 fig = plt.figure(figsize=(7,8))
-x_str='temperature'
+x_str='T_turning'
 y_str='C_kwh'
 
 xlim = (0,2000)
@@ -70,7 +70,7 @@ plt.ylim(y_lim)
 
 ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
-plt.xlabel('Reaction Temperature (C)', fontsize=label_fontsize)
+plt.xlabel('Turning Temperature (deg C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Thermochemcial")
 plt.tight_layout()
