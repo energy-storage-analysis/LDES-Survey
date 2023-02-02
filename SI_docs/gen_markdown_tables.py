@@ -62,7 +62,7 @@ df = pd.read_csv(pjoin(input_dir,'SM_type_source_counts.csv'))
 df['SM_type'] = df['SM_type'].str.replace('_', ' ')
 df['SM_type'] = df['SM_type'].str.replace('thermochemical', 'thermo-chemical')
 df['sub_type'] = df['sub_type'].str.replace('_', ' ')
-df.columns = [c.replace('_',' ') for c in df.columns]
+df.columns = [c.replace('_',' ') for c in df.columns.get_level_values(0)]
 
 df = df.rename({'0': 'Source Counts'})
 
@@ -80,7 +80,7 @@ df = read_pint_df(fp)
 #TODO: come up with some sort of long name (and units) system for displayed tables
 df['SM_type'] = df['SM_type'].str.replace('_', ' ')
 df['SM_type'] = df['SM_type'].str.replace('thermochemical', 'thermo-chemical')
-df.columns = [c.replace('_',' ') for c in df.columns]
+df.columns = [c.replace('_',' ') for c in df.columns.get_level_values(0)]
 
 df = df.drop('price sources', axis=1)
 df = df.drop('SM sources', axis=1)
@@ -118,6 +118,7 @@ df = prep_df_pint_out(df)
 df = df.reset_index()
 
 df = df[['index','original_name','source','notes']]
+df = df.rename({col: col.replace('_',' ') for col in df.columns.get_level_values(0)},axis=1)
 
 df.columns = df.columns.droplevel(1) # No units needed
 
@@ -131,7 +132,7 @@ with open(os.path.join(output_folder,'various_pub_mat_data.md'), 'w', encoding='
 #%%
 
 
-# Various publicaiton Storage medium data
+# Various publication Storage medium data
 
 fp = os.path.join(REPO_DIR, r'cap_cost\datasets\pub\various_pub\output\SM_data.csv')
 
@@ -141,6 +142,7 @@ df = prep_df_pint_out(df)
 df = df.reset_index()
 
 df = df[['SM_name','SM_type','sub_type','source','notes']]
+df = df.rename({col: col.replace('_',' ') for col in df.columns.get_level_values(0)}, axis=1)
 
 df.columns = df.columns.droplevel(1) # No units needed
 
@@ -148,7 +150,7 @@ writer = MarkdownTableWriter(dataframe=df)
 
 with open(os.path.join(output_folder,'various_pub_SM_data.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
-    f.write(": Various publicaiton storage media")
+    f.write(": Various publication storage media")
 
 
 #%%
@@ -164,6 +166,7 @@ df = prep_df_pint_out(df)
 df = df.reset_index()
 
 df = df[['index','original_name','source','notes']]
+df = df.rename({col: col.replace('_',' ') for col in df.columns.get_level_values(0)}, axis=1)
 
 df.columns = df.columns.droplevel(1) # No units needed
 

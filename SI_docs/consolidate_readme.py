@@ -29,12 +29,7 @@ def get_source_SM_counts(df):
     counts = str(dict(counts))
     return counts
 
-physical_properties = [
-'Cp','T_melt','T_max','phase_change_T','sp_latent_heat','mass_density','kth',
-'vol_latent_heat','deltaV','n_e','deltaH_thermochem','temperature','specific_strength',
-'Qmax','dielectric_breakdown','dielectric_constant','deltaG_chem','delta_height',
-'specific_capacitance','deltaV_electrolyte','deltaT_max','pressure','T_min','deltaT'
-]
+physical_property_lookup = pd.read_csv('physical_property_lookup.csv', index_col=0)
 
 group_name_map = {
     'pub': 'Publications',
@@ -109,12 +104,13 @@ with open(os.path.join(output_folder,'README_combined.md'), 'w', encoding='utf-8
                     num_SM_string = num_SM_string + "{}: {}, ".format(key, val)
 
                 # For physical properties we include all data
-                present_physprop = [prop for prop in physical_properties if prop in df_SM_data.columns]
+                present_physprop = [prop for prop in physical_property_lookup.index if prop in df_SM_data.columns]
                 physprop_str = ""
                 for prop in present_physprop:
                     s_prop = df_SM_data[prop].dropna()
                     if len(s_prop):
-                        physprop_str = physprop_str + "{}: {}, ".format(prop, len(s_prop))
+                        physprop_symbol = "${}$".format(physical_property_lookup['symbol'][prop])
+                        physprop_str = physprop_str + "{}: {}, ".format(physprop_symbol, len(s_prop))
 
 
             else:

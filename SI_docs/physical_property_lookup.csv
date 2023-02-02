@@ -1,0 +1,24 @@
+name,symbol,long_name
+Cp,C_P,Specific Heat
+T_melt,T_{melt},Melt Temperature
+T_max,T_{max},Maxumum Temperature
+phase_change_T,T_{phase},Phase Change Temperature
+sp_latent_heat,\Delta H_f,Specific Latent Heat
+mass_density,\rho_m,Mass Density
+kth,k_{th},Thermal Conductivity
+vol_latent_heat,"\Delta H_{f,vol}",Volumetric Latent Heat
+deltaV,\Delta V,Potential Difference
+n_e,n_e,Number of Electrons
+deltaH_thermochem,\Delta H,Thermochemical Enthalpy Change
+T_turning,T_{turn},Turning Temperature
+specific_strength,\sigma_A/\rho_m,Specific Strength
+Qmax,Q_{max},Virial Q factor
+dielectric_breakdown,E_{breakdown},Dielectric Breakdown Voltage
+dielectric_constant,\epsilon,Dielectric Constant
+deltaG_chem,\Delta G,Gibbs Free Energy Change
+delta_height,\Delta_{height},Height Difference
+specific_capacitance,C_{sp},Specific Capacitance
+deltaV_cap,\Delta V_{cap},Measured Supercapacitor Voltage
+P_cavern,"P_{cavern, max}",Maximum Cavern Pressure
+T_min,T_{min},Minimum Temperature
+deltaT,\DeltaT,Temperature Difference
