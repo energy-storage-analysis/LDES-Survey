@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.9540684"
-     inkscape:cx="893.68276"
-     inkscape:cy="626.932"
+     inkscape:zoom="0.7385171"
+     inkscape:cx="540.94888"
+     inkscape:cy="387.26253"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -71,7 +71,7 @@
        x="89.514954"
        y="71.923401" /><text
        xml:space="preserve"
-       style="font-size:6.35px;fill:#000000;stroke-width:0.264583"
+       style="font-size:6.35px;fill:#000000;stroke-width:0.264583;-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        x="-75.933601"
        y="100.19145"
        id="text481"><tspan
@@ -79,9 +79,9 @@
          id="tspan479"
          x="-75.933601"
          y="100.19145"
-         style="stroke-width:0.264583">a)</tspan></text><text
+         style="stroke-width:0.264583;-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:6.35px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">(A)</tspan></text><text
        xml:space="preserve"
-       style="font-size:6.35px;fill:#000000;stroke-width:0.264583"
+       style="font-size:6.35px;fill:#000000;stroke-width:0.264583;-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        x="89.04837"
        y="101.45833"
        id="text481-9"><tspan
@@ -89,7 +89,7 @@
          id="tspan479-5"
          x="89.04837"
          y="101.45833"
-         style="stroke-width:0.264583">b)</tspan></text><path
+         style="stroke-width:0.264583;-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:6.35px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">(B)</tspan></text><path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.340196;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;marker-end:url(#Arrow3);paint-order:stroke fill markers"
        d="m 189.09243,250.07903 v 1.8471"
        id="path3736" /></g></svg>

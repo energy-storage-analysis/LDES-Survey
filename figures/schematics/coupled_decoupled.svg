@@ -10,8 +10,8 @@
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="coupled_decoupled.svg"
    inkscape:export-filename="output\coupled_decoupled.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.53858859"
-     inkscape:cx="679.55394"
+     inkscape:cx="562.58154"
      inkscape:cy="632.20797"
      inkscape:window-width="1350"
      inkscape:window-height="1032"
@@ -173,27 +173,27 @@
        transform="translate(183.39768,111.91735)"><tspan
          x="-31.808638"
          y="66.687614"
-         id="tspan48392"><tspan
+         id="tspan2005"><tspan
            style="stroke-width:0.5"
-           id="tspan48378">b) Coupled </tspan><tspan
+           id="tspan1991">(B) Coupled </tspan><tspan
            style="stroke-width:0.5"
-           id="tspan48380">𝐶𝑎𝑝</tspan><tspan
+           id="tspan1993">𝐶𝑎𝑝</tspan><tspan
            style="font-size:65%;baseline-shift:sub"
-           id="tspan48382">𝐸</tspan><tspan
+           id="tspan1995">𝐸</tspan><tspan
            style="stroke-width:0.5"
-           id="tspan48384">/</tspan><tspan
+           id="tspan1997">/</tspan><tspan
            style="stroke-width:0.5"
-           id="tspan48386">𝐶𝑎𝑝</tspan><tspan
+           id="tspan1999">𝐶𝑎𝑝</tspan><tspan
            style="font-size:65%;baseline-shift:sub"
-           id="tspan48388">P </tspan><tspan
+           id="tspan2001">P </tspan><tspan
            style="stroke-width:0.5"
-           id="tspan48390">
+           id="tspan2003">
 </tspan></tspan><tspan
          x="-31.808638"
          y="77.813692"
-         id="tspan48396"><tspan
+         id="tspan2009"><tspan
            style="stroke-width:0.5"
-           id="tspan48394">
+           id="tspan2007">
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -204,29 +204,29 @@
        transform="matrix(1.2624012,0,0,1.2624012,185.49947,119.47049)"><tspan
          x="-31.808638"
          y="66.687614"
-         id="tspan48404"><tspan
+         id="tspan2017"><tspan
            style="stroke-width:0.5"
-           id="tspan48398">𝐶𝑎𝑝</tspan><tspan
+           id="tspan2011">𝐶𝑎𝑝</tspan><tspan
            style="font-size:65%;baseline-shift:sub"
-           id="tspan48400">𝐸</tspan><tspan
+           id="tspan2013">𝐸</tspan><tspan
            style="stroke-width:0.5"
-           id="tspan48402">∝
+           id="tspan2015">∝
 </tspan></tspan><tspan
          x="-31.808638"
          y="75.515689"
-         id="tspan48412"><tspan
+         id="tspan2025"><tspan
            style="stroke-width:0.5"
-           id="tspan48406">𝑉</tspan><tspan
+           id="tspan2019">𝑉</tspan><tspan
            style="baseline-shift:sub"
-           id="tspan48408">𝑒𝑙𝑒𝑐𝑡𝑟𝑜𝑑𝑒</tspan><tspan
+           id="tspan2021">𝑒𝑙𝑒𝑐𝑡𝑟𝑜𝑑𝑒</tspan><tspan
            style="stroke-width:0.5"
-           id="tspan48410">
+           id="tspan2023">
 </tspan></tspan><tspan
          x="-31.808638"
          y="84.329112"
-         id="tspan48416"><tspan
+         id="tspan2029"><tspan
            style="stroke-width:0.5"
-           id="tspan48414">
+           id="tspan2027">
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -237,23 +237,23 @@
        transform="translate(257.9521,34.017419)"><tspan
          x="-15.284213"
          y="135.82106"
-         id="tspan48420"><tspan
-           style="stroke-width:0.5"
-           id="tspan48418">Option 1:</tspan><tspan
-           y="135.82106"
-           id="tspan48422"> </tspan></tspan><tspan
+         id="tspan2033"><tspan
+   style="stroke-width:0.5"
+   id="tspan2031">Option 1:</tspan><tspan
+   y="135.82106"
+   id="tspan2035"> </tspan></tspan><tspan
          x="-15.284213"
          y="146.94713"
-         id="tspan48426"><tspan
-           style="stroke-width:0.5"
-           id="tspan48424">Thicker</tspan><tspan
-           y="146.94713"
-           id="tspan48428"> </tspan></tspan><tspan
+         id="tspan2039"><tspan
+   style="stroke-width:0.5"
+   id="tspan2037">Thicker</tspan><tspan
+   y="146.94713"
+   id="tspan2041"> </tspan></tspan><tspan
          x="-15.284213"
          y="158.0732"
-         id="tspan48432"><tspan
+         id="tspan2045"><tspan
            style="stroke-width:0.5"
-           id="tspan48430">Electrodes</tspan></tspan></text>
+           id="tspan2043">Electrodes</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90086px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:88.3342;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:0;paint-order:stroke fill markers"
@@ -263,11 +263,11 @@
        transform="translate(357.02479,-78.033297)"><tspan
          x="-15.284213"
          y="135.82106"
-         id="tspan48434">2X Duration:
+         id="tspan2047">2X Duration:
 </tspan><tspan
          x="-15.284213"
          y="146.94713"
-         id="tspan48436">Same Power Capital</tspan></text>
+         id="tspan2049">Same Power Capital</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90086px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:118.791;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:0;paint-order:stroke fill markers"
@@ -277,13 +277,13 @@
        transform="translate(170.78352,-131.5076)"><tspan
          x="-15.284213"
          y="135.82106"
-         id="tspan48442">a) Decoupled 𝐶𝑎𝑝<tspan
+         id="tspan2055">(A) Decoupled 𝐶𝑎𝑝<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan48438">𝐸</tspan>/𝐶𝑎𝑝<tspan
+   id="tspan2051">𝐸</tspan>/𝐶𝑎𝑝<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan48440">P</tspan><tspan
+   id="tspan2053">P</tspan><tspan
    y="135.82106"
-   id="tspan48444"> </tspan></tspan></text>
+   id="tspan2057"> </tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90086px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:48.695;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:0;paint-order:stroke fill markers"
@@ -293,25 +293,25 @@
        transform="translate(437.68421,18.410526)"><tspan
          x="-101.08421"
          y="152.8421"
-         id="tspan48448"><tspan
-           style="stroke-width:0.5"
-           id="tspan48446">Option 2:</tspan><tspan
-           y="152.8421"
-           id="tspan48450"> </tspan></tspan><tspan
+         id="tspan2061"><tspan
+   style="stroke-width:0.5"
+   id="tspan2059">Option 2:</tspan><tspan
+   y="152.8421"
+   id="tspan2063"> </tspan></tspan><tspan
          x="-101.08421"
          y="163.96817"
-         id="tspan48454"><tspan
-           style="stroke-width:0.5"
-           id="tspan48452">Overbuild</tspan><tspan
-           y="163.96817"
-           id="tspan48456"> </tspan></tspan><tspan
+         id="tspan2067"><tspan
+   style="stroke-width:0.5"
+   id="tspan2065">Overbuild</tspan><tspan
+   y="163.96817"
+   id="tspan2069"> </tspan></tspan><tspan
          x="-101.08421"
          y="175.09424"
-         id="tspan48462"><tspan
+         id="tspan2075"><tspan
            style="stroke-width:0.5"
-           id="tspan48458">Cap</tspan><tspan
+           id="tspan2071">Cap</tspan><tspan
            style="font-size:65%;baseline-shift:sub"
-           id="tspan48460">P</tspan></tspan></text>
+           id="tspan2073">P</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90086px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:0;paint-order:stroke fill markers"
@@ -1978,6 +1978,6 @@
          id="tspan47453"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90086px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.5"
          x="85.900352"
-         y="44.927773"></tspan></text>
+         y="44.927773" /></text>
   </g>
 </svg>
