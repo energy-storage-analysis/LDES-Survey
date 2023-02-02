@@ -75,11 +75,13 @@ adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(1,1), expa
 
 from es_utils.plot import adjust_text_after
 
-adjust_text_after(fig, ax, "Kevlar", texts, 0.02,30)
-adjust_text_after(fig, ax, "T300PR319", texts, 0.02,20)
-adjust_text_after(fig, ax, "AS4/8552", texts, 0.5,10)
-adjust_text_after(fig, ax, "IM7/85517", texts, 0.6,25)
+# adjust_text_after(fig, ax, "Kevlar", texts, 0.02,30)
+adjust_text_after(fig, ax, "T300PR319", texts, 0.04,20)
+adjust_text_after(fig, ax, "EGlass", texts, 0.04,15)
+adjust_text_after(fig, ax, "AS4/35016", texts, 0.5,10)
+adjust_text_after(fig, ax, "S2\ Glass", texts, 0.1,15)
 adjust_text_after(fig, ax, "AS4/8552", texts, 0.45,15)
+adjust_text_after(fig, ax, "IM7/85517", texts, 0.45,28)
 
 adjust_text_after(fig, ax, "Steel\ 157", texts, 0.02,0.8)
 

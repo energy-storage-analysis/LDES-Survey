@@ -3,12 +3,13 @@
 [Kale, V., et al. 2018. A comparative study between optimal metal and composite rotors for flywheel energy storage systems. Energy Reports 4, 576–585.](https://doi.org/10/gm8c9v)
 
 
-This publication contains the materials strength-to-weight ratio of metal and composite materials. This data is the primary source of the materials define the Virial-limited storage media (pressure tanks, SMES, and Flywheels). These different storage media are created during data processing as near-duplicates except for different $Q_{max}$ which depends on the geometry of the system. The $Q_{max}$ for the different types are determined from [Nomura, et al. “Structural Limitations of Energy Storage Systems Based on the Virial Theorem.” IEEE Transactions on Applied Superconductivity, Vol. 27, No. 4, 2017](https://doi.org/10/gjg4k7).
+This publication contains allowed stresses ($\sigma_A$) and mass densities ($\rho_m$) of isotropic and composite materials. These data are used to calculate the specific strength of these materials, $\sigma_A/\rho_m$. 
 
+This data is the primary source of the materials define the Virial-limited storage media (pressure tanks, SMES, and Flywheels). These different storage media are created during data processing as near-duplicates except for different $Q_{max}$ which depends on the geometry of the system. The $Q_{max}$ for the different types are determined from [Nomura, et al. “Structural Limitations of Energy Storage Systems Based on the Virial Theorem.” IEEE Transactions on Applied Superconductivity, Vol. 27, No. 4, 2017](https://doi.org/10/gjg4k7).
+
+For isotropic materials (Table A1) $\sigma_A$ is taken as the yield strength. For composite materials (Table A2) the highest ultimate hoop stress is used, which is given by the variable $\sigma^{ult}_T$ in the paper.  
 
 ## Development: 
-
-TODO: the tensile strenght of two axes of composite materials is just averaged, see comment in processing script.
 
 ## Determining meaning of acronyms
 ### CRFP: carbon fiber reinforced plastic

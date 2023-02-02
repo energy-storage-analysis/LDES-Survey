@@ -49,15 +49,8 @@ df_a2 = df_a2.astype({
     'density': 'pint[g/cm**3]'
     })
 
-# df_a2['density'] = df_a2['density'].pint.to('kg/m**3')
-
-#TODO: What is T and C? 
-#Just taking the average of T and C for now. 
-df_a2['sigma_theta_avg'] = (df_a2['sigma_theta_T'] + df_a2['sigma_theta_C'])/ureg.Quantity(2, 'dimensionless')
-
-#TODO: from Kamf thesis it seems like the hoop stress is limiting on a simple approximation level. 
-df_a2['specific_strength'] = df_a2['sigma_theta_avg']/df_a2['density']
-
+#from Kamf thesis it seems like the hoop stress is limiting on a simple approximation level. 1. Kamf, T. (2012). High speed flywheel design
+df_a2['specific_strength'] = df_a2['sigma_theta_T']/df_a2['density']
 
 col_select = ['original_name', 'specific_strength','specific_price']
 
