@@ -79,3 +79,14 @@ SM_source_info.to_csv(pjoin('tables','SM_type_source_counts.csv'))
 
 # %%
 
+from es_utils import join_col_vals
+
+df_type_lists = SM_source_info.reset_index().drop('SM Sources', axis=1)
+sub_types = df_type_lists.groupby('SM_type')['sub_type'].apply(join_col_vals)
+mat_types = df_type_lists.groupby('SM_type')['mat_type'].apply(join_col_vals)
+
+# %%
+
+df_type_lists = pd.concat([sub_types,mat_types], axis=1)
+
+df_type_lists.to_csv(pjoin('tables','SM_type_sub_mat_lists.csv'))
