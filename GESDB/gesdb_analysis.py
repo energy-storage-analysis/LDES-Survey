@@ -6,13 +6,13 @@ import seaborn as sns
 import pandas as pd 
 import json
 
-mpl.rcParams.update({'font.size': 12})
+mpl.rcParams.update({'font.size': 12, 'savefig.dpi': 600, 'font.sans-serif': 'arial', 'figure.figsize': (7, 5)})
 
 # %%
 
 fp = 'data/GESDB_Project_Data.json'
 
-with open(fp, 'r') as f:
+with open(fp, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 df = pd.DataFrame.from_dict(data)
@@ -104,7 +104,7 @@ df2['mid_type'].value_counts()
 energy_total = df2.groupby('mid_type')['energy'].sum().sort_values(ascending=False)
 power_total = df2.groupby('mid_type')['power'].sum().sort_values(ascending=False)
 
-plt.figure(figsize=(7,5))
+plt.figure()
 energy_total.plot.bar()
 plt.yscale('log')
 plt.ylabel('Total Energy \nCapacity (kWh)')
@@ -112,7 +112,7 @@ plt.xlabel('Technology')
 plt.tight_layout()
 # plt.xticks(rotation=60)
 
-plt.savefig('output/energy_cap_tech.png')
+plt.savefig('output/energy_cap_tech.png', dpi=600)
 
 # %%
 
@@ -180,7 +180,7 @@ df_stats
 
 # df_statsdf_stats.reset_index('mid_type_2')
 
-plt.figure(figsize=(7,5))
+plt.figure()
 sns.barplot(data=df_stats, x='dur_bin', y='energy', hue='mid_type_2')
 plt.yscale('log')
 plt.xticks(rotation = 45)
@@ -193,7 +193,7 @@ plt.xlabel('Duration Range (hours)')
 plt.legend()
 plt.tight_layout()
 
-plt.savefig('output/energy_vs_duration.png')
+plt.savefig('output/energy_vs_duration.png', dpi=600)
 
 # %%
 
