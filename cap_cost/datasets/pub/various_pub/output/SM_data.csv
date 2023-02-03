@@ -1,7 +1,7 @@
 ,materials,mat_basis,original_name,SM_type,sub_type,mat_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,delta_height,source,notes
 unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,m,N/U,N/U
 SM_name,,,,,,,,,,,,,,,,,,,
-Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,0.00025,,1000,,,,,,,,,Grosu 2017,TODO: approximate from graph average by eye
+Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,0.00027,,1000,,,,,,,,,Grosu 2017,Taken from Fig 7 assuming approximately 500C
 Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,,5,,,,,,,,,,Molgaard 1971,https://www.researchgate.net/publication/252121179_Thermal_Conductivity_of_Magnetite_and_Hematite
 Sand,Sand,,Sand,sensible_thermal,hot,rock,0.000277,,1000,,,,,,,,,Diago 2018,https://doi.org/10.1016/j.apenergy.2018.02.106
 NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,coupled_battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,https://www.sciencedirect.com/science/article/pii/S2666386422000911?via%3Dihub
