@@ -7,21 +7,23 @@ from sympy import O
 
 plt.rcParams.update({
     "savefig.facecolor": 'white',
-    "font.size": 14
+    "font.size": 7, 
+    'savefig.dpi': 600, 
+    'font.sans-serif': 'arial', 
+    'figure.figsize': (2.3, 2.5)
 })
-
 
 def gen_legend_figure(style_dict, title, style_type='linestyle'):
     fig = plt.figure("Line plot")
-    legendFig = plt.figure("Legend plot {}".format(title), figsize=(2,2))
+    legendFig = plt.figure("Legend plot {}".format(title), figsize=(0.75,0.75))
     ax = fig.add_subplot(111)
 
     lns = []
     for info_val, info_style in style_dict.items():
         if style_type == 'linestyle':
-            line1, = ax.plot([0], [0], c="black", lw=3, linestyle=info_style)
+            line1, = ax.plot([0], [0], c="black", lw=1, linestyle=info_style)
         elif style_type == 'color':
-            line1, = ax.plot([0], [0], c=info_style, lw=3)
+            line1, = ax.plot([0], [0], c=info_style, lw=1)
         else:
             raise ValueError("Style type must be 'linestyle' or 'color'")
         lns.append(line1)
@@ -82,19 +84,20 @@ da_lcos
 
 da_lcos_stack = da_lcos.stack(temp = ['C_kWh', 'eta_RT'])
 
-colors = ['r','g','b']
+colors = ['purple','g','b']
 color_dict = {eta: colors[i] for i, eta in enumerate(da_lcos.coords['C_kWh'].values)}
 
 
-legendFig = gen_legend_figure(color_dict, title='$C_{kWh} [USD]$', style_type='color')
+legendFig = gen_legend_figure(color_dict, title='$C_{kWh} [\\frac{USD}{kWh}]$', style_type='color')
 legendFig.savefig('output/legend_Ckwh.png', transparent=True)
 
 
-plt.figure(figsize=(6,4))
+plt.figure()
 
 for C_kWh, eta_RT in da_lcos_stack.coords['temp'].values:
     da_lcos.sel(C_kWh=C_kWh, eta_RT=eta_RT).plot(
         linestyle=eta_linestyle_dict[eta_RT],
+        linewidth=1,
         color=color_dict[C_kWh],
         label='$C_{{kWh}}$: {} USD/kWh, $\eta_{{RT}}$: {}'.format(C_kWh,eta_RT)
     )
@@ -145,7 +148,7 @@ legendFig.savefig('output/legend_DD.png', transparent=True)
 
 
 
-plt.figure(figsize=(6,4))
+plt.figure()
 
 for DD, eta_RT in da_CkW_stack.coords['temp'].values:
     da_CkW.sel(DD=DD, eta_RT=eta_RT).plot(

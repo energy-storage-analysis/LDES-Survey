@@ -11,8 +11,17 @@ from es_utils.plot import annotate_points, adjust_text_after
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
-plt.rcParams.update({'font.size':12, 'savefig.dpi': 600})
+plt.rcParams.update({
+    "savefig.facecolor": 'white',
+    "font.size": 12, 
+    'savefig.dpi': 600, 
+    'font.sans-serif': 'arial', 
+    'figure.figsize': (7, 10)
+})
+
+
 label_fontsize = 14
+marker_size = 50
 ADJUST_TEXT_LIM = 5
 
 from adjustText import adjust_text
@@ -81,14 +90,14 @@ df_ec_decoupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_decoupled_
 # %%
 print("Coupled")
 
-fig = plt.figure(figsize = (7,8))
+fig = plt.figure()
 
 xlim=(2e-2,2e1)
 
 x_str='specific_energy'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', legend=True, s=50)
+sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', legend=True, s=marker_size)
 
 ax = plt.gca()
 ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
@@ -133,9 +142,9 @@ print("Decoupled")
 
 xlim = (0.1, 60)
 
-fig = plt.figure(figsize = (7,8))
+fig = plt.figure()
 
-sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=50)
+sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=marker_size)
 
 ax = plt.gca()
 

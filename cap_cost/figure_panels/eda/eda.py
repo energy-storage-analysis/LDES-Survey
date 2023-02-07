@@ -6,7 +6,18 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
 from es_utils.units import read_pint_df
-plt.rcParams.update({'font.size':16, 'savefig.dpi': 600})
+# plt.rcParams.update({'font.size':16, 'savefig.dpi': 600})
+
+plt.rcParams.update({
+    "savefig.facecolor": 'white',
+    "font.size": 7, 
+    'savefig.dpi': 600, 
+    'font.sans-serif': 'arial', 
+    'figure.figsize': (2.3, 1.6)
+})
+
+grid = False
+
 
 import os
 from os.path import join as pjoin
@@ -28,33 +39,55 @@ df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.
 df_mat_data = df_mat_data[df_mat_data['num_SMs'] > 0] 
 
 # %%
-plt.figure(figsize=(7,5))
+plt.figure()
 
 bins = np.logspace(np.log10(0.05), np.log10(2e3), 30)
-df_mat_data['specific_price'].hist(bins=bins, color='slategray')
+df_mat_data['specific_price'].hist(
+    bins=bins, 
+    color='slategray', 
+    grid=grid
+    )
 
 plt.xscale('log')
 
-plt.suptitle("{} Material Prices".format(len(df_mat_data))) #Used in at least one storage medium
+# plt.suptitle("{} Material Prices".format(len(df_mat_data))) #Used in at least one storage medium
 plt.xlabel('Median Specific Price (USD/kg)')
 
 plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
+plt.ylim(0,18)
+
+plt.xticks([10.0**x for x in np.arange(-1,4)])
+
 plt.tight_layout()
-plt.ylim(0,14)
 
 plt.savefig(pjoin(output_dir,'eda_mats.png'))
 
 
 #%%
 
-plt.figure(figsize=(3.2,2))
+
+plt.figure(figsize=(1.35,0.9))
 # plt.figure(figsize=(5,5))
 
 df_plot = df_mat_data['num_source'].value_counts().sort_index()
+
+
+max_number = 6
+
+count_above_max = df_plot.where(df_plot.index > max_number).dropna().sum()
+
+df_plot = df_plot.where(df_plot.index <= max_number).dropna()
+df_plot.index = df_plot.index.astype(str)
+
+df_plot.loc['>{}'.format(max_number)] = count_above_max
+
 df_plot.plot.bar(color='slategray')
 plt.xlabel("# Sources")
 plt.ylabel("Count")
+
+plt.xticks(rotation=0)
+plt.yticks([0,20,40])
 
 plt.tight_layout()
 
@@ -70,7 +103,7 @@ df_SMs = df_SMs.dropna(subset=['C_kwh'])
 
 #%%
 
-plt.figure(figsize=(7,5))
+plt.figure()
 
 display_text = pd.read_csv('../tech_lookup.csv', index_col=0)
 bins = np.logspace(np.log10(2e-4), np.log10(5e1), 30)
@@ -79,16 +112,27 @@ df_SMs['energy_type'] = [display_text['energy_type'][s].replace('\\n','\n') for 
 
 for energy_type, color in palette.items():
     df_sel = df_SMs[df_SMs['energy_type'] == energy_type].dropna(how='all')
-    df_sel['specific_energy'].hist(bins=bins, label=energy_type, alpha=1, color=color)
+    df_sel['specific_energy'].hist(
+        bins=bins, 
+        label=energy_type, 
+        alpha=1, 
+        color=color, 
+        grid=grid,
+        )
 
 
 plt.xscale('log')
 plt.locator_params(axis='y', integer=True)
-plt.suptitle("{} Storage Media".format(len(df_SMs)))
+# plt.suptitle("{} Storage Media".format(len(df_SMs)))
 plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Count')
+
+# plt.yscale('log')
 plt.ylim(top=39)
-leg= plt.legend(title='Energy Type', loc='upper left')
+# leg= plt.legend(title='Energy Type', loc='upper left')
+
+plt.xticks([10.0**x for x in np.arange(-3,2)])
+
 plt.tight_layout()
 
 

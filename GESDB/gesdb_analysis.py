@@ -6,7 +6,7 @@ import seaborn as sns
 import pandas as pd 
 import json
 
-mpl.rcParams.update({'font.size': 12, 'savefig.dpi': 600, 'font.sans-serif': 'arial', 'figure.figsize': (7, 5)})
+mpl.rcParams.update({'font.size': 7, 'savefig.dpi': 600, 'font.sans-serif': 'arial', 'figure.figsize': (2.3, 2.5)})
 
 # %%
 
@@ -69,8 +69,8 @@ df2 = df2[df2['mid_type'] != '']
 df2['mid_type'].value_counts().index
 
 cat_map = {
-'Lithium-ion battery': 'Lithium-ion', 
-'Pumped hydro storage': 'Pumped Hydro', 
+'Lithium-ion battery': 'LIB', 
+'Pumped hydro storage': 'PHES', 
 'Compressed air energy storage': 'CAES', 
 'Sensible heat': 'Thermal',
 'Latent heat': 'Thermal', 
@@ -142,7 +142,7 @@ plt.ylim(1e3,1e11)
 
 #%%
 
-cat_keep = ['Pumped Hydro','CAES','Lithium-ion','Thermal']
+cat_keep = ['PHES','CAES','LIB','Thermal']
 
 df2['mid_type_2'] = [s if s in cat_keep else 'Other' for s in df2['mid_type']]
 
@@ -183,9 +183,9 @@ df_stats
 plt.figure()
 sns.barplot(data=df_stats, x='dur_bin', y='energy', hue='mid_type_2')
 plt.yscale('log')
-plt.xticks(rotation = 45)
+plt.xticks(rotation = 90)
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.6,1])
-plt.ylabel('Cumulative Energy Capacity in \nDuration Range (kWh)')
+plt.ylabel('Energy Capacity in \nDuration Range (kWh)')
 plt.xlabel('Duration Range (hours)')
 
 # plt.ylim(1e3,1e11)
