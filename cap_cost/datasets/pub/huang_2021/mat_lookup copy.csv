@@ -1,0 +1,24 @@
+original_name,molecular_formula,material_name,index_use
+Lithium,Li,,molecular_formula
+Silver,Ag,,molecular_formula
+NMC,,NMC,material_name
+LCO,,LCO,material_name
+LFP,,LFP,material_name
+Ethyl cellulose,,Ethyl cellulose,material_name
+NBR,,NBR,material_name
+PVDF,,PVDF,material_name
+PTFE,,PTFE,material_name
+Carbon,C,,molecular_formula
+LCBO,,LCBO,material_name
+LLZO,,LLZO,material_name
+LGPS,,LGPS,material_name
+Li6PS5Cl,,,
+LPSI-Sn,,,
+Ethanol,,Ethanol,material_name
+Terpineol,,Terpineol,material_name
+Toluene,,Toluene,material_name
+Xylene,,Xylene,material_name
+NMP,,,
+Phosphoric acid,,,
+THF,,,
+Sn,Sn,,molecular_formula

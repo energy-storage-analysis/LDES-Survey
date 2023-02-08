@@ -1,0 +1,24 @@
+MATERIAL,DENSITY (g / cm3),PRICE ($ / kg)
+Lithium,0.534,130
+Silver,10.5,776
+NMC,4.7,30
+LCO,5.1,40
+LFP,3.6,10
+Ethyl cellulose,1.1,20
+NBR,1,4
+PVDF,1.76,20.7
+PTFE,2.2,20.7
+Carbon,2,6
+LCBO,2.1,20
+LLZO,5,50
+LGPS,2,50
+Li6PS5Cl,1.64,50
+LPSI-Sn,2.15,50
+Ethanol,0.789,0.42
+Terpineol,0.935,15
+Toluene,0.865,7.33
+Xylene,0.861,7.33
+NMP,1.03,2.75
+Phosphoric acid,1.68,1
+THF,0.8876,1
+Sn,7.29,18.4
