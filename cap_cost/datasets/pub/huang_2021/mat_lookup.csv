@@ -1,15 +1,14 @@
 original_name,molecular_formula,material_name,index_use
 Lithium,Li,,molecular_formula
 Silver,Ag,,molecular_formula
-NMC,,NCM111,material_name
-NMC,,NCM622,material_name
+NMC,,NCM811,material_name
 LCO,,LCO,material_name
 LFP,,LFP,material_name
 Ethyl cellulose,,Ethyl cellulose,material_name
 NBR,,,
 PVDF,,PVDF,material_name
 PTFE,,PTFE,material_name
-Carbon,C,,molecular_formula
+Carbon,,,
 LCBO,,LCBO,material_name
 LLZO,,LLZO,material_name
 LGPS,,LGPS,material_name

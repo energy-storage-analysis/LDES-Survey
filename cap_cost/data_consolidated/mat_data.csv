@@ -2,6 +2,7 @@
 unit_row,USD / kilogram,USD / kilogram,dimensionless,USD / meter ** 3,N/U,N/U,N/U,N/U,N/U,gram / mole,N/U,N/U
 index,,,,,,,,,,,,
 AQDS,7.15,3.323401871576773,0.46,,5,2,"Alibaba, Li 2017","4.8, 9.5",C14H8O8S2,368.33,AQDS,
+Activated Carbon,16.375,19.26865978733342,1.18,,0,2,"Li 2017, Liu 2016","2.75, 30.0",C,12.011,"Activated Carbon, Active carbon",
 Ag,653.7048312034364,80.3193030827006,0.12,,0,4,"DERA, Huang 2021, Kitco, USGS","608.49, 609.9, 697.51, 776.0",Ag,107.8682,"SILBER, Silver, Silver Bullion",521.0
 Air,0.0,,,,1,1,Li 2017,0.0,O2,0.0,,
 Al,2.405,0.8143695435050449,0.34,,30,9,"Alibaba, DERA, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.01, 2.39, 2.4, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"ALUMINIUM, Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
@@ -28,7 +29,6 @@ Bi,8.421658415462323,6.94250069229838,0.82,,7,5,"Alibaba, ISE, Indiamart, Kim 20
 Bi2O3,6.497,,,,0,1,ISE,6.5,Bi2O3,465.9578,Bismuth oxides,5.7207374
 Bipyridine,26.7166875,25.76228652401243,0.96,,3,2,"Alibaba, Echemi","44.93, 8.5",(C5H4N)2,156.188,,
 Br2,4.6605115,3.1374490515806785,0.67,,1,2,"Echemi, USGS","2.44, 6.88",Br2,159.808,Bromine Imports,4.39
-C,4.375,13.420410249527583,3.07,,0,4,"Echemi, Huang 2021, Li 2017, Liu 2016","1.53, 2.75, 30.0, 6.0",C,12.011,"Activated Carbon, Active carbon, Carbon",0.122
 C6H12O6Sc,44200.0,,,,0,1,USGS,44200.0,C6H12O6Sc,225.111908,Scandium Cmpds_Acetate,691.1577074
 CCoO3,14.445,,,,0,1,ISE,14.45,CCoO3,118.941194,Cobalt Carbonates,16.3262666
 CFRP,23.190000000000005,21.48412915919951,0.93,,18,4,"Indiamart, Kale 2018, Rao 2018, Singh Gill 2022","10.0, 15.0, 31.38, 57.69",,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
@@ -43,6 +43,7 @@ CaCl2,0.125,2.1095361637770145,16.88,,3,6,"Alibaba, Alva 2018, Echemi, Indiamart
 CaF2,0.40262,4.146712123700262,10.3,,2,6,"Alibaba, Alva 2018, DERA, Indiamart, Ray 2021, USGS","0.13, 0.25, 0.28, 0.4, 0.43, 11.4, 2.86",CaF2,78.0748063,"CaF2, FLUSSSPAT, Fluorspar Acid, Fluorspar Metallurgical",2.1437319
 CaO,0.1560983047400025,,,,1,1,USGS,0.16,CaO,56.077,"Lime Hydrated, Lime Quicklime",1.6734434
 CaSO4,0.5249999999999999,13.324212194053377,25.38,,2,4,"Alibaba, Alva 2018, Indiamart, USGS","0.02, 0.4, 0.65, 27.0",CaSO4,136.134,"CaSO4, Gypsum Mine, Gypsum Plant",0.7654368
+Carbon Black,1.5277500000000002,,,,0,1,Echemi,1.53,C,12.011,,
 Cd,3.2816843840624834,8.09057791542246,2.47,,6,6,"Alibaba, ISE, Indiamart, Kim 2013, SMM, USGS","2.42, 2.78, 23.0, 3.09, 3.47, 4.55",Cd,112.414,"Cadmium Ingot, Cadmium Metal, Cd",2.73
 Cd(OH)2,12.965,13.484526317227461,1.04,,2,2,"Alibaba, Li 2017","22.5, 3.43",Cd(OH)2,146.428,Cd(OH)2,2.1486338
 CdCO3,10.858,14.648424079060518,1.35,,1,2,"Alibaba, Indiamart","0.5, 21.22",CdCO3,172.422,,1.831246
@@ -175,8 +176,9 @@ N-propane,0.5,,,,1,1,Antunez 2018,0.5,,,N-propane,
 N-propanol,1.15733338,,,,0,1,Echemi,1.16,C3H80,116.673,,
 N2,0.15065,0.014919953083036157,0.1,,2,2,"Rutherford & Titan, Salerno 2002","0.14, 0.16",N2,28.014,Liquid Nitrogen,0.14
 NCA,57.0,32.526911934581186,0.57,,1,2,"Alibaba, Li 2017","34.0, 80.0",LiNi0.8Co0.15Al0.05O2,96.081776,NCA,
-NCM111,30.0,20.256686138984662,0.68,,1,3,"Alibaba, Huang 2021, Li 2017","20.0, 30.0, 59.0",LiNi0.33Co0.33Mn0.33O2,95.8843302,"NCM111, NMC",
-NCM622,30.0,18.929694486000912,0.63,,1,3,"Alibaba, Huang 2021, Li 2017","25.0, 30.0, 60.0",LiNi0.6Co0.2Mn0.2O2,96.9282874,"NCM622, NMC",
+NCM111,39.5,27.577164466275352,0.7,,1,2,"Alibaba, Li 2017","20.0, 59.0",LiNi0.33Co0.33Mn0.33O2,95.8843302,NCM111,
+NCM622,42.5,24.748737341529164,0.58,,1,2,"Alibaba, Li 2017","25.0, 60.0",LiNi0.6Co0.2Mn0.2O2,96.9282874,NCM622,
+NCM811,30.0,,,,0,1,Huang 2021,30.0,,,NMC,
 NEC,42.29,,,,1,1,Southhall 2022,42.29,C14H25N,207.361,N-ethylcarbazole,
 NH4Cl,0.14,,,,0,1,Li 2017,0.14,NH4Cl,53.489,NH4Cl,0.1957853
 NH4VO3,16.913,,,,0,1,ISE,16.91,NH4VO3,116.9775,Ammonium metavanadate,161.6913808
