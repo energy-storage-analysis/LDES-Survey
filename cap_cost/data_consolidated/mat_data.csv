@@ -43,7 +43,7 @@ CaCl2,0.125,2.1095361637770145,16.88,,3,6,"Alibaba, Alva 2018, Echemi, Indiamart
 CaF2,0.40262,4.146712123700262,10.3,,2,6,"Alibaba, Alva 2018, DERA, Indiamart, Ray 2021, USGS","0.13, 0.25, 0.28, 0.4, 0.43, 11.4, 2.86",CaF2,78.0748063,"CaF2, FLUSSSPAT, Fluorspar Acid, Fluorspar Metallurgical",2.1437319
 CaO,0.1560983047400025,,,,1,1,USGS,0.16,CaO,56.077,"Lime Hydrated, Lime Quicklime",1.6734434
 CaSO4,0.5249999999999999,13.324212194053377,25.38,,2,4,"Alibaba, Alva 2018, Indiamart, USGS","0.02, 0.4, 0.65, 27.0",CaSO4,136.134,"CaSO4, Gypsum Mine, Gypsum Plant",0.7654368
-Carbon Black,1.5277500000000002,,,,0,1,Echemi,1.53,C,12.011,,
+Carbon Black,3.679125,3.042503702750417,0.83,,0,2,"Echemi, Schnell 2020","1.53, 5.83",C,12.011,Carbon Black,
 Cd,3.2816843840624834,8.09057791542246,2.47,,6,6,"Alibaba, ISE, Indiamart, Kim 2013, SMM, USGS","2.42, 2.78, 23.0, 3.09, 3.47, 4.55",Cd,112.414,"Cadmium Ingot, Cadmium Metal, Cd",2.73
 Cd(OH)2,12.965,13.484526317227461,1.04,,2,2,"Alibaba, Li 2017","22.5, 3.43",Cd(OH)2,146.428,Cd(OH)2,2.1486338
 CdCO3,10.858,14.648424079060518,1.35,,1,2,"Alibaba, Indiamart","0.5, 21.22",CdCO3,172.422,,1.831246
@@ -102,7 +102,7 @@ Ge,1187.075,48.54288052845655,0.04,,0,2,"ISE, USGS","1152.75, 1221.4",Ge,72.63,"
 GeO2,782.45,87.61053018901326,0.11,,0,2,"ISE, USGS","720.5, 844.4",GeO2,104.628,"Germanium GeO2, Germanium dioxides",667.8421426
 Graphene,902.6,293.49432703205696,0.33,,4,3,"Alibaba, Cheaptubes, Graphene supermarket","1000.0, 450.0, 902.6",,,Electrically Conductive Granulated Graphene: 100 Grams,
 Graphene Oxide,162500.0,103833.49561793647,0.64,,2,3,"Alibaba, Cheaptubes, Graphene supermarket","162500.0, 193548.0, 200.49",,,Ultra Highly Concentrated Single-Layer Graphene Oxide,
-Graphite,1.601658334773136,3.995100920031152,2.49,,14,7,"Alibaba, DERA, Indiamart, Li 2017, Liu 2016, Steinmann 2022, USGS","0.8, 0.81, 1.46, 1.6, 12.0, 2.15, 3.62",C6,72.066,"Expanded Natural, GRAPHIT, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
+Graphite,1.875829167386568,6.698010843336234,3.57,,14,8,"Alibaba, DERA, Indiamart, Li 2017, Liu 2016, Schnell 2020, Steinmann 2022, USGS","0.8, 0.81, 1.46, 1.6, 12.0, 19.0, 2.15, 3.62",C6,72.066,"Expanded Natural, GRAPHIT, Graphite, Graphite (Natural) Amorphous, Graphite (Natural) Flake, Graphite (Natural) Lump",
 Gravel,0.0291803850227903,,,,2,1,USGS,0.03,C15H21NO,231.339,"Sand and Gravel (Construction) , Sand and Gravel (Industrial) ",
 H2SO4,0.2,,,,0,1,Li 2017,0.2,H2SO4,98.072,H2SO4,0.1593358
 H3N,0.7,0.3905884625254771,0.56,,0,2,"Liu 2016, USGS","0.33, 0.7, 1.11",H3N,17.031,"Anhydrous, Nitrogen (Fixed)--Ammonia , Silica Gel",0.3619482
@@ -128,12 +128,9 @@ KF,104.42112497394963,139.41158202532284,1.34,,8,2,"Alva 2018, Ray 2021","203.0,
 KFRP,27.1,,,,3,1,Kale 2018,27.1,,,Kevlar-49 Epoxy,
 KNO3,0.7832000000000001,3.1690388090607744,4.05,,4,4,"Alibaba, Alva 2018, Indiamart, Steinmann 2022","0.45, 0.68, 0.89, 7.0",KNO3,101.1023,KNO3,5.0618598
 KOH,1.39637036,1.7680680522472276,1.27,,1,5,"Alibaba, Alva 2018, Echemi, Indiamart, Li 2017","0.78, 0.82, 1.4, 1.43, 5.0",KOH,56.1053,KOH,9.0237129
-LCBO,20.0,,,,0,1,Huang 2021,20.0,,,LCBO,
-LCO,40.0,6.379720474545365,0.16,,3,3,"Huang 2021, ISE, Li 2017","28.95, 40.0",LiCoO2,97.871194,"LCO, Lithium Cobaltate",
-LFP,10.0,5.773502691896257,0.58,,1,3,"Alibaba, Huang 2021, Li 2017","10.0, 20.0",LiFePO4,157.754762,LFP,
-LGPS,50.0,,,,0,1,Huang 2021,50.0,,,LGPS,
+LCO,34.475,7.813529932111348,0.23,,3,2,"ISE, Li 2017","28.95, 40.0",LiCoO2,97.871194,"LCO, Lithium Cobaltate",
+LFP,15.0,7.0710678118654755,0.47,,1,2,"Alibaba, Li 2017","10.0, 20.0",LiFePO4,157.754762,LFP,
 LH2 Tank,,,,1874.3,1,2,"HDSAM 2015, Hurskainen 2019",nan,,,,
-LLZO,50.0,,,,0,1,Huang 2021,50.0,,,LLZO,
 LMNO,35.0,21.213203435596427,0.61,,2,2,"Alibaba, Li 2017","20.0, 50.0",LiMn1.5Ni0.5O4,182.6897645,LNMO,
 LMO,10.0,2.7700025421167633,0.28,,3,3,"Alibaba, ISE, Li 2017","10.0, 12.5, 6.97",LiMn2O4,180.812086,"LMO, Lithium manganates",
 LMP,10.0,,,,1,1,Li 2017,10.0,LiMnPO4,156.847805,LMP,
@@ -143,7 +140,7 @@ LTO,28.5,23.33452377915607,0.82,,1,2,"Alibaba, Li 2017","12.0, 45.0",Li4Ti5O12,4
 La,5.143,,,,2,1,ISE,5.14,La,138.90547,Lanthanum metal,4.85
 La2O3,2.0,0.9570963030611567,0.48,,0,2,"DERA, USGS","1.89, 2.0, 3.6",La2O3,325.80794,"Lanthanum (oxide), Rare Earths La2O3",4.1582001
 LaNi5,45.025,49.462119343999,1.1,,1,2,"Alibaba, Li 2017","10.05, 80.0",LaNi5,432.37247,LaNi5,10.9925658
-Li,81.06620208933717,180.07909925521636,2.22,,26,6,"Alibaba, Huang 2021, ISE, Kim 2013, Li 2017, SMM","0.5, 100.17, 130.0, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium, Lithium Metal, Lithium metal",83.5
+Li,81.06620208933717,180.07909925521636,2.22,,26,6,"Alibaba, ISE, Kim 2013, Li 2017, SMM, Schnell 2020","0.5, 100.17, 130.0, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium, Lithium Metal, Lithium metal",83.5
 Li2CO3,51.295,34.59444005732502,0.67,,2,10,"Alibaba, Alva 2018, DERA, Echemi, ISE, Indiamart, Liu 2016, Ray 2021, SMM, USGS","11.24, 111.0, 15.37, 46.8, 51.3, 60.12, 62.06, 7.0, 7.77, 78.96, 79.12",Li2CO3,73.888,"LITHIUM, Li2CO3, Lithium , Lithium Carbonate (99.5% Battery Grade), Lithium Carbonates",15.8055013
 Li2O,100.0,,,,1,1,Alibaba,100.0,Li2O,29.879,,38.8715769
 Li2S,1200.935,1695.7339851668953,1.41,,1,2,"Alibaba, Li 2017","1.87, 2400.0",Li2S,45.94,Li2S,25.2927461
@@ -178,10 +175,10 @@ N2,0.15065,0.014919953083036157,0.1,,2,2,"Rutherford & Titan, Salerno 2002","0.1
 NCA,57.0,32.526911934581186,0.57,,1,2,"Alibaba, Li 2017","34.0, 80.0",LiNi0.8Co0.15Al0.05O2,96.081776,NCA,
 NCM111,39.5,27.577164466275352,0.7,,1,2,"Alibaba, Li 2017","20.0, 59.0",LiNi0.33Co0.33Mn0.33O2,95.8843302,NCM111,
 NCM622,42.5,24.748737341529164,0.58,,1,2,"Alibaba, Li 2017","25.0, 60.0",LiNi0.6Co0.2Mn0.2O2,96.9282874,NCM622,
-NCM811,30.0,,,,0,1,Huang 2021,30.0,,,NMC,
 NEC,42.29,,,,1,1,Southhall 2022,42.29,C14H25N,207.361,N-ethylcarbazole,
 NH4Cl,0.14,,,,0,1,Li 2017,0.14,NH4Cl,53.489,NH4Cl,0.1957853
 NH4VO3,16.913,,,,0,1,ISE,16.91,NH4VO3,116.9775,Ammonium metavanadate,161.6913808
+NMC811,24.0,,,,0,1,Schnell 2020,24.0,,,NMC811,
 NMO,5.0,,,,1,1,Li 2017,5.0,Na0.44MnO2,97.0515415,NMO,
 NTP,10.0,,,,1,1,Li 2017,10.0,NaTi2(PO4)3,403.6330553,NTP,
 NV,27.0755,,,,0,1,ISE,27.08,NV,64.9485,Vanadium nitrides,291.0191533
@@ -274,7 +271,7 @@ TiCl4,1.233765,0.09229864814827991,0.07,,0,2,"ISE, SMM","1.17, 1.3",TiCl4,189.66
 TiO2,1.702908,0.7628060423706695,0.45,,0,4,"DERA, ISE, SMM, USGS","1.32, 1.68, 1.7, 1.98, 3.29",TiO2,79.865,"Anatase Titanium Dioxide, High Titanium Slag(TiO2≥90%), Rutile Titanium Dioxide, Titanium Concentrate(TiO2≥46%), Titanium Concentrate(TiO2≥47%), TITAN, Titanium Dioxide, Titanium Mineral Concentrates Rutile, Titanium Mineral Concentrates Slag, Titanium and Titanium Dioxide Dioxide",6.8942777
 TiS2,80.0,,,,3,1,Li 2017,80.0,TiS2,111.987,TiS2,4.925762
 Tl,6969.0413282447735,1552.276640000601,0.22,,6,2,"Kim 2013, USGS","5871.42, 8066.67",Tl,204.38,"Thallium Metal, Tl",4200.0
-Toluene,1.0854249999999999,3.270489557740808,3.01,,1,4,"Chemanalyst, Echemi, Huang 2021, Southhall 2022","0.32, 1.0, 1.17, 7.33","C7H6, C7H8",90.125,Toluene,
+Toluene,1.0854249999999999,3.270489557740808,3.01,,1,4,"Chemanalyst, Echemi, Schnell 2020, Southhall 2022","0.32, 1.0, 1.17, 7.33","C7H6, C7H8",90.125,Toluene,
 V,290.0,197.41569724681435,0.68,,3,5,"Alibaba, DERA, Indiamart, Ray 2021, SMM","25.84, 290.0, 393.64, 42.51, 451.95",V,50.9415,"VANADIUM, Vanadium, Vanadium (V)",371.0
 V2O5,17.103480294958075,7.666134942597935,0.45,,6,4,"Alibaba, ISE, Indiamart, SMM","16.9, 17.31, 23.3, 5.0",V2O5,181.878,"Vanadium pentoxide( Flake V2O5>=98%), Vanadium pentoxides",207.8916209
 VN,34.87695,,,,0,1,SMM,34.88,VN,64.9485,Vanadium nitrogen alloy,291.0191533
