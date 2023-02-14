@@ -72,8 +72,9 @@ plt.suptitle("Latent")
 fix_positions = pd.read_csv('fix_positions_latent.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
-texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
-all_texts = [*texts, *texts_fix]
+texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
+
+arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
 adjust_text(
     texts, 
@@ -81,11 +82,14 @@ adjust_text(
     expand_points=(1.5,1.5), 
     expand_text=(1.2,1.5),
     ax=ax,
-    add_objects=texts_fix
+    add_objects=[*texts_fix, *arrows_fix],
+    arrowprops=dict(arrowstyle='->')
     )
 
-draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
-
+# draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
+all_texts = [*texts_fix, *texts]
+from es_utils.plot import adjust_text_after
+adjust_text_after(fig, ax, "LiF/MgF_{2}", all_texts, 650,80)
 
 leg = ax.get_legend()
 leg.set_title('')

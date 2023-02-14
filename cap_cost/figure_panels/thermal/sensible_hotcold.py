@@ -28,6 +28,7 @@ MARKER_SIZE=80
 Ckwh_cutoff = 50
 y_lim = (0.005, 100)
 ADJUST_TEXT_LIM = 5
+hot_xlim = (0,2100)
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
@@ -77,6 +78,7 @@ ax_cold.set_xlabel('Min Temperature (deg C)', fontsize=label_fontsize)
 ax_cold.set_ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 ax_cold.set_title("Cold Sensible")
 
+ax_cold.hlines(10,-200,0, linestyle='--', color='gray', alpha=0.5)
 
 x_str='T_max'
 y_str='C_kwh'
@@ -90,58 +92,69 @@ texts_hot =annotate_points(df_hot, x_str,y_str,text_col='display_text',ax=ax_hot
 
 ax_hot.set_yscale('log')
 # ax_hot.set_ylim(0.05,110)
-ax_hot.set_xlim(0,2400)
+ax_hot.set_xlim(*hot_xlim)
 
 ax_hot.set_xlabel('Maximum Temperature (deg C)', fontsize=label_fontsize)
 # ax_hot.set_ylabel("$C_{kWh,mat}$ (\$/kWh)")
 # ax_hot.xticks.remove()
 ax_hot.set_title("Hot Sensible")
 
+ax_hot.get_legend().set_title('')
+
+ax_hot.hlines(10,*hot_xlim, linestyle='--', color='gray', alpha=0.5)
+
+# fig.tight_layout()
 labs = plt.setp(ax_hot.get_yticklabels(), visible=False)
 ax_hot.yaxis.label.set_visible(False)
 
 # Adjust cold texts
+
+texts = texts_cold
+
 fix_positions = pd.read_csv('fix_positions_sensible_cold.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
-texts_cold, texts_fix, orig_xy = prepare_fixed_texts(texts_cold, fix_positions, ax=ax_cold)
-all_texts = [*texts_cold, *texts_fix]
+texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax_cold)
 
-adjust_text(texts_cold,
+arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax_cold, orig_xy=orig_xy_fixed)
+
+adjust_text(texts,
 force_points=(0,5),
 force_text=(0,10),
 force_objects=(0,5),
 ax=ax_cold,
 # lim=ADJUST_TEXT_LIM,
-add_objects=texts_fix
+add_objects=[*texts_fix, *arrows_fix],
+arrowprops=dict(arrowstyle='->')
 )
 
-draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax_cold, orig_xy=orig_xy)
+# 
 
-ax_cold.hlines(10,-200,0, linestyle='--', color='gray', alpha=0.5)
+
 
 # Adjust hot texts
+
+texts = texts_hot
+
 fix_positions = pd.read_csv('fix_positions_sensible_hot.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
-texts_hot, texts_fix, orig_xy = prepare_fixed_texts(texts_hot, fix_positions, ax=ax_hot)
-all_texts = [*texts_hot, *texts_fix]
+texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax_hot)
 
-adjust_text(texts_hot,
+arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax_hot, orig_xy=orig_xy_fixed)
+
+adjust_text(texts,
 force_points=(0.2,1), 
 expand_points=(1.5,1.5), 
 expand_text=(1.1,1.4),
 ax=ax_hot,
 # lim=ADJUST_TEXT_LIM,
-add_objects=texts_fix
+add_objects=[*texts_fix, *arrows_fix],
+arrowprops=dict(arrowstyle='->')
 )
 
-draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax_hot, orig_xy=orig_xy)
 
-ax_hot.get_legend().set_title('')
 
-ax_hot.hlines(10,0,2400, linestyle='--', color='gray', alpha=0.5)
-# fig.tight_layout()
 
 plt.savefig('output/sensible_hotcold.png')
 # %%

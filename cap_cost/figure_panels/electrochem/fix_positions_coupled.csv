@@ -1,6 +1,7 @@
 name,x,y,fix
 C_{6}/LMP,2.0,20,y
-Ce_{4}/Zn,0.2,5,y
+Ce_{4}/Zn,0.1,5,y
 Mg/Al,0.1,8,y
-Mg/Sb,0.3,18,y
+Mg/Sb,0.6,20,y
 Mg/Zn,0.05,15,y
+TEMPO/Zn,0.1,35,y

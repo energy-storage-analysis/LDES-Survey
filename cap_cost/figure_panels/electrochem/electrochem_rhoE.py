@@ -125,12 +125,11 @@ leg.set_bbox_to_anchor([0,0.3,0.5,0])
 fix_positions = pd.read_csv('fix_positions_coupled.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
-texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
-all_texts = [*texts, *texts_fix]
+texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
 
-adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=texts_fix)
+arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
-draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
+adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_fix, *arrows_fix], arrowprops=dict(arrowstyle='->'))
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 
@@ -169,12 +168,16 @@ ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 fix_positions = pd.read_csv('fix_positions_decoupled.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
-texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
-all_texts = [*texts, *texts_fix]
+texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
 
-adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=texts_fix)
+arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
-draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
+adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_fix, *arrows_fix], arrowprops=dict(arrowstyle='->'))
+
+
+all_texts = [*texts_fix, *texts]
+from es_utils.plot import adjust_text_after
+adjust_text_after(fig, ax, "Na_{2}LiAlH_{3}", all_texts, 3,12)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 

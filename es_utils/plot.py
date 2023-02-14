@@ -58,15 +58,20 @@ def draw_arrows(texts, arrowprops, ax, orig_xy, *args, **kwargs):
     r = get_renderer(ax.get_figure())
     bboxes = get_bboxes(texts, r, (1, 1), ax)
     # kwap = kwargs.pop('arrowprops')
+
+    arrows = []
     for j, (bbox, text) in enumerate(zip(bboxes, texts)):
         ap = {'patchA':text} # Ensure arrow is clipped by the text
         ap.update(arrowprops)
         # ap.update(kwap) # Add arrowprops from kwargs
-        ax.annotate("", # Add an arrow from the text to the point
+        arrow = ax.annotate("", # Add an arrow from the text to the point
                     xy = (orig_xy[j]),
                     xytext=get_midpoint(bbox),
                     arrowprops=ap,
                     *args, **kwargs)
+        arrows.append(arrow)
+
+    return arrows
 
 
 from adjustText import get_text_position
@@ -84,5 +89,4 @@ def prepare_fixed_texts(texts, fix_positions, ax):
         texts_fix.append(text_to_fix)
 
     orig_xy = [get_text_position(text, ax=ax) for text in texts]
-    orig_xy = [*orig_xy, *orig_xy_fixed]
-    return texts, texts_fix, orig_xy
+    return texts, texts_fix, orig_xy, orig_xy_fixed

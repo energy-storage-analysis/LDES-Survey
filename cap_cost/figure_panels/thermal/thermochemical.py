@@ -79,17 +79,18 @@ plt.tight_layout()
 fix_positions = pd.read_csv('fix_positions_thermochemical.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
-texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
-all_texts = [*texts, *texts_fix]
+texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
+
+arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
 adjust_text(
     texts, 
     force_points=(0.5,3),
     ax=ax,
-    add_objects=texts_fix
+    add_objects=[*texts_fix, *arrows_fix]
     )
 
-draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
+arrows = draw_arrows(texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
 
 plt.savefig(pjoin(output_dir,'thermochem.png'))
 # %%
