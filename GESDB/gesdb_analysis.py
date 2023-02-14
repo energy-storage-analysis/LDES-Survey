@@ -6,7 +6,7 @@ import seaborn as sns
 import pandas as pd 
 import json
 
-# mpl.rcParams.update({'font.size': 7, 'savefig.dpi': 600, 'font.sans-serif': 'arial', 'figure.figsize': (2.3, 2.5)})
+mpl.rcParams.update({'font.size': 7, 'savefig.dpi': 600, 'font.sans-serif': 'arial', 'figure.figsize': (2.3, 2.5)})
 
 # %%
 
@@ -109,6 +109,18 @@ for i, status in enumerate(status_types):
 
 plt.tight_layout()
 plt.savefig('output/type_counts.png')
+
+
+#%%
+
+df_op = df2.where(df2['status'] == 'Operational').dropna(how='all')
+
+energies = df_op.groupby('full_type')['energy'].sum()
+
+total_phes = energies['Pumped hydro storage - Open-loop PHS'] + energies['Pumped hydro storage - Closed-loop PHS']
+frac_open = energies['Pumped hydro storage - Open-loop PHS']/total_phes
+
+frac_open
 
 
 #%%
