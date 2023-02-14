@@ -1,8 +1,8 @@
-name,x,y
-Ethanol,-80.0,5.0
-Isopentane,-190.0,90.0
-N-propane,-180.0,0.5
-Methanol,-100.0,1.0
-N-pentane,-150,30.0
-N-hexane,-80.0,30.0
-LN_{2},-190.0,30.0
+name,x,y,fix
+Ethanol,-80.0,5.0,y
+Isopentane,-190.0,70.0,y
+N-propane,-180.0,0.5,y
+Methanol,-100.0,1.0,y
+N-pentane,-150,30.0,y
+N-hexane,-80.0,20.0,y
+LN_{2},-190.0,30.0,y

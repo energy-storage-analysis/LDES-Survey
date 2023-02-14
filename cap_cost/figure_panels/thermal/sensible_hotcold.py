@@ -102,7 +102,7 @@ ax_hot.yaxis.label.set_visible(False)
 
 # Adjust cold texts
 fix_positions = pd.read_csv('fix_positions_sensible_cold.csv', index_col=0)
-fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts_cold, texts_fix, orig_xy = prepare_fixed_texts(texts_cold, fix_positions, ax=ax_cold)
 all_texts = [*texts_cold, *texts_fix]
@@ -122,7 +122,7 @@ ax_cold.hlines(10,-200,0, linestyle='--', color='gray', alpha=0.5)
 
 # Adjust hot texts
 fix_positions = pd.read_csv('fix_positions_sensible_hot.csv', index_col=0)
-fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts_hot, texts_fix, orig_xy = prepare_fixed_texts(texts_hot, fix_positions, ax=ax_hot)
 all_texts = [*texts_hot, *texts_fix]

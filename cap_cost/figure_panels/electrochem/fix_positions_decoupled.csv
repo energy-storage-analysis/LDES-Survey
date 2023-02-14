@@ -1,15 +1,15 @@
-name,x,y
-CH_{4}\ (Feedstock),5.0,0.05
-Methanol\ (Feedstock),40.0,0.03
-H_{2}\ (Feedstock),2.0,0.01
-CH_{4}\ Spherical\ Pressure,15.0,15.0
-Zr(BH_{4})_{4},8.0,5.0
-NaBH_{4},8.0,2.0
-Zn(BH_{4})_{2},4.0,3.5
-Mg(BH_{4})_{2},15.0,3.0
-Ca(BH_{4})_{2},20.0,4.0
-Al(BH_{4})_{3},20.0,3.0
-"S/Air(Li,\ Acid)",1.5,3.8
-Na_{2}LiAlH_{3},1.0,5.0
-Na_{3}AlH_{3},0.5,2.0
-NaAlH_{2},1.0,1.8
+name,x,y,fix
+CH_{4}\ (Feedstock),5.0,0.05,y
+Methanol\ (Feedstock),40.0,0.03,y
+H_{2}\ (Feedstock),2.0,0.01,y
+CH_{4}\ Spherical\ Pressure,15.0,15.0,y
+Zr(BH_{4})_{4},8.0,5.0,y
+NaBH_{4},8.0,2.0,y
+Zn(BH_{4})_{2},4.0,3.5,y
+Mg(BH_{4})_{2},15.0,3.0,y
+Ca(BH_{4})_{2},20.0,4.0,y
+Al(BH_{4})_{3},20.0,3.0,y
+"S/Air(Li,\ Acid)",1.5,3.8,y
+Na_{2}LiAlH_{3},1.0,5.0,y
+Na_{3}AlH_{3},0.5,2.0,y
+NaAlH_{2},1.0,1.8,y

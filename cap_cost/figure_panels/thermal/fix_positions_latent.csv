@@ -1,8 +1,8 @@
-name,x,y
-Na_{2}CO_{3},1100,3
-KOH,0,50
-KNO_{3},100,8
-NaF,1300,15
-LiF/MgF_{2},700,80
-LiF/NaF,500,50
-NaF/CaF_{2}/MgF_{2},200,5
+name,x,y,fix
+Na_{2}CO_{3},1100,3,y
+KOH,0,50,y
+KNO_{3},100,8,y
+NaF,1300,15,y
+LiF/MgF_{2},700,80,y
+LiF/NaF,500,50,y
+NaF/CaF_{2}/MgF_{2},200,5,y

@@ -70,7 +70,7 @@ plt.suptitle("Latent")
 
 
 fix_positions = pd.read_csv('fix_positions_latent.csv', index_col=0)
-fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
 all_texts = [*texts, *texts_fix]
