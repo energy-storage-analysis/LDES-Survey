@@ -1,4 +1,4 @@
 ,materials,mat_basis,original_name,SM_type,sub_type,mat_type,deltaG_chem,n_e,source
 unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kWh/mol,dimensionless,N/U
 SM_name,,,,,,,,,
-Fossil CH4*,Fossil CH4,molar,,synfuel,feedstock,,0.2554,8,Standard Gibbs
+Fossil CH4,Fossil CH4,molar,,synfuel,feedstock,,0.2554,8,Standard Gibbs
