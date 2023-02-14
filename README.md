@@ -1,6 +1,8 @@
 # Energy Storage Material Capital Cost Analysis
 
-This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article. The folder structure is 
+This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article. More information and interactive visualizations can be found [here](https://mhdlab.github.io/projects/5_ES_TEA/)
+
+The folder structure of the repository is 
 
 * cap_cost: The main codes and analysis to form the dataset and figures analyzing the energy capital cost of a wide range of energy storage media. This folder contains the main dataset and individual source datasets used in the work in the form of csv files. See the README file in that folder for more information. 
 * es_utils: A package of utility functions used throughout the codebase
