@@ -7,7 +7,7 @@ import re
 import seaborn as sns
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points, adjust_text_after
+from es_utils.plot import annotate_points, draw_arrows, prepare_fixed_texts
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
@@ -116,22 +116,21 @@ plt.xlim(*xlim)
 
 leg = ax.get_legend()
 leg.set_title('Sub Type')
+
 leg.set_bbox_to_anchor([0,0.3,0.5,0])
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(5,2), lim=ADJUST_TEXT_LIM)
 
-alter_dict = {
-    # "Na/NiCl_{2}": (3,14),
-    "C_{6}/LMP": (2,20),
-    "Ce_{4}/Zn": (0.2,5),
-    "Mg/Al": (0.1,8),
-    "Mg/Sb": (0.3,18),
-    "Mg/Zn": (0.05,15),
-}
+# Adjusting Texts 
 
-for alter_name, (x,y) in alter_dict.items():
-    adjust_text_after(fig, ax, alter_name, texts, x,y)
+fix_positions = pd.read_csv('fix_positions_coupled.csv', index_col=0)
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
 
+texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
+all_texts = [*texts, *texts_fix]
+
+adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=texts_fix)
+
+draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
 
@@ -155,7 +154,6 @@ plt.xlim(*xlim)
 
 texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
-
 # plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
 
 ax.set_title('Decoupled')
@@ -166,37 +164,21 @@ leg = ax.get_legend()
 leg.set_title('Sub Type')
 leg.set_bbox_to_anchor([0,0,1,0.52])
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(2,1), lim=ADJUST_TEXT_LIM)
-
 ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
-alter_dict = {
-    "CH_{4}\ (Feedstock)": (5,5e-2),
-    "Methanol\ (Feedstock)": (40,3e-2),
-    "H_{2}\ (Feedstock)": (2,1e-2),
-    "CH_{4}\ Spherical\ Pressure": (15,15),
+fix_positions = pd.read_csv('fix_positions_decoupled.csv', index_col=0)
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
 
-    # "LiBH_{4}": (10,5),
-    "Zr(BH_{4})_{4}": (8,5),
-    "NaBH_{4}": (8,2),
-    "Zn(BH_{4})_{2}": (4,3.5),
-    "Mg(BH_{4})_{2}": (15,3),
-    "Ca(BH_{4})_{2}": (20,4),
-    "Al(BH_{4})_{3}": (20,3),
+texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
+all_texts = [*texts, *texts_fix]
 
-    "S/Air(Li,\ Acid)": (1.5,3.8),
-    "Na_{2}LiAlH_{3}": (1,5),
-    "Na_{3}AlH_{3}": (0.5,2),
-    "NaAlH_{2}": (1,1.8),
-    # "Ti_{12}Mn_{18}H_{30}": (0.5,7),
+adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=texts_fix)
 
-}
-
-
-for alter_name, (x,y) in alter_dict.items():
-    adjust_text_after(fig, ax, alter_name, texts, x,y)
-
+draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 
 # %%
+
+
+

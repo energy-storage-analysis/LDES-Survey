@@ -1,12 +1,12 @@
 
 #%%
-import re
 import seaborn as sns
+import pandas as pd
 import os
 from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points, adjust_text_after
+from es_utils.plot import annotate_points, draw_arrows, prepare_fixed_texts
 from es_utils.chem import format_chem_formula
 
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ if not os.path.exists(output_dir): os.makedirs(output_dir)
 MARKER_SIZE=80
 Ckwh_cutoff = 50
 y_lim = (0.005, 100)
-
+ADJUST_TEXT_LIM = 5
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
@@ -100,46 +100,43 @@ ax_hot.set_title("Hot Sensible")
 labs = plt.setp(ax_hot.get_yticklabels(), visible=False)
 ax_hot.yaxis.label.set_visible(False)
 
+# Adjust cold texts
+fix_positions = pd.read_csv('fix_positions_sensible_cold.csv', index_col=0)
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
 
-adjust_text(texts_cold,  arrowprops = dict(arrowstyle='->'), 
+texts_cold, texts_fix, orig_xy = prepare_fixed_texts(texts_cold, fix_positions, ax=ax_cold)
+all_texts = [*texts_cold, *texts_fix]
+
+adjust_text(texts_cold,
 force_points=(0,5),
 force_text=(0,10),
 force_objects=(0,5),
-ax=ax_cold
+ax=ax_cold,
+# lim=ADJUST_TEXT_LIM,
+add_objects=texts_fix
 )
 
-
-alter_dict = {
-    "Ethanol": (-80,5),
-    "Isopentane": (-190,90),
-    "N-propane": (-180,0.5),
-    'Methanol': (-100,1),
-    'N-pentane': (None,30),
-    'N-hexane': (-80,30),
-    'LN_{2}': (-190,30),
-}
-
-
-for alter_name, (x,y) in alter_dict.items():
-    adjust_text_after(fig, ax_cold, alter_name, texts_cold, x,y)
+draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax_cold, orig_xy=orig_xy)
 
 ax_cold.hlines(10,-200,0, linestyle='--', color='gray', alpha=0.5)
 
-adjust_text(texts_hot,  arrowprops = dict(arrowstyle='->'), force_points=(0.2,1), expand_points=(1.5,1.5), expand_text=(1.1,1.4))
+# Adjust hot texts
+fix_positions = pd.read_csv('fix_positions_sensible_hot.csv', index_col=0)
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
 
-alter_dict = {
-# "NaKMgCl": (900, 2),
-"Basalt": (1000, 0.02),
-"LiNaKNO_{3}NO_{2}": (550, 60),
-"Al": (800, 60),
-"HITEC\ XL": (570, 20),
-"Veg.\ Oil": (200, 20),
-"NaKMgCl": (1100, 1),
-# "KMgCl": (900, 5),
-}
+texts_hot, texts_fix, orig_xy = prepare_fixed_texts(texts_hot, fix_positions, ax=ax_hot)
+all_texts = [*texts_hot, *texts_fix]
 
-for alter_name, (x,y) in alter_dict.items():
-    adjust_text_after(fig, ax_hot, alter_name, texts_hot, x,y)
+adjust_text(texts_hot,
+force_points=(0.2,1), 
+expand_points=(1.5,1.5), 
+expand_text=(1.1,1.4),
+ax=ax_hot,
+# lim=ADJUST_TEXT_LIM,
+add_objects=texts_fix
+)
+
+draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax_hot, orig_xy=orig_xy)
 
 ax_hot.get_legend().set_title('')
 

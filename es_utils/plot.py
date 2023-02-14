@@ -25,14 +25,17 @@ def annotate_points(df, x_col, y_col, text_col=None, ax=None):
 from adjustText import  get_bboxes, get_midpoint
 from matplotlib.text import Text
 
+def get_text_index_from_name(texts, text_string):
+    text_strings = [t.get_text().strip("$") for t in texts]
+    text_index = text_strings.index(text_string)
+    return text_index
+
 def adjust_text_after(fig, ax, alter_name, texts, x, y):
     """
     This function can be called after automatically setting text labels with adjustText package to manually set a given labels postion
     """
-    text_strings = [t.get_text().strip("$") for t in texts]
-    text_pos = text_strings.index(alter_name)
-
-    text_obj = texts[text_pos]
+    text_index = get_text_index_from_name(texts, alter_name)
+    text_obj = texts[text_index]
     
     if x != None: text_obj.set_x(x)
     if y != None: text_obj.set_y(y)
@@ -41,8 +44,45 @@ def adjust_text_after(fig, ax, alter_name, texts, x, y):
     cx, cy = get_midpoint(bbox)
 
     #TODO: This is a hacky way to try and find the corresponding arrow to the text box 
-    child_slot_alter = len(texts)+text_pos
+    child_slot_alter = len(texts)+text_index
     children_text_only = [c for c in ax.get_children() if isinstance(c, Text)]
     arrow = children_text_only[child_slot_alter]
     arrow.set_x(cx)
     arrow.set_y(cy)
+
+
+
+from adjustText import get_renderer
+def draw_arrows(texts, arrowprops, ax, orig_xy, *args, **kwargs):
+
+    r = get_renderer(ax.get_figure())
+    bboxes = get_bboxes(texts, r, (1, 1), ax)
+    # kwap = kwargs.pop('arrowprops')
+    for j, (bbox, text) in enumerate(zip(bboxes, texts)):
+        ap = {'patchA':text} # Ensure arrow is clipped by the text
+        ap.update(arrowprops)
+        # ap.update(kwap) # Add arrowprops from kwargs
+        ax.annotate("", # Add an arrow from the text to the point
+                    xy = (orig_xy[j]),
+                    xytext=get_midpoint(bbox),
+                    arrowprops=ap,
+                    *args, **kwargs)
+
+
+from adjustText import get_text_position
+
+def prepare_fixed_texts(texts, fix_positions, ax):
+    # form the lists of fixed texts, adjustable texts, and their original xy positions. Having to do weird things to keep the order in the lists matching, probably a better way to handle this.
+    texts_fix = []
+    orig_xy_fixed = []
+    for name in fix_positions:
+        index = get_text_index_from_name(texts, name)
+        text_to_fix = texts.pop(index)
+        orig_xy_fixed.append(get_text_position(text_to_fix, ax=ax))
+        text_to_fix.set_x(fix_positions[name][0])
+        text_to_fix.set_y(fix_positions[name][1])
+        texts_fix.append(text_to_fix)
+
+    orig_xy = [get_text_position(text, ax=ax) for text in texts]
+    orig_xy = [*orig_xy, *orig_xy_fixed]
+    return texts, texts_fix, orig_xy

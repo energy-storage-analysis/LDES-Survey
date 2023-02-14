@@ -75,6 +75,21 @@ adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(1,1), expa
 
 from es_utils.plot import adjust_text_after
 
+# TODO: make a dict and use this snippet to export a csv file
+#
+# alter_dict = {
+#     "Ba(OH)_{2}/BaO": (1300, 14),
+#     # "MgSO_{4}/MgO": (1500,10.3),
+# }
+# s1 = pd.Series([alter_dict[name][0] for name in alter_dict.keys()], index=alter_dict.keys())
+# s1.name = 'x'
+# s2 = pd.Series([alter_dict[name][1] for name in alter_dict.keys()], index=alter_dict.keys())
+# s2.name = 'y'
+# df_out = pd.concat([s1,s2], axis=1)
+# df_out.index.name = 'name'
+# df_out.to_csv('fix_positions_latent.csv')
+
+
 # adjust_text_after(fig, ax, "Kevlar", texts, 0.02,30)
 adjust_text_after(fig, ax, "T300PR319", texts, 0.04,20)
 adjust_text_after(fig, ax, "EGlass", texts, 0.04,15)

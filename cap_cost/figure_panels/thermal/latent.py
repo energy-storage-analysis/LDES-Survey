@@ -2,10 +2,11 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+import pandas as pd
 from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points
+from es_utils.plot import annotate_points, draw_arrows, prepare_fixed_texts
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
@@ -67,25 +68,24 @@ plt.xlabel('Phase Change Temperature (deg C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Latent")
 
-adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(0.5,1), expand_points=(1.5,1.5), expand_text=(1.2,1.5))
 
-from es_utils.plot import adjust_text_after
+fix_positions = pd.read_csv('fix_positions_latent.csv', index_col=0)
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
 
-alter_dict = {
-    # "NaCl/NaBr/Na_{2}MoO_{4}": (500,40),
-    "Na_{2}CO_{3}": (1100, 3),
-    # "LiF/NaF": (600, 50),
-    # "Mg": (600, 30),
-    "KOH": (0, 50),
-    "KNO_{3}": (100, 8),
-    "NaF": (1300, 15),
-    "LiF/MgF_{2}": (700, 80),
-    "LiF/NaF": (500, 50),
-    "NaF/CaF_{2}/MgF_{2}": (200,5),
-}
+texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
+all_texts = [*texts, *texts_fix]
 
-for alter_name, (x,y) in alter_dict.items():
-    adjust_text_after(fig, ax, alter_name, texts, x,y)
+adjust_text(
+    texts, 
+    force_points=(0.5,1), 
+    expand_points=(1.5,1.5), 
+    expand_text=(1.2,1.5),
+    ax=ax,
+    add_objects=texts_fix
+    )
+
+draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
+
 
 leg = ax.get_legend()
 leg.set_title('')

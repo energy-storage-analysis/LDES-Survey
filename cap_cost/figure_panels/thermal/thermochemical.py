@@ -1,12 +1,12 @@
 #%%
 import matplotlib.pyplot as plt
 import seaborn as sns
-import re
+import pandas as pd
 import os
 from os.path import join as pjoin
 
 from es_utils.units import read_pint_df
-from es_utils.plot import annotate_points, adjust_text_after
+from es_utils.plot import annotate_points, draw_arrows, prepare_fixed_texts
 from es_utils.chem import format_chem_formula
 
 import matplotlib as mpl
@@ -75,15 +75,21 @@ plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Thermochemcial")
 plt.tight_layout()
 
-adjust_text(texts, arrowprops = dict(arrowstyle='->'), force_points=(0.5,3))
 
-alter_dict = {
-    "Ba(OH)_{2}/BaO": (1300, 14),
-    # "MgSO_{4}/MgO": (1500,10.3),
-}
+fix_positions = pd.read_csv('fix_positions_thermochemical.csv', index_col=0)
+fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows()}
 
-for alter_name, (x,y) in alter_dict.items():
-    adjust_text_after(fig, ax, alter_name, texts, x,y)
+texts, texts_fix, orig_xy = prepare_fixed_texts(texts, fix_positions, ax=ax)
+all_texts = [*texts, *texts_fix]
+
+adjust_text(
+    texts, 
+    force_points=(0.5,3),
+    ax=ax,
+    add_objects=texts_fix
+    )
+
+draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
 
 plt.savefig(pjoin(output_dir,'thermochem.png'))
 # %%
