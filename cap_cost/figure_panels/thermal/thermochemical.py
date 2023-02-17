@@ -28,10 +28,13 @@ y_lim = (0.1, 100)
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 
+df['SM_type'] = df['SM_type'].str.replace('_',' ').str.title()
+df['sub_type'] = df['sub_type'].str.replace('_',' ').str.title()
+df['mat_type'] = df['mat_type'].str.replace('_',' ').str.title()
 # %%
 
 
-df_tc = df.where(df['SM_type'] == 'thermochemical').dropna(subset=['SM_type'])
+df_tc = df.where(df['SM_type'] == 'Thermochemical').dropna(subset=['SM_type'])
 df_tc = df_tc.dropna(axis=1,how='all')
 df_tc = df_tc.where(df_tc['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 

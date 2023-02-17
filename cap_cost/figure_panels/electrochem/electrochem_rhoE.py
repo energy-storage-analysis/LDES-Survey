@@ -41,6 +41,11 @@ df['display_text'] = formula_strings
 
 
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
+df['SM_type'] = df['SM_type'].replace('synfuel', 'Synthetic fuel')
+df['SM_type'] = df['SM_type'].str.replace('_',' ').str.title()
+df['sub_type'] = df['sub_type'].str.replace('_',' ').str.title()
+df['mat_type'] = df['mat_type'].str.replace('_',' ').str.title()
+df['mat_type'] = df['mat_type'].str.replace('Lohc','LOHC')
 
 Ckwh_cutoff = 30
 y_max = Ckwh_cutoff*1.3
@@ -48,14 +53,14 @@ y_max = Ckwh_cutoff*1.3
 #%%
 
 df_ec_synfuel = df.where(df['SM_type'].isin([
-'synfuel'
+'Synthetic Fuel'
 ])).dropna(subset=['SM_type'])
 
 
 SM_type_display = []
 for idx, row in df_ec_synfuel.iterrows():
-    if row['sub_type'] == 'chemical':
-        t = row['SM_type'] + "\n(" + row['sub_type'] + ',\n' + row['mat_type']+ ")"
+    if row['sub_type'] == 'Chemical':
+        t = row['SM_type'] + "\n(" + row['mat_type']+ ")"
     else:
         t = row['SM_type'] + "\n(" + row['sub_type'] + ")"
 
@@ -65,7 +70,7 @@ df_ec_synfuel['SM_type'] = SM_type_display
 
 
 df_ec_decoupled = df.where(df['SM_type'].isin([
-'flow_battery',
+'Flow Battery',
 ])).dropna(subset=['SM_type'])
 
 df_ec_decoupled = pd.concat([
@@ -76,7 +81,7 @@ df_ec_decoupled
 
 # %%
 df_ec_coupled = df.where(df['SM_type'].isin([
-'coupled_battery',
+'Coupled Battery',
 ])).dropna(subset=['SM_type'])
 
 df_ec_coupled = df_ec_coupled.where(df_ec_coupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')

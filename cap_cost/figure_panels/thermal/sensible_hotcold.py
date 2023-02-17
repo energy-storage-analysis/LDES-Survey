@@ -32,10 +32,13 @@ hot_xlim = (0,2100)
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
+df['SM_type'] = df['SM_type'].str.replace('_',' ').str.title()
+df['sub_type'] = df['sub_type'].str.replace('_',' ').str.title()
+df['mat_type'] = df['mat_type'].str.replace('_',' ').str.title()
 
 
 # %%
-df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
+df_sens = df.where(df['SM_type'] == 'Sensible Thermal').dropna(subset=['SM_type'])
 df_sens = df_sens.dropna(axis=1, how='all')
 df_sens = df_sens.rename({'Vegetable Oil': 'Veg. Oil'})
 
@@ -50,8 +53,8 @@ df_sens_ds.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'sens_ds.csv'))
 #%%
 
 
-df_cold = df_sens_ds[df_sens_ds['sub_type'] == 'cold']
-df_hot = df_sens_ds[~(df_sens_ds['sub_type'] == 'cold')]
+df_cold = df_sens_ds[df_sens_ds['sub_type'] == 'Cold']
+df_hot = df_sens_ds[~(df_sens_ds['sub_type'] == 'Cold')]
 
 df_hot
 

@@ -26,8 +26,14 @@ Ckwh_cutoff = 50
 y_lim = (0.1, 100)
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
+
+
+df['SM_type'] = df['SM_type'].str.replace('_',' ').str.title()
+df['sub_type'] = df['sub_type'].str.replace('_',' ').str.title()
+df['mat_type'] = df['mat_type'].str.replace('_',' ').str.title()
+
 # %%
-df_latent = df.where(df['SM_type'] == 'latent_thermal').dropna(subset=['SM_type'])
+df_latent = df.where(df['SM_type'] == 'Latent Thermal').dropna(subset=['SM_type'])
 df_latent = df_latent.dropna(axis=1, how='all')
 df_latent_ds = df_latent.where(df_latent['C_kwh'] <Ckwh_cutoff).dropna(how='all')
 
@@ -93,7 +99,7 @@ adjust_text_after(fig, ax, "LiF/MgF_{2}", all_texts, 650,80)
 
 leg = ax.get_legend()
 leg.set_title('')
-leg.set_bbox_to_anchor([0,0,0.3,0.2])
+leg.set_bbox_to_anchor([0,0,0.3,0.3])
 
 plt.tight_layout()
 

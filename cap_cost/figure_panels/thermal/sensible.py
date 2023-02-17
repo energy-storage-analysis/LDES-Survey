@@ -24,8 +24,13 @@ df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), inde
 
 df.index = [re.sub('(\D)(\d)(\D|$)',r'\1_\2\3', s) for s in df.index] #Simple way to format chemical equations as latex. Assumes only time numbers are showing up. 
 
+
+
+
+
+
 # %%
-df_sens = df.where(df['SM_type'] == 'sensible_thermal').dropna(subset=['SM_type'])
+df_sens = df.where(df['SM_type'] == 'Sensible thermal').dropna(subset=['SM_type'])
 df_sens = df_sens.dropna(axis=1, how='all')
 df_sens = df_sens.rename({'Vegetable Oil': 'Veg. Oil'})
 
