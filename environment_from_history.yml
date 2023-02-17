@@ -30,4 +30,8 @@ dependencies:
   - adjusttext
   - numpy-financial
   - cairosvg
+  - pytablewriter
+  - dominate
+  - docxcompose
+  - coolprop
 prefix: C:\Users\aspit\anaconda3\envs\energystorage
