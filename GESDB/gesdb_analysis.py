@@ -38,7 +38,7 @@ df = df.rename({
 df 
 
 
-df.info()
+# df.info()
 
 #%%
 

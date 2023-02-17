@@ -26,10 +26,6 @@ fps = list_fps(folder, 'mat_lookup.csv')
 dfs = []
 for fp in fps:
     df = pd.read_csv(fp, index_col=0)
-
-    print(fp)
-    print(df.columns)
-
     dfs.append(df)
 
 df_out = pd.concat(dfs)
@@ -48,11 +44,6 @@ fps = list_fps(folder, 'SM_lookup.csv')
 dfs = []
 for fp in fps:
     df = pd.read_csv(fp, index_col=0)
-
-    # print(fp)
-    # print('----')
-    # print(df.columns)
-
     dfs.append(df)
 
 df_out = pd.concat(dfs)

@@ -23,7 +23,6 @@ df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), 
 df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
 df_mat_data_all = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data_all.csv'), index_col=0, drop_units=True)
 # %%
-df_mat_data_all.info()
 
 stats = {}
 

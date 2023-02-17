@@ -1,28 +1,46 @@
-# TODO
-
+### Main shell script to generate the final figures and supporting information from the raw extracted datasets
+### TODO: add ability to only run individual portions from here. 
 
 # Export the vars in .env into your shell:
-# https://gist.github.com/judy2k/7656bfe3b322d669ef75364a46327836
-# export $(egrep -v '^#' ../.env | xargs)
+# https://stackoverflow.com/questions/5228345/how-can-i-reference-a-file-for-variables-using-bash
+source .env
 
-# Generate visualizations
-
-cd lcos
-echo "Generating LCOS Figure Panels"
+# Generate the LCOS analysis data and figures
+cd $REPO_DIR/lcos
+echo "---Generating LCOS Figure Panels---"
 python vis_lcos_pub.py
-cd ..
 
-cd GESDB
-echo "Generating GESDB Figure Panels"
+# Generate the Global Energy Storage Database Figures
+cd $REPO_DIR/GESDB
+echo "---Generating GESDB Figure Panels---"
 python gesdb_analysis.py
-cd ..
 
-cd cap_cost
-echo "Generating database and figure panels"
+# Perform the data processing for each individual source. Due to the long processing time, the data extraction is not run by default (see process_all.sh for more info)
+cd $REPO_DIR/cap_cost/datasets
+echo "---Running Process Scripts for each data source---"
+./process_all.sh
+
+# Once the data from each source is ready, it is consolidated into the final dataset and the corresponding figure panels are generated. 
+cd $REPO_DIR/cap_cost
+echo "---Generating final database and figure panels---"
 ./run_all.sh vis
-cd ..
 
-cd figures
-echo "Generating final figures from svg files"
-python genfigs.py
-cd ..
+# Final manuscript figure generation temporarily manual export from inkscape
+
+# cd figures
+# echo "---Generating final figures from svg files---"
+# python genfigs.py
+# cd REPO_DIR
+
+# Run a series of scripts to generate metadata about the final dataset, primarily for the supporting information
+cd $REPO_DIR/cap_cost/source_meta
+echo "---Generating final source metadata---"
+./run_all.sh
+
+# Consolidate metadata and source readme files, then generate the supporting information Word document. 
+
+cd $REPO_DIR/SI_docs
+echo "---Generating Supporting information---"
+./gen_SI.sh
+
+
