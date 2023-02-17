@@ -5,7 +5,7 @@ import pandas as pd
 from es_utils.units import ureg
 
 
-s = pd.read_csv('Henry_Hub_Natural_Gas_Spot_Price.csv', skiprows=4, index_col=0, parse_dates=True, squeeze=True)
+s = pd.read_csv('United_States_Natural_Gas_Industrial_Price.csv', skiprows=4, index_col=0, parse_dates=True, squeeze=True)
 
 
 s = s.astype('pint[USD/cubic_foot]')
@@ -15,7 +15,7 @@ s = s/1000
 # s.pint.magnitude.plot()
 
 s = s.sort_index()
-s = s.last('5Y')
+s = s.last('10Y')
 
 SP_vol = s.mean()
 
@@ -54,7 +54,7 @@ from es_utils.units import prep_df_pint_out
 mat_dict = {
     'molecular_formula': ['CH4'],
     'source': ['EIA Henry Hub'],
-    'notes': ["Average over last 5 years"],
+    'notes': ["Average over last 10 Years"],
     'specific_price': [SP.magnitude]
 }
 
