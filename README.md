@@ -16,7 +16,7 @@ The folder structure of the repository is outlined below. Most folders have READ
 
 The codes in this work were run on Windows with VS Code running a linux terminal with Git Bash. The Python packages were managed with conda and an environment file was exported such that the environment can be recreated with the command `conda env create -f environment.yml`. The `environment_from_history.yml` was created with the `--from-history` flag, which may work on systems other than Windows. 
 
-the es_utils module in the base path of the repository needs to be accessed. This can be done using conda by running `conda develop .` in the repository directory
+the es_utils module and seaborn submodule in the base path of the repository needs to be accessed. This can be done by running `python setup.py install` in the root repository and then in the seaborn directory. 
 
 You need to create a file called `.env` in the root repository directory with the following info
 
