@@ -4,9 +4,12 @@ import numpy as np
 from bokeh.layouts import column, row
 from bokeh.models import CustomJS, Slider
 from bokeh.plotting import ColumnDataSource, figure, show, output_file
-from bokeh.io import save
-from sympy import O
+from bokeh.io import save, curdoc
+import os
 
+if not os.path.exists('output_bokeh'): os.mkdir('output_bokeh')
+
+### Duration dependence
 
 duration = np.linspace(0, 100, 500)
 lcos = [0]*len(duration)
@@ -46,43 +49,22 @@ Ckwh_slider.js_on_change('value', callback)
 Ckw_slider.js_on_change('value', callback)
 eta_slider.js_on_change('value', callback)
 lifetime_slider.js_on_change('value', callback)
-# PE_slider.js_on_change('value', callback)
-
-# amp_slider.trigger('value', 1, 1.1)
-# callback._trigger_event()
 
 layout = row(
     plot,
     column(Ckwh_slider, Ckw_slider, eta_slider, lifetime_slider),
 )
 
+# This is so the line will show up upon document load. 
+# https://github.com/bokeh/bokeh/pull/12370
 
-#https://stackoverflow.com/questions/58537180/how-to-access-and-update-bokeh-plots-or-widgets-using-an-external-javascript-cod
-#https://github.com/bokeh/bokeh/issues/4272
-# I cannot get this to work, need to move the slider manually or have redundant equation 
-template = """
-{% block postamble %}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var slider = Bokeh.documents[0].get_model_by_id("1040")
-            console.log('slider value before:', slider.value)
-            slider.value = 1.1
-            console.log('slider value after:', slider.value)
-        });
-    </script>
-{% endblock %}
-"""
+curdoc().js_on_event("document_ready", callback)
 
-output_file('output/lcos_duration.html')
-
-# amp_slider.value = 1.1
+output_file('output_bokeh/lcos_duration.html')
 save(layout)
 
-# amp_slider.value = 1.2
 
-
-
+### Maximum power capital 
 
 C_kWh = np.logspace(0, 3, 500)
 C_kW = [0]*len(C_kWh)
@@ -124,18 +106,13 @@ lifetime_slider.js_on_change('value', callback)
 PE_slider.js_on_change('value', callback)
 LCOS_slider.js_on_change('value', callback)
 
-# amp_slider.trigger('value', 1, 1.1)
-# callback._trigger_event()
-
 layout = row(
     plot,
     column(LCOS_slider, PE_slider, duration_slider,  eta_slider, lifetime_slider),
 )
 
 
+curdoc().js_on_event("document_ready", callback)
 
-# amp_slider.value = 1.1
-output_file('output/lcos_viability.html')
+output_file('output_bokeh/lcos_viability.html')
 save(layout)
-
-# amp_slider.value = 1.2
