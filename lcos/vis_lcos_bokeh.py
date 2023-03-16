@@ -2,7 +2,7 @@
 import numpy as np
 
 from bokeh.layouts import column, row
-from bokeh.models import CustomJS, Slider
+from bokeh.models import CustomJS, Slider, Div
 from bokeh.plotting import ColumnDataSource, figure, show, output_file
 from bokeh.io import save, curdoc
 import os
@@ -16,32 +16,59 @@ lcos = [0]*len(duration)
 
 source = ColumnDataSource(data=dict(duration=duration, lcos=lcos))
 
-plot = figure(y_range=(0,0.2), width=400, height=400)
+plot = figure(y_range=(0,0.2), width=800, height=400)
 
-plot.yaxis.axis_label = "LCOS ($/kWh)"
-plot.xaxis.axis_label = "Discharge Duration (h)"
+plot.yaxis.axis_label = "LCOS (USD/kWh)"
+plot.yaxis.major_label_text_font_size = "12pt"
+plot.yaxis.axis_label_text_font_size = "12pt"
+
+plot.xaxis.axis_label = "Discharge Duration (hours)"
+plot.xaxis.major_label_text_font_size = "12pt"
+plot.xaxis.axis_label_text_font_size = "12pt"
 
 plot.line('duration', 'lcos', source=source, line_width=3, line_alpha=0.6)
 
-Ckwh_slider = Slider(start=1, end=300, value=100, step=1, title="Energy Capital Cost ($/kWh)")
-Ckw_slider = Slider(start=10, end=10000, value=100, step=10, title="Power Capital Cost ($/kWh)")
-eta_slider = Slider(start=0.1, end=1, value=0.8, step=.1, title="Round Trip Efficiency")
-lifetime_slider = Slider(start=5, end=50, value=20, step=5, title="Lifetime (Years)")
-# PE_slider = Slider(start=1, end=20, value=2.5, step=0.5, title="Price Electricity (cents/kWh)")
+Ckwh_slider = Slider(start=1, end=300, value=100, step=1, title=r"$$C_{kWh} (USD/kWh)$$")
+Ckw_slider = Slider(start=100, end=2000, value=1000, step=10, title="$$C_{kW} (USD/kW)$$")
+eta_slider = Slider(start=0.1, end=1, value=0.8, step=.01, title="$$\eta_{RT}$$")
+lifetime_slider = Slider(start=5, end=50, value=20, step=1, title="Lifetime (Years)")
+discount_slider = Slider(start=0.01, end=.2, value=0.05, step=.01, title="Discount Rate")
+PE_slider = Slider(start=0.01, end=0.1, value=0.05, step=0.01, title="$$P_{chg} (USD/kWh)$$")
 
-callback = CustomJS(args=dict(source=source, Ckwh_slider=Ckwh_slider, Ckw_slider=Ckw_slider, eta_slider=eta_slider, lifetime_slider=lifetime_slider),
+p_text = Div(text="""<p style="font-size:16pt;">This is a paragraph.</p>""",
+width=200, height=100)
+
+
+
+
+callback = CustomJS(args=dict(source=source, 
+                              Ckwh_slider=Ckwh_slider, 
+                              Ckw_slider=Ckw_slider, 
+                              eta_slider=eta_slider, 
+                              lifetime_slider=lifetime_slider,
+                              discount_slider=discount_slider,
+                              PE_slider=PE_slider,
+                              p_text=p_text
+                              ),
                     code="""
     const data = source.data;
     const Ckwh = Ckwh_slider.value;
     const Ckw = Ckw_slider.value;
     const eta = eta_slider.value;
-    const lifetime = lifetime_slider.value;
-    const PE = 0.025;
+    const LT = lifetime_slider.value;
+    const r = discount_slider.value;
+    const PE = PE_slider.value;
+
+    const LT_eff = (1 - 1/(1 + r)**LT)/r;
+
+
     const duration = data['duration']
     const lcos = data['lcos']
     for (let i = 0; i < duration.length; i++) {
-        lcos[i] = ((1/eta) - 1)*PE + (1/(lifetime*8760*eta))*(Ckw + Ckwh*duration[i]);
+        lcos[i] = ((1/eta) - 1)*PE + (1/(LT_eff*8760*eta))*(Ckw + Ckwh*duration[i]);
     }
+
+    p_text.text = "<p style=font-size:16pt;>LCOS at 100 hours: ".concat(lcos[duration.length - 1].toFixed(3), " USD/kWh <\p>")
     source.change.emit();
 """)
 
@@ -49,10 +76,12 @@ Ckwh_slider.js_on_change('value', callback)
 Ckw_slider.js_on_change('value', callback)
 eta_slider.js_on_change('value', callback)
 lifetime_slider.js_on_change('value', callback)
+discount_slider.js_on_change('value', callback)
+PE_slider.js_on_change('value', callback)
 
 layout = row(
     plot,
-    column(Ckwh_slider, Ckw_slider, eta_slider, lifetime_slider),
+    column(Ckwh_slider, Ckw_slider, eta_slider, lifetime_slider, discount_slider, PE_slider, p_text),
 )
 
 # This is so the line will show up upon document load. 
@@ -71,7 +100,7 @@ C_kW = [0]*len(C_kWh)
 
 source = ColumnDataSource(data=dict(C_kWh=C_kWh, C_kW=C_kW))
 
-plot = figure(y_range = (1e1, 1e5), width=400, height=400, y_axis_type='log', x_axis_type='log')
+plot = figure(y_range = (1e1, 1e5), width=1000, height=500, y_axis_type='log', x_axis_type='log')
 
 plot.yaxis.axis_label = "Power Capital Cost ($/kWh)"
 plot.xaxis.axis_label = "Energy Capital Cost ($/kWh)"
