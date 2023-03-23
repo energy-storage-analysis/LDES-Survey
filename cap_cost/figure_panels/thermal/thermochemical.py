@@ -53,7 +53,7 @@ y_str='C_kwh'
 
 xlim = (0,2000)
 
-sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='mat_type', legend=True, s=MARKER_SIZE)
+sns.scatterplot(data=df_tc, y=y_str, x=x_str, hue='mat_type', style='mat_type', legend=True, s=MARKER_SIZE)
 
 # df_tc.plot.scatter(y='C_kwh', x=x_str, sharex=False)
 

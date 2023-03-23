@@ -102,7 +102,7 @@ xlim=(2e-2,2e1)
 x_str='specific_energy'
 y_str='C_kwh'
 
-sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', legend=True, s=marker_size)
+sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', style='sub_type', legend=True, s=marker_size)
 
 ax = plt.gca()
 ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
@@ -147,7 +147,7 @@ xlim = (0.1, 60)
 
 fig = plt.figure()
 
-sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', legend=True, s=marker_size)
+sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', style='SM_type', legend=True, s=marker_size)
 
 ax = plt.gca()
 

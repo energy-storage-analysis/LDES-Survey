@@ -89,7 +89,7 @@ y_str='C_kwh'
 
 #https://stackoverflow.com/questions/225115MARKER_SIZE/gridspec-with-shared-axes-in-python
 ax_hot = fig.add_subplot(spec[1:], sharey=ax_cold)
-sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='mat_type',legend=True,ax=ax_hot, s=MARKER_SIZE)
+sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='mat_type',legend=True,ax=ax_hot, s=MARKER_SIZE, style='mat_type')
 texts_hot =annotate_points(df_hot, x_str,y_str,text_col='display_text',ax=ax_hot)
 
 
