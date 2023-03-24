@@ -1,6 +1,10 @@
 import numpy as np
 import pandas as pd
 import re
+from pyvalem.formula import Formula
+import chemparse
+from monty.fractions import gcd_float
+from pymatgen.core.composition import CompositionError, Composition
 
 def get_top_formula(formula_dict):
     """
@@ -14,8 +18,12 @@ def get_top_formula(formula_dict):
         return None
 
 
-
-
+def pymatgen_process(f):
+    if f != f:
+        return np.nan
+    f = str(f)
+    s, gcd = normalize_formula(f)
+    return s
 
 def process_mat_lookup(mat_lookup):
 
@@ -39,9 +47,6 @@ def process_mat_lookup(mat_lookup):
     return mat_lookup
 
 
-from pyvalem.formula import Formula
-import chemparse
-
 def get_molecular_mass(f):
     if f == 'O2': #Assuming O2 means air...
         return 0
@@ -56,8 +61,6 @@ def get_molecular_mass(f):
         total_mm += element_mm*amount
 
     return total_mm
-
-
 
 
 def calculate_formula_price(chemparse_dict, element_prices):
@@ -92,8 +95,6 @@ def normalize_list(l_str):
 
 ## Custom functions from mat2vec. 
 
-from monty.fractions import gcd_float
-from pymatgen.core.composition import CompositionError, Composition
 
 def get_ordered_integer_formula(el_amt, max_denominator=1000):
     """Converts a mapping of {element: stoichiometric value} to a alphabetically ordered string.
@@ -142,12 +143,6 @@ def normalize_formula(formula, max_denominator=1000):
         #Happens if string does not match formula
         return formula, 1
 
-def pymatgen_process(f):
-    if f != f:
-        return np.nan
-    f = str(f)
-    s, gcd = normalize_formula(f)
-    return s
 
 
 def calc_hydrate_factor(anhydrous_formula, hydrate_count):
@@ -159,7 +154,6 @@ def calc_hydrate_factor(anhydrous_formula, hydrate_count):
 
     price_factor = (mu_anhydrous+mu_hydrate)/mu_anhydrous
     return price_factor
-
 
 
 def format_chem_formula(s):
