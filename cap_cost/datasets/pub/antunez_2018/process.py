@@ -2,7 +2,6 @@
 import pandas as pd
 import os
 import numpy as np
-from sympy import O
 from es_utils.units import prep_df_pint_out, convert_units, read_pint_df
 import es_utils
 

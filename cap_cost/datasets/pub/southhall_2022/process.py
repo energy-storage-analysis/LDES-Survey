@@ -1,7 +1,6 @@
 #%%
 
 import pandas as pd
-from sympy import O
 from es_utils.chem import get_molecular_mass, calc_rH2_deltaG_hydrogen_carrier
 from es_utils.units import prep_df_pint_out
 
