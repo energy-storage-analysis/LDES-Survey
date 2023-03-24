@@ -202,7 +202,7 @@
        width="57.56031"
        height="60.406723"
        preserveAspectRatio="none"
-       xlink:href="../../lcos/output/LCOS_Duraiton_pub.png"
+       xlink:href="../lcos/output/LCOS_Duraiton_pub.png"
        id="image916"
        x="-30.999105"
        y="158.07277" /><path
@@ -838,14 +838,14 @@
        width="17.084791"
        height="17.084791"
        preserveAspectRatio="none"
-       xlink:href="../../lcos/output/legend_Ckwh.png"
+       xlink:href="../lcos/output/legend_Ckwh.png"
        id="image7541"
        x="-18.952658"
        y="159.57504" /><image
        width="17.084791"
        height="17.084791"
        preserveAspectRatio="none"
-       xlink:href="../../lcos/output/legend_eta.png"
+       xlink:href="../lcos/output/legend_eta.png"
        id="image7553"
        x="-5.8455458"
        y="159.46489" /><text
