@@ -1,4 +1,7 @@
 #%%
+import os
+if not os.path.exists('output'): os.mkdir('output')
+
 import numpy as np
 import matplotlib.pyplot as plt
 

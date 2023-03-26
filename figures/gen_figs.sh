@@ -3,6 +3,19 @@
 # Requires Inkscape and ImageMagick 6.8 (doesn't work with 6.6.9).
 # From matsen: https://gist.github.com/matsen/4263955
 
+mkdir -p output
+
+cd schematics
+
+mkdir -p output
+
+for i in *.svg; do
+  BN=$(basename $i .svg)
+  inkscape --without-gui --export-filename="output/$BN.png" --export-dpi 300 $i
+done
+
+cd .. 
+
 
 for i in *.svg; do
   BN=$(basename $i .svg)

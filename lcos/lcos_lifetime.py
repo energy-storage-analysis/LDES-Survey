@@ -1,4 +1,7 @@
 # %%
+import os
+if not os.path.exists('output'): os.mkdir('output')
+
 import matplotlib.pyplot as plt
 import numpy as np
 import numpy_financial as npf
