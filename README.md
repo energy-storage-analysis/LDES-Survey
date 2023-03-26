@@ -36,6 +36,13 @@ python setup.py develop
 
 ## Generating the dataset and figures
 
-In general, Python scripts are meant to be run in their respective folders in a linux shell (i.e. `cd` into their directory). This can be accomplished on windows by installing Git Bash. The `run_all.sh` script in the top folder of the repository is a main script that runs various other shell and Python scripts to form the final dataset and generate the final analysis. This main script also serves as a high level overview of the data flow used in this work, and which folders or sub shell scripts to examine for further information about a specific portion of the process.  
+In general, Python scripts are meant to be run in their respective folders in a linux shell (i.e. `cd` into their directory). This can be accomplished on windows by installing Git Bash. The `run_all.sh` script in the top folder of the repository is a main script that runs various other shell and Python scripts to form the final dataset and generate the final analysis. This main script also serves as a high level overview of the data flow used in this work, and which folders or sub shell scripts to examine for further information about a specific portion of the process. 
+
+There are various extra scripts, notebooks, etc. that were used throughout the research of this project, but did not contribute to the final figures in the main text or supporting information of this work. Some of these have been kept in case they are useful in the future, but only the scripts outlined in `run_all.sh` have been tested. 
 
 For the final figures, the Inkscape command line tool is used to convert the svg files into tiff. Inkscape must be installed and (on Windows) the the folder that `inkscape.exe` is in must be added to the PATH (as shown [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)). 
+
+
+## Development notes
+
+requirements.txt generated with `pipreqs . --encoding=utf8 --ignore venv,seaborn --force` then removing `seaborn` and `cpi`. 

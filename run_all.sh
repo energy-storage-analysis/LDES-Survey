@@ -27,10 +27,9 @@ echo "---Generating final database and figure panels---"
 
 # Final manuscript figure generation temporarily manual export from inkscape
 
-# cd figures
-# echo "---Generating final figures from svg files---"
-# python genfigs.py
-# cd REPO_DIR
+cd $REPO_DIR/figures
+echo "---Generating final figures from svg files---"
+./gen_figs.sh
 
 # Run a series of scripts to generate metadata about the final dataset, primarily for the supporting information
 cd $REPO_DIR/cap_cost/source_meta
