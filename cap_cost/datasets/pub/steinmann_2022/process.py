@@ -50,7 +50,8 @@ df_t21.iloc[16:17]#.assign(Type='Vegetable oil'),
 df_t21 = df_t21.rename({
     "KNO3-NaNO3 [Solar Salt, Draw salt,": 'Solar Salt',
     "Partherm 430]\nNaNO2-KNO3-NaNO3 [Heat transfer": 'HITEC',
-    "salt (HTS), HITEC-HTS (Coastal": 'HITEC XL'
+    "salt (HTS), HITEC-HTS (Coastal": 'HITEC XL',
+    "Therminol VP1\n(vapor pressure at 400 °C: 10.9 bar)": 'Therminol VP1'
     })
 
 #%%

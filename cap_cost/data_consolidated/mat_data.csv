@@ -5,7 +5,7 @@ AQDS,7.15,3.323401871576773,0.46,,5,2,"Alibaba, Li 2017","4.8, 9.5",C14H8O8S2,36
 Activated Carbon,16.375,19.26865978733342,1.18,,0,2,"Li 2017, Liu 2016","2.75, 30.0",C,12.011,"Activated Carbon, Active carbon",
 Ag,653.7048312034364,80.3193030827006,0.12,,0,4,"DERA, Huang 2021, Kitco, USGS","608.49, 609.9, 697.51, 776.0",Ag,107.8682,"SILBER, Silver, Silver Bullion",521.0
 Air,0.0,,,,1,1,Li 2017,0.0,O2,0.0,,
-Al,2.405,0.8143695435050449,0.34,,30,9,"Alibaba, DERA, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.01, 2.39, 2.4, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"ALUMINIUM, Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
+Al,2.405,0.8143695435050449,0.34,,31,9,"Alibaba, DERA, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.52, 1.95, 2.01, 2.39, 2.4, 2.45, 3.07, 3.81, 3.86",Al,26.9815384,"ALUMINIUM, Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
 Al2O3,0.9243857600000001,2.5348376226805804,2.74,,3,8,"Alibaba, DERA, Echemi, Indiamart, Liu 2016, SMM, Steinmann 2022, USGS","0.52, 0.53, 0.77, 0.84, 1.01, 1.11, 1.32, 8.0",Al2O3,101.9600768,"ALUMINIUMOXID, Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
 AlSc,340.0,,,,0,1,USGS,340.0,AlSc,71.9374464,Scandium Mtl_Alloy,2162.93108
 Ammonium Heptamolybdate,23.404670000000003,6.203688207655184,0.27,,0,2,"ISE, SMM","19.02, 27.79","(NH4)6Mo7O24, H50Mo7N6O28 ",1163.86,"Ammonium heptamolybdate, Hexaammonium molybdate",
@@ -119,14 +119,14 @@ Iron Ore,0.10118,0.022443457511213235,0.22,,3,3,"DERA, Olympios 2021, USGS","0.1
 Iron Oxide Pigment,1.03,,,,0,1,USGS,1.03,Fe2O3,159.687,Iron Oxide Pigments ,
 Isopentane,0.8422755,0.5058988394931342,0.6,,1,2,"Antunez 2018, Echemi","0.48, 1.2",C5H12,72.151,Isopentane,
 K,76.04546196638984,76.92613536404406,1.01,,17,2,"Kim 2013, SMM","130.44, 21.65",K,39.0983,"K, Potassium",12.85
-K2CO3,1.2537712210084133,2.4000050067679313,1.91,,5,6,"Alibaba, Alva 2018, Echemi, Indiamart, Liu 2016, Ray 2021","0.79, 1.1, 1.21, 1.3, 7.0",K2CO3,138.2046,K2CO3,7.3346559
+K2CO3,1.2537712210084133,2.4000050067679313,1.91,,6,6,"Alibaba, Alva 2018, Echemi, Indiamart, Liu 2016, Ray 2021","0.79, 1.1, 1.21, 1.3, 7.0",K2CO3,138.2046,K2CO3,7.3346559
 K2O,0.9193276333109396,,,,0,1,USGS,0.92,K2O,94.1956,Potash All,10.6936009
 K2SO4,0.5534581000000001,3.8833667362511974,7.02,,1,4,"Alibaba, Alva 2018, Echemi, Indiamart","0.35, 0.55, 0.56, 8.25",K2SO4,174.2526,K2SO4,5.8400876
 K4Fe(CN)6,3.231036155660083,1.7409480271061262,0.54,,6,2,"Alibaba, Li 2017","2.0, 4.46",C6FeK4N6,368.3462,,5.575974
 KCl,0.5251716354453824,2.8986178988384683,5.52,,9,6,"Alibaba, Alva 2018, Echemi, Indiamart, Ray 2021, USGS","0.4, 0.5, 0.51, 0.54, 0.56, 7.6",KCl,74.5483,"KCl, Potash Muriate",6.7784249
 KF,104.42112497394963,139.41158202532284,1.34,,8,2,"Alva 2018, Ray 2021","203.0, 5.84",KF,58.0967032,KF,9.3019041
 KFRP,27.1,,,,3,1,Kale 2018,27.1,,,Kevlar-49 Epoxy,
-KNO3,0.7832000000000001,3.1690388090607744,4.05,,4,4,"Alibaba, Alva 2018, Indiamart, Steinmann 2022","0.45, 0.68, 0.89, 7.0",KNO3,101.1023,KNO3,5.0618598
+KNO3,0.7832000000000001,3.1690388090607744,4.05,,5,4,"Alibaba, Alva 2018, Indiamart, Steinmann 2022","0.45, 0.68, 0.89, 7.0",KNO3,101.1023,KNO3,5.0618598
 KOH,1.39637036,1.7680680522472276,1.27,,1,5,"Alibaba, Alva 2018, Echemi, Indiamart, Li 2017","0.78, 0.82, 1.4, 1.43, 5.0",KOH,56.1053,KOH,9.0237129
 LCO,34.475,7.813529932111348,0.23,,3,2,"ISE, Li 2017","28.95, 40.0",LiCoO2,97.871194,"LCO, Lithium Cobaltate",
 LFP,15.0,7.0710678118654755,0.47,,1,2,"Alibaba, Li 2017","10.0, 20.0",LiFePO4,157.754762,LFP,
@@ -141,7 +141,7 @@ La,5.143,,,,2,1,ISE,5.14,La,138.90547,Lanthanum metal,4.85
 La2O3,2.0,0.9570963030611567,0.48,,0,2,"DERA, USGS","1.89, 2.0, 3.6",La2O3,325.80794,"Lanthanum (oxide), Rare Earths La2O3",4.1582001
 LaNi5,45.025,49.462119343999,1.1,,1,2,"Alibaba, Li 2017","10.05, 80.0",LaNi5,432.37247,LaNi5,10.9925658
 Li,81.06620208933717,180.07909925521636,2.22,,26,6,"Alibaba, ISE, Kim 2013, Li 2017, SMM, Schnell 2020","0.5, 100.17, 130.0, 496.11, 50.05, 61.96",Li,6.94,"Li, Lithium, Lithium Metal, Lithium metal",83.5
-Li2CO3,51.295,34.59444005732502,0.67,,2,10,"Alibaba, Alva 2018, DERA, Echemi, ISE, Indiamart, Liu 2016, Ray 2021, SMM, USGS","11.24, 111.0, 15.37, 46.8, 51.3, 60.12, 62.06, 7.0, 7.77, 78.96, 79.12",Li2CO3,73.888,"LITHIUM, Li2CO3, Lithium , Lithium Carbonate (99.5% Battery Grade), Lithium Carbonates",15.8055013
+Li2CO3,51.295,34.59444005732502,0.67,,3,10,"Alibaba, Alva 2018, DERA, Echemi, ISE, Indiamart, Liu 2016, Ray 2021, SMM, USGS","11.24, 111.0, 15.37, 46.8, 51.3, 60.12, 62.06, 7.0, 7.77, 78.96, 79.12",Li2CO3,73.888,"LITHIUM, Li2CO3, Lithium , Lithium Carbonate (99.5% Battery Grade), Lithium Carbonates",15.8055013
 Li2O,100.0,,,,1,1,Alibaba,100.0,Li2O,29.879,,38.8715769
 Li2S,1200.935,1695.7339851668953,1.41,,1,2,"Alibaba, Li 2017","1.87, 2400.0",Li2S,45.94,Li2S,25.2927461
 Li2SO4,5.0,102.25535438303464,20.45,,1,3,"Alibaba, Alva 2018, Li 2017","0.85, 180.0, 5.0",Li2SO4,109.936,Li2SO4,10.6589665
@@ -194,7 +194,7 @@ NaF,2.405,3.1968512979376174,1.33,,8,3,"Alva 2018, Indiamart, Ray 2021","1.77, 2
 NaHCO3,0.364,,,,0,1,Echemi,0.36,NaHCO3,84.0057693,,0.9431175
 NaK,2.0,0.0,0.0,,0,2,"Alva 2018, Antunez 2018",2.0,NaK,62.0880693,"Eutectic Na-K, Sodium(22.2%)epotassium (77.8%) eutectic (NaK)",9.2027739
 NaMo2O4,12.485,,,,0,1,ISE,12.48,NaMo2O4,278.8857693,Sodium Molybdate,27.8752649
-NaNO3,1.105,2.9604201751328025,2.68,,4,3,"Alva 2018, Indiamart, Steinmann 2022","0.67, 1.1, 6.0",NaNO3,84.9937693,NaNO3,0.9215008
+NaNO3,1.105,2.9604201751328025,2.68,,6,3,"Alva 2018, Indiamart, Steinmann 2022","0.67, 1.1, 6.0",NaNO3,84.9937693,NaNO3,0.9215008
 NaOH,0.64,1.6236617781880558,2.54,,1,5,"Alibaba, Alva 2018, Echemi, Indiamart, Li 2017","0.27, 0.34, 0.64, 0.73, 4.1",NaOH,39.9967693,NaOH,1.8210039
 Naphthalene,0.9735,0.4716402230514271,0.48,,1,2,"Chemanalyst, Southhall 2022","0.64, 1.31","C10H18, C10H8",138.254,Naphthalene,
 Nb,61.675,57.52313664952564,0.93,,0,2,"SMM, USGS","102.35, 21.0",Nb,92.90637,"Niobium, Niobium (Columbium) ",73.5
@@ -265,6 +265,7 @@ TbO2,686.6,,,,0,1,USGS,686.6,TbO2,190.923354,Rare Earths TbO2,547.7476088
 Te,61.97,123.85438273790518,2.0,,6,5,"Alibaba, DERA, ISE, Kim 2013, USGS","120.0, 344.83, 55.97, 59.2, 61.97",Te,127.6,"TELLUR, Te, Tellurium , Tellurium metal",63.5
 Terpineol,15.0,,,,0,1,Huang 2021,15.0,,,Terpineol,
 Th,72.33333333333333,,,,0,1,USGS,72.33,Th,232.0377,Thorium ,
+Therminol VP1,5.565000000000001,,,,1,1,Steinmann 2022,5.57,,,Therminol VP1,
 Ti,12.6,2.294508008266697,0.18,,4,3,"ISE, SMM, USGS","11.26, 12.6, 15.73",Ti,47.867,"Titan Sponge, Titanium pipe, Titanium plate, Titanium Sponge, Titanium and Titanium Dioxide Sponge",11.4
 Ti2S4,80.0,,,,0,1,Li 2017,80.0,Ti2S4,223.974,Ti2S4,4.925762
 TiCl4,1.233765,0.09229864814827991,0.07,,0,2,"ISE, SMM","1.17, 1.3",TiCl4,189.667,"Titanium tetrachloride, Titanium tetrachloride(99.9%)",2.9383678
