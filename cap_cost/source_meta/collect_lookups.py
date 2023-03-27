@@ -1,5 +1,6 @@
 #%%
 import os
+if not os.path.exists('tables'): os.mkdir('tables')
 import pandas as pd
 
 def list_fps(filepath, search_term):

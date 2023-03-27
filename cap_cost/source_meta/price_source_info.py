@@ -56,64 +56,64 @@ df_count.to_csv('tables/price_source_counts.csv')
 
 df_count
 
-#%%
-import pandas as pd
+# #%%
+# import pandas as pd
 
-#Manually specified types of sources
-df = pd.read_csv('tables/price_source_counts_edit.csv', index_col=0)
+# #Manually specified types of sources
+# df = pd.read_csv('tables/price_source_counts_edit.csv', index_col=0)
 
-df
+# df
 
-#%%
+# #%%
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-fig, axes = plt.subplots(1,2, figsize=(10,5))
+# fig, axes = plt.subplots(1,2, figsize=(10,5))
 
-df['type'].value_counts().plot.bar(ax= axes[0])
-axes[0].set_title('Source Counts')
+# df['type'].value_counts().plot.bar(ax= axes[0])
+# axes[0].set_title('Source Counts')
 
-df.groupby('type')['count'].sum().plot.bar(ax=axes[1])
+# df.groupby('type')['count'].sum().plot.bar(ax=axes[1])
 
-axes[1].set_title('Price Entry Counts')
+# axes[1].set_title('Price Entry Counts')
 
-plt.tight_layout()
-plt.savefig('figures/price_source_counts.png')
-
-
-#%%
-
-df_web = df[df['type'].isin(['Marketplace Website'])].dropna(how='all')
-df_web
+# plt.tight_layout()
+# plt.savefig('figures/price_source_counts.png')
 
 
-#%%
+# #%%
+
+# df_web = df[df['type'].isin(['Marketplace Website'])].dropna(how='all')
+# df_web
 
 
-df_web = df[df['type'].isin(['Commodity Analyst', 'Marketplace Website','Vendor Website'])].dropna(how='all').fillna("No Mention")
-
-fig, axes = plt.subplots(1,2, figsize=(10,5))
-
-df_web['notes'].value_counts().plot.bar(ax= axes[0])
-axes[0].set_title('Source Counts')
-
-df_web.groupby('notes')['count'].sum().plot.bar(ax=axes[1])
-axes[1].set_title('Price Entry Counts')
-
-#%%
+# #%%
 
 
-df_j = df[df['type'].isin(['Publication'])].dropna(how='all')
+# df_web = df[df['type'].isin(['Commodity Analyst', 'Marketplace Website','Vendor Website'])].dropna(how='all').fillna("No Mention")
 
-fig, axes = plt.subplots(1,2, figsize=(10,8))
+# fig, axes = plt.subplots(1,2, figsize=(10,5))
 
-df_j['notes'].value_counts().plot.bar(ax= axes[0])
-axes[0].set_title('Source Counts')
+# df_web['notes'].value_counts().plot.bar(ax= axes[0])
+# axes[0].set_title('Source Counts')
 
-df_j.groupby('notes')['count'].sum().sort_values(ascending=False).plot.bar(ax=axes[1])
-axes[1].set_title('Price Entry Counts')
+# df_web.groupby('notes')['count'].sum().plot.bar(ax=axes[1])
+# axes[1].set_title('Price Entry Counts')
+
+# #%%
 
 
-plt.tight_layout()
-plt.savefig('figures/publication_source_methods.png')
+# df_j = df[df['type'].isin(['Publication'])].dropna(how='all')
+
+# fig, axes = plt.subplots(1,2, figsize=(10,8))
+
+# df_j['notes'].value_counts().plot.bar(ax= axes[0])
+# axes[0].set_title('Source Counts')
+
+# df_j.groupby('notes')['count'].sum().sort_values(ascending=False).plot.bar(ax=axes[1])
+# axes[1].set_title('Price Entry Counts')
+
+
+# plt.tight_layout()
+# plt.savefig('figures/publication_source_methods.png')
 
