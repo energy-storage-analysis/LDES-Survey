@@ -1,0 +1,1 @@
+find . -name '*.csv' -exec sed -i -e 's/\r\n/\n/g' {} \;
