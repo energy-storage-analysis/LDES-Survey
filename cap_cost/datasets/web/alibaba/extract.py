@@ -19,7 +19,7 @@ hydrate_lookup = {
 }
 
 
-df = pd.read_json('output/items.jl', lines=True).set_index('index')
+df = pd.read_json('scraped_data/items.jl', lines=True).set_index('index')
 
 #%%
 df[['price_normal_low','price_normla_high']] = df['price_normal'].str.split('-', expand=True)

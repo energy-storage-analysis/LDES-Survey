@@ -13,16 +13,17 @@ class ScrapyIndiamartPipeline(object):
 
     def open_spider(self, spider):
 
-        if not os.path.exists('output'): os.mkdir('output')
-
-        #with the -a spider_iter=<num> kwarg the file can instead be output to output/temp to be combined later. 
+        if not os.path.exists('scraped_data'): os.mkdir('scraped_data')
+        if not os.path.exists('scraped_data/temp'): os.mkdir('scraped_data/temp')
+        
+        #with the -a spider_iter=<num> kwarg the file can instead be scraped_data to scraped_data/temp to be combined later. 
         if hasattr(spider, 'spider_iter'):
             i = spider.spider_iter
-            self.file = open('output/temp/items_{}.jl'.format(i), 'w')
-            self.dropfile = open('output/temp/items_dropped_{}.jl'.format(i), 'w')
+            self.file = open('scraped_data/temp/items_{}.jl'.format(i), 'w')
+            self.dropfile = open('scraped_data/temp/items_dropped_{}.jl'.format(i), 'w')
         else:
-            self.file = open('output/items.jl', 'w')
-            self.dropfile = open('output/items_dropped.jl', 'w')
+            self.file = open('scraped_data/items.jl', 'w')
+            self.dropfile = open('scraped_data/items_dropped.jl', 'w')
 
     def close_spider(self, spider):
         self.file.close()

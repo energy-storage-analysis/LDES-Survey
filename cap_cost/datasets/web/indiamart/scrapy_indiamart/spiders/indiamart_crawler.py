@@ -12,8 +12,8 @@ import pandas as pd
 import urllib.parse
 
 START_ROW = 0
-NUM_ROWS = sys.maxsize
-# NUM_ROWS = 50
+# NUM_ROWS = sys.maxsize
+NUM_ROWS = 5
 
 RESOURCE_FOLDER = os.path.join(os.path.dirname(__file__), "../resources")
 

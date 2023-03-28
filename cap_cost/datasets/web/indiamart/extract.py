@@ -10,7 +10,7 @@ import pint_pandas
 from es_utils.units import ureg
 
 
-df = pd.read_json('output/items.jl', lines=True).set_index('index')
+df = pd.read_json('scraped_data/items.jl', lines=True).set_index('index')
 
 
 
