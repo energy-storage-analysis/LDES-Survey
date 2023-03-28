@@ -41,6 +41,7 @@ for dirpath, dirnames, filenames in os.walk('.'):
     if 'tables' in dirnames:
         full_dir = os.path.join(dirpath, 'tables')
         copy_folder(full_dir)
+        shutil.rmtree(full_dir)
 
     if 'input_data' in dirnames:
         full_dir = os.path.join(dirpath, 'input_data')

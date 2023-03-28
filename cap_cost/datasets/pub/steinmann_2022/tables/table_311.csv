@@ -1,9 +1,0 @@
-Material ,Composition ,cp [J/kgK],ρp [kg/m3],λp [W/mK],"Agglomoration temperature
-[°C]",Cost [$/t]
-Sand,SiO2,0.9,2600,0.4,480,< 50
-Quartz,SiO2,0.9,2600,0.4,1330,150
-Cristobalite,SiO2,1.0,2300,0.5,1440,200
-Alumina,Al2O3,1.0,4000,0.65,1800,300
-Bauxite,Al2O3,1.0,3600,0.65,1280,400
-Silicon carbide,SiC,1.0,3200,0.65,530,1900
-Olivine,"(Mg, Fe)2[SiO4]",1.2,3400,0.55,1180,175

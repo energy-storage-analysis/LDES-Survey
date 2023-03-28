@@ -1,5 +1,0 @@
-SM_name,SM_type,sub_type,mat_type,materials,mat_basis,deltaV,n_e
-V-air,coupled_battery,metal_air,,"[('V2O5', 2), ('Air', 1)]",molar,1.49,4
-Zn/Br2,coupled_battery,hybrid_flow,,ZnBr2,,1.85,2
-V/Br,flow_battery,,inorganic,"[('HBr', 7) , ('HCl', 1), ('V2O5', 1)]",molar,1.29,2
-H2/Br2,flow_battery,,inorganic,HBr,,1.09,1

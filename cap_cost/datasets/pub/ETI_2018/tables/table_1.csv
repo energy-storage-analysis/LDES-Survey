@@ -1,7 +1,0 @@
- SEQUENCE , PHASE ,Estimated times per  well / cavern, Quantity ,Cost (£) per well /  cavern, Totals 
-1,"Drill wells to ±1,800m",30 days,2,"£3,750,000","£7,500,000"
-2,"Leach ±275,000m3 Cavern",1500 days,1,"£5,750,000","£5,750,000"
-3,"MIT's, Run completions & 1st Gas fills",45 days,2,"£2,000,000","£4,000,000"
-4,30 year OPEX Costs,30 years,1,"£9,300,000","£9,300,000"
-5,Decommissioning Costs,30 years,1,"£8,150,000","£8,150,000"
-,Total Cost (Per Cavern) :,,,,"£34,700,000"
