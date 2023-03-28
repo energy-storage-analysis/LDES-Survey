@@ -29,10 +29,8 @@ LiOH,latent_thermal,hot,hydroxide,LiOH,,LiOH,,,,462.0,0.2425,1460.0,,1274.6
 Na,sensible_thermal,hot,metal,Na,,Sodium (Na),0.00036111111111111115,98.0,883.0,,,,64.9,
 NaK,sensible_thermal,hot,metal,"[('Na', 0.5), ('K', 0.5)]",molar,Sodium(22.2%)epotassium (77.8%) eutectic (NaK),0.00024722222222222224,-12.6,785.0,,,,26.3,
 LBE,sensible_thermal,hot,metal,"[('Pb', 0.445), ('Bi', 0.555)]",mass,Lead(44.5%)ebismuth(55.5%) eutectic (LBE),3.888888888888889e-05,125.0,1533.0,,,,14.9,
-Zn/Mg (53.7/46.3),latent_thermal,hot,alloy,"[('Mg', 0.537), ('Zn', 0.463)]",molar,Zn/Mg (53.7/46.3),,,,340.0,0.05138888888888889,4600.0,,851.0
 Zn/Mg (52/48),latent_thermal,hot,alloy,"[('Mg', 0.52), ('Zn', 0.48)]",molar,Zn/Mg (52/48),,,,340.0,0.05,,,
 Zn/Al (96/4),latent_thermal,hot,alloy,"[('Zn', 0.96) , ('Al', 0.04)]",molar,Zn/Al (96/4),,,,381.0,0.03833333333333333,6630.0,,914.9
-Al/Mg/Zn (59/33/6),latent_thermal,hot,alloy,"[('Al', 0.59), ('Mg', 0.33), ('Zn', 0.06)]",molar,Al/Mg/Zn (59/33/6),,,,443.0,0.08611111111111111,2380.0,,737.8
 Al/Mg/Zn (60/34/6),latent_thermal,hot,alloy,"[('Al', 0.6), ('Mg', 0.34), ('Zn', 0.06)]",molar,Al/Mg/Zn (60/34/6),,,,450.3,0.09141666666666667,,,
 Mg/Cu/Zn (60/25/15),latent_thermal,hot,alloy,"[('Mg', 0.6), ('Cu', 0.25), ('Zn', 0.15)]",molar,Mg/Cu/Zn (60/25/15),,,,452.0,0.07055555555555555,2800.0,,711.2
 Mg/Ca (84/16),latent_thermal,hot,alloy,"[('Mg', 0.84), ('Ca', 0.16)]",molar,Mg/Ca (84/16),,,,790.0,0.07555555555555556,1380.0,,375.4
