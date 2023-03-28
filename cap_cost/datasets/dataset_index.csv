@@ -1,5 +1,5 @@
 source,folder,processing_script,extract_script
-DERA,gov\DERA,y,y
+DERA,gov\DERA,y,
 EIA,gov\EIA,y,
 USGS,gov\USGS,y,y
 Cavern,manual\cavern,y,

@@ -5,7 +5,7 @@ import pandas as pd
 from es_utils.units import ureg
 
 
-s = pd.read_csv('United_States_Natural_Gas_Industrial_Price.csv', skiprows=4, index_col=0, parse_dates=True, squeeze=True)
+s = pd.read_csv('input_data/United_States_Natural_Gas_Industrial_Price.csv', skiprows=4, index_col=0, parse_dates=True, squeeze=True)
 
 
 s = s.astype('pint[USD/cubic_foot]')

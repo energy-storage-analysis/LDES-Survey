@@ -2,29 +2,21 @@
 import pandas as pd
 import os
 
-if not os.path.exists('extracted'): os.mkdir('extracted')
-
-fns = os.listdir('downloaded')
-
-
-
-
-# %%
+if not os.path.exists('output'): os.mkdir('output')
 
 dfs = []
 
+fns = os.listdir('input_data')
+
 for fn in fns:
 
-    fp = os.path.join('downloaded',fn)
+    fp = os.path.join('input_data',fn)
 
     df = pd.read_excel(fp)
 
     df = df[['Name','Avg With Rate', 'Unit']]
 
-
-
     dfs.append(df)
-
 
 df = pd.concat(dfs)
 
@@ -44,4 +36,4 @@ df['Name'] = df['Name'].str.replace('\d# ','', regex=True)
 
 df = df.set_index('Name')
 
-df.to_csv('extracted/extracted.csv')
+df.to_csv('output/extracted.csv')

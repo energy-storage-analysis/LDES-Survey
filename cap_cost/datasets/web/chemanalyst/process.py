@@ -3,7 +3,7 @@ import pandas as pd
 from es_utils.units import ureg, prep_df_pint_out
 from es_utils.pdf import average_range
 
-df = pd.read_csv('input.csv', index_col=0)
+df = pd.read_csv('input_data/input.csv', index_col=0)
 
 
 df['price'] = df['price'].apply(average_range).astype(float)

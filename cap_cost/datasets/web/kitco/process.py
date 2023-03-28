@@ -3,7 +3,7 @@ import pandas as pd
 import pint_pandas
 from es_utils.units import ureg
 
-df = pd.read_csv('input.csv', index_col=0)
+df = pd.read_csv('input_data/input.csv', index_col=0)
 
 df = df[['Bid']]
 

@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 from es_utils.pdf import average_range
 from es_utils.units import convert_units, prep_df_pint_out, ureg
 
-df_SM = pd.read_csv('ISE_SM.csv', encoding='ISO-8859-1')
+df_SM = pd.read_csv('input_data/ISE_SM.csv', encoding='ISO-8859-1')
 
 df_SM =df_SM.drop([47,79,81,124]).reset_index(drop=True) # Seems to be a typo for cobalt entry
 
-df_RE = pd.read_csv('ISE_RE.csv', encoding='ISO-8859-1')
+df_RE = pd.read_csv('input_data/ISE_RE.csv', encoding='ISO-8859-1')
 
 df_RE = df_RE[df_RE['original_name'].str.contains('Lanthanum metal')]
 

@@ -9,7 +9,7 @@ import sys
 
 from es_utils.pdf import average_range
 
-salient_dir = 'data/salient'
+salient_dir = 'input_data'
 
 csv_fns = [f for f in os.listdir(salient_dir) if '.csv' in f]
 csv_fps = [os.path.join(salient_dir, fn) for fn in csv_fns]
@@ -54,7 +54,8 @@ for fp in csv_fps[:]:
         'Year': 'year'
     }, axis=1)
 
-    if fp == 'data/salient\mcs2022-sulfu_salient.csv':
+    fn = os.path.split(fp)[1]
+    if fn == 'mcs2022-sulfu_salient.csv':
         df = df.rename(columns={'Price_Sulfur_dtdt': 'Price_Sulfur_dt'})
 
     price_cols = [col for col in df.columns if 'Price' in col]

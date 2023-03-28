@@ -3,7 +3,7 @@
 import pandas as pd
 from es_utils.units import ureg
 
-df = pd.read_csv('input.csv', index_col=0)
+df = pd.read_csv('input_data/input.csv', index_col=0)
 df['price'] = df['price'].str.replace("$",'')
 
 df[['price_low', 'price_hieh']] = df['price'].str.split('-', expand=True)
@@ -14,10 +14,6 @@ df[['price_low', 'price_hieh']] = df['price'].str.split('-', expand=True)
 df['specific_price'] = df['price_low'].astype(float)*1000
 
 df
-
-
-
-# df = df[['original_name','specific_price']]
 
 # %%
 df_out = df.groupby('index')['specific_price'].mean().to_frame()

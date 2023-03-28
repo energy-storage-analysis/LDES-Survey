@@ -9,7 +9,7 @@ IFS=','
 [ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
 
 # Due to the long processing time, the data extraction (e.g. extraction from pdfs) is not run by default but can be by setting run_extract to true
-run_extract=false
+run_extract=true
 run_processing=true
 
 i=1

@@ -4,8 +4,7 @@ import numpy as np
 import pandas as pd
 from es_utils.units import convert_units, prep_df_pint_out, ureg
 
-
-df = pd.read_csv('extracted/extracted.csv')
+df = pd.read_csv('output/extracted.csv')
 
 df = df.rename({
     'Name': 'original_name',
