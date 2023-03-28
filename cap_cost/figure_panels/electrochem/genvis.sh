@@ -1,1 +1,2 @@
-python electrochem_rhoE.py
+python electrochem_rhoE_coupled.py
+python electrochem_rhoE_decoupled.py

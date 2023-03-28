@@ -50,34 +50,6 @@ df['mat_type'] = df['mat_type'].str.replace('Lohc','LOHC')
 Ckwh_cutoff = 30
 y_max = Ckwh_cutoff*1.3
 
-#%%
-
-df_ec_synfuel = df.where(df['SM_type'].isin([
-'Synthetic Fuel'
-])).dropna(subset=['SM_type'])
-
-
-SM_type_display = []
-for idx, row in df_ec_synfuel.iterrows():
-    if row['sub_type'] == 'Chemical':
-        t = row['SM_type'] + "\n(" + row['mat_type']+ ")"
-    else:
-        t = row['SM_type'] + "\n(" + row['sub_type'] + ")"
-
-    SM_type_display.append(t)
-
-df_ec_synfuel['SM_type'] = SM_type_display
-
-
-df_ec_decoupled = df.where(df['SM_type'].isin([
-'Flow Battery',
-])).dropna(subset=['SM_type'])
-
-df_ec_decoupled = pd.concat([
-df_ec_synfuel,
-df_ec_decoupled
-])
-
 
 # %%
 df_ec_coupled = df.where(df['SM_type'].isin([
@@ -85,10 +57,8 @@ df_ec_coupled = df.where(df['SM_type'].isin([
 ])).dropna(subset=['SM_type'])
 
 df_ec_coupled = df_ec_coupled.where(df_ec_coupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
-df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 
 df_ec_coupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_coupled_ds.csv'))
-df_ec_decoupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_decoupled_ds.csv'))
 
 
 
@@ -137,56 +107,3 @@ arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, ori
 adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_fix, *arrows_fix], arrowprops=dict(arrowstyle='->'))
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
-
-
-#%%
-
-print("Decoupled")
-
-xlim = (0.1, 60)
-
-fig = plt.figure()
-
-sns.scatterplot(data=df_ec_decoupled, y=y_str, x=x_str, hue='SM_type', style='SM_type', legend=True, s=marker_size)
-
-ax = plt.gca()
-
-plt.yscale('log')
-plt.xscale('log')
-plt.ylim(bottom=9e-3, top=y_max)
-plt.xlim(*xlim)
-
-texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
-
-# plt.gca().get_legend().set_bbox_to_anchor([0,0.6,0.5,0])
-
-ax.set_title('Decoupled')
-plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
-
-leg = ax.get_legend()
-leg.set_title('Sub Type')
-leg.set_bbox_to_anchor([0,0,1,0.52])
-
-ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
-
-fix_positions = pd.read_csv('fix_positions_decoupled.csv', index_col=0)
-fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
-
-texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
-
-arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
-
-adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_fix, *arrows_fix], arrowprops=dict(arrowstyle='->'))
-
-
-all_texts = [*texts_fix, *texts]
-from es_utils.plot import adjust_text_after
-adjust_text_after(fig, ax, "Na_{2}LiAlH_{3}", all_texts, 3,12)
-
-plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
-
-# %%
-
-
-
