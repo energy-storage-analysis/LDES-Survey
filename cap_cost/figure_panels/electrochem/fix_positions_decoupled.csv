@@ -1,20 +1,26 @@
 name,x,y,fix
-CH_{4}\ (Feedstock),0.2,0.012,y
-CH_{4}\ (Salt),20,0.02,y
-Methanol\ (Feedstock),1,0.04,y
-H_{2}\ (Feedstock),2.0,0.01,y
-CH_{4}\ Spherical\ Pressure,6,2,y
+"S/Air(Li,\ Base)",6,13,y
+H_{2}\ Spherical\ Pressure,6,30,y
+CH_{4}\ Spherical\ Pressure,6,11,y
+"S/Air(Li,\ Base)",6,15,y
+ZrNiH_{3},.8,20,y
+LaNi_{5}H_{6.5},.8,30,y
+Na_{2}LiAlH_{3},3,7,
+H_{2}/Br_{2},0.11,7,y
 Zr(BH_{4})_{4},25,6,
-NaBH_{4},8.0,2.0,
+LiBH_{4},10,8,y
+"S/Air(Li,\ Acid)",4,6.5,y
+Mg_{2}NiH_{4},.4,5,y
 Zn(BH_{4})_{2},1,4,
-Mg(BH_{4})_{2},8,3.0,y
 Ca(BH_{4})_{2},20.0,4.0,
 Al(BH_{4})_{3},25.0,4,y
-"S/Air(Li,\ Acid)",1.5,3.8,
-Na_{2}LiAlH_{3},3,7,
+Ti_{12}Mn_{18}H_{30},0.12,4,y
+Mg(BH_{4})_{2},5,2,y
+NaBH_{4},8.0,2.0,
 Na_{3}AlH_{3},0.5,2.0,
 NaAlH_{2},1.0,1.8,
-Ti_{12}Mn_{18}H_{30},0.12,4,y
-H_{2}/Br_{2},0.11,7,y
-Mg_{2}NiH_{4},.4,5,y
-"S/Air(Li,\ Acid)",5,6,y
+"S/Air(Na,\ Acid)",0.2,1,y
+Methanol\ (Feedstock),1,0.04,y
+CH_{4}\ (Salt),20,0.02,y
+CH_{4}\ (Feedstock),0.2,0.012,y
+H_{2}\ (Feedstock),2.0,0.01,y

@@ -1,21 +1,24 @@
 name,x,y,fix
-Basalt,900,0.01,y
-Granite,1100,0.01,y
+Basalt,800,0.03,y
+Granite,950,0.02,y
 Sandstone,600,0.02,y
-River\ shingle,300,.05,y
-Limestone,300,.02,y
+River\ shingle,500,.12,y
+Limestone,500,.07,y
+Concrete,400,.2,y
 NaKZnCl,1000,20,y
 KMgZnCl,1000,50,y
-Veg.\ Oil,50,20,y
-Mobiltherm\ 605,20,60,y
+KMgCl,900,5,y
+Veg.\ Oil,80,11,y
+Mobiltherm\ 605,20,20,y
+Al,580,15,y
 Na,1000,5,
-Ethylene\ glycol,20,3,y
-HITEC\ XL,300,30,y
-HITEC,450,60,y
-Solar\ Salt,750,.7,y
-NaKMgCl,900,1,y
+Ethylene\ glycol,20,2,y
+HITEC\ XL,350,30,y
+HITEC,500,60,y
+Solar\ Salt,750,.9,y
+NaKMgCl,900,2,y
 NaMgCaCl,600,.5,y
 LiNaKNO_{3}NO_{2},50,0.5,y
 LiNaKCaNO_{3},100,.1,y
 LiNaKNO_{3},400,0.5,y
-S,600,1,
+S,480,4,y

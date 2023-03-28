@@ -48,6 +48,8 @@ df_sens_ds = df_sens.where(df_sens['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 formula_strings = [format_chem_formula(s) for s in df_sens_ds.index]
 df_sens_ds['display_text'] = formula_strings
 
+df_sens_ds['display_text'] = df_sens_ds['display_text'].str.replace('Therminol\ VP_{1}', 'Therminol\ VP1', regex=False)
+
 df_sens_ds.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'sens_ds.csv'))
 
 #%%

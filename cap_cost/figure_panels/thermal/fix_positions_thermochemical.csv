@@ -1,2 +1,4 @@
 name,x,y,fix
-Ba(OH)_{2}/BaO,1300,30,y
+Ba(OH)_{2}/BaO,1200,30,y
+CoSO_{4}/CoO,1200,15,y
+MnSO_{4}/MnO,1000,1,y
