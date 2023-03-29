@@ -1,0 +1,1 @@
+This folder contains the Levelized cost of storage (LCOS) analysis. The figures are generated with `vis_lcos_pub.py`

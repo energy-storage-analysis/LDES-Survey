@@ -1,4 +1,4 @@
-# Energy Storage Material Capital Cost Analysis
+ Energy Storage Material Capital Cost Analysis
 
 This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article. More information and interactive visualizations can be found [here](https://mhdlab.github.io/projects/5_ES_TEA/)
 
@@ -14,27 +14,25 @@ The folder structure of the repository is outlined below. Most folders have READ
 
 ## Installation
 
-The codes in this work were run on Windows with VS Code running a linux terminal with Git Bash. The Python packages were managed with conda and an environment file was exported such that the environment can be recreated with the command `conda env create -f environment.yml`. The `environment_from_history.yml` was created with the `--from-history` flag, which may work on systems other than Windows. 
+The codes in this work were run on Windows with VS Code running a linux terminal with Git Bash. The final figure generation was tested with a local virtual environment with the `requirements/requirements.txt` file, see `requirements/README.md` for more information.  
 
-the es_utils module and seaborn submodule in the base path of the repository needs to be accessed. This can be done by running `python setup.py install` in the root repository and then in the seaborn directory. 
-
-You need to create a file called `.env` in the root repository directory with the following info
-
+a `.env` file needs to be created in the root repository directory with the following info
 ```
 PDF_FOLDER_PATH='C:\Users\your\path\to_pdf_files'
-REPO_DIR='C:\Users\aspit\Git\MHDLab-Projects\Energy-Storage-Analysis'
-```
+REPO_DIR='C:\Path\to\this\folder'
 
-The some custom changes have been made to the seaborn plotting library and it is included as a git submodule of a fork on GitHub. To initialize run
-
+The final dataset that is needed to generate the figures is included in `cap_cost\data_consolidated`, as well as the processed data for each source that is consolidated into this final dataset. It is not necessary, but to regenerate these processed datasets from each source's raw data, the raw input data files must be added to the repository, along with relevant publication pdf files added to the folder described in the `.env` file. See the Readme files for each source or contact the author. see `cap_cost\datasets` for more information.
 ```
-git submodule init
-git submodule update
-cd seaborn
-python setup.py develop
-```
+The following installation procedure was tested and used to generated the final publication figures. 
 
-## Generating the dataset and figures
+2. create a local virtual environment with `python -m venv venv` (using python 3.10.1)
+3. close the terminal and reopen (activating the newly created venv)
+4. run `./install.sh` 
+5. run `./run_all.sh` (run `./run_all.sh process` to reprocess raw data as d)
+
+More information on the details of the setup and data processing can be found in the `.sh` scripts (see below)
+
+## Code Running Overview
 
 In general, Python scripts are meant to be run in their respective folders in a linux shell (i.e. `cd` into their directory). This can be accomplished on windows by installing Git Bash. The `run_all.sh` script in the top folder of the repository is a main script that runs various other shell and Python scripts to form the final dataset and generate the final analysis. This main script also serves as a high level overview of the data flow used in this work, and which folders or sub shell scripts to examine for further information about a specific portion of the process. 
 

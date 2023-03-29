@@ -24,7 +24,7 @@ The `data_consolidated` folder contains two important csv files that comprise th
     * The total specific price, energy, and C_kwh
     * The material specification, either a single material, or a combination of materials in the format [(name 1, fraction 1), (name 2, fraction 2), ...] on a mass or molar fraction basis (specified in a separate column)
 
-The `figures` folder contains various scripts that generate the visualizations of the data. 
+The `figure_panels` folder contains various scripts that generate the figure panels (individual plots in figures) of the data. 
 The `source_meta` folder contains scripts that generate metadata about the datasets in the form of tables. 
 
-The `run_all.sh` shell script can be used to run the above scripts and visualzations scripts in sequence (also describing the process to arrive at final figures). 
+The `gen_dataset.sh` shell script can be used to run the consolidation and calculation scripts. Adding the `vis` argument will also run the visualization generation shell script `figure_panels/genvis_all.sh`.

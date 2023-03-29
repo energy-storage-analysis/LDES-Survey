@@ -1,0 +1,1 @@
+This folder contains svg files (created in Inkscape) which layout figure panels created throughout the respository in to final figures.  The `.gen_figs.sh` script converts these figures into tiff files. 
