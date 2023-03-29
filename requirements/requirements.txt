@@ -17,6 +17,7 @@ opencv-python==4.7.0.72
 pandas==1.3.5
 Pint==0.18
 Pint_Pandas==0.2
+pycairo==1.23.0
 pymatgen==2023.3.23
 PyPDF2==1.26.0
 pytablewriter==0.64.2
