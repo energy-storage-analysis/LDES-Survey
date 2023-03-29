@@ -15,15 +15,17 @@ cd $REPO_DIR/GESDB
 echo "---Generating GESDB Figure Panels---"
 python gesdb_analysis.py
 
-# Perform the data processing for each individual source. Due to the long processing time, the data extraction is not run by default (see process_all.sh for more info)
-cd $REPO_DIR/cap_cost/datasets
-echo "---Running Process Scripts for each data source---"
-./process_all.sh
+if [ "$1" == "process" ]; then
+    # Perform the data processing for each individual source. Due to the long processing time, the data extraction is not run by default (see process_all.sh for more info)
+    cd $REPO_DIR/cap_cost/datasets
+    echo "---Running Process Scripts for each data source---"
+    ./process_all.sh
+fi
 
 # Once the data from each source is ready, it is consolidated into the final dataset and the corresponding figure panels are generated. 
 cd $REPO_DIR/cap_cost
 echo "---Generating final database and figure panels---"
-./run_all.sh vis
+./gen_dataset.sh vis
 
 # Final manuscript figure generation temporarily manual export from inkscape
 
