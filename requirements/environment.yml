@@ -14,7 +14,6 @@ dependencies:
   - backcall=0.2.0=pyh9f0ad1d_0
   - backports=1.0=py_2
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
-  - bokeh=2.4.2=py310h5588dad_0
   - brotli=1.0.9=h8ffe710_7
   - brotli-bin=1.0.9=h8ffe710_7
   - brotlipy=0.7.0=py310he2412df_1004
@@ -246,6 +245,7 @@ dependencies:
       - appdirs==1.4.4
       - beautifulsoup4==4.10.0
       - billiard==3.6.4.0
+      - bokeh==3.1.0
       - camelot-py==0.9.0
       - celery==5.2.3
       - certifi==2021.10.8
@@ -258,6 +258,7 @@ dependencies:
       - click-repl==0.2.0
       - colorcet==3.0.0
       - configparser==3.5.3
+      - contourpy==1.0.7
       - cpi==1.0.5
       - cssselect==1.1.0
       - csv2md==1.1.2
@@ -285,11 +286,12 @@ dependencies:
       - pypdf2==1.26.0
       - python-crfsuite==0.9.7
       - pyvalem==2.5.4
-      - setuptools==59.6.0
+      - setuptools==60.9.3
       - soupsieve==2.3.1
       - sqlalchemy==1.4.30
       - tabula-py==2.3.0
       - vine==5.0.0
       - wand==0.6.7
       - werkzeug==0.16.1
+      - xyzservices==2023.2.0
 prefix: C:\Users\aspit\anaconda3\envs\energystorage
