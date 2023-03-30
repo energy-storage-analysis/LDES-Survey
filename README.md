@@ -1,15 +1,15 @@
 # Long-Duration Energy Storage Viability
 
-This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article, currently in submission. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
+This repository contains the codes used to generate the dataset and figures associated with our paper, "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article, currently in submission. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
 
 The folder structure of the repository is outlined below. The folders have README files that contain further information.
 
 * cap_cost: The main codes and analysis to form the dataset and figures analyzing the energy capital cost of a wide range of energy storage media. This folder contains the main dataset and individual source datasets used in the work in the form of csv files. 
-* es_utils: A package of utility functions used throughout the codebase
-* figures: SVG files for schematics used in the main text.
-* GESDB: Analysis of the DOE Global Energy Storage Database (Figure 1 in main text)
+* es_utils: A package of utility functions used throughout the codebase.
+* figures: Files that layout the final figures used in the text. The SVG files are linked to figure panel image files generated throughout the repository, meaning the final figures will automatically update with changes to the data or processing codes.  
+* GESDB: Analysis of the [DOE Global Energy Storage Database](https://sandia.gov/ess-ssl/gesdb/public/index.html).
 * lcos: Analysis of the levelized cost of storage. 
-* seaborn: Fork of the seaborn library used for tweaked figure generation methods
+* seaborn: Fork of the seaborn library used for tweaked figure generation methods.
 * SI_docs: Writing and scripts to generate the supporting information document. 
 
 ## Installation
@@ -22,9 +22,10 @@ a `.env` file needs to be created in the root repository directory with the foll
 ```
 PDF_FOLDER_PATH='C:\Users\your\path\to_pdf_files'
 REPO_DIR='C:\Path\to\this\folder'
+```
 
 The final dataset that is needed to generate the figures is included in `cap_cost\data_consolidated`, as well as the processed data for each source that is consolidated into this final dataset. It is not necessary, but to regenerate these processed datasets from each source's raw data, the raw input data files must be added to the repository, along with relevant publication pdf files added to the folder described in the `.env` file. See the Readme files for each source or contact the author. see `cap_cost\datasets` for more information.
-```
+
 The following installation procedure was tested and used to generated the final publication figures. 
 
 2. create a local virtual environment with `python -m venv venv` (using python 3.10.1)
@@ -34,7 +35,7 @@ The following installation procedure was tested and used to generated the final 
 
 More information on the details of the setup and data processing can be found in the `.sh` scripts (see below)
 
-## Code Running Overview
+## Running the codes
 
 In general, Python scripts are meant to be run in their respective folders in a linux shell (i.e. `cd` into their directory). This can be accomplished on windows by installing Git Bash. The `run_all.sh` script in the top folder of the repository is a main script that runs various other shell and Python scripts to form the final dataset and generate the final analysis. This main script also serves as a high level overview of the data flow used in this work, and which folders or sub shell scripts to examine for further information about a specific portion of the process. 
 
