@@ -29,7 +29,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="2.1543544"
-     inkscape:cx="165.47881"
+     inkscape:cx="120.9179"
      inkscape:cy="118.36493"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
@@ -152,12 +152,12 @@
        transform="translate(-22.856556,-8.4460937)"><tspan
          x="59.617767"
          y="70.123238"
-         id="tspan1727">387 Storage<tspan
+         id="tspan475">390 Storage<tspan
    y="70.123238"
-   id="tspan1729"> </tspan></tspan><tspan
+   id="tspan477"> </tspan></tspan><tspan
          x="59.617767"
          y="73.210039"
-         id="tspan1731">Media</tspan></text><text
+         id="tspan479">Media</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:5.4219;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="59.617767"
@@ -166,7 +166,7 @@
        transform="translate(-100.76791,-8.7463838)"><tspan
          x="59.617767"
          y="70.123238"
-         id="tspan1733">(A)</tspan></text><text
+         id="tspan481">(A)</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:5.4219;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="59.617767"
@@ -175,7 +175,7 @@
        transform="translate(-40.545411,-8.5632229)"><tspan
          x="59.617767"
          y="70.123238"
-         id="tspan1735">(B)</tspan></text><text
+         id="tspan483">(B)</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:5.4219;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="59.617767"
@@ -184,7 +184,7 @@
        transform="translate(-40.284885,25.034972)"><tspan
          x="59.617767"
          y="70.123238"
-         id="tspan1737">(C)</tspan></text><text
+         id="tspan485">(C)</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:18.1153;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="59.617767"
@@ -193,12 +193,12 @@
        transform="translate(-23.262976,25.872685)"><tspan
          x="59.617767"
          y="70.123238"
-         id="tspan1739">162 Material<tspan
+         id="tspan487">163 Material<tspan
    y="70.123238"
-   id="tspan1741"> </tspan></tspan><tspan
+   id="tspan489"> </tspan></tspan><tspan
          x="59.617767"
          y="73.210039"
-         id="tspan1743">Price Averages</tspan></text><image
+         id="tspan491">Price Averages</tspan></text><image
        width="54.85191"
        height="62.264328"
        preserveAspectRatio="none"
