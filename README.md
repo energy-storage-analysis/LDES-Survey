@@ -16,6 +16,8 @@ The folder structure of the repository is outlined below. Most folders have READ
 
 The codes in this work were run on Windows with VS Code running a linux terminal with Git Bash. The final figure generation was tested with a local virtual environment with the `requirements/requirements.txt` file, see `requirements/README.md` for more information.  
 
+Two external command line programs not installed by `pip` are needed, imagemagick and inkscape. These programs are used to convert the svg files of the final figures into tiff. On Windows, the the folders that `inkscape.exe` and `magick.exe` are in must be added to the system PATH (as shown [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)). 
+
 a `.env` file needs to be created in the root repository directory with the following info
 ```
 PDF_FOLDER_PATH='C:\Users\your\path\to_pdf_files'
@@ -37,8 +39,6 @@ More information on the details of the setup and data processing can be found in
 In general, Python scripts are meant to be run in their respective folders in a linux shell (i.e. `cd` into their directory). This can be accomplished on windows by installing Git Bash. The `run_all.sh` script in the top folder of the repository is a main script that runs various other shell and Python scripts to form the final dataset and generate the final analysis. This main script also serves as a high level overview of the data flow used in this work, and which folders or sub shell scripts to examine for further information about a specific portion of the process. 
 
 There are various extra scripts, notebooks, etc. that were used throughout the research of this project, but did not contribute to the final figures in the main text or supporting information of this work. Some of these have been kept in case they are useful in the future, but only the scripts outlined in `run_all.sh` have been tested. 
-
-For the final figures, the Inkscape command line tool is used to convert the svg files into tiff. Inkscape must be installed and (on Windows) the the folder that `inkscape.exe` is in must be added to the PATH (as shown [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)). 
 
 
 ## Development notes
