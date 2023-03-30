@@ -98,7 +98,7 @@ adjust_text_after(fig, ax, "S2\ Glass", texts, 0.1,15)
 adjust_text_after(fig, ax, "AS4/8552", texts, 0.45,15)
 adjust_text_after(fig, ax, "IM7/85517", texts, 0.45,28)
 
-adjust_text_after(fig, ax, "Steel\ 157", texts, 0.02,0.8)
+adjust_text_after(fig, ax, "Steel\ 455", texts, 0.02,0.7)
 
 plt.tight_layout()
 
