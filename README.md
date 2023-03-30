@@ -2,7 +2,7 @@
 
 This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article, currently in submission. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
 
-The folder structure of the repository is outlined below. Most folders have README files that contain further information.
+The folder structure of the repository is outlined below. The folders have README files that contain further information.
 
 * cap_cost: The main codes and analysis to form the dataset and figures analyzing the energy capital cost of a wide range of energy storage media. This folder contains the main dataset and individual source datasets used in the work in the form of csv files. 
 * es_utils: A package of utility functions used throughout the codebase

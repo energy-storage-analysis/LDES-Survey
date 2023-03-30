@@ -8,7 +8,7 @@ The codes in this folder collect and analyze data to estimate the energy capital
     * a set of physical properties, used to calculate the specific energy (kWh/kg)
 
 
-The data are extracted and processed from the primary sources in the `datasets` folder, there is a readme file in each source's folder that contains more information about that specific source and the processing steps used. See the README file in the `datasets` folder for more information. 
+The data are extracted and processed from the primary sources in the `datasets` folder, there is a readme file in each source's folder that contains more information about that specific source and the processing steps used. Only the processed 'output' data for each source is included in this repository. For more information on adding additional data or reproduce the processing of each source, see  the README file in the `datasets` folder.
 
 The `consolidate_data.py` script collects data from each source's folder in the `datasets` folder, and consolidates them into a set of main csv files in the `data_consolidated` folder. This script is followed by `calc_Ckwh.py` which calculates the energy capital cost (AKA C_kwh ~ $/kWh). 
 
