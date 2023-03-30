@@ -1,4 +1,4 @@
-# Energy Capital Cost data acumulation
+# Energy Capital Cost data accumulation
 
 The codes in this folder collect and analyze data to estimate the energy capital cost ($/kWh) of different storage media. The collected data consists of two main components:
 
@@ -17,7 +17,7 @@ The `data_consolidated` folder contains two important csv files that comprise th
  * `mat_data.csv`: Contains information about the constituent materials of the storage media
     * median and standard deviation of specific price between all sources. 
     * How many sources, how many storage media the material is used in
-    * The molecular formla if applicable
+    * The molecular formula if applicable
     * Materials are indexed to a unique identifier. Usually the molecular formula when applicable, otherwise a unique name. 
 * `SM_data.csv`: Contains information about each storage media including
     * The various physical properties used to calculate C_kwh
