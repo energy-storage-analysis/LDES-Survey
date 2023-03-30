@@ -1,6 +1,6 @@
- Energy Storage Material Capital Cost Analysis
+# Long-Duration Energy Storage Viability
 
-This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
+This repository contains the codes used to generate the dataset and figures associated with the "A Technoeconomic Survey of Long Duration Energy Storage Viability" Article, currently in submission. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
 
 The folder structure of the repository is outlined below. Most folders have README files that contain further information.
 
