@@ -131,7 +131,7 @@ adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_
 
 all_texts = [*texts_fix, *texts]
 from es_utils.plot import adjust_text_after
-adjust_text_after(fig, ax, "Na_{2}LiAlH_{3}", all_texts, 3,12)
+adjust_text_after(fig, ax, "Na_{2}LiAlH_{6}", all_texts, 3,12)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 

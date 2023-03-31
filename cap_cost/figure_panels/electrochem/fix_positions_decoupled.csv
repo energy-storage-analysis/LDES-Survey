@@ -5,7 +5,7 @@ CH_{4}\ Spherical\ Pressure,6,11,y
 "S/Air(Li,\ Base)",6,15,y
 ZrNiH_{3},.8,20,y
 LaNi_{5}H_{6.5},.8,30,y
-Na_{2}LiAlH_{3},3,7,
+Na_{2}LiAlH_{6},3,7,
 H_{2}/Br_{2},0.11,7,y
 Zr(BH_{4})_{4},25,6,
 LiBH_{4},10,8,y
@@ -17,7 +17,7 @@ Al(BH_{4})_{3},25.0,4,y
 Ti_{12}Mn_{18}H_{30},0.12,4,y
 Mg(BH_{4})_{2},5,2,y
 NaBH_{4},8.0,2.0,
-Na_{3}AlH_{3},0.5,2.0,
+Na_{3}AlH_{6},0.5,2.0,
 NaAlH_{2},1.0,1.8,
 "S/Air(Na,\ Acid)",0.2,1,y
 Methanol\ (Feedstock),1,0.04,y
