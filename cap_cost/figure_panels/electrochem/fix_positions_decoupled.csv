@@ -24,3 +24,5 @@ Methanol\ (Feedstock),1,0.04,y
 CH_{4}\ (Salt),20,0.02,y
 CH_{4}\ (Feedstock),0.2,0.012,y
 H_{2}\ (Feedstock),2.0,0.01,y
+PSB,.15,5,y
+ICB,.15,20,y
