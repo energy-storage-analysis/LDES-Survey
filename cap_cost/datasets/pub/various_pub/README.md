@@ -1,3 +1,3 @@
 # Various Publications
 
-Manually entered data from various publications
+Manually entered data from various publications.

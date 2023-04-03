@@ -5,6 +5,6 @@ Commodity price data was obtained from the [U.S. Geological Survey Mineral Commo
 ## Development
 The raw USGS data consists of a series of csv file and xml metadatafiles. The raw data is not included in the repository.
 
-1. Download and extract the 'sailient' dataset from the USGS link above into a folder called `data`, meaning that raw data files are located in `data/salient`. 
+1. Download and extract the 'sailient' dataset from the USGS link above into a folder called `input_data`. 
 2. run extract.py
 3. run process.py

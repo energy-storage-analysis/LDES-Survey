@@ -9,7 +9,7 @@ The webscraper is based on
 
 https://github.com/scrapehero/alibaba-scraper
 
-The searches are defined in `resources/mat_data_searches.csv` and the CSS fiels to scrape are deterimed in `resources/search_results.yml` which is formed with the help of the selectorlib chrome extension. 
+The searches are defined in `resources/mat_data_searches.csv` and the CSS fields to scrape are determined in `resources/search_results.yml` which is formed with the help of the selectorlib chrome extension. 
 
 
 There is also a `single_manual.csv` file for manually adding entries, which will be combined with the scraped data with a preference for scraped data. 

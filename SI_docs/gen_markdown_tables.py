@@ -59,9 +59,10 @@ with open(os.path.join(output_folder,'SM_type_tables.md'.format(SM_type)), 'w', 
 df = pd.read_csv(pjoin(input_dir,'SM_type_source_counts.csv'))
 
 #TODO: come up with some sort of long name (and units) system for displayed tables
-df['SM_type'] = df['SM_type'].str.replace('_', ' ')
 df['SM_type'] = df['SM_type'].str.replace('thermochemical', 'thermo-chemical')
-df['sub_type'] = df['sub_type'].str.replace('_', ' ')
+df['SM_type'] = df['SM_type'].str.replace('_', ' ').str.capitalize()
+df['sub_type'] = df['sub_type'].str.replace('_', ' ').str.capitalize()
+df['mat_type'] = df['mat_type'].str.replace('_', ' ').str.capitalize()
 df.columns = [c.replace('_',' ') for c in df.columns.get_level_values(0)]
 
 df = df.rename({'0': 'Source Counts'})
@@ -78,7 +79,7 @@ fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\SM_viable.csv')
 df = read_pint_df(fp)
 
 #TODO: come up with some sort of long name (and units) system for displayed tables
-df['SM_type'] = df['SM_type'].str.replace('_', ' ')
+df['SM_type'] = df['SM_type'].str.replace('_', ' ').str.capitalize()
 df['SM_type'] = df['SM_type'].str.replace('thermochemical', 'thermo-chemical')
 df.columns = [c.replace('_',' ') for c in df.columns.get_level_values(0)]
 
@@ -119,6 +120,7 @@ df = df.reset_index()
 
 df = df[['index','original_name','source','notes']]
 df = df.rename({col: col.replace('_',' ') for col in df.columns.get_level_values(0)},axis=1)
+df['SM_type'] = df['SM_type'].str.replace('_', ' ').str.capitalize()
 
 df.columns = df.columns.droplevel(1) # No units needed
 

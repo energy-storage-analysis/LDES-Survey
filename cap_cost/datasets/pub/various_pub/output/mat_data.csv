@@ -3,10 +3,10 @@ unit_row,N/U,N/U,USD/kg,USD/m**3,N/U,N/U
 index,,,,,,
 Iron Ore,Magnetite,Fe2O3,0.139,,Olympios 2021,
 Solar Salt,Molten Salt,NaNO3KNO3,1,,Olympios 2021,
-Water Reservoir Excavation,Pumped Hydro,,,261.590124,Black and Veatch 2012,"Based on Black and Veatch 2012 resirvoir cost numbers. "
+Water Reservoir Excavation,Pumped Hydro,,,261.590124,Black and Veatch 2012,"Based on Black and Veatch 2012 reservoir cost numbers. "
 Sand,Dune Sand,SiO2,0.05,,Diago 2018,
 Solar Salt,Solar Salt,NaNO3KNO3,0.43,,Diago 2018,
-TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,,Liu 2019,https://doi.org/10.1016/j.chempr.2019.04.021
+TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,,Liu 2019,doi.org/10.1016/j.chempr.2019.04.021
 CFRP,,,15,,Singh Gill 2022,
 Steel,,,1.5,,Singh Gill 2022,
 CFRP,,,10,,Rao 2018,
