@@ -4,6 +4,7 @@ This dataset is a set of prices obtained by webscraping alibaba with the `scrapy
 
 Certain materials are tagged as hydrates. In these materials the number of hydrates in the molecular formula is determined by searching the title for strings (monohydrat, dihydrat, etc.) and then the price is scaled by the ratio of the molecular weights of the hydrated and anhydrous molecules. This means that all prices are scaled to correspond to the anhydrous molecular formula. 
 
+Accessed on 06/25/2022
 ## Development
 The webscraper is based on
 
