@@ -6,3 +6,4 @@ Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,,5,,,,,,,,,,Molga
 Sand,Sand,,Sand,sensible_thermal,hot,rock,0.000277,,1000,,,,,,,,,Diago 2018,doi.org/10.1016/j.apenergy.2018.02.106
 NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,coupled_battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,doi.org/10.1016/j.xcrp.2022.100821
 Al2O3_ThinFilm,Al2O3,,,dielectric_capacitor,thin_film,,,,,,310000000,8.5,3950,,,,,Hanby 2018,
+Pumped Hydro,Water Reservoir Excavation,,,gravitational,pumped_hydro,,,,,,,,,,,,507.6,,Average of heights in figure S4
