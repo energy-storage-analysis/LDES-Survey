@@ -206,7 +206,7 @@ electrostatic_edlc = electrostatic_edlc.to_frame()
 
 
 accel_g = ureg.Quantity(9.81, 'm/s**2')
-gravitational = df_SMs['delta_height']*accel_g
+gravitational = df_SMs['delta_height']*accel_g*df_SMs['VtoR']
 gravitational.name='specific_energy'
 gravitational = gravitational.to_frame()
 
