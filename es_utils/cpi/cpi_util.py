@@ -18,21 +18,14 @@ def inf_factor(year):
 #%%
 
 if __name__ == '__main__':
-    import cpi
-    
-    # cpi.update()
 
-    years = range(1990, 2023)
-    cpi_factors = []
-    for year in years:
-        cpi_factors.append(cpi.inflate(1, year))
+    df = pd.read_excel('input_data/SeriesReport-20230530190222_1c21f2.xlsx', skiprows=11, index_col=0)
 
-    #This is to add 2023 as a year with an inflation factor of 1, but 2022 is also a factor of 1. Not sure if that is the correct way to handle inflation.
-    cpi_factors.append(1)
-    years = list(years)
-    years.append(2023)
+    df.index  = df.index.astype(int)
 
-    cpi_factors = pd.Series(cpi_factors, index = years)
+    cpi_factors = df['Jan'][2023]/df['Jan']
+
+
     cpi_factors.index.name = 'year'
     cpi_factors.name = 'factor'
 

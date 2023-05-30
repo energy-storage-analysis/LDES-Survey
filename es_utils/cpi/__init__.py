@@ -1,0 +1,1 @@
+from .cpi_util import inf_factor
