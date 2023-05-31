@@ -3,7 +3,7 @@
 import pandas as pd
 # import pint_pandas
 from es_utils.units import ureg
-
+from es_utils.cpi import get_cpi_data
 
 s = pd.read_csv('input_data/United_States_Natural_Gas_Industrial_Price.csv', skiprows=4, index_col=0, parse_dates=True, squeeze=True)
 
@@ -17,7 +17,15 @@ s = s/1000
 s = s.sort_index()
 s = s.last('10Y')
 
-SP_vol = s.mean()
+#%%
+
+# cpi_data = get_cpi_data(2022)
+
+s_year = s.resample('Y').mean()
+s_year.index = s_year.index.year
+# s_year = s_year*cpi_data[s_year.index]
+
+SP_vol = s_year.mean()
 
 SP_vol
 
