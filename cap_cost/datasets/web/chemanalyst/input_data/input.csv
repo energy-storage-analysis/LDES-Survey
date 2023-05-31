@@ -1,8 +1,8 @@
-index,molecular_formula,price,price_unit,url
-N-hexane,C6H14,1734,USD/metric_ton,
-Ethanol,C2H6O,775-870,USD/metric_ton,
-N-Propane,C3H8,970,USD/metric_ton,
-Methanol,CH3OH,616-660,USD/metric_ton,
-Naphthalene,C10H8,1307,USD/metric_ton,https://www.chemanalyst.com/Pricing-data/naphthalene-1130
-Toluene,C7H8,1166,USD/metric_ton,https://www.chemanalyst.com/Pricing-data/toluene-30
-Ethylene glycol,C2H6O2,868,USD/metric_ton,https://www.chemanalyst.com/Pricing-data/mono-ethylene-glycol-4
+index,molecular_formula,price,price_unit,year,url
+N-hexane,C6H14,1734,USD/metric_ton,2022,https://www.chemanalyst.com/Pricing-data/n-hexane-1151
+Ethanol,C2H6O,775-870,USD/metric_ton,2022,https://www.chemanalyst.com/Pricing-data/ethanol-13
+N-Propane,C3H8,1185,USD/metric_ton,2022,https://www.chemanalyst.com/Pricing-data/n-propanol-1182
+Methanol,CH3OH,616-660,USD/metric_ton,2022,https://www.chemanalyst.com/Pricing-data/methanol-1
+Naphthalene,C10H8,1307,USD/metric_ton,2021,https://www.chemanalyst.com/Pricing-data/naphthalene-1130
+Toluene,C7H8,1166,USD/metric_ton,2022,https://www.chemanalyst.com/Pricing-data/toluene-30
+Ethylene glycol,C2H6O2,868,USD/metric_ton,2022,https://www.chemanalyst.com/Pricing-data/mono-ethylene-glycol-4
