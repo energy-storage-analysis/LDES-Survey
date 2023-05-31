@@ -8,6 +8,9 @@ from es_utils.units import prep_df_pint_out, read_pint_df, ureg
 
 dataset_folder = 'datasets'
 dataset_index = pd.read_csv(pjoin(dataset_folder,'dataset_index.csv'), index_col=0)
+dataset_years = pd.read_csv(pjoin(dataset_folder,'dataset_years.csv'), index_col=0)['year'].dropna()
+
+#%%
 
 # col_select = ['material_name', 'molecular_formula', 'original_name','specific_price','specific_energy','energy_type','source']
 dfs_mat_data = []
@@ -23,6 +26,12 @@ for source, row in dataset_index.iterrows():
         #Custom data dataset already has source column
         if 'source' not in df_mat_data.columns:
             df_mat_data['source'] = source
+
+        if 'year' not in df_mat_data.columns:
+            if source not in dataset_years.index:
+                raise ValueError("Did not find a year for mat data source: {}".format(source))
+            else:
+                df_mat_data['year'] = dataset_years[source]
 
         dfs_mat_data.append(df_mat_data)
 
@@ -115,6 +124,13 @@ df_grouped_out = prep_df_pint_out(df_grouped)
 
 df_grouped_out.to_csv('data_consolidated/SM_data.csv')
 
+
+#%%
+
+from es_utils.cpi import get_cpi_data
+cpi_data = get_cpi_data()
+
+df_mat_data['specific_price'] = df_mat_data['specific_price']*df_mat_data['year'].map(cpi_data)
 
 #%%
 

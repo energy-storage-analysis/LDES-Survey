@@ -7,6 +7,13 @@ from es_utils.units import convert_units, prep_df_pint_out, ureg
 df = pd.read_csv('output/extracted.csv', index_col=0)
 df = df.dropna(subset=['price'])
 
+#%%
+
+from es_utils.cpi import get_cpi_data
+cpi_data = get_cpi_data(2022)
+
+df['price'] = df['price']*df['year'].map(cpi_data)
+
 cols_not_price = [col for col in df.columns if col != 'price']
 
 df = pd.concat([

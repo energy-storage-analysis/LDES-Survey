@@ -1,3 +1,3 @@
 # DERA
 
-Data manually pulled from October 2022 [Preismonitor PDF](https://www.deutsche-rohstoffagentur.de/DERA/DE/Produkte/Rohstoffpreise/Preismonitor/preismonitor_node.html) published by the German Mineral Resources Agency (DERA). The average prices from 2017-2021 were used where available. Prices from Shanghai Metals Market (SMM) were not included as they are already a source used in this work.
+Data manually pulled from October 2022 [Preismonitor PDF](https://www.deutsche-rohstoffagentur.de/DERA/DE/Produkte/Rohstoffpreise/Preismonitor/preismonitor_node.html) published by the German Mineral Resources Agency (DERA). The average prices from 2017-2021 were used where available, and the year is set to 2019 for inflation adjustment. Prices from Shanghai Metals Market (SMM) were not included as they are already a source used in this work.

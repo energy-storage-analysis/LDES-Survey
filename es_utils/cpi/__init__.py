@@ -1,1 +1,1 @@
-from .cpi_util import inf_factor
+from .cpi_util import get_cpi_data

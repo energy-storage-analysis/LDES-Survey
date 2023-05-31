@@ -6,28 +6,27 @@ This module can be run as a script to generate a csv file of the default CPI-U d
 import pandas as pd
 import os
 
-folder_path = os.path.dirname(os.path.abspath(__file__))
-cpi_data_path = os.path.join(folder_path, 'cpi_factors.csv')
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
 
-cpi_data = pd.read_csv(cpi_data_path, index_col=0)['factor']
+DISABLE_CPI = False
 
-def inf_factor(year):
-    return cpi_data[year]
+def get_cpi_data(base_year = 2023):
 
+    fp_cpi_input = os.path.join(REPO_DIR,'es_utils', 'cpi','input_data','SeriesReport-20230530190222_1c21f2.xlsx' )
+    df = pd.read_excel(fp_cpi_input, skiprows=11, parse_dates=True, index_col=0)
 
-#%%
+    cpi_factors = df['Jan'][base_year]/df['Jan']
 
-if __name__ == '__main__':
-
-    df = pd.read_excel('input_data/SeriesReport-20230530190222_1c21f2.xlsx', skiprows=11, index_col=0)
-
-    df.index  = df.index.astype(int)
-
-    cpi_factors = df['Jan'][2023]/df['Jan']
-
+    cpi_factors.index = pd.to_datetime(cpi_factors.index.astype(int), format = "%Y") 
+    cpi_factors.index = cpi_factors.index.year
 
     cpi_factors.index.name = 'year'
-    cpi_factors.name = 'factor'
 
-    cpi_factors.to_csv('cpi_factors.csv')
-    
+    cpi_factors.name = 'cpi_factor'
+
+    if DISABLE_CPI:
+        cpi_factors.loc[:] = 1
+
+    return cpi_factors

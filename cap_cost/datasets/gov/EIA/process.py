@@ -19,11 +19,11 @@ s = s.last('10Y')
 
 #%%
 
-# cpi_data = get_cpi_data(2022)
+cpi_data = get_cpi_data(2022)
 
 s_year = s.resample('Y').mean()
 s_year.index = s_year.index.year
-# s_year = s_year*cpi_data[s_year.index]
+s_year = s_year*cpi_data[s_year.index]
 
 SP_vol = s_year.mean()
 
