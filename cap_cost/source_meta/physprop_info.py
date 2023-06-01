@@ -99,3 +99,55 @@ physprop_counts.to_csv('tables/physprop_counts.csv')
 
 
 print("Total physical properties collected that are used in calculations: {}".format(physprop_counts.sum()))
+
+
+#%%
+
+#TODO: Some of the above analysis might not be required with the addition of SM_all
+
+df_SM = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data_all.csv'), index_col=[0,1])
+df_SM
+# %%
+
+
+physprop_lookup
+
+#%%
+
+def num_unique(l):
+    return len(l.unique())
+
+df_duplicated = []
+
+for col in physprop_lookup.index:
+
+    if col == 'T_min' or col=='deltaT':
+        continue #TODO: This is calculated after consolidation....
+
+    s_sel = df_SM[col].dropna()
+    s_grouped = s_sel.groupby(by=['SM_name','SM_type']).apply(num_unique)
+
+    s_grouped = s_grouped.where(s_grouped > 1).dropna()
+
+    df_stat = df_SM[col].loc[s_grouped.index].groupby(by=['SM_name','SM_type']).agg(
+        ['count','min','max','mean','std']
+    )
+
+    df_stat['property'] = col
+    df_stat = df_stat[['property','count','min','max','mean','std']]
+
+
+    df_duplicated.append(df_stat)
+
+
+
+
+from es_utils.units import prep_df_pint_out
+
+df_duplicated = pd.concat(df_duplicated)
+
+# df_duplicated = prep_df_pint_out(df_duplicated)
+
+
+
+df_duplicated.to_csv('tables/physprop_duplicated.csv')

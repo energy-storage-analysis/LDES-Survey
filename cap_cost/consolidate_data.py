@@ -42,19 +42,22 @@ df_mat_data = pd.concat(dfs_mat_data)
 df_SM = pd.concat(dfs_SM)
 df_SM.index.name = 'SM_name'
 
-# df_SM = df_SM[]
-
-# df.index.name = 'index'
-
-#%%
 
 #We are going to index by both SM_name and SM_type, then average all duplicate values that are floats
 
 df_SM = df_SM.reset_index().set_index(['SM_name','SM_type'])
 
+df_SM_all_out = prep_df_pint_out(df_SM)
+df_SM_all_out.to_csv('data_consolidated/SM_data_all.csv')
+
+# Remove some columns with extra information in the final dataset. 
+df_SM = df_SM.drop(['kth','phase_change_T', 'C_kwh_orig'], axis=1) # Drop columns that are unused in in the 
+
 #%%
 
-# Average float columns and Group together non-float columns
+# Combine duplicate SM (SM_data_all) into one (SM_data)
+
+# Combine float columns with method depending on physical propery, and Group together non-float columns into a string separated by commas
 #TODO: Need to implement beter check here now that units are implemented. 
 # If units are not setup properly in raw dataset then the dtype is an object and an error is thrown. 
 # You can find which entries are floats (and not pint Quantity) with e.g. df_SM[df_SM['mass_density'].apply(type) == float]
@@ -68,8 +71,59 @@ for column in df_SM.columns:
 
 other_cols = [c for c in df_SM.columns if c not in float_cols]
 
-df_grouped = df_SM[float_cols].groupby(level=[0,1]).mean()
 
+#%%
+
+#Original method used when only averaging physical property values, can be used to check the same result when only using 'mean' as a duplicate col method
+df_grouped = df_SM[float_cols].groupby(by=['SM_name','SM_type']).mean()
+
+# #These are the columns that we have found to have multiple values from source (source_meta/physprop_info), and so we decide how to handle that for each physical property
+duplicate_col_method = {
+    'Cp': 'max',
+    'T_melt': 'min',
+    'T_max': 'max',
+    'sp_latent_heat': 'max',
+    'mass_density': 'mean', # For the duplicated values (sensible latent), this is not actually being used
+}
+
+duplicate_col_method = {key: 'mean' for key in duplicate_col_method}
+
+def num_unique(l):
+    return len(l.unique())
+
+dfs = []
+
+for col in float_cols:
+    gb = df_SM[col].dropna().groupby(by=['SM_name','SM_type'])
+    if col in duplicate_col_method:
+        method = duplicate_col_method[col]
+        if method=='max':
+            df = gb.max()
+        elif method=='min':
+            df = gb.min()
+        elif method=='mean':
+            df = gb.mean()
+        else:
+            raise ValueError
+    else:
+        assert all(gb.apply(num_unique) == 1)
+        df = df_SM[col].dropna()
+        
+    df = df.to_frame()
+    dfs.append(df)
+
+ 
+df_out = dfs[0].join(dfs[1:], how='outer').dropna(how='all')
+
+#This methods adds a few duplicates and nan in the index for some reason. 
+df_out = df_out[~df_out.index.duplicated()].dropna(how='all')
+df_out = df_out.loc[df_out.index.dropna()]
+
+df_out.equals(df_grouped) # Check that it gives the same value (see above)
+
+df_grouped = df_out
+
+#%%
 
 #List of columns that must have a single value, meaning an error is thrown if different sources have different values
 #TODO: this needs to be applied to the SM_type in the index as well. 
@@ -134,8 +188,16 @@ df_prices_combine = s_temp.to_frame()
 df_prices_combine['original_names'] = df_mat_data.groupby('index')['original_name'].apply(join_col_vals) 
 df_prices_combine['num_source'] = df_prices_combine['sources'].str.split(',').apply(len)
 
-specific_price_mag = df_mat_data['specific_price'].pint.magnitude
-df_prices_combine['specific_price'] = df_mat_data.groupby('index')['specific_price'].median()
+# Need to transform into magnitude for min/max operation, so we ensure we are in the right units first
+specific_price_mag = df_mat_data['specific_price'].pint.to('USD/kg').pint.magnitude
+vol_price_mag = df_mat_data['vol_price'].pint.to('USD/m**3').pint.magnitude
+
+# Pick method of combining prices here. 
+df_prices_combine['specific_price'] = specific_price_mag.groupby('index').median()
+df_prices_combine['vol_price'] = vol_price_mag.groupby('index').median()
+
+df_prices_combine['specific_price'] = df_prices_combine['specific_price'].astype('pint[USD/kg]')
+df_prices_combine['vol_price'] = df_prices_combine['vol_price'].astype('pint[USD/m**3]')
 
 df_prices_combine['specific_prices'] = specific_price_mag.apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals)
 
@@ -145,9 +207,6 @@ df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_std'
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].apply(lambda x:round(x,2)) 
 df_prices_combine['specific_price_rat'] = df_prices_combine['specific_price_rat'].astype('pint[dimensionless]')
 
-vol_price_mag = df_mat_data['vol_price'].pint.magnitude
-df_prices_combine['vol_price'] = df_mat_data.groupby('index')['vol_price'].median()
-# df_prices['specific_energy'] = df.groupby('index')['specific_energy'].mean()
 
 #%%
 import chemparse
