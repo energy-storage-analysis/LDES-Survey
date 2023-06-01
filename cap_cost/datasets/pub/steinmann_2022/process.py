@@ -199,7 +199,7 @@ df_all = pd.concat([df_liquid,df_solid, df_pcm])
 df_SM = df_all.drop('specific_price', axis=1)
 
 # The final output deltaT will be calculated with Tmin and Tmax which are averaged between different sources, so these numbers are not quite the same and redundant
-df_SM = df_all.drop('deltaT_max', axis=1)
+df_SM = df_SM.drop('deltaT_max', axis=1)
 
 df_SM = pd.merge(df_SM, SM_lookup, on='original_name')
 df_SM = df_SM.dropna(subset=['SM_name'])

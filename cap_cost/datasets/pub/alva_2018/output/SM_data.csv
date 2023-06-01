@@ -3,7 +3,6 @@ unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kilowatt_hour / kelvin / kilogram,degree_Celsiu
 SM_name,,,,,,,,,,,,,,
 NaNO3,latent_thermal,hot,molten_salt,NaNO3,,NaNO3,,,,306.0,0.04777777777777778,2261.0,,388.9
 KNO3,latent_thermal,hot,molten_salt,KNO3,,KNO3,,,,335.0,0.07388888888888889,2109.0,0.5,561.0
-Mg (NO3)2,latent_thermal,hot,molten_salt,Mg(NO3)2,,Mg (NO3)2,,,,426.0,,,,
 Na2CO3,latent_thermal,hot,molten_salt,Na2CO3,,Na2CO3,,,,854.0,0.07666666666666666,2533.0,,699.1
 K2CO3,latent_thermal,hot,molten_salt,K2CO3,,K2CO3,,,,897.0,0.06555555555555556,2290.0,,540.4
 CaCO3,latent_thermal,hot,molten_salt,CaCO3,,CaCO3,,,,1330.0,0.03944444444444444,2930.0,,416.1

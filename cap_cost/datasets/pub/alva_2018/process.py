@@ -110,6 +110,9 @@ df_SMs = df_SMs.reset_index().set_index('SM_name')
 
 df_SMs = df_SMs[['SM_type','sub_type','mat_type','materials','mat_basis','original_name','Cp', 'T_melt','T_max', 'phase_change_T','sp_latent_heat','mass_density','kth','vol_latent_heat']]
 
+# Mg(NO3)2 is missing latent heat data...
+# df_SMs = df_SMs.dropna(subset=['sp_latent_heat'])
+df_SMs = df_SMs.drop('Mg (NO3)2')
 
 df_SMs = prep_df_pint_out(df_SMs)
 
