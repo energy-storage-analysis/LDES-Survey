@@ -1,9 +1,8 @@
-,materials,mat_basis,original_name,SM_type,sub_type,mat_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,delta_height,source,notes
-unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,m,N/U,N/U
-SM_name,,,,,,,,,,,,,,,,,,,
-Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,0.00027,,1000,,,,,,,,,Grosu 2017,Taken from Fig 7 assuming approximately 500C
-Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,,5,,,,,,,,,,Molgaard 1971,dx.doi.org/10.1063/1.1660785
-Sand,Sand,,Sand,sensible_thermal,hot,rock,0.000277,,1000,,,,,,,,,Diago 2018,doi.org/10.1016/j.apenergy.2018.02.106
-NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,coupled_battery,solid_electrode,,,,,,,,,,,0.910,,Li 2022 PNNL,doi.org/10.1016/j.xcrp.2022.100821
-Al2O3_ThinFilm,Al2O3,,,dielectric_capacitor,thin_film,,,,,,310000000,8.5,3950,,,,,Hanby 2018,
-Pumped Hydro,Water Reservoir Excavation,,,gravitational,pumped_hydro,,,,,,,,,,,,507.6,,Average of heights in figure S4
+,materials,mat_basis,original_name,SM_type,sub_type,mat_type,Cp,kth,T_max,sp_latent_heat,dielectric_breakdown,dielectric_constant,mass_density,deltaG_chem,n_e,deltaV,source,notes
+unit_row,N/U,N/U,N/U,N/U,N/U,N/U,kWh/kg/K,W/m/K,degC,kWh/kg,V/m,dimensionless,kg/m**3,kWh/mol,dimensionless,V,N/U,N/U
+SM_name,,,,,,,,,,,,,,,,,,
+Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,0.00027,,1000,,,,,,,,Grosu 2017,Taken from Fig 7 assuming approximately 500C
+Iron Ore,Iron Ore,,Magnetite,sensible_thermal,both,other_solid,,5,,,,,,,,,Molgaard 1971,dx.doi.org/10.1063/1.1660785
+Sand,Sand,,Sand,sensible_thermal,hot,rock,0.000277,,1000,,,,,,,,Diago 2018,doi.org/10.1016/j.apenergy.2018.02.106
+NiAl Molten Salt,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,coupled_battery,solid_electrode,,,,,,,,,,,0.910,Li 2022 PNNL,doi.org/10.1016/j.xcrp.2022.100821
+Al2O3_ThinFilm,Al2O3,,,dielectric_capacitor,thin_film,,,,,,310000000,8.5,3950,,,,Hanby 2018,

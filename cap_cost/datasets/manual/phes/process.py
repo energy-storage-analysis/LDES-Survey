@@ -38,12 +38,7 @@ df_mal = pd.concat(dfs)
 
 #%%
 
-
 df = pd.concat([df_aus, df_mal])
-
-
-
-
 
 df = df.where(df['Country'].isin(['Australia', 'Malaysia']))
 
@@ -54,7 +49,8 @@ df['Country'].value_counts()
 plt.figure()
 
 df.groupby('Country')['Head (m)'].hist(legend=True)
-plt.ylabel('Head (m)')
+plt.xlabel('Head (m)')
+plt.ylabel('Count')
 
 plt.savefig('figures/head.png')
 
@@ -96,30 +92,35 @@ plt.savefig('figures/VtoR_10.png')
 
 #%%
 
-
-VR = df['Combined water to rock ratio'].median()
-VR
-
-Head = df['Head (m)'].median()
-
-#%%
-
 from es_utils.units import read_pint_df, prep_df_pint_out
+from pint import Quantity
 
 df_SM = read_pint_df('SM_def.csv')
 
+VR = df['Combined water to rock ratio'].median()
 df_SM['VtoR'] = VR
 df_SM['VtoR'] = df_SM['VtoR'].astype('pint[dimensionless]')
 
+# Head = df['Head (m)'].median()
+Head = df['Head (m)'].max() #800 m maximum head (Stocks et al 2021)
 
 df_SM['delta_height'] = Head
+
 df_SM['delta_height'] = df_SM['delta_height'].astype('pint[m]')
-
-df_SM
-
 
 if not os.path.exists('output'): os.mkdir('output')
 
 df_SM = prep_df_pint_out(df_SM)
 
 df_SM.to_csv('output/SM_data.csv')
+
+#%%
+
+df_excavation = read_pint_df('excavation_costs.csv')
+
+df_excavation['vol_price'] = df_excavation['vol_price']/VR
+
+df_out = prep_df_pint_out(df_excavation)
+
+df_out.to_csv('output/mat_data.csv')
+

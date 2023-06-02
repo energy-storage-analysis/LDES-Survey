@@ -282,7 +282,7 @@ Vermiculite,0.33,,,,0,1,Liu 2016,0.33,AlFeH3MgO6Si,234.2345384,Vermiculite,
 W,32.48,5.878245839505166,0.18,,0,2,"DERA, ISE","24.34, 32.48, 35.76",W,183.84,"Tungsten powder, Tungsten scrap, Wolfram Bar, WOLFRAM",35.3
 WO3,9.561104192038657,13.090874043702986,1.37,,0,2,"ISE, USGS","0.3, 18.82",WO3,231.837,"Tungsten WO3, Tungsten oxides, Wolfram Ore",28.0237561
 Water,0.0015,0.0007071067811865475,0.47,,6,2,"Antunez 2018, Li 2017",0.0,H2O,18.015,"DI H2O, Water",
-Water Reservoir Excavation,,,,214.945062,1,2,"Black and Veatch 2012, Stocks 2021",nan,,,Pumped Hydro,
+Water Reservoir Excavation,,,,55.11411846153847,1,2,"Black and Veatch 2012, Stocks 2021",nan,,,Pumped Hydro,
 Xylene,7.33,,,,0,1,Huang 2021,7.33,,,Xylene,
 Y,26.384999999999998,9.878281733176069,0.37,,0,2,"DERA, USGS","19.4, 33.37",Y,88.90584,"Yttrium (metal), Yttrium Metal, Yttrium Y2O3",31.0
 Y2O3,3.77,,,,0,1,DERA,3.77,,,Yttrium (oxide),24.4434962
