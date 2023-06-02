@@ -86,7 +86,8 @@ duplicate_col_method = {
     'mass_density': 'mean', # For the duplicated values (sensible latent), this is not actually being used
 }
 
-duplicate_col_method = {key: 'mean' for key in duplicate_col_method}
+# Uncomment to revert all to mean as previous method 
+# duplicate_col_method = {key: 'mean' for key in duplicate_col_method}
 
 def num_unique(l):
     return len(l.unique())
@@ -193,8 +194,8 @@ specific_price_mag = df_mat_data['specific_price'].pint.to('USD/kg').pint.magnit
 vol_price_mag = df_mat_data['vol_price'].pint.to('USD/m**3').pint.magnitude
 
 # Pick method of combining prices here. 
-df_prices_combine['specific_price'] = specific_price_mag.groupby('index').median()
-df_prices_combine['vol_price'] = vol_price_mag.groupby('index').median()
+df_prices_combine['specific_price'] = specific_price_mag.groupby('index').min()
+df_prices_combine['vol_price'] = vol_price_mag.groupby('index').min()
 
 df_prices_combine['specific_price'] = df_prices_combine['specific_price'].astype('pint[USD/kg]')
 df_prices_combine['vol_price'] = df_prices_combine['vol_price'].astype('pint[USD/m**3]')
