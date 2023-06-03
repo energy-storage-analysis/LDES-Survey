@@ -21,7 +21,12 @@ for index, row in df.iterrows():
 df['specific_price'] = specific_price
 df['specific_price'] = df['specific_price'].astype('pint[USD/kg]')
 
-df_price = df[['molecular_formula','specific_price']]
+#%%
+
+# Original price dates are included as year-month-day
+df['year'] = df['price_date'].str.split('-', expand=True)[0]
+
+df_price = df[['molecular_formula','specific_price','year']]
 
 df_price = prep_df_pint_out(df_price)
 

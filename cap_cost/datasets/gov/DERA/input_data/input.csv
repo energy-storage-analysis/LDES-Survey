@@ -1,0 +1,71 @@
+index,original_name,price_old,price,price_unit,source,year
+Al,ALUMINIUM,"2.009,38","2.394,00",US$/t,LME,2022
+Al2O3,ALUMINIUMOXID,"758,04 ","973,38",€/t,Fastmarkets,2022
+Sb,ANTIMON,"7.145,75","11.072,35",US$/t,SMM,2022
+Pb,BLEI,"2.116,95","2.211,00",US$/t,LME,2022
+Cr,CHROM,"9.061,75","10.859,04",US$/t,SMM,2022
+Iron Ore,EISENERZ,"101,18","111,00",US$/dmtu,World Bank,2022
+CaF2,FLUSSSPAT,"402,62","645,83",US$/t,Fastmarkets,2022
+CaF2,FLUSSSPAT,"428,77 ","453,13",US$/t,Fastmarkets,2022
+Ga,GALLIUM,"194,69","411,33",US$/kg,Asian Metal,2022
+Au,GOLD,"1.497,77","1.824,00",US$/troz,LME,2022
+Graphite,GRAPHIT,"1.458,23","1.446,56",US$/t,Fastmarkets,2022
+In,INDIUM,"197,98","224,36",US$/kg,SMM,2022
+Cd,KADMIUM,"2.478,19","3.161,90",US$/t,SMM,2022
+Co,KOBALT,"55.904,25 ","64.508,21",US$/t,SMM,2022
+Co,KOBALT,"48.719,32","51.246,00",US$/t,LME,2022
+Cu,KUPFER,"6.834,26 ","8.366,00",US$/t,LME,2022
+Li2CO3,LITHIUM,"429.437,50 ","487.916,67",RMB/t,Fastmarkets,2022
+Li2CO3,LITHIUM,"62,06","68,48",US$/kg,Fastmarkets,2022
+MgCO3,MAGNESIT,"272,95","387,50",€/t,Fastmarkets,2022
+MgO,MAGNESIT,"646,28","526,88",US$/t,Fastmarkets,2022
+MgO,MAGNESIT,"1.183,12","893,85",US$/t,Fastmarkets,2022
+MgCO3,MAGNESIT,"75,59","130,29",€/t,Fastmarkets,2022
+Mg,MAGNESIUM,"2.607,21","4.681,01",US$/t,SMM,2022
+Mn,MANGAN,"2.268,47","3.167,92",US$/t,SMM,2022
+FeMn,MANGAN,"1.141,60","1.265,83",US$/t,FerroAlloyNet,2022
+Mo,MOLYBDAN,"39,39","58,30",US$/kg,SMM,2022
+FeMo,MOLYBDAN,"26,71","45,17",US$/kg,FerroAlloyNet,2022
+Ni,NICKEL,"13.933,51","28.838,00",US$/t,LME,2022
+Nb2O5,NIOB,"26,41","36,86",US$/kg,Asian Metal,2022
+Nb2O5,NIOB,"34,42","40,81",US$/kg,Asian Metal,2022
+Pd,PALLADIUM,"1.607,45","1.824,00",US$/troz,LBMA,2022
+Pt,PLATIN,"933,91","1.012,00",US$/troz,LBMA,2022
+Rh,RHODIUM,"288.972,73","577.061,12",US$/kg,SMM,2022
+Se,SELEN,"27,75","23,55",US$/kg,SMM,2022
+CeO2,Cerium (oxide),"1,85","1,40",US$/kg,Asian Metal,2022
+Dy,Dysprosium (metal),"338,18","493,08",US$/kg,Asian Metal,2022
+Dy2O3,Dysprosium (oxide),"251,62","382,08",US$/kg,Asian Metal,2022
+Er2O3,Erbium (oxide),"26,61","53,48",US$/kg,Asian Metal,2022
+Eu2O3,Europium (oxide),"44,40","29,76",US$/kg,Asian Metal,2022
+La2O3,Lanthanum (oxide),"1,89","1,35",US$/kg,Asian Metal,2022
+La2O3,Lanthanum (oxide),"3,60","5,88",US$/kg,Asian Metal,2022
+Nd,Neodymium (metal),"73,39","164,50",US$/kg,Asian Metal,2022
+Nd2O3,Neodymium (oxide),"58,34","133,76",US$/kg,Asian Metal,2022
+Pr,Praseodymium (metal),"101,85","174,33",US$/kg,Asian Metal,2022
+Pr2O3,Praseodymium (oxide),"61,28","116,23",US$/kg,Asian Metal,2022
+Sm,Samarium (metal),"14,11","15,48",US$/kg,Asian Metal,2022
+Sm2O3,Samarium (oxide),"2,00","3,74",US$/kg,Asian Metal,2022
+Sc2O3,Scandium (oxide),"6.816,53","5.472,79",RMB/kg,Asian Metal,2022
+Tb,Terbium (metal),"889,41","2.585,63",US$/kg,Asian Metal,2022
+Tb4O7,Terbium (oxide),"688,92","2.044,38",US$/kg,Asian Metal,2022
+Y,Yttrium (metal),"33,37","40,56",US$/kg,Asian Metal,2022
+Y2O3,Yttrium (oxide),"3,77","11,86",US$/kg,Asian Metal,2022
+Ag,SILBER,"18,97","23,24",US$/troz,LME,2022
+FeSi,SILIZIUM,"1.384,66","1.850,97",US$/t,FerroAlloyNet,2022
+Si,SILIZIUM,"2.181,51","3.136,08",US$/t,SMM,2022
+Ta2O5,TANTAL,"156,44","197,02",US$/kg,Asian Metal,2022
+Ta2O5,TANTAL,"214,84","276,67",US$/kg,Asian Metal,2022
+Te,TELLUR,"61,97","71,12",US$/kg,Asian Metal,2022
+FeTi,Ferrotitan,"11,73","11,77",US$/kg,FerroAlloyNet,2022
+FeTiO3,Ilmenite concentrate,"375,83","398,13",US$/t,Fastmarkets,2022
+TiO2,TITAN,"2.960,32","3.895,83",€/t,Fastmarkets,2022
+TiO2,TITAN,"1.185,61","1.904,17",€/t,Fastmarkets,2022
+V,VANADIUM,"42,51","38,99",US$/kg,FerroAlloyNet,2022
+Bi,WISMUT,"7.703,67","6.833,51",US$/t,SMM,2022
+WO3,WOLFRAM,"260,52","330,08",US$/mtu,SMM,2022
+W,WOLFRAM,"32,48","40,99",US$/kg,FerroAlloyNet,2022
+W,WOLFRAM,"35,76 ","44,53",US$/kg,FerroAlloyNet,2022
+Zn,ZINK,"2.726,85","3.127,00",US$/t,LME,2022
+Sn,ZINN,"21.725,17","24.074,00",US$/t,LME,2022
+Zr,ZIRKON,"1.371,96","2.034,79",US$/t,Fastmarkets,2022

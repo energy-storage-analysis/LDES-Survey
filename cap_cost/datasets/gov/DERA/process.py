@@ -40,6 +40,7 @@ df['specific_price'] = df['specific_price'].astype('pint[USD/kg]')
 df
 # %%
 
+#Years are all the same (2022) so no need to include them. 
 df = df[['original_name', 'specific_price']]
 
 #%%

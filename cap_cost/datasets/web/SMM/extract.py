@@ -14,7 +14,7 @@ for fn in fns:
 
     df = pd.read_excel(fp)
 
-    df = df[['Name','Avg With Rate', 'Unit']]
+    df = df[['Name','Avg With Rate', 'Unit', 'Date']]
 
     dfs.append(df)
 

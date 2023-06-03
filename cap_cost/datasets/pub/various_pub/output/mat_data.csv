@@ -1,18 +1,18 @@
-,original_name,molecular_formula,specific_price,vol_price,source,notes
-unit_row,N/U,N/U,USD/kg,USD/m**3,N/U,N/U
-index,,,,,,
-Iron Ore,Magnetite,Fe2O3,0.139,,Olympios 2021,
-Solar Salt,Molten Salt,NaNO3KNO3,1,,Olympios 2021,
-Sand,Dune Sand,SiO2,0.05,,Diago 2018,
-Solar Salt,Solar Salt,NaNO3KNO3,0.43,,Diago 2018,
-TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,,Liu 2019,doi.org/10.1016/j.chempr.2019.04.021
-CFRP,,,15,,Singh Gill 2022,
-Steel,,,1.5,,Singh Gill 2022,
-CFRP,,,10,,Rao 2018,
-CO2,Cyrogenic Carbon Capture,CO2,0.04,,Knighton 2020,
-CO2,DAC Carbon Capture,CO2,0.195,,Zhao 2019,
-N2,Liquid Nitrogen,N2,0.1401,,Salerno 2002,Converted to mass with density 0.8064 g/ml
-LH2 Tank,,,,2064.6,HDSAM 2015,The linear component of the LH2 Storage cost scaling relationship
-LH2 Tank,,,,1684,Hurskainen 2019,Manually converted to USD with conversion factor 1.113 EUR/USD
-LNG Tank,,,,594,Hurskainen 2019,Manually converted to USD with conversion factor 1.113 EUR/USD
-LNG Tank,,,,1150,Fikri 2018,
+,original_name,molecular_formula,specific_price,vol_price,source,year,notes
+unit_row,N/U,N/U,USD/kg,USD/m**3,N/U,N/U,N/U
+index,,,,,,,
+Iron Ore,Magnetite,Fe2O3,0.139,,Olympios 2021,2021,
+Solar Salt,Molten Salt,NaNO3KNO3,1,,Olympios 2021,2021,
+Sand,Dune Sand,SiO2,0.05,,Diago 2018,2018,
+Solar Salt,Solar Salt,NaNO3KNO3,0.43,,Diago 2018,2018,
+TEMPO,"4-hydroxy-2,2,6,6-tetramethylpiperidin-1-oxyl (4-OH-TEMPO)",C9H18NO2,5.5,,Liu 2019,2019,doi.org/10.1016/j.chempr.2019.04.021
+CFRP,,,15,,Singh Gill 2022,2022,
+Steel,,,1.5,,Singh Gill 2022,2022,
+CFRP,,,10,,Rao 2018,2018,
+CO2,Cyrogenic Carbon Capture,CO2,0.04,,Knighton 2020,2020,
+CO2,DAC Carbon Capture,CO2,0.195,,Zhao 2019,2019,
+N2,Liquid Nitrogen,N2,0.1401,,Salerno 2002,2002,Converted to mass with density 0.8064 g/ml
+LH2 Tank,,,,2064.6,HDSAM 2015,2015,The linear component of the LH2 Storage cost scaling relationship
+LH2 Tank,,,,1684,Hurskainen 2019,2019,Manually converted to USD with conversion factor 1.113 EUR/USD
+LNG Tank,,,,594,Hurskainen 2019,2019,Manually converted to USD with conversion factor 1.113 EUR/USD
+LNG Tank,,,,1150,Fikri 2018,2018,
