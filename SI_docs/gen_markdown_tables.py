@@ -120,7 +120,7 @@ df = df.reset_index()
 
 df = df[['index','original_name','source','notes']]
 df = df.rename({col: col.replace('_',' ') for col in df.columns.get_level_values(0)},axis=1)
-df['SM_type'] = df['SM_type'].str.replace('_', ' ').str.capitalize()
+# df['SM_type'] = df['SM_type'].str.replace('_', ' ').str.capitalize()
 
 df.columns = df.columns.droplevel(1) # No units needed
 
