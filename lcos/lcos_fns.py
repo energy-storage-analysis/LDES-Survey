@@ -37,6 +37,33 @@ def calc_lcos(DD, CF, C_Ein, eta_RT, C_kW, C_kWh, LT):
     lcos= elec_premium + capital_term
     return lcos
 
+
+@xyzpy.label(var_names=['lcos'])
+def calc_lcos_DD_nom(DD,DD_nom,coupling, CF, C_Ein, eta_RT, C_kW, C_kWh, LT):
+    """
+    The main equation for LCOS
+    """
+    elec_premium = C_Ein*((1/eta_RT)-1)
+
+
+    capital_term_num = LT*4380*CF*np.sqrt(eta_RT) 
+    
+    if coupling == 'decoupled':
+        DD_nom = DD
+    elif coupling == 'coupled':
+        if DD < DD_nom:
+            return np.nan
+    else:
+        raise ValueError("coupling arg must be coupled or decoupled")
+        
+    capital_term_dem = C_kW*(DD/DD_nom) + C_kWh*DD
+
+    capital_term = capital_term_dem/capital_term_num
+
+    lcos= elec_premium + capital_term
+    return lcos
+
+
 @xyzpy.label(var_names=['lcos'])
 def calc_lcos_ncy(DD, num_cycles_year, C_Ein, eta_RT, C_kW, C_kWh, LT):
     """
@@ -56,9 +83,9 @@ def calc_CkW_max(DD, C_kWh, eta_RT, LT, CF, C_Ein, LCOS_set):
     return C_kW
 
 
-def gen_legend_figure(style_dict, title, style_type='linestyle'):
+def gen_legend_figure(style_dict, title, style_type='linestyle', figsize=(0.75,0.75)):
     fig = plt.figure("Line plot")
-    legendFig = plt.figure("Legend plot {}".format(title), figsize=(0.75,0.75))
+    legendFig = plt.figure("Legend plot {}".format(title), figsize=figsize)
     ax = fig.add_subplot(111)
 
     lns = []
