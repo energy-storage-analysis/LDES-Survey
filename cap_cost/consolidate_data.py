@@ -60,7 +60,7 @@ df_SM_all_out = prep_df_pint_out(df_SM)
 df_SM_all_out.to_csv('data_consolidated/SM_data_all.csv')
 
 # Remove some columns with extra information in the final dataset. 
-df_SM = df_SM.drop(['kth','phase_change_T', 'C_kwh_orig'], axis=1) # Drop columns that are unused in in the 
+df_SM = df_SM.drop(['kth', 'C_kwh_orig'], axis=1) # Drop columns that are unused in in the 
 
 #%%
 
@@ -93,6 +93,7 @@ duplicate_col_method = {
     'T_max': 'max',
     'sp_latent_heat': 'max',
     'mass_density': 'mean', # For the duplicated values (sensible latent), this is not actually being used
+    'phase_change_T': 'max'
 }
 
 # Uncomment to revert all to mean as previous method 

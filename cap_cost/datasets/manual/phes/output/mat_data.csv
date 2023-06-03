@@ -1,5 +1,5 @@
-,original_name,vol_price,source,notes
-unit_row,N/U,USD / meter ** 3,N/U,N/U
-index,,,,
-Water Reservoir Excavation,Pumped Hydro,67.07439076923077,Black and Veatch 2012,Based on Black and Veatch 2012 reservoir cost numbers. 
-Water Reservoir Excavation,Pumped Hydro,43.15384615384616,Stocks 2021,Figure S1
+,original_name,vol_price,year,source,notes
+unit_row,N/U,USD / meter ** 3,N/U,N/U,N/U
+index,,,,,
+Water Reservoir Excavation,Pumped Hydro,67.07439076923077,2012,Black and Veatch 2012,Based on Black and Veatch 2012 reservoir cost numbers. 
+Water Reservoir Excavation,Pumped Hydro,43.15384615384616,2021,Stocks 2021,Figure S1
