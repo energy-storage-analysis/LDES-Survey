@@ -168,11 +168,31 @@ df_grouped = df_grouped.rename({'source': 'SM_sources'}, axis=1)
 
 #%%
 
-#Doing this here to be able to see deltaT in SM_data
+# Determining T_min for Delta T calculations for sensible thermal . We first use
+# melting temperature data or a default minimum tempratrue (room temperature),
+# an pick whatever is highest for hot (or 'both') SM. For cold SM we use the
+# melting temperature. For the remaining we use the default temperature.  
 
 default_min_T = 20
 
-df_grouped['T_min'] = df_grouped['T_melt'].fillna(default_min_T)
+df_melt = df_grouped.dropna(subset=['T_melt'])[['sub_type','mat_type']]
+
+df_hot = df_melt.where(df_melt['sub_type'].isin(['hot','both'])).dropna(how='all')
+
+def find_min_temp(T):
+    T_min = T if T > default_min_T else default_min_T
+    return T_min
+
+df_grouped.loc[df_hot.index, 'T_min'] = df_grouped.loc[df_hot.index, 'T_melt'].pint.magnitude.apply(find_min_temp)
+
+df_cold = df_melt.where(df_melt['sub_type'].isin(['cold'])).dropna(how='all')
+df_grouped.loc[df_cold.index, 'T_min'] = df_grouped.loc[df_cold.index, 'T_melt'].pint.magnitude
+
+# Remaining in the dataset without Tmin (but still with a Tmax)
+remaining_sensible = df_grouped.dropna(subset=['T_max'])['T_min'].astype(float).fillna(default_min_T)
+df_grouped.loc[remaining_sensible.index, 'T_min'] = remaining_sensible
+df_grouped['T_min'] = df_grouped['T_min'].astype(float).astype('pint[degC]')
+
 df_grouped['deltaT'] = df_grouped['T_max'] - df_grouped['T_min']
 #%%
 
