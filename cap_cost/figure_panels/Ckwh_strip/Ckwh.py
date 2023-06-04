@@ -84,7 +84,9 @@ ax = sns.stripplot(
     jitter=0.2,
                 )
 
-# plt.axhline(np.log10(10), linestyle='--', color='gray')
+plt.axhline(np.log10(1), linestyle='--', color='gray')
+plt.axhline(np.log10(10), linestyle='-.', color='gray')
+plt.axhline(np.log10(100), linestyle=':', color='gray')
 
 fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
 log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
@@ -107,45 +109,6 @@ plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 plt.gca().get_legend().remove()
 plt.suptitle('')
 
-
-## Right hand axis
-plt.twinx()
-
-t_ax = sns.stripplot(
-    data=df_plot, 
-    x='display_text', 
-    y='DDmax', 
-    size=3, 
-    color='black', 
-    alpha=0 #This can be used to check alignment
-                )
-
-#TODO: Can't get secondary axis to work, but should be simpler than plotting fake data...
-# https://matplotlib.org/stable/gallery/subplots_axes_and_figures/secondary_axis.html
-
-# t_ax = ax.secondary_yaxis('right',functions=(calc_DDmax, inv_DDmax))
-
-t_ax.set_yscale('log')
-# plt.yscale('log')
-
-t_ax_ylim = (
-    2190/(10**(log_ticks.start)),
-    2190/(10**(log_ticks.stop))
-)
-
-t_ax.set_ylim(*t_ax_ylim)
-
-t_ax.set_yticks([1e6,1e5,1e4,1e3,1e2,1e1,1e0,1e-1,1e-2,1e-3,1e-4])
-
-#TODO: Can't get working 
-# t_ax.set_zorder(ax.get_zorder() + 1000)
-# t_ax.set_frame_on(False)
-
-t_ax.grid(linestyle = '--', alpha = 0.7)
-
-t_ax.set_axisbelow(True)
-
-plt.ylabel("$\\frac{DD_{max}}{LT \eta CF}$ [hours]")
 
 
 plt.tight_layout()
