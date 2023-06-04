@@ -14,16 +14,6 @@ The `consolidate_data.py` script collects data from each source's folder in the 
 
 The `data_consolidated` folder contains two important csv files that comprise the main dataset of this work.
 
- * `mat_data.csv`: Contains information about the constituent materials of the storage media
-    * median and standard deviation of specific price between all sources. 
-    * How many sources, how many storage media the material is used in
-    * The molecular formula if applicable
-    * Materials are indexed to a unique identifier. Usually the molecular formula when applicable, otherwise a unique name. 
-* `SM_data.csv`: Contains information about each storage media including
-    * The various physical properties used to calculate C_kwh
-    * The total specific price, energy, and C_kwh
-    * The material specification, either a single material, or a combination of materials in the format [(name 1, fraction 1), (name 2, fraction 2), ...] on a mass or molar fraction basis (specified in a separate column)
-
 The `figure_panels` folder contains various scripts that generate the figure panels (individual plots in figures) of the data. 
 The `source_meta` folder contains scripts that generate metadata about the datasets in the form of tables. 
 

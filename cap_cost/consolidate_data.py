@@ -68,7 +68,7 @@ df_mat_data['specific_price'] = df_mat_data['specific_price']*df_mat_data['year'
 df_mat_data_all_out = prep_df_pint_out(df_mat_data)
 df_mat_data_all_out.to_csv('data_consolidated/mat_data_all.csv')
 
-# physprop_lookup = pd.read_csv(os.path.join(REPO_DIR, 'cap_cost\source_meta\physical_property_lookup.csv'), index_col=0)['long_name']
+# physical_property_lookup = pd.read_csv(os.path.join(REPO_DIR, 'cap_cost\data_consolidated\SM_column_info.csv'), index_col=0)['long_name']
 
 df_SM_all_out = prep_df_pint_out(df_SM)
 df_SM_all_out.to_csv('data_consolidated/SM_data_all.csv')

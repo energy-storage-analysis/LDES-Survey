@@ -29,7 +29,7 @@ def get_source_SM_counts(df):
     counts = str(dict(counts))
     return counts
 
-physical_property_lookup = pd.read_csv('physical_property_lookup.csv', index_col=0)
+physical_property_lookup = pd.read_csv(os.path.join(REPO_DIR, 'cap_cost\data_consolidated\SM_column_info.csv'), index_col=0)
 
 group_name_map = {
     'pub': 'Publications',

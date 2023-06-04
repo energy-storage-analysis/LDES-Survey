@@ -19,7 +19,7 @@ load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 
 
-physprop_lookup = pd.read_csv(os.path.join(REPO_DIR, 'SI_docs\physical_property_lookup.csv'), index_col=0)
+physprop_lookup = pd.read_csv(os.path.join(REPO_DIR, 'cap_cost\data_consolidated\SM_column_info.csv'), index_col=0)
 
 physprop_lookup
 #%%
