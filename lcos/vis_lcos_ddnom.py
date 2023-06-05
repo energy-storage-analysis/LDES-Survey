@@ -131,7 +131,7 @@ linestyles = ['-','--','-.',':']
 linestyle_dict = {case: linestyles[i] for i, case in enumerate(da.coords['case'].values)}
 
 
-legendFig = gen_legend_figure(linestyle_dict, title=None, style_type='linestyle', figsize=(2,2))
+legendFig = gen_legend_figure(linestyle_dict, title=None, style_type='linestyle', figsize=(1.5,0.5))
 legendFig.savefig('output/legend_linestyle.png', transparent=True)
 
 #%%
@@ -153,6 +153,8 @@ for C_kWh, case in da_stack.coords['temp'].values:
     plt.gca().set_title('')
     plt.xscale('log')
     plt.yscale('log')
+
+plt.ylim(3e-3, 3)
 
 plt.tight_layout()
 plt.savefig('output/LCOS_DD_coupling.png')
