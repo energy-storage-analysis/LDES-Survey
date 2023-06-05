@@ -488,10 +488,6 @@ K2CO3/Li2CO3,latent_thermal,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass,"K2CO3 + 
 AlSi12,latent_thermal,"[('Al', 0.88), ('Si', 0.12)]",mass,"AL-Si
 88-12%",hot,metal,,,Steinmann 2022,,,2250.0,576.0,0.1555555555555555,,,,,,,,,,,,,,,,,,
 LiF,latent_thermal,LiF,,LiF,hot,molten_salt,,,Steinmann 2022,,,2640.0,848.0,0.29,,,,,,,,,,,,,,,,,,
-Stone,gravitational,Stone,,,block_stacking,,,,Sterner 2019,,,,,,,,,1.0,200.0,,,,,,,,,,,,,
-Concrete,gravitational,Concrete,,,block_stacking,,,,Sterner 2019,,,,,,,,,1.0,200.0,,,,,,,,,,,,,
-Gravel,gravitational,Gravel,,,block_stacking,,,,Sterner 2019,,,,,,,,,1.0,200.0,,,,,,,,,,,,,
-Pumice,gravitational,Pumice,,,block_stacking,,,,Sterner 2019,,,,,,,,,1.0,200.0,,,,,,,,,,,,,
 H2 Spherical Pressure,synfuel,Spherical Pressure,,,tank,,0.0659,2.0,Tietze 2016,,2.016,0.0899435029591919,,,,,,,,,,,,,,,,,,,,
 CH4 Spherical Pressure,synfuel,Spherical Pressure,,,tank,,0.2554,8.0,Tietze 2016,,16.043,0.7157557628840852,,,,,,,,,,,,,,,,,,,,
 Iron Ore,sensible_thermal,Iron Ore,,Magnetite,both,other_solid,,,Grosu 2017,,,,,,0.00027,,1000.0,,,Taken from Fig 7 assuming approximately 500C,,,,,,,,,,,,
@@ -499,6 +495,10 @@ Iron Ore,sensible_thermal,Iron Ore,,Magnetite,both,other_solid,,,Molgaard 1971,,
 Sand,sensible_thermal,Sand,,Sand,hot,rock,,,Diago 2018,,,,,,0.000277,,1000.0,,,doi.org/10.1016/j.apenergy.2018.02.106,,,,,,,,,,,,
 NiAl Molten Salt,coupled_battery,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,solid_electrode,,,,Li 2022 PNNL,,,,,,,,,,,doi.org/10.1016/j.xcrp.2022.100821,,,,,,,,,,,,0.91
 Al2O3_ThinFilm,dielectric_capacitor,Al2O3,,,thin_film,,,,Hanby 2018,,,3950.0,,,,,,,,,,,,,,,,310000000.0,8.5,,,
+Stone,gravitational,Stone,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Concrete,gravitational,Concrete,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Gravel,gravitational,Gravel,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Pumice,gravitational,Pumice,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
 Al-O2,coupled_battery,Al,,Al-O2,metal_air,,,3.0,Weinrich 2019,,,,,,,,,,,,,,,,,,,,,,,2.1
 Al-air,coupled_battery,Al,,Al-air,metal_air,,,3.0,Weinrich 2019,,,,,,,,,,,,,,,,,,,,,,,2.71
 Ca-O2,coupled_battery,Ca,,Ca-O2,metal_air,,,2.0,Weinrich 2019,,,,,,,,,,,,,,,,,,,,,,,3.38

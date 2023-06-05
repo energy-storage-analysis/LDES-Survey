@@ -1,7 +1,0 @@
-,SM_type,sub_type,materials,mat_basis,original_name,delta_height,VtoR,mass_density,notes
-unit_row,N/U,N/U,N/U,N/U,N/U,m,dimensionless,kg/m**3,N/U
-SM_name,,,,,,,,,
-Stone,gravitational,block_stacking,Stone,,,200,1,,
-Concrete,gravitational,block_stacking,Concrete,,,200,1,,
-Gravel,gravitational,block_stacking,Gravel,,,200,1,,
-Pumice,gravitational,block_stacking,Pumice,,,200,1,,
