@@ -33,8 +33,9 @@ print(powcap_store)
 
 #%%
 
-# plt.ylabel("Cumulative Power Capacity")
 pow_caps = powcap_gen.sort_values(ascending=False)
+pow_caps = pow_caps.drop('CSP')
+
 pow_caps.plot.bar()
 
 plt.ylabel("Cumulative Power Capacity (MW)")
@@ -43,10 +44,6 @@ plt.yscale('log')
 plt.tight_layout()
 plt.savefig('figures/eia_cap_MW.png')
 
-
-#%%
-
-df_storage.info()
 
 #%%
 
@@ -90,15 +87,11 @@ df_eia_store.groupby('Plant Code')['energy'].sum(),
 df_eia_store.groupby('Plant Code')['power'].sum(),
 ], axis=1)
 
-#%%
-
 
 #%%
 
 df_eia_gen = df_gen[['Plant Name', 'Technology', 'Nameplate Capacity (MW)', 'Status']]
 df_eia_gen = df_eia_gen.where(df_eia_gen['Status'] == 'OP').drop('Status', axis=1)
-
-
 
 df_eia_gen = df_eia_gen.rename({
 'Plant Name': 'name',
@@ -232,7 +225,7 @@ plt.xticks(rotation = 90)
 plt.ylim(5e0,2e6)
 
 # plt.gca().get_legend().set_bbox_to_anchor([0,0,1.6,1])
-plt.ylabel('Energy Capacity in \nDuration Range (kWh)')
+plt.ylabel('Energy Capacity in \nDuration Range (MWh)')
 plt.xlabel('Duration Range (hours)')
 
 plt.legend()
@@ -250,6 +243,8 @@ e_caps.plot.bar()
 
 plt.ylabel("Cumulative Energy Capacity (MWh)")
 plt.yscale('log')
+
+plt.xlabel("Technology")
 
 plt.tight_layout()
 plt.savefig('figures/storage_cap_MWh.png')
@@ -281,6 +276,7 @@ e_caps.plot.bar()
 
 plt.ylabel("Cumulative Energy Capacity (MWh)")
 plt.yscale('log')
+plt.xlabel("Battery Type")
 
 plt.tight_layout()
 plt.savefig("figures/batt_type.png")
