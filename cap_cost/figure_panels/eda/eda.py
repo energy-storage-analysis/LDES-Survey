@@ -51,7 +51,7 @@ df_mat_data['specific_price'].hist(
 plt.xscale('log')
 
 # plt.suptitle("{} Material Prices".format(len(df_mat_data))) #Used in at least one storage medium
-plt.xlabel('Median Specific Price (USD/kg)')
+plt.xlabel('Specific Price (USD/kg)')
 
 plt.locator_params(axis='y', integer=True)
 plt.ylabel('Count')
