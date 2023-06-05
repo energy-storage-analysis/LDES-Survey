@@ -19,6 +19,7 @@ df_storage['Technology'] = df_storage['Technology'].str.replace(
 'Solar Thermal with Energy Storage', 'CSP').str.replace(
 'Natural Gas with Compressed Air Storage', 'CAES'
 )
+df_storage = df_storage.set_index('Plant Code')
 
 df_storage.to_csv('input_data/storage_processed.csv')
 
@@ -47,6 +48,7 @@ df_gen_s['Technology'] = df_gen_s['Technology'].str.replace(
 'Hydroelectric Pumped Storage', 'PHES'
 )
 
+df_gen_s = df_gen_s.set_index('Plant Code')
 
 df_gen_s.to_csv('input_data/gen_processed.csv')
 
