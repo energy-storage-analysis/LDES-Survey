@@ -70,6 +70,12 @@ df_sd.where(df_sd['sub_type'] == 'Closed-loop PHS').dropna(how='all')
 #%%
 
 df2 = pd.merge(df, df_sd, on='ID')
+
+df2.to_csv('data/gesdb_processed.csv')
+
+#%%k
+
+
 df2 = df2[df2['energy'] > 0]
 # df2 = df2[df2['status'] == 'Operational']
 
