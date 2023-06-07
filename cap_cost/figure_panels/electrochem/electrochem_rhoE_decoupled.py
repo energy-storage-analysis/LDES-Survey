@@ -10,6 +10,12 @@ from es_utils.units import read_pint_df
 from es_utils.plot import annotate_points, draw_arrows, prepare_fixed_texts
 from es_utils.chem import format_chem_formula
 
+
+from adjustText import adjust_text
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
 import matplotlib as mpl
 plt.rcParams.update({
     "savefig.facecolor": 'white',
@@ -19,16 +25,16 @@ plt.rcParams.update({
     'figure.figsize': (7, 10)
 })
 
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
 
 label_fontsize = 14
 marker_size = 50
 ADJUST_TEXT_LIM = 5
+Ckwh_cutoff = CkWh_cases['value']['A']
 
-from adjustText import adjust_text
+y_lim = (5e-3, Ckwh_cutoff*2)
+xlim = (0.02, 60)
 
-from dotenv import load_dotenv
-load_dotenv()
-REPO_DIR = os.getenv('REPO_DIR')
 
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
@@ -36,8 +42,12 @@ if not os.path.exists(output_dir): os.makedirs(output_dir)
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 
+
 formula_strings = [format_chem_formula(s) for s in df.index]
 df['display_text'] = formula_strings
+
+#TODO: Quick fix. 
+df['display_text'] = df['display_text'].replace("TiMn_{1.4}V_{0}.62H_{3.4}", "TiMn_{1.4}V_{0.62}H_{3.4}", regex=False)
 
 
 df['SM_type'] = df['SM_type'].replace('liquid_metal_battery', 'liquid_metal')
@@ -47,8 +57,6 @@ df['sub_type'] = df['sub_type'].str.replace('_',' ').str.title()
 df['mat_type'] = df['mat_type'].str.replace('_',' ').str.title()
 df['mat_type'] = df['mat_type'].str.replace('Lohc','LOHC')
 
-Ckwh_cutoff = 30
-y_max = Ckwh_cutoff*1.3
 
 #%%
 
@@ -83,13 +91,13 @@ df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < Ckwh_cutoff).
 
 df_ec_decoupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_decoupled_ds.csv'))
 
-
+#New adjustText version draws arrow even though this is off screen, just will put manually in figure. 
+df_ec_decoupled = df_ec_decoupled.drop('H2 (Feedstock)')
 
 #%%
 
 print("Decoupled")
 
-xlim = (0.1, 60)
 
 x_str='specific_energy'
 y_str='C_kwh'
@@ -102,7 +110,7 @@ ax = plt.gca()
 
 plt.yscale('log')
 plt.xscale('log')
-plt.ylim(bottom=9e-3, top=y_max)
+plt.ylim(y_lim)
 plt.xlim(*xlim)
 
 texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
@@ -117,7 +125,9 @@ leg = ax.get_legend()
 leg.set_title('Sub Type')
 leg.set_bbox_to_anchor([0,0,1,0.52])
 
-ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
+case_lns = []
+for case, row in CkWh_cases.iterrows():
+    case_lns.append(plt.axhline(row['value'], linestyle=row['linestyle'], color='gray'))
 
 fix_positions = pd.read_csv('fix_positions_decoupled.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
@@ -126,12 +136,22 @@ texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positi
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
-adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_fix, *arrows_fix], arrowprops=dict(arrowstyle='->'))
-
+adjust_text(texts, 
+            expand_text = (1.05, 1.2),      #(1.05, 1.2)
+            expand_points = (2,2),    #(1.05, 1.2)
+            expand_objects = (1.05, 1.2),   #(1.05, 1.2)
+            expand_align = (1.05, 1.2),     #(1.05, 1.2)
+            force_text= (0.2, 0.5),        #(0.1, 0.25)
+            force_points = (0.2, 0.5),      #(0.2, 0.5)
+            force_objects = (0.1, 0.25),    #(0.1, 0.25)
+            lim=ADJUST_TEXT_LIM, 
+            add_objects=[*texts_fix, *arrows_fix, *case_lns], 
+            arrowprops=dict(arrowstyle='->')
+            )
 
 all_texts = [*texts_fix, *texts]
-from es_utils.plot import adjust_text_after
-adjust_text_after(fig, ax, "Na_{2}LiAlH_{6}", all_texts, 3,12)
+# from es_utils.plot import adjust_text_after
+# adjust_text_after(fig, ax, "Na_{2}LiAlH_{6}", all_texts, 3,12)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 

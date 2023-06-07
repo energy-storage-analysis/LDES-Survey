@@ -47,8 +47,9 @@ df_virial_mat['specific_strength'] = df_virial_mat['specific_strength']/3600
 #     np.log10(df['specific_energy'].max()),
 #     )
 
-energy_densities_line = np.linspace(1e-2,2)
-mat_cost_line = energy_densities_line*10
+
+
+
 
 fig = plt.figure(figsize=(7,6))
 sns.scatterplot(data=df_virial_mat, y='specific_price', x='specific_strength', hue='materials')
@@ -57,7 +58,13 @@ ax = plt.gca()
 
 texts = annotate_points(df_virial_mat, 'specific_strength','specific_price')
 
-plt.plot(energy_densities_line, mat_cost_line, linestyle='--', color='gray', alpha=0.5)
+energy_densities_line = np.linspace(1e-2,2)
+mat_cost_line = energy_densities_line*10
+plt.plot(energy_densities_line, mat_cost_line, linestyle='-.', color='gray', alpha=0.5)
+
+energy_densities_line = np.linspace(1e-2,2)
+mat_cost_line = energy_densities_line*100
+plt.plot(energy_densities_line, mat_cost_line, linestyle=':', color='gray', alpha=0.5)
 
 plt.yscale('log')
 plt.xscale('log')
@@ -65,7 +72,7 @@ plt.xscale('log')
 plt.xlabel('Specific Strength (kWh/kg)')
 plt.ylabel('Specific Price ($/kg)')
 
-plt.ylim(0.5,100)
+plt.ylim(0.1,100)
 plt.xlim(3e-3,2)
 
 lgd = plt.gca().get_legend()
@@ -91,14 +98,14 @@ from es_utils.plot import adjust_text_after
 
 
 # adjust_text_after(fig, ax, "Kevlar", texts, 0.02,30)
-adjust_text_after(fig, ax, "T300PR319", texts, 0.04,20)
-adjust_text_after(fig, ax, "EGlass", texts, 0.04,15)
-adjust_text_after(fig, ax, "AS4/35016", texts, 0.5,10)
-adjust_text_after(fig, ax, "S2\ Glass", texts, 0.1,15)
-adjust_text_after(fig, ax, "AS4/8552", texts, 0.45,15)
-adjust_text_after(fig, ax, "IM7/85517", texts, 0.45,28)
+# adjust_text_after(fig, ax, "T300PR319", texts, 0.04,20)
+# adjust_text_after(fig, ax, "EGlass", texts, 0.04,15)
+# adjust_text_after(fig, ax, "AS4/35016", texts, 0.5,10)
+# adjust_text_after(fig, ax, "S2\ Glass", texts, 0.1,15)
+# adjust_text_after(fig, ax, "AS4/8552", texts, 0.45,15)
+# adjust_text_after(fig, ax, "IM7/85517", texts, 0.45,28)
 
-adjust_text_after(fig, ax, "Steel\ 455", texts, 0.02,0.7)
+# adjust_text_after(fig, ax, "Steel\ 455", texts, 0.02,0.7)
 
 plt.tight_layout()
 

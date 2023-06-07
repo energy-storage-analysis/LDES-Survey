@@ -22,8 +22,12 @@ output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 MARKER_SIZE=80
-Ckwh_cutoff = 50
-y_lim = (0.1, 100)
+ADJUST_TEXT_LIM = 5
+
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
+Ckwh_cutoff = CkWh_cases['value']['A']
+y_lim = (0.1, Ckwh_cutoff*2)
+
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
@@ -64,14 +68,18 @@ texts = annotate_points(df_tc, x_str,y_str,text_col='display_text', ax=ax)
 
 plt.xlim(*xlim)
 leg = plt.gca().get_legend()
-leg.set_bbox_to_anchor([0,0,0.3,0.2])
+leg.set_bbox_to_anchor([0.7,0.2,0,0])
 leg.set_title('')
 
 plt.yscale('log')
 plt.ylim(y_lim)
 # plt.ylim(0,10)
 
-ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
+# ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
+
+case_lns = []
+for case, row in CkWh_cases.iterrows():
+    case_lns.append(ax.axhline(row['value'], linestyle=row['linestyle'], color='gray'))
 
 plt.xlabel('Turning Temperature (deg C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
@@ -86,12 +94,19 @@ texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positi
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
-adjust_text(
-    texts, 
-    force_points=(0.5,3),
-    ax=ax,
-    add_objects=[*texts_fix, *arrows_fix]
-    )
+adjust_text(texts, 
+            expand_text = (1.05, 1.2),      #(1.05, 1.2)
+            expand_points = (2,2),    #(1.05, 1.2)
+            expand_objects = (1.05, 1.2),   #(1.05, 1.2)
+            expand_align = (1.05, 1.2),     #(1.05, 1.2)
+            force_text= (0.2, 0.5),        #(0.1, 0.25)
+            force_points = (0.2, 0.5),      #(0.2, 0.5)
+            force_objects = (0.1, 0.25),    #(0.1, 0.25)
+            lim=ADJUST_TEXT_LIM, 
+            add_objects=[*texts_fix, *arrows_fix, *case_lns], 
+            arrowprops=dict(arrowstyle='->')
+            )
+
 
 arrows = draw_arrows(texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
 

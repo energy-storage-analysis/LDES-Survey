@@ -32,6 +32,7 @@ def get_text_index_from_name(text_strings, text_string):
 
 def adjust_text_after(fig, ax, alter_name, texts, x, y):
     """
+    TODO: This function is not working with adjustText 0.8, transforms needs to be implemented. 
     This function can be called after automatically setting text labels with adjustText package to manually set a given labels postion
     """
 
@@ -66,14 +67,20 @@ def draw_arrows(texts, arrowprops, ax, orig_xy, *args, **kwargs):
     bboxes = get_bboxes(texts, r, (1, 1), ax)
     # kwap = kwargs.pop('arrowprops')
 
+    trans_to_data = ax.transData.inverted().transform
+
     arrows = []
     for j, (bbox, text) in enumerate(zip(bboxes, texts)):
         ap = {'patchA':text} # Ensure arrow is clipped by the text
         ap.update(arrowprops)
         # ap.update(kwap) # Add arrowprops from kwargs
+
+        xy = trans_to_data(orig_xy[j])
+        xytext=trans_to_data(get_midpoint(bbox))
+
         arrow = ax.annotate("", # Add an arrow from the text to the point
-                    xy = (orig_xy[j]),
-                    xytext=get_midpoint(bbox),
+                    xy = (xy),
+                    xytext=xytext,
                     arrowprops=ap,
                     *args, **kwargs)
         arrows.append(arrow)
@@ -88,6 +95,8 @@ def prepare_fixed_texts(texts, fix_positions, ax):
     texts_fix = []
     orig_xy_fixed = []
 
+    axis_to_data = ax.transAxes + ax.transData.inverted()
+
     for name in fix_positions:
 
         text_strings = [t.get_text().strip("$") for t in texts]
@@ -99,8 +108,13 @@ def prepare_fixed_texts(texts, fix_positions, ax):
         index = get_text_index_from_name(text_strings, name)
         text_to_fix = texts.pop(index)
         orig_xy_fixed.append(get_text_position(text_to_fix, ax=ax))
-        text_to_fix.set_x(fix_positions[name][0])
-        text_to_fix.set_y(fix_positions[name][1])
+        
+        fix_tup = fix_positions[name]
+
+        fix_tup_data = axis_to_data.transform(fix_tup)
+
+        text_to_fix.set_x(fix_tup_data[0])
+        text_to_fix.set_y(fix_tup_data[1])
         texts_fix.append(text_to_fix)
 
     orig_xy = [get_text_position(text, ax=ax) for text in texts]

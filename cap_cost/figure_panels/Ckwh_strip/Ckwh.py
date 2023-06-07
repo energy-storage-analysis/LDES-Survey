@@ -30,6 +30,8 @@ REPO_DIR = os.getenv('REPO_DIR')
 palette = pd.read_csv('../energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
+
 df_all = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df_all = df_all.dropna(subset=['C_kwh'])
@@ -83,6 +85,7 @@ df_mat = df_all.drop(SM_vol.index)
 #%%
 
 vol_plot_width = 1
+ylim = (-2.5,4.3)
 
 df_plot = df_mat
 
@@ -103,16 +106,20 @@ ax = sns.stripplot(
     jitter=0.2,
                 )
 
-plt.axhline(np.log10(1), linestyle='--', color='gray')
-plt.axhline(np.log10(10), linestyle='-.', color='gray')
-plt.axhline(np.log10(100), linestyle=':', color='gray')
+
+for case, row in CkWh_cases.iterrows():
+    plt.axhline(np.log10(row['value']), linestyle=row['linestyle'], color='gray')
+
 
 fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
-log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
+# log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
+log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(6))
+
 
 fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
 plt.xticks(rotation=70)
 
+plt.ylim(ylim)
 
 plt.ylabel('$C_{kWh,min}$ (USD/kWh)')
 plt.xlabel('Technology')
@@ -150,9 +157,9 @@ ax = sns.stripplot(
     jitter=0.2,
                 )
 
-plt.axhline(np.log10(1), linestyle='--', color='gray')
-plt.axhline(np.log10(10), linestyle='-.', color='gray')
-plt.axhline(np.log10(100), linestyle=':', color='gray')
+
+for case, row in CkWh_cases.iterrows():
+    plt.axhline(np.log10(row['value']), linestyle=row['linestyle'], color='gray')
 
 fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
 # log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
@@ -160,6 +167,7 @@ fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}
 fig.axes[0].yaxis.set_ticks([np.log10(x) for p in log_ticks for x in np.linspace(10**p, 10**(p+1), 10)], minor=True)
 plt.xticks(rotation=70)
 
+plt.ylim(ylim)
 
 plt.ylabel('$C_{kWh,min}$ (USD/kWh)')
 plt.xlabel('Technology')

@@ -10,6 +10,11 @@ from es_utils.units import read_pint_df
 from es_utils.plot import annotate_points, draw_arrows, prepare_fixed_texts
 from es_utils.chem import format_chem_formula
 
+from adjustText import adjust_text
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
 import matplotlib as mpl
 plt.rcParams.update({
     "savefig.facecolor": 'white',
@@ -24,11 +29,12 @@ label_fontsize = 14
 marker_size = 50
 ADJUST_TEXT_LIM = 5
 
-from adjustText import adjust_text
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
+Ckwh_cutoff = CkWh_cases['value']['A']
 
-from dotenv import load_dotenv
-load_dotenv()
-REPO_DIR = os.getenv('REPO_DIR')
+y_lim = (5e-3, Ckwh_cutoff*2)
+xlim=(1e-2,4e1)
+
 
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
@@ -47,8 +53,6 @@ df['sub_type'] = df['sub_type'].str.replace('_',' ').str.title()
 df['mat_type'] = df['mat_type'].str.replace('_',' ').str.title()
 df['mat_type'] = df['mat_type'].str.replace('Lohc','LOHC')
 
-Ckwh_cutoff = 30
-y_max = Ckwh_cutoff*1.3
 
 
 # %%
@@ -67,7 +71,6 @@ print("Coupled")
 
 fig = plt.figure()
 
-xlim=(2e-2,2e1)
 
 x_str='specific_energy'
 y_str='C_kwh'
@@ -75,7 +78,12 @@ y_str='C_kwh'
 sns.scatterplot(data=df_ec_coupled, y=y_str, x=x_str, hue='sub_type', style='sub_type', legend=True, s=marker_size)
 
 ax = plt.gca()
-ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
+
+case_lns = []
+for case, row in CkWh_cases.iterrows():
+    case_lns.append(ax.axhline(row['value'], linestyle=row['linestyle'], color='gray'))
+
+# ax.hlines(10,*xlim, linestyle='--', color='gray', alpha=0.5)
 
 texts = annotate_points(df_ec_coupled, x_str, y_str, text_col='display_text', ax=ax)
 
@@ -85,7 +93,7 @@ plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 
 plt.yscale('log')
 plt.xscale('log')
-plt.ylim(top=y_max)
+plt.ylim(y_lim)
 plt.xlim(*xlim)
 
 
@@ -104,6 +112,17 @@ texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positi
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
-adjust_text(texts, force_points=(5,2), lim=ADJUST_TEXT_LIM, add_objects=[*texts_fix, *arrows_fix], arrowprops=dict(arrowstyle='->'))
+adjust_text(texts, 
+            expand_text = (1.05, 1.2),      #(1.05, 1.2)
+            expand_points = (2,2),    #(1.05, 1.2)
+            expand_objects = (1.05, 1.2),   #(1.05, 1.2)
+            expand_align = (1.05, 1.2),     #(1.05, 1.2)
+            force_text= (0.1, 0.5),        #(0.1, 0.25)
+            force_points = (0.5, 0.1),      #(0.2, 0.5)
+            force_objects = (0.1, 0.25),    #(0.1, 0.25)
+            lim=ADJUST_TEXT_LIM, 
+            add_objects=[*texts_fix, *arrows_fix, *case_lns], 
+            arrowprops=dict(arrowstyle='->')
+            )
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))
