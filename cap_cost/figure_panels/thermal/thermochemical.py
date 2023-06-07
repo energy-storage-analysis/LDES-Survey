@@ -28,6 +28,9 @@ CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.
 Ckwh_cutoff = CkWh_cases['value']['A']
 y_lim = (0.1, Ckwh_cutoff*2)
 
+OVERWRITE_FIX_POSITIONS = False
+fn_fix_positions = 'fix_positions_thermochemical.csv'
+fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
 
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
@@ -106,6 +109,13 @@ adjust_text(texts,
             add_objects=[*texts_fix, *arrows_fix, *case_lns], 
             arrowprops=dict(arrowstyle='->')
             )
+
+from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
+
+if OVERWRITE_FIX_POSITIONS:
+    df_text_position = gen_text_position_fix_csv(texts, ax)
+    df_text_position = combine_fix_pos(df_tc, df_text_position)
+    df_text_position.to_csv(fn_fix_positions)
 
 
 arrows = draw_arrows(texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)

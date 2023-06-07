@@ -35,6 +35,9 @@ Ckwh_cutoff = CkWh_cases['value']['A']
 y_lim = (5e-3, Ckwh_cutoff*2)
 xlim = (0.02, 60)
 
+OVERWRITE_FIX_POSITIONS = False
+fn_fix_positions = 'fix_positions_decoupled.csv'
+fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
 
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
@@ -129,7 +132,6 @@ case_lns = []
 for case, row in CkWh_cases.iterrows():
     case_lns.append(plt.axhline(row['value'], linestyle=row['linestyle'], color='gray'))
 
-fix_positions = pd.read_csv('fix_positions_decoupled.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
@@ -152,6 +154,14 @@ adjust_text(texts,
 all_texts = [*texts_fix, *texts]
 # from es_utils.plot import adjust_text_after
 # adjust_text_after(fig, ax, "Na_{2}LiAlH_{6}", all_texts, 3,12)
+
+from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
+
+if OVERWRITE_FIX_POSITIONS:
+    df_text_position = gen_text_position_fix_csv(texts, ax)
+    df_text_position = combine_fix_pos(df_ec_decoupled, df_text_position)
+    df_text_position.to_csv(fn_fix_positions)
+
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_decoupled.png'))
 

@@ -33,6 +33,8 @@ Ckwh_cutoff = CkWh_cases['value']['A']
 y_lim = (0.005, Ckwh_cutoff*2)
 hot_xlim = (0,2100)
 
+OVERWRITE_FIX_POSITIONS = False
+
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df['SM_type'] = df['SM_type'].str.replace('_',' ').str.title()
@@ -141,7 +143,8 @@ ax_hot.yaxis.label.set_visible(False)
 
 texts = texts_cold
 
-fix_positions = pd.read_csv('fix_positions_sensible_cold.csv', index_col=0)
+fn_fix_positions = 'fix_positions_sensible_cold.csv'
+fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax_cold)
@@ -165,11 +168,18 @@ adjust_text(texts,
 # 
 
 
+from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
+
+if OVERWRITE_FIX_POSITIONS:
+    df_text_position = gen_text_position_fix_csv(texts, ax_cold)
+    df_text_position = combine_fix_pos(df_cold, df_text_position)
+    df_text_position.to_csv(fn_fix_positions)
 
 # Adjust hot texts
 
 texts = texts_hot
 
+fn_fix_positions = 'fix_positions_sensible_hot.csv'
 fix_positions = pd.read_csv('fix_positions_sensible_hot.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
@@ -191,7 +201,10 @@ adjust_text(texts,
             arrowprops=dict(arrowstyle='->')
             )
 
-
+if OVERWRITE_FIX_POSITIONS:
+    df_text_position = gen_text_position_fix_csv(texts, ax_hot)
+    df_text_position = combine_fix_pos(df_hot, df_text_position)
+    df_text_position.to_csv(fn_fix_positions)
 
 plt.savefig('output/sensible_hotcold.png')
 # %%

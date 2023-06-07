@@ -29,6 +29,10 @@ Ckwh_cutoff = CkWh_cases['value']['A']
 # Ckwh_cutoff = 100
 y_lim = (0.1, Ckwh_cutoff*2)
 
+OVERWRITE_FIX_POSITIONS = False
+fn_fix_positions = 'fix_positions_latent.csv'
+fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
+
 df = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 
@@ -82,8 +86,6 @@ plt.xlabel('Phase Change Temperature (deg C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Latent")
 
-
-fix_positions = pd.read_csv('fix_positions_latent.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
@@ -106,8 +108,15 @@ adjust_text(texts,
 
 # draw_arrows(all_texts, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy)
 all_texts = [*texts_fix, *texts]
-from es_utils.plot import adjust_text_after
-adjust_text_after(fig, ax, "LiF/MgF_{2}", all_texts, 650,80)
+# from es_utils.plot import adjust_text_after
+# adjust_text_after(fig, ax, "LiF/MgF_{2}", all_texts, 650,80)
+
+from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
+
+if OVERWRITE_FIX_POSITIONS:
+    df_text_position = gen_text_position_fix_csv(texts, ax)
+    df_text_position = combine_fix_pos(df_latent_ds, df_text_position)
+    df_text_position.to_csv(fn_fix_positions)
 
 leg = ax.get_legend()
 leg.set_title('')

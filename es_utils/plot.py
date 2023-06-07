@@ -90,6 +90,36 @@ def draw_arrows(texts, arrowprops, ax, orig_xy, *args, **kwargs):
 
 from adjustText import get_text_position
 
+import pandas as pd
+
+def gen_text_position_fix_csv(texts, ax):
+
+    text_strings = [t.get_text().strip("$") for t in texts]
+    df_text_pos = pd.DataFrame(index=text_strings)
+    df_text_pos.index.name = 'display_text'
+
+    trans_to_data = ax.transAxes.inverted().transform
+    
+    for i, text in enumerate(texts):
+        t_x, t_y = get_text_position(text, ax)
+        a_x, a_y = trans_to_data((t_x, t_y))
+
+        text_idx = text_strings[i]
+
+        df_text_pos.loc[text_idx,'x'] = a_x
+        df_text_pos.loc[text_idx,'y'] = a_y
+
+    return df_text_pos
+
+def combine_fix_pos(df_SM, df_text_position):
+    df1 = df_SM[['display_text']].reset_index()
+    df_text_position = pd.merge(df1, df_text_position, on='display_text').set_index('display_text')
+    df_text_position['fix'] = ''
+    df_text_position = df_text_position.sort_values('y', ascending=False)
+    df_text_position = df_text_position.round(2)
+    return df_text_position
+
+
 def prepare_fixed_texts(texts, fix_positions, ax):
     # form the lists of fixed texts, adjustable texts, and their original xy positions. Having to do weird things to keep the order in the lists matching, probably a better way to handle this.
     texts_fix = []

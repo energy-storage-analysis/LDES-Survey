@@ -33,8 +33,11 @@ CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.
 Ckwh_cutoff = CkWh_cases['value']['A']
 
 y_lim = (5e-3, Ckwh_cutoff*2)
-xlim=(1e-2,4e1)
+xlim=(5e-3,4e1)
 
+OVERWRITE_FIX_POSITIONS = False
+fn_fix_positions = 'fix_positions_coupled.csv'
+fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
 
 output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
@@ -105,7 +108,6 @@ leg.set_bbox_to_anchor([0,0.3,0.5,0])
 
 # Adjusting Texts 
 
-fix_positions = pd.read_csv('fix_positions_coupled.csv', index_col=0)
 fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
@@ -124,5 +126,13 @@ adjust_text(texts,
             add_objects=[*texts_fix, *arrows_fix, *case_lns], 
             arrowprops=dict(arrowstyle='->')
             )
+
+
+from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
+
+if OVERWRITE_FIX_POSITIONS:
+    df_text_position = gen_text_position_fix_csv(texts, ax)
+    df_text_position = combine_fix_pos(df_ec_coupled, df_text_position)
+    df_text_position.to_csv(fn_fix_positions)
 
 plt.savefig(pjoin(output_dir,'ec_rhoE_coupled.png'))

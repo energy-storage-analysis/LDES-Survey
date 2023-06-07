@@ -1,8 +1,8 @@
-display_text,SM_name,C_kwh,x,y,fix
-N-pentane,N-pentane,20.5651412987479,,,
-N-hexane,N-hexane,13.183113231413827,,,
-LN_{2},LN2,12.082073121427936,,,
-N-propane,N-propane,7.258804825747444,,,
-Isopentane,Isopentane,6.084116194002187,,,
-Ethanol,Ethanol,4.158890554743556,,,
-Methanol,Methanol,2.7570561984089568,,,
+display_text,SM_name,x,y,fix
+N-pentane,N-pentane,0.49,0.77,
+LN_{2},LN2,0.08,0.72,
+N-hexane,N-hexane,0.55,0.67,
+N-propane,N-propane,0.12,0.61,
+Ethanol,Ethanol,0.59,0.57,
+Isopentane,Isopentane,0.27,0.56,
+Methanol,Methanol,0.4,0.52,
