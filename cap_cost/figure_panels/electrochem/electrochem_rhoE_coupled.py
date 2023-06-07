@@ -32,7 +32,7 @@ ADJUST_TEXT_LIM = 10
 CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
 Ckwh_cutoff = CkWh_cases['value']['A']
 
-y_lim = (5e-3, Ckwh_cutoff*1.5)
+y_lim = (1e-2, Ckwh_cutoff*2)
 xlim=(10e-3,1.5e1)
 
 OVERWRITE_FIX_POSITIONS = True

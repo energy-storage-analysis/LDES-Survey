@@ -32,7 +32,7 @@ marker_size = 50
 ADJUST_TEXT_LIM = 5
 Ckwh_cutoff = CkWh_cases['value']['A']
 
-y_lim = (5e-3, Ckwh_cutoff*1.5)
+y_lim = (1e-2, Ckwh_cutoff*2)
 xlim = (0.02, 180)
 
 OVERWRITE_FIX_POSITIONS = True
@@ -146,7 +146,7 @@ adjust_text(texts,
             expand_points = (2,2),    #(1.05, 1.2)
             expand_objects = (1.05, 1.2),   #(1.05, 1.2)
             expand_align = (1.05, 1.2),     #(1.05, 1.2)
-            force_text= (0.2, 0.5),        #(0.1, 0.25)
+            force_text= (0.5, 0.5),        #(0.1, 0.25)
             force_points = (0.2, 0.5),      #(0.2, 0.5)
             force_objects = (0.1, 0.25),    #(0.1, 0.25)
             lim=ADJUST_TEXT_LIM, 
