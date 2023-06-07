@@ -21,21 +21,21 @@ plt.rcParams.update({
     "font.size": 12, 
     'savefig.dpi': 600, 
     'font.sans-serif': 'arial', 
-    'figure.figsize': (7, 10)
+    'figure.figsize': (7, 12)
 })
 
 
 label_fontsize = 14
 marker_size = 50
-ADJUST_TEXT_LIM = 5
+ADJUST_TEXT_LIM = 10
 
 CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
 Ckwh_cutoff = CkWh_cases['value']['A']
 
-y_lim = (5e-3, Ckwh_cutoff*2)
-xlim=(5e-3,4e1)
+y_lim = (5e-3, Ckwh_cutoff*1.5)
+xlim=(10e-3,1.5e1)
 
-OVERWRITE_FIX_POSITIONS = False
+OVERWRITE_FIX_POSITIONS = True
 fn_fix_positions = 'fix_positions_coupled.csv'
 fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
 
@@ -105,10 +105,11 @@ leg.set_title('Sub Type')
 
 leg.set_bbox_to_anchor([0,0.3,0.5,0])
 
+plt.tight_layout()
 
 # Adjusting Texts 
 
-fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
+# fix_positions_dict = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
 
@@ -123,15 +124,20 @@ adjust_text(texts,
             force_points = (0.5, 0.1),      #(0.2, 0.5)
             force_objects = (0.1, 0.25),    #(0.1, 0.25)
             lim=ADJUST_TEXT_LIM, 
-            add_objects=[*texts_fix, *arrows_fix, *case_lns], 
+            add_objects=[
+                *texts_fix, 
+                *arrows_fix, 
+                *case_lns
+                ], 
             arrowprops=dict(arrowstyle='->')
             )
 
 
 from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
 
+
 if OVERWRITE_FIX_POSITIONS:
-    df_text_position = gen_text_position_fix_csv(texts, ax)
+    df_text_position = gen_text_position_fix_csv(fix_positions, texts, ax)
     df_text_position = combine_fix_pos(df_ec_coupled, df_text_position)
     df_text_position.to_csv(fn_fix_positions)
 

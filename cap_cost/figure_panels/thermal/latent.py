@@ -29,7 +29,7 @@ Ckwh_cutoff = CkWh_cases['value']['A']
 # Ckwh_cutoff = 100
 y_lim = (0.1, Ckwh_cutoff*2)
 
-OVERWRITE_FIX_POSITIONS = False
+OVERWRITE_FIX_POSITIONS = True
 fn_fix_positions = 'fix_positions_latent.csv'
 fix_positions = pd.read_csv(fn_fix_positions, index_col=0)
 
@@ -61,7 +61,7 @@ df_latent_ds.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'latent_ds.csv'))
 
 fig, ax = plt.subplots(1,1,figsize=(7,8))
 
-xlim=(-220,1600)
+xlim=(-220,1800)
 
 # df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', c='sp_latent_heat', cmap='jet', sharex=False)
 # df_latent_ds.plot.scatter(y='C_kwh', x='phase_change_T', sharex=False, ax=ax)
@@ -86,19 +86,18 @@ plt.xlabel('Phase Change Temperature (deg C)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
 plt.suptitle("Latent")
 
-fix_positions = {name : (row['x'],row['y']) for name, row in fix_positions.iterrows() if row['fix'] == 'y'}
 
 texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positions, ax=ax)
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
 adjust_text(texts, 
-            expand_text = (1.05, 1.2),      #(1.05, 1.2)
+            expand_text = (1.05, 1.3),      #(1.05, 1.2)
             expand_points = (2,2),    #(1.05, 1.2)
             expand_objects = (1.05, 1.2),   #(1.05, 1.2)
             expand_align = (1.05, 1.2),     #(1.05, 1.2)
-            force_text= (0.2, 0.5),        #(0.1, 0.25)
-            force_points = (0.2, 0.5),      #(0.2, 0.5)
+            force_text= (0.2, 0.7),        #(0.1, 0.25)
+            force_points = (0.5, 0.5),      #(0.2, 0.5)
             force_objects = (0.1, 0.25),    #(0.1, 0.25)
             lim=ADJUST_TEXT_LIM, 
             add_objects=[*texts_fix, *arrows_fix], 
@@ -114,7 +113,7 @@ all_texts = [*texts_fix, *texts]
 from es_utils.plot import gen_text_position_fix_csv, combine_fix_pos
 
 if OVERWRITE_FIX_POSITIONS:
-    df_text_position = gen_text_position_fix_csv(texts, ax)
+    df_text_position = gen_text_position_fix_csv(fix_positions, texts, ax)
     df_text_position = combine_fix_pos(df_latent_ds, df_text_position)
     df_text_position.to_csv(fn_fix_positions)
 

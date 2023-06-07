@@ -76,6 +76,7 @@ def draw_arrows(texts, arrowprops, ax, orig_xy, *args, **kwargs):
         # ap.update(kwap) # Add arrowprops from kwargs
 
         xy = trans_to_data(orig_xy[j])
+        # xy = orig_xy[j]
         xytext=trans_to_data(get_midpoint(bbox))
 
         arrow = ax.annotate("", # Add an arrow from the text to the point
@@ -92,11 +93,9 @@ from adjustText import get_text_position
 
 import pandas as pd
 
-def gen_text_position_fix_csv(texts, ax):
+def gen_text_position_fix_csv(df_text_pos, texts, ax):
 
     text_strings = [t.get_text().strip("$") for t in texts]
-    df_text_pos = pd.DataFrame(index=text_strings)
-    df_text_pos.index.name = 'display_text'
 
     trans_to_data = ax.transAxes.inverted().transform
     
@@ -106,18 +105,28 @@ def gen_text_position_fix_csv(texts, ax):
 
         text_idx = text_strings[i]
 
-        df_text_pos.loc[text_idx,'x'] = a_x
+        df_text_pos.loc[text_idx,'x'] = a_x 
         df_text_pos.loc[text_idx,'y'] = a_y
+        df_text_pos.loc[text_idx,'ha'] = text.get_ha() 
+        df_text_pos.loc[text_idx,'va'] = text.get_va()
 
     return df_text_pos
 
 def combine_fix_pos(df_SM, df_text_position):
-    df1 = df_SM[['display_text']].reset_index()
+    df1 = df_SM.reset_index()[['display_text']]
     df_text_position = pd.merge(df1, df_text_position, on='display_text').set_index('display_text')
-    df_text_position['fix'] = ''
-    df_text_position = df_text_position.sort_values('y', ascending=False)
-    df_text_position = df_text_position.round(2)
+    # df_text_position['fix'] = ''
+    # df_text_position = df_text_position.sort_values('y', ascending=False)
+    # df_text_position = df_text_position.round(4)
     return df_text_position
+
+def get_text_position_data(text, ax):
+    x, y = text.get_position()
+    x = ax.convert_xunits(x)
+    y = ax.convert_yunits(y)
+    # t_x, t_y = text.get_transform().transform((x, y))
+    t_x, t_y = x , y
+    return (t_x, t_y)
 
 
 def prepare_fixed_texts(texts, fix_positions, ax):
@@ -127,7 +136,10 @@ def prepare_fixed_texts(texts, fix_positions, ax):
 
     axis_to_data = ax.transAxes + ax.transData.inverted()
 
-    for name in fix_positions:
+    for name, row in fix_positions.iterrows():
+
+        if row['fix'] != 'y':
+            continue
 
         text_strings = [t.get_text().strip("$") for t in texts]
 
@@ -139,12 +151,20 @@ def prepare_fixed_texts(texts, fix_positions, ax):
         text_to_fix = texts.pop(index)
         orig_xy_fixed.append(get_text_position(text_to_fix, ax=ax))
         
-        fix_tup = fix_positions[name]
+        fix_tup= (row['x'],row['y'])
+
+        
 
         fix_tup_data = axis_to_data.transform(fix_tup)
 
+        text_to_fix.set_va(row['va'])
+        text_to_fix.set_ha(row['ha'])
+
         text_to_fix.set_x(fix_tup_data[0])
         text_to_fix.set_y(fix_tup_data[1])
+
+
+
         texts_fix.append(text_to_fix)
 
     orig_xy = [get_text_position(text, ax=ax) for text in texts]
