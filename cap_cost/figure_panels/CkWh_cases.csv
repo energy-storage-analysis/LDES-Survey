@@ -1,4 +1,4 @@
 name,value,linestyle
-A,180,--
-B,5,-.
-C,0.5,:
+MDES,180,--
+Multi-day LDES,5,-.
+Seasonal LDES,0.5,:

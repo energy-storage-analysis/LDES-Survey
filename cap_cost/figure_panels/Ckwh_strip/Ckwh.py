@@ -79,13 +79,20 @@ df_mat = df_all.drop(SM_vol.index)
 
 # df_all['DDmax'] = calc_DDmax(df_all['C_kwh_log'])
 
+#%%
+from es_utils.plot import gen_legend_figure
+
+linestyle_dict = CkWh_cases['linestyle'].to_dict()
+
+legendFig = gen_legend_figure(linestyle_dict, title='', style_type='linestyle', figsize=(1.2,0.5))
+legendFig.savefig('output/legend_cases.png', transparent=True)
 
 
 
 #%%
 
 vol_plot_width = 1
-ylim = (-2.5,4.3)
+ylim = (-3,4.3)
 
 df_plot = df_mat
 
@@ -121,7 +128,7 @@ plt.xticks(rotation=70)
 
 plt.ylim(ylim)
 
-plt.ylabel('$C_{kWh,min}$ (USD/kWh)')
+plt.ylabel('$C_{kWh,SM}$ (USD/kWh)')
 plt.xlabel('Technology')
 plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 
