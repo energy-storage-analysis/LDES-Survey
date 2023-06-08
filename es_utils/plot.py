@@ -169,3 +169,24 @@ def prepare_fixed_texts(texts, fix_positions, ax):
 
     orig_xy = [get_text_position(text, ax=ax) for text in texts]
     return texts, texts_fix, orig_xy, orig_xy_fixed
+
+
+def gen_legend_figure(style_dict, title, style_type='linestyle', figsize=(0.75,0.75)):
+    fig = plt.figure("Line plot")
+    legendFig = plt.figure("Legend plot {}".format(title), figsize=figsize)
+    ax = fig.add_subplot(111)
+
+    lns = []
+    for info_val, info_style in style_dict.items():
+        if style_type == 'linestyle':
+            line1, = ax.plot([0], [0], c="black", lw=1, linestyle=info_style)
+        elif style_type == 'color':
+            line1, = ax.plot([0], [0], c=info_style, lw=1)
+        else:
+            raise ValueError("Style type must be 'linestyle' or 'color'")
+        lns.append(line1)
+
+    legendFig.legend(lns, style_dict.keys(), loc='center', title=title)
+
+    legendFig.tight_layout()
+    return legendFig

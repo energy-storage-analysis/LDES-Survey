@@ -21,7 +21,8 @@ LT = 10
 
 # %%
 
-from lcos_fns import calc_lcos, gen_legend_figure
+from lcos_fns import calc_lcos
+from es_utils.plot import gen_legend_figure
 
 DD_noms = [10]
 C_kWhs = [1, 10,100]
