@@ -46,9 +46,14 @@ df_sel = df_sel.where(df_sel['C_kwh'] < 200).dropna(how='all')
 
 df_sel['C_kwh'].plot.hist()
 
-plt.xlabel(" $C_{kWh,mat} [USD/kWh]$")
+plt.xlabel(" $C_{kWh,SM} [USD/kWh]$")
 
 plt.suptitle("Average Price: {:0.1f} USD/kWh".format(df_sel['C_kwh'].mean()))
 
 # print("mean: {}".format(df_sel['C_kwh'].mean()))
 # print("median: {}".format(df_sel['C_kwh'].median()))
+
+plt.tight_layout()
+
+plt.savefig('figures/LIB_Prices.png')
+# %%
