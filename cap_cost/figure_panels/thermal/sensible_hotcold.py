@@ -72,6 +72,8 @@ df_hot
 
 df_manual = df_hot.loc[['MgO','Graphite']][['C_kwh','T_max']]
 
+print(df_manual)
+
 df_hot = df_hot.drop('MgO')
 df_hot = df_hot.drop('Graphite')
 

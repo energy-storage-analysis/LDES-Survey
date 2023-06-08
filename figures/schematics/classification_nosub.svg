@@ -28,13 +28,13 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="3.3006104"
-     inkscape:cx="110.13114"
-     inkscape:cy="110.28263"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:cx="92.104176"
+     inkscape:cy="110.43412"
+     inkscape:window-width="1350"
+     inkscape:window-height="1008"
+     inkscape:window-x="2488"
+     inkscape:window-y="45"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true" /><defs
      id="defs2"><rect
@@ -296,24 +296,24 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.265">Kinetic</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
-       x="54.676666"
-       y="49.982903"
+       x="54.195694"
+       y="50.063065"
        id="text398-6-8"><tspan
          sodipodi:role="line"
          id="tspan396-5-9"
-         x="54.676666"
-         y="49.982903"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration:underline;text-decoration-line:underline;fill:#000000;fill-opacity:1;stroke-width:0.265">Decoupled E/P</tspan></text><text
+         x="54.195694"
+         y="50.063065"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration:underline;text-decoration-line:underline;fill:#000000;fill-opacity:1;stroke-width:0.265">Decoupled SM </tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
-       x="29.613756"
-       y="59.596653"
+       x="29.05262"
+       y="59.676815"
        id="text398-6-8-5"><tspan
          sodipodi:role="line"
          id="tspan396-5-9-6"
-         x="29.613756"
-         y="59.596653"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration:underline;text-decoration-line:underline;fill:#000000;fill-opacity:1;stroke-width:0.265">Coupled E/P</tspan></text><text
+         x="29.05262"
+         y="59.676815"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration:underline;text-decoration-line:underline;fill:#000000;fill-opacity:1;stroke-width:0.265">Coupled SM</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:71.0078;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -322,11 +322,11 @@
        transform="translate(2.2780042,5.4234609)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1589">• Sensible
+         id="tspan1802">• Sensible
 </tspan><tspan
          x="52.941959"
          y="73.210039"
-         id="tspan1591">• Latent</tspan></text><rect
+         id="tspan1804">• Latent</tspan></text><rect
        style="opacity:0.670918;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.107676;paint-order:stroke fill markers"
        id="rect15614-3-6"
        width="19.9972"
@@ -341,11 +341,11 @@
        transform="translate(2.2780042,19.463944)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1593">• Cavern
+         id="tspan1806">• Cavern
 </tspan><tspan
          x="52.941959"
          y="73.210039"
-         id="tspan1595">• Tank Storage</tspan></text><text
+         id="tspan1808">• Tank Storage</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="31.99268"
@@ -371,7 +371,7 @@
        transform="translate(-26.776553,20.89375)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1597">• SMES</tspan></text><text
+         id="tspan1810">• SMES</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="56.435474"
@@ -412,11 +412,11 @@
        transform="translate(-26.776553,30.590084)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1599">• EDLC
+         id="tspan1812">• EDLC
 </tspan><tspan
          x="52.941959"
          y="73.210039"
-         id="tspan1601">• Dielectric Capacitor </tspan></text><rect
+         id="tspan1814">• Dielectric Capacitor </tspan></text><rect
        style="opacity:0.729814;mix-blend-mode:normal;fill:#8c8c8c;fill-opacity:1;fill-rule:evenodd;stroke-width:0.472048;paint-order:stroke fill markers;filter:url(#filter1248-8)"
        id="rect184-13-0"
        width="83.022141"
@@ -447,10 +447,10 @@
        x="71.152039"
        y="70.123238"
        id="text398-6-6-2-0-5-5"
-       transform="translate(-35.873049,-17.028254)"><tspan
+       transform="translate(-36.995316,-17.028254)"><tspan
          x="71.152039"
          y="70.123238"
-         id="tspan1603">• SM Technology</tspan></text><text
+         id="tspan1816">• Technology</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:71.0078;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -459,7 +459,7 @@
        transform="translate(-26.776553,10.532347)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1605">• Flywheel</tspan></text><text
+         id="tspan1818">• Flywheel</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:79.9859;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -468,15 +468,15 @@
        transform="translate(2.3913703,-10.584398)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1607">• Synthetic Fuel 
+         id="tspan1820">• Synthetic Fuel 
 </tspan><tspan
          x="52.941959"
          y="73.210039"
-         id="tspan1609">• Flow Battery
+         id="tspan1822">• Flow Battery
 </tspan><tspan
          x="52.941959"
          y="76.296838"
-         id="tspan1611">• Thermochemical</tspan></text><text
+         id="tspan1824">• Thermochemical</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:71.8845;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264999;paint-order:stroke fill markers"
        x="52.941959"
@@ -485,11 +485,11 @@
        transform="translate(-26.776553,-2.1994537)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1613">• Coupled Battery
+         id="tspan1826">• Coupled Battery
 </tspan><tspan
          x="52.941959"
          y="73.210039"
-         id="tspan1615">• Pseudocapacitor
+         id="tspan1828">• Pseudocapacitor
 </tspan></text><text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -503,7 +503,7 @@
        transform="translate(2.2780042,33.383195)"><tspan
          x="52.941959"
          y="70.123238"
-         id="tspan1617">• Gravitational</tspan></text><text
+         id="tspan1830">• Gravitational</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.065;paint-order:stroke fill markers"
        x="204.73918"
