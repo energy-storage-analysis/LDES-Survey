@@ -15,8 +15,9 @@ plt.rcParams.update({
 
 # Fixed constants between plots. 
 C_Ein = 0.011 #Taken from https://www.eia.gov/electricity/state/
-CF = 0.7
+CF = 0.5
 LT = 10
+ylim = (2e-3, 2e1)
 
 
 # %%
@@ -50,7 +51,7 @@ eta_RT = eta_RTs
 constants = dict(
 CF = CF,
 C_Ein = C_Ein, 
-C_kW = 1000,
+C_kW = 100,
 LT = LT,
 )
 
@@ -86,6 +87,7 @@ for C_kWh, eta_RT in da_lcos_stack.coords['temp'].values:
 plt.gca().set_title('')
 plt.xscale('log')
 plt.yscale('log')
+plt.ylim(ylim)
 # plt.legend(bbox_to_anchor=[0,0,1.8,1])
 plt.tight_layout()
 
@@ -101,7 +103,7 @@ plt.savefig('output/LCOS_Duration_eta.png')
 combos = dict(
 DD = np.logspace(np.log10(1),np.log10(300), num=100),
 C_kWh = [10,100,1000],
-C_kW = [100,1000,10000]
+C_kW = [10,100,1000]
 )
 
 constants = dict(
@@ -152,6 +154,8 @@ for C_kWh, C_kW in da_lcos_stack.coords['temp'].values:
 plt.gca().set_title('')
 plt.xscale('log')
 plt.yscale('log')
+
+plt.ylim(ylim)
 # plt.legend(bbox_to_anchor=[0,0,1.8,1])
 plt.tight_layout()
 

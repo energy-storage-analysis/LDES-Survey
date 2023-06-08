@@ -10,12 +10,12 @@ plt.rcParams.update({
     "font.size": 7, 
     'savefig.dpi': 600, 
     'font.sans-serif': 'arial', 
-    'figure.figsize': (2.3, 2.5)
+    'figure.figsize': (2.3, 3)
 })
 
 # Fixed constants between plots. 
 C_Ein = 0.011 #Taken from https://www.eia.gov/electricity/state/
-CF = 0.7
+CF = 0.5
 LT = 10
 
 
