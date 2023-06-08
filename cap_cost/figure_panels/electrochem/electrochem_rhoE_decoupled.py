@@ -30,7 +30,7 @@ CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.
 label_fontsize = 14
 marker_size = 50
 ADJUST_TEXT_LIM = 5
-Ckwh_cutoff = CkWh_cases['value']['A']
+Ckwh_cutoff = CkWh_cases['value']['MDES']
 
 y_lim = (1e-2, Ckwh_cutoff*2)
 xlim = (0.02, 180)
@@ -122,7 +122,7 @@ texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
 ax.set_title('Decoupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
-plt.ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,SM}$ (\$/kWh)", fontsize=label_fontsize)
 
 leg = ax.get_legend()
 leg.set_title('Sub Type')

@@ -25,10 +25,10 @@ output_dir = 'output'
 if not os.path.exists(output_dir): os.makedirs(output_dir)
 
 MARKER_SIZE=80
-ADJUST_TEXT_LIM = 5
+ADJUST_TEXT_LIM = 50
 
 CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
-Ckwh_cutoff = CkWh_cases['value']['A']
+Ckwh_cutoff = CkWh_cases['value']['MDES']
 # Ckwh_cutoff = 100
 y_lim = (0.005, Ckwh_cutoff*2)
 hot_xlim = (0,2100)
@@ -92,7 +92,7 @@ ax_cold.set_ylim(y_lim)
 ax_cold.set_xlim(-200,0)
 
 ax_cold.set_xlabel('Min Temperature (deg C)', fontsize=label_fontsize)
-ax_cold.set_ylabel("$C_{kWh,mat}$ (\$/kWh)", fontsize=label_fontsize)
+ax_cold.set_ylabel("$C_{kWh,SM}$ (\$/kWh)", fontsize=label_fontsize)
 ax_cold.set_title("Cold Sensible")
 
 case_lns = []
@@ -109,7 +109,7 @@ sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='mat_type',legend=True,ax=ax_
 texts_hot =annotate_points(df_hot, x_str,y_str,text_col='display_text',ax=ax_hot)
 
 leg = ax_hot.get_legend()
-leg.set_bbox_to_anchor([0.9,0,0,0.4])
+leg.set_bbox_to_anchor([0.95,0,0,0.4])
 leg.set_title('')
 
 #Custom for values off screen
@@ -126,7 +126,7 @@ ax_hot.set_yscale('log')
 ax_hot.set_xlim(*hot_xlim)
 
 ax_hot.set_xlabel('Maximum Temperature (deg C)', fontsize=label_fontsize)
-# ax_hot.set_ylabel("$C_{kWh,mat}$ (\$/kWh)")
+# ax_hot.set_ylabel("$C_{kWh,SM}$ (\$/kWh)")
 # ax_hot.xticks.remove()
 ax_hot.set_title("Hot Sensible")
 
@@ -150,20 +150,20 @@ texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positi
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax_cold, orig_xy=orig_xy_fixed)
 
-
-adjust_text(texts, 
-            ax=ax_cold,
-            expand_text = (1.05, 1.2),      #(1.05, 1.2)
-            expand_points = (2,2),          #(1.05, 1.2)
-            expand_objects = (1.05, 1.2),   #(1.05, 1.2)
-            expand_align = (1.05, 1.2),     #(1.05, 1.2)
-            force_text= (0.2, 0.5),         #(0.1, 0.25)
-            force_points = (0.2, 0.5),      #(0.2, 0.5)
-            force_objects = (0.1, 0.25),    #(0.1, 0.25)
-            lim=ADJUST_TEXT_LIM, 
-            add_objects=[*texts_fix, *arrows_fix], 
-            arrowprops=dict(arrowstyle='->')
-            )
+if len(texts):
+    adjust_text(texts, 
+                ax=ax_cold,
+                expand_text = (1.05, 1.2),      #(1.05, 1.2)
+                expand_points = (2,2),          #(1.05, 1.2)
+                expand_objects = (1.05, 1.2),   #(1.05, 1.2)
+                expand_align = (1.05, 1.2),     #(1.05, 1.2)
+                force_text= (0.2, 0.5),         #(0.1, 0.25)
+                force_points = (0.2, 0.5),      #(0.2, 0.5)
+                force_objects = (0.1, 0.25),    #(0.1, 0.25)
+                lim=ADJUST_TEXT_LIM, 
+                add_objects=[*texts_fix, *arrows_fix], 
+                arrowprops=dict(arrowstyle='->')
+                )
 # 
 
 
@@ -185,19 +185,20 @@ texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positi
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax_hot, orig_xy=orig_xy_fixed)
 
-adjust_text(texts, 
-            ax=ax_hot,
-            expand_text = (1.05, 1.2),      #(1.05, 1.2)
-            expand_points = (2,2),          #(1.05, 1.2)
-            expand_objects = (1.05, 1.2),   #(1.05, 1.2)
-            expand_align = (1.05, 1.2),     #(1.05, 1.2)
-            force_text= (0.2, 0.5),         #(0.1, 0.25)
-            force_points = (0.2, 0.5),      #(0.2, 0.5)
-            force_objects = (0.1, 0.25),    #(0.1, 0.25)
-            lim=ADJUST_TEXT_LIM, 
-            add_objects=[*texts_fix, *arrows_fix], 
-            arrowprops=dict(arrowstyle='->')
-            )
+if len(texts):
+    adjust_text(texts, 
+                ax=ax_hot,
+                expand_text = (1.05, 1.2),      #(1.05, 1.2)
+                expand_points = (2,2),          #(1.05, 1.2)
+                expand_objects = (1.05, 1.2),   #(1.05, 1.2)
+                expand_align = (1.05, 1.2),     #(1.05, 1.2)
+                force_text= (0.2, 0.5),         #(0.1, 0.25)
+                force_points = (0.2, 0.5),      #(0.2, 0.5)
+                force_objects = (0.1, 0.25),    #(0.1, 0.25)
+                lim=ADJUST_TEXT_LIM, 
+                add_objects=[*texts_fix, *arrows_fix], 
+                arrowprops=dict(arrowstyle='->')
+                )
 
 if OVERWRITE_FIX_POSITIONS:
     df_text_position = gen_text_position_fix_csv(fix_positions, texts, ax_hot)
