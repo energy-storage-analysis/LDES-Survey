@@ -148,28 +148,8 @@ df_SMs = df_SMs.drop('vol_price', axis=1)
 
 #%%
 
-sensible_thermal = df_SMs['Cp']*df_SMs['deltaT']
-sensible_thermal.name='specific_energy'
-sensible_thermal = sensible_thermal.to_frame()
+# Energy density expressions
 
-#%%
-
-latent_thermal = df_SMs['sp_latent_heat']
-latent_thermal.name='specific_energy'
-latent_thermal = latent_thermal.to_frame()
-
-thermochem = df_SMs['deltaH_thermochem']
-thermochem.name='specific_energy'
-thermochem = thermochem.to_frame()
-
-pressure = df_SMs['P_cavern']/df_SMs['mass_density']
-pressure.name='specific_energy'
-pressure = pressure.to_frame()
-
-
-chemical = df_SMs['deltaG_chem']/df_SMs['mu_total']
-chemical.name='specific_energy'
-chemical = chemical.to_frame()
 
 F = ureg.Quantity(96485, 'C/mol') # C/mol
 #TODO: deltaV means battery deltaV
@@ -177,11 +157,39 @@ electrochemical = F*df_SMs['n_e']*df_SMs['deltaV']/df_SMs['mu_total']
 electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()
 
+chemical = df_SMs['deltaG_chem']/df_SMs['mu_total']
+chemical.name='specific_energy'
+chemical = chemical.to_frame()
+
+#TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
+electrostatic_edlc = (0.5*df_SMs['specific_capacitance']*df_SMs['deltaV_cap']**2) #J/g
+electrostatic_edlc.name='specific_energy'
+electrostatic_edlc = electrostatic_edlc.to_frame()
+
+thermochem = df_SMs['deltaH_thermochem']
+thermochem.name='specific_energy'
+thermochem = thermochem.to_frame()
+
+sensible_thermal = df_SMs['Cp']*df_SMs['deltaT']
+sensible_thermal.name='specific_energy'
+sensible_thermal = sensible_thermal.to_frame()
+
+latent_thermal = df_SMs['sp_latent_heat']
+latent_thermal.name='specific_energy'
+latent_thermal = latent_thermal.to_frame()
+
+pressure = df_SMs['P_cavern']/df_SMs['mass_density']
+pressure.name='specific_energy'
+pressure = pressure.to_frame()
 
 virial = df_SMs['specific_strength']/df_SMs['Qmax']
 virial.name='specific_energy'
 virial = virial.to_frame()
 
+accel_g = ureg.Quantity(9.81, 'm/s**2')
+gravitational = df_SMs['delta_height']*accel_g
+gravitational.name='specific_energy'
+gravitational = gravitational.to_frame()
 
 epsilon_0 = ureg.Quantity(8.85e-12, 'F/m')
 def calc_electrostatic_SE(V_breakdown, dielectric_const, rho_m):
@@ -197,18 +205,6 @@ electrostatic = calc_electrostatic_SE(
 electrostatic.name='specific_energy'
 electrostatic = electrostatic.to_frame()
 
-
-#TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
-electrostatic_edlc = (0.5*df_SMs['specific_capacitance']*df_SMs['deltaV_cap']**2) #J/g
-
-electrostatic_edlc.name='specific_energy'
-electrostatic_edlc = electrostatic_edlc.to_frame()
-
-
-accel_g = ureg.Quantity(9.81, 'm/s**2')
-gravitational = df_SMs['delta_height']*accel_g
-gravitational.name='specific_energy'
-gravitational = gravitational.to_frame()
 
 dfs = [
     chemical,
