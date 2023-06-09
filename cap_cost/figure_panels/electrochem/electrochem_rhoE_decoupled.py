@@ -141,18 +141,19 @@ texts, texts_fix, orig_xy, orig_xy_fixed = prepare_fixed_texts(texts, fix_positi
 
 arrows_fix = draw_arrows(texts_fix, arrowprops=dict(arrowstyle='->'), ax=ax, orig_xy=orig_xy_fixed)
 
-adjust_text(texts, 
-            expand_text = (1.05, 1.2),      #(1.05, 1.2)
-            expand_points = (2,2),    #(1.05, 1.2)
-            expand_objects = (1.05, 1.2),   #(1.05, 1.2)
-            expand_align = (1.05, 1.2),     #(1.05, 1.2)
-            force_text= (0.5, 0.5),        #(0.1, 0.25)
-            force_points = (0.2, 0.5),      #(0.2, 0.5)
-            force_objects = (0.1, 0.25),    #(0.1, 0.25)
-            lim=ADJUST_TEXT_LIM, 
-            add_objects=[*texts_fix, *arrows_fix, *case_lns], 
-            arrowprops=dict(arrowstyle='->')
-            )
+if len(texts):
+    adjust_text(texts, 
+                expand_text = (1.05, 1.2),      #(1.05, 1.2)
+                expand_points = (2,2),    #(1.05, 1.2)
+                expand_objects = (1.05, 1.2),   #(1.05, 1.2)
+                expand_align = (1.05, 1.2),     #(1.05, 1.2)
+                force_text= (0.5, 0.5),        #(0.1, 0.25)
+                force_points = (0.2, 0.5),      #(0.2, 0.5)
+                force_objects = (0.1, 0.25),    #(0.1, 0.25)
+                lim=ADJUST_TEXT_LIM, 
+                add_objects=[*texts_fix, *arrows_fix, *case_lns], 
+                arrowprops=dict(arrowstyle='->')
+                )
 
 all_texts = [*texts_fix, *texts]
 # from es_utils.plot import adjust_text_after

@@ -1,8 +1,8 @@
 display_text,SM_name,x,y,fix,ha,va
-Ethanol,Ethanol,0.6787873713163824,0.6309149950312858,,left,top
-Isopentane,Isopentane,0.08649684004776281,0.6640152480025912,,left,center
-LN_{2},LN2,0.0868359272956013,0.8087556162892864,,left,top
-Methanol,Methanol,0.3737697776188119,0.5477854814595788,,left,top
-N-hexane,N-hexane,0.5556113768947876,0.7053580616718513,,left,bottom
-N-pentane,N-pentane,0.4603230859024975,0.7778342086356542,,center,bottom
+Ethanol,Ethanol,0.6787873713163824,0.61,y,left,top
+Isopentane,Isopentane,0.0864968400477628,0.9,y,left,center
+LN_{2},LN2,0.0868359272956013,0.8087556162892864,y,left,top
+Methanol,Methanol,0.3737697776188119,0.5477854814595788,y,left,top
+N-hexane,N-hexane,0.59,0.7053580616718513,y,left,bottom
+N-pentane,N-pentane,0.4603230859024975,0.7778342086356542,y,center,bottom
 N-propane,N-propane,0.1,0.4,y,left,top

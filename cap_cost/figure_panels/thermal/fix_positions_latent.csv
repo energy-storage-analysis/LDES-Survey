@@ -1,6 +1,6 @@
 display_text,SM_name,x,y,fix,ha,va
 Al,Al,0.5,0.66,y,left,center
-Al/Mg/Zn,Al/Mg/Zn (60/34/6),0.32,0.6912721198371943,y,center,top
+Al/Mg/Zn,Al/Mg/Zn (60/34/6),0.34,0.6912721198371943,y,center,top
 AlSi_{12},AlSi12,0.4,0.6,y,left,bottom
 CaCO_{3},CaCO3,0.7490482695040886,0.547070071433198,y,right,top
 CaCl_{2},CaCl2,0.4484416131262916,0.3502517932924094,y,right,top
@@ -16,24 +16,24 @@ K_{2}CO_{3}/Na_{2}CO_{3},K2CO3/Na2CO3,0.7119283341220748,0.64,y,left,bottom
 K_{2}SO_{4},K2SO4,0.7362303414887245,0.574095899570499,y,left,bottom
 KCl,KCl,0.5177070899176681,0.5043018119335962,y,center,bottom
 KCl/NaF/K_{2}CO_{3},KCl/NaF/K2CO3,0.3,0.6326991652272218,y,right,bottom
-KNO_{3},KNO3,0.2604319959564298,0.5521352948573519,y,center,center
+KNO_{3},KNO3,0.24,0.5521352948573519,y,center,center
 KOH,KOH,0.2975037881223986,0.7269158016486497,y,right,bottom
 LN_{2},LN2,0.0333058392949224,0.6458466414917508,y,left,bottom
 LiF,LiF,0.55,0.8461690983718401,y,right,top
-LiF/MgF_{2},LiF/MgF2,0.7,0.7,y,left,top
+LiF/MgF_{2},LiF/MgF2,0.7,0.71,y,left,top
 LiF/NaF,LiF/NaF,0.4116646658273794,0.7664020042277029,y,right,center
 LiF/NaF_{2}/MgF_{2},LiF/NaF2/MgF2,0.4,0.4,y,right,top
 LiOH,LiOH,0.2,0.92,y,left,bottom
 Mg,Mg,0.5,0.69,y,left,center
 Mg/Ca,Mg/Ca (84/16),0.4770221540083866,0.8109519701200838,y,right,bottom
 Mg/Cu/Zn,Mg/Cu/Zn (60/25/15),0.35,0.92,y,left,bottom
-Mg/Si/Zn,Mg/Si/Zn (47/38/15),0.7,0.74,y,left,top
+Mg/Si/Zn,Mg/Si/Zn (47/38/15),0.7,0.75,y,left,top
 MgCl_{2},MgCl2,0.5078815262040619,0.4062432360408458,y,left,bottom
 MgSO_{4},MgSO4,0.6741459227524313,0.47,y,left,top
-Na_{2}CO_{3},Na2CO3,0.5119499339398673,0.45,y,left,bottom
+Na_{2}CO_{3},Na2CO3,0.5119499339398673,0.44,y,left,bottom
 Na_{2}SO_{4},Na2SO4,0.5586176243175605,0.3536817727758313,y,left,top
-NaCl,NaCl,0.543509791951899,0.1737405702893887,y,left,bottom
-NaCl/NaBr/Na_{2}MoO_{4},NaCl/NaBr/Na2MoO4,0.6628247630862361,0.82,y,left,bottom
+NaCl,NaCl,0.543509791951899,0.14,y,left,bottom
+NaCl/NaBr/Na_{2}MoO_{4},NaCl/NaBr/Na2MoO4,0.6628247630862361,0.8,y,left,bottom
 NaF,NaF,0.6785089264096503,0.6040445141822819,y,center,top
 NaF/CaF_{2}/MgF_{2},NaF/CaF2/MgF2,0.7,0.3,y,left,bottom
 NaF/MgF_{2},NaF/MgF2,0.2,0.48,y,right,bottom
@@ -45,7 +45,7 @@ NaOH,NaOH,0.3004881752619942,0.5969515502745408,y,left,center
 Si,Si,0.8035610979599773,0.5193367565413862,y,left,bottom
 Si/Mg,Si/Mg (56/44),0.7343481478493701,0.6261964424204025,y,center,center
 Si/Mg/Ca,Si/Mg/Ca (49/30/21),0.6628247630862361,0.76,y,left,bottom
-Zn,Zn,0.3639477277282456,0.8050094438628088,y,center,top
+Zn,Zn,0.33,0.86,y,center,top
 Zn/Al,Zn/Al (96/4),0.1,0.92,y,left,bottom
 Zn/Mg,Zn/Mg (52/48),0.2416914726801072,0.77,y,right,top
 ZnCl_{2},ZnCl2,0.2,0.8341844058082011,y,right,top
