@@ -60,7 +60,7 @@ mat_source_list = set([item.strip() for sublist in source_lists for item in subl
 
 #%%
 
-for r in ['Synfuel feedstock', 'Standard Gibbs', 'Cryo tank', 'Cavern']:
+for r in ['Synfuel feedstock', 'Standard Gibbs', 'Cryo tank', 'Cavern', 'Phes']:
     SM_source_list.remove(r)
 
 SM_source_list = list(SM_source_list)

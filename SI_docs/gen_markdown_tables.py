@@ -74,7 +74,7 @@ with open(os.path.join(output_folder,'SM_type_source_counts.md'), 'w', encoding=
     f.write(": Counts of each source's contribution to storage media of each type, sub-type, and material type.")
 
 
-fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\SM_viable.csv')
+fp = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\SM_promising.csv')
 
 df = read_pint_df(fp)
 
@@ -101,9 +101,9 @@ df = pd.concat([df_col_row, df])
 
 writer = MarkdownTableWriter(dataframe=df)
 
-with open(os.path.join(output_folder,'SM_viable.md'), 'w', encoding='utf-8') as f:
+with open(os.path.join(output_folder,'SM_promising.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
-    f.write(": Storage Media with $C_{kWh}$ < 10 USD/kWh, sorted by $C_{kWh}$")
+    f.write(": Storage Media with $C_{kWh,SM}$ < 10 USD/kWh, sorted by $C_{kWh,SM}$")
 
 
 

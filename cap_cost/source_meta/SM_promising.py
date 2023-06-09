@@ -37,6 +37,6 @@ from es_utils.units import prep_df_pint_out
 
 df_sel = prep_df_pint_out(df_sel)
 
-df_sel.to_csv('tables/SM_viable.csv')
+df_sel.to_csv('tables/SM_promising.csv')
 
 # %%

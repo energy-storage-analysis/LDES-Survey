@@ -47,11 +47,11 @@ with open('output/SI_md.md', 'w', encoding='utf-8') as f_out:
     SI_text = re.sub(r'(#+)', r'\1#', SI_text)
     f_out.write(SI_text)
 
-    f_out.write("# Viable Storage media\n\n")
-    SI_text = read_md(f_out, r'SI_docs\md_written\viable_SM_desc.md')
+    f_out.write("# Promising Storage media\n\n")
+    SI_text = read_md(f_out, r'SI_docs\md_written\promising_SM_desc.md')
     f_out.write(SI_text)
 
-    SI_text = read_md(f_out, r'SI_docs\md_generated\SM_viable.md')
+    SI_text = read_md(f_out, r'SI_docs\md_generated\SM_promising.md')
     f_out.write(SI_text)
 
 
