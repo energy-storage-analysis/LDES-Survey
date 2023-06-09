@@ -21,8 +21,11 @@ from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 
+ADJUST_TEXT_LIM = 5
+
 df = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
 
 # %%
 df_virial = df.where(df['SM_type'].isin(['flywheel', 'pressure_tank', 'smes'])).dropna(subset=['SM_type'])
@@ -58,13 +61,11 @@ ax = plt.gca()
 
 texts = annotate_points(df_virial_mat, 'specific_strength','specific_price')
 
-energy_densities_line = np.linspace(1e-2,2)
-mat_cost_line = energy_densities_line*10
-plt.plot(energy_densities_line, mat_cost_line, linestyle='-.', color='gray', alpha=0.5)
-
-energy_densities_line = np.linspace(1e-2,2)
-mat_cost_line = energy_densities_line*100
-plt.plot(energy_densities_line, mat_cost_line, linestyle=':', color='gray', alpha=0.5)
+case_lns = []
+for case, row in CkWh_cases.iterrows():
+    energy_densities_line = np.linspace(1e-2,2)
+    mat_cost_line = energy_densities_line*row['value']
+    plt.plot(energy_densities_line, mat_cost_line, linestyle=row['linestyle'], color='gray', alpha=0.5)
 
 plt.yscale('log')
 plt.xscale('log')
@@ -78,7 +79,7 @@ plt.xlim(3e-3,2)
 lgd = plt.gca().get_legend()
 lgd.set_bbox_to_anchor((1, 0.5))
 
-adjust_text(texts,  arrowprops = dict(arrowstyle='->'), force_points=(1,1), expand_points=(1.5,1.5), expand_text=(1.5,1.5))
+adjust_text(texts, lim=ADJUST_TEXT_LIM, arrowprops = dict(arrowstyle='->'), force_points=(1,1), expand_points=(1.5,1.5), expand_text=(1.5,1.5))
 
 from es_utils.plot import adjust_text_after
 

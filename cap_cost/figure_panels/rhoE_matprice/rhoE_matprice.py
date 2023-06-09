@@ -14,6 +14,9 @@ from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 
+
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
+
 df = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 #%%
 # %%
@@ -37,7 +40,10 @@ energy_densities_line = np.logspace(
     )
 
 #Mat cost for given C_kwh
-mat_cost_line = energy_densities_line*10
+# mat_cost_line = energy_densities_line*10
+
+
+
 #%%
 
 import seaborn as sns
@@ -52,7 +58,11 @@ plt.yscale('log')
 plt.xlabel('Energy Density (kWh/kg)')
 plt.ylabel('Material cost ($/kg)')
 
-plt.plot(energy_densities_line, mat_cost_line, color='gray')
+case_lns = []
+for case, row in CkWh_cases.iterrows():
+    # energy_densities_line = np.linspace(1e-2,2)
+    mat_cost_line = energy_densities_line*row['value']
+    plt.plot(energy_densities_line, mat_cost_line, linestyle=row['linestyle'], color='gray', alpha=0.5)
 
 lgd = plt.gca().get_legend()
 lgd.set_bbox_to_anchor((1, 1))
@@ -156,12 +166,19 @@ energy_densities_line = np.logspace(
     )
 
 
-mat_cost_line = energy_densities_line*10
 
-mat_cost_line_log = np.log10(mat_cost_line)
-energy_densities_line_log = np.log10(energy_densities_line)
+case_lns = []
+for case, row in CkWh_cases.iterrows():
+    # energy_densities_line = np.linspace(1e-2,2)
+    mat_cost_line = energy_densities_line*row['value']
+    # plt.plot(energy_densities_line, mat_cost_line, linestyle=row['linestyle'], color='gray', alpha=0.5)
 
-plt.plot(energy_densities_line_log, mat_cost_line_log, color='gray')
+
+
+    mat_cost_line_log = np.log10(mat_cost_line)
+    energy_densities_line_log = np.log10(energy_densities_line)
+
+    plt.plot(energy_densities_line_log, mat_cost_line_log, color='gray', linestyle=row['linestyle'])
 
 
 # lgd = plt.gca().get_legend()
