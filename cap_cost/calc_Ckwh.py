@@ -153,7 +153,7 @@ df_SMs = df_SMs.drop('vol_price', axis=1)
 
 F = ureg.Quantity(96485, 'C/mol') # C/mol
 #TODO: deltaV means battery deltaV
-electrochemical = F*df_SMs['n_e']*df_SMs['deltaV']/df_SMs['mu_total']
+electrochemical = (F*df_SMs['n_e']*df_SMs['deltaV'])/df_SMs['mu_total']
 electrochemical.name='specific_energy'
 electrochemical = electrochemical.to_frame()
 
@@ -161,8 +161,8 @@ chemical = df_SMs['deltaG_chem']/df_SMs['mu_total']
 chemical.name='specific_energy'
 chemical = chemical.to_frame()
 
-#TODO: need to implement pseudocapactior. As well as make deltaV work with batteries
-electrostatic_edlc = (0.5*df_SMs['specific_capacitance']*df_SMs['deltaV_cap']**2) #J/g
+# This targets both pseudocapacitor and EDLC
+electrostatic_edlc = 0.5*df_SMs['specific_capacitance']*(df_SMs['deltaV_cap']**2) #J/g
 electrostatic_edlc.name='specific_energy'
 electrostatic_edlc = electrostatic_edlc.to_frame()
 
@@ -192,13 +192,13 @@ gravitational.name='specific_energy'
 gravitational = gravitational.to_frame()
 
 epsilon_0 = ureg.Quantity(8.85e-12, 'F/m')
-def calc_electrostatic_SE(V_breakdown, dielectric_const, rho_m):
-    specific_energy = 0.5*(V_breakdown**2)*dielectric_const*epsilon_0 #J/m3
+def calc_electrostatic_SE(E_breakdown, dielectric_const, rho_m):
+    specific_energy = 0.5*(E_breakdown**2)*dielectric_const*epsilon_0 #J/m3
     specific_energy = specific_energy/(rho_m) #J/kg
     return specific_energy
 
 electrostatic = calc_electrostatic_SE(
-    V_breakdown=df_SMs['dielectric_breakdown'],
+    E_breakdown=df_SMs['dielectric_breakdown'],
     dielectric_const=df_SMs['dielectric_constant'],
     rho_m = df_SMs['mass_density']
 )
