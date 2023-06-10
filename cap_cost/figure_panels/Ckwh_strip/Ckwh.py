@@ -149,7 +149,7 @@ plt.savefig(pjoin(output_dir,'Ckwh_mat.png'))
 
 
 
-print("Outside Range Material Price ")
+print("Outside Range Volumetric Price ")
 df_missing = SM_vol.where(SM_vol['C_kwh_log'] < ylim[0]).dropna(how='all')
 print("below range: {}".format(df_missing[['C_kwh','SM_type']]))
 df_missing = SM_vol.where(SM_vol['C_kwh_log']>ylim[1]).dropna(how='all')
