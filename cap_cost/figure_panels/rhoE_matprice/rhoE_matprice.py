@@ -43,13 +43,18 @@ energy_densities_line = np.logspace(
 # mat_cost_line = energy_densities_line*10
 
 
+display_text = pd.read_csv('../tech_lookup.csv', index_col=0)
+
+df_all['SM_type'] = df_all['SM_type'].str.replace("(","\n(", regex=False)
+
+df_all['display_text'] = [display_text['long_name'][s].replace('\\n','\n') for s in df_all['SM_type'].values]
 
 #%%
 
 import seaborn as sns
 fig = plt.figure(figsize=(8,6))
 
-sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='SM_type', hue='SM_type')
+sns.scatterplot(data=df_all, x='specific_energy', y='specific_price', style='display_text', hue='display_text')
 plt.xscale('log')
 plt.yscale('log')
 
@@ -66,6 +71,7 @@ for case, row in CkWh_cases.iterrows():
 
 lgd = plt.gca().get_legend()
 lgd.set_bbox_to_anchor((1, 1))
+lgd.set_title('Technology')
 # plt.tight_layout()
 
 #https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box

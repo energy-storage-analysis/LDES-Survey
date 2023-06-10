@@ -10,7 +10,7 @@ plt.rcParams.update({
     "font.size": 7, 
     'savefig.dpi': 600, 
     'font.sans-serif': 'arial', 
-    'figure.figsize': (2.3, 3)
+    'figure.figsize': (2.3, 2.8)
 })
 
 # Fixed constants between plots. 

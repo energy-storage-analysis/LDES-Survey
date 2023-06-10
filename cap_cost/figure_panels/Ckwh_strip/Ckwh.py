@@ -96,6 +96,12 @@ ylim = (-3,4.3)
 
 df_plot = df_mat
 
+print("Outside Range Material Price ")
+df_missing = df_plot.where(df_plot['C_kwh_log'] < ylim[0]).dropna(how='all')
+print("below range: {}".format(df_missing[['C_kwh','SM_type']]))
+df_missing = df_plot.where(df_plot['C_kwh_log']>ylim[1]).dropna(how='all')
+print("above range: {}".format(df_missing[['C_kwh','SM_type']]))
+
 np.random.seed(49)
 
 fig = plt.figure(figsize=(4.6 - vol_plot_width, 3))
@@ -143,6 +149,11 @@ plt.savefig(pjoin(output_dir,'Ckwh_mat.png'))
 
 
 
+print("Outside Range Material Price ")
+df_missing = SM_vol.where(SM_vol['C_kwh_log'] < ylim[0]).dropna(how='all')
+print("below range: {}".format(df_missing[['C_kwh','SM_type']]))
+df_missing = SM_vol.where(SM_vol['C_kwh_log']>ylim[1]).dropna(how='all')
+print("above range: {}".format(df_missing[['C_kwh','SM_type']]))
 
 
 df_plot = SM_vol

@@ -95,7 +95,10 @@ df_ec_decoupled = df_ec_decoupled.where(df_ec_decoupled['C_kwh'] < Ckwh_cutoff).
 df_ec_decoupled.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'SM_decoupled_ds.csv'))
 
 #New adjustText version draws arrow even though this is off screen, just will put manually in figure. 
+print("Hydrogen Removed: ")
+print(df_ec_decoupled.loc['H2 (Feedstock)'][['C_kwh','specific_energy']])
 df_ec_decoupled = df_ec_decoupled.drop('H2 (Feedstock)')
+
 
 #%%
 
