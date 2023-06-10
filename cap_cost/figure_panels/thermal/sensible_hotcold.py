@@ -111,7 +111,7 @@ sns.scatterplot(data=df_hot, y=y_str, x=x_str, hue='mat_type',legend=True,ax=ax_
 texts_hot =annotate_points(df_hot, x_str,y_str,text_col='display_text',ax=ax_hot)
 
 leg = ax_hot.get_legend()
-leg.set_bbox_to_anchor([0.95,0,0,0.4])
+leg.set_bbox_to_anchor([0.95,0,0,0.45])
 leg.set_title('')
 
 #Custom for values off screen

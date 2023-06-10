@@ -28,9 +28,9 @@ LiOH,LiOH,latent_thermal,hot,hydroxide,LiOH,
 Cu,Cu,sensible_thermal,hot,metal,Cu,
 Zn,Zn,sensible_thermal,hot,metal,Zn,
 Al,Al,sensible_thermal,hot,metal,Al,
-Sodium (Na),Na,sensible_thermal,hot,metal,Na,
-Sodium(22.2%)epotassium (77.8%) eutectic (NaK),NaK,sensible_thermal,hot,metal,"[('Na', 0.5), ('K', 0.5)]",molar
-Lead(44.5%)ebismuth(55.5%) eutectic (LBE),LBE,sensible_thermal,hot,metal,"[('Pb', 0.445), ('Bi', 0.555)]",mass
+Sodium (Na),Na,sensible_thermal,hot,liquid_metal,Na,
+Sodium(22.2%)epotassium (77.8%) eutectic (NaK),NaK,sensible_thermal,hot,liquid_metal,"[('Na', 0.5), ('K', 0.5)]",molar
+Lead(44.5%)ebismuth(55.5%) eutectic (LBE),LBE,sensible_thermal,hot,liquid_metal,"[('Pb', 0.445), ('Bi', 0.555)]",mass
 CaN2O6,CaN2O6,latent_thermal,hot,molten_salt,CaN2O6,
 ,Zn/Mg (53.7/46.3),latent_thermal,hot,alloy,"[('Mg', 0.537), ('Zn', 0.463)]",molar
 Zn/Mg (52/48),Zn/Mg (52/48),latent_thermal,hot,alloy,"[('Mg', 0.52), ('Zn', 0.48)]",molar

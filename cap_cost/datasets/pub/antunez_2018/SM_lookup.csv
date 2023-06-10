@@ -12,5 +12,5 @@ Sunflower oil,Vegetable Oil,sensible_thermal,hot,oil,Vegetable Oil,mass
 Mineral oil,,sensible_thermal,hot,oil,,mass
 Hitec XL,HITEC XL,sensible_thermal,hot,molten_salt,HITEC XL,mass
 Solar salt,Solar Salt,sensible_thermal,hot,molten_salt,Solar Salt,mass
-Sodium,Na,sensible_thermal,hot,metal,Na,mass
-Eutectic Na-K,NaK,sensible_thermal,hot,metal,"[('Na', 0.5), ('K', 0.5)]",molar
+Sodium,Na,sensible_thermal,hot,liquid_metal,Na,mass
+Eutectic Na-K,NaK,sensible_thermal,hot,liquid_metal,"[('Na', 0.5), ('K', 0.5)]",molar

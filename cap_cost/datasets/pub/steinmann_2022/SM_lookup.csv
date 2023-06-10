@@ -2,7 +2,7 @@ original_name,SM_name,SM_type,sub_type,mat_type,materials,mat_basis
 Solar Salt,Solar Salt,sensible_thermal,hot,molten_salt,Solar Salt,
 HITEC,HITEC,sensible_thermal,hot,molten_salt,HITEC,
 HITEC XL,HITEC XL,sensible_thermal,hot,molten_salt,HITEC XL,
-Sodium,Na,sensible_thermal,hot,metal,Na,
+Sodium,Na,sensible_thermal,hot,liquid_metal,Na,
 Mobiltherm 605,Mobiltherm 605,sensible_thermal,hot,oil,Mobiltherm 605,
 Therminol VP1,Therminol VP1,sensible_thermal,hot,oil,Therminol VP1,
 Sulfur,S,sensible_thermal,hot,other_solid,S,
