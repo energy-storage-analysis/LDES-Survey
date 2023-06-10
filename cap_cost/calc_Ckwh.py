@@ -91,10 +91,13 @@ for mat_idx, row in df_mats_comp.iterrows():
         else:
             raise ValueError("Incorrect mat_basis for {}, must be 'molar' or 'mass'".format(mat_idx))
 
-    mu_total = sum(mus)
-    mu_totals.append(mu_total)
+
 
     if len(missing_prices) == 0:
+
+        mu_total = sum(mus)
+        mu_totals.append(mu_total)
+
         df_mats_comp.loc[mat_idx, 'price_sources'] = ", ".join(price_sources_mat)
 
         if mat_basis == 'molar':
@@ -105,7 +108,9 @@ for mat_idx, row in df_mats_comp.iterrows():
         # df_mats_comp.loc[mat_idx, 'specific_price'] = specific_price.magnitude
         specific_prices.append(specific_price)
     else:
-        specific_prices.append(specific_price)
+        # specific_prices.append(specific_price)
+        mu_totals.append(np.nan)
+        specific_prices.append(np.nan)
         print('missing material prices {} for {}'.format(missing_prices, mat_idx))
 
 
