@@ -32,7 +32,7 @@ KNO3,KNO3,latent_thermal,hot,molten_salt,KNO3,
 "K2CO3 + Li2CO3
 65-35%",K2CO3/Li2CO3,latent_thermal,hot,molten_salt,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass
 "AL-Si
-88-12%",AlSi12,latent_thermal,hot,metal,"[('Al', 0.88), ('Si', 0.12)]",mass
+88-12%",AlSi12,latent_thermal,hot,metal,"[('Al', 0.88), ('Metallurgical Silicon', 0.12)]",mass
 "LiF-CaF2
 80-20%",LiF/CaF2,latent_thermal,hot,molten_salt,"[('LiF', 0.8), ('CaF2', 0.2)]",mass
 LiF,LiF,latent_thermal,hot,molten_salt,LiF,
