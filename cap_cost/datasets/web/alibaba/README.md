@@ -2,6 +2,8 @@
 
 This dataset is a set of prices obtained by webscraping alibaba with the `scrapy` python package. A list of search strings, The corresponding molecular formula, strings that the result title must contain, and strings that the title can not contain are determined manually. The scraper then iterates through the searchers and pulls the first page of results. Items with 'fake' prices (i.e. 0.001$/ton) prices are dropped.  
 
+The minimum order quantity must be at least a kilogram. When the price is in the form of a range "low-high" the low price is taken to correspond with bulk order quantity. 
+
 Certain materials are tagged as hydrates. In these materials the number of hydrates in the molecular formula is determined by searching the title for strings (monohydrat, dihydrat, etc.) and then the price is scaled by the ratio of the molecular weights of the hydrated and anhydrous molecules. This means that all prices are scaled to correspond to the anhydrous molecular formula. 
 
 Accessed on 06/25/2022
