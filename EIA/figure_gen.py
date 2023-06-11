@@ -21,22 +21,14 @@ input_folder = r'input_data'
 df_gen = pd.read_csv('processed_data/df_gen.csv', index_col=0)
 df_storage = pd.read_csv('processed_data/df_storage.csv', index_col=0)
 
+palette = sns.color_palette("tab10")
+palette
 
-#%%
-
-
-
-#%%
 
 powcap_gen = df_gen.groupby('Technology')['Nameplate Capacity (MW)'].sum()
 pow_caps = powcap_gen.sort_values(ascending=False)
 pow_caps = pow_caps.drop('CSP')
 
-
-#%%
-
-palette = sns.color_palette("tab10")
-palette
 
 #%%
 
@@ -93,7 +85,7 @@ df_storage['dur_bin'] = pd.cut(df_storage['duration'], bins = bins)
 df_stats = df_storage.groupby(['dur_bin', 'type'])['energy'].sum()
 df_stats = df_stats.reset_index()
 
-plt.figure()
+plt.figure(figsize=(2.3, 2.5))
 ax = sns.barplot(data=df_stats, x='dur_bin', y='energy', hue='type', palette=colors)
 plt.yscale('log')
 plt.xticks(rotation = 90)
@@ -192,10 +184,6 @@ df_all = pd.concat([df_no_bat, df_bat])
 #%%
 
 
-
-#%%
-
-
 colors = {
     'CAES': palette[1],
     'Flywheels':palette[2],
@@ -232,7 +220,7 @@ y_2 = 'power'
 
 data1 = data[[x_, y_]]
 data2 = data[[x_, y_2]]
-plt.figure(figsize=(2.3, 2.6))
+plt.figure(figsize=(2.5, 2.6))
 ax = sns.barplot(x=x_, y=y_, data=data1, palette=colors)
 width_scale = 0.45
 for bar in ax.containers[0]:
