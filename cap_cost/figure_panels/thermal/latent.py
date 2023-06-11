@@ -121,7 +121,7 @@ if OVERWRITE_FIX_POSITIONS:
 
 leg = ax.get_legend()
 leg.set_title('')
-leg.set_bbox_to_anchor([0,0,0.3,0.3])
+leg.set_bbox_to_anchor([0,0,0.3,0.45])
 
 plt.tight_layout()
 

@@ -4,7 +4,7 @@ Al_{2}O_{3},Al2O3,0.9463298392051466,0.5,y,right,bottom
 Basalt,Basalt,0.3465744074043045,0.2231053897069757,y,right,center
 Concrete,Concrete,0.3514212464839236,0.36,y,right,bottom
 Cu,Cu,0.4556089699633564,0.8860043204694534,y,left,bottom
-Ethylene\ glycol,Ethylene glycol,0.0867601896555269,0.68,y,center,center
+Ethylene\ glycol,Ethylene glycol,0.07,0.69,y,center,center
 Fe,Fe,0.5850365589822056,0.61,y,left,bottom
 Granite,Granite,0.6469648980529422,0.2435363086354523,y,left,bottom
 Gravel,Gravel,0.5030693437089132,0.2055562703749519,y,left,top
@@ -16,16 +16,14 @@ KMgZnCl,KMgZnCl,0.4504235749511668,0.75,y,left,center
 LBE,LBE,0.7514245619742331,0.88,y,left,bottom
 Li,Li,0.6292589568720964,0.8849467443691275,y,left,bottom
 LiNaKCO_{3},LiNaKCO3,0.3711508360289155,0.944357526341022,y,left,bottom
-LiNaKCaNO_{3},LiNaKCaNO3,0.2446898046790991,0.4,y,right,top
-LiNaKNO_{3},LiNaKNO3,0.2632353277728554,0.5142501097364676,y,left,top
-LiNaKNO_{3}NO_{2},LiNaKNO3NO2,0.077587274863437,0.4977544188119794,y,center,top
+LiNaKCaNO_{3},LiNaKCaNO3,0.2458967208838467,0.8104797057530753,y,left,center
+LiNaKNO_{3},LiNaKNO3,0.2387071833140394,0.95,y,center,bottom
 Limestone,Limestone,0.459305289563131,0.2690246078497477,y,left,bottom
-Mobiltherm\ 605,Mobiltherm 605,0.1093679374143946,0.71,y,center,bottom
+Mobiltherm\ 605,Mobiltherm 605,0.02,0.75,y,left,bottom
 Na,Na,0.4914039964574442,0.6858496610927118,y,left,bottom
-NaBF,NaBF,0.3629424277391014,0.7623202919732803,y,left,bottom
 NaCl,NaCl,0.4,0.37,y,left,bottom
-NaKMgCl,NaKMgCl,0.3413398042536649,0.59,y,left,center
-NaKZnCl,NaKZnCl,0.2830740753698142,0.829031701063063,y,right,center
+NaKMgCl,NaKMgCl,0.4504235749511668,0.59,y,left,center
+NaKZnCl,NaKZnCl,0.4504235749511668,0.8,y,right,top
 NaMgCaCl,NaMgCaCl,0.4,0.5,y,center,top
 Pressurized\ Water,Pressurized Water,0.1885150032053963,0.0641416440388988,y,left,bottom
 River\ shingle,River shingle,0.2455711932994012,0.28,y,right,top
