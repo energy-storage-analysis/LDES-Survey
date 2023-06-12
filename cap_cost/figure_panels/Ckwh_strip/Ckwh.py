@@ -187,7 +187,7 @@ plt.xticks(rotation=70)
 
 plt.ylim(ylim)
 
-plt.ylabel('$C_{kWh,min}$ (USD/kWh)')
+plt.ylabel('$C_{kWh,SM}$ (USD/kWh)')
 plt.xlabel('Technology')
 plt.suptitle("{} Storage Media with Price and Energy data".format(len(df_plot)))
 
