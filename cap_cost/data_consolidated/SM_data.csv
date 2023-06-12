@@ -363,7 +363,7 @@ Polythiophene nanostructures,pseudocapacitor,,,,,,Polythiophene,,,,,,,,,,,,,,,,4
 Pressurized Water,sensible_thermal,hot,other_fluid,0.008701490160807348,0.209499999999984,0.001822962188689,Water,,Liang 2022,"Antunez 2018, Li 2017",0.0011638888888888,,,200.0,0.0,20.0,,,,,180.0,,,,,,1000.0,18.015,,,Pressurized water(U),,,,,
 PtO2/PtO,thermochemical,,oxides,207.81728521946627,0.0768055555555555,15.96152204532844,PtO2,,Andre 2016,Alibaba,,,,,,,420.0,,,0.0768055555555555,,,,,,,,227.082,,,PtO2/PtO,,,,,
 Pumice,gravitational,block_stacking,,105.94421586508818,0.000400575,0.0424386042701577,Pumice,,Energy Vault,USGS,,,,,,,,,,,,,,147.0,,,,504.5954032,,,,,,,,
-Pumped Hydro,gravitational,pumped_hydro,,25.281705716302056,0.0021799999999999996,0.05511411846153847,Water Reservoir Excavation,volumetric,Phes,"Black and Veatch 2012, Stocks 2021",,,,,,,,3.9,,,,,,800.0,,,1000.0,,,,,,,,,
+Pumped Hydro,gravitational,pumped_hydro,,34.280278937358716,0.00160775,0.05511411846153847,Water Reservoir Excavation,volumetric,Bluefield Atlas,"Black and Veatch 2012, Stocks 2021",,,,,,,,3.9,,,,,,590.0,,,1000.0,,,,,,,,,
 Quartzite,sensible_thermal,both,rock,,,,Stone,,,,0.0002361111111111,,,,,,,,,,,,,,,,,,,,Quartzite,,,,,
 R213,sensible_thermal,cold,hydrocarbon,,,,R213,,,,0.0002638888888888,,,293.0,185.0,185.0,,,,,108.0,,,,,,1602.0,,,,R213,,,,,
 R218,sensible_thermal,cold,hydrocarbon,,,,R218,,,,0.0003055555555555,,,28.0,-183.0,-183.0,,,,,211.0,,,,,,1601.0,,,,R218 (U),,,,,

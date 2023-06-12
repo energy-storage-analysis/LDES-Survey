@@ -101,10 +101,11 @@ VR = df['Combined water to rock ratio'].median()
 df_SM['VtoR'] = VR
 df_SM['VtoR'] = df_SM['VtoR'].astype('pint[dimensionless]')
 
-# Head = df['Head (m)'].median()
-Head = df['Head (m)'].max() #800 m maximum head (Stocks et al 2021)
+Head = df['Head (m)'].median()
+# Head = df['Head (m)'].max() #800 m maximum head (Stocks et al 2021)
 
 df_SM['delta_height'] = Head
+df_SM['source'] = 'Bluefield Atlas'
 
 df_SM['delta_height'] = df_SM['delta_height'].astype('pint[m]')
 

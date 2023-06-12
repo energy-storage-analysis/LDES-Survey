@@ -1,4 +1,4 @@
-,materials,mat_basis,original_name,SM_type,sub_type,mass_density,VtoR,delta_height
-unit_row,N/U,N/U,N/U,N/U,N/U,kilogram / meter ** 3,dimensionless,meter
-SM_name,,,,,,,,
-Pumped Hydro,Water Reservoir Excavation,,,gravitational,pumped_hydro,1000.0,3.9,800.0
+,materials,mat_basis,original_name,SM_type,sub_type,mass_density,VtoR,delta_height,source
+unit_row,N/U,N/U,N/U,N/U,N/U,kilogram / meter ** 3,dimensionless,meter,N/U
+SM_name,,,,,,,,,
+Pumped Hydro,Water Reservoir Excavation,,,gravitational,pumped_hydro,1000.0,3.9,590.0,Bluefield Atlas
