@@ -11,9 +11,9 @@ echo "---Generating LCOS Figure Panels---"
 python vis_lcos_pub.py
 
 # Generate the Global Energy Storage Database Figures
-cd $REPO_DIR/GESDB
-echo "---Generating GESDB Figure Panels---"
-python gesdb_analysis.py
+cd $REPO_DIR/EIA
+echo "---Generating EIA/GESDB Figure Panels---"
+python figure_gen.py
 
 if [ "$1" == "process" ]; then
     # Perform the data processing for each individual source. Due to the long processing time, the data extraction is not run by default (see process_all.sh for more info)
