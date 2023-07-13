@@ -1,44 +1,53 @@
-,folder,type,type2
-DERA,gov\DERA,Gov,Government
-EIA Henry Hub,gov\EIA,Gov,Government
-USGS,gov\USGS,Gov,Government
-Black and Veatch 2012,manual\phes,Pub,Scientific
-Stocks 2021,manual\phes,Pub,Scientific
-Alva 2018,pub\alva_2018,Pub,Scientific
-Antunez 2018,pub\antunez_2018,Pub,Scientific
-ETI 2018,pub\ETI_2018,Pub,Scientific
-Huang 2021,pub\huang_2021,Pub,Scientific
-Kale 2018,pub\kale_2018,Pub,Scientific
-Kim 2013,pub\kim_2013,Pub,Scientific
-Liu 2016,pub\liu_2016,Pub,Scientific
-Li 2017,pub\li_2017,Pub,Scientific
-Lord 2014,pub\lord_2014,Pub,Scientific
-Papadias 2021,pub\papadias_2021,Pub,Scientific
-Ray 2021,pub\ray_2021,Pub,Scientific
-Schnell 2020,pub\schnell_2020,Pub,Scientific
-Southhall 2022,pub\southhall_2022,Pub,Scientific
-Steinmann 2022,pub\steinmann_2022,Pub,Scientific
-Tietze 2016,pub\tietze_2016,Pub,Scientific
-Olympios 2021,pub\various_pub,Pub,Scientific
-Diago 2018,pub\various_pub,Pub,Scientific
-Liu 2019,pub\various_pub,Pub,Scientific
-Singh Gill 2022,pub\various_pub,Pub,Scientific
-Rao 2018,pub\various_pub,Pub,Scientific
-Knighton 2020,pub\various_pub,Pub,Scientific
-Zhao 2019,pub\various_pub,Pub,Scientific
-Salerno 2002,pub\various_pub,Pub,Scientific
-HDSAM 2015,pub\various_pub,Pub,Scientific
-Hurskainen 2019,pub\various_pub,Pub,Scientific
-Fikri 2018,pub\various_pub,Pub,Scientific
-Alibaba,web\alibaba,Web,Vendor
-Cheaptubes,web\cheaptubes,Web,Vendor
-Chemanalyst,web\chemanalyst,Web,Analyst
-Echemi,web\echemi,Web,Analyst
-Graphene supermarket,web\graphene_supermarket,Web,Vendor
-Indiamart,web\indiamart,Web,Vendor
-ISE,web\ISE,Web,Analyst
-Kitco,web\kitco,Web,Analyst
-SMM,web\SMM,Web,Analyst
-Chem Central,web\various_web,Web,Vendor
-Concrete Network,web\various_web,Web,Vendor
-Rutherford & Titan,web\various_web,Web,Vendor
+,folder,type,type2,price_sources,research grade,TOS
+DERA,gov\DERA,Gov,Government,,,
+EIA Henry Hub,gov\EIA,Gov,Government,,,
+USGS,gov\USGS,Gov,Government,,,
+Black and Veatch 2012,manual\phes,Pub,Scientific,Uncited,,
+Stocks 2021,manual\phes,Pub,Scientific,Analyst,,
+Alva 2018,pub\alva_2018,Pub,Scientific,"Journal, Uncited
+",y,
+Antunez 2018,pub\antunez_2018,Pub,Scientific,"Journal, Paid Database, Undisclosed Quotes
+",,
+ETI 2018,pub\ETI_2018,Pub,Scientific,Direct Knowledge,,
+Huang 2021,pub\huang_2021,Pub,Scientific,"Journal, Vendor, Analyst",n,
+Kale 2018,pub\kale_2018,Pub,Scientific,Paid Database,,
+Kim 2013,pub\kim_2013,Pub,Scientific,Paid Database,n,
+Liu 2016,pub\liu_2016,Pub,Scientific,Journal,,
+Li 2017,pub\li_2017,Pub,Scientific,"Undisclosed Quotes, Vendor",n,
+Lord 2014,pub\lord_2014,Pub,Scientific,Vendor,,
+Papadias 2021,pub\papadias_2021,Pub,Scientific,"Journal, Government",,
+Ray 2021,pub\ray_2021,Pub,Scientific,"Paid Database
+",,
+Schnell 2020,pub\schnell_2020,Pub,Scientific,Uncited,,
+Southhall 2022,pub\southhall_2022,Pub,Scientific,Journal,,
+Steinmann 2022,pub\steinmann_2022,Pub,Scientific,Uncited,,
+Tietze 2016,pub\tietze_2016,Pub,Scientific,Government,,
+Olympios 2021,pub\various_pub,Pub,Scientific,"Journal, Uncited",,
+Diago 2018,pub\various_pub,Pub,Scientific,"Government, News Article",,
+Liu 2019,pub\various_pub,Pub,Scientific,Journal,,
+Singh Gill 2022,pub\various_pub,Pub,Scientific,"Vendor, Paid Database
+",n,
+Rao 2018,pub\various_pub,Pub,Scientific,"Uncited
+",,
+Knighton 2020,pub\various_pub,Pub,Scientific,Uncited,,
+Zhao 2019,pub\various_pub,Pub,Scientific,Uncited,,
+Salerno 2002,pub\various_pub,Pub,Scientific,Uncited,,
+HDSAM 2015,pub\various_pub,Pub,Government,,,
+Hurskainen 2019,pub\various_pub,Pub,Scientific,Analyst,,
+Fikri 2018,pub\various_pub,Pub,Scientific,Uncited,,
+Alibaba,web\alibaba,Web,Marketplace,Direct,,Disallow
+Cheaptubes,web\cheaptubes,Web,Vendor,Direct,,No Mention
+Chemanalyst,web\chemanalyst,Web,Analyst,,,"Disallow
+"
+Echemi,web\echemi,Web,Analyst,,,No Mention
+Graphene supermarket,web\graphene_supermarket,Web,Vendor,Direct,,No Mention
+Indiamart,web\indiamart,Web,Marketplace,Direct,,"Disallow
+"
+ISE,web\ISE,Web,Analyst,,,No Mention
+Kitco,web\kitco,Web,Analyst,,,No Mention
+SMM,web\SMM,Web,Analyst,,,"Disallow
+"
+Chem Central,web\various_web,Web,Marketplace,Direct,,Allow
+Concrete Network,web\various_web,Web,Analyst,Direct,,
+Rutherford & Titan,web\various_web,Web,Analyst,Direct,,
+Focus econ,web\focus_econ,Web,Analyst,,,
