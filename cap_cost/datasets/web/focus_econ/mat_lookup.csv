@@ -1,0 +1,13 @@
+original_name,material_name,molecular_formula,index_use
+Molybdenum,,Mo,molecular_formula
+Aluminium LME,,Al,molecular_formula
+Alumina COMEX,,Al,molecular_formula
+Copper LME,,Cu,molecular_formula
+Nickel LME,,Ni,molecular_formula
+Lead LME,,Pb,molecular_formula
+High Grade Zinc LME,,Zn,molecular_formula
+Tin LME,,Sn,molecular_formula
+Iron Ore CFR China,Iron Ore,Fe,material_name
+Hot Rolled Coil Steel USA,Steel,Fe,material_name
+Hot Rolled Coil Steel EUR,,,
+Cobalt,,Co,molecular_formula

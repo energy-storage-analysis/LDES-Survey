@@ -23,4 +23,7 @@ In general there are the following steps for each individual dataset:
     * Unit conversion (e.g to $/kg)
     * Define storage medium type/technology
 
+3. run `gen_dataset_index.py`
+4. If the dataset contains prices (`mat_data.csv`), Add the dataset year to `dataset_years.csv`
+
 

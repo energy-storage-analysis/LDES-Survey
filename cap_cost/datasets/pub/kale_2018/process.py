@@ -24,6 +24,7 @@ df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.
 
 steel_price = df_mat_data.loc['Steel', 'specific_price']
 
+print("Using {} as price of steel to convert normalized price values".format(steel_price))
 
 #%%
 

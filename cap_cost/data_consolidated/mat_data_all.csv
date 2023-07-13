@@ -212,10 +212,10 @@ Ethanol,Ethanol,0.480351859072872,Huang 2021,2021.0,,,,,,,
 Terpineol,Terpineol,17.155423538316857,Huang 2021,2021.0,,,,,,,
 Xylene,Xylene,8.38328363572417,Huang 2021,2021.0,,,,,,,
 Sn,Sn,21.04398620700201,Huang 2021,2021.0,Sn,,,,,,
-Al,"Al-2024, Al-6061-T6, Al-7075-T6",5.9144179134067025,Kale 2018,2018.0,Al,,,,,,139.65766877885383
-CFRP,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",60.454213069284144,Kale 2018,2018.0,,,,,,,1301.6708948364242
-GRE,"E-Glass Epoxy, S-2 Glass Epoxy",47.80660603296004,Kale 2018,2018.0,,,,,,,750.7827250869373
-KFRP,Kevlar-49 Epoxy,52.20870535938816,Kale 2018,2018.0,,,,,,,995.6647398843932
+Al,"Al-2024, Al-6061-T6, Al-7075-T6",4.327382439975905,Kale 2018,2018.0,Al,,,,,,139.65766877885383
+CFRP,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",44.23233256235957,Kale 2018,2018.0,,,,,,,1301.6708948364242
+GRE,"E-Glass Epoxy, S-2 Glass Epoxy",34.97850008078244,Kale 2018,2018.0,,,,,,,750.7827250869373
+KFRP,Kevlar-49 Epoxy,38.19936942128568,Kale 2018,2018.0,,,,,,,995.6647398843932
 Steel,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",,Kale 2018,2018.0,Fe,,,,,,109.40030340257692
 Li,Li,80.49535235640961,Kim 2013,2013.0,Li,,,,,,
 Na,Na,3.221084095978357,Kim 2013,2013.0,Na,,,,,,
@@ -527,6 +527,16 @@ Bipyridine,,51.39007194206788,Echemi,2021.0,(C5H4N)2,,,,,,
 Toluene,,1.0692623618165522,Echemi,2022.0,C7H8,,,,,,
 Ethylene glycol,,0.5854686286226473,Echemi,2022.0,C2H6O2,,,,,,
 Isopentane,,0.5619357318070636,Echemi,2020.0,C5H12,,,,,,
+Al,"Alumina COMEX, Aluminium LME",1.412594701011567,Focus econ,2022.0,Al,,,,,,
+Co,Cobalt,54.80548209483973,Focus econ,2022.0,Co,,,,,,
+Cu,Copper LME,8.544734801599157,Focus econ,2022.0,Cu,,,,,,
+Iron Ore,Iron Ore CFR China,0.10619732667491856,Focus econ,2022.0,Fe,,,,,,
+Mo,Molybdenum,39.79101035753411,Focus econ,2022.0,Mo,,,,,,
+Ni,Nickel LME,27.220779696103122,Focus econ,2022.0,Ni,,,,,,
+Pb,Lead LME,2.245254101042867,Focus econ,2022.0,Pb,,,,,,
+Sn,Tin LME,23.0175788908333,Focus econ,2022.0,Sn,,,,,,
+Steel,Hot Rolled Coil Steel USA,0.7395505214335512,Focus econ,2022.0,Fe,,,,,,
+Zn,High Grade Zinc LME,3.2008172208231964,Focus econ,2022.0,Zn,,,,,,
 CNT,"Multi-Walled Carbon Nanotube Powder, 100 grams",1000.0,Graphene supermarket,2023.0,,https://www.graphene-supermarket.com/collections/carbon-materials/products/multi-walled-carbon-nanotube-powder-100-grams,,,,,
 Graphene Oxide,Ultra Highly Concentrated Single-Layer Graphene Oxide,193548.0,Graphene supermarket,2023.0,,600 USD 500 ml bottle converted with concentration of 6.2 g/L   https://www.graphene-supermarket.com/collections/graphene-oxide-go/products/copy-of-ultra-highly-concentrated-single-layer-graphene-oxide-60-ml,,,,,
 Graphene,Electrically Conductive Granulated Graphene: 100 Grams,1000.0,Graphene supermarket,2023.0,,https://www.graphene-supermarket.com/collections/graphene-nanoplatelets-gnp/products/electrically-conductive-granulated-graphene-100-grams,,,,,
