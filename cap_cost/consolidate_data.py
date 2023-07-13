@@ -219,7 +219,7 @@ df_grouped_out.to_csv('data_consolidated/SM_data.csv')
 
 # Combine mat data into one. 
 
-s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals)
+s_temp = df_mat_data.groupby('index')['source'].apply(join_col_vals, make_set=False, sort=False)
 s_temp.name = 'sources'
 df_prices_combine = s_temp.to_frame()
 
@@ -237,7 +237,7 @@ df_prices_combine['vol_price'] = vol_price_mag.groupby('index').median()
 df_prices_combine['specific_price'] = df_prices_combine['specific_price'].astype('pint[USD/kg]')
 df_prices_combine['vol_price'] = df_prices_combine['vol_price'].astype('pint[USD/m**3]')
 
-df_prices_combine['specific_prices'] = specific_price_mag.apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals)
+df_prices_combine['specific_prices'] = specific_price_mag.apply(lambda x: round(x,2)).astype(str).groupby('index').apply(join_col_vals, make_set=False, sort=False)
 
 df_prices_combine['specific_price_std'] = df_mat_data.groupby('index')['specific_price'].std()
 df_prices_combine['specific_price_std'] = df_prices_combine['specific_price_std'].astype(df_prices_combine['specific_price'].dtype)

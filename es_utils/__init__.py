@@ -8,10 +8,11 @@ def extract_df_mat(df):
     return df_prices
 
 
-def join_col_vals(s_dup):
+def join_col_vals(s_dup, make_set=True, sort=True):
     "Joins together non nan values in a column into a string list"
-    col_vals = s_dup.dropna()
-    col_vals = sorted(list(set(col_vals)))
+    col_vals = s_dup.dropna().values
+    if make_set: col_vals = list(set(col_vals))
+    if sort: col_vals = sorted(col_vals)
     col_vals = [str(c) for c in col_vals]
     source_list = ", ".join(col_vals)
     return source_list
