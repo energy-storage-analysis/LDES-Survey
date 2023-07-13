@@ -2,13 +2,13 @@
 DERA,gov\DERA,Gov,Government,,,
 EIA Henry Hub,gov\EIA,Gov,Government,,,
 USGS,gov\USGS,Gov,Government,,,
-Black and Veatch 2012,manual\phes,Pub,Scientific,Uncited,,
+Black and Veatch 2012,manual\phes,Pub,Analyst,Uncited,,
 Stocks 2021,manual\phes,Pub,Scientific,Analyst,,
 Alva 2018,pub\alva_2018,Pub,Scientific,"Journal, Uncited
 ",y,
 Antunez 2018,pub\antunez_2018,Pub,Scientific,"Journal, Paid Database, Undisclosed Quotes
 ",,
-ETI 2018,pub\ETI_2018,Pub,Scientific,Direct Knowledge,,
+ETI 2018,pub\ETI_2018,Pub,Analyst,Direct Knowledge,,
 Huang 2021,pub\huang_2021,Pub,Scientific,"Journal, Vendor, Analyst",n,
 Kale 2018,pub\kale_2018,Pub,Scientific,Paid Database,,
 Kim 2013,pub\kim_2013,Pub,Scientific,Paid Database,n,
@@ -32,7 +32,7 @@ Rao 2018,pub\various_pub,Pub,Scientific,"Uncited
 Knighton 2020,pub\various_pub,Pub,Scientific,Uncited,,
 Zhao 2019,pub\various_pub,Pub,Scientific,Uncited,,
 Salerno 2002,pub\various_pub,Pub,Scientific,Uncited,,
-HDSAM 2015,pub\various_pub,Pub,Government,,,
+HDSAM 2015,pub\various_pub,Gov,Government,,,
 Hurskainen 2019,pub\various_pub,Pub,Scientific,Analyst,,
 Fikri 2018,pub\various_pub,Pub,Scientific,Uncited,,
 Alibaba,web\alibaba,Web,Marketplace,Direct,,Disallow
