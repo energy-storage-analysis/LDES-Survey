@@ -39,6 +39,16 @@ fig.tight_layout()
 
 plt.savefig('output/LT_eff_LT.png')
 
+
+#%%
+
+LT = 16
+r = 0.08
+
+LT_eff = npf.npv(r, [1]*LT)
+
+print("LT_eff={} at discount rate {} and LT={} with constant payments".format(LT_eff,r,LT ))
+
 # %% [markdown]
 # For a constant annuity A paid over a lifetime LT (= N Years)
 # 
