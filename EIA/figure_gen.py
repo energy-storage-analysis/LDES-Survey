@@ -29,6 +29,21 @@ powcap_gen = df_gen.groupby('Technology')['Nameplate Capacity (MW)'].sum()
 pow_caps = powcap_gen.sort_values(ascending=False)
 pow_caps = pow_caps.drop('CSP')
 
+#%%
+
+import numpy as np
+
+df_lib = df_storage.where(df_storage['sub_type'] == 'LIB').dropna(how='all')
+
+bins = np.logspace(np.log10(0.2),np.log10(10), 20)
+# bins
+
+df_lib['duration'].hist(bins=bins)
+
+plt.xscale('log')
+
+plt.ylabel("Count")
+plt.xlabel("Duration [h]")
 
 #%%
 
