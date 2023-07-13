@@ -71,7 +71,7 @@ df_table8['class'] = df_table8['class'].replace('',np.nan).fillna(method='ffill'
 df_table8['class'] = df_table8['class'].replace('eutectics', 'Organic', regex=True)
 df_table8['class'] = df_table8['class'].replace('Organic', 'Organic Eutectic', regex=True)
 df_table8['class'] = df_table8['class'].replace('Inorganic ', '', regex=True)
-df_table8['specific_price'] = df_table8['specific_price'].replace('',np.nan).dropna().replace('\(RG\)','', regex=True).astype(float)
+df_table8['specific_price'] = df_table8['specific_price'].replace('',np.nan).dropna()
 
 tables['table_8'] = df_table8
 

@@ -12,9 +12,18 @@ mat_lookup = pd.read_csv('mat_lookup.csv')
 mat_lookup = es_utils.chem.process_mat_lookup(mat_lookup)
 
 # Alva Thermal
-df_latent = pd.read_csv('tables/table_8.csv')
+df_latent = pd.read_csv('tables/table_8.csv', index_col=0)
 
 df_latent = df_latent.set_index('original_name')
+
+df_latent['RG'] = df_latent['specific_price'].str.contains('RG')
+df_latent['specific_price'] = df_latent['specific_price'].replace('\(RG\)','', regex=True).astype(float)
+
+## remove 'research grade' 
+# df_latent['specific_price'] = df_latent['specific_price'].where(df_latent['RG'] == False)#.dropna(how='all')
+# df_latent.loc['Mg (NO3)2']
+#%%
+
 
 df_latent = df_latent.rename({'density': 'mass_density'}, axis=1)
 df_latent['mass_density'] = df_latent['mass_density'].str.replace("\d+\ ?\(L.*\)", 'nan',regex=True) 
