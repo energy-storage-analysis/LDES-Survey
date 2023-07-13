@@ -64,6 +64,9 @@ df_mat_data = pd.concat(dfs_mat_data)
 
 price_source_type_lookup = pd.read_csv('price_source_type_lookup.csv', index_col=0)
 
+
+price_source_type_lookup['type'] = price_source_type_lookup['type'] +' ' + price_source_type_lookup['type2']
+
 price_source_type_lookup
 
 
@@ -115,8 +118,8 @@ df_together['rat'] = df_together['specific_price']/df_together['specific_price_a
 
 df_together['rat']
 
-df_together.groupby('type')['rat'].mean()
-# df_together.groupby('type')['diff'].std()
+# df_together.groupby('type')['rat'].mean()
+df_together.groupby('type')['rat'].std()
 
 #%%
 
@@ -124,7 +127,11 @@ df_together.groupby('type')['rat'].hist(legend=True)
 
 # plt.legend()
 
+#%%
 
+df2 = df_together.where(df_together['rat'] != 1.0).dropna(how='all')
 
+df2.groupby('type')['rat'].hist(legend=True)
 
 # %%
+df2.groupby('type')['rat'].mean()

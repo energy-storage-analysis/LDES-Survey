@@ -1,44 +1,44 @@
-,folder,type
-DERA,gov\DERA,Gov
-EIA Henry Hub,gov\EIA,Gov
-USGS,gov\USGS,Gov
-Black and Veatch 2012,manual\phes,Pub
-Stocks 2021,manual\phes,Pub
-Alva 2018,pub\alva_2018,Pub
-Antunez 2018,pub\antunez_2018,Pub
-ETI 2018,pub\ETI_2018,Pub
-Huang 2021,pub\huang_2021,Pub
-Kale 2018,pub\kale_2018,Pub
-Kim 2013,pub\kim_2013,Pub
-Liu 2016,pub\liu_2016,Pub
-Li 2017,pub\li_2017,Pub
-Lord 2014,pub\lord_2014,Pub
-Papadias 2021,pub\papadias_2021,Pub
-Ray 2021,pub\ray_2021,Pub
-Schnell 2020,pub\schnell_2020,Pub
-Southhall 2022,pub\southhall_2022,Pub
-Steinmann 2022,pub\steinmann_2022,Pub
-Tietze 2016,pub\tietze_2016,Pub
-Olympios 2021,pub\various_pub,Pub
-Diago 2018,pub\various_pub,Pub
-Liu 2019,pub\various_pub,Pub
-Singh Gill 2022,pub\various_pub,Pub
-Rao 2018,pub\various_pub,Pub
-Knighton 2020,pub\various_pub,Pub
-Zhao 2019,pub\various_pub,Pub
-Salerno 2002,pub\various_pub,Pub
-HDSAM 2015,pub\various_pub,Pub
-Hurskainen 2019,pub\various_pub,Pub
-Fikri 2018,pub\various_pub,Pub
-Alibaba,web\alibaba,Web
-Cheaptubes,web\cheaptubes,Web
-Chemanalyst,web\chemanalyst,Web
-Echemi,web\echemi,Web
-Graphene supermarket,web\graphene_supermarket,Web
-Indiamart,web\indiamart,Web
-ISE,web\ISE,Web
-Kitco,web\kitco,Web
-SMM,web\SMM,Web
-Chem Central,web\various_web,Web
-Concrete Network,web\various_web,Web
-Rutherford & Titan,web\various_web,Web
+,folder,type,type2
+DERA,gov\DERA,Gov,Government
+EIA Henry Hub,gov\EIA,Gov,Government
+USGS,gov\USGS,Gov,Government
+Black and Veatch 2012,manual\phes,Pub,Scientific
+Stocks 2021,manual\phes,Pub,Scientific
+Alva 2018,pub\alva_2018,Pub,Scientific
+Antunez 2018,pub\antunez_2018,Pub,Scientific
+ETI 2018,pub\ETI_2018,Pub,Scientific
+Huang 2021,pub\huang_2021,Pub,Scientific
+Kale 2018,pub\kale_2018,Pub,Scientific
+Kim 2013,pub\kim_2013,Pub,Scientific
+Liu 2016,pub\liu_2016,Pub,Scientific
+Li 2017,pub\li_2017,Pub,Scientific
+Lord 2014,pub\lord_2014,Pub,Scientific
+Papadias 2021,pub\papadias_2021,Pub,Scientific
+Ray 2021,pub\ray_2021,Pub,Scientific
+Schnell 2020,pub\schnell_2020,Pub,Scientific
+Southhall 2022,pub\southhall_2022,Pub,Scientific
+Steinmann 2022,pub\steinmann_2022,Pub,Scientific
+Tietze 2016,pub\tietze_2016,Pub,Scientific
+Olympios 2021,pub\various_pub,Pub,Scientific
+Diago 2018,pub\various_pub,Pub,Scientific
+Liu 2019,pub\various_pub,Pub,Scientific
+Singh Gill 2022,pub\various_pub,Pub,Scientific
+Rao 2018,pub\various_pub,Pub,Scientific
+Knighton 2020,pub\various_pub,Pub,Scientific
+Zhao 2019,pub\various_pub,Pub,Scientific
+Salerno 2002,pub\various_pub,Pub,Scientific
+HDSAM 2015,pub\various_pub,Pub,Scientific
+Hurskainen 2019,pub\various_pub,Pub,Scientific
+Fikri 2018,pub\various_pub,Pub,Scientific
+Alibaba,web\alibaba,Web,Vendor
+Cheaptubes,web\cheaptubes,Web,Vendor
+Chemanalyst,web\chemanalyst,Web,Analyst
+Echemi,web\echemi,Web,Analyst
+Graphene supermarket,web\graphene_supermarket,Web,Vendor
+Indiamart,web\indiamart,Web,Vendor
+ISE,web\ISE,Web,Analyst
+Kitco,web\kitco,Web,Analyst
+SMM,web\SMM,Web,Analyst
+Chem Central,web\various_web,Web,Vendor
+Concrete Network,web\various_web,Web,Vendor
+Rutherford & Titan,web\various_web,Web,Vendor
