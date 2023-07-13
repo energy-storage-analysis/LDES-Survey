@@ -2,10 +2,30 @@
 from os.path import join as pjoin
 import os
 import pandas as pd
+import numpy as np
 
 from es_utils.units import convert_units, prep_df_pint_out, ureg
 
 if not os.path.exists('output'): os.mkdir('output')
+
+
+#%%
+
+# Obtian the price of steel from the main dataset to use for the basis of the relative prices. 
+
+from os.path import join as pjoin
+from es_utils.units import read_pint_df
+
+from dotenv import load_dotenv
+load_dotenv()
+REPO_DIR = os.getenv('REPO_DIR')
+
+df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
+
+steel_price = df_mat_data.loc['Steel', 'specific_price']
+
+
+#%%
 
 #Table A1
 df_a1 = pd.read_csv(pjoin('tables','table_a1.csv'), skiprows=[1])
@@ -16,7 +36,7 @@ df_a1 = df_a1.rename({
     'Yield strength': 'yield_strength'
 },axis=1)
 
-df_a1['specific_price'] = df_a1['relative_cost']*1 #TODO:assuming relative cost to 1$/kg
+df_a1['specific_price'] = df_a1['relative_cost']*steel_price
 
 
 
@@ -40,7 +60,7 @@ df_a2 = df_a2.rename({
     'relative cost': 'relative_cost',
 },axis=1)
 
-df_a2['specific_price'] = df_a2['relative_cost']*1 #TODO: assuming relative cost to 1$/kg
+df_a2['specific_price'] = df_a2['relative_cost']*steel_price 
 
 df_a2 = df_a2.astype({
     'specific_price': 'pint[USD/kg]',
@@ -75,6 +95,9 @@ df_mat_grouped = df_mat.groupby('index')[['specific_strength', 'specific_price']
 from es_utils import join_col_vals
 df_mat_grouped['original_name']= df_mat.groupby('index')['original_name'].apply(join_col_vals)
 df_mat_grouped['molecular_formula']= df_mat.groupby('index')['molecular_formula'].apply(join_col_vals)
+
+#We remove the price of steel as it is relative to the database
+df_mat_grouped.loc['Steel','specific_price'] = np.nan
 
 df_mat_grouped = convert_units(df_mat_grouped)
 df_mat_grouped = prep_df_pint_out(df_mat_grouped)

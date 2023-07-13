@@ -5,7 +5,7 @@ AQDS,8.011206395138668,2.9666772016845515,0.37,,5,2,"Alibaba, Li 2017","10.11, 5
 Activated Carbon,20.2158339162187,23.678490584067934,1.17,,0,2,"Li 2017, Liu 2016","3.47, 36.96",C,12.011,"Activated Carbon, Active carbon",
 Ag,768.6501586277739,74.8688478984328,0.1,,0,4,"DERA, Huang 2021, Kitco, USGS","718.82, 742.22, 795.08, 887.51",Ag,107.8682,"SILBER, Silver, Silver Bullion",521.0
 Air,0.0,,,,1,1,Li 2017,0.0,O2,0.0,,
-Al,2.830494812281822,0.9238245944925371,0.33,,30,9,"Alibaba, DERA, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.62, 2.07, 2.55, 2.56, 2.83, 3.18, 3.71, 4.05, 4.41",Al,26.9815384,"ALUMINIUM, Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
+Al,2.830494812281822,1.3367212641186068,0.47,,30,9,"Alibaba, DERA, Indiamart, Kale 2018, Kim 2013, Ray 2021, SMM, Steinmann 2022, USGS","1.62, 2.07, 2.55, 2.56, 2.83, 3.18, 4.05, 4.41, 5.91",Al,26.9815384,"ALUMINIUM, Al, Al-2024, Al-6061-T6, Al-7075-T6, Aluminium, Aluminium (Al), Aluminum Ingot, Aluminum Ingot - Chong Qing, Aluminum Ingot - Fo Shan, Aluminum Ingot - Hang Zhou, Aluminum Ingot - Lin Yi, Aluminum Ingot - Shen Yang, Aluminum Ingot - Tian Jin, Aluminum Ingot - Wu Xi, High purity aluminium(99.99%), High purity aluminium(99.996%), Low Carbon Aluminum, SMM A00 Aluminum Ingot, SMM Aluminum Ingot - Gong Yi",1.79
 Al2O3,1.16858130466836,2.669123131889081,2.28,,3,8,"Alibaba, DERA, Echemi, Indiamart, Liu 2016, SMM, Steinmann 2022, USGS","0.55, 0.63, 0.82, 1.15, 1.18, 1.21, 1.67, 8.51",Al2O3,101.9600768,"ALUMINIUMOXID, Activated Alumina, Al2O3, Alumina (Averaged), Alumina - Bayuquan, Alumina - Guangxi, Alumina - Guizhou, Alumina - Henan, Alumina - Lianyungang, Alumina - Shandong, Alumina - Shanxi, Australian Alumina FOB Price, Bauxite and Alumina Alumina",1.0198643
 AlSc,403.3711741369571,,,,0,1,USGS,403.37,AlSc,71.9374464,Scandium Mtl_Alloy,2162.93108
 Ammonium Heptamolybdate,26.0882380221804,4.927922923588611,0.19,,0,2,"ISE, SMM","22.6, 29.57","(NH4)6Mo7O24, H50Mo7N6O28 ",1163.86,"Ammonium heptamolybdate, Hexaammonium molybdate",
@@ -31,7 +31,7 @@ Bipyridine,30.21746721721033,29.942584752658217,0.99,,3,2,"Alibaba, Echemi","51.
 Br2,5.105459099232317,3.1318033485311445,0.61,,1,2,"Echemi, USGS","2.89, 7.32",Br2,159.808,Bromine Imports,4.39
 C6H12O6Sc,52432.708676910835,,,,0,1,USGS,52432.71,C6H12O6Sc,225.111908,Scandium Cmpds_Acetate,691.1577074
 CCoO3,17.16847289759726,,,,0,1,ISE,17.17,CCoO3,118.941194,Cobalt Carbonates,16.3262666
-CFRP,26.91824483454721,22.747419393065954,0.85,,18,4,"Indiamart, Kale 2018, Rao 2018, Singh Gill 2022","12.07, 15.96, 37.87, 61.39",,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
+CFRP,38.207867557306294,27.12934448632682,0.71,,18,4,"Indiamart, Kale 2018, Rao 2018, Singh Gill 2022","12.07, 15.96, 60.45, 61.39",,,"AS4-3501–6, AS4–8552, IM7-8551–7, IM7–8552, T300-BSL914C, T300-PR319",
 CNT,1000.0,528.7205525672794,0.53,,4,3,"Alibaba, Cheaptubes, Graphene supermarket","1000.0, 1042.86, 106.41",,,"Multi-Walled Carbon Nanotube Powder, 100 grams",
 CO2,0.13907681498523466,0.13108155308630048,0.94,,2,2,"Knighton 2020, Zhao 2019","0.05, 0.23",CO2,44.009,"Cyrogenic Carbon Capture, DAC Carbon Capture",0.1452665
 CW,33.84370133326978,,,,0,1,ISE,33.84,CW,195.851,Tungsten carbide,33.1426306
@@ -96,7 +96,7 @@ FeTiO3,0.4495113078893466,0.025487549530936255,0.06,,0,3,"DERA, ISE, USGS","0.42
 FeV,26.97575969169263,,,,0,1,SMM,26.98,FeV,106.7865,50 Ferrovanadium,177.2038112
 Feldspar,0.1260354647244804,,,,0,1,USGS,0.13,AlKO8Si3,278.3268384,Feldspar and Nepheline Syenite Feldspar,
 Fossil CH4,0.33224045150911263,,,,1,1,EIA Henry Hub,0.33,CH4,16.043,,
-GRE,22.690314393032914,10.268382761603318,0.45,,6,2,"Alibaba, Kale 2018","15.43, 29.95",,,"E-Glass Epoxy, S-2 Glass Epoxy",
+GRE,31.6180386717221,22.894091517653123,0.72,,6,2,"Alibaba, Kale 2018","15.43, 47.81",,,"E-Glass Epoxy, S-2 Glass Epoxy",
 Ga,358.92513393176796,323.11712727713217,0.9,,6,6,"Alibaba, DERA, ISE, Indiamart, Kim 2013, USGS","180.21, 280.15, 437.7, 440.86, 5.95, 950.29",Ga,69.723,"GALLIUM, Ga, Gallium High-purity, Gallium Low-purity, Garnet (Industrial) Import, Gallium metal",148.0
 Ge,1410.0330112457727,56.48725480538388,0.04,,0,2,"ISE, USGS","1370.09, 1449.98",Ge,72.63,"Germanium Metal, Germanium metal",962.0
 GeO2,929.6060137481446,103.60856004171525,0.11,,0,2,"ISE, USGS","1002.87, 856.34",GeO2,104.628,"Germanium GeO2, Germanium dioxides",667.8421426
@@ -125,7 +125,7 @@ K2SO4,0.5889355776210394,4.7215041296675935,8.02,,1,4,"Alibaba, Alva 2018, Echem
 K4Fe(CN)6,3.6060173580487134,1.6151455150341931,0.45,,6,2,"Alibaba, Li 2017","2.46, 4.75",C6FeK4N6,368.3462,,5.575974
 KCl,0.5834293153937951,3.519527531223947,6.03,,9,6,"Alibaba, Alva 2018, Echemi, Indiamart, Ray 2021, USGS","0.42, 0.57, 0.59, 0.61, 9.17",KCl,74.5483,"KCl, Potash Muriate",6.7784249
 KF,125.84913622083245,168.52813168614279,1.34,,8,2,"Alva 2018, Ray 2021","245.02, 6.68",KF,58.0967032,KF,9.3019041
-KFRP,32.70910205876539,,,,3,1,Kale 2018,32.71,,,Kevlar-49 Epoxy,
+KFRP,52.20870535938816,,,,3,1,Kale 2018,52.21,,,Kevlar-49 Epoxy,
 KNO3,0.8334042710600824,3.8715448292440144,4.65,,5,4,"Alibaba, Alva 2018, Indiamart, Steinmann 2022","0.48, 0.72, 0.95, 8.45",KNO3,101.1023,KNO3,5.0618598
 KOH,1.4858797523055474,2.17751137506285,1.47,,1,5,"Alibaba, Alva 2018, Echemi, Indiamart, Li 2017","0.83, 1.01, 1.49, 1.52, 6.03",KOH,56.1053,KOH,9.0237129
 LCO,41.843499241410456,10.515018653070905,0.25,,3,2,"ISE, Li 2017","34.41, 49.28",LiCoO2,97.871194,"LCO, Lithium Cobaltate",
@@ -252,7 +252,7 @@ Solar Salt,0.6187564368805822,0.2515128681021655,0.41,,1,5,"Antunez 2018, Diago 
 Spherical Pressure,,,,61.4005,2,1,Tietze 2016,nan,,,,
 Sr,8.085346417731376,,,,0,1,ISE,8.09,Sr,87.62,Strontium metal,6.605
 SrCO3,2.9954456371733036,2.8065764517758307,0.94,,1,2,"Alibaba, Indiamart","1.01, 4.98",SrCO3,147.628,,3.9801865
-Steel,1.8582050558315735,2.6321013653336207,1.42,,18,4,"Alibaba, Indiamart, Kale 2018, Singh Gill 2022","0.64, 1.6, 2.12, 6.57",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
+Steel,1.596152204532844,3.1847951395818836,2.0,,18,4,"Alibaba, Indiamart, Kale 2018, Singh Gill 2022","0.64, 1.6, 6.57, nan",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340",
 Stone,0.022663675691070816,0.00982163923157348,0.43,,8,2,"Steinmann 2022, USGS","0.02, 0.03",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
 Syenite,0.16220569651331165,,,,0,1,USGS,0.16,Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,35.48515131098533,,,,0,1,Alva 2018,35.49,,,Syltherm XLT,

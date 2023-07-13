@@ -9,6 +9,8 @@ This data is the primary source of the materials define the Virial-limited stora
 
 For isotropic materials (Table A1) $\sigma_A$ is taken as the yield strength. For composite materials (Table A2) the highest ultimate hoop stress is used, which is given by the variable $\sigma^{ult}_T$ in the paper.  
 
+Prices of materials are also given in relative terms, normalized to "the cost of the cheapest material in the evaluated set of materials." This appears to be Steel-4340, but no absolute price is given. We use the price of steel obtained from other sources for this base price to calculate the absolute prices of other materials. Prices are grouped into larger material categories (see mat_lookup.csv). The output price of steel is dropped to not be included in the final material dataset and cause a feedback loop. 
+
 ## Development: 
 
 ## Determining meaning of acronyms

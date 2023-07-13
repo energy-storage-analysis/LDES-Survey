@@ -90,7 +90,7 @@ df_price_type
 
 # %%
 
-price_avg = df_price_type.groupby('index').mean()['specific_price']
+price_avg = df_price_type.groupby('index').median()['specific_price']
 price_avg.name = 'specific_price_all'
 
 price_avg
@@ -102,9 +102,13 @@ price_avg
 
 #%%
 
-price_type_avg = df_price_type.groupby(['index','type']).mean()
+price_type_avg = df_price_type.groupby(['index','type']).median()
 
 price_type_avg = price_type_avg.reset_index()
+
+price_type_avg
+
+#%%
 
 price_type_avg
 
@@ -135,3 +139,4 @@ df2.groupby('type')['rat'].hist(legend=True)
 
 # %%
 df2.groupby('type')['rat'].mean()
+# %%
