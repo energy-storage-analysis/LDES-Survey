@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 from es_utils.pdf import average_range
 from es_utils.units import convert_units, prep_df_pint_out, ureg
