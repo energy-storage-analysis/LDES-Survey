@@ -13,6 +13,13 @@ from os.path import join as pjoin
 
 # %%
 
+figure_output_dir = 'figures/dataset_error'
+if not os.path.exists(figure_output_dir): os.mkdir(figure_output_dir)
+
+
+output_dir = 'tables/dataset_error'
+if not os.path.exists(output_dir): os.mkdir(output_dir)
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -83,10 +90,21 @@ df_mat_data['specific_price'] = df_mat_data['specific_price']*df_mat_data['year'
 df_mat_data_final = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
 # df_mat_data_final 
 df_mat_data_used = df_mat_data_final.where(df_mat_data_final['num_SMs'] > 0).dropna(how='all')
+
+# TODO: Not including volumetric prices...Mass density defined for SM. Just copy over volumetric price as we are ultimately just looking at ratios?
+df_mat_data_used = df_mat_data_used.dropna(subset=['specific_price'])
+
 df_mat_data_used 
 # df_mat_data_used
 
 # df_mat_data_final.index
+
+#%%
+
+table_std_rat = df_mat_data_used.sort_values(by='specific_price_rat', ascending=False).iloc[:20]
+table_std_rat = table_std_rat[['specific_price','specific_price_std','specific_price_rat', 'sources','specific_prices']]
+
+table_std_rat.to_csv(os.path.join(output_dir,'tables_std_rat.csv'))
 
 #%%
 
@@ -110,15 +128,10 @@ price_source_type_lookup
 df_price_source = df_mat_data[['specific_price','source']]
 df_price_source['specific_price']  = df_price_source['specific_price'].pint.to('USD/kg').pint.magnitude
 
-#%%
-
 types = [price_source_type_lookup.loc[s,'type'] for s in df_price_source['source']]
 
 df_price_source['type'] = types
 
-df_price_type = df_price_source[['specific_price','type']].set_index('type',append=True)#
-
-df_price_type
 
 #%%
 
@@ -135,9 +148,12 @@ axes[1].set_ylabel("Price Datapoint Counts")
 
 fig.tight_layout()
 
+plt.savefig('figures\price_source_counts.png')
+
 # %%
 
-price_avg = df_price_type.groupby('index').median()['specific_price']
+price_avg = df_price_source['specific_price'].groupby('index').median()
+
 price_avg.name = 'specific_price_all'
 
 price_avg
@@ -147,88 +163,151 @@ price_avg
 
 #%%
 
-price_type_avg = df_price_type.groupby(['index','type']).median()
+df_price_source2 = df_price_source[['specific_price','source']].set_index('source',append=True)#
+
+price_source_avg = df_price_source2.groupby(['index','source']).median()
+
+price_source_avg = price_source_avg.reset_index('source')
+
+# Having to repeat this....
+types = [price_source_type_lookup.loc[s,'type'] for s in price_source_avg['source']]
+price_source_avg['type'] = types 
+
+price_source_avg
 
 #%%
 
-df_together = pd.merge(price_type_avg.reset_index('type'), price_avg, on='index')
+df_together = pd.merge(price_source_avg, price_avg, on='index')
 
-df_together = df_together.drop('Air')
 
 # Add noise to investigate if there is an effect from prices being presented with limited significant digits
 # df_together['specific_price'] = df_together['specific_price'] + np.random.random(len(df_together))*0.01
 
-df_together
-
-
-#%%
 df_together['diff'] = df_together['specific_price'] - df_together['specific_price_all']
+
+# We keep only prices with nonzero difference from overall median. Note this also includes individual prices that are e.g. in the middle of three prices. 
+print("Length with all prices: {}".format(len(df_together)))
+df_together_equal = df_together.where(df_together['diff'] == 0).dropna(how='all')
+df_together = df_together.where(df_together['diff'] != 0).dropna(how='all')
+print("Length after removing prices equal to overall median: {}".format(len(df_together)))
+
+
+## Used to confirm that all mat data with only one source (see figure 3) are in the removed dataset. 
+# one_source = df_mat_data_used.where(df_mat_data_used['num_source'] == 1).dropna(how='all')
+# df_together_equal.loc[one_source.index]
+
+# df_together = df_together.drop('Air')
+
+
 df_together['rat'] = df_together['specific_price']/df_together['specific_price_all']
 df_together['diff_frac'] = abs(df_together['diff'])/df_together['specific_price_all']
 
-# df_together['diff_frac'].hist()
-# df_together.loc['Li2S']
+#%%
+
+df_together[['source_list','source_list_prices']] = df_mat_data_final.loc[df_together.index][['sources','specific_prices']]
+
+df_out = df_together[['source','specific_price','specific_price_all','rat','diff_frac','source_list','source_list_prices']]
+
+table_diff_frac_high = df_together.sort_values(by='diff_frac', ascending=False).dropna().iloc[:20]
+table_diff_frac_high.to_csv(os.path.join(output_dir,'diff_frac_high.csv'))
+
+
+table_rat_indiv_high = df_together.sort_values(by='rat', ascending=False).dropna().iloc[:20]
+table_rat_indiv_high.to_csv(os.path.join(output_dir,'rat_indiv_high.csv'))
+
+
+table_rat_indiv_low = df_together.sort_values(by='rat', ascending=True).dropna().iloc[:20]
+table_rat_indiv_low.to_csv(os.path.join(output_dir,'rat_indiv_low.csv'))
 
 #%%
 
+plt.figure()
 
-df_together.sort_values(by='diff_frac').dropna().iloc[0:10]
-# df_together.sort_values(by='diff_frac').dropna().iloc[-10:-1]
-
-#%%
-
-
-df2 = df_together.where(df_together['rat'] != 1.0).dropna(how='all')
-
-rat_min = df2['rat'].min()*0.9
-rat_max = df2['rat'].max()*1.1
+rat_min = df_together['rat'].min()*0.9
+rat_max = df_together['rat'].max()*1.1
 
 import numpy as np
 bins = np.logspace(np.log10(rat_min), np.log10(rat_max), 50)
 
 
-df2.groupby('type')['rat'].hist(legend=True, bins=bins)
+df_together.groupby('type')['rat'].hist(legend=True, bins=bins)
 plt.xscale('log')
+
+plt.suptitle('Ratio of individual price to overall price median')
+plt.savefig(os.path.join(figure_output_dir, 'ratio_all.png'))
+
 
 #%%
 
-df2 = df_together.where(df_together['diff_frac'] != 0).dropna(how='all')
-
-rat_min = df2['diff_frac'].min()*0.9
-rat_max = df2['diff_frac'].max()*1.1
-
-bins = np.logspace(np.log10(rat_min), np.log10(rat_max), 50)
-
-
-df2.groupby('type')['diff_frac'].hist(legend=True, bins=bins)
-plt.xscale('log')
-
-# plt.legend()
-
-#%%
 
 fig, axes = plt.subplots(4, sharex=True, sharey=True, figsize= (5,5))
 
-for i, source_type in enumerate(set(df2['type'])):
-    df_sel = df2.where(df2['type'] == source_type).dropna(how='all')
+for i, source_type in enumerate(set(df_together['type'])):
+    df_sel = df_together.where(df_together['type'] == source_type).dropna(how='all')
 
     df_sel['rat'].plot.hist(ax = axes[i], bins=bins)
     axes[i].set_xscale('log')
     axes[i].set_ylabel('Counts\n{}'.format(source_type))
 
 
-# axes[-1].set_xlabel("Ratio of individual price to overall price median")
+axes[-1].set_xlabel("Ratio of individual price to overall price median")
 # plt.xscale('log')
+
+plt.savefig(os.path.join(figure_output_dir, 'ratio_separate.png'))
+
+#%%
+
+plt.figure()
+
+rat_min = df_together['diff_frac'].min()*0.9
+rat_max = df_together['diff_frac'].max()*1.1
+
+bins = np.logspace(np.log10(rat_min), np.log10(rat_max), 50)
+
+
+df_together.groupby('type')['diff_frac'].hist(legend=True, bins=bins)
+plt.xscale('log')
+
+# plt.legend()
+
+
+plt.suptitle('(Individual price - price median)/price_median')
+plt.savefig(os.path.join(figure_output_dir, 'diff_frac_all.png'))
+
+#%%
+
+fig, axes = plt.subplots(4, sharex=True, sharey=True, figsize= (5,5))
+
+for i, source_type in enumerate(set(df_together['type'])):
+    df_sel = df_together.where(df_together['type'] == source_type).dropna(how='all')
+
+    df_sel['diff_frac'].plot.hist(ax = axes[i], bins=bins)
+    axes[i].set_xscale('log')
+    axes[i].set_ylabel('Counts\n{}'.format(source_type))
+
+
+axes[-1].set_xlabel("(Individual price - price median)/price_median")
+# plt.xscale('log')
+
+plt.savefig(os.path.join(figure_output_dir, 'diff_frac_separate.png'))
 
 # %%
 
-print("Price ratio of specific source to overall median: ")
+# Stats
 
-print("Median of all ratios: ")
+rat_median = df_together.groupby('type')['rat'].median()
+rat_median.name = 'ratio_median'
+rat_mean = df_together.groupby('type')['rat'].mean()
+rat_mean.name = 'ratio_mean'
 
-print(df2.groupby('type')['rat'].median())
+diff_frac_median = df_together.groupby('type')['diff_frac'].median()
+diff_frac_median.name = 'diff_frac_median'
+diff_frac_mean = df_together.groupby('type')['diff_frac'].mean()
+diff_frac_mean.name = 'diff_frac_mean'
+
+rat_median
+df_stats = pd.concat([rat_median,rat_mean,diff_frac_median, diff_frac_mean],axis=1)
 
 
-print("Mean of all ratios: ")
-print(df2.groupby('type')['rat'].mean())
+df_stats.to_csv(os.path.join(output_dir, 'error_stats.csv'))
 # %%
