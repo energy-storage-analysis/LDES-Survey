@@ -35,19 +35,19 @@ Salerno 2002,pub\various_pub,Pub,Scientific,Uncited,,
 HDSAM 2015,pub\various_pub,Gov,Government,,,
 Hurskainen 2019,pub\various_pub,Pub,Scientific,Analyst,,
 Fikri 2018,pub\various_pub,Pub,Scientific,Uncited,,
-Alibaba,web\alibaba,Web,Marketplace,Direct,,Disallow
-Cheaptubes,web\cheaptubes,Web,Vendor,Direct,,No Mention
+Alibaba,web\alibaba,Web,Market,Direct,,Disallow
+Cheaptubes,web\cheaptubes,Web,Market,Direct,,No Mention
 Chemanalyst,web\chemanalyst,Web,Analyst,,,"Disallow
 "
 Echemi,web\echemi,Web,Analyst,,,No Mention
-Graphene supermarket,web\graphene_supermarket,Web,Vendor,Direct,,No Mention
-Indiamart,web\indiamart,Web,Marketplace,Direct,,"Disallow
+Graphene supermarket,web\graphene_supermarket,Web,Market,Direct,,No Mention
+Indiamart,web\indiamart,Web,Market,Direct,,"Disallow
 "
 ISE,web\ISE,Web,Analyst,,,No Mention
 Kitco,web\kitco,Web,Analyst,,,No Mention
 SMM,web\SMM,Web,Analyst,,,"Disallow
 "
-Chem Central,web\various_web,Web,Marketplace,Direct,,Allow
+Chem Central,web\various_web,Web,Market,Direct,,Allow
 Concrete Network,web\various_web,Web,Analyst,Direct,,
 Rutherford & Titan,web\various_web,Web,Analyst,Direct,,
 Focus econ,web\focus_econ,Web,Analyst,,,
