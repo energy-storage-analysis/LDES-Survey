@@ -252,7 +252,7 @@ Solar Salt,0.6187564368805822,0.2515128681021655,0.41,,1,5,"Antunez 2018, Liu 20
 Spherical Pressure,,,,61.4005,2,1,Tietze 2016,nan,,,,
 Sr,8.085346417731376,,,,0,1,ISE,8.09,Sr,87.62,Strontium metal,6.605
 SrCO3,2.9954456371733036,2.8065764517758307,0.94,,1,2,"Alibaba, Indiamart","1.01, 4.98",SrCO3,147.628,,3.9801865
-Steel,1.1678513629831975,2.822606455950232,2.42,,18,5,"Kale 2018, Singh Gill 2022, Alibaba, Focus econ, Indiamart","nan, 1.6, 0.64, 0.74, 6.57",Fe,55.845,"Carbon-Steel-1020, Stainless-Steel-15-7, Stainless-Steel-440C, Stainless-Steel-455, Steel-18Ni-300, Steel-4340, Hot Rolled Coil Steel USA",
+Steel,1.1678513629831975,2.822606455950232,2.42,,18,4,"Singh Gill 2022, Alibaba, Focus econ, Indiamart","1.6, 0.64, 0.74, 6.57",Fe,55.845,Hot Rolled Coil Steel USA,
 Stone,0.022663675691070816,0.00982163923157348,0.43,,8,2,"USGS, Steinmann 2022","0.02, 0.03",Al2O5Si,162.0430768,"Basalt, Granite, Limestone, Sandstone, Stone (Crushed) Average",
 Syenite,0.16220569651331165,,,,0,1,USGS,0.16,Al2KNaO8Si2 ,300.2131461,Feldspar and Nepheline Syenite Nepheline_syenite,
 Syltherm XLT,35.48515131098533,,,,0,1,Alva 2018,35.49,,,Syltherm XLT,

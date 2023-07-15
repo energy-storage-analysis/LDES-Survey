@@ -98,7 +98,8 @@ df_mat_grouped['original_name']= df_mat.groupby('index')['original_name'].apply(
 df_mat_grouped['molecular_formula']= df_mat.groupby('index')['molecular_formula'].apply(join_col_vals)
 
 #We remove the price of steel as it is relative to the database
-df_mat_grouped.loc['Steel','specific_price'] = np.nan
+# df_mat_grouped.loc['Steel','specific_price'] = np.nan
+df_mat_grouped = df_mat_grouped.drop('Steel')
 
 df_mat_grouped = convert_units(df_mat_grouped)
 df_mat_grouped = prep_df_pint_out(df_mat_grouped)
