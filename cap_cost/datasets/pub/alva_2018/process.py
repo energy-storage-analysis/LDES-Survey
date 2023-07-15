@@ -20,7 +20,7 @@ df_latent['RG'] = df_latent['specific_price'].str.contains('RG')
 df_latent['specific_price'] = df_latent['specific_price'].replace('\(RG\)','', regex=True).astype(float)
 
 ## remove 'research grade' 
-# df_latent['specific_price'] = df_latent['specific_price'].where(df_latent['RG'] == False)#.dropna(how='all')
+df_latent['specific_price'] = df_latent['specific_price'].where(df_latent['RG'] == False)#.dropna(how='all')
 # df_latent.loc['Mg (NO3)2']
 #%%
 
