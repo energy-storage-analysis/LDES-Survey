@@ -11,6 +11,35 @@ import matplotlib.pyplot as plt
 import os
 from os.path import join as pjoin
 
+#%%
+
+#%%
+
+price_source_type_lookup = pd.read_csv('price_source_type_lookup.csv', index_col=0)
+
+# price_source_type_lookup['type'] = price_source_type_lookup['type'] +' ' + price_source_type_lookup['type2']
+price_source_type_lookup['type'] =  price_source_type_lookup['type2']
+
+
+# price_source_type_lookup
+
+price_source_type_lookup['type'] = price_source_type_lookup['type'].replace({
+    'Government': 'Government Agency',
+    'Analyst': 'Commodity Analyst',
+    'Scientific': 'Scientific Publication',
+    'Market': 'Direct Market Price'
+})
+
+#%%
+
+from es_utils import join_col_vals
+
+type_list = price_source_type_lookup.reset_index().groupby('type')['index'].apply(join_col_vals)
+
+type_list.to_csv('tables/source_type_list.csv')
+
+
+
 # %%
 
 figure_output_dir = 'figures/dataset_error'
@@ -110,16 +139,6 @@ table_std_rat.to_csv(os.path.join(output_dir,'tables_std_rat.csv'))
 
 #TODO: Check and make stats. only keep used final mat prices
 df_mat_data = df_mat_data.loc[df_mat_data_used.index]
-
-
-#%%
-
-price_source_type_lookup = pd.read_csv('price_source_type_lookup.csv', index_col=0)
-
-# price_source_type_lookup['type'] = price_source_type_lookup['type'] +' ' + price_source_type_lookup['type2']
-price_source_type_lookup['type'] =  price_source_type_lookup['type2']
-
-price_source_type_lookup
 
 
 
@@ -247,10 +266,10 @@ for i, source_type in enumerate(set(df_together['type'])):
 
     df_sel['rat'].plot.hist(ax = axes[i], bins=bins)
     axes[i].set_xscale('log')
-    axes[i].set_ylabel('Counts\n{}'.format(source_type))
+    axes[i].set_ylabel('{}'.format(source_type.replace(" ", "\n")))
 
 
-axes[-1].set_xlabel("Ratio of individual price to overall price median")
+axes[-1].set_xlabel("(Individual Price)/(Price Median)")
 # plt.xscale('log')
 
 plt.savefig(os.path.join(figure_output_dir, 'ratio_separate.png'))
@@ -283,10 +302,10 @@ for i, source_type in enumerate(set(df_together['type'])):
 
     df_sel['diff_frac'].plot.hist(ax = axes[i], bins=bins)
     axes[i].set_xscale('log')
-    axes[i].set_ylabel('Counts\n{}'.format(source_type))
+    axes[i].set_ylabel('{}'.format(source_type.replace(" ", "\n")))
 
 
-axes[-1].set_xlabel("(Individual price - price median)/price_median")
+axes[-1].set_xlabel("|Individual price - Price median|/(Price Median)")
 # plt.xscale('log')
 
 plt.savefig(os.path.join(figure_output_dir, 'diff_frac_separate.png'))
