@@ -92,7 +92,7 @@ texts = annotate_points(df_ec_coupled, x_str, y_str, text_col='display_text', ax
 
 ax.set_title('Coupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
-plt.ylabel("$C_{kWh,SM}$ (\$/kWh)", fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,SM}$ (USD/kWh)", fontsize=label_fontsize)
 
 plt.yscale('log')
 plt.xscale('log')

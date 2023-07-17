@@ -83,7 +83,7 @@ for case, row in CkWh_cases.iterrows():
 
 plt.xlabel('Phase Change Temperature (deg C)', fontsize=label_fontsize)
 
-plt.ylabel("$C_{kWh,SM}$ (\$/kWh)", fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,SM}$ (USD/kWh)", fontsize=label_fontsize)
 plt.suptitle("Latent")
 
 

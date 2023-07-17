@@ -94,7 +94,7 @@ ax_cold.set_ylim(y_lim)
 ax_cold.set_xlim(-200,0)
 
 ax_cold.set_xlabel('Min Temperature (deg C)', fontsize=label_fontsize)
-ax_cold.set_ylabel("$C_{kWh,SM}$ (\$/kWh)", fontsize=label_fontsize)
+ax_cold.set_ylabel("$C_{kWh,SM}$ (USD/kWh)", fontsize=label_fontsize)
 ax_cold.set_title("Cold Sensible")
 
 case_lns = []
@@ -128,7 +128,7 @@ ax_hot.set_yscale('log')
 ax_hot.set_xlim(*hot_xlim)
 
 ax_hot.set_xlabel('Maximum Temperature (deg C)', fontsize=label_fontsize)
-# ax_hot.set_ylabel("$C_{kWh,SM}$ (\$/kWh)")
+# ax_hot.set_ylabel("$C_{kWh,SM}$ (USD/kWh)")
 # ax_hot.xticks.remove()
 ax_hot.set_title("Hot Sensible")
 

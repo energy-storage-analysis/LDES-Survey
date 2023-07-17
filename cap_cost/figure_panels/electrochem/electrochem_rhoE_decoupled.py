@@ -125,7 +125,7 @@ texts = annotate_points(df_ec_decoupled, x_str, y_str, 'display_text', ax=ax)
 
 ax.set_title('Decoupled')
 plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
-plt.ylabel("$C_{kWh,SM}$ (\$/kWh)", fontsize=label_fontsize)
+plt.ylabel("$C_{kWh,SM}$ (USD/kWh)", fontsize=label_fontsize)
 
 leg = ax.get_legend()
 leg.set_title('Sub Type')
