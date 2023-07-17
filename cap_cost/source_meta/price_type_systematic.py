@@ -27,7 +27,7 @@ price_source_type_lookup['type'] = price_source_type_lookup['type'].replace({
     'Government': 'Government Agency',
     'Analyst': 'Commodity Analyst',
     'Scientific': 'Scientific Publication',
-    'Market': 'Direct Market Price'
+    'Vendor': 'Vendor'
 })
 
 #%%
