@@ -275,35 +275,8 @@ df_prices_combine['mu'] = df_prices_combine['mu'].astype('pint[g/mol]')
 
 #%%
 
-import ast
-mats = df_grouped['materials']
-
-mats_single = mats.where(~mats.str.contains('[', regex=False)).dropna()
-mats_comp = mats.where(mats.str.contains('[', regex=False)).dropna()
-mats_comp = mats_comp.apply(ast.literal_eval)
-
-
-
-num_sms = []
-for idx in df_prices_combine.index:
-    n = 0 
-    for mat_name in mats_single.values:
-        if mat_name == idx:
-            n = n+1
-    for comp_list in mats_comp:
-        mats = [t[0] for t in comp_list]
-        if idx in mats:
-            n = n+1
-
-    num_sms.append(n)
-
-df_prices_combine['num_SMs'] = num_sms
-
-#%%
-
-
 df_prices_combine = df_prices_combine[[
-'specific_price', 'specific_price_std','specific_price_rat', 'vol_price','num_SMs','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
+'specific_price', 'specific_price_std','specific_price_rat', 'vol_price','num_source','sources','specific_prices','molecular_formula','mu','original_names','specific_price_element',
 ]]
 
 
