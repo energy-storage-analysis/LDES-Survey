@@ -42,6 +42,7 @@ for fn in fns:
         if 'pint' in str(df_sel[col].dtype):
             df_sel[col] = df_sel[col].pint.quantity
             df_sel[col] = df_sel[col].round(2)
+            df_sel[col] = df_sel[col].fillna('')
 
     writer = MarkdownTableWriter(dataframe=df_sel.reset_index())
 
@@ -186,6 +187,7 @@ df = pd.read_csv(fp)
 
 df = df[['index','vol_price', 'sources']]
 
+df['vol_price'] = df['vol_price'].round(3)
 df = df.rename({'vol_price': 'Volumetric Price $(USD/m^3)$'}, axis=1)
 
 writer = MarkdownTableWriter(dataframe=df)
