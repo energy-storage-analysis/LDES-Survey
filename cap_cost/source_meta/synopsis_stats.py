@@ -89,6 +89,7 @@ stats['num_mat_avg_used'] = len(df_mat_used)
 # stats['num_SM'] = len(df_SMs)
 stats['num_energy_density'] = len(df_SMs['specific_energy'].dropna())
 stats['num_cost_of_storge'] = len(df_SMs['specific_price'].dropna())
+stats['num_Ckwh'] = len(df_SMs['C_kwh'].dropna())
 stats['num_sources'] = len(df_out)
 
 
@@ -97,8 +98,9 @@ long_name_dict = {
 'num_mat_raw_used' : "Number of all individual material prices used",
 'num_mat_avg_all' : "Number of all material price averages",
 'num_mat_avg_used' : "Number of all material price averages used",
-'num_energy_density' : "Number of energy density calculations (storage media)",
-'num_cost_of_storge' : "Number of cost of storage including multiple material constituents",
+'num_energy_density' : "Number of storage medium energy density calculations",
+'num_cost_of_storge' : "Number of storage medium specific price",
+'num_Ckwh' : "Number of storage medium energy capital cost (C_kWh,SM)",
 'num_sources' : "Number of sources used to form the dataset",
 }
 

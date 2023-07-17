@@ -26,7 +26,7 @@ df_SMs =  read_pint_df('data_consolidated/SM_data.csv', index_col=[0,1])
 
 
 import ast
-mats = df_SMs['materials']
+mats = df_SMs.dropna(subset=['C_kwh'])['materials']
 
 mats_single = mats.where(~mats.str.contains('[', regex=False)).dropna()
 mats_comp = mats.where(mats.str.contains('[', regex=False)).dropna()
