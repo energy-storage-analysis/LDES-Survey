@@ -1,6 +1,7 @@
-python collect_lookups.py
-python price_source_info.py
-python SM_type_info.py
-python SM_promising.py
-python source_info.py
-python synopsis_stats.py
+scripts='*.py'
+
+for script in $scripts
+do
+echo $script
+python $script
+done
