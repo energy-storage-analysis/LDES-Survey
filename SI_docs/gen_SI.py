@@ -62,3 +62,15 @@ output_folder = 'output'
 import os
 os.system('pandoc -o {}/SI_md.docx -f markdown -t docx {}/SI_md.md --reference-doc reference_doc.docx'.format(output_folder,output_folder))
 
+# Error analysis 
+
+error_table_dir = 'md_generated\error'
+with open('output/error_analysis_tables.md', 'w', encoding='utf-8') as f_out:
+
+    for fn in os.listdir(error_table_dir):
+        fp = os.path.join('SI_docs', error_table_dir, fn)
+
+        SI_text = read_md(f_out, fp)
+        f_out.write(SI_text)
+
+os.system('pandoc -o {}/SI_error_table.docx -f markdown -t docx {}/error_analysis_tables.md --reference-doc reference_doc.docx'.format(output_folder,output_folder))

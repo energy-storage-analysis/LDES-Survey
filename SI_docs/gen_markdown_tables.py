@@ -213,3 +213,35 @@ writer = MarkdownTableWriter(dataframe=df)
 with open(os.path.join(output_folder,'dataset_counts.md'), 'w', encoding='utf-8') as f:
     f.write(writer.dumps())
     f.write(": Information of the resulting dataset".format(len(df)))
+
+## Error analysis
+
+error_output_dir = os.path.join(output_folder, 'error')
+if not os.path.exists(error_output_dir): os.mkdir(error_output_dir)
+
+error_input_dir = os.path.join(REPO_DIR, r'cap_cost\source_meta\tables\dataset_error')
+
+for fn in os.listdir(error_input_dir):
+
+    fp = os.path.join(error_input_dir, fn)
+
+    df = pd.read_csv(fp)
+
+
+    for col in df.columns:
+        if df[col].dtype == float:
+            df[col] = df[col].round(3)
+
+    if 'diff' in fn:
+        df = df.drop('rat',axis=1)
+
+    if 'rat_indiv' in fn:
+        df = df.drop('diff_frac',axis=1)
+
+    df = df.rename({col: col.replace('_',' ') for col in df.columns}, axis=1)
+
+    writer = MarkdownTableWriter(dataframe=df)
+
+    with open(os.path.join(error_output_dir,'{}.md'.format(fn)), 'w', encoding='utf-8') as f:
+        f.write(writer.dumps())
+        f.write(": {}".format(fn))

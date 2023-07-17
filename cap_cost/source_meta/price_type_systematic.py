@@ -227,15 +227,15 @@ df_together[['source_list','source_list_prices']] = df_mat_data_final.loc[df_tog
 
 df_out = df_together[['source','specific_price','specific_price_all','rat','diff_frac','source_list','source_list_prices']]
 
-table_diff_frac_high = df_together.sort_values(by='diff_frac', ascending=False).dropna().iloc[:20]
+table_diff_frac_high = df_out.sort_values(by='diff_frac', ascending=False).dropna().iloc[:20]
 table_diff_frac_high.to_csv(os.path.join(output_dir,'diff_frac_high.csv'))
 
 
-table_rat_indiv_high = df_together.sort_values(by='rat', ascending=False).dropna().iloc[:20]
+table_rat_indiv_high = df_out.sort_values(by='rat', ascending=False).dropna().iloc[:20]
 table_rat_indiv_high.to_csv(os.path.join(output_dir,'rat_indiv_high.csv'))
 
 
-table_rat_indiv_low = df_together.sort_values(by='rat', ascending=True).dropna().iloc[:20]
+table_rat_indiv_low = df_out.sort_values(by='rat', ascending=True).dropna().iloc[:20]
 table_rat_indiv_low.to_csv(os.path.join(output_dir,'rat_indiv_low.csv'))
 
 #%%
