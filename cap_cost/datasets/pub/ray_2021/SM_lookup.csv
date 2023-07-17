@@ -23,7 +23,7 @@ Boron (B),B,latent_thermal,hot,metal,B,
 Aluminium (Al),Al,latent_thermal,hot,metal,Al,
 Magnesium (Mg),Mg,latent_thermal,hot,metal,Mg,
 Zinc (Zn),Zn,latent_thermal,hot,metal,Zn,
-KF (55%)/KCl (45%),KF/KCl,latent_thermal,hot,molten_salt,"[('KF', 0.55), ('KCl', 0.45)]",mass
+,KF/KCl,latent_thermal,hot,molten_salt,"[('KF', 0.55), ('KCl', 0.45)]",mass
 LiF (60%)/NaF (40%),LiF/NaF,latent_thermal,hot,molten_salt,"[('LiF', 0.6), ('NaF', 0.4)]",mass
 NaF (65%)/CaF2 (23%)/MgF2 (12%),NaF/CaF2/MgF2,latent_thermal,hot,molten_salt,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",mass
 NaF (64%)/MgF2 (20%)/KF (16%),NaF/MgF2/KF,latent_thermal,hot,molten_salt,"[('NaF', 0.64), ('MgF2', 0.2), ('KF', 0.16)]",mass

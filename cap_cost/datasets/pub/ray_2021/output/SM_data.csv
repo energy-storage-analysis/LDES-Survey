@@ -25,7 +25,6 @@ B,latent_thermal,hot,metal,1.2777777777777777,2350.0,B,
 Al,latent_thermal,hot,metal,0.1102777777777778,660.0,Al,
 Mg,latent_thermal,hot,metal,0.10777777777777779,661.0,Mg,
 Zn,latent_thermal,hot,metal,0.04055555555555555,419.0,Zn,
-KF/KCl,latent_thermal,hot,molten_salt,0.11305555555555558,605.0,"[('KF', 0.55), ('KCl', 0.45)]",mass
 LiF/NaF,latent_thermal,hot,molten_salt,0.2266666666666667,652.0,"[('LiF', 0.6), ('NaF', 0.4)]",mass
 NaF/CaF2/MgF2,latent_thermal,hot,molten_salt,0.1577777777777778,743.0,"[('NaF', 0.65), ('CaF2', 0.23), ('MgF2', 0.12)]",mass
 NaF/MgF2/KF,latent_thermal,hot,molten_salt,0.18055555555555558,804.0,"[('NaF', 0.64), ('MgF2', 0.2), ('KF', 0.16)]",mass
