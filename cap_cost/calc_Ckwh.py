@@ -154,7 +154,7 @@ df_SMs = df_SMs.drop('vol_price', axis=1)
 #%%
 
 # Energy density expressions
-
+# TODO: Can this all be replaced with pandas agg?
 
 F = ureg.Quantity(96485, 'C/mol') # C/mol
 #TODO: deltaV means battery deltaV
@@ -240,26 +240,33 @@ df_out['specific_energy'] = df_out['specific_energy'].astype('pint[kWh/kg]')
 
 df_out['C_kwh'] = df_out['specific_price']/df_out['specific_energy']
 
-df_out = df_out.dropna(subset=['C_kwh'])
+# This drops many duplicate entries that arise from above method
+df_out = df_out.dropna(subset=['specific_energy'])
 df_out['C_kwh'] = df_out['C_kwh'].astype('pint[USD/kWh]')
 
 
 # %%
 
 #Drop columns in df_SMs so that duplicate columns don't keep getting added when rerunning this script without rerunning consolidate data. I.e. we are writing or overwriting the values.
-df_SMs = df_SMs[[col for col in df_SMs.columns if col not in df_out.columns]]
+#TODO: Can we do this with pandas merge or join? 
+df_SMs_out = df_SMs[[col for col in df_SMs.columns if col not in df_out.columns]]
 
-df_SMs = pd.concat([df_SMs, df_out], axis=1)
+df_SMs_out = pd.concat([df_SMs_out, df_out], axis=1)
+
+df_SMs_out['specific_price'] = df_SMs_out['specific_price'].fillna(df_SMs['specific_price'])
+
+
+#%%
 
 
 # Column order 
 first_columns = ['sub_type','mat_type','C_kwh','specific_energy','specific_price','materials','mat_basis', 'SM_sources','price_sources']
-other_cols = sorted([col for col in df_SMs.columns if col not in first_columns])
+other_cols = sorted([col for col in df_SMs_out.columns if col not in first_columns])
 columns = [*first_columns, *other_cols]
-df_SMs = df_SMs[columns]
+df_SMs_out = df_SMs_out[columns]
 
-df_SMs = prep_df_pint_out(df_SMs)
+df_SMs_out = prep_df_pint_out(df_SMs_out)
 
-df_SMs.to_csv('data_consolidated/SM_data.csv')
+df_SMs_out.to_csv('data_consolidated/SM_data.csv')
 
 # %%
