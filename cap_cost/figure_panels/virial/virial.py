@@ -63,7 +63,7 @@ texts = annotate_points(df_virial_mat, 'specific_strength','specific_price')
 
 case_lns = []
 for case, row in CkWh_cases.iterrows():
-    energy_densities_line = np.linspace(1e-2,2)
+    energy_densities_line = np.linspace(3e-3,2)
     mat_cost_line = energy_densities_line*row['value']
     plt.plot(energy_densities_line, mat_cost_line, linestyle=row['linestyle'], color='gray', alpha=0.5)
 
@@ -79,7 +79,7 @@ plt.xlim(3e-3,2)
 lgd = plt.gca().get_legend()
 lgd.set_bbox_to_anchor((1, 0.5))
 
-adjust_text(texts, lim=ADJUST_TEXT_LIM, arrowprops = dict(arrowstyle='->'), force_points=(1,1), expand_points=(1.5,1.5), expand_text=(1.5,1.5))
+adjust_text(texts, lim=ADJUST_TEXT_LIM, arrowprops = dict(arrowstyle='->'), force_points=(1,1), expand_points=(1.5,1.5), expand_text=(1,1.5))
 
 from es_utils.plot import adjust_text_after
 
@@ -103,10 +103,11 @@ from es_utils.plot import adjust_text_after
 # adjust_text_after(fig, ax, "EGlass", texts, 0.04,15)
 # adjust_text_after(fig, ax, "AS4/35016", texts, 0.5,10)
 # adjust_text_after(fig, ax, "S2\ Glass", texts, 0.1,15)
-# adjust_text_after(fig, ax, "AS4/8552", texts, 0.45,15)
+adjust_text_after(fig, ax, "IM7/8552", texts, 0.82,0.83)
 # adjust_text_after(fig, ax, "IM7/85517", texts, 0.45,28)
 
-# adjust_text_after(fig, ax, "Steel\ 455", texts, 0.02,0.7)
+adjust_text_after(fig, ax, "Steel\ 157", texts, 0.2,.2)
+adjust_text_after(fig, ax, "Steel\ 1020", texts, 0.2,.34)
 
 plt.tight_layout()
 

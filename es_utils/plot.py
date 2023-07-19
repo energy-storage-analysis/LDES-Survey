@@ -32,11 +32,16 @@ def get_text_index_from_name(text_strings, text_string):
 
 def adjust_text_after(fig, ax, alter_name, texts, x, y):
     """
-    TODO: This function is not working with adjustText 0.8, transforms needs to be implemented. 
     This function can be called after automatically setting text labels with adjustText package to manually set a given labels postion
+    Takes in axes coordinates to place text labels at
     """
 
     text_strings = [t.get_text().strip("$") for t in texts]
+
+    axis_to_data = (ax.transAxes + ax.transData.inverted()).transform
+    trans_to_data = ax.transData.inverted().transform
+
+    x, y = axis_to_data((x,y))
 
     if alter_name not in text_strings:
         print("Didn't find {} in texts, skipping".format(alter_name))
@@ -50,6 +55,8 @@ def adjust_text_after(fig, ax, alter_name, texts, x, y):
         r = fig.canvas.renderer
         bbox = get_bboxes([text_obj] , r, (1, 1), ax)[0]
         cx, cy = get_midpoint(bbox)
+
+        cx, cy=trans_to_data(get_midpoint(bbox))
 
         #TODO: This is a hacky way to try and find the corresponding arrow to the text box 
         child_slot_alter = len(texts)+text_index
