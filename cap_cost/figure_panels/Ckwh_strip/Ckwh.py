@@ -93,6 +93,7 @@ legendFig.savefig('output/legend_cases.png', transparent=True)
 
 vol_plot_width = 1
 ylim = (-3,4.3)
+# ylim = (-4,7.5) $ Full range of data
 
 df_plot = df_mat
 
