@@ -232,11 +232,11 @@ for fn in os.listdir(error_input_dir):
         if df[col].dtype == float:
             df[col] = df[col].round(3)
 
-    if 'diff' in fn:
+    if 'rel_error' in fn:
         df = df.drop('rat',axis=1)
 
     if 'rat_indiv' in fn:
-        df = df.drop('diff_frac',axis=1)
+        df = df.drop('rel_error',axis=1)
 
     df = df.rename({col: col.replace('_',' ') for col in df.columns}, axis=1)
 

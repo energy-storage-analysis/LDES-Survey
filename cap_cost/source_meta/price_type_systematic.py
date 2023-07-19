@@ -219,16 +219,16 @@ print("Length after removing prices equal to overall median: {}".format(len(df_t
 
 
 df_together['rat'] = df_together['specific_price']/df_together['specific_price_all']
-df_together['diff_frac'] = abs(df_together['diff'])/df_together['specific_price_all']
+df_together['rel_error'] = abs(df_together['diff'])/df_together['specific_price_all']
 
 #%%
 
 df_together[['source_list','source_list_prices']] = df_mat_data_final.loc[df_together.index][['sources','specific_prices']]
 
-df_out = df_together[['source','specific_price','specific_price_all','rat','diff_frac','source_list','source_list_prices']]
+df_out = df_together[['source','specific_price','specific_price_all','rat','rel_error','source_list','source_list_prices']]
 
-table_diff_frac_high = df_out.sort_values(by='diff_frac', ascending=False).dropna().iloc[:20]
-table_diff_frac_high.to_csv(os.path.join(output_dir,'diff_frac_high.csv'))
+table_rel_error_high = df_out.sort_values(by='rel_error', ascending=False).dropna().iloc[:20]
+table_rel_error_high.to_csv(os.path.join(output_dir,'rel_error_high.csv'))
 
 
 table_rat_indiv_high = df_out.sort_values(by='rat', ascending=False).dropna().iloc[:20]
@@ -252,7 +252,7 @@ bins = np.logspace(np.log10(rat_min), np.log10(rat_max), 50)
 df_together.groupby('type')['rat'].hist(legend=True, bins=bins)
 plt.xscale('log')
 
-plt.suptitle('Ratio of individual price to overall price median')
+plt.suptitle('Price Ratio (PR)')
 plt.savefig(os.path.join(figure_output_dir, 'ratio_all.png'))
 
 
@@ -269,7 +269,7 @@ for i, source_type in enumerate(set(df_together['type'])):
     axes[i].set_ylabel('{}'.format(source_type.replace(" ", "\n")))
 
 
-axes[-1].set_xlabel("(Individual Price)/(Price Median)")
+axes[-1].set_xlabel("Price Ratio (PR)")
 # plt.xscale('log')
 
 plt.savefig(os.path.join(figure_output_dir, 'ratio_separate.png'))
@@ -278,20 +278,20 @@ plt.savefig(os.path.join(figure_output_dir, 'ratio_separate.png'))
 
 plt.figure()
 
-rat_min = df_together['diff_frac'].min()*0.9
-rat_max = df_together['diff_frac'].max()*1.1
+rat_min = df_together['rel_error'].min()*0.9
+rat_max = df_together['rel_error'].max()*1.1
 
 bins = np.logspace(np.log10(rat_min), np.log10(rat_max), 50)
 
 
-df_together.groupby('type')['diff_frac'].hist(legend=True, bins=bins)
+df_together.groupby('type')['rel_error'].hist(legend=True, bins=bins)
 plt.xscale('log')
 
 # plt.legend()
 
 
-plt.suptitle('(Individual price - price median)/price_median')
-plt.savefig(os.path.join(figure_output_dir, 'diff_frac_all.png'))
+plt.suptitle('Relative Error (RE)')
+plt.savefig(os.path.join(figure_output_dir, 'rel_error_all.png'))
 
 #%%
 
@@ -300,15 +300,15 @@ fig, axes = plt.subplots(4, sharex=True, sharey=True, figsize= (5,5))
 for i, source_type in enumerate(set(df_together['type'])):
     df_sel = df_together.where(df_together['type'] == source_type).dropna(how='all')
 
-    df_sel['diff_frac'].plot.hist(ax = axes[i], bins=bins)
+    df_sel['rel_error'].plot.hist(ax = axes[i], bins=bins)
     axes[i].set_xscale('log')
     axes[i].set_ylabel('{}'.format(source_type.replace(" ", "\n")))
 
 
-axes[-1].set_xlabel("|Individual price - Price median|/(Price Median)")
+axes[-1].set_xlabel("Relative Error (RE)")
 # plt.xscale('log')
 
-plt.savefig(os.path.join(figure_output_dir, 'diff_frac_separate.png'))
+plt.savefig(os.path.join(figure_output_dir, 'rel_error_separate.png'))
 
 # %%
 
@@ -319,13 +319,13 @@ rat_median.name = 'ratio_median'
 rat_mean = df_together.groupby('type')['rat'].mean()
 rat_mean.name = 'ratio_mean'
 
-diff_frac_median = df_together.groupby('type')['diff_frac'].median()
-diff_frac_median.name = 'diff_frac_median'
-diff_frac_mean = df_together.groupby('type')['diff_frac'].mean()
-diff_frac_mean.name = 'diff_frac_mean'
+rel_error_median = df_together.groupby('type')['rel_error'].median()
+rel_error_median.name = 'rel_error_median'
+rel_error_mean = df_together.groupby('type')['rel_error'].mean()
+rel_error_mean.name = 'rel_error_mean'
 
 rat_median
-df_stats = pd.concat([rat_median,rat_mean,diff_frac_median, diff_frac_mean],axis=1)
+df_stats = pd.concat([rat_median,rat_mean,rel_error_median, rel_error_mean],axis=1)
 
 
 df_stats.to_csv(os.path.join(output_dir, 'error_stats.csv'))
