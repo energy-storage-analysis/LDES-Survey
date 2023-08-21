@@ -5,7 +5,10 @@ import json
 import es_utils
 
 #PDF location info
-pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
+from dotenv import load_dotenv
+load_dotenv()
+
+pdf_folder = os.getenv('PDF_FOLDER_PATH')
 pdf_fn =  r"ETI_2018_Salt Cavern Appraisal for Hydrogen and Gas Storage.pdf"
 pdf_path = os.path.join(pdf_folder,pdf_fn)
 

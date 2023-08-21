@@ -9,8 +9,11 @@ import sys
 
 import es_utils
 
-# pdf_folder = r'/media/lee/Shared Storage/table_extract_text'
-pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
+
+from dotenv import load_dotenv
+load_dotenv()
+
+pdf_folder = os.getenv('PDF_FOLDER_PATH')
 pdf_path = os.path.join(pdf_folder, r"Kim et al_2013_Liquid Metal Batteries.pdf")
 
 template_path = 'tabula_template.json'

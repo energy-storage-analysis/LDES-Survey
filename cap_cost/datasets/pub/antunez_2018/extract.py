@@ -4,7 +4,10 @@ import pandas as pd
 import json
 import es_utils
 #PDF location info
-pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
+from dotenv import load_dotenv
+load_dotenv()
+
+pdf_folder = os.getenv('PDF_FOLDER_PATH')
 pdf_fn =  r"Antunez_2018_Modelling and development of thermo-mechanical energy storage.pdf"
 pdf_path = os.path.join(pdf_folder,pdf_fn)
 

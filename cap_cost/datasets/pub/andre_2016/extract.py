@@ -10,8 +10,11 @@ import numpy as np
 
 import es_utils
 
-# pdf_folder = r'/media/lee/Shared Storage/table_extract_text'
-pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
+
+from dotenv import load_dotenv
+load_dotenv()
+
+pdf_folder = os.getenv('PDF_FOLDER_PATH')
 pdf_path = os.path.join(pdf_folder, r"André et al_2016_Screening of thermochemical systems based on solid-gas reversible reactions for.pdf")
 
 template_path = 'tabula_template.json'

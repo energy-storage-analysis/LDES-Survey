@@ -5,7 +5,10 @@ import json
 import es_utils
 
 #PDF location info
-pdf_folder = r'C:\Users\aspit\OneDrive\Literature\Zotero\Energy Storage'
+from dotenv import load_dotenv
+load_dotenv()
+
+pdf_folder = os.getenv('PDF_FOLDER_PATH')
 pdf_fn =  r"Papadias_Ahluwalia_2021_Bulk storage of hydrogen.pdf"
 pdf_path = os.path.join(pdf_folder,pdf_fn)
 
