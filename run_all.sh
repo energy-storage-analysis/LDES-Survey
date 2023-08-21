@@ -10,9 +10,14 @@ cd $REPO_DIR/lcos
 echo "---Generating LCOS Figure Panels---"
 python vis_lcos_pub.py
 
-# Generate the Global Energy Storage Database Figures
+# Generate the Global Energy Storage Database and EIA Figures
+echo "---Generating EIA/GESDB Dataset and Figure Panels---"
+
+cd $REPO_DIR/GESDB
+python gesdb_analysis.py
+
 cd $REPO_DIR/EIA
-echo "---Generating EIA/GESDB Figure Panels---"
+python process.py
 python figure_gen.py
 
 if [ "$1" == "process" ]; then

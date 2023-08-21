@@ -53,6 +53,8 @@ df_gen_s['Technology'] = df_gen_s['Technology'].str.replace(
 
 df_gen_s = df_gen_s.set_index('Plant Code')
 
+if not os.path.exists('processed_data'): os.mkdir('processed_data')
+
 df_gen_s.to_csv('processed_data/df_gen.csv')
 
 

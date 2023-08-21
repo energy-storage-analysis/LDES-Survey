@@ -16,9 +16,16 @@ The folder structure of the repository is outlined below. The folders have READM
 
 ## Installation
 
-The codes in this work were run on Windows with VS Code running a linux terminal with Git Bash. The final figure generation was tested with a local virtual environment with the `requirements/requirements.txt` file, see `requirements/README.md` for more information.  
+The codes in this work were tested on Windows with VS Code running a linux terminal with Git Bash. The final figure generation was tested with a local python virtual environment with the `requirements/requirements.txt` file, see `requirements/README.md` for more information.  
 
-Two external command line programs not installed by `pip` are needed, imagemagick and inkscape. These programs are used to convert the svg files of the final figures into tiff. On Windows, the the folders that `inkscape.exe` and `magick.exe` are in must be added to the system PATH (as shown [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)). 
+Some external programs in addition to the python packages (described later) are needed to be installed manually. The excecutables associated with these programs must be added to the system PATH as described [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+* [Inkscape](https://inkscape.org/) for SVG to PNG conversion: Install the inkscape program and add the `bin` folder to the PATH. Unfortunately adding the inkscape/bin folder also adds Inkscape's python to the system path, but it appears that this python can be ingored by placing the desired python installation for use in the command line (e.g. the one in Program Files) higher up in the environment variables list than the inskcape folder. 
+* [Imagemagick](https://imagemagick.org/script/download.php) for conversion from PNG to final TIFF figures (has option to add to path during installation)
+* [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) were required for the installation of python packages. Visual Studio Build Tools was downloaded and installed selecting only 'Desktop development with C++'
+* [pandoc](https://github.com/jgm/pandoc) For SI documentation generation
+
+
+
 
 a `.env` file needs to be created in the root repository directory with the following info
 ```
@@ -30,7 +37,7 @@ The final dataset that is needed to generate the figures is included in `cap_cos
 
 The following installation procedure was tested and used to generated the final publication figures. 
 
-2. create a local virtual environment with `python -m venv venv` (using python 3.10.1)
+2. create a local virtual environment with `python -m venv venv` (using python 3.10.11)
 3. close the terminal and reopen (activating the newly created venv)
 4. run `./install.sh` 
 5. run `./run_all.sh` (run `./run_all.sh process` to reprocess raw data as d)

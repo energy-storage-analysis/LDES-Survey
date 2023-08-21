@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-
+if not os.path.exists('figures'): os.mkdir('figures')
 
 input_folder = 'input_data/aus'
 

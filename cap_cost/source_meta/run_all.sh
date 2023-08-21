@@ -1,3 +1,5 @@
+mkdir -p figures
+
 scripts='*.py'
 
 for script in $scripts

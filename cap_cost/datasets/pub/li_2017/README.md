@@ -5,3 +5,7 @@
 The supporting information of this publication contains material definitions for a range of battery chemistries that are used to define storage media. The paper does not appear to include the voltage difference ($\Delta V$) of the electrochemical couples, and those are determined from various sources outlined in `SM_lookup.csv`. The prices of electrode materials are also included in the paper, as mainly determined from undisclosed quotes from suppliers. 
 
 For LRMO (lithium-rich manganese oxide), 3/2 moles of Li and 1/2 mol of LiMn2O4 were assumed to be approximately equal to Li2MnO3
+
+## Development
+
+TODO: The table extraction is not working. This is possibly because the supplementary pdf file was replaced with a different version. Need to reexamine with tabula. 
