@@ -37,7 +37,8 @@ The final dataset that is needed to generate the figures is included in `cap_cos
 
 The following installation procedure was tested and used to generated the final publication figures. 
 
-2. create a local virtual environment with `python -m venv venv` (using python 3.10.11)
+2. create a local virtual environment with `python -m venv venv` 
+    * Tested using python 3.10.11. Installation did not work with 3.11
 3. close the terminal and reopen (activating the newly created venv)
 4. run `./install.sh` 
 5. run `./run_all.sh` (run `./run_all.sh process` to reprocess raw data as d)

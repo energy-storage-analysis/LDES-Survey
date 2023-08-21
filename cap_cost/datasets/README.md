@@ -4,7 +4,7 @@ This folder contains raw datasets and their data extraction/processing codes. Ne
 
 Note that the raw data (including PDF files) for each source needed to run `process_all.sh` is not included in this repository. However, forming new processed data (described below) for a new dataset, or removing existing data from `dataset_index.csv` can be performed and then the consolidation scripts in the `cap_cost` folder can be run to alter the final dataset in the `data_consolidated` folder. To reproduce the processing of individual datasets, contact the author for the raw data, or follow the instructions in the source readme files. The files where raw data is needed can be determined by running `process_all.sh` and following errors for missing files. 
 
-Ultimately, each source needs the following files in its directory.  
+Ultimately, each source needs the following files in its directory (only one of `SM_data.csv` or `mat_data.csv` is needed).  
 
 * `README.md`: Readme file describing source and qualitatively describing the processing steps. This file will be consolidated together with the `consolidate_readme.py` script (for supporting information of publication). Note anything after the `## Development` section in the markdown file will be ignored in this consolidation step. 
 * `output/SM_data.csv` : Physical properties and materials composition of the storage media declared in the source
