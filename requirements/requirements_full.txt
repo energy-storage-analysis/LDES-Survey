@@ -1,4 +1,4 @@
-adjustText==0.7.3
+adjustText==0.8
 attrs==22.2.0
 Automat==22.10.0
 Babel==2.12.1
