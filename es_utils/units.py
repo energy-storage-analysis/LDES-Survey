@@ -11,6 +11,8 @@ ureg = pint.UnitRegistry()
 ureg.load_definitions(fp_definitions)
 pint_pandas.PintType.ureg = ureg
 
+#TODO: Should be able to replace 'N/U' with 'No Unit' as this is now implemented in pint-pandas: https://github.com/hgrecco/pint-pandas/issues/46. Issue #13
+
 def get_unit_row(df_unit):
     unit_row = []
     for col in df_unit.columns:
