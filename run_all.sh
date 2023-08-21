@@ -8,7 +8,7 @@ source .env
 # Generate the LCOS analysis data and figures
 cd $REPO_DIR/lcos
 echo "---Generating LCOS Figure Panels---"
-python vis_lcos_pub.py
+python vis_lcos_ddnom.py
 
 # Generate the Global Energy Storage Database and EIA Figures
 echo "---Generating EIA/GESDB Dataset and Figure Panels---"
