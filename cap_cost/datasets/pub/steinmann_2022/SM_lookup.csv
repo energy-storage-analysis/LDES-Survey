@@ -18,21 +18,15 @@ Al2O3,Al2O3,sensible_thermal,hot,other_solid,Al2O3,
 SiO2,SiO2,sensible_thermal,hot,other_solid,SiO2,
 MgO,MgO,sensible_thermal,hot,other_solid,MgO,
 Concrete,Concrete,sensible_thermal,both,other_solid,Concrete,
-"Castable
-ceramic",,sensible_thermal,,,,
+"Castable ceramic",,sensible_thermal,,,,
 Graphite,Graphite,sensible_thermal,hot,other_solid,Graphite,
 KNO3-NaNO2-NaNO3,HITEC,latent_thermal,hot,molten_salt,HITEC,
-"NaNO3-LiNO3
-51-49%",NaLiNO3,latent_thermal,hot,molten_salt,"[('LiNO3', 0.49), ('NaNO3', 0.51)]",mass
-"KNO3-NaNO3
-54-46%",NaKNO3,latent_thermal,hot,molten_salt,"[('KNO3', 0.54), ('NaNO3', 0.46)]",mass
+"NaNO3-LiNO3 51-49%",NaLiNO3,latent_thermal,hot,molten_salt,"[('LiNO3', 0.49), ('NaNO3', 0.51)]",mass
+"KNO3-NaNO3 54-46%",NaKNO3,latent_thermal,hot,molten_salt,"[('KNO3', 0.54), ('NaNO3', 0.46)]",mass
 NaOH-NaNO3-MnO2,,latent_thermal,hot,molten_salt,"[('NaOH', 0.918), ('NaNO3', 0.08), ('MnO2', 0.002)]",mass
 NaNO3,NaNO3,latent_thermal,hot,molten_salt,NaNO3,
 KNO3,KNO3,latent_thermal,hot,molten_salt,KNO3,
-"K2CO3 + Li2CO3
-65-35%",K2CO3/Li2CO3,latent_thermal,hot,molten_salt,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass
-"AL-Si
-88-12%",AlSi12,latent_thermal,hot,metal,"[('Al', 0.88), ('Metallurgical Silicon', 0.12)]",mass
-"LiF-CaF2
-80-20%",LiF/CaF2,latent_thermal,hot,molten_salt,"[('LiF', 0.8), ('CaF2', 0.2)]",mass
+"K2CO3 + Li2CO3 65-35%",K2CO3/Li2CO3,latent_thermal,hot,molten_salt,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass
+"AL-Si 88-12%",AlSi12,latent_thermal,hot,metal,"[('Al', 0.88), ('Metallurgical Silicon', 0.12)]",mass
+"LiF-CaF2 80-20%",LiF/CaF2,latent_thermal,hot,molten_salt,"[('LiF', 0.8), ('CaF2', 0.2)]",mass
 LiF,LiF,latent_thermal,hot,molten_salt,LiF,

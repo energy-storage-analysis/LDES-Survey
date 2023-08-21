@@ -476,16 +476,12 @@ MgO,sensible_thermal,MgO,,MgO,hot,other_solid,,,Steinmann 2022,,,3570.0,,,0.0003
 Concrete,sensible_thermal,Concrete,,Concrete,both,other_solid,,,Steinmann 2022,,,2750.0,,,0.0002541666666666,,450.0,,,,1.0,,,,,,,,,,,
 Graphite,sensible_thermal,Graphite,,Graphite,hot,other_solid,,,Steinmann 2022,,,2500.0,,,0.0001944444444444,,3500.0,,,,150.0,,,,,,,,,,,
 HITEC,latent_thermal,HITEC,,KNO3-NaNO2-NaNO3,hot,molten_salt,,,Steinmann 2022,,,2057.0,142.0,0.0233333333333333,,,,,,,,,,,,,,,,,,
-NaLiNO3,latent_thermal,"[('LiNO3', 0.49), ('NaNO3', 0.51)]",mass,"NaNO3-LiNO3
-51-49%",hot,molten_salt,,,Steinmann 2022,,,2185.0,193.0,0.0736111111111111,,,,,,,,,,,,,,,,,,
-NaKNO3,latent_thermal,"[('KNO3', 0.54), ('NaNO3', 0.46)]",mass,"KNO3-NaNO3
-54-46%",hot,molten_salt,,,Steinmann 2022,,,2071.5,222.0,0.0277777777777777,,,,,,,,,,,,,,,,,,
+NaLiNO3,latent_thermal,"[('LiNO3', 0.49), ('NaNO3', 0.51)]",mass,NaNO3-LiNO3 51-49%,hot,molten_salt,,,Steinmann 2022,,,2185.0,193.0,0.0736111111111111,,,,,,,,,,,,,,,,,,
+NaKNO3,latent_thermal,"[('KNO3', 0.54), ('NaNO3', 0.46)]",mass,KNO3-NaNO3 54-46%,hot,molten_salt,,,Steinmann 2022,,,2071.5,222.0,0.0277777777777777,,,,,,,,,,,,,,,,,,
 NaNO3,latent_thermal,NaNO3,,NaNO3,hot,molten_salt,,,Steinmann 2022,,,2100.0,306.0,0.0491666666666666,,,,,,,,,,,,,,,,,,
 KNO3,latent_thermal,KNO3,,KNO3,hot,molten_salt,,,Steinmann 2022,,,1933.0,335.0,0.0263888888888888,,,,,,,,,,,,,,,,,,
-K2CO3/Li2CO3,latent_thermal,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass,"K2CO3 + Li2CO3
-65-35%",hot,molten_salt,,,Steinmann 2022,,,2130.0,505.0,0.0955555555555555,,,,,,,,,,,,,,,,,,
-AlSi12,latent_thermal,"[('Al', 0.88), ('Metallurgical Silicon', 0.12)]",mass,"AL-Si
-88-12%",hot,metal,,,Steinmann 2022,,,2250.0,576.0,0.1555555555555555,,,,,,,,,,,,,,,,,,
+K2CO3/Li2CO3,latent_thermal,"[('K2CO3', 0.65), ('Li2CO3', 0.35)]",mass,K2CO3 + Li2CO3 65-35%,hot,molten_salt,,,Steinmann 2022,,,2130.0,505.0,0.0955555555555555,,,,,,,,,,,,,,,,,,
+AlSi12,latent_thermal,"[('Al', 0.88), ('Metallurgical Silicon', 0.12)]",mass,AL-Si 88-12%,hot,metal,,,Steinmann 2022,,,2250.0,576.0,0.1555555555555555,,,,,,,,,,,,,,,,,,
 LiF,latent_thermal,LiF,,LiF,hot,molten_salt,,,Steinmann 2022,,,2640.0,848.0,0.29,,,,,,,,,,,,,,,,,,
 H2 Spherical Pressure,synfuel,Spherical Pressure,,,tank,,0.0659,2.0,Tietze 2016,,2.016,0.0899435029591919,,,,,,,,,,,,,,,,,,,,
 CH4 Spherical Pressure,synfuel,Spherical Pressure,,,tank,,0.2554,8.0,Tietze 2016,,16.043,0.7157557628840852,,,,,,,,,,,,,,,,,,,,

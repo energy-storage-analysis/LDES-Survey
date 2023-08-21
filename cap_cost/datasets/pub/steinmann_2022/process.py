@@ -201,6 +201,8 @@ df_SM = df_all.drop('specific_price', axis=1)
 # The final output deltaT will be calculated with Tmin and Tmax which are averaged between different sources, so these numbers are not quite the same and redundant
 df_SM = df_SM.drop('deltaT_max', axis=1)
 
+df_SM.index = df_SM.index.str.replace('[\r\n]+',' ', regex=True) #TODO: Dealing with table extraction newlines in name.. This seems like a robust method of replacing with spaces, should move up and/or implement across all processing scripts. 
+
 df_SM = pd.merge(df_SM, SM_lookup, on='original_name')
 df_SM = df_SM.dropna(subset=['SM_name'])
 df_SM = df_SM.set_index('SM_name')
