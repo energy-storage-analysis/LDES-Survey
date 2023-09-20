@@ -49,6 +49,14 @@ df_tc = df_tc.where(df_tc['C_kwh'] < Ckwh_cutoff).dropna(how='all')
 formula_strings = [format_chem_formula(s) for s in df_tc.index]
 df_tc['display_text'] = formula_strings
 
+#TODO: format_chem_formula is not correctly formatting these
+df_tc['display_text'] = df_tc['display_text'].replace('Co_{3}O4/CoO','Co_{3}O_{4}/CoO')
+df_tc['display_text'] = df_tc['display_text'].replace('Mn_{2}O3/Mn_{3}O_{4}','Mn_{2}O_{3}/Mn_{3}O_{4}')
+df_tc['display_text'] = df_tc['display_text'].replace('Mn_{3}O4/MnO','Mn_{3}O_{4}/MnO')
+df_tc['display_text'] = df_tc['display_text'].replace('Fe_{2}O3/Fe_{3}O_{4}','Fe_{2}O_{3}/Fe_{3}O_{4}')
+df_tc['display_text'] = df_tc['display_text'].replace('V_{2}O5/V_{2}O_{4}','V_{2}O_{5}/V_{2}O_{4}')
+df_tc['display_text'] = df_tc['display_text'].replace('Cr_{5}O12/Cr_{2}O_{3}','Cr_{5}O_{12}/Cr_{2}O_{3}')
+
 
 df_tc.dropna(axis=1, how='all').to_csv(pjoin(output_dir,'tc_ds.csv'))
 
