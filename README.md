@@ -2,11 +2,11 @@
 
 This repository contains the codes used to generate the dataset and figures associated with our paper, "A Techno-economic Survey of Energy Storage Media for Long-Duration Energy Storage Applications" Article, currently in submission. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
 
-**The CSV file datasets for material prices and storage media physical properties and energy densities can be found in [cap_cost/data_consolidated](cap_cost/data_consolidated/)**
+**The final datasets for storage medium energy capital cost, storage media physical properties, and material prices can be found in CSV form in [cap_cost/data_consolidated](cap_cost/data_consolidated/)**
 
 The folder structure of the repository is outlined below. The folders have README files that contain further information.
 
-* cap_cost: The main codes and analysis to form the dataset and figures analyzing the energy capital cost of a wide range of energy storage media. This folder contains the main dataset and individual source datasets used in the work in the form of csv files. 
+* cap_cost: The main codes and analysis to form the dataset and figures analyzing the energy capital cost of a wide range of energy storage media. This folder contains the final datasets as well as the processed data for individual sources used to form the final datasets. 
 * es_utils: A package of utility functions used throughout the codebase.
 * figures: Files that layout the final figures used in the text. The SVG files are linked to figure panel image files generated throughout the repository, meaning the final figures will automatically update with changes to the data or processing codes.  
 * GESDB: Analysis of the [DOE Global Energy Storage Database](https://sandia.gov/ess-ssl/gesdb/public/index.html).
@@ -29,11 +29,11 @@ Some external programs in addition to the python packages (described later) are 
 
 a `.env` file needs to be created in the root repository directory with the following info
 ```
-PDF_FOLDER_PATH='C:\Users\your\path\to_pdf_files'
 REPO_DIR='C:\Path\to\this\folder'
+PDF_FOLDER_PATH='C:\Users\your\path\to_pdf_files' # If extracting tables from PDF files, not needed if not reproducing the processed source datasets 
 ```
 
-The final dataset that is needed to generate the figures is included in `cap_cost\data_consolidated`, as well as the processed data for each source that is consolidated into this final dataset. It is not necessary, but to regenerate these processed datasets from each source's raw data, the raw input data files must be added to the repository, along with relevant publication pdf files added to the folder described in the `.env` file. See the Readme files for each source or contact the author. see `cap_cost\datasets` for more information.
+The final dataset that is needed to generate the figures is included in `cap_cost\data_consolidated`, as well as the processed data for each source that is consolidated into this final dataset. It is not necessary, but to regenerate these processed datasets from each source's raw data, the raw input data files must be added to the repository, along with relevant publication pdf files added to the folder described in the `.env` file. The Readme files for each source give information on how to obtain their raw datasets. See `cap_cost\datasets` for more information on adding new sources or obtaining raw datasets to reproduce the raw data.
 
 The following installation procedure was tested and used to generated the final publication figures. 
 
@@ -41,7 +41,8 @@ The following installation procedure was tested and used to generated the final 
     * Tested using python 3.10.11. Installation did not work with 3.11
 3. close the terminal and reopen (activating the newly created venv)
 4. run `./install.sh` 
-5. run `./run_all.sh` (run `./run_all.sh process` to reprocess raw data as d)
+5. run `./run_all.sh` 
+    * run `./run_all.sh process` to regenerate processed data (requires raw datasets as described above)
 
 More information on the details of the setup and data processing can be found in the `.sh` scripts (see below)
 
