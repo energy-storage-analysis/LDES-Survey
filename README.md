@@ -10,6 +10,7 @@ The folder structure of the repository is outlined below. The folders have READM
 * es_utils: A package of utility functions used throughout the codebase.
 * figures: Files that layout the final figures used in the text. The SVG files are linked to figure panel image files generated throughout the repository, meaning the final figures will automatically update with changes to the data or processing codes.  
 * GESDB: Analysis of the [DOE Global Energy Storage Database](https://sandia.gov/ess-ssl/gesdb/public/index.html).
+* EIA: Analysis of EIA-860 existing generator data, including cross-referencing with the GESDB to form the final storage capacity dataset.
 * lcos: Analysis of the levelized cost of storage. 
 * seaborn: Fork of the seaborn library used for tweaked figure generation methods.
 * SI_docs: Writing and scripts to generate the supporting information document. 
