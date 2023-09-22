@@ -128,7 +128,7 @@ plt.xlabel('Specific Energy (kWh/kg)', fontsize=label_fontsize)
 plt.ylabel("$C_{kWh,SM}$ (USD/kWh)", fontsize=label_fontsize)
 
 leg = ax.get_legend()
-leg.set_title('Sub Type')
+leg.set_title('')
 leg.set_bbox_to_anchor([0,0,1,0.52])
 
 case_lns = []

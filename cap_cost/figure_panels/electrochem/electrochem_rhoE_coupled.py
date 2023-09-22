@@ -101,7 +101,7 @@ plt.xlim(*xlim)
 
 
 leg = ax.get_legend()
-leg.set_title('Sub Type')
+leg.set_title('')
 
 leg.set_bbox_to_anchor([0,0.3,0.5,0])
 
