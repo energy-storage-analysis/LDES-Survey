@@ -12,7 +12,7 @@ LH2 Tank,synfuel,LH2 Tank,,,tank,,0.0659,2.0,Cryo tank,,2.016,70.85,,,,,,,,,,,,,
 LNG Tank,synfuel,LNG Tank,,,tank,,0.2554,8.0,Cryo tank,,16.043,420.0,,,,,,,,,,,,,,,,,,,,
 LN2,sensible_thermal,LNG Tank,,,cold,other,,,Cryo tank,,,870.0,,,0.00028861111,-195.8,0.0,,,,,,,,,,,,,,,
 LN2,latent_thermal,LNG Tank,,,other,other,,,Cryo tank,,,870.0,-195.8,0.0552778,,,,,,,,,,,,,,,,,,
-Pumped Hydro,gravitational,Water Reservoir Excavation,,,pumped_hydro,,,,Bluefield Atlas,,,1000.0,,,,,,3.9,590.0,,,,,,,,,,,,,
+Pumped Hydro,PHES,Water Reservoir Excavation,,,,,,,Bluefield Atlas,,,1000.0,,,,,,3.9,590.0,,,,,,,,,,,,,
 H2 (Feedstock),synfuel,"[('Water', 1)]",molar,Synthetic H2,feedstock,,0.0659,2.0,Synfuel feedstock,,,,,,,,,,,Based on hypotheticical reversible electrochemical oxidation reaction,,,,,,,,,,,,
 CH4 (Feedstock),synfuel,"[('CO2', 1), ('Water', 4)]",molar,Synthetic CH4 (Sabatier),feedstock,,0.2554,8.0,Synfuel feedstock,,,,,,,,,,,Based on hypotheticical reversible electrochemical oxidation reaction,,,,,,,,,,,,
 Methanol (Feedstock),synfuel,"[('CO2', 1), ('Water', 3)]",molar,Synthetic Methanol (DMS),feedstock,,0.1923,6.0,Synfuel feedstock,,,,,,,,,,,Based on hypotheticical reversible electrochemical oxidation reaction,,,,,,,,,,,,
@@ -490,10 +490,10 @@ Iron Ore,sensible_thermal,Iron Ore,,Magnetite,both,other_solid,,,Molgaard 1971,,
 Sand,sensible_thermal,Sand,,Sand,hot,rock,,,Diago 2018,,,,,,0.000277,,1000.0,,,doi.org/10.1016/j.apenergy.2018.02.106,,,,,,,,,,,,
 NiAl Molten Salt,coupled_battery,"[('Ni', 1), ('Al', 1)]",molar,NiAl Molten Salt Battery,solid_electrode,,,,Li 2022 PNNL,,,,,,,,,,,doi.org/10.1016/j.xcrp.2022.100821,,,,,,,,,,,,0.91
 Al2O3_ThinFilm,dielectric_capacitor,Al2O3,,,thin_film,,,,Hanby 2018,,,3950.0,,,,,,,,,,,,,,,,310000000.0,8.5,,,
-Stone,gravitational,Stone,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
-Concrete,gravitational,Concrete,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
-Gravel,gravitational,Gravel,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
-Pumice,gravitational,Pumice,,,block_stacking,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Stone,block_stacking,Stone,,,,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Concrete,block_stacking,Concrete,,,,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Gravel,block_stacking,Gravel,,,,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
+Pumice,block_stacking,Pumice,,,,,,,Energy Vault,,,,,,,,,,147.0,,,,,,,,,,,,,
 Al-O2,coupled_battery,Al,,Al-O2,metal_air,,,3.0,Weinrich 2019,,,,,,,,,,,,,,,,,,,,,,,2.1
 Al-air,coupled_battery,Al,,Al-air,metal_air,,,3.0,Weinrich 2019,,,,,,,,,,,,,,,,,,,,,,,2.71
 Ca-O2,coupled_battery,Ca,,Ca-O2,metal_air,,,2.0,Weinrich 2019,,,,,,,,,,,,,,,,,,,,,,,3.38

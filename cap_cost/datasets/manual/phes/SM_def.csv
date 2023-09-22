@@ -1,4 +1,4 @@
 ,materials,mat_basis,original_name,SM_type,sub_type,mass_density
 unit_row,N/U,N/U,N/U,N/U,N/U,kg/m**3
 SM_name,,,,,,
-Pumped Hydro,Water Reservoir Excavation,,,gravitational,pumped_hydro,1000
+Pumped Hydro,Water Reservoir Excavation,,,PHES,,1000

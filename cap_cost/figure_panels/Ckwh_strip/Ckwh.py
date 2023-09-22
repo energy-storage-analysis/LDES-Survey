@@ -59,7 +59,7 @@ df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 syn_tanks = df_all.where(df_all['SM_type'] == 'synfuel').where(df_all['sub_type'] == 'tank').dropna(how='all')
 syn_under = df_all.where(df_all['SM_type'] == 'synfuel').where(df_all['sub_type'] == 'underground').dropna(how='all')
 press_cav = df_all.where(df_all['SM_type'] == 'pressure_cavern').dropna(how='all')
-phes = df_all.where(df_all['sub_type'] == 'pumped_hydro').dropna(how='all')
+phes = df_all.where(df_all['SM_type'] == 'PHES').dropna(how='all')
 
 SM_vol = pd.concat([syn_tanks,syn_under,press_cav,phes])
 
@@ -93,7 +93,7 @@ legendFig.savefig('output/legend_cases.png', transparent=True)
 
 vol_plot_width = 1
 ylim = (-3,4.3)
-# ylim = (-4,7.5) $ Full range of data
+# ylim = (-4,7.5)  #Full range of data for supporting information figure
 
 df_plot = df_mat
 

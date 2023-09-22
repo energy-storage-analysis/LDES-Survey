@@ -10,6 +10,7 @@ pseudocapacitor,Pseudocapacitor,Chemical,Coupled
 EDLC,EDLC,Electrostatic,Coupled
 flow_battery,Flow Battery,Chemical,Decoupled
 synfuel,Synthetic Fuel,Chemical,Decoupled
-gravitational,Gravity,Gravitational,Decoupled
+block_stacking,Block Stacking,Gravitational,Decoupled
+PHES,PHES,Gravitational,Decoupled
 dielectric_capacitor,Dielectric \nCapacitor,Electrostatic,Coupled
 flywheel,Flywheel,Kinetic,Coupled
