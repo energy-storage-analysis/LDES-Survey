@@ -18,11 +18,14 @@ from dotenv import load_dotenv
 load_dotenv()
 REPO_DIR = os.getenv('REPO_DIR')
 
-df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1]).reset_index('SM_type')
+df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1])#.reset_index('SM_type')
 
 df_mat_data = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data.csv'), index_col=0, drop_units=True)
 df_mat_data_all = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/mat_data_all.csv'), index_col=0, drop_units=True)
-# %%
+
+# Note that Fossil CH4 datapoint is included in data, can be removed here. 
+# df_SMs = df_SMs.drop(('Fossil CH4', 'synfuel'))
+# df_mat_data = df_mat_data.drop('Fossil CH4')
 
 stats = {}
 
