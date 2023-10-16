@@ -88,9 +88,9 @@ import numpy as np
 from PIL import Image
 from scipy.stats import gaussian_kde
 
+
 df = df_all[['C_kwh_log', 'energy_type']]
 
-xs = np.linspace(df['C_kwh_log'].min(),df['C_kwh_log'].max(),50)
 
 for energy_sel in set(df['energy_type']):
 
@@ -99,7 +99,7 @@ for energy_sel in set(df['energy_type']):
     color_mpl = palette[energy_sel]
 
     density = gaussian_kde(df_sel['C_kwh_log'])
-    density.set_bandwidth(0.25)
+    density.set_bandwidth(0.1)
 
     y = density(xs)
 
@@ -111,7 +111,8 @@ for energy_sel in set(df['energy_type']):
     cs = tuple(int(c*255) for c in cs)
     im = Image.new('RGB', (w,h), cs)
 
-    xs = np.linspace(-4,4,w)
+    # xs = np.linspace(df['C_kwh_log'].min(),df['C_kwh_log'].max(),50)
+    xs = np.linspace(-3,4,w)
     line = density(xs)
     line = (line/line.max())*255
     line = line.astype(np.uint8)
@@ -191,6 +192,10 @@ sns.histplot(
 )
 
 #%%
+
+
+from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
+
 hue_order = [
     'Chemical',
     'Thermal',
@@ -230,7 +235,11 @@ ax = sns.barplot(
 # plt.yscale('log')
 # plt.xticks(None, rotation = 90)
 
-plt.yticks([0,50,100, 150])
+# plt.yticks([0,50,100, 150])
+
+plt.ylim(0,150)
+ax.yaxis.set_major_locator(MultipleLocator(50))
+ax.yaxis.set_minor_locator(MultipleLocator(10))
 
 leg = ax.get_legend()
 # leg.set_bbox_to_anchor([0,0,1.4,1])
@@ -238,7 +247,8 @@ leg.set_title('Energy Type')
 
 # plt.xticks(['1','2','3','4'])
 # plt.ylim(0,150)
-plt.ylabel('Count')
+# plt.ylabel('Count')
+plt.ylabel("Number of Systems")
 plt.xlabel('$C_{kWh}$ [USD/kWh]')
 
 plt.tight_layout()
