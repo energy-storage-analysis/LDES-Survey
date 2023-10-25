@@ -78,10 +78,10 @@ plt.savefig('figures/eia_cap_MW.png')
 
 powcap_store = df_storage.groupby('type')['power'].sum()
 
-print("Generator Dataset")
-print(powcap_gen)
-print("Storage Dataset")
-print(powcap_store)
+# print("Generator Dataset")
+# print(powcap_gen)
+# print("Storage Dataset")
+# print(powcap_store)
 
 #%%
 

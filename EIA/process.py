@@ -31,8 +31,6 @@ df_storage.to_csv('input_data/storage_processed.csv')
 fp = os.path.join(input_folder, '3_1_Generator_Y2021.xlsx')
 df_gen = pd.read_excel(fp, skiprows=1, index_col=0)
 
-df_gen.info()
-
 
 #%%
 
@@ -166,9 +164,9 @@ df_hydro_gesdb['Plant Code'] = hydro_lookup['Plant Code'].values
 
 df_hydro_gesdb = df_hydro_gesdb[['Plant Code', 'status','name', 'energy','power','duration']]
 
-print("Length all hydro: {}".format(len(df_hydro_gesdb)))
+# print("Length all hydro: {}".format(len(df_hydro_gesdb)))
 df_hydro_gesdb = df_hydro_gesdb.where(df_hydro_gesdb['status'] == 'Operational').dropna(how='all').drop('status', axis=1)
-print("Length operational hydro: {}".format(len(df_hydro_gesdb)))
+# print("Length operational hydro: {}".format(len(df_hydro_gesdb)))
 
 df_hydro_gesdb = df_hydro_gesdb.rename({
     col: '{}_gesdb'.format(col) for col in df_hydro_gesdb.columns if col != 'Plant Code'
@@ -181,10 +179,10 @@ df_hydro_gesdb.head()
 df_hydro = pd.merge(df_eia_hydro, df_hydro_gesdb, on='Plant Code').set_index('Plant Code')
 
 
-print("{} out of {} PHES have 0 duration, dropping. ".format(
-df_hydro['duration_gesdb'].value_counts().sort_index()[0],
-df_hydro['duration_gesdb'].value_counts().sort_index().sum()
-))
+# print("{} out of {} PHES have 0 duration, dropping. ".format(
+# df_hydro['duration_gesdb'].value_counts().sort_index()[0],
+# df_hydro['duration_gesdb'].value_counts().sort_index().sum()
+# ))
 
 
 df_hydro = df_hydro.where(df_hydro['duration_gesdb'] > 0).dropna(how='all')
@@ -207,7 +205,6 @@ df_hydro['energy'] = df_hydro['power']*df_hydro['duration_gesdb']
 df_hydro_final = df_hydro.drop(['name_gesdb', 'energy_gesdb','power_gesdb'], axis=1)
 df_hydro_final = df_hydro_final.rename({'duration_gesdb':'duration'},axis=1)
 
-df_hydro_final.info()
 
 #%%
 
