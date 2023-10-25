@@ -1,6 +1,6 @@
 # Long-Duration Energy Storage Energy Capital Cost Survey
 
-This repository contains the codes used to generate the dataset and figures associated with our paper, "A Techno-economic Survey of Energy Storage Media for Long-Duration Energy Storage Applications" Article, currently in submission. A brief overview of the work including interactive visualizations of the dataset formed in this repository can be found [here](https://energy-storage-analysis.github.io/LDES-Viability.html)
+This repository contains the codes used to generate the dataset and figures associated with our paper, "A Techno-economic Survey of Energy Storage Media for Long-Duration Energy Storage Applications". 
 
 **The final datasets for storage medium energy capital cost, storage media physical properties, and material prices can be found in CSV form in [cap_cost/data_consolidated](cap_cost/data_consolidated/)**
 
