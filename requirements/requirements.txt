@@ -26,5 +26,5 @@ python_docx==0.8.11
 pyvalem==2.5.4
 scrapy==2.8.0
 selectorlib==0.16.0
-setuptools==58.1.0
+setuptools==65.5.1
 xyzpy==1.2.1
