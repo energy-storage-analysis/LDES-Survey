@@ -36,6 +36,8 @@ PDF_FOLDER_PATH='C:\Users\your\path\to_pdf_files' # If extracting tables from PD
 
 The final dataset that is needed to generate the figures is included in `cap_cost\data_consolidated`, as well as the processed data for each source that is consolidated into this final dataset. It is not necessary, but to regenerate these processed datasets from each source's raw data, the raw input data files must be added to the repository, along with relevant publication pdf files added to the folder described in the `.env` file. The Readme files for each source give information on how to obtain their raw datasets. See `cap_cost\datasets` for more information on adding new sources or obtaining raw datasets to reproduce the raw data.
 
+There are two datasets that must be downloaded for the GESDB and EIA figures. See the readme files in the GESDB and EIA folders for more information. Consumer price index data is also needed for inflation correction. See `es_utils\cpi\README.md`. Some of the scripts in `run_all.sh` will throw errors without these files, though analysis of the final dataset should still work. 
+
 The following installation procedure was tested and used to generated the final publication figures. 
 
 2. create a local virtual environment with `python -m venv venv` 
