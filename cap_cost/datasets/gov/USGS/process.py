@@ -30,7 +30,7 @@ df['price_units'] = df['price_units'].replace({
     'dkg' : 'USD/kg',
     'dg': 'USD/g',
     'dlb':'USD/lb',
-    'dto':'USD/ton',
+    'dto':'USD/toz',
     't':'USD/ton',
     'dct':'USD/carat',
     'dtoz':'USD/toz',
