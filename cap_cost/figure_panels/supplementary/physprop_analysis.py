@@ -36,7 +36,7 @@ from es_utils.units import ureg
 df_SMs = read_pint_df(pjoin(REPO_DIR,'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1]).reset_index('SM_type')
 # %%
 
-Cp = df_SMs['Cp'].dropna().pint.to('kWh/(kg*K)')
+Cp = df_SMs['Cp'].dropna().pint.to('Wh/(kg*K)')
 
 Cp.pint.magnitude.plot.hist()
 

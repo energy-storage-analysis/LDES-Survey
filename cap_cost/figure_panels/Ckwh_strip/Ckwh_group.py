@@ -20,6 +20,8 @@ REPO_DIR = os.getenv('REPO_DIR')
 palette = pd.read_csv('../energy_colors.csv', index_col=0)['color'].to_dict()
 palette = {key.replace('\\n','\n'): val for key,val in palette.items()}
 
+CkWh_cases = pd.read_csv(pjoin(REPO_DIR, 'cap_cost','figure_panels','CkWh_cases.csv'), index_col=0)
+
 df_all = read_pint_df(pjoin(REPO_DIR, 'cap_cost/data_consolidated/SM_data.csv'), index_col=[0,1], drop_units=True).reset_index('SM_type')
 
 df_all = df_all.dropna(subset=['C_kwh'])
@@ -38,6 +40,8 @@ median_Ckwh = df_all.groupby('SM_type')['C_kwh'].median().to_dict()
 df_all['Ckwh_SMtype_median'] = df_all['SM_type'].map(median_Ckwh)
 df_all = df_all.sort_values('Ckwh_SMtype_median')#.sort_values('energy_type')
 
+df_all['SM_type'].value_counts()
+
 #%%
 
 def strip_plot(df_plot):
@@ -45,7 +49,9 @@ def strip_plot(df_plot):
     cat_label = 'display_text'
     sns.stripplot(data=df_plot, x=cat_label, y='C_kwh_log', size=7, hue='energy_type', palette=palette, style='coupled')
 
-    plt.axhline(np.log10(10), linestyle='--', color='gray')
+    for case, row in CkWh_cases.iterrows():
+        plt.axhline(np.log10(row['value']), linestyle=row['linestyle'], color='gray')
+
 
     fig.axes[0].yaxis.set_major_formatter(mticker.StrMethodFormatter("$10^{{{x:.0f}}}$"))
     log_ticks = range(int(np.floor(df_plot['C_kwh_log'].min())), int(np.ceil(df_plot['C_kwh_log'].max())))
@@ -63,7 +69,8 @@ elim_types = [
     'dielectric_capacitor',
     'EDLC',
     'pseudocapacitor',
-    'gravitational',
+    'block_stacking',
+    'PHES',
     'pressure_cavern',
     'pressure_tank',
     'smes',
@@ -72,6 +79,8 @@ elim_types = [
 
 
 df_elim = df_all[df_all['SM_type'].isin(elim_types)]
+
+df_elim
 df_elim['SM_type'] = pd.Categorical(df_elim['SM_type'], categories=elim_types, ordered=True)
 df_elim = df_elim.sort_values('SM_type')
 df_elim = df_elim[df_elim['C_kwh']<1e4]#.dropna(how='all')
